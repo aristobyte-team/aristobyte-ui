@@ -1,5 +1,5 @@
 {
-  "extends": "@aristobyte-ui/typescript-config/react-library.json",
+  "extends": "@aristobyte-ui/typescript-config/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "dist"
   },

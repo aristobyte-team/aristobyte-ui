@@ -1,11 +1,7 @@
 {
-  "extends": "@aristobyte-ui/typescript-config/nextjs.json",
+  "extends": "@aristobyte-ui/typescript-config/tsconfig.nextjs.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "**/*.ts",
