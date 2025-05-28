@@ -1,0 +1,47 @@
+@use "../../styles/settings" as *;
+
+.button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &--primary {
+    background-color: $blue-600;
+    color: $white;
+
+    &:hover {
+      background-color: $blue-700;
+    }
+  }
+
+  &--secondary {
+    background-color: $grey-100;
+    color: $grey-800;
+
+    &:hover {
+      background-color: $grey-200;
+    }
+  }
+
+  &__ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
