@@ -6,7 +6,7 @@ Centralized TypeScript configuration package for AristoByte monorepo.
 
 ## Overview
 
-This package consolidates shared TypeScript configurations to ensure consistent type safety, module resolution, and build standards across all AristoByte projects, including `apps/web`, `docs`, and UI packages.
+This package consolidates shared TypeScript configurations to ensure consistent type safety, module resolution, and build standards across all AristoByte projects, including `apps/storybook`, `docs`, and UI packages.
 
 Leveraging a base config (`tsconfig.base.json`), it provides extended presets for library builds and Next.js apps, streamlining developer experience and enforcing best practices at scale.
 
