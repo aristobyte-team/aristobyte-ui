@@ -5,6 +5,7 @@
   "private": true,
   "license": "MIT",
   "type": "module",
+  "main": "eslint.base.json",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
   "repository": {
@@ -30,14 +31,14 @@
     "aristobyte-ui"
   ],
   "exports": {
-    "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
+    "./base": "./eslint.base.js",
+    "./react": "./eslint.react.js",
+    "./next": "./eslint.next.js"
   },
   "files": [
-    "base.js",
-    "next.js",
-    "react-internal.js"
+    "eslint.base.js",
+    "eslint.next.js",
+    "eslint.react.js"
   ],
   "peerDependencies": {
     "eslint": "^9.0.0",
@@ -55,5 +56,8 @@
     "globals": "^16.2.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.32.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

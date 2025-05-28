@@ -12,11 +12,11 @@ This package delivers a suite of opinionated ESLint configurations, designed to 
 
 ## 📦 Exported Config Profiles
 
-| Config Path                                   | Description                                                                                                      |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `@aristobyte-ui/eslint-config/base`           | Core ruleset for JS/TS projects. Includes Prettier formatting, TurboRepo support, and `eslint-plugin-only-warn`. |
-| `@aristobyte-ui/eslint-config/react-internal` | Optimized for internal React component libraries with hooks and JSX best practices.                              |
-| `@aristobyte-ui/eslint-config/next-js`        | Tailored specifically for Next.js applications, aligned with Next’s linting expectations.                        |
+| Config Path                          | Description                                                                                                      |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `@aristobyte-ui/eslint-config/base`  | Core ruleset for JS/TS projects. Includes Prettier formatting, TurboRepo support, and `eslint-plugin-only-warn`. |
+| `@aristobyte-ui/eslint-config/react` | Optimized for internal React component libraries with hooks and JSX best practices.                              |
+| `@aristobyte-ui/eslint-config/next`  | Tailored specifically for Next.js applications, aligned with Next’s linting expectations.                        |
 
 ---
 
@@ -44,7 +44,7 @@ Example for a React package:
 
 ```js
 import base from "@aristobyte-ui/eslint-config/base";
-import react from "@aristobyte-ui/eslint-config/react-internal";
+import react from "@aristobyte-ui/eslint-config/react";
 
 export default [...base, ...react];
 ```
@@ -53,7 +53,7 @@ Or for a Next.js app:
 
 ```js
 import base from "@aristobyte-ui/eslint-config/base";
-import next from "@aristobyte-ui/eslint-config/next-js";
+import next from "@aristobyte-ui/eslint-config/next";
 
 export default [...base, ...next];
 ```

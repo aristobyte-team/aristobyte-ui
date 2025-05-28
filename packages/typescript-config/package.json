@@ -28,12 +28,17 @@
     "aristobyte",
     "aristobyte-ui"
   ],
-  "publishConfig": {
-    "access": "public"
+  "exports": {
+    "./base": "./tsconfig.base.js",
+    "./react": "./tsconfig.react.js",
+    "./next": "./tsconfig.next.js"
   },
   "files": [
     "tsconfig.base.json",
-    "tsconfig.lib.json",
-    "tsconfig.nextjs.json"
-  ]
+    "tsconfig.react.json",
+    "tsconfig.next.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

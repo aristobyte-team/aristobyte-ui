@@ -1,5 +1,5 @@
 {
-  "extends": "@aristobyte-ui/typescript-config/tsconfig.nextjs.json",
+  "extends": "@aristobyte-ui/typescript-config/next",
   "compilerOptions": {
     "plugins": [{ "name": "next" }]
   },

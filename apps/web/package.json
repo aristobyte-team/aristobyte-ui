@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
   "scripts": {
@@ -11,14 +11,15 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/ui": "*",
+    "@aristobyte-ui/ui": "1.0.0",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "*",
-    "@aristobyte-ui/typescript-config": "*",
+    "@aristobyte-ui/eslint-config": "1.0.0",
+    "@aristobyte-ui/jest-config": "1.0.0",
+    "@aristobyte-ui/typescript-config": "1.0.0",
     "@types/node": "^22.15.3",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",

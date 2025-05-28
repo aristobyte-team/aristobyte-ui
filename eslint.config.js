@@ -1,2 +1,2 @@
-import { config } from "@aristobyte-ui/eslint-config/react-internal";
+import { config } from "@aristobyte-ui/eslint-config/react";
 export default config;

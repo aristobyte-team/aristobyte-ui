@@ -11,8 +11,9 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "*",
-    "@aristobyte-ui/typescript-config": "*",
+    "@aristobyte-ui/eslint-config": "1.0.0",
+    "@aristobyte-ui/jest-config": "1.0.0",
+    "@aristobyte-ui/typescript-config": "1.0.0",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.15.3",
     "@types/react": "19.1.0",

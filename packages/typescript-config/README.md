@@ -17,10 +17,10 @@ Leveraging a base config (`tsconfig.base.json`), it provides extended presets fo
 - **tsconfig.base.json**  
   Core compiler settings with strictness, module resolution (NodeNext), declaration output, and path aliases for seamless cross-package imports.
 
-- **tsconfig.lib.json**  
+- **tsconfig.react.json**  
   Extends the base config, optimized for building React component libraries with JSX support and declaration-only emission.
 
-- **tsconfig.nextjs.json**  
+- **tsconfig.next.json**  
   Tailored for Next.js projects, featuring JSX preservation, ESNext modules, bundler-aware resolution, and integration with Next.js plugins.
 
 ---
@@ -39,7 +39,7 @@ or
 
 ```json
 {
-  "extends": "@aristobyte/typescript-config/tsconfig.lib.json"
+  "extends": "@aristobyte/typescript-config/tsconfig.react.json"
 }
 ```
 
@@ -47,7 +47,7 @@ or
 
 ```json
 {
-  "extends": "@aristobyte/typescript-config/tsconfig.nextjs.json"
+  "extends": "@aristobyte/typescript-config/tsconfig.next.json"
 }
 ```
 
