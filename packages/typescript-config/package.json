@@ -16,7 +16,9 @@
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
   },
   "engines": {
-    "node": ">=20.16.0"
+    "node": ">=20.17.0",
+    "npm": ">=10.8.2",
+    "yarn": ">=1.22.22"
   },
   "keywords": [
     "typescript",
@@ -31,7 +33,7 @@
   },
   "files": [
     "tsconfig.base.json",
-    "tsconfig.react-library.json",
+    "tsconfig.lib.json",
     "tsconfig.nextjs.json"
   ]
 }
