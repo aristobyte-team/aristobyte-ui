@@ -1,9 +1,37 @@
 {
   "name": "@aristobyte-ui/typescript-config",
+  "description": "Shared TypeScript config presets used across AristoByteUI platform and packages.",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "main": "tsconfig.base.json",
+  "author": "AristoByte <info@aristobyte.com>",
+  "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
+    "directory": "packages/typescript-config"
+  },
+  "bugs": {
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
+  },
+  "engines": {
+    "node": ">=20.16.0"
+  },
+  "keywords": [
+    "typescript",
+    "config",
+    "tsconfig",
+    "monorepo",
+    "aristobyte",
+    "aristobyte-ui"
+  ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.react-library.json",
+    "tsconfig.nextjs.json"
+  ]
 }
