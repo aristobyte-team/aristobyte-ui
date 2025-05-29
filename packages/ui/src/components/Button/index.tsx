@@ -1,5 +1,7 @@
+"use client";
+
 import * as React from "react";
-import styles from "./Button.module.scss";
+// import styles from "./Button.module.scss";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
     const diameter = Math.max(button.clientWidth, button.clientHeight);
     const radius = diameter / 2;
 
-    circle.classList.add(styles["button__ripple"]);
+    // circle.classList.add(styles["button__ripple"]);
     circle.style.width = circle.style.height = `${diameter}px`;
     circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
     circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
@@ -37,7 +39,8 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       ref={buttonRef}
-      className={`${styles["button"]} ${styles[`button--${variant}`]} ${className}`}
+      className={variant + " " + className}
+      // className={`${styles["button"]} ${styles[`button--${variant}`]} ${className}`}
       onClick={(e) => {
         createRipple(e);
         props.onClick?.(e);

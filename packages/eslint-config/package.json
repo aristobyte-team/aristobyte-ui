@@ -2,10 +2,10 @@
   "name": "@aristobyte-ui/eslint-config",
   "description": "AristoByteUI ESLint config presets for base, Next.js, and React-based packages.",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "type": "module",
-  "main": "eslint.base.json",
+  "main": "dist/index.js",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
   "repository": {
@@ -31,22 +31,27 @@
     "aristobyte-ui"
   ],
   "exports": {
-    "./base": "./eslint.base.js",
-    "./react": "./eslint.react.js",
-    "./next": "./eslint.next.js"
+    "./base": "./dist/eslint.base.js",
+    "./react": "./dist/eslint.react.js",
+    "./next": "./dist/eslint.next.js"
   },
   "files": [
-    "eslint.base.js",
-    "eslint.next.js",
-    "eslint.react.js"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
   "peerDependencies": {
     "eslint": "^9.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "@next/eslint-plugin-next": "^15.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
     "@next/eslint-plugin-next": "^15.3.0",
+    "@types/node": "^22.15.24",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-only-warn": "^1.1.0",
@@ -54,6 +59,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-turbo": "^2.5.0",
     "globals": "^16.2.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.32.0"
   },

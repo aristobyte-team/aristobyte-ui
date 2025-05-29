@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "paths": {
+      "@next/eslint-plugin-next": ["types/@next/eslint-plugin-next"],
+      "eslint-plugin-only-warn": ["types/eslint-plugin-only-warn"]
+    }
+  },
+  "include": ["*.ts", "types/**/*.d.ts"]
+}
