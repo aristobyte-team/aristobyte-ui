@@ -29,9 +29,9 @@
     "aristobyte-ui"
   ],
   "exports": {
-    "./base": "./tsconfig.base.js",
-    "./react": "./tsconfig.react.js",
-    "./next": "./tsconfig.next.js"
+    "./base": "./tsconfig.base.json",
+    "./react": "./tsconfig.react.json",
+    "./next": "./tsconfig.next.json"
   },
   "files": [
     "tsconfig.base.json",
