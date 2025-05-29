@@ -1,7 +1,7 @@
-import { config as base } from "./base.js";
+import { config as baseConfig } from "./jest.base";
 
 export const config = {
-  ...base,
+  ...baseConfig,
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
 };

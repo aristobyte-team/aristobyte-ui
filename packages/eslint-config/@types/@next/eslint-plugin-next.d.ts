@@ -1,5 +1,5 @@
 declare module "@next/eslint-plugin-next" {
-  const plugin: any;
+  const plugin;
   export default plugin;
   export = plugin;
 }

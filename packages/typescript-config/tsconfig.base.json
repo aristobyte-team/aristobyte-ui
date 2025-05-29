@@ -29,12 +29,13 @@
     "baseUrl": ".",
     "paths": {
       "@aristobyte/ui/*": ["packages/ui/src/*"],
-      "@types/*": ["types/*"]
+      "@types/*": ["@types/*"]
     },
 
     "types": ["node"],
+    "typeRoots": ["./@types", "./node_modules/@types"],
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["types", "packages", "apps"],
+  "include": ["@types", "packages", "apps"],
   "exclude": ["node_modules", "dist", "build"]
 }

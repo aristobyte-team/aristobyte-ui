@@ -1,4 +1,6 @@
-export const config = {
+import type { Config } from "@jest/types";
+
+export const config: Config.InitialOptions = {
   testEnvironment: "node",
   transform: {
     "^.+\\.(ts|tsx|js|jsx)$": [

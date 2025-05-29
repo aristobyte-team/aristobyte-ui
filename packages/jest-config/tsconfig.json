@@ -11,11 +11,7 @@
     "baseUrl": ".",
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": ".",
-    "paths": {
-      "@next/eslint-plugin-next": ["@types/@next/eslint-plugin-next"],
-      "eslint-plugin-only-warn": ["@types/eslint-plugin-only-warn"]
-    }
+    "rootDir": "."
   },
-  "include": ["*.js", "*.ts", "@types/**/*"]
+  "include": ["*.js", "*.ts"]
 }

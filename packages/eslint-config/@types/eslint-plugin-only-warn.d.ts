@@ -1,5 +1,5 @@
 declare module "eslint-plugin-only-warn" {
-  const plugin: any;
+  const plugin;
   export default plugin;
   export = plugin;
 }

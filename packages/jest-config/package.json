@@ -29,15 +29,16 @@
     "shared-config"
   ],
   "exports": {
-    "./base": "./jest.base.js",
-    "./react": "./jest.react.js",
-    "./next": "./jest.next.js"
+    "./base": "./dist/jest.base.js",
+    "./react": "./dist/jest.react.js",
+    "./next": "./dist/jest.next.js"
   },
   "files": [
-    "jest.base.js",
-    "jest.react.js",
-    "jest.next.js"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
   "peerDependencies": {
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
@@ -45,7 +46,9 @@
     "jest": "^29.0.0"
   },
   "devDependencies": {
+    "@jest/types": "^30.0.0-beta.3",
     "@testing-library/jest-dom": "^6.0.0",
+    "@types/jest": "^29.5.14",
     "identity-obj-proxy": "^3.0.0"
   },
   "publishConfig": {
