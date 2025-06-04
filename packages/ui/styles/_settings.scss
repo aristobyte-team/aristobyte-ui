@@ -1,0 +1,103 @@
+// === Design Tokens — Color Palette ===
+
+// Base
+$white: #ffffff;
+$black: #000000;
+$transparent: transparent;
+
+// === Neutral Scale (Grey) ===
+$grey-50: #f9fafb;
+$grey-100: #f3f4f6;
+$grey-200: #e5e7eb;
+$grey-300: #d1d5db;
+$grey-400: #9ca3af;
+$grey-500: #6b7280;
+$grey-600: #4b5563;
+$grey-700: #374151;
+$grey-800: #1f2937;
+$grey-900: #111827;
+
+// === Primary Scale (Blue) ===
+$blue-50: #eff6ff;
+$blue-100: #dbeafe;
+$blue-200: #bfdbfe;
+$blue-300: #93c5fd;
+$blue-400: #60a5fa;
+$blue-500: #3b82f6;
+$blue-600: #2563eb; // Main
+$blue-700: #1d4ed8; // Hover
+$blue-800: #1e40af;
+$blue-900: #1e3a8a;
+
+// === Secondary Scale (Indigo) ===
+$indigo-50: #eef2ff;
+$indigo-100: #e0e7ff;
+$indigo-200: #c7d2fe;
+$indigo-300: #a5b4fc;
+$indigo-400: #818cf8;
+$indigo-500: #6366f1;
+$indigo-600: #4f46e5; // Main
+$indigo-700: #4338ca; // Hover
+
+// === Error Scale (Red) ===
+$red-50: #fef2f2;
+$red-100: #fee2e2;
+$red-200: #fecaca;
+$red-300: #fca5a5;
+$red-400: #f87171;
+$red-500: #ef4444;
+$red-600: #dc2626; // Main
+$red-700: #b91c1c; // Hover
+
+// === Success Scale (Green) ===
+$green-50: #f0fdf4;
+$green-100: #dcfce7;
+$green-200: #bbf7d0;
+$green-300: #86efac;
+$green-400: #4ade80;
+$green-500: #22c55e;
+$green-600: #16a34a; // Main
+$green-700: #15803d; // Hover
+
+// === Warning Scale (Amber) ===
+$amber-50: #fffbeb;
+$amber-100: #fef3c7;
+$amber-200: #fde68a;
+$amber-300: #fcd34d;
+$amber-400: #fbbf24;
+$amber-500: #f59e0b;
+$amber-600: #d97706; // Main
+$amber-700: #b45309; // Hover
+
+// === Semantic Tokens ===
+$color-default: $grey-800;
+$color-default-bg: $grey-100;
+
+$color-primary: $blue-600;
+$color-primary-hover: $blue-700;
+$color-primary-bg: $blue-50;
+
+$color-secondary: $indigo-600;
+$color-secondary-hover: $indigo-700;
+$color-secondary-bg: $indigo-50;
+
+$color-error: $red-600;
+$color-error-hover: $red-700;
+$color-error-bg: $red-50;
+
+$color-success: $green-600;
+$color-success-hover: $green-700;
+$color-success-bg: $green-50;
+
+$color-warning: $amber-600;
+$color-warning-hover: $amber-700;
+$color-warning-bg: $amber-50;
+
+// === Shadows ===
+$shadow-sm: 0 1px 2px 0 rgba($black, 0.05);
+$shadow-md:
+  0 4px 6px -1px rgba($black, 0.1),
+  0 2px 4px -1px rgba($black, 0.06);
+$shadow-lg:
+  0 10px 15px -3px rgba($black, 0.1),
+  0 4px 6px -2px rgba($black, 0.05);
