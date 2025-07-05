@@ -1,6 +1,6 @@
 @use "../../styles/settings" as *;
 
-.installation {
+.tab-switch-with-sliding-indicator {
   display: flex;
   flex-direction: column;
 
@@ -42,14 +42,14 @@
       }
 
       &:last-of-type {
-        color: $grey-color;
+        color: $grey-400;
       }
     }
 
     &--active {
       span {
         &:last-of-type {
-          color: $white-color;
+          color: $white;
         }
       }
 
@@ -62,15 +62,15 @@
   }
 
   &__bar {
-    background-color: $white-color;
+    background-color: $white;
     bottom: -10px;
     height: 2px;
     position: absolute;
-    transition: all 600ms $animation-accordion;
+    transition: all 600ms $cubic-bezier-primary;
     width: 60px;
   }
 
-  &__code-block {
+  &__content {
     margin: 20px 0 0;
   }
 }

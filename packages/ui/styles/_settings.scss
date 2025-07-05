@@ -166,3 +166,8 @@ $font-size-footnote: 0.6875rem; // 11px
 $font-size-button-lg: 1rem; // 16px
 $font-size-button-md: 0.875rem; // 14px
 $font-size-button-sm: 0.75rem; // 12px
+
+// === Animations ===
+
+$cubic-bezier-primary: cubic-bezier(0.55, -0.19, 0.59, 0.95);
+$cubic-bezier-secondary: cubic-bezier(0.175, 0.885, 0.32, 1.275);

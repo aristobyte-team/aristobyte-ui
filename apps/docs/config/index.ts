@@ -62,43 +62,50 @@ export const Config = {
       },
     ],
   },
-  installation: [
-    {
-      id: "npm",
-      label: "npm",
-      script: "npm install",
-      icon: Icons.Npm,
-    },
-    {
-      id: "yarn",
-      label: "yarn",
-      script: "yarn add",
-      icon: Icons.Yarn,
-    },
-    {
-      id: "pnpm",
-      label: "pnpm",
-      script: "pnpm add",
-      icon: Icons.Pnpm,
-    },
-    {
-      id: "bun",
-      label: "bun",
-      script: "bun add",
-      icon: Icons.Bun,
-    },
-  ],
-  import: {
-    tabs: [{ id: "individual" }, { id: "global" }],
-    individual: {
-      button: Code.Import(["Button"], "/button"),
-      card: Code.Import(["Card"], "/card"),
-      home: Code.Import(["ComponentName"], "/componentName"),
-    } as { [key: string]: string },
-    global: {
-      button: Code.Import(["Button"]),
-      card: Code.Import(["Card"]),
-      home: Code.Import(["ComponentName"]),
-    } as { [key: string]: string },
+  tabs: {
+    installation: [
+      {
+        id: "npm",
+        label: "npm",
+        script: "npm install",
+        icon: Icons.Npm,
+      },
+      {
+        id: "yarn",
+        label: "yarn",
+        script: "yarn add",
+        icon: Icons.Yarn,
+      },
+      {
+        id: "pnpm",
+        label: "pnpm",
+        script: "pnpm add",
+        icon: Icons.Pnpm,
+      },
+      {
+        id: "bun",
+        label: "bun",
+        script: "bun add",
+        icon: Icons.Bun,
+      },
+    ],
+    import: [
+      {
+        id: "individual",
+        content: {
+          button: Code.Import(["Button"], "/button"),
+          card: Code.Import(["Card"], "/card"),
+          home: Code.Import(["ComponentName"], "/componentName"),
+        } as { [key: string]: string },
+      },
+      {
+        id: "global",
+        content: {
+          button: Code.Import(["Button"]),
+          card: Code.Import(["Card"]),
+          home: Code.Import(["ComponentName"]),
+        } as { [key: string]: string },
+      },
+    ],
   },
 };

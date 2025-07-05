@@ -2,5 +2,5 @@ import * as React from "react";
 import { Layout } from "@/components";
 
 export default function Home() {
-  return <Layout section="components" id="home" />;
+  return <Layout section="components" unit="home" />;
 }

@@ -1,0 +1,21 @@
+@use "../../../styles/settings" as *;
+
+.layout-section {
+  &__title {
+    @include title;
+    & {
+      color: $white-color;
+      margin: 0 0 30px;
+      text-align: left;
+    }
+  }
+
+  &__description {
+    @include description;
+    & {
+      color: $white-color;
+      margin: 0 0 30px;
+      text-align: left;
+    }
+  }
+}
