@@ -114,6 +114,30 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  .overlay {
+    position: fixed;
+    opacity: 0.2;
+    z-index: -2;
+
+    &--left {
+      height: 700px;
+      left: -300px;
+      top: -200px;
+      width: 1200px;
+    }
+
+    &--right {
+      right: -400px;
+      top: 160px;
+      width: 1600px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 code {

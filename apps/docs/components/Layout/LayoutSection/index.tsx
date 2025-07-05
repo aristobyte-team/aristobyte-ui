@@ -27,14 +27,20 @@ export const LayoutSection = ({
   return (
     <section className="layout-section">
       {title && (
-        <h1 className="layout-section__title">
-          {t(`layout.${section}.${unit}.${id}.title`)}
-        </h1>
+        <h1
+          className="layout-section__title"
+          dangerouslySetInnerHTML={{
+            __html: t(`layout.${section}.${unit}.${id}.title`),
+          }}
+        />
       )}
       {description && (
-        <p className="layout-section__description">
-          {t(`layout.${section}.${unit}.${id}.description`)}
-        </p>
+        <p
+          className="layout-section__description"
+          dangerouslySetInnerHTML={{
+            __html: t(`layout.${section}.${unit}.${id}.description`),
+          }}
+        />
       )}
       {children}
     </section>

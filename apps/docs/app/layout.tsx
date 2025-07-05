@@ -138,6 +138,15 @@ export default function RootLayout({
           <body
             className={`${workSans.variable} ${unisonPro.variable} ${righteous.variable}`}
           >
+            <div className="overlay overlay--left">
+              <img src="/images/liquid-left.png" alt="Left Liquid Background" />
+            </div>
+            <div className="overlay overlay--right">
+              <img
+                src="/images/liquid-right.png"
+                alt="Right Liquid Background"
+              />
+            </div>
             {children}
           </body>
         </TranslateProvider>
