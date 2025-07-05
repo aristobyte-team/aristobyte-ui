@@ -1,0 +1,76 @@
+@use "../../styles/settings" as *;
+
+.anchor {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+  line-height: 1.4285714286;
+  overflow: hidden;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
+
+  &--default {
+    background-color: $transparent;
+    backdrop-filter: 8px;
+    color: $white;
+
+    &:hover {
+      background-color: $white-transparent-100;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $white;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $white;
+
+    &:hover {
+      background-color: $color-secondary-hover;
+    }
+  }
+
+  &--success {
+    background-color: $color-success;
+    color: $white;
+
+    &:hover {
+      background-color: $color-success-hover;
+    }
+  }
+
+  &--error {
+    background-color: $color-error;
+    color: $white;
+
+    &:hover {
+      background-color: $color-error-hover;
+    }
+  }
+
+  &--warning {
+    background-color: $color-warning;
+    color: $black;
+
+    &:hover {
+      background-color: $color-warning-hover;
+    }
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,27 +1,29 @@
 "use client";
 
 import * as React from "react";
-import { Variant, renderRipple } from "../../utils";
+import { renderRipple } from "../../utils";
 
 import styles from "./Button.module.scss";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: Variant;
+export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "default";
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  variant = "primary",
+export const Button: React.FC<IButton> = ({
+  variant = "default",
   className = "",
   children,
+  onClick,
   ...props
 }) => {
   const ref = React.useRef<HTMLButtonElement>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const { clientX, clientY } = e;
-    renderRipple({ ref, clientX, clientY });
-    props.onClick?.(e);
+    renderRipple<HTMLButtonElement>({ ref, clientX, clientY });
+    if (onClick) {
+      onClick(e);
+    }
   };
 
   return (

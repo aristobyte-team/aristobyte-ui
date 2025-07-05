@@ -5,6 +5,28 @@ $white: #ffffff;
 $black: #000000;
 $transparent: transparent;
 
+// === Black Transparent Scale ===
+$black-transparent-100: rgba(0, 0, 0, 0.1);
+$black-transparent-200: rgba(0, 0, 0, 0.2);
+$black-transparent-300: rgba(0, 0, 0, 0.3);
+$black-transparent-400: rgba(0, 0, 0, 0.4);
+$black-transparent-500: rgba(0, 0, 0, 0.5);
+$black-transparent-600: rgba(0, 0, 0, 0.6);
+$black-transparent-700: rgba(0, 0, 0, 0.7);
+$black-transparent-800: rgba(0, 0, 0, 0.8);
+$black-transparent-900: rgba(0, 0, 0, 0.9);
+
+// === Black Transparent Scale ===
+$white-transparent-100: rgba(255, 255, 255, 0.1);
+$white-transparent-200: rgba(255, 255, 255, 0.2);
+$white-transparent-300: rgba(255, 255, 255, 0.3);
+$white-transparent-400: rgba(255, 255, 255, 0.4);
+$white-transparent-500: rgba(255, 255, 255, 0.5);
+$white-transparent-600: rgba(255, 255, 255, 0.6);
+$white-transparent-700: rgba(255, 255, 255, 0.7);
+$white-transparent-800: rgba(255, 255, 255, 0.8);
+$white-transparent-900: rgba(255, 255, 255, 0.9);
+
 // === Neutral Scale (Grey) ===
 $grey-50: #f9fafb;
 $grey-100: #f3f4f6;
@@ -101,3 +123,46 @@ $shadow-md:
 $shadow-lg:
   0 10px 15px -3px rgba($black, 0.1),
   0 4px 6px -2px rgba($black, 0.05);
+
+// === Font families ===
+$font-family-sans: "Inter", sans-serif;
+$font-family-serif: "Georgia", serif;
+$font-family-mono: "Fira Code", monospace;
+
+// === Font weights ===
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// === Line heights ===
+$line-height-tight: 1.2;
+$line-height-snug: 1.375;
+$line-height-normal: 1.5;
+$line-height-loose: 1.625;
+
+// === Font Sizes — Semantic Tokens ===
+
+// === Titles ===
+$font-size-hero: 3rem; // 48px
+$font-size-title-1: 2.25rem; // 36px
+$font-size-title-2: 1.875rem; // 30px
+$font-size-title-3: 1.5rem; // 24px
+
+// === Subtitles ===
+$font-size-subtitle-1: 1.25rem; // 20px
+$font-size-subtitle-2: 1.125rem; // 18px
+
+// === Body text ===
+$font-size-body-lg: 1rem; // 16px
+$font-size-body-md: 0.9375rem; // 15px
+$font-size-body-sm: 0.875rem; // 14px
+
+// === Captions / Descriptions ===
+$font-size-caption: 0.75rem; // 12px
+$font-size-footnote: 0.6875rem; // 11px
+
+// === Buttons ===
+$font-size-button-lg: 1rem; // 16px
+$font-size-button-md: 0.875rem; // 14px
+$font-size-button-sm: 0.75rem; // 12px

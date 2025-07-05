@@ -4,6 +4,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0rem;
@@ -14,11 +15,12 @@
   transition: background-color 0.2s ease;
 
   &--default {
-    background-color: $color-default-bg;
-    color: $color-default;
+    background-color: $transparent;
+    backdrop-filter: 8px;
+    color: $white;
 
     &:hover {
-      background-color: $grey-200;
+      background-color: $white-transparent-100;
     }
   }
 
@@ -65,5 +67,10 @@
     &:hover {
       background-color: $color-warning-hover;
     }
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
   }
 }

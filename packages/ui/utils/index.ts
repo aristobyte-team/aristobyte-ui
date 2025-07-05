@@ -1,2 +1,2 @@
-export { Variant } from "./constants";
 export { renderRipple, type RippleParams } from "./ripple";
+export { Icons } from "./icons";
