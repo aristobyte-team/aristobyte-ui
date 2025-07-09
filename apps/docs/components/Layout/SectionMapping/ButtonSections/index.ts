@@ -12,7 +12,7 @@ import { WithIcons } from "./WithIcons";
 import { Installation } from "./Installation";
 import { Import } from "./Import";
 
-export const ButtonChildren = {
+export const ButtonSections = {
   Colors,
   CustomStyles,
   Disabled,

@@ -1,11 +1,14 @@
-import { ButtonChildren } from "./ButtonChildren";
-import { CardChildren } from "./CardChildren";
-import { HomeChildren } from "./HomeChildren";
+import * as React from "react";
+
+import { ButtonSections } from "./ButtonSections";
+import { CardSections } from "./CardSections";
+import { HomeSections } from "./HomeSections";
 
 import { type LayoutSectionPropsType } from "../LayoutSection";
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
 
+// @TODO: make 'config' and 't' optional props
 export type ChildComponentPropsType = {
   config: ConfigType;
   t: TranslateFunctionType;
@@ -19,192 +22,197 @@ export type MappingParamsType = {
 };
 
 export type MappingReturnType = {
+  childComponent: React.ComponentType<ChildComponentPropsType>;
+  props: LayoutSectionPropsType;
+}[];
+
+export type MappingType = {
   [category: string]: {
-    [unit: string]: {
-      childComponent: React.ComponentType<ChildComponentPropsType>;
-      props: LayoutSectionPropsType;
-    }[];
+    [unit: string]: MappingReturnType;
   };
 };
 
-export const Mapping = (props: MappingParamsType): MappingReturnType => ({
-  components: {
-    button: [
-      {
-        childComponent: ButtonChildren.Intro,
-        props: {
-          ...props,
-          id: "intro",
-          withTitle: true,
-          withDescription: true,
-        },
+export const Mapping = (props: MappingParamsType): MappingReturnType =>
+  (
+    ({
+      components: {
+        button: [
+          {
+            childComponent: ButtonSections.Intro,
+            props: {
+              ...props,
+              id: "intro",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Installation,
+            props: {
+              ...props,
+              id: "installation",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Import,
+            props: {
+              ...props,
+              id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Usage,
+            props: {
+              ...props,
+              id: "usage",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Disabled,
+            props: {
+              ...props,
+              id: "disabled",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Sizes,
+            props: {
+              ...props,
+              id: "sizes",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Radius,
+            props: {
+              ...props,
+              id: "radius",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Colors,
+            props: {
+              ...props,
+              id: "colors",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Variants,
+            props: {
+              ...props,
+              id: "variants",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Loading,
+            props: {
+              ...props,
+              id: "loading",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.WithIcons,
+            props: {
+              ...props,
+              id: "with-icons",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.IconsOnly,
+            props: {
+              ...props,
+              id: "icons-only",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.CustomStyles,
+            props: {
+              ...props,
+              id: "custom-styles",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+        ],
+        card: [
+          {
+            childComponent: CardSections.Intro,
+            props: {
+              ...props,
+              id: "intro",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Installation,
+            props: {
+              ...props,
+              id: "installation",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Import,
+            props: {
+              ...props,
+              id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+        ],
+        home: [
+          {
+            childComponent: HomeSections.Intro,
+            props: {
+              ...props,
+              id: "intro",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Installation,
+            props: {
+              ...props,
+              id: "installation",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.Import,
+            props: {
+              ...props,
+              id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+        ],
       },
-      {
-        childComponent: ButtonChildren.Installation,
-        props: {
-          ...props,
-          id: "installation",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Import,
-        props: {
-          ...props,
-          id: "import",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Usage,
-        props: {
-          ...props,
-          id: "usage",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Disabled,
-        props: {
-          ...props,
-          id: "disabled",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Sizes,
-        props: {
-          ...props,
-          id: "sizes",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Radius,
-        props: {
-          ...props,
-          id: "radius",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Colors,
-        props: {
-          ...props,
-          id: "colors",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Variants,
-        props: {
-          ...props,
-          id: "variants",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Loading,
-        props: {
-          ...props,
-          id: "loading",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.WithIcons,
-        props: {
-          ...props,
-          id: "with-icons",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.IconsOnly,
-        props: {
-          ...props,
-          id: "icons-only",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.CustomStyles,
-        props: {
-          ...props,
-          id: "custom-styles",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-    ],
-    card: [
-      {
-        childComponent: CardChildren.Intro,
-        props: {
-          ...props,
-          id: "intro",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Installation,
-        props: {
-          ...props,
-          id: "installation",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Import,
-        props: {
-          ...props,
-          id: "import",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-    ],
-    home: [
-      {
-        childComponent: HomeChildren.Intro,
-        props: {
-          ...props,
-          id: "intro",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Installation,
-        props: {
-          ...props,
-          id: "installation",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-      {
-        childComponent: ButtonChildren.Import,
-        props: {
-          ...props,
-          id: "import",
-          withTitle: true,
-          withDescription: true,
-        },
-      },
-    ],
-  },
-});
+    }) as MappingType
+  )[props.category]![props.unit]!;

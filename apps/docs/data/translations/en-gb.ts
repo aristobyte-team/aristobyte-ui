@@ -146,4 +146,8 @@ export const EN_GB = {
       },
     },
   },
+  codePreview: {
+    code: "Code",
+    preview: "Preview",
+  },
 };

@@ -1,5 +1,4 @@
-import { Icons } from "@/utils";
-import { Code } from "./codeChunks";
+import { Icons, CodeBlocks, PreviewBlocks } from "@/utils";
 
 export const Config = {
   introLinks: [
@@ -93,18 +92,40 @@ export const Config = {
       {
         id: "individual",
         content: {
-          button: Code.Import(["Button"], "/button"),
-          card: Code.Import(["Card"], "/card"),
-          home: Code.Import(["ComponentName"], "/componentName"),
-        } as { [key: string]: string },
+          button: CodeBlocks.Import(["Button"], "/button"),
+          card: CodeBlocks.Import(["Card"], "/card"),
+          home: CodeBlocks.Import(["ComponentName"], "/componentName"),
+        } as { [unit: string]: string },
       },
       {
         id: "global",
         content: {
-          button: Code.Import(["Button"]),
-          card: Code.Import(["Card"]),
-          home: Code.Import(["ComponentName"]),
-        } as { [key: string]: string },
+          button: CodeBlocks.Import(["Button"]),
+          card: CodeBlocks.Import(["Card"]),
+          home: CodeBlocks.Import(["ComponentName"]),
+        } as { [unit: string]: string },
+      },
+    ],
+    codePreview: [
+      {
+        id: "code",
+        content: {
+          button: { usage: CodeBlocks.Button.Usage },
+        } as { [unit: string]: { [unitSection: string]: string } },
+      },
+      {
+        id: "preview",
+        content: {
+          button: { usage: PreviewBlocks.Button.Usage },
+        } as {
+          [unit: string]: {
+            [unitSection: string]: {
+              category: string;
+              unit: string;
+              section: string;
+            };
+          };
+        },
       },
     ],
   },

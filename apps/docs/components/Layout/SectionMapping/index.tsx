@@ -12,7 +12,7 @@ export const SectionMapping = ({ category, unit }: SectionMappingPropsType) => {
   const { config } = useConfig();
   const { t } = useTranslate();
 
-  return Mapping({ config, t, category, unit })[category]![unit]!.map(
+  return Mapping({ category, unit, config, t }).map(
     ({ childComponent, props }) => (
       <LayoutSection key={props.id} {...props}>
         {React.createElement(childComponent, { config, t })}
