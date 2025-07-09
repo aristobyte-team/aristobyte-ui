@@ -108,4 +108,24 @@ export const Config = {
       },
     ],
   },
+  layout: {
+    components: {
+      button: [
+        { section: "intro" },
+        { section: "installation" },
+        { section: "usage" },
+        { section: "disabled" },
+        { section: "sizes" },
+        { section: "radius" },
+        { section: "colors" },
+        { section: "variants" },
+        { section: "loading" },
+        { section: "with-icons" },
+        { section: "icons-only" },
+        { section: "custom-styles" },
+      ],
+    },
+  },
 };
+
+export type ConfigType = typeof Config;

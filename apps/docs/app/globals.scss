@@ -117,17 +117,18 @@ body {
 
   .overlay {
     position: fixed;
-    opacity: 0.2;
     z-index: -2;
 
     &--left {
       height: 700px;
       left: -300px;
+      opacity: 0.18;
       top: -200px;
       width: 1200px;
     }
 
     &--right {
+      opacity: 0.2;
       right: -400px;
       top: 160px;
       width: 1600px;

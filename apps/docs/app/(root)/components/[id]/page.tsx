@@ -19,5 +19,5 @@ export async function generateMetadata({
 
 export default async function Component({ params }: ComponentPageProps) {
   const { id } = await params;
-  return <Layout section="components" unit={id} />;
+  return <Layout category="components" unit={id} />;
 }

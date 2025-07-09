@@ -7,42 +7,45 @@ import "./LayoutSection.scss";
 
 export type LayoutSectionPropsType = {
   id: string;
-  section: string;
+  category: string;
   unit: string;
-  title?: boolean;
-  description?: boolean;
+  withTitle?: boolean;
+  withDescription?: boolean;
   children?: React.ReactElement | React.ReactNode | string;
 };
 
 export const LayoutSection = ({
   id,
-  section,
+  category,
   unit,
-  title = false,
-  description = false,
+  withTitle = false,
+  withDescription = false,
   children = null,
 }: LayoutSectionPropsType) => {
   const { t } = useTranslate();
 
   return (
-    <section className="layout-section">
-      {title && (
-        <h1
-          className="layout-section__title"
-          dangerouslySetInnerHTML={{
-            __html: t(`layout.${section}.${unit}.${id}.title`),
-          }}
-        />
-      )}
-      {description && (
-        <p
-          className="layout-section__description"
-          dangerouslySetInnerHTML={{
-            __html: t(`layout.${section}.${unit}.${id}.description`),
-          }}
-        />
-      )}
-      {children}
-    </section>
+    <>
+      <section className="layout-section">
+        {withTitle && (
+          <h1
+            className="layout-section__title"
+            dangerouslySetInnerHTML={{
+              __html: t(`layout.${category}.${unit}.${id}.title`),
+            }}
+          />
+        )}
+        {withDescription && (
+          <p
+            className="layout-section__description"
+            dangerouslySetInnerHTML={{
+              __html: t(`layout.${category}.${unit}.${id}.description`),
+            }}
+          />
+        )}
+        {children}
+      </section>
+      <hr className="layout__hr" />
+    </>
   );
 };

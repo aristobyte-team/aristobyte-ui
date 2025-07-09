@@ -28,7 +28,7 @@ export const EN_GB = {
         installation: {
           title: "Installation of Button",
           description:
-            "The above command is for individual installation of Button only. You may skip this step if <b><i>@aristobyte-ui</i></b> is already installed globally.",
+            "The above command is for individual installation of Button only. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
         },
         import: {
           title: "Import Button",
@@ -38,6 +38,56 @@ export const EN_GB = {
             individual: "Individual",
             global: "Global",
           },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the Button component using default properties. Suitable for general-purpose interactions.",
+        },
+        disabled: {
+          title: "Disabled State",
+          description:
+            "Use the <b>disabled</b> prop to visually and functionally disable buttons, preventing user interaction when needed.",
+        },
+        sizes: {
+          title: "Button Sizes",
+          description:
+            "The Button component supports multiple size variants to match various UI needs, from compact to full-scale buttons.",
+        },
+        radius: {
+          title: "Border Radius",
+          description:
+            "Control the corner radius of buttons using predefined shape tokens or custom values for seamless UI integration.",
+        },
+        colors: {
+          title: "Color Themes",
+          description:
+            "Buttons support multiple color schemes mapped to your design tokens. Ideal for conveying intent and context.",
+        },
+        variants: {
+          title: "Button Variants",
+          description:
+            "Choose from variant styles like <b>solid</b>, <b>outline</b>, and <b>ghost</b> to match interaction expectations and aesthetics.",
+        },
+        loading: {
+          title: "Loading State",
+          description:
+            "The <b>loading</b> state provides feedback during asynchronous operations. It disables interaction and shows a spinner.",
+        },
+        "with-icons": {
+          title: "Buttons with Icons",
+          description:
+            "Combine buttons with icons for better visual guidance. Icons can be placed before or after the label.",
+        },
+        "icons-only": {
+          title: "Icon-Only Buttons",
+          description:
+            "Icon-only buttons are used for space-efficient UIs. Ensure accessibility by using `aria-label` or <b>title</b>.",
+        },
+        "custom-styles": {
+          title: "Custom Styles",
+          description:
+            "Use the <b>className</b> prop or override theme tokens to customize button styling for specific design use cases.",
         },
       },
       card: {
@@ -55,7 +105,7 @@ export const EN_GB = {
         installation: {
           title: "Installation of Card",
           description:
-            "The above command is for individual installation of Card only. You may skip this step if <b><i>@aristobyte-ui</i></b> is already installed globally.",
+            "The above command is for individual installation of Card only. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
         },
         import: {
           title: "Import Card",
