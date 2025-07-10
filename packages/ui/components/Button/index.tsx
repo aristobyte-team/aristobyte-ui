@@ -7,6 +7,7 @@ import styles from "./Button.module.scss";
 
 export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "default";
+  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
 }
 
 export const Button: React.FC<IButton> = ({
@@ -14,6 +15,8 @@ export const Button: React.FC<IButton> = ({
   className = "",
   children,
   onClick,
+  disabled,
+  size = "md",
   ...props
 }) => {
   const ref = React.useRef<HTMLButtonElement>(null);
@@ -29,7 +32,8 @@ export const Button: React.FC<IButton> = ({
   return (
     <button
       ref={ref}
-      className={`${styles["button"]} ${styles[`button--${variant}`]} ${className}`}
+      disabled={disabled}
+      className={`${styles["button"]} ${styles[`button--${variant}`]} ${styles[`button--${size}`]} ${className}`}
       onClick={handleClick}
       {...props}
     >

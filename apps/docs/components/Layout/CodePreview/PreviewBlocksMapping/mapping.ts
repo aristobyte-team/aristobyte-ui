@@ -38,6 +38,14 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
           childComponent: ButtonPreviewBlocks.Usage,
           props,
         },
+        disabled: {
+          childComponent: ButtonPreviewBlocks.Disabled,
+          props,
+        },
+        sizes: {
+          childComponent: ButtonPreviewBlocks.Sizes,
+          props,
+        },
       },
     },
   }) as MappingType)![props.category]![props.unit]![props.section]!;

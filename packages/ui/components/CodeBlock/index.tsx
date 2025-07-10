@@ -16,7 +16,7 @@ interface ICodeBlock {
 
 export const CodeBlock: React.FC<ICodeBlock> = ({
   code,
-  lang = "ts",
+  lang = "tsx",
   theme = "nord",
   className = "",
 }) => {

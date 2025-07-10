@@ -5,5 +5,15 @@ export const PreviewBlocks = {
       unit: "button",
       section: "usage",
     },
+    Disabled: {
+      category: "components",
+      unit: "button",
+      section: "disabled",
+    },
+    Sizes: {
+      category: "components",
+      unit: "button",
+      section: "sizes",
+    },
   },
 };

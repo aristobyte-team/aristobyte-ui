@@ -1,13 +1,5 @@
 import * as React from "react";
 
-import { type ConfigType } from "@/config";
-import { type TranslateFunctionType } from "@/data";
+import { CodePreview } from "../../CodePreview";
 
-export type DisabledPropsType = {
-  t: TranslateFunctionType;
-  config: ConfigType;
-};
-
-export const Disabled = ({ config, t }: DisabledPropsType) => (
-  <div>Content</div>
-);
+export const Disabled = () => <CodePreview unit="button" section="disabled" />;

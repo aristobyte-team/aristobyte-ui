@@ -1,26 +1,67 @@
 @use "../../styles/settings" as *;
 
 .button {
+  align-items: center;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
-  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0rem;
   line-height: 1.4285714286;
   overflow: hidden;
   position: relative;
-  padding: 0.5rem 1rem;
   transition: background-color 0.2s ease;
 
+  &--xsm {
+    font-size: 0.75rem; // 12px
+    line-height: 1rem; // 16px
+    padding: 0.25rem 0.5rem; // 4px 8px
+    min-height: 28px;
+  }
+
+  &--sm {
+    font-size: 0.875rem; // 14px
+    line-height: 1.25rem; // 20px
+    padding: 0.375rem 0.75rem; // 6px 12px
+    min-height: 32px;
+  }
+
+  &--md {
+    font-size: 1rem; // 16px
+    line-height: 1.5rem; // 24px
+    padding: 0.5rem 1rem; // 8px 16px
+    min-height: 40px;
+  }
+
+  &--lg {
+    font-size: 1.125rem; // 18px
+    line-height: 1.75rem; // 28px
+    padding: 0.625rem 1.25rem; // 10px 20px
+    min-height: 44px;
+  }
+
+  &--xlg {
+    font-size: 1.25rem; // 20px
+    line-height: 1.75rem; // 28px
+    padding: 0.75rem 1.5rem; // 12px 24px
+    min-height: 48px;
+  }
+
   &--default {
-    background-color: $transparent;
+    background-color: $color-default;
     backdrop-filter: 8px;
     color: $white;
 
     &:hover {
-      background-color: $white-transparent-100;
+      background-color: $color-default-hover;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-default-disabled;
+      cursor: not-allowed;
+      opacity: 1;
     }
   }
 
@@ -31,6 +72,13 @@
     &:hover {
       background-color: $color-primary-hover;
     }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-primary-disabled;
+      cursor: not-allowed;
+      opacity: 1;
+    }
   }
 
   &--secondary {
@@ -39,6 +87,13 @@
 
     &:hover {
       background-color: $color-secondary-hover;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-secondary-disabled;
+      cursor: not-allowed;
+      opacity: 1;
     }
   }
 
@@ -49,6 +104,13 @@
     &:hover {
       background-color: $color-success-hover;
     }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-success-disabled;
+      cursor: not-allowed;
+      opacity: 1;
+    }
   }
 
   &--error {
@@ -58,6 +120,13 @@
     &:hover {
       background-color: $color-error-hover;
     }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-error-disabled;
+      cursor: not-allowed;
+      opacity: 1;
+    }
   }
 
   &--warning {
@@ -66,6 +135,13 @@
 
     &:hover {
       background-color: $color-warning-hover;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-warning-disabled;
+      cursor: not-allowed;
+      opacity: 1;
     }
   }
 

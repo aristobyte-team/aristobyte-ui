@@ -1,11 +1,5 @@
 import * as React from "react";
 
-import { type ConfigType } from "@/config";
-import { type TranslateFunctionType } from "@/data";
+import { CodePreview } from "../../CodePreview";
 
-export type SizesPropsType = {
-  t: TranslateFunctionType;
-  config: ConfigType;
-};
-
-export const Sizes = ({ config, t }: SizesPropsType) => <div>Content</div>;
+export const Sizes = () => <CodePreview unit="button" section="sizes" />;

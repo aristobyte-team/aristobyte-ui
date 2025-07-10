@@ -93,27 +93,28 @@ $amber-700: #b45309; // Hover
 
 // === Semantic Tokens ===
 $color-default: $grey-800;
-$color-default-bg: $grey-100;
+$color-default-hover: $grey-900;
+$color-default-disabled: $grey-400;
 
 $color-primary: $blue-600;
 $color-primary-hover: $blue-700;
-$color-primary-bg: $blue-50;
+$color-primary-disabled: $blue-300;
 
 $color-secondary: $indigo-600;
 $color-secondary-hover: $indigo-700;
-$color-secondary-bg: $indigo-50;
+$color-secondary-disabled: $indigo-200;
 
 $color-error: $red-600;
 $color-error-hover: $red-700;
-$color-error-bg: $red-50;
+$color-error-disabled: $red-200;
 
 $color-success: $green-600;
 $color-success-hover: $green-700;
-$color-success-bg: $green-50;
+$color-success-disabled: $green-200;
 
 $color-warning: $amber-600;
 $color-warning-hover: $amber-700;
-$color-warning-bg: $amber-50;
+$color-warning-disabled: $amber-200;
 
 // === Shadows ===
 $shadow-sm: 0 1px 2px 0 rgba($black, 0.05);

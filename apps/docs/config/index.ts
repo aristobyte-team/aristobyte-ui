@@ -110,13 +110,21 @@ export const Config = {
       {
         id: "code",
         content: {
-          button: { usage: CodeBlocks.Button.Usage },
+          button: {
+            usage: CodeBlocks.Button.Usage,
+            disabled: CodeBlocks.Button.Disabled,
+            sizes: CodeBlocks.Button.Sizes,
+          },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
       {
         id: "preview",
         content: {
-          button: { usage: PreviewBlocks.Button.Usage },
+          button: {
+            usage: PreviewBlocks.Button.Usage,
+            disabled: PreviewBlocks.Button.Disabled,
+            sizes: PreviewBlocks.Button.Sizes,
+          },
         } as {
           [unit: string]: {
             [unitSection: string]: {
