@@ -1,8 +1,10 @@
 import * as React from "react";
 
+import { ButtonPreviewBlocks } from "./ButtonPreviewBlocks";
+import { SpinnerPreviewBlocks } from "./SpinnerPreviewBlocks";
+
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
-import { ButtonPreviewBlocks } from "./ButtonPreviewBlocks";
 
 export type ChildComponentPropsType = {
   config?: ConfigType;
@@ -52,6 +54,24 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
         },
         variants: {
           childComponent: ButtonPreviewBlocks.Variants,
+          props,
+        },
+      },
+      spinner: {
+        usage: {
+          childComponent: SpinnerPreviewBlocks.Usage,
+          props,
+        },
+        sizes: {
+          childComponent: SpinnerPreviewBlocks.Sizes,
+          props,
+        },
+        types: {
+          childComponent: SpinnerPreviewBlocks.Types,
+          props,
+        },
+        variants: {
+          childComponent: SpinnerPreviewBlocks.Variants,
           props,
         },
       },

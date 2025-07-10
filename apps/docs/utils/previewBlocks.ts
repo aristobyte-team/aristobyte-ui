@@ -26,4 +26,26 @@ export const PreviewBlocks = {
       section: "variants",
     },
   },
+  Spinner: {
+    Usage: {
+      category: "components",
+      unit: "spinner",
+      section: "usage",
+    },
+    Sizes: {
+      category: "components",
+      unit: "spinner",
+      section: "sizes",
+    },
+    Types: {
+      category: "components",
+      unit: "spinner",
+      section: "types",
+    },
+    Variants: {
+      category: "components",
+      unit: "spinner",
+      section: "variants",
+    },
+  },
 };

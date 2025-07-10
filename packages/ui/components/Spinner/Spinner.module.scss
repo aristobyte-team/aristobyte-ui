@@ -1,0 +1,232 @@
+@use "../../styles/settings" as *;
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-duo {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.spinner {
+  &-size {
+    &--xsm {
+      width: 1rem; // 16px
+      height: 1rem;
+    }
+
+    &--sm {
+      width: 1.5rem; // 24px
+      height: 1.5rem;
+    }
+
+    &--md {
+      width: 2rem; // 32px
+      height: 2rem;
+    }
+
+    &--lg {
+      width: 2.5rem; // 40px
+      height: 2.5rem;
+    }
+
+    &--xlg {
+      width: 3rem; // 48px
+      height: 3rem;
+    }
+  }
+
+  &-type {
+    &--regular {
+      animation: rotation 0.8s ease infinite;
+      border-radius: 50%;
+
+      &.spinner-variant {
+        &--default {
+          border: 3px solid rgba($color-default, 0.25);
+          border-top-color: rgba($color-default, 1);
+        }
+        &--primary {
+          border: 3px solid rgba($color-primary, 0.25);
+          border-top-color: rgba($color-primary, 1);
+        }
+        &--secondary {
+          border: 3px solid rgba($color-secondary, 0.25);
+          border-top-color: rgba($color-secondary, 1);
+        }
+        &--success {
+          border: 3px solid rgba($color-success, 0.25);
+          border-top-color: rgba($color-success, 1);
+        }
+        &--error {
+          border: 3px solid rgba($color-error, 0.25);
+          border-top-color: rgba($color-error, 1);
+        }
+        &--warning {
+          border: 3px solid rgba($color-warning, 0.25);
+          border-top-color: rgba($color-warning, 1);
+        }
+      }
+    }
+
+    &--duo {
+      animation: rotation 0.8s ease infinite;
+      border: 3px solid transparent;
+      border-radius: 50%;
+
+      &.spinner-variant {
+        &--default {
+          border-bottom-color: rgba($color-default, 1);
+          border-top-color: rgba($color-default, 1);
+        }
+        &--primary {
+          border-bottom-color: rgba($color-primary, 1);
+          border-top-color: rgba($color-primary, 1);
+        }
+        &--secondary {
+          border-bottom-color: rgba($color-secondary, 1);
+          border-top-color: rgba($color-secondary, 1);
+        }
+        &--success {
+          border-bottom-color: rgba($color-success, 1);
+          border-top-color: rgba($color-success, 1);
+        }
+        &--error {
+          border-bottom-color: rgba($color-error, 1);
+          border-top-color: rgba($color-error, 1);
+        }
+        &--warning {
+          border-bottom-color: rgba($color-warning, 1);
+          border-top-color: rgba($color-warning, 1);
+        }
+      }
+    }
+
+    &--gradient {
+      animation: rotation 0.8s linear infinite;
+      border-right: 3px solid transparent;
+      border-radius: 50%;
+
+      &.spinner-variant {
+        &--default {
+          border-top: 3px solid rgba($color-default, 1);
+        }
+        &--primary {
+          border-top: 3px solid rgba($color-primary, 1);
+        }
+        &--secondary {
+          border-top: 3px solid rgba($color-secondary, 1);
+        }
+        &--success {
+          border-top: 3px solid rgba($color-success, 1);
+        }
+        &--error {
+          border-top: 3px solid rgba($color-error, 1);
+        }
+        &--warning {
+          border-top: 3px solid rgba($color-warning, 1);
+        }
+      }
+    }
+
+    &--pulse {
+      animation: pulse 1s ease-in-out infinite;
+      border-radius: 50%;
+      position: relative;
+
+      &.spinner-variant {
+        &--default {
+          background-color: $color-default;
+        }
+        &--primary {
+          background-color: $color-primary;
+        }
+        &--secondary {
+          background-color: $color-secondary;
+        }
+        &--success {
+          background-color: $color-success;
+        }
+        &--error {
+          background-color: $color-error;
+        }
+        &--warning {
+          background-color: $color-warning;
+        }
+      }
+    }
+
+    &--pulse-duo {
+      position: relative;
+
+      &.spinner-variant {
+        &--default::after,
+        &--default::before {
+          background-color: $color-default;
+        }
+        &--primary::after,
+        &--primary::before {
+          background-color: $color-primary;
+        }
+        &--secondary::after,
+        &--secondary::before {
+          background-color: $color-secondary;
+        }
+        &--success::after,
+        &--success::before {
+          background-color: $color-success;
+        }
+        &--error::after,
+        &--error::before {
+          background-color: $color-error;
+        }
+        &--warning::after,
+        &--warning::before {
+          background-color: $color-warning;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      &::before {
+        animation: pulse-duo 2s ease-in-out infinite;
+      }
+      &::after {
+        animation: pulse-duo 2s 1s ease-in-out infinite;
+      }
+    }
+  }
+}

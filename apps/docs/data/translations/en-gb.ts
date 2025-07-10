@@ -7,6 +7,7 @@ export const EN_GB = {
     links: {
       button: "Button",
       card: "Card",
+      spinner: "Spinner",
       installation: "Installation",
       introduction: "Introduction",
     },
@@ -67,7 +68,7 @@ export const EN_GB = {
         variants: {
           title: "Button Variants",
           description:
-            "Choose from variant styles like <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>error</b>, <b>warnings</b> and <b>success</b> to match interaction expectations and aesthetics.",
+            "Buttons can adopt different colors (e.g., <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>warning</b>, <b>error</b>) to reflect status or brand semantics during loading phases.",
         },
         loading: {
           title: "Loading State",
@@ -142,6 +143,53 @@ export const EN_GB = {
             individual: "Individual",
             global: "Global",
           },
+        },
+      },
+      spinner: {
+        intro: {
+          title: "Spinner",
+          description:
+            "Spinners indicate loading or ongoing processes, keeping users informed while the system completes background tasks.",
+          links: {
+            storybook: "Storybook",
+            npm: "@aristobyte-ui/spinner",
+            source: "Source",
+            "style-source": "Style source",
+          },
+        },
+        installation: {
+          title: "Installation of Spinner",
+          description:
+            "The above command installs the Spinner component individually. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Spinner",
+          description:
+            "The Spinner component provides visual feedback for asynchronous actions, improving user awareness of system state. Import it as shown below to seamlessly integrate it into loading workflows:",
+          tabs: {
+            individual: "Individual",
+            global: "Global",
+          },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the Spinner component using default settings. Ideal for showcasing loading states in minimal interfaces.",
+        },
+        types: {
+          title: "Spinner Types",
+          description:
+            "AristoByte UI offers five spinner types — <b>regular</b>, <b>duo</b>, <b>gradient</b>, <b>pulse</b>, and <b>pulse-duo</b>. Each type provides a distinct animation style suited for different loading scenarios, from inline feedback to full-screen blocking loaders.",
+        },
+        variants: {
+          title: "Spinner Variants",
+          description:
+            "Spinners can adopt different colors (e.g., <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>warning</b>, <b>error</b>) to reflect status or brand semantics during loading phases.",
+        },
+        sizes: {
+          title: "Spinner Sizes",
+          description:
+            "The Spinner component supports five predefined sizes — <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b> — enabling consistent integration across interface hierarchies. From inline loaders to full-screen indicators, choose the size that best fits the UI context.",
         },
       },
     },

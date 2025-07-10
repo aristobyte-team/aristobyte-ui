@@ -1,1 +1,1 @@
-export { Anchor, Button, MessageBox, CodeBlock } from "./components";
+export { Anchor, Button, MessageBox, CodeBlock, Spinner } from "./components";

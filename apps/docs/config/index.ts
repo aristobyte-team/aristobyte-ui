@@ -57,6 +57,11 @@ export const Config = {
             href: "/components/card",
             target: "_self",
           },
+          {
+            id: "spinner",
+            href: "/components/spinner",
+            target: "_self",
+          },
         ],
       },
     ],
@@ -95,6 +100,7 @@ export const Config = {
           button: CodeBlocks.Import(["Button"], "/button"),
           card: CodeBlocks.Import(["Card"], "/card"),
           home: CodeBlocks.Import(["ComponentName"], "/componentName"),
+          spinner: CodeBlocks.Import(["Spinner"], "/spinner"),
         } as { [unit: string]: string },
       },
       {
@@ -103,6 +109,7 @@ export const Config = {
           button: CodeBlocks.Import(["Button"]),
           card: CodeBlocks.Import(["Card"]),
           home: CodeBlocks.Import(["ComponentName"]),
+          spinner: CodeBlocks.Import(["Spinner"]),
         } as { [unit: string]: string },
       },
     ],
@@ -111,23 +118,37 @@ export const Config = {
         id: "code",
         content: {
           button: {
+            //@TODO: instead of using CodeBlocks.Button.Usage adjust the codeBlocks.ts and use { content: { button: CodeBlocks.Button } }
             usage: CodeBlocks.Button.Usage,
             disabled: CodeBlocks.Button.Disabled,
             sizes: CodeBlocks.Button.Sizes,
             radius: CodeBlocks.Button.Radius,
             variants: CodeBlocks.Button.Variants,
           },
+          spinner: {
+            usage: CodeBlocks.Spinner.Usage,
+            sizes: CodeBlocks.Spinner.Sizes,
+            types: CodeBlocks.Spinner.Types,
+            variants: CodeBlocks.Spinner.Variants,
+          },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
       {
         id: "preview",
         content: {
+          //@TODO: instead of using PreviewBlocks.Button.Usage adjust the previewBlocks.ts and use { content: { button: PreviewBlocks.Button } }
           button: {
             usage: PreviewBlocks.Button.Usage,
             disabled: PreviewBlocks.Button.Disabled,
             sizes: PreviewBlocks.Button.Sizes,
             radius: PreviewBlocks.Button.Radius,
             variants: PreviewBlocks.Button.Variants,
+          },
+          spinner: {
+            usage: PreviewBlocks.Spinner.Usage,
+            sizes: PreviewBlocks.Spinner.Sizes,
+            types: PreviewBlocks.Spinner.Types,
+            variants: PreviewBlocks.Spinner.Variants,
           },
         } as {
           [unit: string]: {
@@ -140,24 +161,6 @@ export const Config = {
         },
       },
     ],
-  },
-  layout: {
-    components: {
-      button: [
-        { section: "intro" },
-        { section: "installation" },
-        { section: "usage" },
-        { section: "disabled" },
-        { section: "sizes" },
-        { section: "radius" },
-        { section: "colors" },
-        { section: "variants" },
-        { section: "loading" },
-        { section: "with-icons" },
-        { section: "icons-only" },
-        { section: "custom-styles" },
-      ],
-    },
   },
 };
 

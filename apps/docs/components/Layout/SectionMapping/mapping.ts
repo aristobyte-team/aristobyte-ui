@@ -3,6 +3,7 @@ import * as React from "react";
 import { ButtonSections } from "./ButtonSections";
 import { CardSections } from "./CardSections";
 import { HomeSections } from "./HomeSections";
+import { SpinnerSections } from "./SpinnerSections";
 
 import { type LayoutSectionPropsType } from "../LayoutSection";
 import { type ConfigType } from "@/config";
@@ -199,6 +200,71 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             props: {
               ...props,
               id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+        ],
+        spinner: [
+          {
+            childComponent: SpinnerSections.Intro,
+            props: {
+              ...props,
+              id: "intro",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Installation,
+            props: {
+              ...props,
+              id: "installation",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Import,
+            props: {
+              ...props,
+              id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Usage,
+            props: {
+              ...props,
+              id: "usage",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Variants,
+            props: {
+              ...props,
+              id: "variants",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Types,
+            props: {
+              ...props,
+              id: "types",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: SpinnerSections.Sizes,
+            props: {
+              ...props,
+              id: "sizes",
               withTitle: true,
               withDescription: true,
             },
