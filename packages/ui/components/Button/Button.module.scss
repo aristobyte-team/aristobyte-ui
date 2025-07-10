@@ -3,7 +3,6 @@
 .button {
   align-items: center;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
   display: flex;
   font-weight: 500;
@@ -17,15 +16,16 @@
     &--default {
       background-color: $color-default;
       backdrop-filter: 8px;
-      color: $white;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-default-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-default-disabled;
+        color: $text-color-white-disabled;
+
         cursor: not-allowed;
         opacity: 1;
       }
@@ -33,15 +33,15 @@
 
     &--primary {
       background-color: $color-primary;
-      color: $white;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-primary-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-primary-disabled;
+        color: $text-color-white-disabled;
         cursor: not-allowed;
         opacity: 1;
       }
@@ -49,15 +49,15 @@
 
     &--secondary {
       background-color: $color-secondary;
-      color: $white;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-secondary-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-secondary-disabled;
+        color: $text-color-white-disabled;
         cursor: not-allowed;
         opacity: 1;
       }
@@ -65,15 +65,15 @@
 
     &--success {
       background-color: $color-success;
-      color: $white;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-success-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-success-disabled;
+        color: $text-color-white-disabled;
         cursor: not-allowed;
         opacity: 1;
       }
@@ -81,15 +81,15 @@
 
     &--error {
       background-color: $color-error;
-      color: $white;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-error-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-error-disabled;
+        color: $text-color-white-disabled;
         cursor: not-allowed;
         opacity: 1;
       }
@@ -97,15 +97,15 @@
 
     &--warning {
       background-color: $color-warning;
-      color: $black;
+      color: $text-color-white;
 
       &:hover {
         background-color: $color-warning-hover;
       }
 
-      &:disabled,
-      &.is-disabled {
+      &:disabled {
         background-color: $color-warning-disabled;
+        color: $text-color-white-disabled;
         cursor: not-allowed;
         opacity: 1;
       }
