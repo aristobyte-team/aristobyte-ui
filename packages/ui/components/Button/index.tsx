@@ -41,7 +41,7 @@ export const Button: React.FC<IButton> = ({
     <button
       ref={ref}
       disabled={disabled}
-      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${className}`}
+      className={`button ${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${className}`}
       onClick={handleClick}
       {...props}
     >

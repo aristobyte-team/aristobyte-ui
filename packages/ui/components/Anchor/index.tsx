@@ -31,7 +31,7 @@ export const Anchor: React.FC<IAnchor> = ({
     <a
       ref={ref}
       href={href}
-      className={`${styles["anchor"]} ${styles[`anchor--${variant}`]} ${className}`}
+      className={`anchor ${styles["anchor"]} ${styles[`anchor--${variant}`]} ${className}`}
       onClick={handleClick}
       {...props}
     >

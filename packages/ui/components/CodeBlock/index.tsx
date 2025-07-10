@@ -43,7 +43,7 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
   };
 
   return (
-    <div className={`${styles["code-block"]} ${className}`}>
+    <div className={`code-block ${styles["code-block"]} ${className}`}>
       <div
         className={styles["code-block__container"]}
         dangerouslySetInnerHTML={{ __html: html }}

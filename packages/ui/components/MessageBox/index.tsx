@@ -34,7 +34,7 @@ export const MessageBox: React.FC<IMessageBox> = ({
   customIcon = null,
 }) => (
   <div
-    className={`${styles["message-box"]} ${styles[`message-box--${variant}`]} ${className}`}
+    className={`message-box ${styles["message-box"]} ${styles[`message-box--${variant}`]} ${className}`}
   >
     {withIcon && (
       <span
