@@ -1,11 +1,5 @@
 import * as React from "react";
 
-import { type ConfigType } from "@/config";
-import { type TranslateFunctionType } from "@/data";
+import { CodePreview } from "../../CodePreview";
 
-export type RadiusPropsType = {
-  t: TranslateFunctionType;
-  config: ConfigType;
-};
-
-export const Radius = ({ config, t }: RadiusPropsType) => <div>Content</div>;
+export const Radius = () => <CodePreview unit="button" section="radius" />;

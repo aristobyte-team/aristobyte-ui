@@ -17,5 +17,11 @@
       margin: 0 0 30px;
       text-align: left;
     }
+
+    b {
+      background-color: $grey-very-dark-color;
+      border-radius: 6px;
+      padding: 2px 4.5px;
+    }
   }
 }

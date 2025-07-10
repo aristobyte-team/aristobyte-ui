@@ -67,7 +67,7 @@ export const EN_GB = {
         variants: {
           title: "Button Variants",
           description:
-            "Choose from variant styles like <b>solid</b>, <b>outline</b>, and <b>ghost</b> to match interaction expectations and aesthetics.",
+            "Choose from variant styles like <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>error</b>, <b>warnings</b> and <b>success</b> to match interaction expectations and aesthetics.",
         },
         loading: {
           title: "Loading State",

@@ -114,6 +114,8 @@ export const Config = {
             usage: CodeBlocks.Button.Usage,
             disabled: CodeBlocks.Button.Disabled,
             sizes: CodeBlocks.Button.Sizes,
+            radius: CodeBlocks.Button.Radius,
+            variants: CodeBlocks.Button.Variants,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -124,6 +126,8 @@ export const Config = {
             usage: PreviewBlocks.Button.Usage,
             disabled: PreviewBlocks.Button.Disabled,
             sizes: PreviewBlocks.Button.Sizes,
+            radius: PreviewBlocks.Button.Radius,
+            variants: PreviewBlocks.Button.Variants,
           },
         } as {
           [unit: string]: {

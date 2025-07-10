@@ -101,15 +101,6 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             },
           },
           {
-            childComponent: ButtonSections.Colors,
-            props: {
-              ...props,
-              id: "colors",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
             childComponent: ButtonSections.Variants,
             props: {
               ...props,

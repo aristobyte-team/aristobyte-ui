@@ -15,5 +15,15 @@ export const PreviewBlocks = {
       unit: "button",
       section: "sizes",
     },
+    Radius: {
+      category: "components",
+      unit: "button",
+      section: "radius",
+    },
+    Variants: {
+      category: "components",
+      unit: "button",
+      section: "variants",
+    },
   },
 };

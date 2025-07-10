@@ -6,8 +6,15 @@ import { renderRipple } from "../../utils";
 import styles from "./Button.module.scss";
 
 export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "default";
+  variant?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning";
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
+  radius?: "none" | "sm" | "md" | "lg" | "full";
 }
 
 export const Button: React.FC<IButton> = ({
@@ -17,6 +24,7 @@ export const Button: React.FC<IButton> = ({
   onClick,
   disabled,
   size = "md",
+  radius = "md",
   ...props
 }) => {
   const ref = React.useRef<HTMLButtonElement>(null);
@@ -33,7 +41,7 @@ export const Button: React.FC<IButton> = ({
     <button
       ref={ref}
       disabled={disabled}
-      className={`${styles["button"]} ${styles[`button--${variant}`]} ${styles[`button--${size}`]} ${className}`}
+      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${className}`}
       onClick={handleClick}
       {...props}
     >

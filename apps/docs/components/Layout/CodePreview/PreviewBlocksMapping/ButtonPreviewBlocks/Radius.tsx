@@ -1,23 +1,23 @@
 import * as React from "react";
 import { Button } from "@aristobyte-ui/ui/components/Button/index";
 
-export const Sizes = () => {
+export const Radius = () => {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-      <Button variant="primary" size="xsm">
-        Extra small
+      <Button variant="primary" radius="none">
+        None
       </Button>
-      <Button variant="primary" size="sm">
+      <Button variant="primary" radius="sm">
         Small
       </Button>
-      <Button variant="primary" size="md">
+      <Button variant="primary" radius="md">
         Medium
       </Button>
-      <Button variant="primary" size="lg">
+      <Button variant="primary" radius="lg">
         Large
       </Button>
-      <Button variant="primary" size="xlg">
-        Extra large
+      <Button variant="primary" radius="full">
+        Full
       </Button>
     </div>
   );

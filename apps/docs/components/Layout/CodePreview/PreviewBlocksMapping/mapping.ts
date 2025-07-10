@@ -46,6 +46,14 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
           childComponent: ButtonPreviewBlocks.Sizes,
           props,
         },
+        radius: {
+          childComponent: ButtonPreviewBlocks.Radius,
+          props,
+        },
+        variants: {
+          childComponent: ButtonPreviewBlocks.Variants,
+          props,
+        },
       },
     },
   }) as MappingType)![props.category]![props.unit]![props.section]!;

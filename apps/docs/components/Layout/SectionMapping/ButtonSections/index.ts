@@ -1,4 +1,3 @@
-import { Colors } from "./Colors";
 import { CustomStyles } from "./CustomStyles";
 import { Disabled } from "./Disabled";
 import { IconsOnly } from "./IconsOnly";
@@ -13,7 +12,6 @@ import { Installation } from "./Installation";
 import { Import } from "./Import";
 
 export const ButtonSections = {
-  Colors,
   CustomStyles,
   Disabled,
   IconsOnly,
