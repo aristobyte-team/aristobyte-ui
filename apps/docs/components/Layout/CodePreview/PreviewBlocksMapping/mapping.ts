@@ -44,6 +44,10 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
           childComponent: ButtonPreviewBlocks.Disabled,
           props,
         },
+        loading: {
+          childComponent: ButtonPreviewBlocks.Loading,
+          props,
+        },
         sizes: {
           childComponent: ButtonPreviewBlocks.Sizes,
           props,

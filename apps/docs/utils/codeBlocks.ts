@@ -74,56 +74,80 @@ export default function App() {
     </div>
   );
 }`,
+    Loading: `import * as React from "react";
+import { Button } from "@aristobyte-ui/ui/components/Button/index";
+
+export const Loading = () => {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Button variant="primary" isLoading spinnerType="default">
+        Loading
+      </Button>
+      <Button variant="primary" isLoading spinnerType="duo">
+        Loading
+      </Button>
+      <Button variant="primary" isLoading spinnerType="gradient">
+        Loading
+      </Button>
+      <Button variant="primary" isLoading spinnerType="pulse">
+        Loading
+      </Button>
+      <Button variant="primary" isLoading spinnerType="pulse-duo">
+        Loading
+      </Button>
+    </div>
+  );
+}`,
   },
   Spinner: {
     Usage: `import * as React from "react";
-    import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
-    
-    export default function App() {
-      return <Spinner variant="primary" />;
-    }`,
+import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
+
+export default function App() {
+  return <Spinner variant="primary" />;
+}`,
     Sizes: `import * as React from "react";
-    import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
-    
-    export default function App() {
-      return (
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <Spinner variant="primary" size="xsm" />
-          <Spinner variant="primary" size="sm" />
-          <Spinner variant="primary" size="md" />
-          <Spinner variant="primary" size="lg" />
-          <Spinner variant="primary" size="xlg" />
-        </div>
-      );
-    }`,
+import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Spinner variant="primary" size="xsm" />
+      <Spinner variant="primary" size="sm" />
+      <Spinner variant="primary" size="md" />
+      <Spinner variant="primary" size="lg" />
+      <Spinner variant="primary" size="xlg" />
+    </div>
+  );
+}`,
     Types: `import * as React from "react";
-    import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
-    
-    export default function App() {
-      return (
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <Spinner variant="primary" type="regular" />
-          <Spinner variant="primary" type="duo" />
-          <Spinner variant="primary" type="gradient" />
-          <Spinner variant="primary" type="pulse" />
-          <Spinner variant="primary" type="pulse-duo" />
-        </div>
-      );
-    }`,
+import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Spinner variant="primary" type="default" />
+      <Spinner variant="primary" type="duo" />
+      <Spinner variant="primary" type="gradient" />
+      <Spinner variant="primary" type="pulse" />
+      <Spinner variant="primary" type="pulse-duo" />
+    </div>
+  );
+}`,
     Variants: `import * as React from "react";
-    import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
-    
-    export default function App() {
-      return (
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <Spinner />
-          <Spinner variant="primary" />
-          <Spinner variant="secondary" />
-          <Spinner variant="error" />
-          <Spinner variant="warning" />
-          <Spinner variant="success" />
-        </div>
-      );
-    }`,
+import { Spinner } from "@aristobyte-ui/ui/components/Spinner/index";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Spinner />
+      <Spinner variant="primary" />
+      <Spinner variant="secondary" />
+      <Spinner variant="error" />
+      <Spinner variant="warning" />
+      <Spinner variant="success" />
+    </div>
+  );
+}`,
   },
 };

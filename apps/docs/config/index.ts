@@ -120,6 +120,7 @@ export const Config = {
           button: {
             //@TODO: instead of using CodeBlocks.Button.Usage adjust the codeBlocks.ts and use { content: { button: CodeBlocks.Button } }
             usage: CodeBlocks.Button.Usage,
+            loading: CodeBlocks.Button.Loading,
             disabled: CodeBlocks.Button.Disabled,
             sizes: CodeBlocks.Button.Sizes,
             radius: CodeBlocks.Button.Radius,
@@ -140,6 +141,7 @@ export const Config = {
           button: {
             usage: PreviewBlocks.Button.Usage,
             disabled: PreviewBlocks.Button.Disabled,
+            loading: PreviewBlocks.Button.Loading,
             sizes: PreviewBlocks.Button.Sizes,
             radius: PreviewBlocks.Button.Radius,
             variants: PreviewBlocks.Button.Variants,

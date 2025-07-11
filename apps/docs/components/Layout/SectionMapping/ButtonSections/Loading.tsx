@@ -1,11 +1,5 @@
 import * as React from "react";
 
-import { type ConfigType } from "@/config";
-import { type TranslateFunctionType } from "@/data";
+import { CodePreview } from "../../CodePreview";
 
-export type LoadingPropsType = {
-  t: TranslateFunctionType;
-  config: ConfigType;
-};
-
-export const Loading = ({ config, t }: LoadingPropsType) => <div>Content</div>;
+export const Loading = () => <CodePreview unit="button" section="loading" />;

@@ -5,7 +5,7 @@ import * as React from "react";
 import styles from "./Spinner.module.scss";
 
 export interface ISpinner {
-  type?: "regular" | "duo" | "gradient" | "pulse" | "pulse-duo";
+  type?: "default" | "duo" | "gradient" | "pulse" | "pulse-duo";
   variant?:
     | "default"
     | "primary"
@@ -18,7 +18,7 @@ export interface ISpinner {
 }
 
 export const Spinner: React.FC<ISpinner> = ({
-  type = "regular",
+  type = "default",
   variant = "default",
   size = "md",
   className = "",

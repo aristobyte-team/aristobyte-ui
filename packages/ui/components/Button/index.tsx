@@ -1,6 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { Spinner } from "../Spinner";
+
 import { renderRipple } from "../../utils";
 
 import styles from "./Button.module.scss";
@@ -15,6 +17,8 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "warning";
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   radius?: "none" | "sm" | "md" | "lg" | "full";
+  isLoading?: boolean;
+  spinnerType?: "default" | "duo" | "gradient" | "pulse" | "pulse-duo";
 }
 
 export const Button: React.FC<IButton> = ({
@@ -25,7 +29,10 @@ export const Button: React.FC<IButton> = ({
   disabled,
   size = "md",
   radius = "md",
-  ...props
+  isLoading = false,
+  spinnerType = "default",
+  dangerouslySetInnerHTML,
+  ...restProps
 }) => {
   const ref = React.useRef<HTMLButtonElement>(null);
 
@@ -37,15 +44,30 @@ export const Button: React.FC<IButton> = ({
     }
   };
 
+  const Children = () => (
+    <>
+      {isLoading && (
+        <Spinner
+          size={size}
+          variant={variant}
+          type={spinnerType}
+          className={styles.spinner}
+        />
+      )}
+      {children}
+    </>
+  );
+
   return (
     <button
       ref={ref}
-      disabled={disabled}
-      className={`button ${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${className}`}
+      disabled={disabled || isLoading}
+      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${isLoading ? styles["button--loading"] : ""} ${className}`}
       onClick={handleClick}
-      {...props}
-    >
-      {children}
-    </button>
+      {...(dangerouslySetInnerHTML
+        ? { dangerouslySetInnerHTML }
+        : { children: <Children /> })}
+      {...restProps}
+    />
   );
 };

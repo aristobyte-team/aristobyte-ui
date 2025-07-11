@@ -25,6 +25,11 @@ export const PreviewBlocks = {
       unit: "button",
       section: "variants",
     },
+    Loading: {
+      category: "components",
+      unit: "button",
+      section: "loading",
+    },
   },
   Spinner: {
     Usage: {

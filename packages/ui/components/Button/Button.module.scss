@@ -12,6 +12,10 @@
   position: relative;
   transition: background-color 0.2s ease;
 
+  &--loading {
+    gap: 10px;
+  }
+
   &-variant {
     &--default {
       background-color: $color-default;
@@ -118,6 +122,11 @@
       line-height: 1rem; // 16px
       padding: 0.25rem 0.5rem; // 4px 8px
       min-height: 28px;
+
+      .spinner {
+        max-height: 0.75rem; // 12px
+        max-width: 0.75rem; // 12px
+      }
     }
 
     &--sm {
@@ -125,6 +134,11 @@
       line-height: 1.25rem; // 20px
       padding: 0.375rem 0.75rem; // 6px 12px
       min-height: 32px;
+
+      .spinner {
+        max-height: 0.875rem; // 14px
+        max-width: 0.875rem; // 14px
+      }
     }
 
     &--md {
@@ -132,6 +146,11 @@
       line-height: 1.5rem; // 24px
       padding: 0.5rem 1rem; // 8px 16px
       min-height: 40px;
+
+      > .spinner {
+        height: 1rem !important; // 16px
+        width: 1rem !important; // 16px
+      }
     }
 
     &--lg {
@@ -139,6 +158,11 @@
       line-height: 1.75rem; // 28px
       padding: 0.625rem 1.25rem; // 10px 20px
       min-height: 44px;
+
+      .spinner {
+        max-height: 1.125rem; // 18px
+        max-width: 1.125rem; // 18px
+      }
     }
 
     &--xlg {
@@ -146,6 +170,11 @@
       line-height: 1.75rem; // 28px
       padding: 0.75rem 1.5rem; // 12px 24px
       min-height: 48px;
+
+      .spinner {
+        max-height: 1.25rem; // 20px
+        max-width: 1.25rem; // 20px
+      }
     }
   }
 

@@ -73,7 +73,7 @@ export const EN_GB = {
         loading: {
           title: "Loading State",
           description:
-            "The <b>loading</b> state provides feedback during asynchronous operations. It disables interaction and shows a spinner.",
+            "The <b>isLoading</b> state provides feedback during asynchronous operations. It disables interaction and shows a spinner.",
         },
         "with-icons": {
           title: "Buttons with Icons",
@@ -179,7 +179,7 @@ export const EN_GB = {
         types: {
           title: "Spinner Types",
           description:
-            "AristoByte UI offers five spinner types — <b>regular</b>, <b>duo</b>, <b>gradient</b>, <b>pulse</b>, and <b>pulse-duo</b>. Each type provides a distinct animation style suited for different loading scenarios, from inline feedback to full-screen blocking loaders.",
+            "AristoByte UI offers five spinner types — <b>default</b>, <b>duo</b>, <b>gradient</b>, <b>pulse</b>, and <b>pulse-duo</b>. Each type provides a distinct animation style suited for different loading scenarios, from inline feedback to full-screen blocking loaders.",
         },
         variants: {
           title: "Spinner Variants",
