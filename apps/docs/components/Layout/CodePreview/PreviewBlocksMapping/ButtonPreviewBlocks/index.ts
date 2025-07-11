@@ -4,6 +4,7 @@ import { Usage } from "./Usage";
 import { Sizes } from "./Sizes";
 import { Radius } from "./Radius";
 import { Variants } from "./Variants";
+import { WithIcon } from "./WithIcon";
 
 export const ButtonPreviewBlocks = {
   Disabled,
@@ -12,4 +13,5 @@ export const ButtonPreviewBlocks = {
   Sizes,
   Radius,
   Variants,
+  WithIcon,
 };

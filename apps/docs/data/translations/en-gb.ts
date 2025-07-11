@@ -75,20 +75,10 @@ export const EN_GB = {
           description:
             "The <b>isLoading</b> state provides feedback during asynchronous operations. It disables interaction and shows a spinner.",
         },
-        "with-icons": {
-          title: "Buttons with Icons",
+        "with-icon": {
+          title: "Buttons with Icon",
           description:
-            "Combine buttons with icons for better visual guidance. Icons can be placed before or after the label.",
-        },
-        "icons-only": {
-          title: "Icon-Only Buttons",
-          description:
-            "Icon-only buttons are used for space-efficient UIs. Ensure accessibility by using `aria-label` or <b>title</b>.",
-        },
-        "custom-styles": {
-          title: "Custom Styles",
-          description:
-            "Use the <b>className</b> prop or override theme tokens to customize button styling for specific design use cases.",
+            "Pass an icon component via the <b>icon.component</b> prop and choose its position with <b>icon.align</b>. Icons support both <b>left</b> and <b>right</b> alignment and can be used alongside a loading spinner. To render an <b>icon-only</b> button, simply omit the children.",
         },
       },
       card: {

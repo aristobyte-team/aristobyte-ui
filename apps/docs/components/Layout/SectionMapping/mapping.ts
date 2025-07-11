@@ -120,28 +120,10 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             },
           },
           {
-            childComponent: ButtonSections.WithIcons,
+            childComponent: ButtonSections.WithIcon,
             props: {
               ...props,
-              id: "with-icons",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.IconsOnly,
-            props: {
-              ...props,
-              id: "icons-only",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.CustomStyles,
-            props: {
-              ...props,
-              id: "custom-styles",
+              id: "with-icon",
               withTitle: true,
               withDescription: true,
             },

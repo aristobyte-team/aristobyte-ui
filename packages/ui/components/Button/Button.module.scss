@@ -6,14 +6,16 @@
   cursor: pointer;
   display: flex;
   font-weight: 500;
+  gap: 10px;
   letter-spacing: 0rem;
   line-height: 1.4285714286;
   overflow: hidden;
   position: relative;
   transition: background-color 0.2s ease;
 
-  &--loading {
-    gap: 10px;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 1;
   }
 
   &-variant {
@@ -30,8 +32,13 @@
         background-color: $color-default-disabled;
         color: $text-color-white-disabled;
 
-        cursor: not-allowed;
-        opacity: 1;
+        .icon {
+          color: $text-color-white-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-white;
       }
     }
 
@@ -46,8 +53,14 @@
       &:disabled {
         background-color: $color-primary-disabled;
         color: $text-color-white-disabled;
-        cursor: not-allowed;
-        opacity: 1;
+
+        .icon {
+          color: $text-color-white-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-white;
       }
     }
 
@@ -62,8 +75,14 @@
       &:disabled {
         background-color: $color-secondary-disabled;
         color: $text-color-white-disabled;
-        cursor: not-allowed;
-        opacity: 1;
+
+        .icon {
+          color: $text-color-white-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-white;
       }
     }
 
@@ -78,8 +97,14 @@
       &:disabled {
         background-color: $color-success-disabled;
         color: $text-color-white-disabled;
-        cursor: not-allowed;
-        opacity: 1;
+
+        .icon {
+          color: $text-color-white-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-white;
       }
     }
 
@@ -94,14 +119,20 @@
       &:disabled {
         background-color: $color-error-disabled;
         color: $text-color-white-disabled;
-        cursor: not-allowed;
-        opacity: 1;
+
+        .icon {
+          color: $text-color-white-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-white;
       }
     }
 
     &--warning {
       background-color: $color-warning;
-      color: $text-color-white;
+      color: $text-color-black;
 
       &:hover {
         background-color: $color-warning-hover;
@@ -109,9 +140,15 @@
 
       &:disabled {
         background-color: $color-warning-disabled;
-        color: $text-color-white-disabled;
-        cursor: not-allowed;
-        opacity: 1;
+        color: $text-color-black-disabled;
+
+        .icon {
+          color: $text-color-black-disabled;
+        }
+      }
+
+      .icon {
+        color: $text-color-black;
       }
     }
   }
@@ -123,9 +160,10 @@
       padding: 0.25rem 0.5rem; // 4px 8px
       min-height: 28px;
 
-      .spinner {
-        max-height: 0.75rem; // 12px
-        max-width: 0.75rem; // 12px
+      .spinner,
+      .icon {
+        max-height: 1rem; // 16px
+        max-width: 1rem; // 16px
       }
     }
 
@@ -135,9 +173,10 @@
       padding: 0.375rem 0.75rem; // 6px 12px
       min-height: 32px;
 
-      .spinner {
-        max-height: 0.875rem; // 14px
-        max-width: 0.875rem; // 14px
+      .spinner,
+      .icon {
+        max-height: 1.125rem; // 18px
+        max-width: 1.125rem; // 18px
       }
     }
 
@@ -147,9 +186,10 @@
       padding: 0.5rem 1rem; // 8px 16px
       min-height: 40px;
 
-      > .spinner {
-        height: 1rem !important; // 16px
-        width: 1rem !important; // 16px
+      .spinner,
+      .icon {
+        height: 1.25rem; // 20px
+        width: 1.25rem; // 20px
       }
     }
 
@@ -159,9 +199,10 @@
       padding: 0.625rem 1.25rem; // 10px 20px
       min-height: 44px;
 
-      .spinner {
-        max-height: 1.125rem; // 18px
-        max-width: 1.125rem; // 18px
+      .spinner,
+      .icon {
+        max-height: 1.375rem; // 22px
+        max-width: 1.375rem; // 22px
       }
     }
 
@@ -171,9 +212,10 @@
       padding: 0.75rem 1.5rem; // 12px 24px
       min-height: 48px;
 
-      .spinner {
-        max-height: 1.25rem; // 20px
-        max-width: 1.25rem; // 20px
+      .spinner,
+      .icon {
+        max-height: 1.5rem; // 24px
+        max-width: 1.5rem; // 24px
       }
     }
   }
@@ -200,8 +242,17 @@
     }
   }
 
-  svg {
-    height: 100%;
-    width: 100%;
+  .icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &--right {
+      order: 5;
+    }
+
+    svg {
+      width: 100%;
+    }
   }
 }

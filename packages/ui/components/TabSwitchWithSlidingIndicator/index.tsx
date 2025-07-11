@@ -26,7 +26,10 @@ export const TabSwitchWithSlidingIndicator: React.FC<
             className={`${styles["tab-switch-with-sliding-indicator__tab"]} ${activeIndex === index ? styles[" tab-switch-with-sliding-indicator__tab--active"] : ""}`}
             onClick={() => setActiveIndex(index)}
           >
-            {buttonContent || index}
+            {
+              // @TODO: This should be fixed: from consumer level we should be able to pass only string not components - once this is resolved the active tab should have text color white. Since we pass a whole component from consumer level it's hard to identify the most inner component which contains text, so we can change the color of it in different scenarios
+              buttonContent || index
+            }
           </button>
         ))}
         <span

@@ -60,6 +60,10 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
           childComponent: ButtonPreviewBlocks.Variants,
           props,
         },
+        "with-icon": {
+          childComponent: ButtonPreviewBlocks.WithIcon,
+          props,
+        },
       },
       spinner: {
         usage: {

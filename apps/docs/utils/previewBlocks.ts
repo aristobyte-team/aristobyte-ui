@@ -30,6 +30,11 @@ export const PreviewBlocks = {
       unit: "button",
       section: "loading",
     },
+    WithIcon: {
+      category: "components",
+      unit: "button",
+      section: "with-icon",
+    },
   },
   Spinner: {
     Usage: {

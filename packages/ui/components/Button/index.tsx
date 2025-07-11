@@ -17,6 +17,10 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "warning";
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   radius?: "none" | "sm" | "md" | "lg" | "full";
+  icon?: {
+    component: React.ElementType;
+    align?: "left" | "right";
+  };
   isLoading?: boolean;
   spinnerType?: "default" | "duo" | "gradient" | "pulse" | "pulse-duo";
 }
@@ -29,6 +33,7 @@ export const Button: React.FC<IButton> = ({
   disabled,
   size = "md",
   radius = "md",
+  icon,
   isLoading = false,
   spinnerType = "default",
   dangerouslySetInnerHTML,
@@ -51,8 +56,15 @@ export const Button: React.FC<IButton> = ({
           size={size}
           variant={variant}
           type={spinnerType}
-          className={styles.spinner}
+          className={styles["spinner"]}
         />
+      )}
+      {icon && (
+        <span
+          className={`${styles["icon"]} ${styles[`icon--${icon.align ?? "left"}`]}`}
+        >
+          {React.createElement(icon.component)}
+        </span>
       )}
       {children}
     </>

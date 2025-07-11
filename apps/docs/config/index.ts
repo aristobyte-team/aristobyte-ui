@@ -125,6 +125,7 @@ export const Config = {
             sizes: CodeBlocks.Button.Sizes,
             radius: CodeBlocks.Button.Radius,
             variants: CodeBlocks.Button.Variants,
+            "with-icon": CodeBlocks.Button.WithIcon,
           },
           spinner: {
             usage: CodeBlocks.Spinner.Usage,
@@ -145,6 +146,7 @@ export const Config = {
             sizes: PreviewBlocks.Button.Sizes,
             radius: PreviewBlocks.Button.Radius,
             variants: PreviewBlocks.Button.Variants,
+            "with-icon": PreviewBlocks.Button.WithIcon,
           },
           spinner: {
             usage: PreviewBlocks.Spinner.Usage,
