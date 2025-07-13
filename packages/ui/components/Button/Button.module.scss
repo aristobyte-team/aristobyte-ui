@@ -11,144 +11,761 @@
   line-height: 1.4285714286;
   overflow: hidden;
   position: relative;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 200ms ease,
+    transform 300ms ease;
 
   &:disabled {
     cursor: not-allowed;
     opacity: 1;
   }
 
+  &:active {
+    transform: scale(0.97);
+  }
+
   &-variant {
-    &--default {
-      background-color: $color-default;
-      backdrop-filter: 8px;
-      color: $text-color-white;
+    &--default.button-appearance {
+      &--solid {
+        background-color: $color-default;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-default-hover;
-      }
+        &:hover {
+          background-color: $color-default-hover;
+        }
 
-      &:disabled {
-        background-color: $color-default-disabled;
-        color: $text-color-white-disabled;
+        &:disabled {
+          background-color: $color-default-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-white-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
+      &--outline {
+        background-color: rgba($color-default, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-default;
         color: $text-color-white;
+
+        &:hover {
+          background-color: $color-default;
+        }
+
+        &:disabled {
+          background-color: rgba($color-default-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-default, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-default;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-default;
+        }
+
+        &:disabled {
+          background-color: rgba($color-default-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-default, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-default;
+        }
+
+        &:disabled {
+          background-color: rgba($color-default-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-default, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-default;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-default, 0.5),
+          0 0 16px rgba($color-default, 0.4),
+          0 0 24px rgba($color-default, 0.3);
+
+        &:hover {
+          background-color: $color-default;
+        }
+
+        &:disabled {
+          background-color: rgba($color-default-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
 
-    &--primary {
-      background-color: $color-primary;
-      color: $text-color-white;
+    &--primary.button-appearance {
+      &--solid {
+        background-color: $color-primary;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-primary-hover;
-      }
+        &:hover {
+          background-color: $color-primary-hover;
+        }
 
-      &:disabled {
-        background-color: $color-primary-disabled;
-        color: $text-color-white-disabled;
+        &:disabled {
+          background-color: $color-primary-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-white-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
+      &--outline {
+        background-color: rgba($color-primary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-primary;
         color: $text-color-white;
+
+        &:hover {
+          background-color: $color-primary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-primary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-primary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-primary;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-primary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-primary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-primary, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-primary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-primary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-primary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-primary;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-primary, 0.5),
+          0 0 16px rgba($color-primary, 0.4),
+          0 0 24px rgba($color-primary, 0.3);
+
+        &:hover {
+          background-color: $color-primary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-primary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
 
-    &--secondary {
-      background-color: $color-secondary;
-      color: $text-color-white;
+    &--secondary.button-appearance {
+      &--solid {
+        background-color: $color-secondary;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-secondary-hover;
-      }
+        &:hover {
+          background-color: $color-secondary-hover;
+        }
 
-      &:disabled {
-        background-color: $color-secondary-disabled;
-        color: $text-color-white-disabled;
+        &:disabled {
+          background-color: $color-secondary-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-white-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
+      &--outline {
+        background-color: rgba($color-secondary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-secondary;
         color: $text-color-white;
+
+        &:hover {
+          background-color: $color-secondary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-secondary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-secondary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-secondary;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-secondary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-secondary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-secondary, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-secondary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-secondary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-secondary, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-secondary;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-secondary, 0.5),
+          0 0 16px rgba($color-secondary, 0.4),
+          0 0 24px rgba($color-secondary, 0.3);
+
+        &:hover {
+          background-color: $color-secondary;
+        }
+
+        &:disabled {
+          background-color: rgba($color-secondary-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
 
-    &--success {
-      background-color: $color-success;
-      color: $text-color-white;
+    &--success.button-appearance {
+      &--solid {
+        background-color: $color-success;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-success-hover;
-      }
+        &:hover {
+          background-color: $color-success-hover;
+        }
 
-      &:disabled {
-        background-color: $color-success-disabled;
-        color: $text-color-white-disabled;
+        &:disabled {
+          background-color: $color-success-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-white-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
+      &--outline {
+        background-color: rgba($color-success, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-success;
         color: $text-color-white;
+
+        &:hover {
+          background-color: $color-success;
+        }
+
+        &:disabled {
+          background-color: rgba($color-success-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-success, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-success;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-success;
+        }
+
+        &:disabled {
+          background-color: rgba($color-success-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-success, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-success;
+        }
+
+        &:disabled {
+          background-color: rgba($color-success-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-success, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-success;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-success, 0.5),
+          0 0 16px rgba($color-success, 0.4),
+          0 0 24px rgba($color-success, 0.3);
+
+        &:hover {
+          background-color: $color-success;
+        }
+
+        &:disabled {
+          background-color: rgba($color-success-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
 
-    &--error {
-      background-color: $color-error;
-      color: $text-color-white;
+    &--error.button-appearance {
+      &--solid {
+        background-color: $color-error;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-error-hover;
-      }
+        &:hover {
+          background-color: $color-error-hover;
+        }
 
-      &:disabled {
-        background-color: $color-error-disabled;
-        color: $text-color-white-disabled;
+        &:disabled {
+          background-color: $color-error-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-white-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
+      &--outline {
+        background-color: rgba($color-error, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-error;
         color: $text-color-white;
+
+        &:hover {
+          background-color: $color-error;
+        }
+
+        &:disabled {
+          background-color: rgba($color-error-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-error, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-error;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-error;
+        }
+
+        &:disabled {
+          background-color: rgba($color-error-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-error, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-error;
+        }
+
+        &:disabled {
+          background-color: rgba($color-error-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-error, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-error;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-error, 0.5),
+          0 0 16px rgba($color-error, 0.4),
+          0 0 24px rgba($color-error, 0.3);
+
+        &:hover {
+          background-color: $color-error;
+        }
+
+        &:disabled {
+          background-color: rgba($color-error-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
 
-    &--warning {
-      background-color: $color-warning;
-      color: $text-color-black;
+    &--warning.button-appearance {
+      &--solid {
+        background-color: $color-warning;
+        backdrop-filter: 8px;
+        color: $text-color-white;
 
-      &:hover {
-        background-color: $color-warning-hover;
-      }
+        &:hover {
+          background-color: $color-warning-hover;
+        }
 
-      &:disabled {
-        background-color: $color-warning-disabled;
-        color: $text-color-black-disabled;
+        &:disabled {
+          background-color: $color-warning-disabled;
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
 
         .icon {
-          color: $text-color-black-disabled;
+          color: $text-color-white;
         }
       }
 
-      .icon {
-        color: $text-color-black;
+      &--outline {
+        background-color: rgba($color-warning, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-warning;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-warning;
+        }
+
+        &:disabled {
+          background-color: rgba($color-warning-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--outline-dashed {
+        background-color: rgba($color-warning, 0.2);
+        backdrop-filter: 8px;
+        border: 1px dashed $color-warning;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-warning;
+        }
+
+        &:disabled {
+          background-color: rgba($color-warning-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--no-outline {
+        background-color: rgba($color-warning, 0.2);
+        backdrop-filter: 8px;
+        color: $text-color-white;
+
+        &:hover {
+          background-color: $color-warning;
+        }
+
+        &:disabled {
+          background-color: rgba($color-warning-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
+      }
+
+      &--glowing {
+        background-color: rgba($color-warning, 0.2);
+        backdrop-filter: 8px;
+        border: 1px solid $color-warning;
+        color: $text-color-white;
+        box-shadow:
+          0 0 8px rgba($color-warning, 0.5),
+          0 0 16px rgba($color-warning, 0.4),
+          0 0 24px rgba($color-warning, 0.3);
+
+        &:hover {
+          background-color: $color-warning;
+        }
+
+        &:disabled {
+          background-color: rgba($color-warning-disabled, 0.2);
+          color: $text-color-white-disabled;
+
+          .icon {
+            color: $text-color-white-disabled;
+          }
+        }
+
+        .icon {
+          color: $text-color-white;
+        }
       }
     }
   }

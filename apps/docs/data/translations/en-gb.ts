@@ -10,6 +10,7 @@ export const EN_GB = {
       spinner: "Spinner",
       installation: "Installation",
       introduction: "Introduction",
+      "message-box": "Message Box",
     },
   },
   layout: {
@@ -70,6 +71,11 @@ export const EN_GB = {
           description:
             "Buttons can adopt different colors (e.g., <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>warning</b>, <b>error</b>) to reflect status or brand semantics during loading phases.",
         },
+        appearance: {
+          title: "Button Appearance",
+          description:
+            "The <b>appearance</b> prop defines the visual style of the button surface. Choose between <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b>, and <b>glowing</b> to adapt to different UI contexts. While <b>variant</b> conveys semantic intent (e.g., primary, success), <b>appearance</b> controls the decorative rendering layer. This allows you to decouple behavior from style and maintain a more flexible component structure.",
+        },
         loading: {
           title: "Loading State",
           description:
@@ -79,6 +85,36 @@ export const EN_GB = {
           title: "Buttons with Icon",
           description:
             "Pass an icon component via the <b>icon.component</b> prop and choose its position with <b>icon.align</b>. Icons support both <b>left</b> and <b>right</b> alignment and can be used alongside a loading spinner. To render an <b>icon-only</b> button, simply omit the children.",
+        },
+        "button-group": {
+          title: "Button Group",
+          description:
+            "Group multiple <b>Button</b> components into a single logical unit with shared styling and configuration. Use <b>ButtonGroup</b> to automatically propagate common props like <b>variant</b> and <b>size</b> across all children. Only <b>Button</b> elements are accepted as valid children, ensuring consistency and preventing unintended usage.",
+        },
+        "button-group-disabled": {
+          title: "Disabled Button Group",
+          description:
+            "Apply the <b>disabled</b> prop on the <b>ButtonGroup</b> component to disable all nested buttons in a unified manner. This ensures consistent visual feedback and prevents individual interaction without modifying each button separately.",
+        },
+        "button-group-alignment": {
+          title: "Button Group Alignment",
+          description:
+            "Configure the layout direction of buttons using the <b>align</b> prop. Set it to <b>horizontal</b> (default) to arrange buttons side-by-side, or <b>vertical</b> to stack them top-to-bottom. This is useful for adapting button groups to different layout contexts, such as toolbars or form actions.",
+        },
+        "button-group-radius": {
+          title: "Button Group Radius",
+          description:
+            "Control the curvature of button edges within the group using the <b>radius</b> prop. Available values include <b>none</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>full</b>. This allows the group to visually align with the overall interface shape semantics, especially in rounded or sharp UI layouts.",
+        },
+        "button-group-size": {
+          title: "Button Group Size",
+          description:
+            "The <b>size</b> prop defines the uniform sizing of all buttons within the group. Choose from <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, or <b>xlg</b> to ensure spatial consistency and scalability across various UI breakpoints or interaction densities.",
+        },
+        "button-group-variant": {
+          title: "Button Group Variant",
+          description:
+            "Utilize the <b>variant</b> prop to apply consistent styling across all grouped buttons. Supported variants include <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, and <b>warning</b>, offering design cohesion for critical and contextual actions.",
         },
       },
       card: {
@@ -180,6 +216,58 @@ export const EN_GB = {
           title: "Spinner Sizes",
           description:
             "The Spinner component supports five predefined sizes — <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b> — enabling consistent integration across interface hierarchies. From inline loaders to full-screen indicators, choose the size that best fits the UI context.",
+        },
+      },
+      "message-box": {
+        intro: {
+          title: "Message Box",
+          description:
+            "Message Boxes provide contextual system feedback for user actions, conveying information, warnings, errors, or success states with clarity and emphasis.",
+          links: {
+            storybook: "Storybook",
+            npm: "@aristobyte-ui/message-box",
+            source: "Source",
+            "style-source": "Style source",
+          },
+        },
+        installation: {
+          title: "Installation of Message Box",
+          description:
+            "The above command installs the Message Box component individually. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Message Box",
+          description:
+            "The Message Box component delivers user-facing alerts with semantic clarity and visual consistency. Import it as shown below to streamline notification delivery in your application:",
+          tabs: {
+            individual: "Individual",
+            global: "Global",
+          },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the Message Box component using default props. Ideal for inline status alerts and persistent feedback across layouts.",
+        },
+        variants: {
+          title: "Message Box Variants",
+          description:
+            "AristoByte UI supports various message box types including <b>info</b>, <b>success</b>, <b>warning</b>, and <b>error</b>. Each type maps to a specific context and visual tone, ensuring users immediately understand the nature of the message.",
+        },
+        types: {
+          title: "Message Box Types",
+          description:
+            "Choose between <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b> and <b>glowing</b> styles to align with your UI aesthetic and message urgency. Variants control emphasis and contrast for better UX alignment.",
+        },
+        radius: {
+          title: "Message Box Radius",
+          description:
+            "Control the border curvature of the Message Box using predefined radius values — <b>none</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>full</b>. This allows for seamless adaptation to different UI aesthetics, whether you're aiming for sharp, modern edges or fully rounded surfaces.",
+        },
+        "without-icon": {
+          title: "Message Box Without Icon",
+          description:
+            "A minimal version of the message box component that omits the icon by default. The <b>withIcon</b> prop is set to <b>false</b> unless explicitly enabled, offering a cleaner layout when visual indicators are unnecessary.",
         },
       },
     },

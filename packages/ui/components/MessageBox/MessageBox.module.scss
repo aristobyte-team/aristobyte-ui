@@ -2,12 +2,33 @@
 
 .message-box {
   align-items: flex-start;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 8px;
+  color: $white;
+
   display: flex;
   padding: 0.75rem 1rem;
   padding: 1rem;
+
+  &-radius {
+    &--none {
+      border-radius: 0rem; // 0px
+    }
+
+    &--sm {
+      border-radius: 0.25rem; // 4px
+    }
+
+    &--md {
+      border-radius: 0.5rem; // 8px
+    }
+
+    &--lg {
+      border-radius: 0.625rem; // 10px
+    }
+
+    &--full {
+      border-radius: 1.5rem; // 24px
+    }
+  }
 
   &__content {
     color: $white;
@@ -17,28 +38,249 @@
     line-height: $line-height-normal;
   }
 
-  &--info {
-    background-color: rgba($blue-600, 0.2);
-    border-color: $blue-600;
-    color: $white;
+  &--default.message-box-type {
+    &--solid {
+      background-color: rgba($grey-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px solid $grey-600;
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px dashed $grey-600;
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($grey-600, 0.2);
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px solid $grey-600;
+      box-shadow:
+        0 0 8px rgba($grey-600, 0.5),
+        0 0 16px rgba($grey-600, 0.4),
+        0 0 24px rgba($grey-600, 0.3);
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
   }
 
-  &--success {
-    background-color: rgba($green-600, 0.2);
-    border-color: $green-600;
-    color: $white;
+  &--info.message-box-type {
+    &--solid {
+      background-color: rgba($blue-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px solid $blue-600;
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px dashed $blue-600;
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($blue-600, 0.2);
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px solid $blue-600;
+      box-shadow:
+        0 0 8px rgba($blue-600, 0.5),
+        0 0 16px rgba($blue-600, 0.4),
+        0 0 24px rgba($blue-600, 0.3);
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
   }
 
-  &--warning {
-    background-color: rgba($amber-600, 0.2);
-    border-color: $amber-600;
-    color: $white;
+  &--success.message-box-type {
+    &--solid {
+      background-color: rgba($green-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($green-600, 0.2);
+      border: 1px solid $green-600;
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($green-600, 0.2);
+      border: 1px dashed $green-600;
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($green-600, 0.2);
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($green-600, 0.2);
+      border: 1px solid $green-600;
+      box-shadow:
+        0 0 8px rgba($green-600, 0.5),
+        0 0 16px rgba($green-600, 0.4),
+        0 0 24px rgba($green-600, 0.3);
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
   }
 
-  &--error {
-    background-color: rgba($red-600, 0.2);
-    border-color: $red-600;
-    color: $white;
+  &--warning.message-box-type {
+    &--solid {
+      background-color: rgba($amber-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px solid $amber-600;
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px dashed $amber-600;
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($amber-600, 0.2);
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px solid $amber-600;
+      box-shadow:
+        0 0 8px rgba($amber-600, 0.5),
+        0 0 16px rgba($amber-600, 0.4),
+        0 0 24px rgba($amber-600, 0.3);
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+  }
+
+  &--error.message-box-type {
+    &--solid {
+      background-color: rgba($red-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($red-600, 0.2);
+      border: 1px solid $red-600;
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($red-600, 0.2);
+      border: 1px dashed $red-600;
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($red-600, 0.2);
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($red-600, 0.2);
+      border: 1px solid $red-600;
+      box-shadow:
+        0 0 8px rgba($red-600, 0.5),
+        0 0 16px rgba($red-600, 0.4),
+        0 0 24px rgba($red-600, 0.3);
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
   }
 
   &__icon {
@@ -50,6 +292,10 @@
     max-width: 16px;
     min-height: 16px;
     min-width: 16px;
+
+    &--default {
+      color: $grey-600;
+    }
 
     &--info {
       color: $blue-600;

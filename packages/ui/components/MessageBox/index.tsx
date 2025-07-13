@@ -3,13 +3,15 @@ import { Icons } from "../../utils";
 
 import styles from "./MessageBox.module.scss";
 
-type MessageBoxVariant = "info" | "warning" | "success" | "error";
+type MessageBoxVariant = "default" | "info" | "warning" | "success" | "error";
 
 export interface IMessageBox extends React.HTMLAttributes<HTMLDivElement> {
   variant?: MessageBoxVariant;
   children?: React.ReactElement | React.ReactNode | string;
   withIcon?: boolean;
   customIcon?: React.ReactElement | React.ReactNode | string;
+  radius?: "none" | "sm" | "md" | "lg" | "full";
+  type?: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
 }
 
 const renderIcon = (variant: MessageBoxVariant) => {
@@ -29,12 +31,14 @@ const renderIcon = (variant: MessageBoxVariant) => {
 export const MessageBox: React.FC<IMessageBox> = ({
   children,
   className = "",
-  variant = "info",
+  variant = "default",
   withIcon = false,
   customIcon = null,
+  radius = "md",
+  type = "outline",
 }) => (
   <div
-    className={`message-box ${styles["message-box"]} ${styles[`message-box--${variant}`]} ${className}`}
+    className={`message-box ${styles["message-box"]} ${styles[`message-box-type--${type}`]} ${styles[`message-box-radius--${radius}`]} ${styles[`message-box--${variant}`]} ${className}`}
   >
     {withIcon && (
       <span

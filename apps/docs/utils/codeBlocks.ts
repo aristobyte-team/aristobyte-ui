@@ -74,6 +74,117 @@ export default function App() {
     </div>
   );
 }`,
+    Appearance: `import * as React from "react";
+import { Button } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="default">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="default">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="default">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="default">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="default">
+          No-Outline
+        </Button>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="primary">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="primary">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="primary">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="primary">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="primary">
+          No-Outline
+        </Button>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="secondary">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="secondary">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="secondary">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="secondary">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="secondary">
+          No-Outline
+        </Button>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="error">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="error">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="error">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="error">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="error">
+          No-Outline
+        </Button>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="warning">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="warning">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="warning">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="warning">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="warning">
+          No-Outline
+        </Button>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Button appearance="solid" variant="success">
+          Solid
+        </Button>
+        <Button appearance="glowing" variant="success">
+          Glowing
+        </Button>
+        <Button appearance="outline" variant="success">
+          Outline
+        </Button>
+        <Button appearance="outline-dashed" variant="success">
+          Outline Dashed
+        </Button>
+        <Button appearance="no-outline" variant="success">
+          No-Outline
+        </Button>
+      </div>
+    </div>
+  );
+}`,
     Loading: `import * as React from "react";
 import { Button } from "@aristobyte-ui";
 
@@ -145,6 +256,174 @@ export default function App() {
     </div>
   );
 }`,
+    ButtonGroup: `import * as React from "react";
+import { Button, ButtonGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <ButtonGroup radius="full">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
+    ButtonGroupDisabled: `import * as React from "react";
+import { Button, ButtonGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <ButtonGroup radius="full" disabled>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
+    ButtonGroupAlignment: `import * as React from "react";
+import { Button, ButtonGroup} from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <ButtonGroup radius="full" align="horizontal">
+        <Button>Horizontal Button 1</Button>
+        <Button>Horizontal Button 2</Button>
+        <Button>Horizontal Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" align="vertical">
+        <Button>Vertical Button 1</Button>
+        <Button>Vertical Button 2</Button>
+        <Button>Vertical Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
+    ButtonGroupRadius: `import * as React from "react";
+import { Button, ButtonGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <ButtonGroup radius="none">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="sm">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="md">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="lg">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
+    ButtonGroupSize: `import * as React from "react";
+import { Button, ButtonGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <ButtonGroup radius="full" size="xsm">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" size="sm">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" size="md">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" size="lg">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" size="xlg">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
+    ButtonGroupVariant: `import * as React from "react";
+import { Button, ButtonGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <ButtonGroup radius="full" variant="default">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" variant="primary">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" variant="secondary">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" variant="error">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" variant="warning">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+
+      <ButtonGroup radius="full" variant="success">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </ButtonGroup>
+    </div>
+  );
+}`,
   },
   Spinner: {
     Usage: `import * as React from "react";
@@ -195,6 +474,72 @@ export default function App() {
       <Spinner variant="success" />
     </div>
   );
+}`,
+  },
+  MessageBox: {
+    Usage: `import * as React from "react";
+import { MessageBox } from "@aristobyte-ui";
+
+export default function App() {
+  return <MessageBox withIcon>Default message box</MessageBox>;
+}`,
+    Types: `import * as React from "react";
+import { MessageBox } from "@aristobyte-ui";
+
+export const Types = () => {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <MessageBox variant="success" withIcon type="solid">
+        Solid message box type
+      </MessageBox>
+      <MessageBox variant="success" withIcon type="glowing">
+        Glowing message box type
+      </MessageBox>
+      <MessageBox variant="success" withIcon type="outline">
+        Outline message box type
+      </MessageBox>
+      <MessageBox variant="success" withIcon type="outline-dashed">
+        Dotted outline message box type
+      </MessageBox>
+      <MessageBox variant="success" withIcon type="no-outline">
+        No-outline message box type
+      </MessageBox>
+    </div>
+  );
+}`,
+    Variants: `import * as React from "react";
+import { MessageBox } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <MessageBox withIcon>Default message box</MessageBox>
+      <MessageBox variant="info" withIcon>Info message box</MessageBox>
+      <MessageBox variant="warning" withIcon>Warning message box</MessageBox>
+      <MessageBox variant="success" withIcon>Success message box</MessageBox>
+      <MessageBox variant="error" withIcon>Error message box</MessageBox>
+    </div>
+  );
+}`,
+    Radius: `import * as React from "react";
+import { MessageBox } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <MessageBox withIcon radius="none">No radius</MessageBox>
+      <MessageBox withIcon radius="sm">Small radius</MessageBox>
+      <MessageBox withIcon radius="md">Medium radius</MessageBox>
+      <MessageBox withIcon radius="lg">Large radius</MessageBox>
+      <MessageBox withIcon radius="full">Full radius</MessageBox>
+    </div>
+  );
+}`,
+    WithoutIcon: `import * as React from "react";
+import { MessageBox } from "@aristobyte-ui";
+
+export const WithoutIcon = () => {
+  return <MessageBox>Message box without icon</MessageBox>;
 }`,
   },
 };

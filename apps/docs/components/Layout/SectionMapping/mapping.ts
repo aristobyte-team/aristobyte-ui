@@ -4,6 +4,7 @@ import { ButtonSections } from "./ButtonSections";
 import { CardSections } from "./CardSections";
 import { HomeSections } from "./HomeSections";
 import { SpinnerSections } from "./SpinnerSections";
+import { MessageBoxSections } from "./MessageBoxSections";
 
 import { type LayoutSectionPropsType } from "../LayoutSection";
 import { type ConfigType } from "@/config";
@@ -111,6 +112,15 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             },
           },
           {
+            childComponent: ButtonSections.Appearance,
+            props: {
+              ...props,
+              id: "appearance",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
             childComponent: ButtonSections.Loading,
             props: {
               ...props,
@@ -124,6 +134,60 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             props: {
               ...props,
               id: "with-icon",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroup,
+            props: {
+              ...props,
+              id: "button-group",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroupDisabled,
+            props: {
+              ...props,
+              id: "button-group-disabled",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroupAlignment,
+            props: {
+              ...props,
+              id: "button-group-alignment",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroupSize,
+            props: {
+              ...props,
+              id: "button-group-size",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroupRadius,
+            props: {
+              ...props,
+              id: "button-group-radius",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: ButtonSections.ButtonGroupVariant,
+            props: {
+              ...props,
+              id: "button-group-variant",
               withTitle: true,
               withDescription: true,
             },
@@ -247,6 +311,80 @@ export const Mapping = (props: MappingParamsType): MappingReturnType =>
             props: {
               ...props,
               id: "sizes",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+        ],
+        "message-box": [
+          {
+            childComponent: MessageBoxSections.Intro,
+            props: {
+              ...props,
+              id: "intro",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Installation,
+            props: {
+              ...props,
+              id: "installation",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Import,
+            props: {
+              ...props,
+              id: "import",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Usage,
+            props: {
+              ...props,
+              id: "usage",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Variants,
+            props: {
+              ...props,
+              id: "variants",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Types,
+            props: {
+              ...props,
+              id: "types",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.Radius,
+            props: {
+              ...props,
+              id: "radius",
+              withTitle: true,
+              withDescription: true,
+            },
+          },
+          {
+            childComponent: MessageBoxSections.WithoutIcon,
+            props: {
+              ...props,
+              id: "without-icon",
               withTitle: true,
               withDescription: true,
             },

@@ -25,6 +25,16 @@ export const PreviewBlocks = {
       unit: "button",
       section: "variants",
     },
+    Appearance: {
+      category: "components",
+      unit: "button",
+      section: "appearance",
+    },
+    Alignment: {
+      category: "components",
+      unit: "button",
+      section: "alignment",
+    },
     Loading: {
       category: "components",
       unit: "button",
@@ -34,6 +44,36 @@ export const PreviewBlocks = {
       category: "components",
       unit: "button",
       section: "with-icon",
+    },
+    ButtonGroup: {
+      category: "components",
+      unit: "button",
+      section: "button-group",
+    },
+    ButtonGroupDisabled: {
+      category: "components",
+      unit: "button",
+      section: "button-group-disabled",
+    },
+    ButtonGroupAlignment: {
+      category: "components",
+      unit: "button",
+      section: "button-group-alignment",
+    },
+    ButtonGroupRadius: {
+      category: "components",
+      unit: "button",
+      section: "button-group-radius",
+    },
+    ButtonGroupSize: {
+      category: "components",
+      unit: "button",
+      section: "button-group-size",
+    },
+    ButtonGroupVariant: {
+      category: "components",
+      unit: "button",
+      section: "button-group-variant",
     },
   },
   Spinner: {
@@ -56,6 +96,33 @@ export const PreviewBlocks = {
       category: "components",
       unit: "spinner",
       section: "variants",
+    },
+  },
+  MessageBox: {
+    Usage: {
+      category: "components",
+      unit: "message-box",
+      section: "usage",
+    },
+    Types: {
+      category: "components",
+      unit: "message-box",
+      section: "types",
+    },
+    Variants: {
+      category: "components",
+      unit: "message-box",
+      section: "variants",
+    },
+    Radius: {
+      category: "components",
+      unit: "message-box",
+      section: "radius",
+    },
+    WithoutIcon: {
+      category: "components",
+      unit: "message-box",
+      section: "without-icon",
     },
   },
 };

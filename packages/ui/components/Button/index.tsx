@@ -15,6 +15,12 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "success"
     | "error"
     | "warning";
+  appearance?:
+    | "solid"
+    | "outline"
+    | "outline-dashed"
+    | "no-outline"
+    | "glowing";
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   radius?: "none" | "sm" | "md" | "lg" | "full";
   icon?: {
@@ -26,16 +32,17 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: React.FC<IButton> = ({
-  variant = "default",
-  className = "",
-  children,
   onClick,
-  disabled,
+  children,
+  variant = "default",
+  appearance = "solid",
   size = "md",
   radius = "md",
   icon,
-  isLoading = false,
   spinnerType = "default",
+  isLoading = false,
+  disabled,
+  className = "",
   dangerouslySetInnerHTML,
   ...restProps
 }) => {
@@ -74,7 +81,7 @@ export const Button: React.FC<IButton> = ({
     <button
       ref={ref}
       disabled={disabled || isLoading}
-      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${isLoading ? styles["button--loading"] : ""} ${className}`}
+      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-appearance--${appearance}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${isLoading ? styles["button--loading"] : ""} ${className}`}
       onClick={handleClick}
       {...(dangerouslySetInnerHTML
         ? { dangerouslySetInnerHTML }

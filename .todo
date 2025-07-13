@@ -2,3 +2,4 @@
 - fix the button ripple - when clicking on multiple buttons couple of times and then back to the first button the ripple position is not the same as mouse
 - fix imports from ui package. Currently they look like this:
   import { Button } from "@aristobyte-ui/ui/components/Button/index";
+- ✅ Optional Runtime Guard (for Dev Safety)
