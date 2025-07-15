@@ -5,4 +5,5 @@ export {
   MessageBox,
   CodeBlock,
   Spinner,
+  Switch,
 } from "./components";

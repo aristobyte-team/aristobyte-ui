@@ -542,4 +542,214 @@ export const WithoutIcon = () => {
   return <MessageBox>Message box without icon</MessageBox>;
 }`,
   },
+  Switch: {
+    Checked: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Switch variant="primary" label="Not checked" />
+      <Switch variant="primary" label="Checked" checked />
+    </div>
+  );
+}`,
+    Usage: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return <Switch />;
+}`,
+    Variants: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Switch variant="default" checked label="Default" />
+      <Switch variant="primary" checked label="Primary" />
+      <Switch variant="secondary" checked label="Secondary" />
+      <Switch variant="error" checked label="Error" />
+      <Switch variant="warning" checked label="Warning" />
+      <Switch variant="success" checked label="Success" />
+    </div>
+  );
+}`,
+    Sizes: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Switch variant="success" checked switchSize="xsm" label="Extra small" />
+      <Switch variant="success" checked switchSize="sm" label="Small" />
+      <Switch variant="success" checked switchSize="md" label="Medium" />
+      <Switch variant="success" checked switchSize="lg" label="Large" />
+      <Switch variant="success" checked switchSize="xlg" label="Extra large" />
+    </div>
+  );
+};
+`,
+    Labeled: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return <Switch variant="secondary" label="I am switch!" />;
+}`,
+    Disabled: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <Switch
+        variant="primary"
+        label="I am disabled and unchecked"
+        alignLabel="horizontal"
+        disabled
+      />
+      <Switch
+        variant="primary"
+        label="I am disabled but checked"
+        checked
+        alignLabel="horizontal"
+        disabled
+      />
+    </div>
+  );
+}`,
+    Controlled: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  const [isChecked, setIsChecked] = React.useState<boolean>(true);
+
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <Switch
+        variant="primary"
+        label={isChecked ? "I am checked :)" : "I am not checked :("}
+        alignLabel="horizontal"
+        checked={isChecked}
+        onChange={() => setIsChecked((prevState) => !prevState)}
+      />
+    </div>
+  );
+}`,
+    AlignLabel: `import * as React from "react";
+import { Switch } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <Switch variant="secondary" label="Vertical" alignLabel="vertical" />
+      <Switch variant="secondary" label="Horizontal" alignLabel="horizontal" />
+    </div>
+  );
+}`,
+    TrackIcon: `import * as React from "react";
+
+import { Switch } from "@aristobyte-ui/ui/components/Switch/index";
+
+const BulbOnIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+    <path d="M9 18h6" />
+    <path d="M10 22h4" />
+  </svg>
+);
+
+const BulbOffIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M16.8 11.2c.8-.9 1.2-2 1.2-3.2a6 6 0 0 0-9.3-5" />
+    <path d="m2 2 20 20" />
+    <path d="M6.3 6.3a4.67 4.67 0 0 0 1.2 5.2c.7.7 1.3 1.5 1.5 2.5" />
+    <path d="M9 18h6" />
+    <path d="M10 22h4" />
+  </svg>
+);
+
+export default function App() {
+  return (
+    <Switch
+      switchSize="xlg"
+      variant="warning"
+      trackIcon={{ checked: BulbOnIcon, unchecked: BulbOffIcon }}
+    />
+  );
+}`,
+    ThumbIcon: `import * as React from "react";
+
+import { Switch } from "@aristobyte-ui";
+
+const SunIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+  </svg>
+);
+
+export default function App() {
+  const [isChecked, setIsChecked] = React.useState<boolean>(true);
+
+  return (
+    <Switch
+      switchSize="xlg"
+      variant="warning"
+      thumbIcon={isChecked ? SunIcon : MoonIcon}
+      checked={isChecked}
+      onChange={() => setIsChecked((prevState) => !prevState)}
+    />
+  );
+}`,
+  },
 };

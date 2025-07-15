@@ -11,6 +11,7 @@ export const EN_GB = {
       installation: "Installation",
       introduction: "Introduction",
       "message-box": "Message Box",
+      switch: "Switch",
     },
   },
   layout: {
@@ -268,6 +269,83 @@ export const EN_GB = {
           title: "Message Box Without Icon",
           description:
             "A minimal version of the message box component that omits the icon by default. The <b>withIcon</b> prop is set to <b>false</b> unless explicitly enabled, offering a cleaner layout when visual indicators are unnecessary.",
+        },
+      },
+      switch: {
+        intro: {
+          title: "Switch",
+          description:
+            "Switch toggles are interactive binary controls used for enabling or disabling a specific option. Ideal for settings, preferences, and form controls, the Switch component ensures clear, intuitive state management.",
+          links: {
+            storybook: "Storybook",
+            npm: "@aristobyte-ui/switch",
+            source: "Source",
+            "style-source": "Style source",
+          },
+        },
+        installation: {
+          title: "Installation of Switch",
+          description:
+            "The above command installs the Switch component individually. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Switch",
+          description:
+            "You can import the Switch component either as a standalone module or from the global AristoByteUI package. The import method depends on how your project structure is configured.",
+          tabs: {
+            individual: "Individual",
+            global: "Global",
+          },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the Switch component with optional label and controlled state. Suitable for toggling boolean states in forms, settings panels, and interactive UIs.",
+        },
+        labeled: {
+          title: "Labeled Switch",
+          description:
+            "Pass a text string using the <b>label</b> prop to display a caption alongside the Switch component. This label improves clarity and accessibility, making it easier for users to understand the function being toggled. It's especially effective in form fields, settings panels, or anywhere context is needed.",
+        },
+        disabled: {
+          title: "Disabled",
+          description:
+            "The <b>disabled</b> prop visually disables the switch, indicating that it cannot be interacted with by the user. While the switch becomes non-clickable, it can still reflect a <b>checked</b> or <b>unchecked</b> state, allowing developers to communicate a specific status that remains static. This is particularly useful in read-only contexts or in UI flows where toggling is conditionally locked, but the user still needs to observe the current value. Disabled switches maintain their configured <b>variant</b>, <b>size</b>, and <b>label</b> alignment.",
+        },
+        "align-label": {
+          title: "Align Label",
+          description:
+            "The <b>alignLabel</b> prop allows you to control the positioning of the label relative to the switch thumb. Supported values are <b>horizontal</b> and <b>vertical</b>. The default behavior is <b>vertical</b>, placing the label above or below the switch depending on styling. Use <b>horizontal</b> when you want the label to be inline with the switch for compact layouts.",
+        },
+        variants: {
+          title: "Switch Variants",
+          description:
+            "The Switch component supports multiple color variants such as <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, and <b>warning</b>. These variants reflect the intent of the toggle action and align with your application's color semantics.",
+        },
+        sizes: {
+          title: "Switch Sizes",
+          description:
+            "The Switch component comes in five scalable sizes — <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b>. These sizes provide layout flexibility and can be adapted to match form densities, mobile-first designs, or compact UI patterns.",
+        },
+        checked: {
+          title: "Initially Checked",
+          description:
+            "Use the <b>checked</b> prop to define the initial on/off state of the Switch. When set to <b>true</b>, the switch renders in the active (checked) state on initial mount. This prop is ideal for controlled or semi-controlled usage patterns, particularly in form presets and settings UIs.",
+        },
+        controlled: {
+          title: "Controlled Switch",
+          description:
+            "The controlled version of the <b>Switch</b> component offers explicit control over its state using React state management. This pattern ensures that the <b>checked</b> value is fully managed by the parent component via <code>useState</code> and updated through the <b>onChange</b> callback. It's particularly useful when you need to synchronize the switch state with business logic, form handlers, or other UI elements.",
+        },
+        "track-icon": {
+          title: "Track Icons",
+          description:
+            "The <b>trackIcon</b> prop enables the display of icons within the switch track itself, offering enhanced visual context for toggled states. You can define icons for both <b>checked</b> and <b>unchecked</b> states by passing a config object like <code>{ checked: IconOn, unchecked: IconOff }</code>. These icons render respectively on the left and right sides of the track. It's optional—providing only one or none is fully supported. This feature is useful for reinforcing switch semantics such as enabling/disabling, visibility toggles, and more.",
+        },
+        "thumb-icon": {
+          title: "Thumb Icon",
+          description:
+            "The <b>thumbIcon</b> prop allows you to inject a custom icon directly into the switch's thumb element, offering a more expressive and branded interaction model. This prop accepts a single <code>React.ElementType</code> and renders the icon inside the movable thumb regardless of its state. It's ideal for use cases where a consistent icon (e.g., a power symbol, lock, or eye) enhances the user's understanding of the control. If omitted, the thumb renders without any icon by default.",
         },
       },
     },

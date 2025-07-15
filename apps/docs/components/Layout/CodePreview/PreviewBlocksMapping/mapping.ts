@@ -2,7 +2,8 @@ import * as React from "react";
 
 import { ButtonPreviewBlocks } from "./ButtonPreviewBlocks";
 import { SpinnerPreviewBlocks } from "./SpinnerPreviewBlocks";
-import { MessageBoxBlocks } from "./MessageBoxBlocks";
+import { MessageBoxPreviewBlocks } from "./MessageBoxPreviewBlocks";
+import { SwitchPreviewBlocks } from "./SwitchPreviewBlocks";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
@@ -12,18 +13,7 @@ export type ChildComponentPropsType = {
   t?: TranslateFunctionType;
 };
 
-export type MappingParamsType = {
-  category: string;
-  unit: string;
-  section: string;
-  config: ConfigType;
-  t: TranslateFunctionType;
-};
-
-export type MappingReturnType = {
-  childComponent: React.ComponentType<ChildComponentPropsType>;
-  props?: ChildComponentPropsType;
-};
+export type MappingReturnType = React.ComponentType<ChildComponentPropsType>;
 
 export type MappingType = {
   [category: string]: {
@@ -33,106 +23,53 @@ export type MappingType = {
   };
 };
 
-export const Mapping = (props: MappingParamsType): MappingReturnType =>
+export const Mapping = (
+  category: string,
+  unit: string,
+  section: string
+): MappingReturnType =>
   (({
     components: {
       button: {
-        usage: {
-          childComponent: ButtonPreviewBlocks.Usage,
-          props,
-        },
-        disabled: {
-          childComponent: ButtonPreviewBlocks.Disabled,
-          props,
-        },
-        loading: {
-          childComponent: ButtonPreviewBlocks.Loading,
-          props,
-        },
-        sizes: {
-          childComponent: ButtonPreviewBlocks.Sizes,
-          props,
-        },
-        radius: {
-          childComponent: ButtonPreviewBlocks.Radius,
-          props,
-        },
-        variants: {
-          childComponent: ButtonPreviewBlocks.Variants,
-          props,
-        },
-        appearance: {
-          childComponent: ButtonPreviewBlocks.Appearance,
-          props,
-        },
-        "with-icon": {
-          childComponent: ButtonPreviewBlocks.WithIcon,
-          props,
-        },
-        "button-group": {
-          childComponent: ButtonPreviewBlocks.ButtonGroup,
-          props,
-        },
-        "button-group-disabled": {
-          childComponent: ButtonPreviewBlocks.ButtonGroupDisabled,
-          props,
-        },
-        "button-group-alignment": {
-          childComponent: ButtonPreviewBlocks.ButtonGroupAlignment,
-          props,
-        },
-        "button-group-radius": {
-          childComponent: ButtonPreviewBlocks.ButtonGroupRadius,
-          props,
-        },
-        "button-group-size": {
-          childComponent: ButtonPreviewBlocks.ButtonGroupSize,
-          props,
-        },
-        "button-group-variant": {
-          childComponent: ButtonPreviewBlocks.ButtonGroupVariant,
-          props,
-        },
+        usage: ButtonPreviewBlocks.Usage,
+        disabled: ButtonPreviewBlocks.Disabled,
+        loading: ButtonPreviewBlocks.Loading,
+        sizes: ButtonPreviewBlocks.Sizes,
+        radius: ButtonPreviewBlocks.Radius,
+        variants: ButtonPreviewBlocks.Variants,
+        appearance: ButtonPreviewBlocks.Appearance,
+        "with-icon": ButtonPreviewBlocks.WithIcon,
+        "button-group": ButtonPreviewBlocks.ButtonGroup,
+        "button-group-disabled": ButtonPreviewBlocks.ButtonGroupDisabled,
+        "button-group-alignment": ButtonPreviewBlocks.ButtonGroupAlignment,
+        "button-group-radius": ButtonPreviewBlocks.ButtonGroupRadius,
+        "button-group-size": ButtonPreviewBlocks.ButtonGroupSize,
+        "button-group-variant": ButtonPreviewBlocks.ButtonGroupVariant,
       },
       spinner: {
-        usage: {
-          childComponent: SpinnerPreviewBlocks.Usage,
-          props,
-        },
-        sizes: {
-          childComponent: SpinnerPreviewBlocks.Sizes,
-          props,
-        },
-        types: {
-          childComponent: SpinnerPreviewBlocks.Types,
-          props,
-        },
-        variants: {
-          childComponent: SpinnerPreviewBlocks.Variants,
-          props,
-        },
+        usage: SpinnerPreviewBlocks.Usage,
+        sizes: SpinnerPreviewBlocks.Sizes,
+        types: SpinnerPreviewBlocks.Types,
+        variants: SpinnerPreviewBlocks.Variants,
       },
       "message-box": {
-        usage: {
-          childComponent: MessageBoxBlocks.Usage,
-          props,
-        },
-        types: {
-          childComponent: MessageBoxBlocks.Types,
-          props,
-        },
-        variants: {
-          childComponent: MessageBoxBlocks.Variants,
-          props,
-        },
-        radius: {
-          childComponent: MessageBoxBlocks.Radius,
-          props,
-        },
-        "without-icon": {
-          childComponent: MessageBoxBlocks.WithoutIcon,
-          props,
-        },
+        usage: MessageBoxPreviewBlocks.Usage,
+        types: MessageBoxPreviewBlocks.Types,
+        variants: MessageBoxPreviewBlocks.Variants,
+        radius: MessageBoxPreviewBlocks.Radius,
+        "without-icon": MessageBoxPreviewBlocks.WithoutIcon,
+      },
+      switch: {
+        checked: SwitchPreviewBlocks.Checked,
+        usage: SwitchPreviewBlocks.Usage,
+        variants: SwitchPreviewBlocks.Variants,
+        labeled: SwitchPreviewBlocks.Labeled,
+        "align-label": SwitchPreviewBlocks.AlignLabel,
+        disabled: SwitchPreviewBlocks.Disabled,
+        sizes: SwitchPreviewBlocks.Sizes,
+        controlled: SwitchPreviewBlocks.Controlled,
+        "track-icon": SwitchPreviewBlocks.TrackIcon,
+        "thumb-icon": SwitchPreviewBlocks.ThumbIcon,
       },
     },
-  }) as MappingType)![props.category]![props.unit]![props.section]!;
+  }) as MappingType)![category]![unit]![section]!;

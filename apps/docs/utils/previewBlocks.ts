@@ -125,4 +125,56 @@ export const PreviewBlocks = {
       section: "without-icon",
     },
   },
+  Switch: {
+    Usage: {
+      category: "components",
+      unit: "switch",
+      section: "usage",
+    },
+    Checked: {
+      category: "components",
+      unit: "switch",
+      section: "checked",
+    },
+    Variants: {
+      category: "components",
+      unit: "switch",
+      section: "variants",
+    },
+    Sizes: {
+      category: "components",
+      unit: "switch",
+      section: "sizes",
+    },
+    Labeled: {
+      category: "components",
+      unit: "switch",
+      section: "labeled",
+    },
+    Disabled: {
+      category: "components",
+      unit: "switch",
+      section: "disabled",
+    },
+    Controlled: {
+      category: "components",
+      unit: "switch",
+      section: "controlled",
+    },
+    AlignLabel: {
+      category: "components",
+      unit: "switch",
+      section: "align-label",
+    },
+    TrackIcon: {
+      category: "components",
+      unit: "switch",
+      section: "track-icon",
+    },
+    ThumbIcon: {
+      category: "components",
+      unit: "switch",
+      section: "thumb-icon",
+    },
+  },
 };

@@ -20,17 +20,10 @@ export const PreviewBlocksMapping = ({
 }: PreviewBlocksMappingPropsType) => {
   const { config } = useConfig();
   const { t } = useTranslate();
-  const { childComponent, props } = Mapping({
-    category,
-    unit,
-    section,
-    config,
-    t,
-  });
 
   return (
     <div className={`preview-blocks-mapping ${className}`}>
-      {React.createElement(childComponent, props)}
+      {React.createElement(Mapping(category, unit, section), { config, t })}
     </div>
   );
 };

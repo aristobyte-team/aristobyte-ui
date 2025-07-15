@@ -4,7 +4,7 @@ import { Variants } from "./Variants";
 import { Radius } from "./Radius";
 import { WithoutIcon } from "./WithoutIcon";
 
-export const MessageBoxBlocks = {
+export const MessageBoxPreviewBlocks = {
   Usage,
   Types,
   Variants,

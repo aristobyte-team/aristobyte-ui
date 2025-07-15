@@ -5,8 +5,8 @@ import { CardSections } from "./CardSections";
 import { HomeSections } from "./HomeSections";
 import { SpinnerSections } from "./SpinnerSections";
 import { MessageBoxSections } from "./MessageBoxSections";
+import { SwitchSections } from "./SwitchSections";
 
-import { type LayoutSectionPropsType } from "../LayoutSection";
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
 
@@ -16,16 +16,8 @@ export type ChildComponentPropsType = {
   t: TranslateFunctionType;
 };
 
-export type MappingParamsType = {
-  category: string;
-  unit: string;
-  config: ConfigType;
-  t: TranslateFunctionType;
-};
-
 export type MappingReturnType = {
-  childComponent: React.ComponentType<ChildComponentPropsType>;
-  props: LayoutSectionPropsType;
+  [id: string]: React.ComponentType<ChildComponentPropsType>;
 }[];
 
 export type MappingType = {
@@ -34,362 +26,73 @@ export type MappingType = {
   };
 };
 
-export const Mapping = (props: MappingParamsType): MappingReturnType =>
+export const Mapping = (category: string, unit: string): MappingReturnType =>
   (
     ({
       components: {
         button: [
-          {
-            childComponent: ButtonSections.Intro,
-            props: {
-              ...props,
-              id: "intro",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Installation,
-            props: {
-              ...props,
-              id: "installation",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Import,
-            props: {
-              ...props,
-              id: "import",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Usage,
-            props: {
-              ...props,
-              id: "usage",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Disabled,
-            props: {
-              ...props,
-              id: "disabled",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Sizes,
-            props: {
-              ...props,
-              id: "sizes",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Radius,
-            props: {
-              ...props,
-              id: "radius",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Variants,
-            props: {
-              ...props,
-              id: "variants",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Appearance,
-            props: {
-              ...props,
-              id: "appearance",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Loading,
-            props: {
-              ...props,
-              id: "loading",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.WithIcon,
-            props: {
-              ...props,
-              id: "with-icon",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroup,
-            props: {
-              ...props,
-              id: "button-group",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroupDisabled,
-            props: {
-              ...props,
-              id: "button-group-disabled",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroupAlignment,
-            props: {
-              ...props,
-              id: "button-group-alignment",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroupSize,
-            props: {
-              ...props,
-              id: "button-group-size",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroupRadius,
-            props: {
-              ...props,
-              id: "button-group-radius",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.ButtonGroupVariant,
-            props: {
-              ...props,
-              id: "button-group-variant",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
+          { intro: ButtonSections.Intro },
+          { installation: ButtonSections.Installation },
+          { import: ButtonSections.Import },
+          { usage: ButtonSections.Usage },
+          { disabled: ButtonSections.Disabled },
+          { sizes: ButtonSections.Sizes },
+          { radius: ButtonSections.Radius },
+          { variants: ButtonSections.Variants },
+          { appearance: ButtonSections.Appearance },
+          { loading: ButtonSections.Loading },
+          { "with-icon": ButtonSections.WithIcon },
+          { "button-group": ButtonSections.ButtonGroup },
+          { "button-group-disabled": ButtonSections.ButtonGroupDisabled },
+          { "button-group-alignment": ButtonSections.ButtonGroupAlignment },
+          { "button-group-size": ButtonSections.ButtonGroupSize },
+          { "button-group-radius": ButtonSections.ButtonGroupRadius },
+          { "button-group-variant": ButtonSections.ButtonGroupVariant },
         ],
         card: [
-          {
-            childComponent: CardSections.Intro,
-            props: {
-              ...props,
-              id: "intro",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Installation,
-            props: {
-              ...props,
-              id: "installation",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Import,
-            props: {
-              ...props,
-              id: "import",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
+          { intro: CardSections.Intro },
+          { installation: ButtonSections.Installation },
+          { import: ButtonSections.Import },
         ],
         home: [
-          {
-            childComponent: HomeSections.Intro,
-            props: {
-              ...props,
-              id: "intro",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Installation,
-            props: {
-              ...props,
-              id: "installation",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: ButtonSections.Import,
-            props: {
-              ...props,
-              id: "import",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
+          { intro: HomeSections.Intro },
+          { installation: ButtonSections.Installation },
+          { import: ButtonSections.Import },
         ],
         spinner: [
-          {
-            childComponent: SpinnerSections.Intro,
-            props: {
-              ...props,
-              id: "intro",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Installation,
-            props: {
-              ...props,
-              id: "installation",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Import,
-            props: {
-              ...props,
-              id: "import",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Usage,
-            props: {
-              ...props,
-              id: "usage",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Variants,
-            props: {
-              ...props,
-              id: "variants",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Types,
-            props: {
-              ...props,
-              id: "types",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: SpinnerSections.Sizes,
-            props: {
-              ...props,
-              id: "sizes",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
+          { intro: SpinnerSections.Intro },
+          { installation: SpinnerSections.Installation },
+          { import: SpinnerSections.Import },
+          { usage: SpinnerSections.Usage },
+          { variants: SpinnerSections.Variants },
+          { types: SpinnerSections.Types },
+          { sizes: SpinnerSections.Sizes },
         ],
         "message-box": [
-          {
-            childComponent: MessageBoxSections.Intro,
-            props: {
-              ...props,
-              id: "intro",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Installation,
-            props: {
-              ...props,
-              id: "installation",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Import,
-            props: {
-              ...props,
-              id: "import",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Usage,
-            props: {
-              ...props,
-              id: "usage",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Variants,
-            props: {
-              ...props,
-              id: "variants",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Types,
-            props: {
-              ...props,
-              id: "types",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.Radius,
-            props: {
-              ...props,
-              id: "radius",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
-          {
-            childComponent: MessageBoxSections.WithoutIcon,
-            props: {
-              ...props,
-              id: "without-icon",
-              withTitle: true,
-              withDescription: true,
-            },
-          },
+          { intro: MessageBoxSections.Intro },
+          { installation: MessageBoxSections.Installation },
+          { import: MessageBoxSections.Import },
+          { usage: MessageBoxSections.Usage },
+          { variants: MessageBoxSections.Variants },
+          { types: MessageBoxSections.Types },
+          { radius: MessageBoxSections.Radius },
+          { "without-icon": MessageBoxSections.WithoutIcon },
+        ],
+        switch: [
+          { intro: SwitchSections.Intro },
+          { installation: SwitchSections.Installation },
+          { import: SwitchSections.Import },
+          { usage: SwitchSections.Usage },
+          { labeled: SwitchSections.Labeled },
+          { "align-label": SwitchSections.AlignLabel },
+          { disabled: SwitchSections.Disabled },
+          { checked: SwitchSections.Checked },
+          { variants: SwitchSections.Variants },
+          { sizes: SwitchSections.Sizes },
+          { controlled: SwitchSections.Controlled },
+          { "track-icon": SwitchSections.TrackIcon },
+          { "thumb-icon": SwitchSections.ThumbIcon },
         ],
       },
     }) as MappingType
-  )[props.category]![props.unit]!;
+  )[category]![unit]!;
