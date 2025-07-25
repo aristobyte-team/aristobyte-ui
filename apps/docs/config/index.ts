@@ -63,6 +63,11 @@ export const Config = {
             target: "_self",
           },
           {
+            id: "radio",
+            href: "/components/radio",
+            target: "_self",
+          },
+          {
             id: "spinner",
             href: "/components/spinner",
             target: "_self",
@@ -113,6 +118,7 @@ export const Config = {
           "message-box": CodeBlocks.Import(["MessageBox"], "/message-box"),
           spinner: CodeBlocks.Import(["Spinner"], "/spinner"),
           switch: CodeBlocks.Import(["Switch"], "/switch"),
+          radio: CodeBlocks.Import(["Radio", "RadioGroup"], "/radio"),
         } as { [unit: string]: string },
       },
       {
@@ -124,6 +130,7 @@ export const Config = {
           "message-box": CodeBlocks.Import(["MessageBox"]),
           spinner: CodeBlocks.Import(["Spinner"]),
           switch: CodeBlocks.Import(["Switch"]),
+          radio: CodeBlocks.Import(["Radio"]),
         } as { [unit: string]: string },
       },
     ],
@@ -173,6 +180,9 @@ export const Config = {
             "track-icon": CodeBlocks.Switch.TrackIcon,
             "thumb-icon": CodeBlocks.Switch.ThumbIcon,
           },
+          radio: {
+            usage: CodeBlocks.Radio.Usage,
+          },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
       {
@@ -219,6 +229,9 @@ export const Config = {
             "align-label": PreviewBlocks.Switch.AlignLabel,
             "track-icon": PreviewBlocks.Switch.TrackIcon,
             "thumb-icon": PreviewBlocks.Switch.ThumbIcon,
+          },
+          radio: {
+            usage: PreviewBlocks.Radio.Usage,
           },
         } as {
           [unit: string]: {

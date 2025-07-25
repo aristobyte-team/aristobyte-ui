@@ -752,4 +752,21 @@ export default function App() {
   );
 }`,
   },
+  Radio: {
+    Usage: `import * as React from "react";
+import { Radio, RadioGroup } from "@aristobyte-ui/ui";
+
+export default function App() {
+  const [value, setValue] = React.useState("apple");
+
+  return (
+    <RadioGroup name="fruits" value={value} onChange={setValue}>
+      <Radio value="apple">Apple</Radio>
+      <Radio value="banana">Banana</Radio>
+      <Radio value="orange">Orange</Radio>
+    </RadioGroup>
+  );
+};
+`,
+  },
 };

@@ -7,6 +7,7 @@ import { SwitchPreviewBlocks } from "./SwitchPreviewBlocks";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
+import { RadioPreviewBlocks } from "./RadioPreviewBlocks";
 
 export type ChildComponentPropsType = {
   config?: ConfigType;
@@ -70,6 +71,9 @@ export const Mapping = (
         controlled: SwitchPreviewBlocks.Controlled,
         "track-icon": SwitchPreviewBlocks.TrackIcon,
         "thumb-icon": SwitchPreviewBlocks.ThumbIcon,
+      },
+      radio: {
+        usage: RadioPreviewBlocks.Usage,
       },
     },
   }) as MappingType)![category]![unit]![section]!;

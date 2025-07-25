@@ -11,6 +11,7 @@ export const EN_GB = {
       installation: "Installation",
       introduction: "Introduction",
       "message-box": "Message Box",
+      radio: "Radio",
       switch: "Switch",
     },
   },
@@ -346,6 +347,38 @@ export const EN_GB = {
           title: "Thumb Icon",
           description:
             "The <b>thumbIcon</b> prop allows you to inject a custom icon directly into the switch's thumb element, offering a more expressive and branded interaction model. This prop accepts a single <code>React.ElementType</code> and renders the icon inside the movable thumb regardless of its state. It's ideal for use cases where a consistent icon (e.g., a power symbol, lock, or eye) enhances the user's understanding of the control. If omitted, the thumb renders without any icon by default.",
+        },
+      },
+      radio: {
+        intro: {
+          title: "Radio",
+          description:
+            "A component for selecting a single option from a predefined set. <b>Radio</b> and <b>RadioGroup</b> provide a flexible foundation for building accessible, customizable choice interfaces in forms or filters.",
+          links: {
+            storybook: "Storybook",
+            npm: "@aristobyte-ui/radio",
+            source: "Source",
+            "style-source": "Style source",
+          },
+        },
+        installation: {
+          title: "Installation of Radio",
+          description:
+            "The above command installs the Radio component individually. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Radio",
+          description:
+            "You can either import <b>Radio</b> and <b>RadioGroup</b> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
+          tabs: {
+            individual: "Individual",
+            global: "Global",
+          },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "The <b>RadioGroup</b> component orchestrates a collection of <b>Radio</b> elements where only one option can be selected at a time. Each <b>Radio</b> receives its label through the <b>children</b> prop and operates within the group context. The active selection is controlled via the <code>value</code> prop, while changes are propagated through <code>onChange</code>.",
         },
       },
     },

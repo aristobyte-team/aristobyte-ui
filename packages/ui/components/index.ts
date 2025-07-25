@@ -6,3 +6,5 @@ export { CodeBlock } from "./CodeBlock";
 export { TabSwitchWithSlidingIndicator } from "./TabSwitchWithSlidingIndicator";
 export { Spinner } from "./Spinner";
 export { Switch } from "./Switch";
+export { Radio } from "./Radio";
+export { RadioGroup } from "./RadioGroup";

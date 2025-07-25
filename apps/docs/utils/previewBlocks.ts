@@ -177,4 +177,11 @@ export const PreviewBlocks = {
       section: "thumb-icon",
     },
   },
+  Radio: {
+    Usage: {
+      category: "components",
+      unit: "radio",
+      section: "usage",
+    },
+  },
 };
