@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useConfig, useTranslate } from "@/context";
-import { Icons } from "@/utils";
+import { Icons } from "@/config";
 
 import "./Sidebar.scss";
 
