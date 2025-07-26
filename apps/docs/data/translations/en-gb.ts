@@ -405,6 +405,11 @@ export const EN_GB = {
           description:
             "The <b>appearance</b> prop defines the visual structure of the radio's outline and its interaction state feedback. Available values include <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b>, and <b>glowing</b>. By default, the radio adopts the <b>outline</b> appearance. Each variant provides a distinct visual tone—ranging from minimalist (<b>no-outline</b>) to expressive (<b>glowing</b>)—allowing precise alignment with your product's design language.",
         },
+        "highlight-label": {
+          title: "Highlight Label",
+          description:
+            "Enables the label to inherit the active <b>variant</b> color when <b>highlightLabel</b> is set to <b>true</b>. This enhances visual association between the label and the selected theme. When <b>false</b> (default), the label color remains neutral or white.",
+        },
       },
     },
   },

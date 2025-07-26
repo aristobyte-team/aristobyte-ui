@@ -101,499 +101,589 @@
   }
 
   &-variant {
-    &--default.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-default, 0.3);
-          border: 2px solid $color-default;
+    &--default {
+      &.radio-appearance {
+        &--outline {
+          .radio__control {
+            background-color: rgba($color-default, 0.3);
+            border: 2px solid $color-default;
 
-          &::after {
+            &::after {
+              background-color: $color-default;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-default, 0.4);
+          }
+        }
+
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-default, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-default;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-default, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio__control {
+            backdrop-filter: 8px;
+            background-color: rgba($color-default, 0.3);
+            border: 2px solid $color-default;
+            box-shadow:
+              0 0 8px rgba($color-default, 0.5),
+              0 0 16px rgba($color-default, 0.4),
+              0 0 24px rgba($color-default, 0.3);
+
+            &::after {
+              background-color: $color-default;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-default, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
             background-color: $color-default;
-          }
-        }
+            border: 2px solid $color-default;
 
-        &:active .radio__control {
-          background-color: rgba($color-default, 0.4);
+            &::after {
+              background-color: rgba($white, 0.5);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-default, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-default, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-default;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-default, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-default, 0.3);
-          border: 2px solid $color-default;
-          box-shadow:
-            0 0 8px rgba($color-default, 0.5),
-            0 0 16px rgba($color-default, 0.4),
-            0 0 24px rgba($color-default, 0.3);
-
-          &::after {
-            background-color: $color-default;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-default, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-default;
-          border: 2px solid $color-default;
-
-          &::after {
-            background-color: rgba($white, 0.5);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-default, 0.9);
+        &--highlight-label {
+          color: $color-default;
         }
       }
     }
 
-    &--primary.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-primary, 0.3);
-          border: 2px solid $color-primary;
+    &--primary {
+      &.radio-appearance {
+        &--outline {
+          .radio {
+            &__control {
+              background-color: rgba($color-primary, 0.3);
+              border: 2px solid $color-primary;
 
-          &::after {
+              &::after {
+                background-color: $color-primary;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-primary, 0.4);
+          }
+        }
+
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-primary, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-primary;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-primary, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio {
+            &__control {
+              backdrop-filter: 8px;
+              background-color: rgba($color-primary, 0.3);
+              border: 2px solid $color-primary;
+              box-shadow:
+                0 0 8px rgba($color-primary, 0.5),
+                0 0 16px rgba($color-primary, 0.4),
+                0 0 24px rgba($color-primary, 0.3);
+
+              &::after {
+                background-color: $color-primary;
+                box-shadow:
+                  0 0 8px rgba($color-primary, 0.5),
+                  0 0 16px rgba($color-primary, 0.4),
+                  0 0 24px rgba($color-primary, 0.3);
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-primary, 0.4);
+          }
+        }
+
+        &--outline-dashed {
+          .radio {
+            &__control {
+              background-color: rgba($color-primary, 0.3);
+              border: 2px dashed $color-primary;
+
+              &::after {
+                background-color: $color-primary;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-primary, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
             background-color: $color-primary;
-          }
-        }
+            border: 2px solid $color-primary;
 
-        &:active .radio__control {
-          background-color: rgba($color-primary, 0.4);
+            &::after {
+              background-color: rgba($white, 0.9);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-primary, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-primary, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-primary;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-primary, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-primary, 0.3);
-          border: 2px solid $color-primary;
-          box-shadow:
-            0 0 8px rgba($color-primary, 0.5),
-            0 0 16px rgba($color-primary, 0.4),
-            0 0 24px rgba($color-primary, 0.3);
-
-          &::after {
-            background-color: $color-primary;
-            box-shadow:
-              0 0 8px rgba($color-primary, 0.5),
-              0 0 16px rgba($color-primary, 0.4),
-              0 0 24px rgba($color-primary, 0.3);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-primary, 0.4);
-        }
-      }
-
-      &--outline-dashed {
-        .radio__control {
-          background-color: rgba($color-primary, 0.3);
-          border: 2px dashed $color-primary;
-
-          &::after {
-            background-color: $color-primary;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-primary, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-primary;
-          border: 2px solid $color-primary;
-
-          &::after {
-            background-color: rgba($white, 0.9);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-primary, 0.9);
+        &--highlight-label {
+          color: $color-primary;
         }
       }
     }
 
-    &--secondary.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-secondary, 0.3);
-          border: 2px solid $color-secondary;
+    &--secondary {
+      &.radio-appearance {
+        &--outline {
+          .radio {
+            &__control {
+              background-color: rgba($color-secondary, 0.3);
+              border: 2px solid $color-secondary;
 
-          &::after {
-            background-color: $color-secondary;
+              &::after {
+                background-color: $color-secondary;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-secondary, 0.4);
           }
         }
 
-        &:active .radio__control {
-          background-color: rgba($color-secondary, 0.4);
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-secondary, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-secondary;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-secondary, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio {
+            &__control {
+              backdrop-filter: 8px;
+              background-color: rgba($color-secondary, 0.3);
+              border: 2px solid $color-secondary;
+              box-shadow:
+                0 0 8px rgba($color-secondary, 0.5),
+                0 0 16px rgba($color-secondary, 0.4),
+                0 0 24px rgba($color-secondary, 0.3);
+
+              &::after {
+                background-color: $color-secondary;
+                box-shadow:
+                  0 0 8px rgba($color-secondary, 0.5),
+                  0 0 16px rgba($color-secondary, 0.4),
+                  0 0 24px rgba($color-secondary, 0.3);
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-secondary, 0.4);
+          }
+        }
+
+        &--outline-dashed {
+          .radio {
+            &__control {
+              background-color: rgba($color-secondary, 0.3);
+              border: 2px dashed $color-secondary;
+
+              &::after {
+                background-color: $color-secondary;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-secondary, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
+            background-color: $color-secondary;
+            border: 2px solid $color-secondary;
+
+            &::after {
+              background-color: rgba($white, 0.9);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-secondary, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-secondary, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-secondary;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-secondary, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-secondary, 0.3);
-          border: 2px solid $color-secondary;
-          box-shadow:
-            0 0 8px rgba($color-secondary, 0.5),
-            0 0 16px rgba($color-secondary, 0.4),
-            0 0 24px rgba($color-secondary, 0.3);
-
-          &::after {
-            background-color: $color-secondary;
-            box-shadow:
-              0 0 8px rgba($color-secondary, 0.5),
-              0 0 16px rgba($color-secondary, 0.4),
-              0 0 24px rgba($color-secondary, 0.3);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-secondary, 0.4);
-        }
-      }
-
-      &--outline-dashed {
-        .radio__control {
-          background-color: rgba($color-secondary, 0.3);
-          border: 2px dashed $color-secondary;
-
-          &::after {
-            background-color: $color-secondary;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-secondary, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-secondary;
-          border: 2px solid $color-secondary;
-
-          &::after {
-            background-color: rgba($white, 0.9);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-secondary, 0.9);
+        &--highlight-label {
+          color: $color-secondary;
         }
       }
     }
 
-    &--error.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-error, 0.3);
-          border: 2px solid $color-error;
+    &--error {
+      &.radio-appearance {
+        &--outline {
+          .radio {
+            &__control {
+              background-color: rgba($color-error, 0.3);
+              border: 2px solid $color-error;
 
-          &::after {
-            background-color: $color-error;
+              &::after {
+                background-color: $color-error;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-error, 0.4);
           }
         }
 
-        &:active .radio__control {
-          background-color: rgba($color-error, 0.4);
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-error, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-error;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-error, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio {
+            &__control {
+              backdrop-filter: 8px;
+              background-color: rgba($color-error, 0.3);
+              border: 2px solid $color-error;
+              box-shadow:
+                0 0 8px rgba($color-error, 0.5),
+                0 0 16px rgba($color-error, 0.4),
+                0 0 24px rgba($color-error, 0.3);
+
+              &::after {
+                background-color: $color-error;
+                box-shadow:
+                  0 0 8px rgba($color-error, 0.5),
+                  0 0 16px rgba($color-error, 0.4),
+                  0 0 24px rgba($color-error, 0.3);
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-error, 0.4);
+          }
+        }
+
+        &--outline-dashed {
+          .radio {
+            &__control {
+              background-color: rgba($color-error, 0.3);
+              border: 2px dashed $color-error;
+
+              &::after {
+                background-color: $color-error;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-error, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
+            background-color: $color-error;
+            border: 2px solid $color-error;
+
+            &::after {
+              background-color: rgba($white, 0.9);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-error, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-error, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-error;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-error, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-error, 0.3);
-          border: 2px solid $color-error;
-          box-shadow:
-            0 0 8px rgba($color-error, 0.5),
-            0 0 16px rgba($color-error, 0.4),
-            0 0 24px rgba($color-error, 0.3);
-
-          &::after {
-            background-color: $color-error;
-            box-shadow:
-              0 0 8px rgba($color-error, 0.5),
-              0 0 16px rgba($color-error, 0.4),
-              0 0 24px rgba($color-error, 0.3);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-error, 0.4);
-        }
-      }
-
-      &--outline-dashed {
-        .radio__control {
-          background-color: rgba($color-error, 0.3);
-          border: 2px dashed $color-error;
-
-          &::after {
-            background-color: $color-error;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-error, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-error;
-          border: 2px solid $color-error;
-
-          &::after {
-            background-color: rgba($white, 0.9);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-error, 0.9);
+        &--highlight-label {
+          color: $color-error;
         }
       }
     }
 
-    &--warning.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-warning, 0.3);
-          border: 2px solid $color-warning;
+    &--warning {
+      &.radio-appearance {
+        &--outline {
+          .radio {
+            &__control {
+              background-color: rgba($color-warning, 0.3);
+              border: 2px solid $color-warning;
 
-          &::after {
-            background-color: $color-warning;
+              &::after {
+                background-color: $color-warning;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-warning, 0.4);
           }
         }
 
-        &:active .radio__control {
-          background-color: rgba($color-warning, 0.4);
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-warning, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-warning;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-warning, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio {
+            &__control {
+              backdrop-filter: 8px;
+              background-color: rgba($color-warning, 0.3);
+              border: 2px solid $color-warning;
+              box-shadow:
+                0 0 8px rgba($color-warning, 0.5),
+                0 0 16px rgba($color-warning, 0.4),
+                0 0 24px rgba($color-warning, 0.3);
+
+              &::after {
+                background-color: $color-warning;
+                box-shadow:
+                  0 0 8px rgba($color-warning, 0.5),
+                  0 0 16px rgba($color-warning, 0.4),
+                  0 0 24px rgba($color-warning, 0.3);
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-warning, 0.4);
+          }
+        }
+
+        &--outline-dashed {
+          .radio {
+            &__control {
+              background-color: rgba($color-warning, 0.3);
+              border: 2px dashed $color-warning;
+
+              &::after {
+                background-color: $color-warning;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-warning, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
+            background-color: $color-warning;
+            border: 2px solid $color-warning;
+
+            &::after {
+              background-color: rgba($white, 0.9);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-warning, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-warning, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-warning;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-warning, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-warning, 0.3);
-          border: 2px solid $color-warning;
-          box-shadow:
-            0 0 8px rgba($color-warning, 0.5),
-            0 0 16px rgba($color-warning, 0.4),
-            0 0 24px rgba($color-warning, 0.3);
-
-          &::after {
-            background-color: $color-warning;
-            box-shadow:
-              0 0 8px rgba($color-warning, 0.5),
-              0 0 16px rgba($color-warning, 0.4),
-              0 0 24px rgba($color-warning, 0.3);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-warning, 0.4);
-        }
-      }
-
-      &--outline-dashed {
-        .radio__control {
-          background-color: rgba($color-warning, 0.3);
-          border: 2px dashed $color-warning;
-
-          &::after {
-            background-color: $color-warning;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-warning, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-warning;
-          border: 2px solid $color-warning;
-
-          &::after {
-            background-color: rgba($white, 0.9);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-warning, 0.9);
+        &--highlight-label {
+          color: $color-warning;
         }
       }
     }
 
-    &--success.radio-appearance {
-      &--outline {
-        .radio__control {
-          background-color: rgba($color-success, 0.3);
-          border: 2px solid $color-success;
+    &--success {
+      &.radio-appearance {
+        &--outline {
+          .radio {
+            &__control {
+              background-color: rgba($color-success, 0.3);
+              border: 2px solid $color-success;
 
-          &::after {
-            background-color: $color-success;
+              &::after {
+                background-color: $color-success;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-success, 0.4);
           }
         }
 
-        &:active .radio__control {
-          background-color: rgba($color-success, 0.4);
+        &--no-outline {
+          .radio__control {
+            background-color: rgba($color-success, 0.3);
+            border: 2px solid transparent;
+
+            &::after {
+              background-color: $color-success;
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-success, 0.4);
+          }
+        }
+
+        &--glowing {
+          .radio {
+            &__control {
+              backdrop-filter: 8px;
+              background-color: rgba($color-success, 0.3);
+              border: 2px solid $color-success;
+              box-shadow:
+                0 0 8px rgba($color-success, 0.5),
+                0 0 16px rgba($color-success, 0.4),
+                0 0 24px rgba($color-success, 0.3);
+
+              &::after {
+                background-color: $color-success;
+                box-shadow:
+                  0 0 8px rgba($color-success, 0.5),
+                  0 0 16px rgba($color-success, 0.4),
+                  0 0 24px rgba($color-success, 0.3);
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-success, 0.4);
+          }
+        }
+
+        &--outline-dashed {
+          .radio {
+            &__control {
+              background-color: rgba($color-success, 0.3);
+              border: 2px dashed $color-success;
+
+              &::after {
+                background-color: $color-success;
+              }
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-success, 0.4);
+          }
+        }
+
+        &--solid {
+          .radio__control {
+            background-color: $color-success;
+            border: 2px solid $color-success;
+
+            &::after {
+              background-color: rgba($white, 0.9);
+            }
+          }
+
+          &:active .radio__control {
+            background-color: rgba($color-success, 0.9);
+          }
         }
       }
 
-      &--no-outline {
-        .radio__control {
-          background-color: rgba($color-success, 0.3);
-          border: 2px solid transparent;
+      .radio__label {
+        color: $white;
 
-          &::after {
-            background-color: $color-success;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-success, 0.4);
-        }
-      }
-
-      &--glowing {
-        .radio__control {
-          backdrop-filter: 8px;
-          background-color: rgba($color-success, 0.3);
-          border: 2px solid $color-success;
-          box-shadow:
-            0 0 8px rgba($color-success, 0.5),
-            0 0 16px rgba($color-success, 0.4),
-            0 0 24px rgba($color-success, 0.3);
-
-          &::after {
-            background-color: $color-success;
-            box-shadow:
-              0 0 8px rgba($color-success, 0.5),
-              0 0 16px rgba($color-success, 0.4),
-              0 0 24px rgba($color-success, 0.3);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-success, 0.4);
-        }
-      }
-
-      &--outline-dashed {
-        .radio__control {
-          background-color: rgba($color-success, 0.3);
-          border: 2px dashed $color-success;
-
-          &::after {
-            background-color: $color-success;
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-success, 0.4);
-        }
-      }
-
-      &--solid {
-        .radio__control {
-          background-color: $color-success;
-          border: 2px solid $color-success;
-
-          &::after {
-            background-color: rgba($white, 0.9);
-          }
-        }
-
-        &:active .radio__control {
-          background-color: rgba($color-success, 0.9);
+        &--highlight-label {
+          color: $color-success;
         }
       }
     }
@@ -634,11 +724,5 @@
     &:checked + .radio__control::after {
       transform: scale(1);
     }
-  }
-
-  &__label {
-    color: $white;
-    font-size: 16px;
-    line-height: 16px;
   }
 }

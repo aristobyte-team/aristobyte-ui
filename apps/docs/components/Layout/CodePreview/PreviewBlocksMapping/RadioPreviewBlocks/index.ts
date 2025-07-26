@@ -4,6 +4,7 @@ import { Usage } from "./Usage";
 import { Variants } from "./Variants";
 import { RadioGroupVariants } from "./RadioGroupVariants";
 import { Appearance } from "./Appearance";
+import { HighlightLabel } from "./HighlightLabel";
 
 export const RadioPreviewBlocks = {
   Usage,
@@ -12,4 +13,5 @@ export const RadioPreviewBlocks = {
   Variants,
   RadioGroupVariants,
   Appearance,
+  HighlightLabel,
 };

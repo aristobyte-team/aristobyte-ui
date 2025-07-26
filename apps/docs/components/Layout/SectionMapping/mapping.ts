@@ -104,6 +104,7 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { variants: RadioSections.Variants },
           { "radio-group-variants": RadioSections.RadioGroupVariants },
           { appearance: RadioSections.Appearance },
+          { "highlight-label": RadioSections.HighlightLabel },
         ],
       },
     }) as MappingType

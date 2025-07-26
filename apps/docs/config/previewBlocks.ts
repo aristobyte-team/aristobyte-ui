@@ -208,5 +208,10 @@ export const PreviewBlocks = {
       unit: "radio",
       section: "appearance",
     },
+    HighlightLabel: {
+      category: "components",
+      unit: "radio",
+      section: "highlight-label",
+    },
   },
 };

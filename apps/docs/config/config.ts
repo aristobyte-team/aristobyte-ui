@@ -189,6 +189,7 @@ export const Config = {
             variants: CodeBlocks.Radio.Variants,
             "radio-group-variants": CodeBlocks.Radio.RadioGroupVariants,
             appearance: CodeBlocks.Radio.Appearance,
+            "highlight-label": CodeBlocks.Radio.HighlightLabel,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -244,6 +245,7 @@ export const Config = {
             variants: PreviewBlocks.Radio.Variants,
             "radio-group-variants": PreviewBlocks.Radio.RadioGroupVariants,
             appearance: PreviewBlocks.Radio.Appearance,
+            "highlight-label": PreviewBlocks.Radio.HighlightLabel,
           },
         } as {
           [unit: string]: {

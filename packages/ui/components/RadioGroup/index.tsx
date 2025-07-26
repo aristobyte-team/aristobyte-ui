@@ -24,6 +24,7 @@ export interface IRadioGroup {
     | "outline-dashed"
     | "no-outline"
     | "glowing";
+  highlightLabel?: boolean;
 }
 
 export const RadioGroup: React.FC<IRadioGroup> = ({
@@ -32,6 +33,7 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   onChange,
   children,
   disabled = false,
+  highlightLabel = false,
   className = "",
   size = "md",
   variant = "default",
@@ -65,6 +67,7 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
           size={props.size ?? size}
           variant={props.variant ?? variant}
           appearance={props.appearance ?? appearance}
+          highlightLabel={props.highlightLabel ?? highlightLabel}
           {...props}
         />
       ))}
