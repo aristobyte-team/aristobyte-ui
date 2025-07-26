@@ -188,5 +188,25 @@ export const PreviewBlocks = {
       unit: "radio",
       section: "disabled",
     },
+    Sizes: {
+      category: "components",
+      unit: "radio",
+      section: "sizes",
+    },
+    Variants: {
+      category: "components",
+      unit: "radio",
+      section: "variants",
+    },
+    RadioGroupVariants: {
+      category: "components",
+      unit: "radio",
+      section: "radio-group-variants",
+    },
+    Appearance: {
+      category: "components",
+      unit: "radio",
+      section: "appearance",
+    },
   },
 };

@@ -188,7 +188,7 @@ export default function App() {
     Loading: `import * as React from "react";
 import { Button } from "@aristobyte-ui";
 
-export const Loading = () => {
+export default function App() {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
       <Button variant="primary" isLoading spinnerType="default">
@@ -486,7 +486,7 @@ export default function App() {
     Types: `import * as React from "react";
 import { MessageBox } from "@aristobyte-ui";
 
-export const Types = () => {
+export default function App() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       <MessageBox variant="success" withIcon type="solid">
@@ -538,7 +538,7 @@ export default function App() {
     WithoutIcon: `import * as React from "react";
 import { MessageBox } from "@aristobyte-ui";
 
-export const WithoutIcon = () => {
+export default function App() {
   return <MessageBox>Message box without icon</MessageBox>;
 }`,
   },
@@ -756,7 +756,7 @@ export default function App() {
     Usage: `import * as React from "react";
 import { Radio, RadioGroup } from "@aristobyte-ui";
 
-export const Usage = () => {
+export default function App() {
   return (
     <RadioGroup name="fruits" value="banana">
       <Radio value="apple">Apple</Radio>
@@ -768,12 +768,141 @@ export const Usage = () => {
     Disabled: `import * as React from "react";
 import { Radio, RadioGroup } from "@aristobyte-ui";
 
-export const Disabled = () => {
+export default function App() {
   return (
     <RadioGroup name="fruits" value="banana" disabled>
       <Radio value="apple">Apple</Radio>
       <Radio value="banana">Banana</Radio>
       <Radio value="orange">Orange</Radio>
+    </RadioGroup>
+  );
+}`,
+    Sizes: `import * as React from "react";
+import { Radio, RadioGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <RadioGroup name="fruits" value="banana" size="xsm">
+        <Radio value="apple">Apple</Radio>
+        <Radio value="banana">Banana</Radio>
+        <Radio value="orange">Orange</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="fruits" value="banana" size="sm">
+        <Radio value="apple">Apple</Radio>
+        <Radio value="banana">Banana</Radio>
+        <Radio value="orange">Orange</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="fruits" value="banana" size="md">
+        <Radio value="apple">Apple</Radio>
+        <Radio value="banana">Banana</Radio>
+        <Radio value="orange">Orange</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="fruits" value="banana" size="lg">
+        <Radio value="apple">Apple</Radio>
+        <Radio value="banana">Banana</Radio>
+        <Radio value="orange">Orange</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="fruits" value="banana" size="xlg">
+        <Radio value="apple">Apple</Radio>
+        <Radio value="banana">Banana</Radio>
+        <Radio value="orange">Orange</Radio>
+      </RadioGroup>
+    </div>
+  );
+}`,
+    Variants: `import * as React from "react";
+import { Radio, RadioGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <RadioGroup name="variants" value="default">
+      <Radio value="default" variant="default">Default</Radio>
+      <Radio value="primary" variant="primary">Primary</Radio>
+      <Radio value="secondary" variant="secondary">Secondary</Radio>
+      <Radio value="error" variant="error">Error</Radio>
+      <Radio value="warning" variant="warning">Warning</Radio>
+      <Radio value="success" variant="success">Success</Radio>
+    </RadioGroup>
+  );
+}`,
+    RadioGroupVariants: `import * as React from "react";
+import { Radio, RadioGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <RadioGroup name="variants" value="default">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="variants" value="primary" variant="primary">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="variants" value="secondary" variant="secondary">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="variants" value="warning" variant="warning">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="variants" value="error" variant="error">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="variants" value="success" variant="success">
+        <Radio value="default">Default</Radio>
+        <Radio value="primary">Primary</Radio>
+        <Radio value="secondary">Secondary</Radio>
+        <Radio value="error">Error</Radio>
+        <Radio value="warning">Warning</Radio>
+        <Radio value="success">Success</Radio>
+      </RadioGroup>
+    </div>
+  );
+}`,
+    Appearance: `import * as React from "react";
+import { Radio, RadioGroup } from "@aristobyte-ui";
+
+export default function App() {
+  return (
+    <RadioGroup name="variants" value="default">
+      <Radio value="solid" appearance="solid" variant="success">Solid</Radio>
+      <Radio value="glowing" appearance="glowing" variant="success">Glowing</Radio>
+      <Radio value="outline" appearance="outline" variant="success">Outline</Radio>
+      <Radio value="outline-dashed" appearance="outline-dashed" variant="success">Dashed outline</Radio>
+      <Radio value="no-outline" appearance="no-outline" variant="success">No-outline</Radio>
     </RadioGroup>
   );
 }`,

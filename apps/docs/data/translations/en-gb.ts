@@ -385,6 +385,26 @@ export const EN_GB = {
           description:
             "When the <b>disabled</b> prop is applied to the <b>RadioGroup</b>, it cascades to all nested <b>Radio</b> components, making them non-interactive. Even in a disabled state, radios can still reflect a <b>checked</b> value, preserving visual selection without allowing user interaction.",
         },
+        sizes: {
+          title: "Sizes",
+          description:
+            "The <b>size</b> prop defines the scale of the radio control and its label. Available options include <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b>, giving developers flexibility to match component sizing with typography, spacing, and layout needs. The default size is <b>md</b>.",
+        },
+        variants: {
+          title: "Variants",
+          description:
+            "The <b>variant</b> prop determines the visual styling of the radio control, allowing it to adapt to various semantic contexts or UI themes. Available values include <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, and <b>warning</b>. These variants typically map to predefined color tokens and help ensure design consistency across components. If not defined, the <b>default</b> style is applied.",
+        },
+        "radio-group-variants": {
+          title: "Group Variants",
+          description:
+            "You can apply the <b>variant</b> to <b>Radio</b> as well as to <b>RadioGroup</b>. These are the radios, which have the variant defined from a higher level.",
+        },
+        appearance: {
+          title: "Appearance",
+          description:
+            "The <b>appearance</b> prop defines the visual structure of the radio's outline and its interaction state feedback. Available values include <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b>, and <b>glowing</b>. By default, the radio adopts the <b>outline</b> appearance. Each variant provides a distinct visual tone—ranging from minimalist (<b>no-outline</b>) to expressive (<b>glowing</b>)—allowing precise alignment with your product's design language.",
+        },
       },
     },
   },

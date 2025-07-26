@@ -100,6 +100,10 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { import: RadioSections.Import },
           { usage: RadioSections.Usage },
           { disabled: RadioSections.Disabled },
+          { sizes: RadioSections.Sizes },
+          { variants: RadioSections.Variants },
+          { "radio-group-variants": RadioSections.RadioGroupVariants },
+          { appearance: RadioSections.Appearance },
         ],
       },
     }) as MappingType

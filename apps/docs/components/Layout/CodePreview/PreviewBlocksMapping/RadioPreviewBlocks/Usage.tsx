@@ -4,7 +4,7 @@ import { RadioGroup } from "@aristobyte-ui/ui/components/RadioGroup/index";
 
 export const Usage = () => {
   return (
-    <RadioGroup name="fruits" value="banana">
+    <RadioGroup name="fruits" value="banana" variant="primary">
       <Radio value="apple">Apple</Radio>
       <Radio value="banana">Banana</Radio>
       <Radio value="orange">Orange</Radio>

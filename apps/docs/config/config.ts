@@ -185,6 +185,10 @@ export const Config = {
           radio: {
             usage: CodeBlocks.Radio.Usage,
             disabled: CodeBlocks.Radio.Disabled,
+            sizes: CodeBlocks.Radio.Sizes,
+            variants: CodeBlocks.Radio.Variants,
+            "radio-group-variants": CodeBlocks.Radio.RadioGroupVariants,
+            appearance: CodeBlocks.Radio.Appearance,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -236,6 +240,10 @@ export const Config = {
           radio: {
             usage: PreviewBlocks.Radio.Usage,
             disabled: PreviewBlocks.Radio.Disabled,
+            sizes: PreviewBlocks.Radio.Sizes,
+            variants: PreviewBlocks.Radio.Variants,
+            "radio-group-variants": PreviewBlocks.Radio.RadioGroupVariants,
+            appearance: PreviewBlocks.Radio.Appearance,
           },
         } as {
           [unit: string]: {

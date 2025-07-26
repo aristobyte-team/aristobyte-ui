@@ -10,6 +10,20 @@ export interface IRadioGroup {
   onChange?: (newValue: string) => void;
   disabled?: boolean;
   className?: string;
+  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
+  variant?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning";
+  appearance?:
+    | "solid"
+    | "outline"
+    | "outline-dashed"
+    | "no-outline"
+    | "glowing";
 }
 
 export const RadioGroup: React.FC<IRadioGroup> = ({
@@ -19,6 +33,9 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   children,
   disabled = false,
   className = "",
+  size = "md",
+  variant = "default",
+  appearance = "outline",
 }) => {
   const uniqueId = React.useId();
   const [currentValue, setCurrentValue] = React.useState<string>(value);
@@ -44,7 +61,10 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
           name={`${name}-${props.value}-${uniqueId}`}
           checked={props.value === currentValue}
           onChange={() => handleChange(props.value)}
-          disabled={disabled || props.disabled}
+          disabled={props.disabled ?? disabled}
+          size={props.size ?? size}
+          variant={props.variant ?? variant}
+          appearance={props.appearance ?? appearance}
           {...props}
         />
       ))}

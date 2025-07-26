@@ -12,6 +12,21 @@ export interface IRadio {
   name?: string;
   disabled?: boolean;
   className?: string;
+  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
+  variant?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning";
+  appearance?:
+    | "default"
+    | "solid"
+    | "outline"
+    | "outline-dashed"
+    | "no-outline"
+    | "glowing";
 }
 
 export const Radio: React.FC<IRadio> = ({
@@ -22,6 +37,9 @@ export const Radio: React.FC<IRadio> = ({
   disabled = false,
   onChange,
   className = "",
+  size = "md",
+  variant = "default",
+  appearance = "default",
 }) => {
   const handleChange = () => {
     if (!disabled && onChange) {
@@ -31,7 +49,7 @@ export const Radio: React.FC<IRadio> = ({
 
   return (
     <label
-      className={`${styles["radio"]} ${disabled ? styles["radio--disabled"] : ""} ${className}`}
+      className={`${styles["radio"]} ${styles[`radio-appearance--${appearance}`]} ${styles[`radio-variant--${variant}`]} ${styles[`radio-size--${size}`]} ${disabled ? styles["radio--disabled"] : ""} ${className}`}
     >
       <input
         type="radio"
