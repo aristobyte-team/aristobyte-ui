@@ -74,6 +74,7 @@ export const Mapping = (
       },
       radio: {
         usage: RadioPreviewBlocks.Usage,
+        disabled: RadioPreviewBlocks.Disabled,
       },
     },
   }) as MappingType)![category]![unit]![section]!;

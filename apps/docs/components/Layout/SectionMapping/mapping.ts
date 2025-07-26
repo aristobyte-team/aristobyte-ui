@@ -6,7 +6,7 @@ import { HomeSections } from "./HomeSections";
 import { SpinnerSections } from "./SpinnerSections";
 import { MessageBoxSections } from "./MessageBoxSections";
 import { SwitchSections } from "./SwitchSections";
-import { RadioSections } from "./Radio";
+import { RadioSections } from "./RadioSections";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
@@ -99,6 +99,7 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { installation: RadioSections.Installation },
           { import: RadioSections.Import },
           { usage: RadioSections.Usage },
+          { disabled: RadioSections.Disabled },
         ],
       },
     }) as MappingType

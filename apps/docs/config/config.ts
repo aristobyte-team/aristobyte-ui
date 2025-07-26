@@ -184,6 +184,7 @@ export const Config = {
           },
           radio: {
             usage: CodeBlocks.Radio.Usage,
+            disabled: CodeBlocks.Radio.Disabled,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -234,6 +235,7 @@ export const Config = {
           },
           radio: {
             usage: PreviewBlocks.Radio.Usage,
+            disabled: PreviewBlocks.Radio.Disabled,
           },
         } as {
           [unit: string]: {

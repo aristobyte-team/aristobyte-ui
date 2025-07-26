@@ -378,7 +378,12 @@ export const EN_GB = {
         usage: {
           title: "Usage",
           description:
-            "The <b>RadioGroup</b> component orchestrates a collection of <b>Radio</b> elements where only one option can be selected at a time. Each <b>Radio</b> receives its label through the <b>children</b> prop and operates within the group context. The active selection is controlled via the <code>value</code> prop, while changes are propagated through <code>onChange</code>.",
+            "This example showcases a typical implementation of the <b>RadioGroup</b> component with multiple <b>Radio</b> children. The <b>value</b> prop defines the selected option, while the <b>disabled</b> prop disables interaction across all radios in the group. Each <b>Radio</b> receives its label via the <b>children</b> prop.",
+        },
+        disabled: {
+          title: "Disabled",
+          description:
+            "When the <b>disabled</b> prop is applied to the <b>RadioGroup</b>, it cascades to all nested <b>Radio</b> components, making them non-interactive. Even in a disabled state, radios can still reflect a <b>checked</b> value, preserving visual selection without allowing user interaction.",
         },
       },
     },

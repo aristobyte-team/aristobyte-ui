@@ -183,5 +183,10 @@ export const PreviewBlocks = {
       unit: "radio",
       section: "usage",
     },
+    Disabled: {
+      category: "components",
+      unit: "radio",
+      section: "disabled",
+    },
   },
 };
