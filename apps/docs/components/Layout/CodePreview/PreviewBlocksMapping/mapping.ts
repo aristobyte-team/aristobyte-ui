@@ -77,9 +77,10 @@ export const Mapping = (
         disabled: RadioPreviewBlocks.Disabled,
         sizes: RadioPreviewBlocks.Sizes,
         variants: RadioPreviewBlocks.Variants,
-        "radio-group-variants": RadioPreviewBlocks.RadioGroupVariants,
         appearance: RadioPreviewBlocks.Appearance,
         "highlight-label": RadioPreviewBlocks.HighlightLabel,
+        "radio-group-align": RadioPreviewBlocks.RadioGroupAlign,
+        "align-label": RadioPreviewBlocks.AlignLabel,
       },
     },
   }) as MappingType)![category]![unit]![section]!;

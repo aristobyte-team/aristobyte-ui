@@ -5,9 +5,10 @@ import { Usage } from "./Usage";
 import { Disabled } from "./Disabled";
 import { Sizes } from "./Sizes";
 import { Variants } from "./Variants";
-import { RadioGroupVariants } from "./RadioGroupVariants";
 import { Appearance } from "./Appearance";
 import { HighlightLabel } from "./HighlightLabel";
+import { RadioGroupAlign } from "./RadioGroupAlign";
+import { AlignLabel } from "./AlignLabel";
 
 export const RadioSections = {
   Installation,
@@ -17,7 +18,8 @@ export const RadioSections = {
   Disabled,
   Sizes,
   Variants,
-  RadioGroupVariants,
   Appearance,
   HighlightLabel,
+  RadioGroupAlign,
+  AlignLabel,
 };

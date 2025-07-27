@@ -24,6 +24,8 @@ export interface IRadioGroup {
     | "outline-dashed"
     | "no-outline"
     | "glowing";
+  align?: "horizontal" | "vertical";
+  alignLabel?: "top" | "right" | "bottom" | "left";
   highlightLabel?: boolean;
 }
 
@@ -38,6 +40,8 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   size = "md",
   variant = "default",
   appearance = "outline",
+  align = "horizontal",
+  alignLabel = "right",
 }) => {
   const uniqueId = React.useId();
   const [currentValue, setCurrentValue] = React.useState<string>(value);
@@ -56,7 +60,10 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   };
 
   return (
-    <div key={uniqueId} className={`${styles["radio-group"]} ${className}`}>
+    <div
+      key={uniqueId}
+      className={`${styles["radio-group"]} ${styles[`radio-group--${align}`]} ${className}`}
+    >
       {radios.map(({ props }) => (
         <Radio
           key={`${name}-${props.value}-${uniqueId}`}
@@ -68,6 +75,7 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
           variant={props.variant ?? variant}
           appearance={props.appearance ?? appearance}
           highlightLabel={props.highlightLabel ?? highlightLabel}
+          alignLabel={props.alignLabel ?? alignLabel}
           {...props}
         />
       ))}

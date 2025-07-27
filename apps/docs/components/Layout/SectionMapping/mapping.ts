@@ -102,9 +102,10 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { disabled: RadioSections.Disabled },
           { sizes: RadioSections.Sizes },
           { variants: RadioSections.Variants },
-          { "radio-group-variants": RadioSections.RadioGroupVariants },
           { appearance: RadioSections.Appearance },
           { "highlight-label": RadioSections.HighlightLabel },
+          { "radio-group-align": RadioSections.RadioGroupAlign },
+          { "align-label": RadioSections.AlignLabel },
         ],
       },
     }) as MappingType

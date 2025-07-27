@@ -187,9 +187,10 @@ export const Config = {
             disabled: CodeBlocks.Radio.Disabled,
             sizes: CodeBlocks.Radio.Sizes,
             variants: CodeBlocks.Radio.Variants,
-            "radio-group-variants": CodeBlocks.Radio.RadioGroupVariants,
             appearance: CodeBlocks.Radio.Appearance,
             "highlight-label": CodeBlocks.Radio.HighlightLabel,
+            "radio-group-align": CodeBlocks.Radio.RadioGroupAlign,
+            "align-label": CodeBlocks.Radio.AlignLabel,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -243,9 +244,10 @@ export const Config = {
             disabled: PreviewBlocks.Radio.Disabled,
             sizes: PreviewBlocks.Radio.Sizes,
             variants: PreviewBlocks.Radio.Variants,
-            "radio-group-variants": PreviewBlocks.Radio.RadioGroupVariants,
             appearance: PreviewBlocks.Radio.Appearance,
             "highlight-label": PreviewBlocks.Radio.HighlightLabel,
+            "radio-group-align": PreviewBlocks.Radio.RadioGroupAlign,
+            "align-label": PreviewBlocks.Radio.AlignLabel,
           },
         } as {
           [unit: string]: {

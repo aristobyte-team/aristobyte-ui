@@ -5,3 +5,4 @@
 - ✅ Optional Runtime Guard (for Dev Safety)
 - consider using `clsx` to fix the className issues
 - Convert the 'type' to 'appearance'
+- Add `type` section at the bottom of each component

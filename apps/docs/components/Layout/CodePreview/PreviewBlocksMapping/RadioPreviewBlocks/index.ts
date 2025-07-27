@@ -2,16 +2,18 @@ import { Disabled } from "./Disabled";
 import { Sizes } from "./Sizes";
 import { Usage } from "./Usage";
 import { Variants } from "./Variants";
-import { RadioGroupVariants } from "./RadioGroupVariants";
+import { RadioGroupAlign } from "./RadioGroupAlign";
 import { Appearance } from "./Appearance";
 import { HighlightLabel } from "./HighlightLabel";
+import { AlignLabel } from "./AlignLabel";
 
 export const RadioPreviewBlocks = {
   Usage,
   Disabled,
   Sizes,
   Variants,
-  RadioGroupVariants,
   Appearance,
   HighlightLabel,
+  RadioGroupAlign,
+  AlignLabel,
 };

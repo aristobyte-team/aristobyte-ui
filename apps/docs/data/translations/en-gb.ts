@@ -353,7 +353,7 @@ export const EN_GB = {
         intro: {
           title: "Radio",
           description:
-            "A component for selecting a single option from a predefined set. <b>Radio</b> and <b>RadioGroup</b> provide a flexible foundation for building accessible, customizable choice interfaces in forms or filters.",
+            "A component for selecting a single option from a predefined set. <code>Radio</code> and <code>RadioGroup</code> provide a flexible foundation for building accessible, customizable choice interfaces in forms or filters.",
           links: {
             storybook: "Storybook",
             npm: "@aristobyte-ui/radio",
@@ -369,7 +369,7 @@ export const EN_GB = {
         import: {
           title: "Import Radio",
           description:
-            "You can either import <b>Radio</b> and <b>RadioGroup</b> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
+            "You can either import <code>Radio</code> and <code>RadioGroup</code> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
           tabs: {
             individual: "Individual",
             global: "Global",
@@ -378,37 +378,42 @@ export const EN_GB = {
         usage: {
           title: "Usage",
           description:
-            "This example showcases a typical implementation of the <b>RadioGroup</b> component with multiple <b>Radio</b> children. The <b>value</b> prop defines the selected option, while the <b>disabled</b> prop disables interaction across all radios in the group. Each <b>Radio</b> receives its label via the <b>children</b> prop.",
+            "This example showcases a typical implementation of the <code>RadioGroup</code> component with multiple <code>Radio</code> children. The <b>value</b> prop defines the selected option, while the <b>disabled</b> prop disables interaction across all radios in the group. Each <code>Radio</code> receives its label via the <b>children</b> prop.",
         },
         disabled: {
           title: "Disabled",
           description:
-            "When the <b>disabled</b> prop is applied to the <b>RadioGroup</b>, it cascades to all nested <b>Radio</b> components, making them non-interactive. Even in a disabled state, radios can still reflect a <b>checked</b> value, preserving visual selection without allowing user interaction.",
+            "When the <b>disabled</b> prop is applied to the <code>RadioGroup</code>, it cascades to all nested <code>Radio</code> components, making them non-interactive. Even in a disabled state, radios can still reflect a <b>checked</b> value, preserving visual selection without allowing user interaction. You may also define <b>disabled</b> at the <code>Radio</code> level for more granular control—individual definitions take precedence.",
         },
         sizes: {
           title: "Sizes",
           description:
-            "The <b>size</b> prop defines the scale of the radio control and its label. Available options include <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b>, giving developers flexibility to match component sizing with typography, spacing, and layout needs. The default size is <b>md</b>.",
+            "The <b>size</b> prop defines the scale of the radio control and its label. Available options include <b>xsm</b>, <b>sm</b>, <b>md</b>, <b>lg</b>, and <b>xlg</b>, giving developers flexibility to match component sizing with typography, spacing, and layout needs. The default size is <b>md</b>. This prop can be defined on both <code>RadioGroup</code> and <code>Radio</code>, with the latter taking priority when both are present.",
         },
         variants: {
           title: "Variants",
           description:
-            "The <b>variant</b> prop determines the visual styling of the radio control, allowing it to adapt to various semantic contexts or UI themes. Available values include <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, and <b>warning</b>. These variants typically map to predefined color tokens and help ensure design consistency across components. If not defined, the <b>default</b> style is applied.",
-        },
-        "radio-group-variants": {
-          title: "Group Variants",
-          description:
-            "You can apply the <b>variant</b> to <b>Radio</b> as well as to <b>RadioGroup</b>. These are the radios, which have the variant defined from a higher level.",
+            "The <b>variant</b> prop determines the visual styling of the radio control, allowing it to adapt to various semantic contexts or UI themes. Available values include <b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, and <b>warning</b>. These variants typically map to predefined color tokens and help ensure design consistency across components. If not defined, the <b>default</b> style is applied. You may pass this prop to <code>RadioGroup</code> or to individual <code>Radio</code> components, where the latter will override inherited group values.",
         },
         appearance: {
           title: "Appearance",
           description:
-            "The <b>appearance</b> prop defines the visual structure of the radio's outline and its interaction state feedback. Available values include <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b>, and <b>glowing</b>. By default, the radio adopts the <b>outline</b> appearance. Each variant provides a distinct visual tone—ranging from minimalist (<b>no-outline</b>) to expressive (<b>glowing</b>)—allowing precise alignment with your product's design language.",
+            "The <b>appearance</b> prop defines the visual structure of the radio's outline and its interaction state feedback. Available values include <b>solid</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b>, and <b>glowing</b>. By default, the radio adopts the <b>outline</b> appearance. Each variant provides a distinct visual tone—ranging from minimalist (<b>no-outline</b>) to expressive (<b>glowing</b>)—allowing precise alignment with your product's design language. This prop is supported on both <code>RadioGroup</code> and <code>Radio</code>; however, direct <code>Radio</code> definitions take precedence.",
         },
         "highlight-label": {
           title: "Highlight Label",
           description:
-            "Enables the label to inherit the active <b>variant</b> color when <b>highlightLabel</b> is set to <b>true</b>. This enhances visual association between the label and the selected theme. When <b>false</b> (default), the label color remains neutral or white.",
+            "Enables the label to inherit the active <b>variant</b> color when <b>highlightLabel</b> is set to <b>true</b>. This enhances visual association between the label and the selected theme. When <b>false</b> (default), the label color remains neutral or white. The prop can be used on <code>RadioGroup</code> to apply it broadly, but <code>Radio</code>-level values override group-level settings.",
+        },
+        "radio-group-align": {
+          title: "Align Radios",
+          description:
+            "The <b>align</b> prop controls the directional layout of the <code>Radio</code> components within the <code>RadioGroup</code>. By default, radios are stacked <b>vertical</b>, but you can switch to a <b>horizontal</b> layout for more compact or inline presentations. Alignment can also be defined per <code>Radio</code> component, which overrides the group alignment if both are defined.",
+        },
+        "align-label": {
+          title: "Align Label",
+          description:
+            "The <b>alignLabel</b> prop allows fine-tuned control over the label's position relative to the radio control. It accepts <b>top</b>, <b>right</b>, <b>bottom</b>, or <b>left</b>, with <b>bottom</b> being the default. This prop can be applied to both <code>Radio</code> and <code>RadioGroup</code>, but individual <code>Radio</code> components take precedence when both are defined.",
         },
       },
     },

@@ -1,9 +1,15 @@
 @use "../../styles/settings" as *;
 
 .radio-group {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 20px;
   min-width: max-content;
+
+  &--horizontal {
+    flex-direction: row;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
 }
