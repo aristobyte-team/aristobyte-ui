@@ -415,6 +415,11 @@ export const EN_GB = {
           description:
             "The <b>alignLabel</b> prop allows fine-tuned control over the label's position relative to the radio control. It accepts <b>top</b>, <b>right</b>, <b>bottom</b>, or <b>left</b>, with <b>bottom</b> being the default. This prop can be applied to both <code>Radio</code> and <code>RadioGroup</code>, but individual <code>Radio</code> components take precedence when both are defined.",
         },
+        controlled: {
+          title: "Controlled Radios",
+          description:
+            "A controlled <b>RadioGroup</b> allows full external control over the selected value using React state. By passing a dynamic <code>value</code> and <code>onChange</code> handler—typically derived from <code>useState</code>—you ensure the radio selection is synchronized with the component’s state lifecycle. This pattern is ideal for form integrations, live previews, and data-bound interfaces where UI must reflect application state in real time.",
+        },
       },
     },
   },

@@ -218,5 +218,10 @@ export const PreviewBlocks = {
       unit: "radio",
       section: "align-label",
     },
+    Controlled: {
+      category: "components",
+      unit: "radio",
+      section: "controlled",
+    },
   },
 };

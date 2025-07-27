@@ -9,6 +9,7 @@ import { Appearance } from "./Appearance";
 import { HighlightLabel } from "./HighlightLabel";
 import { RadioGroupAlign } from "./RadioGroupAlign";
 import { AlignLabel } from "./AlignLabel";
+import { Controlled } from "./Controlled";
 
 export const RadioSections = {
   Installation,
@@ -22,4 +23,5 @@ export const RadioSections = {
   HighlightLabel,
   RadioGroupAlign,
   AlignLabel,
+  Controlled,
 };

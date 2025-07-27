@@ -5,13 +5,14 @@ import styles from "./MessageBox.module.scss";
 
 type MessageBoxVariant = "default" | "info" | "warning" | "success" | "error";
 
-export interface IMessageBox extends React.HTMLAttributes<HTMLDivElement> {
+export interface IMessageBox {
   variant?: MessageBoxVariant;
   children?: React.ReactElement | React.ReactNode | string;
   withIcon?: boolean;
   customIcon?: React.ReactElement | React.ReactNode | string;
   radius?: "none" | "sm" | "md" | "lg" | "full";
   type?: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
+  className?: string;
 }
 
 const renderIcon = (variant: MessageBoxVariant) => {

@@ -6,6 +6,7 @@ import { RadioGroupAlign } from "./RadioGroupAlign";
 import { Appearance } from "./Appearance";
 import { HighlightLabel } from "./HighlightLabel";
 import { AlignLabel } from "./AlignLabel";
+import { Controlled } from "./Controlled";
 
 export const RadioPreviewBlocks = {
   Usage,
@@ -16,4 +17,5 @@ export const RadioPreviewBlocks = {
   HighlightLabel,
   RadioGroupAlign,
   AlignLabel,
+  Controlled,
 };

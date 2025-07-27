@@ -81,6 +81,7 @@ export const Mapping = (
         "highlight-label": RadioPreviewBlocks.HighlightLabel,
         "radio-group-align": RadioPreviewBlocks.RadioGroupAlign,
         "align-label": RadioPreviewBlocks.AlignLabel,
+        controlled: RadioPreviewBlocks.Controlled,
       },
     },
   }) as MappingType)![category]![unit]![section]!;

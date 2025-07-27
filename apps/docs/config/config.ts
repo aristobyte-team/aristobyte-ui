@@ -191,6 +191,7 @@ export const Config = {
             "highlight-label": CodeBlocks.Radio.HighlightLabel,
             "radio-group-align": CodeBlocks.Radio.RadioGroupAlign,
             "align-label": CodeBlocks.Radio.AlignLabel,
+            controlled: CodeBlocks.Radio.Controlled,
           },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
@@ -248,6 +249,7 @@ export const Config = {
             "highlight-label": PreviewBlocks.Radio.HighlightLabel,
             "radio-group-align": PreviewBlocks.Radio.RadioGroupAlign,
             "align-label": PreviewBlocks.Radio.AlignLabel,
+            controlled: PreviewBlocks.Radio.Controlled,
           },
         } as {
           [unit: string]: {

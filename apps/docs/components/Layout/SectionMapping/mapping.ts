@@ -106,6 +106,7 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { "highlight-label": RadioSections.HighlightLabel },
           { "radio-group-align": RadioSections.RadioGroupAlign },
           { "align-label": RadioSections.AlignLabel },
+          { controlled: RadioSections.Controlled },
         ],
       },
     }) as MappingType
