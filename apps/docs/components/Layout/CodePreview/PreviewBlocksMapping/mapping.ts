@@ -4,10 +4,11 @@ import { ButtonPreviewBlocks } from "./ButtonPreviewBlocks";
 import { SpinnerPreviewBlocks } from "./SpinnerPreviewBlocks";
 import { MessageBoxPreviewBlocks } from "./MessageBoxPreviewBlocks";
 import { SwitchPreviewBlocks } from "./SwitchPreviewBlocks";
+import { RadioPreviewBlocks } from "./RadioPreviewBlocks";
+import { DropdownPreviewBlocks } from "./DropdownPreviewBlocks";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
-import { RadioPreviewBlocks } from "./RadioPreviewBlocks";
 
 export type ChildComponentPropsType = {
   config?: ConfigType;
@@ -82,6 +83,9 @@ export const Mapping = (
         "radio-group-align": RadioPreviewBlocks.RadioGroupAlign,
         "align-label": RadioPreviewBlocks.AlignLabel,
         controlled: RadioPreviewBlocks.Controlled,
+      },
+      dropdown: {
+        usage: DropdownPreviewBlocks.Usage,
       },
     },
   }) as MappingType)![category]![unit]![section]!;

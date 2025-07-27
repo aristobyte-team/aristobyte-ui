@@ -224,4 +224,11 @@ export const PreviewBlocks = {
       section: "controlled",
     },
   },
+  Dropdown: {
+    Usage: {
+      category: "components",
+      unit: "dropdown",
+      section: "usage",
+    },
+  },
 };

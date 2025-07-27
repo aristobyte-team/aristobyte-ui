@@ -10,6 +10,7 @@ import { RadioSections } from "./RadioSections";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
+import { DropdownSections } from "./DropdownSection";
 
 // @TODO: make 'config' and 't' optional props
 export type ChildComponentPropsType = {
@@ -107,6 +108,12 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { "radio-group-align": RadioSections.RadioGroupAlign },
           { "align-label": RadioSections.AlignLabel },
           { controlled: RadioSections.Controlled },
+        ],
+        dropdown: [
+          { intro: DropdownSections.Intro },
+          { installation: DropdownSections.Installation },
+          { import: DropdownSections.Import },
+          { usage: DropdownSections.Usage },
         ],
       },
     }) as MappingType

@@ -60,6 +60,11 @@ export const Config = {
             target: "_self",
           },
           {
+            id: "dropdown",
+            href: "/components/dropdown",
+            target: "_self",
+          },
+          {
             id: "message-box",
             href: "/components/message-box",
             target: "_self",
@@ -116,6 +121,7 @@ export const Config = {
         content: {
           button: CodeBlocks.Import(["Button"], "/button"),
           card: CodeBlocks.Import(["Card"], "/card"),
+          dropdown: CodeBlocks.Import(["Dropdown"], "/dropdown"),
           home: CodeBlocks.Import(["ComponentName"], "/componentName"),
           "message-box": CodeBlocks.Import(["MessageBox"], "/message-box"),
           spinner: CodeBlocks.Import(["Spinner"], "/spinner"),
@@ -128,6 +134,7 @@ export const Config = {
         content: {
           button: CodeBlocks.Import(["Button"]),
           card: CodeBlocks.Import(["Card"]),
+          dropdown: CodeBlocks.Import(["Dropdown"]),
           home: CodeBlocks.Import(["ComponentName"]),
           "message-box": CodeBlocks.Import(["MessageBox"]),
           spinner: CodeBlocks.Import(["Spinner"]),
@@ -193,6 +200,9 @@ export const Config = {
             "align-label": CodeBlocks.Radio.AlignLabel,
             controlled: CodeBlocks.Radio.Controlled,
           },
+          dropdown: {
+            usage: CodeBlocks.Dropdown.Usage,
+          },
         } as { [unit: string]: { [unitSection: string]: string } },
       },
       {
@@ -250,6 +260,9 @@ export const Config = {
             "radio-group-align": PreviewBlocks.Radio.RadioGroupAlign,
             "align-label": PreviewBlocks.Radio.AlignLabel,
             controlled: PreviewBlocks.Radio.Controlled,
+          },
+          dropdown: {
+            usage: PreviewBlocks.Dropdown.Usage,
           },
         } as {
           [unit: string]: {

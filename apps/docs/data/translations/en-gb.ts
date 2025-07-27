@@ -7,6 +7,7 @@ export const EN_GB = {
     links: {
       button: "Button",
       card: "Card",
+      dropdown: "Dropdown",
       spinner: "Spinner",
       installation: "Installation",
       introduction: "Introduction",
@@ -419,6 +420,38 @@ export const EN_GB = {
           title: "Controlled Radios",
           description:
             "A controlled <b>RadioGroup</b> allows full external control over the selected value using React state. By passing a dynamic <code>value</code> and <code>onChange</code> handler—typically derived from <code>useState</code>—you ensure the radio selection is synchronized with the component’s state lifecycle. This pattern is ideal for form integrations, live previews, and data-bound interfaces where UI must reflect application state in real time.",
+        },
+      },
+      dropdown: {
+        intro: {
+          title: "Dropdown",
+          description:
+            "Dropdowns enable users to select a single option from a contextual list. It’s a compact, flexible UI pattern ideal for filters, forms, and segmented controls.",
+          links: {
+            storybook: "Storybook",
+            npm: "@aristobyte-ui/dropdown",
+            source: "Source",
+            "style-source": "Style source",
+          },
+        },
+        installation: {
+          title: "Installation of Dropdown",
+          description:
+            "The above command is for individual installation of Dropdown only. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Dropdown",
+          description:
+            "The Dropdown component provides a minimal yet accessible selection UI for various use cases. It supports dynamic options, disabled states, and custom styling. Import it as shown below to enrich your data selection flows:",
+          tabs: {
+            individual: "Individual",
+            global: "Global",
+          },
+        },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the Dropdown component in a controlled setup. Ideal for collecting selections or filtering content contextually.",
         },
       },
     },
