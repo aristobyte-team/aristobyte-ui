@@ -1,0 +1,24 @@
+@use "../../styles/settings" as *;
+
+.dropdown-option {
+  border-radius: 8px; //TODO: change to dynamic
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  text-align: left;
+  transition: all 120ms ease-out;
+  width: 100%;
+
+  &:hover {
+    background-color: $color-default-hover;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__description {
+    color: rgba($white, 0.6);
+  }
+}

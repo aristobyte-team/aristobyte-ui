@@ -3,6 +3,7 @@ export {
   Button,
   ButtonGroup,
   Dropdown,
+  DropdownOption,
   MessageBox,
   CodeBlock,
   Spinner,

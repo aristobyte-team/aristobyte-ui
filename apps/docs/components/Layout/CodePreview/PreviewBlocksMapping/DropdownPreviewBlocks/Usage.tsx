@@ -1,30 +1,34 @@
 import * as React from "react";
-import {
-  Dropdown,
-  type IDropdownOption,
-} from "@aristobyte-ui/ui/components/Dropdown/index";
-
-const options: IDropdownOption[] = [
-  { label: "Frontend Developer", value: "frontend" },
-  { label: "Backend Developer", value: "backend" },
-  { label: "Full Stack Developer", value: "fullstack" },
-  { label: "DevOps Engineer", value: "devops", disabled: true },
-];
+import { Dropdown } from "@aristobyte-ui/ui/components/Dropdown/index";
+import { DropdownOption } from "@aristobyte-ui/ui/components/DropdownOption/index";
 
 export const Usage = () => {
-  const [selectedRole, setSelectedRole] = React.useState<string>("");
-
   return (
-    <div style={{ maxWidth: 320 }}>
-      <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: 8 }}>
-        Select your role
-      </h3>
-      <Dropdown
-        options={options}
-        value={selectedRole}
-        onChange={(val) => setSelectedRole(val)}
-        placeholder="Choose a role"
-      />
-    </div>
+    <Dropdown value="frontend" placeholder="Open dropdown">
+      <DropdownOption
+        value="frontend"
+        description="Specializes in UI/UX, JavaScript, and frontend frameworks"
+      >
+        Frontend Developer
+      </DropdownOption>
+      <DropdownOption
+        value="backend"
+        description="Focuses on APIs, databases, and server-side logic"
+      >
+        Backend Developer
+      </DropdownOption>
+      <DropdownOption
+        value="fullstack"
+        description="Versatile in both client and server-side development"
+      >
+        Full Stack Developer
+      </DropdownOption>
+      <DropdownOption
+        value="devops"
+        description="Handles CI/CD pipelines, cloud infrastructure, and automation"
+      >
+        DevOps Engineer
+      </DropdownOption>
+    </Dropdown>
   );
 };

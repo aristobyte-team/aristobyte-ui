@@ -1,91 +1,175 @@
 "use client";
 
 import * as React from "react";
-import { Icons } from "../../utils";
+import { DropdownOption, type IDropdownOption } from "../DropdownOption";
+
+import { AnimatePresence, motion } from "framer-motion";
+
+import { Button } from "../Button";
+import { Portal } from "../../utils/Portal";
 
 import styles from "./Dropdown.module.scss";
 
-export interface IDropdownOption {
-  label: string;
-  value: string;
-  disabled?: boolean;
-}
-
 export interface IDropdown {
-  options: IDropdownOption[];
+  children:
+    | React.ReactElement<IDropdownOption>
+    | React.ReactElement<IDropdownOption>[];
   value: string;
-  onChange: (value: string) => void;
+  appearance?:
+    | "solid"
+    | "outline"
+    | "outline-dashed"
+    | "no-outline"
+    | "glowing";
+  onChange?: (newValue: string) => void;
+  initiallyOpened?: boolean;
   placeholder?: string;
   disabled?: boolean;
   className?: string;
 }
 
+type PositionType = {
+  top: 0;
+  left: 0;
+  width: 0;
+};
+
 export const Dropdown: React.FC<IDropdown> = ({
-  options,
+  children,
   value,
   onChange,
-  placeholder = "Select an option",
-  disabled = false,
+  appearance = "outline",
+  placeholder = "Select",
   className = "",
+  initiallyOpened = false,
+  disabled = false,
 }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const [isOpened, setIsOpened] = React.useState<boolean>(initiallyOpened);
+  const [selected, setSelected] = React.useState<string>(value);
+  const [position, setPosition] = React.useState<PositionType>({
+    top: 0,
+    left: 0,
+    width: 0,
+  });
+  const [dropdownHeight, setDropdownHeight] = React.useState(0);
+  const [buttonHeight, setButtonHeight] = React.useState(0);
+  const buttonRef = React.useRef<HTMLButtonElement>(null);
+  const boxRef = React.useRef<HTMLDivElement>(null);
+  const uniqueId = React.useId();
 
-  React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  React.useLayoutEffect(() => {
+    if (!isOpened) {
+      return;
+    }
 
-  const selectedOption = options.find((opt) => opt.value === value);
+    if (boxRef.current) {
+      setDropdownHeight(boxRef.current.getBoundingClientRect().height);
+    }
+
+    if (buttonRef.current) {
+      setButtonHeight(buttonRef.current.getBoundingClientRect().height);
+    }
+  }, [isOpened]);
+
+  const options = React.Children.toArray(children).filter(
+    (child): child is React.ReactElement<IDropdownOption> =>
+      React.isValidElement(child) && child.type === DropdownOption
+  );
+
+  const isValidValue = () => {
+    return !!options.find(({ props }) => props.value === value);
+  };
+
+  const handleChange = (currentRadioValue: string) => {
+    onChange?.(currentRadioValue);
+    setSelected(currentRadioValue);
+    setIsOpened(false);
+  };
+
+  const handleToggle = () => {
+    if (disabled) return;
+
+    const rect = buttonRef.current?.getBoundingClientRect();
+    if (!rect) return;
+
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const spaceAbove = rect.top;
+
+    const shouldOpenUpwards =
+      dropdownHeight > 0 &&
+      spaceBelow < dropdownHeight &&
+      spaceAbove > dropdownHeight;
+
+    const finalPosition = {
+      top: shouldOpenUpwards
+        ? rect.top + window.scrollY - dropdownHeight - buttonHeight / 2
+        : rect.top + window.scrollY + buttonHeight + 6,
+      left: rect.left + window.scrollX,
+      width: rect.width,
+    } as PositionType;
+
+    setPosition(finalPosition);
+    setIsOpened((prev) => !prev);
+  };
+
+  if (!isValidValue()) {
+    throw new Error(
+      'The "value" prop did not match with any of the DropdownOption "value" prop'
+    );
+  }
 
   return (
-    <div
-      ref={ref}
-      className={`${styles["dropdown"]} ${disabled ? styles["dropdown--disabled"] : ""} ${className}`}
-    >
-      <button
-        type="button"
-        className={styles["dropdown__trigger"]}
-        onClick={() => !disabled && setIsOpen((prev) => !prev)}
-        disabled={disabled}
-      >
-        <span className={styles["dropdown__label"]}>
-          {selectedOption?.label || placeholder}
-        </span>
-        <span
-          className={styles["dropdown__icon"]}
-          dangerouslySetInnerHTML={{ __html: Icons.ArrowDown }}
-        />
-      </button>
-      {isOpen && (
-        <div className={styles["dropdown__menu"]}>
-          {options.map((option) => (
-            <button
-              key={option.value}
-              type="button"
-              className={`${styles["dropdown__option"]} ${
-                value === option.value
-                  ? styles["dropdown__option--selected"]
-                  : ""
-              } ${option.disabled ? styles["dropdown__option--disabled"] : ""}`}
-              onClick={() => {
-                if (!option.disabled) {
-                  onChange(option.value);
-                  setIsOpen(false);
-                }
-              }}
-              disabled={option.disabled}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
+    <>
+      <div className={`${styles["dropdown"]} ${className}`}>
+        <Button
+          {...{ ref: buttonRef }}
+          className={styles["dropdown__button"]}
+          appearance={appearance}
+          onClick={handleToggle}
+          disabled={disabled}
+        >
+          {placeholder}
+        </Button>
+      </div>
+
+      <Portal>
+        <AnimatePresence>
+          {isOpened && (
+            <div className={styles["dropdown__box"]}>
+              <motion.div
+                className={styles["dropdown__box-overlay"]}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeIn" }}
+                onClick={() => setIsOpened(false)}
+              />
+              <motion.div
+                ref={boxRef}
+                className={styles["dropdown__box-options"]}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                transition={{ duration: 0.2, ease: "easeIn" }}
+                style={{
+                  top: position.top,
+                  left: position.left,
+                  width: position.width,
+                }}
+              >
+                {options.map(({ props }) => (
+                  <DropdownOption
+                    {...props}
+                    key={`${props.value}-${uniqueId}`}
+                    selectedValue={selected}
+                    onChange={() => handleChange(props.value)}
+                  />
+                ))}
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+      </Portal>
+    </>
   );
 };

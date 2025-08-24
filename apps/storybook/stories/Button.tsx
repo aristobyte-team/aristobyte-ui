@@ -28,11 +28,11 @@ export const Button = ({
     : "storybook-button--secondary";
   return (
     <button
+      {...props}
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
-      {...props}
     >
       {label}
       <style jsx>{`

@@ -29,11 +29,11 @@ export const Anchor: React.FC<IAnchor> = ({
 
   return (
     <a
+      {...props}
       ref={ref}
       href={href}
       className={`anchor ${styles["anchor"]} ${styles[`anchor--${variant}`]} ${className}`}
       onClick={handleClick}
-      {...props}
     >
       {children}
     </a>

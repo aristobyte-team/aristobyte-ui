@@ -68,6 +68,7 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
     >
       {radios.map(({ props }) => (
         <Radio
+          {...props}
           key={`${name}-${props.value}-${uniqueId}`}
           name={`${name}-${props.value}-${uniqueId}`}
           checked={props.value === currentValue}
@@ -78,7 +79,6 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
           appearance={props.appearance ?? appearance}
           highlightLabel={props.highlightLabel ?? highlightLabel}
           alignLabel={props.alignLabel ?? alignLabel}
-          {...props}
         />
       ))}
     </div>

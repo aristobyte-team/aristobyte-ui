@@ -2,6 +2,7 @@ export { Anchor } from "./Anchor";
 export { Button } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
 export { Dropdown } from "./Dropdown";
+export { DropdownOption } from "./DropdownOption";
 export { MessageBox } from "./MessageBox";
 export { CodeBlock } from "./CodeBlock";
 export { TabSwitchWithSlidingIndicator } from "./TabSwitchWithSlidingIndicator";
