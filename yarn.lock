@@ -15,22 +15,6 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@aristobyte-ui/spinner@^0.0.0-beta.1":
-  version "0.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@aristobyte-ui/spinner/-/spinner-0.0.0-beta.1.tgz#4eb5346670e0c16847fe10f9f0ac41803d14255a"
-  integrity sha512-DjQ6t4y9srjR1x+zmNmLopCnz9XrlA5uVKYR52sK9R/vUctOHaLACnD5SSo+R7UM5LPB47/Xk1Cy1HroYJLdEg==
-  dependencies:
-    framer-motion "^12.23.9"
-    react "^19.1.0"
-    react-dom "^19.1.0"
-    sass "^1.89.0"
-    shiki "^3.7.0"
-
-"@aristobyte-ui/typescript-config@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@aristobyte-ui/typescript-config/-/typescript-config-1.0.1.tgz#994359c6de0541f1654498682fdab18e52835c0e"
-  integrity sha512-KPzJKDQVtO0MFWTtY9tar7a4z/Gy1rE4+iVymZKvL7+Sv3LrFT/MvmXk/FscL6IE9ilO+BTh4fL8VSNO062/Ug==
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.7", "@babel/code-frame@^7.27.1":
   version "7.27.1"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.27.1.tgz#200f715e66d52a23b221a9435534a91cc13ad5be"
@@ -3022,7 +3006,7 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@turbo/gen@^2.5.0", "@turbo/gen@^2.5.6":
+"@turbo/gen@^2.5.0":
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-2.5.6.tgz#a9dfe5db76a69432619ebaa62897cf55011ac0e8"
   integrity sha512-0ugshQQGJE/lVYHhkFsdAd6prM279Uyl+UVfylkNhrL21YML4/fGKPYb99G0bNJ+okp7bA++4/RDFh3MS0ZeRg==
@@ -10536,7 +10520,7 @@ turbo-windows-arm64@2.5.6:
   resolved "https://registry.yarnpkg.com/turbo-windows-arm64/-/turbo-windows-arm64-2.5.6.tgz#81af8538b338ef3b3814db0ed1d9ea31d30ff72d"
   integrity sha512-j/tWu8cMeQ7HPpKri6jvKtyXg9K1gRyhdK4tKrrchH8GNHscPX/F71zax58yYtLRWTiK04zNzPcUJuoS0+v/+Q==
 
-turbo@^2.5.6:
+turbo@^2.5.3:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/turbo/-/turbo-2.5.6.tgz#610810b87037520cc2c0f94decba552d3a6e770b"
   integrity sha512-gxToHmi9oTBNB05UjUsrWf0OyN5ZXtD0apOarC1KIx232Vp3WimRNy3810QzeNSgyD5rsaIDXlxlbnOzlouo+w==
@@ -10634,11 +10618,6 @@ typescript@5.8.2:
   version "5.8.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.2.tgz#8170b3702f74b79db2e5a96207c15e65807999e4"
   integrity sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==
-
-typescript@5.8.3:
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
-  integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
 
 typescript@^5.8.2, typescript@^5.8.3:
   version "5.9.2"

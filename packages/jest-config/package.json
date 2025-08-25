@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/jest-config",
   "description": "Centralized, shareable Jest configurations for AristoByteUI monorepo projects.",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "private": false,
   "license": "MIT",
   "main": "./jest.base.js",

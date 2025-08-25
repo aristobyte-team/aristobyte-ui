@@ -1,9 +1,9 @@
 {
   "name": "@aristobyte-ui/typescript-config",
   "description": "Shared TypeScript config presets used across AristoByteUI platform and packages.",
-  "version": "1.0.4",
-  "private": false,
+  "version": "1.0.6",
   "license": "MIT",
+  "private": false,
   "main": "tsconfig.base.json",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",

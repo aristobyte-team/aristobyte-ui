@@ -1,8 +1,7 @@
 import * as React from "react";
 import { useConfig, useTranslate } from "@/context";
 
-import { TabSwitchWithSlidingIndicator } from "../../TabSwitchWithSlidingIndicator";
-import { CodeBlock } from "../../CodeBlock";
+import { CodeBlock, TabSwitchWithSlidingIndicator } from "@/components";
 
 import { PreviewBlocksMapping } from "./PreviewBlocksMapping";
 

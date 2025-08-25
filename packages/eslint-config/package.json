@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/eslint-config",
   "description": "AristoByteUI ESLint config presets for base, Next.js, and React-based packages.",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "private": false,
   "license": "MIT",
   "type": "module",

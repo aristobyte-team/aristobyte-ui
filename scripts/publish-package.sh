@@ -1,13 +1,10 @@
 #!/bin/bash
 # =========================================== #
-#     AristoByte UI - Beta Publish Script     #
+#   AristoByte UI - Publish Package Script    #
 # =========================================== #
 
 set -e 
 
-# -----------------------------
-# Check for package argument
-# -----------------------------
 if [ -z "$1" ]; then
   echo "❌ Error: You must provide the package name located in 'packages/'"
   echo "Usage: ./publish.sh <package-folder>"
@@ -22,9 +19,7 @@ if [ ! -d "$PACKAGE_DIR" ]; then
   exit 1
 fi
 
-# -----------------------------
-# Read version and define variables
-# -----------------------------
+
 PACKAGE_JSON="$PACKAGE_DIR/package.json"
 if [ ! -f "$PACKAGE_JSON" ]; then
   echo "❌ Error: package.json not found in $PACKAGE_DIR"
@@ -38,9 +33,7 @@ echo "🔹 Starting publish process for $PACKAGE_NPM_NAME@$VERSION ..."
 
 cd $PACKAGE_DIR
 
-# -----------------------------
-# Build step (skip if no build script)
-# -----------------------------
+
 if npm run | grep -q 'build'; then
   echo "🔹 Building the package..."
   yarn build
@@ -48,7 +41,6 @@ else
   echo "⚠️  No build script defined for $PACKAGE_NPM_NAME, skipping build..."
 fi
 
-# Publish to npm
 echo "🔹 Publishing to npm..."
 npm publish --registry https://registry.npmjs.org/ --access public --tag stable
 

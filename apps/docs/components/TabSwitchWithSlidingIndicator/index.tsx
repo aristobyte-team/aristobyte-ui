@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "./TabSwitchWithSlidingIndicator.scss";
+import styles from "./TabSwitchWithSlidingIndicator.module.scss";
 
 export interface ITabSwitchWithSlidingIndicator {
   tabs: {
@@ -16,17 +16,14 @@ export const TabSwitchWithSlidingIndicator: React.FC<
   const currentIndex = tabs.findIndex((_, i) => i === activeIndex);
 
   return (
-    <div className="tab-switch-with-sliding-indicator">
-      <div className="tab-switch-with-sliding-indicator__tabs">
+    <div
+      className={`tab-switch-with-sliding-indicator ${styles["tab-switch-with-sliding-indicator"]}`}
+    >
+      <div className={styles["tab-switch-with-sliding-indicator__tabs"]}>
         {tabs.map(({ buttonContent }, index) => (
           <button
             key={index}
-            className={
-              "tab-switch-with-sliding-indicator__tab" +
-              (activeIndex === index
-                ? " tab-switch-with-sliding-indicator__tab--active"
-                : "")
-            }
+            className={`${styles["tab-switch-with-sliding-indicator__tab"]} ${activeIndex === index ? styles[" tab-switch-with-sliding-indicator__tab--active"] : ""}`}
             onClick={() => setActiveIndex(index)}
           >
             {
@@ -36,11 +33,11 @@ export const TabSwitchWithSlidingIndicator: React.FC<
           </button>
         ))}
         <span
-          className="tab-switch-with-sliding-indicator__bar"
+          className={styles["tab-switch-with-sliding-indicator__bar"]}
           style={{ left: `${currentIndex * 80}px` }}
         />
       </div>
-      <div className="tab-switch-with-sliding-indicator__content">
+      <div className={styles["tab-switch-with-sliding-indicator__content"]}>
         {tabs[currentIndex]!.content}
       </div>
     </div>

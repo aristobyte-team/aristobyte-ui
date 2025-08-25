@@ -1,7 +1,8 @@
 {
   "name": "@aristobyte-ui/anchor",
   "description": "AristoByteUI Anchor component.",
-  "version": "1.0.3",
+  "version": "1.0.6",
+  "license": "MIT",
   "private": false,
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -45,19 +46,23 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.2",
-    "@aristobyte-ui/jest-config": "^1.0.2",
-    "@aristobyte-ui/typescript-config": "^1.0.4",
+    "framer-motion": "^12.23.9",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "sass": "^1.89.0"
+    "sass": "^1.89.0",
+    "shiki": "^3.7.0"
   },
   "devDependencies": {
-    "@turbo/gen": "^2.5.6",
+    "@aristobyte-ui/eslint-config": "^1.0.4",
+    "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.27.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   }
 }

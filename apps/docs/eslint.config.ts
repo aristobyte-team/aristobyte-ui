@@ -8,4 +8,4 @@ export default [
       "@next/next/no-img-element": "off",
     },
   },
-];
+] as typeof nextJsConfig;

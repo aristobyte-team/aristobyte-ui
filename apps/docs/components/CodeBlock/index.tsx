@@ -1,11 +1,11 @@
 import * as React from "react";
 import { getSingletonHighlighter } from "shiki";
-import { Button } from "@aristobyte-ui/button";
-import { Icons } from "../../../../packages/ui/utils";
+import { Button } from "../Button";
+import { Icons } from "../../utils";
 
 import { SupportedLanguages, SupportedThemes } from "./types";
 
-import "./CodeBlock.scss";
+import styles from "./CodeBlock.module.scss";
 
 interface ICodeBlock {
   code: string;
@@ -43,14 +43,14 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
   };
 
   return (
-    <div className={`code-block ${className}`}>
+    <div className={`code-block ${styles["code-block"]} ${className}`}>
       <div
-        className="code-block__container"
+        className={styles["code-block__container"]}
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <Button
         onClick={copyToClipboard}
-        className="code-block__button"
+        className={styles["code-block__button"]}
         dangerouslySetInnerHTML={{ __html: Icons.Copy }}
       />
     </div>

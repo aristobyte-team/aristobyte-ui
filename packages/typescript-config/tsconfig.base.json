@@ -41,7 +41,6 @@
       "@types/*": ["@types/*"]
     },
 
-    "types": ["node"],
     "typeRoots": ["./@types", "./node_modules/@types"],
     "forceConsistentCasingInFileNames": true
   }
