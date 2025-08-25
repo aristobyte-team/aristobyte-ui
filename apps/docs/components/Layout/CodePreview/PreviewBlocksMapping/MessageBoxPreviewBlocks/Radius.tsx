@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MessageBox } from "@aristobyte-ui/ui/components/MessageBox/index";
+import { MessageBox } from "@aristobyte-ui/message-box";
 
 export const Radius = () => {
   return (

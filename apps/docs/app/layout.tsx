@@ -147,7 +147,7 @@ export default function RootLayout({
                 alt="Right Liquid Background"
               />
             </div>
-            {children}
+            {/* {children} */}
           </body>
         </TranslateProvider>
       </ConfigProvider>

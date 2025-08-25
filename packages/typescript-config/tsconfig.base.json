@@ -26,16 +26,23 @@
     "skipLibCheck": true,
 
     // Paths
-    "baseUrl": ".",
+    "baseUrl": "packages/typescript-config",
     "paths": {
-      "@aristobyte/ui/*": ["packages/ui/src/*"],
+      "@aristobyte/anchor/*": ["packages/anchor/*"],
+      "@aristobyte/button/*": ["packages/button/*"],
+      "@aristobyte/dropdown/*": ["packages/dropdown/*"],
+      "@aristobyte/eslint-config/*": ["packages/eslint-config/*"],
+      "@aristobyte/jest-config/*": ["packages/jest-config/*"],
+      "@aristobyte/message-box/*": ["packages/message-box/*"],
+      "@aristobyte/radio/*": ["packages/radio/*"],
+      "@aristobyte/spinner/*": ["packages/spinner/*"],
+      "@aristobyte/switch/*": ["packages/switch/*"],
+      "@aristobyte/typescript-config/*": ["packages/typescript-config/*"],
       "@types/*": ["@types/*"]
     },
 
     "types": ["node"],
     "typeRoots": ["./@types", "./node_modules/@types"],
     "forceConsistentCasingInFileNames": true
-  },
-  "include": ["@types", "packages", "apps"],
-  "exclude": ["node_modules", "dist", "build"]
+  }
 }

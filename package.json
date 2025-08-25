@@ -35,7 +35,10 @@
     "lint:fix": "turbo run lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky"
+    "prepare": "husky",
+    "clear": "sh ./scripts/clear.sh",
+    "deploy": "sh ./scripts/publish.sh",
+    "auth": "sh ./scripts/auth.sh"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
@@ -43,8 +46,8 @@
     "jiti": "^2.4.2",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
-    "turbo": "^2.5.3",
-    "typescript": "5.8.2"
+    "turbo": "^2.5.6",
+    "typescript": "5.8.3"
   },
   "packageManager": "yarn@1.22.22",
   "workspaces": [

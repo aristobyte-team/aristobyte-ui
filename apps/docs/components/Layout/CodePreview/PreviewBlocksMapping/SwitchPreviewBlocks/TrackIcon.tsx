@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Switch } from "@aristobyte-ui/ui/components/Switch/index";
+import { Switch } from "@aristobyte-ui/switch";
 
 const BulbOnIcon = () => (
   <svg

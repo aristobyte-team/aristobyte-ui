@@ -1,8 +1,8 @@
 {
   "name": "@aristobyte-ui/typescript-config",
   "description": "Shared TypeScript config presets used across AristoByteUI platform and packages.",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.4",
+  "private": false,
   "license": "MIT",
   "main": "tsconfig.base.json",
   "author": "AristoByte <info@aristobyte.com>",
@@ -31,12 +31,14 @@
   "exports": {
     "./base": "./tsconfig.base.json",
     "./react": "./tsconfig.react.json",
-    "./next": "./tsconfig.next.json"
+    "./next": "./tsconfig.next.json",
+    "./package": "./tsconfig.package.json"
   },
   "files": [
     "tsconfig.base.json",
     "tsconfig.react.json",
-    "tsconfig.next.json"
+    "tsconfig.next.json",
+    "tsconfig.package.json"
   ],
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Anchor } from "@aristobyte-ui/ui/components/Anchor/index";
+import { Anchor } from "@aristobyte-ui/anchor";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";

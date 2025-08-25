@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "types": ["node"],
-    "baseUrl": ".",
+    "baseUrl": "packages/jest-config",
     "skipLibCheck": true,
     "outDir": "dist",
     "rootDir": "."

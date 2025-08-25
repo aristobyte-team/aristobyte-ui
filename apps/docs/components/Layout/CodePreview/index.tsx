@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useConfig, useTranslate } from "@/context";
 
-import { TabSwitchWithSlidingIndicator } from "@aristobyte-ui/ui/components/TabSwitchWithSlidingIndicator/index";
-import { CodeBlock } from "@aristobyte-ui/ui/components/CodeBlock/index";
+import { TabSwitchWithSlidingIndicator } from "../../TabSwitchWithSlidingIndicator";
+import { CodeBlock } from "../../CodeBlock";
 
 import { PreviewBlocksMapping } from "./PreviewBlocksMapping";
 

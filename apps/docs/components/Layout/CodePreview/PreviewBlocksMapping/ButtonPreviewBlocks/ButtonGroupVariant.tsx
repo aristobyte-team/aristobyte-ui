@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Button } from "@aristobyte-ui/ui/components/Button/index";
-import { ButtonGroup } from "@aristobyte-ui/ui/components/ButtonGroup/index";
+import { Button, ButtonGroup } from "@aristobyte-ui/button";
 
 export const ButtonGroupVariant = () => {
   return (

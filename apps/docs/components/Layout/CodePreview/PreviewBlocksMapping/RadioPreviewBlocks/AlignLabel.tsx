@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Radio } from "@aristobyte-ui/ui/components/Radio/index";
-import { RadioGroup } from "@aristobyte-ui/ui/components/RadioGroup/index";
+import { Radio, RadioGroup } from "@aristobyte-ui/radio";
 
 export const AlignLabel = () => {
   return (

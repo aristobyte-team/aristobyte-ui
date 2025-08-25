@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "@aristobyte-ui/ui/components/Button/index";
+import { Button } from "@aristobyte-ui/button";
 
 export default {
   title: "Components/Button",

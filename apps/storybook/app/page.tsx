@@ -1,4 +1,4 @@
-import { Button } from "@aristobyte-ui/ui/components/Button/index";
+import { Button } from "@aristobyte-ui/button";
 
 export default function Home() {
   return (

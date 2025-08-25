@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Dropdown } from "@aristobyte-ui/ui/components/Dropdown/index";
-import { DropdownOption } from "@aristobyte-ui/ui/components/DropdownOption/index";
+import { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";
 
 export const Usage = () => {
   return (
