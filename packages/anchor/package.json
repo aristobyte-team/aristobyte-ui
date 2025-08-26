@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/anchor",
   "description": "AristoByteUI Anchor component.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "private": false,
   "type": "module",
