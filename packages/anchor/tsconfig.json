@@ -8,21 +8,24 @@
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "incremental": true,
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "noEmit": false,
-    "emitDeclarationOnly": false,
-    "declaration": true,
+
+    // TSUP-friendly options
+    "noEmit": true, // tsup handles JS emit
+    "declaration": true, // generate types
     "declarationMap": true,
     "declarationDir": "dist/types",
+
     "module": "ESNext",
     "target": "ES6",
     "moduleResolution": "node",
     "outDir": "dist",
-    "baseUrl": "packages/spinner",
+    "baseUrl": "packages/anchor",
     "typeRoots": ["./@types", "./node_modules/@types"]
   },
   "include": ["@types", "components", "utils", "index.ts"],

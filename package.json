@@ -36,6 +36,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "prepare": "husky",
+    "add-package": "sh ./scripts/add-package.sh",
     "bump:patch": "sh ./scripts/bump.sh patch",
     "bump:feat": "sh ./scripts/bump.sh feat",
     "bump:fix": "sh ./scripts/bump.sh fix",

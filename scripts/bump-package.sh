@@ -13,7 +13,7 @@ fi
 
 for pkg in packages/*; do
   if [ ! -f "$pkg/package.json" ]; then
-    echo "Skipping $pkg – no package.json found"
+    echo "Skipping $pkg - no package.json found"
     continue
   fi
 
@@ -23,6 +23,6 @@ for pkg in packages/*; do
     yarn add "$PACKAGE_NAME@$PACKAGE_VERSION"
     cd - > /dev/null || exit
   else
-    echo "Skipping $pkg – $PACKAGE_NAME not found in package.json"
+    echo "Skipping $pkg - $PACKAGE_NAME not found in package.json"
   fi
 done

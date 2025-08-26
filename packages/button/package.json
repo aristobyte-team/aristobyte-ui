@@ -3,31 +3,34 @@
   "version": "1.0.6",
   "license": "MIT",
   "private": false,
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
-    "build": "tsc -b tsconfig.json",
+    "old-build:tsc": "tsc -b tsconfig.json",
+    "build": "tsup",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@aristobyte-ui/spinner": "^1.0.4",
+    "esbuild-sass-plugin": "^3.3.1",
     "framer-motion": "^12.23.9",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sass": "^1.89.0",
-    "shiki": "^3.7.0"
+    "shiki": "^3.7.0",
+    "tsup": "^8.5.0"
   },
   "devDependencies": {
     "@aristobyte-ui/eslint-config": "^1.0.4",
