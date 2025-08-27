@@ -1,13 +1,13 @@
 {
   "name": "@aristobyte-ui/eslint-config",
-  "description": "AristoByteUI ESLint config presets for base, Next.js, and React-based packages.",
-  "version": "1.0.7",
+  "description": "AristoByteUI ESLint configuration presets for TypeScript, React, and Next.js packages. Provides base, React, and Next.js rules optimized for monorepo workflows, Prettier integration, and developer productivity.",
+  "version": "1.0.8",
   "private": false,
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/eslint-config",
   "repository": {
     "type": "git",
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
@@ -23,12 +23,20 @@
   },
   "keywords": [
     "eslint",
-    "config",
+    "eslint-config",
     "typescript",
-    "nextjs",
     "react",
+    "nextjs",
+    "prettier",
+    "linting",
+    "flat-config",
+    "monorepo",
+    "workspace",
     "aristobyte",
-    "aristobyte-ui"
+    "aristobyte-ui",
+    "turbo",
+    "code-quality",
+    "best-practices"
   ],
   "exports": {
     "./base": "./dist/eslint.base.js",

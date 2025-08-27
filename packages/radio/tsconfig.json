@@ -15,9 +15,8 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
 
-    // TSUP-friendly options
-    "noEmit": true, // tsup handles JS emit
-    "declaration": true, // generate types
+    "noEmit": true,
+    "declaration": true,
     "declarationMap": true,
     "declarationDir": "dist/types",
 
@@ -28,6 +27,6 @@
     "baseUrl": "packages/radio",
     "typeRoots": ["./@types", "./node_modules/@types"]
   },
-  "include": ["@types", "components", "utils", "index.ts"],
+  "include": ["@types", "components", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }

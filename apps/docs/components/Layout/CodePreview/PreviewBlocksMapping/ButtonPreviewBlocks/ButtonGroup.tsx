@@ -1,6 +1,7 @@
+"use client";
 import * as React from "react";
 import { Button } from "@aristobyte-ui/button";
-import { ButtonGroup as ButtonGroupComponent } from "@aristobyte-ui/ui/components/ButtonGroup/index";
+import { ButtonGroup as ButtonGroupComponent } from "@aristobyte-ui/button";
 
 export const ButtonGroup = () => {
   return (

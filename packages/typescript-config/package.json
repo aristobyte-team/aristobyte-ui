@@ -1,12 +1,12 @@
 {
   "name": "@aristobyte-ui/typescript-config",
   "description": "Shared TypeScript config presets used across AristoByteUI platform and packages.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "private": false,
   "main": "tsconfig.base.json",
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/typescript-config",
   "repository": {
     "type": "git",
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
@@ -22,9 +22,19 @@
   },
   "keywords": [
     "typescript",
-    "config",
     "tsconfig",
+    "config",
+    "typescript-config",
+    "shared-config",
+    "compiler-options",
+    "typescript-presets",
     "monorepo",
+    "workspace",
+    "frontend",
+    "react",
+    "nextjs",
+    "node",
+    "library",
     "aristobyte",
     "aristobyte-ui"
   ],
@@ -42,6 +52,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {}
+  }
 }

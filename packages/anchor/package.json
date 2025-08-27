@@ -1,22 +1,19 @@
 {
   "name": "@aristobyte-ui/anchor",
-  "description": "AristoByteUI Anchor component.",
-  "version": "1.0.7",
+  "description": "A fully-typed, lightweight Anchor component for AristoByteUI with ripple effect support, multiple variants, and seamless integration with SCSS modules and design tokens.",
+  "version": "1.0.8",
   "license": "MIT",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/anchor",
   "repository": {
     "type": "git",
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
-    "directory": "packages/eslint-config"
+    "directory": "packages/anchor"
   },
   "bugs": {
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
@@ -27,11 +24,22 @@
     "yarn": ">=1.22.22"
   },
   "keywords": [
-    "anchor",
     "aristobyte",
     "aristobyte-ui",
-    "aristobyte-anchor",
-    "aristobyte-ui-anchor"
+    "anchor",
+    "link",
+    "button",
+    "ripple",
+    "typescript",
+    "scss",
+    "react",
+    "ui-component",
+    "component-library",
+    "frontend",
+    "ui-kit"
+  ],
+  "files": [
+    "dist"
   ],
   "exports": {
     ".": {

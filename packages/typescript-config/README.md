@@ -1,67 +1,151 @@
-# @aristobyte/typescript-config
+# `@aristobyte-ui/typescript-config`
 
-Centralized TypeScript configuration package for AristoByte monorepo.
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Build-Turbo-green?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
+  <img src="https://img.shields.io/badge/Lint-Strict-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+  <img src="https://img.shields.io/badge/License-MIT-black?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
+  <img src="https://img.shields.io/badge/AristoByte-UI-purple?style=for-the-badge&logo=react&logoColor=white" alt="AristoByte UI" />
+  <img src="https://img.shields.io/badge/Node-20.17.0+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js >=20.17.0" />
+  <img src="https://img.shields.io/badge/Yarn-1.22+-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn >=1.22" />
+  <img src="https://img.shields.io/badge/NPM-10.8+-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="NPM >=10.8" />
+</p>
 
----
+Centralized **TypeScript configuration presets** for the AristoByte UI ecosystem.  
+Opinionated, consistent, and production-ready.
 
-## Overview
+## 🚀 Overview
 
-This package consolidates shared TypeScript configurations to ensure consistent type safety, module resolution, and build standards across all AristoByte projects, including `apps/storybook`, `docs`, and UI packages.
+`@aristobyte-ui/typescript-config` provides **shared TypeScript configurations** that enforce strict standards across all AristoByte UI packages.
 
-Leveraging a base config (`tsconfig.base.json`), it provides extended presets for library builds and Next.js apps, streamlining developer experience and enforcing best practices at scale.
+This ensures:
 
----
+- 🔒 **Consistency** across the monorepo ecosystem.
+- ⚡ **Developer Velocity** by removing redundant boilerplate.
+- 📦 **Scalability** with unified upgrades and evolving presets.
+- 🧹 **Clean output** with correct declaration mapping for distributable packages.
 
-## Included Configurations
+## 📦 Installation
 
-- **tsconfig.base.json**  
-  Core compiler settings with strictness, module resolution (NodeNext), declaration output, and path aliases for seamless cross-package imports.
+```bash
+# Install via Yarn
+yarn add -D @aristobyte-ui/typescript-config
 
-- **tsconfig.react.json**  
-  Extends the base config, optimized for building React component libraries with JSX support and declaration-only emission.
+# Or via npm
+npm install -D @aristobyte-ui/typescript-config
 
-- **tsconfig.next.json**  
-  Tailored for Next.js projects, featuring JSX preservation, ESNext modules, bundler-aware resolution, and integration with Next.js plugins.
+# Or via pnpm
+pnpm add -D @aristobyte-ui/typescript-config
+```
 
----
+## 🛠 Usage
 
-## Usage
+In your `tsconfig.json,` extend one of the provided presets.
 
-In your project `tsconfig.json`, extend the relevant config depending on the context:
+**Base configuration (for libraries):**
 
 ```json
 {
-  "extends": "@aristobyte/typescript-config/tsconfig.base.json"
+  "extends": "@aristobyte-ui/typescript-config/base",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "dist/types"
+  },
+  "include": ["src", "index.ts"]
 }
 ```
 
-or
+**React packages:**
 
 ```json
 {
-  "extends": "@aristobyte/typescript-config/tsconfig.react.json"
+  "extends": "@aristobyte-ui/typescript-config/react",
+  "include": ["components", "utils", "index.ts"],
+  "exclude": ["dist", "node_modules"]
 }
 ```
 
-or
+**Next.js projects:**
 
 ```json
 {
-  "extends": "@aristobyte/typescript-config/tsconfig.next.json"
+  "extends": "@aristobyte-ui/typescript-config/next",
+  "include": ["app", "pages", "components"],
+  "exclude": ["dist", "node_modules"]
 }
 ```
 
-## Benefits
+**Package-ready builds (library publishing):**
 
-- Enforces strict type safety and consistent compiler behavior.
-- Simplifies path aliasing and module resolution across packages.
-- Enhances incremental build performance and tooling compatibility.
-- Aligns configurations for React libraries and Next.js apps out-of-the-box.
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/package",
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
+```
 
-## Contribution
+## 📂 Presets Available
 
-Feel free to propose improvements or extensions to adapt to evolving codebase requirements.
+- `base` → Strict, modern TypeScript defaults for libraries.
+- `react` → Extends `base` with React + JSX optimizations.
+- `next` → Opinionated config optimized for Next.js projects.
+- `package` → Publishing-friendly output with declarations and ESNext module resolution.
 
----
+## 🔧 Example in a Package
 
-© AristoByte Inc. — Empowering scalable, maintainable TypeScript architectures.
+`package.json`:
+
+```json
+{
+  "name": "@aristobyte-ui/button",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@aristobyte-ui/typescript-config": "*",
+    "typescript": "^5.8.3"
+  }
+}
+```
+
+`tsconfig.json`:
+
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/react",
+  "include": ["components", "index.ts"]
+}
+```
+
+## 📊 Why This Matters
+
+| Feature                          | Benefit                               |
+| -------------------------------- | ------------------------------------- |
+| `strict: true`                   | Eliminates runtime edge cases early   |
+| `noUncheckedIndexedAccess: true` | Safer array/object access             |
+| `declaration: true`              | Ensures correct `.d.ts` output        |
+| `jsx: react-jsx`                 | Optimized for React 17+ and beyond    |
+| `incremental`                    | Faster rebuilds in monorepo workflows |
+| `moduleResolution: NodeNext`     | Modern interoperability for ESM/CJS   |
+
+## 🏆 Philosophy
+
+At **AristoByte UI**, we believe **configuration should empower, not obstruct**.  
+This package encapsulates our best practices into **ready-to-consume presets** that evolve alongside the ecosystem.
+
+## 📜 License
+
+[MIT](./LICENSE) © AristoByte
+
+## 🛡 Shields Showcase
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Consistency-100%25-green?style=for-the-badge&logo=typescript" />
+  <img src="https://img.shields.io/badge/Maintained-Active-brightgreen?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Strictness-High-critical?style=for-the-badge&logo=eslint" />
+  <img src="https://img.shields.io/badge/Declarations-Enabled-blue?style=for-the-badge&logo=typescript" />
+  <img src="https://img.shields.io/badge/Monorepo-Turbo-green?style=for-the-badge&logo=monorepo" />
+  <img src="https://img.shields.io/badge/Interop-ESM%2FCJS-orange?style=for-the-badge&logo=javascript" />
+</p>

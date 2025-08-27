@@ -1,12 +1,12 @@
 {
   "name": "@aristobyte-ui/jest-config",
-  "description": "Centralized, shareable Jest configurations for AristoByteUI monorepo projects.",
-  "version": "1.0.7",
+  "description": "Centralized, shareable Jest configuration presets for AristoByteUI monorepo projects. Supports Node, React, and Next.js environments with TypeScript, Babel integration, and consistent coverage reporting.",
+  "version": "1.0.8",
   "private": false,
   "license": "MIT",
   "main": "./jest.base.js",
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://github.com/aristobyte-team/aristobyte-ui.git#readme",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/jest-config",
   "repository": {
     "type": "git",
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
@@ -22,11 +22,21 @@
   },
   "keywords": [
     "jest",
-    "config",
+    "jest-config",
     "testing",
+    "typescript",
+    "react",
+    "nextjs",
     "monorepo",
+    "babel",
+    "testing-library",
+    "coverage",
+    "unit-tests",
+    "integration-tests",
     "aristobyte",
-    "shared-config"
+    "aristobyte-ui",
+    "shared-config",
+    "workspace"
   ],
   "exports": {
     "./base": "./dist/jest.base.js",

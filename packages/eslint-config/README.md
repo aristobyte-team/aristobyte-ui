@@ -1,75 +1,115 @@
-# @aristobyte-ui/eslint-config
+# `@aristobyte-ui/eslint-config`
 
-Scalable, modular, and shareable ESLint configurations for AristoByte’s modern TypeScript/JavaScript monorepos.
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/ESLint-9.x-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+  <img src="https://img.shields.io/badge/Config-Prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E" alt="Prettier" />
+  <img src="https://img.shields.io/badge/React-Supported-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React Support" />
+  <img src="https://img.shields.io/badge/Next.js-Supported-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js Support" />
+  <img src="https://img.shields.io/badge/TurboRepo-Optimized-00A3E0?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
+  <img src="https://img.shields.io/badge/License-MIT-black?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
+  <img src="https://img.shields.io/badge/Node-20.17.0+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js >=20.17.0" />
+  <img src="https://img.shields.io/badge/Yarn-1.22+-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn >=1.22" />
+  <img src="https://img.shields.io/badge/NPM-10.8+-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="NPM >=10.8" />
+</p>
 
----
+Centralized **ESLint configuration presets** for AristoByte UI packages.  
+Provides **base**, **React**, and **Next.js** linting standards with TypeScript-first principles.
 
-## 🔧 Overview
-
-This package delivers a suite of opinionated ESLint configurations, designed to enforce code quality, consistency, and developer efficiency across the AristoByte ecosystem. Powered by ESLint Flat Config and aligned with monorepo-first tooling like TurboRepo and Prettier, it enables fast, frictionless linting with a single source of truth.
-
----
-
-## 📦 Exported Config Profiles
-
-| Config Path                          | Description                                                                                                      |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `@aristobyte-ui/eslint-config/base`  | Core ruleset for JS/TS projects. Includes Prettier formatting, TurboRepo support, and `eslint-plugin-only-warn`. |
-| `@aristobyte-ui/eslint-config/react` | Optimized for internal React component libraries with hooks and JSX best practices.                              |
-| `@aristobyte-ui/eslint-config/next`  | Tailored specifically for Next.js applications, aligned with Next’s linting expectations.                        |
-
----
-
-## 🚀 Quick Start
-
-### 1. Install the Config Package & Peer Dependencies
+## 📦 Installation
 
 ```bash
-yarn add -D eslint @aristobyte-ui/eslint-config
+# Install via Yarn
+yarn add -D @aristobyte-ui/eslint-config
+
+# Or via npm
+npm install -D @aristobyte-ui/eslint-config
+
+# Or via pnpm
+pnpm add -D @aristobyte-ui/eslint-config
 ```
 
-You may also need to install peer dependencies such as:
+## 🛠 Usage
 
-- `prettier`
-- `eslint-plugin-react`
-- `*eslint-plugin-import`
-- `eslint-plugin-jsx-a11y`
-- `eslint-plugin-react-hooks`
-- `eslint-plugin-turbo`
-- `eslint-plugin-only-warn`
+Extend one of the provided configs in your `eslint.config.js` (Flat Config):
 
-### 2. Configure Your ESLint Flat Config (eslint.config.js)
-
-Example for a React package:
+**Base (TypeScript + general rules):**
 
 ```js
-import base from "@aristobyte-ui/eslint-config/base";
-import react from "@aristobyte-ui/eslint-config/react";
-
-export default [...base, ...react];
+import { config } from "@aristobyte-ui/eslint-config/base";
+export default config;
 ```
 
-Or for a Next.js app:
+**React (includes React + Hooks best practices):**
 
 ```js
-import base from "@aristobyte-ui/eslint-config/base";
-import next from "@aristobyte-ui/eslint-config/next";
-
-export default [...base, ...next];
+import { config } from "@aristobyte-ui/eslint-config/react";
+export default config;
 ```
 
-## 💡 Why Use This?
+**Next.js (includes React + Next.js rules):**
 
-- Single Source of Linting Truth across projects.
-- Pre-optimized rules for React, Next.js, and monorepo workflows.
-- Flat Config architecture for modern ESLint performance and flexibility.
-- First-class Prettier integration with zero conflicts.
-- TurboRepo-friendly — supports parallelized linting out of the box.
+```js
+import { nextJsConfig } from "@aristobyte-ui/eslint-config/next";
+export default nextJsConfig;
+```
 
-## 🤝 Contribution
+## 📂 Presets Available
 
-Feel free to extend or override specific configs as your project requirements evolve. PRs are welcome for additional presets or plugin integrations.
+- `base` → Core TypeScript + Prettier + TurboRepo rules.
+- `react` → Extends base with React + React Hooks recommendations.
+- `next` → Extends base with Next.js & Core Web Vitals rules.
 
----
+## 🔧 Example in a Package
 
-© AristoByte Inc. — Enforcing code excellence at scale.
+```json
+{
+  "name": "@aristobyte-ui/button",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@aristobyte-ui/eslint-config": "*",
+    "eslint": "^9.0.0"
+  }
+}
+```
+
+And `eslint.config.js:`
+
+```js
+import { config } from "@aristobyte-ui/eslint-config/react";
+export default config;
+```
+
+## 📊 Why This Matters
+
+| Feature                 | Benefit                                     |
+| ----------------------- | ------------------------------------------- |
+| Flat Config (ESLint 9)  | Modern, future-proof linting structure      |
+| TypeScript support      | Type-aware linting for safer codebases      |
+| Prettier integration    | Automatic formatting alignment              |
+| React & Hooks rules     | Enforces idiomatic React code               |
+| Next.js core-web-vitals | Ensures optimal Next.js app performance     |
+| TurboRepo plugin        | Catches misconfigured env vars in monorepos |
+
+## 🏆 Philosophy
+
+At **AristoByte**, linting is not just about **style** — it’s about **preventing bugs, scaling teams, and enforcing architectural patterns**.  
+This config empowers developers with **out-of-the-box rules** that evolve alongside the ecosystem.
+
+## 📜 License
+
+[MIT](./LICENSE) © AristoByte
+
+## 🛡 Shields Showcase
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Consistency-100%25-green?style=for-the-badge&logo=eslint" />
+  <img src="https://img.shields.io/badge/Maintained-Active-brightgreen?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Prettier-Integrated-ff69b4?style=for-the-badge&logo=prettier" />
+  <img src="https://img.shields.io/badge/React-Hooks-optimized?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Next.js-Core%20Web%20Vitals-black?style=for-the-badge&logo=nextdotjs" />
+  <img src="https://img.shields.io/badge/TurboRepo-Ready-blue?style=for-the-badge&logo=turbo" />
+</p>

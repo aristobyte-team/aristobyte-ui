@@ -1,11 +1,43 @@
 {
   "name": "@aristobyte-ui/message-box",
-  "version": "1.0.7",
+  "description": "A fully-typed, modular, and flexible MessageBox component for AristoByteUI, supporting multiple variants, types, border-radius options, and optional icons.",
+  "version": "1.0.8",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "author": "AristoByte <info@aristobyte.com>",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/message-box",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
+    "directory": "packages/message-box"
+  },
+  "bugs": {
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
+  },
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10.8.2",
+    "yarn": ">=1.22.22"
+  },
+  "keywords": [
+    "aristobyte",
+    "ui",
+    "component",
+    "react",
+    "typescript",
+    "message-box",
+    "notification",
+    "alert",
+    "modular",
+    "scss",
+    "design-tokens",
+    "frontend",
+    "flexible",
+    "composable"
+  ],
   "files": [
     "dist"
   ],

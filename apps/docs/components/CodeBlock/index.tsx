@@ -1,7 +1,8 @@
+"use client";
 import * as React from "react";
 import { getSingletonHighlighter } from "shiki";
-import { Button } from "../Button";
-import { Icons } from "../../utils";
+import { Button } from "@aristobyte-ui/button";
+import { Icons } from "@/config";
 
 import { SupportedLanguages, SupportedThemes } from "./types";
 

@@ -10,13 +10,13 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "^1.0.6",
+    "@aristobyte-ui/anchor": "^1.0.8",
     "@aristobyte-ui/button": "^1.0.0",
-    "@aristobyte-ui/dropdown": "^1.0.6",
-    "@aristobyte-ui/message-box": "^1.0.6",
-    "@aristobyte-ui/radio": "^1.0.6",
-    "@aristobyte-ui/spinner": "^1.0.6",
-    "@aristobyte-ui/switch": "^1.0.6",
+    "@aristobyte-ui/dropdown": "^1.0.8",
+    "@aristobyte-ui/message-box": "^1.0.8",
+    "@aristobyte-ui/radio": "^1.0.8",
+    "@aristobyte-ui/spinner": "^1.0.8",
+    "@aristobyte-ui/switch": "^1.0.8",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -31,5 +31,14 @@
     "eslint": "^9.27.0",
     "raw-loader": "^4.0.2",
     "typescript": "5.8.2"
+  },
+  "resolutions": {
+    "@aristobyte-ui/anchor": "npm:1.^0.8",
+    "@aristobyte-ui/button": "npm:^1.0.0",
+    "@aristobyte-ui/dropdown": "npm:^1.0.8",
+    "@aristobyte-ui/message-box": "npm:^1.0.8",
+    "@aristobyte-ui/radio": "npm:^1.0.8",
+    "@aristobyte-ui/spinner": "npm:^1.0.8",
+    "@aristobyte-ui/switch": "npm:^1.0.8"
   }
 }
