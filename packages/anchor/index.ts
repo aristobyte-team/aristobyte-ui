@@ -1,1 +1,1 @@
-export { Anchor } from "./components";
+export * from "./components";

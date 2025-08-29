@@ -9,13 +9,8 @@ if [ -z "$BUMP_TYPE" ]; then
   exit 1
 fi
 
-for pkg in packages/*; do
-  PACKAGE_JSON="$pkg/package.json"
-  if [ ! -f "$PACKAGE_JSON" ]; then
-    echo "Skipping $pkg - no package.json found"
-    continue
-  fi
-
+bump_version() {
+  PACKAGE_JSON=$1
   CURRENT_VERSION=$(jq -r '.version' "$PACKAGE_JSON")
   IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
 
@@ -39,7 +34,21 @@ for pkg in packages/*; do
   esac
 
   NEW_VERSION="$MAJOR.$MINOR.$PATCH"
-  echo "Bumping $pkg from $CURRENT_VERSION to $NEW_VERSION"
+  echo "Bumping $PACKAGE_JSON from $CURRENT_VERSION to $NEW_VERSION"
 
   jq --arg ver "$NEW_VERSION" '.version = $ver' "$PACKAGE_JSON" > "$PACKAGE_JSON.tmp" && mv "$PACKAGE_JSON.tmp" "$PACKAGE_JSON"
+}
+
+# Bump root package.json
+bump_version "./package.json"
+
+# Bump packages inside packages/*
+for pkg in packages/*; do
+  PACKAGE_JSON="$pkg/package.json"
+  if [ ! -f "$PACKAGE_JSON" ]; then
+    echo "Skipping $pkg - no package.json found"
+    continue
+  fi
+
+  bump_version "$PACKAGE_JSON"
 done

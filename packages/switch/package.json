@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/switch",
   "description": "A fully typed, customizable Switch/toggle component for React with multiple sizes, variants, label alignments, and optional icons. Built to integrate seamlessly with AristoByteUI design tokens and SCSS modules.",
-  "version": "1.0.8",
+  "version": "1.0.15",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   "homepage": "https://www.npmjs.com/package/@aristobyte-ui/switch",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aristobyte-team/aristobyte-ui.git",
+    "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
     "directory": "packages/switch"
   },
   "bugs": {
@@ -39,6 +39,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -70,6 +73,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.27.0",
     "postcss": "^8.5.3",
+    "sass-embedded": "^1.91.0",
     "tailwindcss": "^4.1.7",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"

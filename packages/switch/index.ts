@@ -1,1 +1,1 @@
-export { Switch } from "./components";
+export * from "./components";
