@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 1.0.24
+
+### Patch Changes
+
+- feat: use Portal from utils pkg
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.24
+
 ## 1.0.23
 
 ### Patch Changes
