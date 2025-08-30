@@ -1,5 +1,15 @@
 # @aristobyte-ui/button
 
+## 1.0.23
+
+### Patch Changes
+
+- feat: add Portal in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.23
+  - @aristobyte-ui/utils@1.0.23
+
 ## 1.0.22
 
 ### Patch Changes

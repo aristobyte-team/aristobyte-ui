@@ -1,5 +1,20 @@
 # @aristobyte-ui/storybook
 
+## 1.0.23
+
+### Patch Changes
+
+- feat: add Portal in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.23
+  - @aristobyte-ui/button@1.0.23
+  - @aristobyte-ui/dropdown@1.0.23
+  - @aristobyte-ui/message-box@1.0.23
+  - @aristobyte-ui/radio@1.0.23
+  - @aristobyte-ui/spinner@1.0.23
+  - @aristobyte-ui/switch@1.0.23
+
 ## 1.0.22
 
 ### Patch Changes
