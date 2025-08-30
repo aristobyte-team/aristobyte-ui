@@ -62,10 +62,15 @@
     "clear": "sh ./scripts/clear.sh",
     "publish-package": "sh ./scripts/publish-package.sh",
     "publish-all": "sh ./scripts/publish-all.sh",
-    "auth": "sh ./scripts/auth.sh"
+    "auth": "sh ./scripts/auth.sh",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "changeset:release": "yarn changeset version && git add . && git commit -m 'chore: release' && yarn changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.6",
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
     "lint-staged": "^16.1.0",

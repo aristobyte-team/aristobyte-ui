@@ -24,6 +24,6 @@
     "baseUrl": "packages/anchor",
     "typeRoots": ["./@types", "./node_modules/@types"]
   },
-  "include": ["@types", "components", "utils", "styles", "index.ts"],
+  "include": ["@types", "components", "styles", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }
