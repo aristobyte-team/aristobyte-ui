@@ -1,5 +1,15 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.28
+
+### Patch Changes
+
+- feat: use styles from utils pkg
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.28
+  - @aristobyte-ui/utils@1.0.28
+
 ## 1.0.27
 
 ### Patch Changes

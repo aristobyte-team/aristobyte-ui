@@ -1,6 +1,6 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": { "baseUrl": "packages/spinner" },
-  "include": ["@types", "components", "styles", "index.ts"],
+  "include": ["@types", "components", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }

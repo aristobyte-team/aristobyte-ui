@@ -1,5 +1,20 @@
 # @aristobyte-ui/storybook
 
+## 1.0.28
+
+### Patch Changes
+
+- feat: use styles from utils pkg
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.28
+  - @aristobyte-ui/dropdown@1.0.28
+  - @aristobyte-ui/spinner@1.0.28
+  - @aristobyte-ui/anchor@1.0.28
+  - @aristobyte-ui/button@1.0.28
+  - @aristobyte-ui/switch@1.0.28
+  - @aristobyte-ui/radio@1.0.28
+
 ## 1.0.27
 
 ### Patch Changes

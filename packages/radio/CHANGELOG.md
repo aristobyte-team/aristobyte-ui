@@ -1,5 +1,11 @@
 # @aristobyte-ui/radio
 
+## 1.0.28
+
+### Patch Changes
+
+- feat: use styles from utils pkg
+
 ## 1.0.27
 
 ### Patch Changes
