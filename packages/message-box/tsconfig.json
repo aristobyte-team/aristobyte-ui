@@ -1,13 +1,6 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": { "baseUrl": "packages/message-box" },
-  "include": [
-    "@types",
-    "assets",
-    "components",
-    "utils",
-    "index.ts",
-    "index.tsx"
-  ],
+  "include": ["@types", "assets", "components", "index.ts", "index.tsx"],
   "exclude": ["node_modules", "dist"]
 }

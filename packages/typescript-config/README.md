@@ -60,7 +60,7 @@ In your `tsconfig.json,` extend one of the provided presets.
 ```json
 {
   "extends": "@aristobyte-ui/typescript-config/react",
-  "include": ["components", "utils", "index.ts"],
+  "include": ["components", "index.ts"],
   "exclude": ["dist", "node_modules"]
 }
 ```

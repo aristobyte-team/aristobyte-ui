@@ -1,5 +1,23 @@
 # @aristobyte-ui/message-box
 
+## 1.0.27
+
+### Patch Changes
+
+- fix: add export for styles in utils pkg.json
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.27
+
+## 1.0.26
+
+### Patch Changes
+
+- feat: export styles
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.26
+
 ## 1.0.25
 
 ### Patch Changes
