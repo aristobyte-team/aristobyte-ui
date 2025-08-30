@@ -1,4 +1,7 @@
 export const EN_GB = {
+  "intro-links": {
+    source: "Source",
+  },
   sidebar: {
     sections: {
       components: "Component",
@@ -23,12 +26,6 @@ export const EN_GB = {
           title: "Button",
           description:
             "Buttons allow users to perform actions and choose with a single tap.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/button",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Button",
@@ -125,12 +122,6 @@ export const EN_GB = {
           title: "Card",
           description:
             "Cards are flexible containers used to group related content, actions, and visuals. The AristoByte UI Card components provide a clean, responsive foundation for dashboards, lists, media previews, and more. Designed with composability in mind, they support headers, footers, and custom layouts to adapt to any use case.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/card",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Card",
@@ -152,12 +143,6 @@ export const EN_GB = {
           title: "AristoByte UI - A Scalable, Design-Driven Component System",
           description:
             "AristoByte UI is a forward-thinking component library engineered for performance, consistency, and maintainability. Built with TypeScript and SCSS, it empowers developers to rapidly build modern UIs with a clean architecture, reusable patterns, and first-class DX across web and mobile platforms.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Install AristoByte UI - Get Started in Seconds",
@@ -179,12 +164,6 @@ export const EN_GB = {
           title: "Spinner",
           description:
             "Spinners indicate loading or ongoing processes, keeping users informed while the system completes background tasks.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/spinner",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Spinner",
@@ -226,12 +205,6 @@ export const EN_GB = {
           title: "Message Box",
           description:
             "Message Boxes provide contextual system feedback for user actions, conveying information, warnings, errors, or success states with clarity and emphasis.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/message-box",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Message Box",
@@ -278,12 +251,6 @@ export const EN_GB = {
           title: "Switch",
           description:
             "Switch toggles are interactive binary controls used for enabling or disabling a specific option. Ideal for settings, preferences, and form controls, the Switch component ensures clear, intuitive state management.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/switch",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Switch",
@@ -355,12 +322,6 @@ export const EN_GB = {
           title: "Radio",
           description:
             "A component for selecting a single option from a predefined set. <code>Radio</code> and <code>RadioGroup</code> provide a flexible foundation for building accessible, customizable choice interfaces in forms or filters.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/radio",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Radio",
@@ -427,12 +388,6 @@ export const EN_GB = {
           title: "Dropdown",
           description:
             "Dropdowns enable users to select a single option from a contextual list. It’s a compact, flexible UI pattern ideal for filters, forms, and segmented controls.",
-          links: {
-            storybook: "Storybook",
-            npm: "@aristobyte-ui/dropdown",
-            source: "Source",
-            "style-source": "Style source",
-          },
         },
         installation: {
           title: "Installation of Dropdown",
