@@ -1,5 +1,11 @@
 # @aristobyte-ui/eslint-config
 
+## 1.0.21
+
+### Patch Changes
+
+- feat: add new package - utils
+
 ## 1.0.20
 
 ## 1.0.19

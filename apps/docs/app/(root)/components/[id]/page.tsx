@@ -3,8 +3,8 @@ import { type Metadata } from "next";
 import { Layout } from "@/components";
 
 type ComponentPageProps = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
+  // searchParams: { [key: string]: string | string[] | undefined };
 };
 
 export async function generateMetadata({

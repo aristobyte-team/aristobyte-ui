@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/anchor",
   "description": "A fully-typed, lightweight Anchor component for AristoByteUI with ripple effect support, multiple variants, and seamless integration with SCSS modules and design tokens.",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
@@ -50,7 +50,6 @@
     }
   },
   "scripts": {
-    "old-build:tsc": "tsc -b tsconfig.json",
     "build": "tsup",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
@@ -66,7 +65,8 @@
     "tsup": "^8.5.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.20",
+    "@aristobyte-ui/eslint-config": "^1.0.21",
+    "@aristobyte-ui/typescript-config": "^1.0.21",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

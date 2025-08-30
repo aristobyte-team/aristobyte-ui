@@ -1,5 +1,14 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.21
+
+### Patch Changes
+
+- feat: add new package - utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.21
+
 ## 1.0.20
 
 ### Patch Changes

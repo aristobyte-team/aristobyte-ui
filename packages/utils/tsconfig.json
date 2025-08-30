@@ -1,0 +1,6 @@
+{
+  "extends": "@aristobyte-ui/typescript-config/package",
+  "compilerOptions": { "baseUrl": "packages/utils" },
+  "include": ["icons", "styles", "index.ts"],
+  "exclude": ["node_modules", "dist"]
+}
