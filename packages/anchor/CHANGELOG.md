@@ -1,5 +1,14 @@
 # @aristobyte-ui/anchor
 
+## 1.0.22
+
+### Patch Changes
+
+- feat: use utilities from utils package
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.22
+
 ## 1.0.21
 
 ### Patch Changes

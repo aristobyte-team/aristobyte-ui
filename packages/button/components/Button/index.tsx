@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { Spinner } from "@aristobyte-ui/spinner";
-
-import { renderRipple } from "../../utils";
+import { renderRipple } from "@aristobyte-ui/utils";
 
 import styles from "./Button.module.scss";
 
@@ -68,7 +67,9 @@ export const Button: React.FC<IButton> = ({
       )}
       {icon && (
         <span
-          className={`${styles["icon"]} ${styles[`icon--${icon.align ?? "left"}`]}`}
+          className={`${styles["icon"]} ${
+            styles[`icon--${icon.align ?? "left"}`]
+          }`}
         >
           {React.createElement(icon.component)}
         </span>
@@ -81,7 +82,11 @@ export const Button: React.FC<IButton> = ({
     <button
       ref={ref}
       disabled={disabled || isLoading}
-      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${styles[`button-appearance--${appearance}`]} ${styles[`button-size--${size}`]} ${styles[`button-radius--${radius}`]} ${isLoading ? styles["button--loading"] : ""} ${className}`}
+      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${
+        styles[`button-appearance--${appearance}`]
+      } ${styles[`button-size--${size}`]} ${
+        styles[`button-radius--${radius}`]
+      } ${isLoading ? styles["button--loading"] : ""} ${className}`}
       onClick={handleClick}
       {...(dangerouslySetInnerHTML
         ? { dangerouslySetInnerHTML }

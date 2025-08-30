@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Icons } from "../../utils";
+import { Icons } from "@aristobyte-ui/utils";
 
 import styles from "./MessageBox.module.scss";
 
@@ -39,11 +39,17 @@ export const MessageBox: React.FC<IMessageBox> = ({
   type = "outline",
 }) => (
   <div
-    className={`message-box ${styles["message-box"]} ${styles[`message-box-type--${type}`]} ${styles[`message-box-radius--${radius}`]} ${styles[`message-box--${variant}`]} ${className}`}
+    className={`message-box ${styles["message-box"]} ${
+      styles[`message-box-type--${type}`]
+    } ${styles[`message-box-radius--${radius}`]} ${
+      styles[`message-box--${variant}`]
+    } ${className}`}
   >
     {withIcon && (
       <span
-        className={`${styles["message-box__icon"]} ${styles[`message-box__icon--${variant}`]}`}
+        className={`${styles["message-box__icon"]} ${
+          styles[`message-box__icon--${variant}`]
+        }`}
         dangerouslySetInnerHTML={{
           __html: customIcon ? customIcon : renderIcon(variant),
         }}

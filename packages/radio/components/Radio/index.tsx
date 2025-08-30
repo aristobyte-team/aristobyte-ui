@@ -51,7 +51,13 @@ export const Radio: React.FC<IRadio> = ({
 
   return (
     <label
-      className={`${styles["radio"]} ${styles[`radio-align-label--${alignLabel}`]} ${styles[`radio-appearance--${appearance}`]} ${styles[`radio-variant--${variant}`]} ${styles[`radio-size--${size}`]} ${disabled ? styles["radio--disabled"] : ""} ${className}`}
+      className={`${styles["radio"]} ${
+        styles[`radio-align-label--${alignLabel}`]
+      } ${styles[`radio-appearance--${appearance}`]} ${
+        styles[`radio-variant--${variant}`]
+      } ${styles[`radio-size--${size}`]} ${
+        disabled ? styles["radio--disabled"] : ""
+      } ${className}`}
     >
       <input
         type="radio"
@@ -65,7 +71,9 @@ export const Radio: React.FC<IRadio> = ({
       <span className={styles["radio__control"]} />
       {children && (
         <span
-          className={`${styles["radio__label"]} ${highlightLabel ? styles["radio__label--highlight-label"] : ""}`}
+          className={`${styles["radio__label"]} ${
+            highlightLabel ? styles["radio__label--highlight-label"] : ""
+          }`}
         >
           {children}
         </span>

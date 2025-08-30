@@ -40,7 +40,7 @@ export const CodePreview = ({ unit, section }: CodePreviewPropsType) => {
           };
         };
       };
-    },
+    }
   ];
 
   return (

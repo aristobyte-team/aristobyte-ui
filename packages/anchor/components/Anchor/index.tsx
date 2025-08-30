@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { renderRipple } from "../../utils";
+import { renderRipple } from "@aristobyte-ui/utils";
 
 import styles from "./Anchor.module.scss";
 
@@ -32,7 +32,9 @@ export const Anchor: React.FC<IAnchor> = ({
       {...props}
       ref={ref}
       href={href}
-      className={`anchor ${styles["anchor"]} ${styles[`anchor--${variant}`]} ${className}`}
+      className={`anchor ${styles["anchor"]} ${
+        styles[`anchor--${variant}`]
+      } ${className}`}
       onClick={handleClick}
     >
       {children}

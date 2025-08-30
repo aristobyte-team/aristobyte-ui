@@ -34,7 +34,11 @@ export const ButtonGroup: React.FC<IButtonGroup> = ({
 }) => {
   return (
     <div
-      className={`${styles["button-group"]} ${styles[`button-group-variant--${variant}`]} ${styles[`button-group-size--${size}`]} ${styles[`button-group-radius--${radius}`]} ${styles[`button-group-align--${align}`]} ${className}`}
+      className={`${styles["button-group"]} ${
+        styles[`button-group-variant--${variant}`]
+      } ${styles[`button-group-size--${size}`]} ${
+        styles[`button-group-radius--${radius}`]
+      } ${styles[`button-group-align--${align}`]} ${className}`}
     >
       {React.Children.toArray(children)
         .filter(

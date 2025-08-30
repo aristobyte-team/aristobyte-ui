@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { DropdownOption, type IDropdownOption } from "../DropdownOption";
-
 import { AnimatePresence, motion } from "framer-motion";
 
+import { DropdownOption, type IDropdownOption } from "../DropdownOption";
 import { Button } from "@aristobyte-ui/button";
-import { Portal } from "../../utils/Portal";
+
+import { Portal } from "./Portal";
 
 import styles from "./Dropdown.module.scss";
 

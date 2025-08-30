@@ -23,7 +23,11 @@ export const TabSwitchWithSlidingIndicator: React.FC<
         {tabs.map(({ buttonContent }, index) => (
           <button
             key={index}
-            className={`${styles["tab-switch-with-sliding-indicator__tab"]} ${activeIndex === index ? styles[" tab-switch-with-sliding-indicator__tab--active"] : ""}`}
+            className={`${styles["tab-switch-with-sliding-indicator__tab"]} ${
+              activeIndex === index
+                ? styles[" tab-switch-with-sliding-indicator__tab--active"]
+                : ""
+            }`}
             onClick={() => setActiveIndex(index)}
           >
             {

@@ -50,7 +50,9 @@ export const Switch: React.FC<ISwitch> = ({
       htmlFor={id}
       className={`${styles["switch"]} ${styles[`switch-size--${switchSize}`]} ${
         styles[`switch-variant--${variant}`]
-      } ${styles[`switch-align-label--${alignLabel}`]} ${disabled ? styles["switch--disabled"] : ""} ${className}`}
+      } ${styles[`switch-align-label--${alignLabel}`]} ${
+        disabled ? styles["switch--disabled"] : ""
+      } ${className}`}
     >
       <input
         id={id}

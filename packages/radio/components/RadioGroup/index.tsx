@@ -64,7 +64,9 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   return (
     <div
       key={uniqueId}
-      className={`${styles["radio-group"]} ${styles[`radio-group--${align}`]} ${className}`}
+      className={`${styles["radio-group"]} ${
+        styles[`radio-group--${align}`]
+      } ${className}`}
     >
       {radios.map(({ props }) => (
         <Radio

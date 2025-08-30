@@ -25,7 +25,9 @@ export const Spinner: React.FC<ISpinner> = ({
 }) => {
   return (
     <div
-      className={`spinner ${styles[`spinner-type--${type}`]} ${styles[`spinner-variant--${variant}`]} ${styles[`spinner-size--${size}`]} ${className}`}
+      className={`spinner ${styles[`spinner-type--${type}`]} ${
+        styles[`spinner-variant--${variant}`]
+      } ${styles[`spinner-size--${size}`]} ${className}`}
     />
   );
 };

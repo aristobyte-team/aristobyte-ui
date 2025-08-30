@@ -88,4 +88,4 @@ export const Mapping = (
         usage: DropdownPreviewBlocks.Usage,
       },
     },
-  }) as MappingType)![category]![unit]![section]!;
+  } as MappingType)![category]![unit]![section]!);

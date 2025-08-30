@@ -29,8 +29,8 @@ export type MappingType = {
 };
 
 export const Mapping = (category: string, unit: string): MappingReturnType =>
-  (
-    ({
+  ((
+    {
       components: {
         button: [
           { intro: ButtonSections.Intro },
@@ -116,5 +116,5 @@ export const Mapping = (category: string, unit: string): MappingReturnType =>
           { usage: DropdownSections.Usage },
         ],
       },
-    }) as MappingType
-  )[category]![unit]!;
+    } as MappingType
+  )[category]![unit]!);
