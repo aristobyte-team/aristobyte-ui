@@ -5,8 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { DropdownOption, type IDropdownOption } from "../DropdownOption";
 import { Button } from "@aristobyte-ui/button";
-
-import { Portal } from "./Portal";
+import { Portal } from "@aristobyte-ui/utils";
 
 import styles from "./Dropdown.module.scss";
 
