@@ -47,26 +47,17 @@
     "yarn": ">=1.22.22"
   },
   "scripts": {
-    "build": "turbo run build",
+    "prepare": "husky",
     "dev": "turbo run dev",
-    "check": "yarn lint && yarn check-types && yarn format",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint -- --fix",
+    "check": "yarn lint && yarn check-types && yarn format",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky",
     "add-package": "sh ./scripts/add-package.sh",
-    "bump:patch": "sh ./scripts/bump.sh patch",
-    "bump:feat": "sh ./scripts/bump.sh feat",
-    "bump:fix": "sh ./scripts/bump.sh fix",
-    "clear": "sh ./scripts/clear.sh",
-    "publish-package": "sh ./scripts/publish-package.sh",
-    "publish-all": "sh ./scripts/publish-all.sh",
-    "auth": "sh ./scripts/auth.sh",
-    "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish",
-    "changeset:release": "yarn changeset version && git add . && git commit -m 'chore: release' && yarn changeset publish"
+    "build": "turbo run build",
+    "bump": "changeset && changeset version",
+    "publish": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",

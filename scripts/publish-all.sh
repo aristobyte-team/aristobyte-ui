@@ -1,6 +1,6 @@
 #!/bin/bash
 # =========================================== #
-#     AristoByte UI - Publish All Script      #
+#        AristoByte UI - Build Script         #
 # =========================================== #
 
 for pkg in packages/*; do

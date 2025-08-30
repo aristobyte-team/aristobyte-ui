@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 1.0.17
+
+### Patch Changes
+
+- chore: bump spinner to 1.0.17
+
 ## 1.0.16
 
 ### Patch Changes

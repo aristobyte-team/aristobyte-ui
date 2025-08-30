@@ -1,5 +1,7 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.17
+
 ## 1.0.16
 
 ### Patch Changes
