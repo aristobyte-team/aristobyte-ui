@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/storybook",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "type": "module",
   "private": true,
   "scripts": {
@@ -13,19 +13,19 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "^1.0.24",
-    "@aristobyte-ui/button": "^1.0.24",
-    "@aristobyte-ui/dropdown": "^1.0.24",
-    "@aristobyte-ui/message-box": "^1.0.24",
-    "@aristobyte-ui/radio": "^1.0.24",
-    "@aristobyte-ui/spinner": "^1.0.24",
-    "@aristobyte-ui/switch": "^1.0.24",
+    "@aristobyte-ui/anchor": "^1.0.25",
+    "@aristobyte-ui/button": "^1.0.25",
+    "@aristobyte-ui/dropdown": "^1.0.25",
+    "@aristobyte-ui/message-box": "^1.0.25",
+    "@aristobyte-ui/radio": "^1.0.25",
+    "@aristobyte-ui/spinner": "^1.0.25",
+    "@aristobyte-ui/switch": "^1.0.25",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.24",
+    "@aristobyte-ui/eslint-config": "^1.0.25",
     "@chromatic-com/storybook": "^3",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-onboarding": "^8.6.14",

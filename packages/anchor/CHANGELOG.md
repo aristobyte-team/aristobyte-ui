@@ -1,5 +1,14 @@
 # @aristobyte-ui/anchor
 
+## 1.0.25
+
+### Patch Changes
+
+- feat: add styles in utils pkg
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.25
+
 ## 1.0.24
 
 ### Patch Changes
