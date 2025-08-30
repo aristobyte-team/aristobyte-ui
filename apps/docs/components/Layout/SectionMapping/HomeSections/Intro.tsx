@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Anchor } from "@aristobyte-ui/anchor";
+import { Intro as IntroComponent } from "@/components";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
@@ -11,13 +11,5 @@ export type IntroPropsType = {
 };
 
 export const Intro = ({ config, t }: IntroPropsType) => (
-  <div className="layout__links">
-    {config.introLinks.map(({ id, href, target, icon }) => (
-      // @TODO: create a common translations for the `introLinks`
-      <Anchor className="layout__link" key={id} href={href} target={target}>
-        <span dangerouslySetInnerHTML={{ __html: icon }} />
-        <span>{t(`layout.components.home.intro.links.${id}`)}</span>
-      </Anchor>
-    ))}
-  </div>
+  <IntroComponent pkg="home" config={config} t={t} />
 );

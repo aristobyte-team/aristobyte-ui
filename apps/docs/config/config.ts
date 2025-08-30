@@ -3,30 +3,25 @@ import { CodeBlocks } from "./codeBlocks";
 import { PreviewBlocks } from "./previewBlocks";
 
 export const Config = {
-  introLinks: [
+  introLinks: (pkg: string) => [
     {
       id: "storybook",
-      href: "TODO",
+      // @TODO: insert proper href
+      href: `https://storybook/${pkg}`,
       target: "_blank",
-      icon: Icons.Storybook,
+      Icon: Icons.Storybook,
     },
     {
       id: "npm",
-      href: "TODO",
+      href: `http://npmjs.com/package/@aristobyte-ui/${pkg}`,
       target: "_blank",
-      icon: Icons.Npm,
+      Icon: Icons.Npm,
     },
     {
       id: "source",
-      href: "TODO",
+      href: `https://github.com/aristobyte-team/aristobyte-ui/tree/master/packages/${pkg}`,
       target: "_blank",
-      icon: Icons.Github,
-    },
-    {
-      id: "style-source",
-      href: "TODO",
-      target: "_blank",
-      icon: Icons.Github,
+      Icon: Icons.Github,
     },
   ],
   sidebar: {
@@ -94,25 +89,25 @@ export const Config = {
         id: "npm",
         label: "npm",
         script: "npm install",
-        icon: Icons.Npm,
+        Icon: Icons.Npm,
       },
       {
         id: "yarn",
         label: "yarn",
         script: "yarn add",
-        icon: Icons.Yarn,
+        Icon: Icons.Yarn,
       },
       {
         id: "pnpm",
         label: "pnpm",
         script: "pnpm add",
-        icon: Icons.Pnpm,
+        Icon: Icons.Pnpm,
       },
       {
         id: "bun",
         label: "bun",
         script: "bun add",
-        icon: Icons.Bun,
+        Icon: Icons.Bun,
       },
     ],
     import: [

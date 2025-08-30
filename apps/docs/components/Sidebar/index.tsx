@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useConfig, useTranslate } from "@/context";
-import { Icons } from "@/config";
+import { Icons } from "@aristobyte-ui/utils";
 
 import "./Sidebar.scss";
 
@@ -31,8 +31,9 @@ export const Sidebar = () => {
               className={`sidebar__title-icon ${
                 openSection === index ? "sidebar__title-icon--open" : ""
               }`}
-              dangerouslySetInnerHTML={{ __html: Icons.ArrowRight }}
-            />
+            >
+              <Icons.ArrowRight />
+            </span>
           </button>
 
           <ul

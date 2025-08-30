@@ -15,10 +15,12 @@ export type InstallationPropsType = {
 export const Installation = ({ config, t }: InstallationPropsType) => (
   <>
     <TabSwitchWithSlidingIndicator
-      tabs={config.tabs.installation.map(({ label, icon, script }) => ({
+      tabs={config.tabs.installation.map(({ label, Icon, script }) => ({
         buttonContent: (
           <>
-            <span dangerouslySetInnerHTML={{ __html: icon }} />
+            <span>
+              <Icon />
+            </span>
             <span>{label}</span>
           </>
         ),
