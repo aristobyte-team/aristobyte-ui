@@ -1,47 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "moduleDetection": "force",
-
-    // Output
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": false,
-    "outDir": "dist",
-
-    // Interop & Tools
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "incremental": true,
-
-    // Strictness
     "strict": true,
-    "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
-
-    // Paths
-    "baseUrl": "packages/typescript-config",
-    "paths": {
-      "@aristobyte/anchor/*": ["packages/anchor/*"],
-      "@aristobyte/button/*": ["packages/button/*"],
-      "@aristobyte/dropdown/*": ["packages/dropdown/*"],
-      "@aristobyte/eslint-config/*": ["packages/eslint-config/*"],
-      "@aristobyte/jest-config/*": ["packages/jest-config/*"],
-      "@aristobyte/message-box/*": ["packages/message-box/*"],
-      "@aristobyte/radio/*": ["packages/radio/*"],
-      "@aristobyte/spinner/*": ["packages/spinner/*"],
-      "@aristobyte/switch/*": ["packages/switch/*"],
-      "@aristobyte/typescript-config/*": ["packages/typescript-config/*"],
-      "@types/*": ["@types/*"]
-    },
-
-    "typeRoots": ["./@types", "./node_modules/@types"],
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "typeRoots": ["./@types", "./node_modules/@types"]
   }
 }

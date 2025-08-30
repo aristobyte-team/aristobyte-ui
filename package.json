@@ -57,7 +57,7 @@
     "add-package": "sh ./scripts/add-package.sh",
     "build": "turbo run build",
     "bump": "changeset && changeset version",
-    "publish": "changeset publish"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",

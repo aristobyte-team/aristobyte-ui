@@ -1,5 +1,28 @@
 # @aristobyte-ui/button
 
+## 1.0.20
+
+### Patch Changes
+
+- feat: use typescript configs everywhere
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.20
+
+## 1.0.19
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.19
+
+## 1.0.18
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.18
+
 ## 1.0.17
 
 ### Patch Changes

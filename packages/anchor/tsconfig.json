@@ -1,29 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "jsx": "react-jsx",
-    "noEmit": true,
-    "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "dist/types",
-    "incremental": true,
-    "tsBuildInfoFile": "dist/.tsbuildinfo",
-    "baseUrl": "packages/anchor",
-    "typeRoots": ["./@types", "./node_modules/@types"]
-  },
-  "include": ["@types", "components", "styles", "index.ts"],
+  "extends": "@aristobyte-ui/typescript-config/package",
+  "compilerOptions": { "baseUrl": "packages/anchor" },
+  "include": ["@types", "components", "utils", "styles", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }
