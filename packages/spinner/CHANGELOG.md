@@ -1,5 +1,17 @@
 # @aristobyte-ui/spinner
 
+## 1.0.30
+
+### Patch Changes
+
+- fix: add github icon in utils pkg
+
+## 1.0.29
+
+### Patch Changes
+
+- feat: add new icons in utils
+
 ## 1.0.28
 
 ### Patch Changes

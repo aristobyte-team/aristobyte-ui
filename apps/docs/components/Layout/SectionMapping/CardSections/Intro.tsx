@@ -15,12 +15,8 @@ export const Intro = ({ config, t }: IntroPropsType) => (
     {config.introLinks.map(({ id, href, target, icon }) => (
       <Anchor className="layout__link" key={id} href={href} target={target}>
         <span dangerouslySetInnerHTML={{ __html: icon }} />
-        <span>{t(`layout.components.message-box.intro.links.${id}`)}</span>
+        <span>{t(`layout.components.card.intro.links.${id}`)}</span>
       </Anchor>
-      // <Anchor className="layout__link" key={id} href={href} target={target}>
-      //   <span dangerouslySetInnerHTML={{ __html: icon }} />
-      //   <span>{t(`layout.components.button.intro.links.${id}`)}</span>
-      // </Anchor>
     ))}
   </div>
 );

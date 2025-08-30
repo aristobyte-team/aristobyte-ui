@@ -9,7 +9,7 @@ export interface IMessageBox {
   variant?: MessageBoxVariant;
   children?: React.ReactElement | React.ReactNode | string;
   withIcon?: boolean;
-  customIcon?: React.ReactElement | React.ReactNode | string;
+  customIcon?: () => React.JSX.Element;
   radius?: "none" | "sm" | "md" | "lg" | "full";
   type?: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
   className?: string;
@@ -37,27 +37,29 @@ export const MessageBox: React.FC<IMessageBox> = ({
   customIcon = null,
   radius = "md",
   type = "outline",
-}) => (
-  <div
-    className={`message-box ${styles["message-box"]} ${
-      styles[`message-box-type--${type}`]
-    } ${styles[`message-box-radius--${radius}`]} ${
-      styles[`message-box--${variant}`]
-    } ${className}`}
-  >
-    {withIcon && (
-      <span
-        className={`${styles["message-box__icon"]} ${
-          styles[`message-box__icon--${variant}`]
-        }`}
-        dangerouslySetInnerHTML={{
-          __html: customIcon ? customIcon : renderIcon(variant),
-        }}
+}) => {
+  const Icon = customIcon || renderIcon(variant);
+  return (
+    <div
+      className={`message-box ${styles["message-box"]} ${
+        styles[`message-box-type--${type}`]
+      } ${styles[`message-box-radius--${radius}`]} ${
+        styles[`message-box--${variant}`]
+      } ${className}`}
+    >
+      {withIcon && (
+        <span
+          className={`${styles["message-box__icon"]} ${
+            styles[`message-box__icon--${variant}`]
+          }`}
+        >
+          <Icon />
+        </span>
+      )}
+      <p
+        className={`${styles["message-box__content"]}`}
+        dangerouslySetInnerHTML={{ __html: children || "" }}
       />
-    )}
-    <p
-      className={`${styles["message-box__content"]}`}
-      dangerouslySetInnerHTML={{ __html: children || "" }}
-    />
-  </div>
-);
+    </div>
+  );
+};

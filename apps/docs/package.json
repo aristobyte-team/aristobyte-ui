@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/docs",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "private": true,
   "scripts": {
     "dev": "next dev --port 3000",
@@ -10,20 +10,21 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "^1.0.28",
-    "@aristobyte-ui/button": "^1.0.28",
-    "@aristobyte-ui/dropdown": "^1.0.28",
-    "@aristobyte-ui/message-box": "^1.0.28",
-    "@aristobyte-ui/radio": "^1.0.28",
-    "@aristobyte-ui/spinner": "^1.0.28",
-    "@aristobyte-ui/switch": "^1.0.28",
+    "@aristobyte-ui/anchor": "^1.0.30",
+    "@aristobyte-ui/button": "^1.0.30",
+    "@aristobyte-ui/dropdown": "^1.0.30",
+    "@aristobyte-ui/message-box": "^1.0.30",
+    "@aristobyte-ui/radio": "^1.0.30",
+    "@aristobyte-ui/spinner": "^1.0.30",
+    "@aristobyte-ui/switch": "^1.0.30",
+    "@aristobyte-ui/utils": "^1.0.30",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sass": "^1.89.1"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.28",
+    "@aristobyte-ui/eslint-config": "^1.0.30",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.15.29",
     "@types/react": "^19.1.6",

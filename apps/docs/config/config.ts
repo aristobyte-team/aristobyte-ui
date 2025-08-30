@@ -1,4 +1,4 @@
-import { Icons } from "./icons";
+import { Icons } from "@aristobyte-ui/utils";
 import { CodeBlocks } from "./codeBlocks";
 import { PreviewBlocks } from "./previewBlocks";
 

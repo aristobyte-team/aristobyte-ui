@@ -2,7 +2,7 @@
 import * as React from "react";
 import { getSingletonHighlighter } from "shiki";
 import { Button } from "@aristobyte-ui/button";
-import { Icons } from "@/config";
+import { Icons } from "@aristobyte-ui/utils";
 
 import { SupportedLanguages, SupportedThemes } from "./types";
 
@@ -52,7 +52,7 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
       <Button
         onClick={copyToClipboard}
         className={styles["code-block__button"]}
-        dangerouslySetInnerHTML={{ __html: Icons.Copy }}
+        icon={{ component: Icons.Copy }}
       />
     </div>
   );

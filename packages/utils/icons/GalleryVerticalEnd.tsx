@@ -1,6 +1,9 @@
 import { IconPropsType } from "./type";
 
-export const Copy = ({ size = 24, color = "currentColor" }: IconPropsType) => (
+export const GalleryVerticalEnd = ({
+  size = 24,
+  color = "currentColor",
+}: IconPropsType) => (
   <svg
     width={size}
     height={size}
@@ -11,7 +14,8 @@ export const Copy = ({ size = 24, color = "currentColor" }: IconPropsType) => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    <path d="M7 2h10" />
+    <path d="M5 6h14" />
+    <rect width="18" height="12" x="3" y="10" rx="2" />
   </svg>
 );

@@ -1,5 +1,23 @@
 # @aristobyte-ui/anchor
 
+## 1.0.30
+
+### Patch Changes
+
+- fix: add github icon in utils pkg
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.30
+
+## 1.0.29
+
+### Patch Changes
+
+- feat: add new icons in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.29
+
 ## 1.0.28
 
 ### Patch Changes

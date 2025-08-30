@@ -1,6 +1,6 @@
-import { IconProps } from "./type";
+import { IconPropsType } from "./type";
 
-export const Info = ({ size = 24, color = "currentColor" }: IconProps) => (
+export const Info = ({ size = 24, color = "currentColor" }: IconPropsType) => (
   <svg
     width={size}
     height={size}

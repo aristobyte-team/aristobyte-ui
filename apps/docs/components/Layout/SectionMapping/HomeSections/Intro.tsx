@@ -13,14 +13,11 @@ export type IntroPropsType = {
 export const Intro = ({ config, t }: IntroPropsType) => (
   <div className="layout__links">
     {config.introLinks.map(({ id, href, target, icon }) => (
+      // @TODO: create a common translations for the `introLinks`
       <Anchor className="layout__link" key={id} href={href} target={target}>
         <span dangerouslySetInnerHTML={{ __html: icon }} />
-        <span>{t(`layout.components.message-box.intro.links.${id}`)}</span>
+        <span>{t(`layout.components.home.intro.links.${id}`)}</span>
       </Anchor>
-      // <Anchor className="layout__link" key={id} href={href} target={target}>
-      //   <span dangerouslySetInnerHTML={{ __html: icon }} />
-      //   <span>{t(`layout.components.button.intro.links.${id}`)}</span>
-      // </Anchor>
     ))}
   </div>
 );
