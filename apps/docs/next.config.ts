@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
         ...(config.resolve?.alias || {}),
         canvas: false,
         "pdfjs-dist": path.join(__dirname, "node_modules/pdfjs-dist"),
+        "@aristobyte-ui/utils": path.join(__dirname, "../../packages/utils"),
       },
     };
 

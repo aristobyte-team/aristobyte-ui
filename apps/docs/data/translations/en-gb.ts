@@ -1,7 +1,4 @@
 export const EN_GB = {
-  "intro-links": {
-    source: "Source",
-  },
   sidebar: {
     sections: {
       components: "Component",
@@ -20,6 +17,17 @@ export const EN_GB = {
     },
   },
   layout: {
+    "intro-links": {
+      source: "Source",
+    },
+    "import-tabs": {
+      individual: "Individual",
+      global: "Global",
+    },
+    codePreview: {
+      code: "Code",
+      preview: "Preview",
+    },
     components: {
       button: {
         intro: {
@@ -36,10 +44,6 @@ export const EN_GB = {
           title: "Import Button",
           description:
             "The Button component is a core interactive element in the AristoByte UI library, offering a consistent and accessible way to trigger actions. It supports multiple variants and states to align with your brand and interaction patterns. Import it as shown below to streamline call-to-action elements across your application:",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
@@ -132,10 +136,6 @@ export const EN_GB = {
           title: "Import Card",
           description:
             "The Card component is part of the AristoByte UI library—a modular design system built for consistency and scalability across your applications. Use the import below to access a reusable, fully encapsulated UI element that adheres to your design and development standards.",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
       },
       home: {
@@ -153,10 +153,6 @@ export const EN_GB = {
           title: "Import",
           description:
             "Each component in the AristoByte UI library is designed for seamless integration, offering clean abstractions and consistent styling across your application. To start using any component, simply import it directly from the package entry point. This approach ensures modularity and eliminates unnecessary bundle weight while maintaining a standardized development experience.",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
       },
       spinner: {
@@ -174,10 +170,6 @@ export const EN_GB = {
           title: "Import Spinner",
           description:
             "The Spinner component provides visual feedback for asynchronous actions, improving user awareness of system state. Import it as shown below to seamlessly integrate it into loading workflows:",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
@@ -215,10 +207,6 @@ export const EN_GB = {
           title: "Import Message Box",
           description:
             "The Message Box component delivers user-facing alerts with semantic clarity and visual consistency. Import it as shown below to streamline notification delivery in your application:",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
@@ -261,10 +249,6 @@ export const EN_GB = {
           title: "Import Switch",
           description:
             "You can import the Switch component either as a standalone module or from the global AristoByteUI package. The import method depends on how your project structure is configured.",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
@@ -332,10 +316,6 @@ export const EN_GB = {
           title: "Import Radio",
           description:
             "You can either import <code>Radio</code> and <code>RadioGroup</code> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
@@ -387,7 +367,7 @@ export const EN_GB = {
         intro: {
           title: "Dropdown",
           description:
-            "Dropdowns enable users to select a single option from a contextual list. It’s a compact, flexible UI pattern ideal for filters, forms, and segmented controls.",
+            "Dropdowns enable users to select a single option from a contextual list. It's a compact, flexible UI pattern ideal for filters, forms, and segmented controls.",
         },
         installation: {
           title: "Installation of Dropdown",
@@ -398,21 +378,23 @@ export const EN_GB = {
           title: "Import Dropdown",
           description:
             "The Dropdown component provides a minimal yet accessible selection UI for various use cases. It supports dynamic options, disabled states, and custom styling. Import it as shown below to enrich your data selection flows:",
-          tabs: {
-            individual: "Individual",
-            global: "Global",
-          },
         },
         usage: {
           title: "Usage",
           description:
             "Basic implementation of the Dropdown component in a controlled setup. Ideal for collecting selections or filtering content contextually.",
         },
+        disabled: {
+          title: "Disabled",
+          description:
+            "Demonstrates a <b>Dropdown</b> component in a <b>disabled</b> state. All options and interactions are inactive, ensuring that users cannot modify the selection.",
+        },
+        appearance: {
+          title: "Appearance",
+          description:
+            "Illustrates all available <b>Dropdown</b> <b>appearances</b> — <b>solid</b>, <b>glowing</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b> — across variants (<b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, <b>warning</b>). Useful for visual reference and styling consistency. Use <b>variant</b> to convey semantic intent, while <b>appearance</b> controls decorative rendering.",
+        },
       },
     },
-  },
-  codePreview: {
-    code: "Code",
-    preview: "Preview",
   },
 };

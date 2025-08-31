@@ -1,25 +1,23 @@
 import { Icons } from "@aristobyte-ui/utils";
-import { CodeBlocks } from "./codeBlocks";
-import { PreviewBlocks } from "./previewBlocks";
 
 export const Config = {
-  introLinks: (pkg: string) => [
+  introLinks: (unit: string) => [
     {
       id: "storybook",
       // @TODO: insert proper href
-      href: `https://storybook/${pkg}`,
+      href: `https://storybook/${unit}`,
       target: "_blank",
       Icon: Icons.Storybook,
     },
     {
       id: "npm",
-      href: `http://npmjs.com/package/@aristobyte-ui/${pkg}`,
+      href: `http://npmjs.com/package/@aristobyte-ui/${unit}`,
       target: "_blank",
       Icon: Icons.Npm,
     },
     {
       id: "source",
-      href: `https://github.com/aristobyte-team/aristobyte-ui/tree/master/packages/${pkg}`,
+      href: `https://github.com/aristobyte-team/aristobyte-ui/tree/master/packages/${unit}`,
       target: "_blank",
       Icon: Icons.Github,
     },
@@ -83,193 +81,45 @@ export const Config = {
       },
     ],
   },
-  tabs: {
-    installation: [
-      {
-        id: "npm",
-        label: "npm",
-        script: "npm install",
-        Icon: Icons.Npm,
-      },
-      {
-        id: "yarn",
-        label: "yarn",
-        script: "yarn add",
-        Icon: Icons.Yarn,
-      },
-      {
-        id: "pnpm",
-        label: "pnpm",
-        script: "pnpm add",
-        Icon: Icons.Pnpm,
-      },
-      {
-        id: "bun",
-        label: "bun",
-        script: "bun add",
-        Icon: Icons.Bun,
-      },
-    ],
-    import: [
-      {
-        id: "individual",
-        content: {
-          button: CodeBlocks.Import(["Button"], "/button"),
-          card: CodeBlocks.Import(["Card"], "/card"),
-          dropdown: CodeBlocks.Import(["Dropdown"], "/dropdown"),
-          home: CodeBlocks.Import(["ComponentName"], "/componentName"),
-          "message-box": CodeBlocks.Import(["MessageBox"], "/message-box"),
-          spinner: CodeBlocks.Import(["Spinner"], "/spinner"),
-          switch: CodeBlocks.Import(["Switch"], "/switch"),
-          radio: CodeBlocks.Import(["Radio", "RadioGroup"], "/radio"),
-        } as { [unit: string]: string },
-      },
-      {
-        id: "global",
-        content: {
-          button: CodeBlocks.Import(["Button"]),
-          card: CodeBlocks.Import(["Card"]),
-          dropdown: CodeBlocks.Import(["Dropdown"]),
-          home: CodeBlocks.Import(["ComponentName"]),
-          "message-box": CodeBlocks.Import(["MessageBox"]),
-          spinner: CodeBlocks.Import(["Spinner"]),
-          switch: CodeBlocks.Import(["Switch"]),
-          radio: CodeBlocks.Import(["Radio"]),
-        } as { [unit: string]: string },
-      },
-    ],
-    codePreview: [
-      {
-        id: "code",
-        content: {
-          button: {
-            //@TODO: instead of using CodeBlocks.Button.Usage adjust the codeBlocks.ts and use { content: { button: CodeBlocks.Button } }
-            usage: CodeBlocks.Button.Usage,
-            loading: CodeBlocks.Button.Loading,
-            disabled: CodeBlocks.Button.Disabled,
-            sizes: CodeBlocks.Button.Sizes,
-            radius: CodeBlocks.Button.Radius,
-            variants: CodeBlocks.Button.Variants,
-            appearance: CodeBlocks.Button.Appearance,
-            "with-icon": CodeBlocks.Button.WithIcon,
-            "button-group": CodeBlocks.Button.ButtonGroup,
-            "button-group-disabled": CodeBlocks.Button.ButtonGroupDisabled,
-            "button-group-alignment": CodeBlocks.Button.ButtonGroupAlignment,
-            "button-group-radius": CodeBlocks.Button.ButtonGroupRadius,
-            "button-group-size": CodeBlocks.Button.ButtonGroupSize,
-            "button-group-variant": CodeBlocks.Button.ButtonGroupVariant,
-          },
-          spinner: {
-            usage: CodeBlocks.Spinner.Usage,
-            sizes: CodeBlocks.Spinner.Sizes,
-            types: CodeBlocks.Spinner.Types,
-            variants: CodeBlocks.Spinner.Variants,
-          },
-          "message-box": {
-            usage: CodeBlocks.MessageBox.Usage,
-            types: CodeBlocks.MessageBox.Types,
-            variants: CodeBlocks.MessageBox.Variants,
-            radius: CodeBlocks.MessageBox.Radius,
-            "without-icon": CodeBlocks.MessageBox.WithoutIcon,
-          },
-          switch: {
-            usage: CodeBlocks.Switch.Usage,
-            checked: CodeBlocks.Switch.Checked,
-            variants: CodeBlocks.Switch.Variants,
-            sizes: CodeBlocks.Switch.Sizes,
-            labeled: CodeBlocks.Switch.Labeled,
-            disabled: CodeBlocks.Switch.Disabled,
-            controlled: CodeBlocks.Switch.Controlled,
-            "align-label": CodeBlocks.Switch.AlignLabel,
-            "track-icon": CodeBlocks.Switch.TrackIcon,
-            "thumb-icon": CodeBlocks.Switch.ThumbIcon,
-          },
-          radio: {
-            usage: CodeBlocks.Radio.Usage,
-            disabled: CodeBlocks.Radio.Disabled,
-            sizes: CodeBlocks.Radio.Sizes,
-            variants: CodeBlocks.Radio.Variants,
-            appearance: CodeBlocks.Radio.Appearance,
-            "highlight-label": CodeBlocks.Radio.HighlightLabel,
-            "radio-group-align": CodeBlocks.Radio.RadioGroupAlign,
-            "align-label": CodeBlocks.Radio.AlignLabel,
-            controlled: CodeBlocks.Radio.Controlled,
-          },
-          dropdown: {
-            usage: CodeBlocks.Dropdown.Usage,
-          },
-        } as { [unit: string]: { [unitSection: string]: string } },
-      },
-      {
-        id: "preview",
-        content: {
-          //@TODO: instead of using PreviewBlocks.Button.Usage adjust the previewBlocks.ts and use { content: { button: PreviewBlocks.Button } }
-          button: {
-            usage: PreviewBlocks.Button.Usage,
-            disabled: PreviewBlocks.Button.Disabled,
-            loading: PreviewBlocks.Button.Loading,
-            sizes: PreviewBlocks.Button.Sizes,
-            radius: PreviewBlocks.Button.Radius,
-            variants: PreviewBlocks.Button.Variants,
-            appearance: PreviewBlocks.Button.Appearance,
-            "with-icon": PreviewBlocks.Button.WithIcon,
-            "button-group": PreviewBlocks.Button.ButtonGroup,
-            "button-group-disabled": PreviewBlocks.Button.ButtonGroupDisabled,
-            "button-group-alignment": PreviewBlocks.Button.ButtonGroupAlignment,
-            "button-group-radius": PreviewBlocks.Button.ButtonGroupRadius,
-            "button-group-size": PreviewBlocks.Button.ButtonGroupSize,
-            "button-group-variant": PreviewBlocks.Button.ButtonGroupVariant,
-          },
-          spinner: {
-            usage: PreviewBlocks.Spinner.Usage,
-            sizes: PreviewBlocks.Spinner.Sizes,
-            types: PreviewBlocks.Spinner.Types,
-            variants: PreviewBlocks.Spinner.Variants,
-          },
-          "message-box": {
-            usage: PreviewBlocks.MessageBox.Usage,
-            types: PreviewBlocks.MessageBox.Types,
-            variants: PreviewBlocks.MessageBox.Variants,
-            radius: PreviewBlocks.MessageBox.Radius,
-            "without-icon": PreviewBlocks.MessageBox.WithoutIcon,
-          },
-          switch: {
-            usage: PreviewBlocks.Switch.Usage,
-            checked: PreviewBlocks.Switch.Checked,
-            variants: PreviewBlocks.Switch.Variants,
-            sizes: PreviewBlocks.Switch.Sizes,
-            labeled: PreviewBlocks.Switch.Labeled,
-            disabled: PreviewBlocks.Switch.Disabled,
-            controlled: PreviewBlocks.Switch.Controlled,
-            "align-label": PreviewBlocks.Switch.AlignLabel,
-            "track-icon": PreviewBlocks.Switch.TrackIcon,
-            "thumb-icon": PreviewBlocks.Switch.ThumbIcon,
-          },
-          radio: {
-            usage: PreviewBlocks.Radio.Usage,
-            disabled: PreviewBlocks.Radio.Disabled,
-            sizes: PreviewBlocks.Radio.Sizes,
-            variants: PreviewBlocks.Radio.Variants,
-            appearance: PreviewBlocks.Radio.Appearance,
-            "highlight-label": PreviewBlocks.Radio.HighlightLabel,
-            "radio-group-align": PreviewBlocks.Radio.RadioGroupAlign,
-            "align-label": PreviewBlocks.Radio.AlignLabel,
-            controlled: PreviewBlocks.Radio.Controlled,
-          },
-          dropdown: {
-            usage: PreviewBlocks.Dropdown.Usage,
-          },
-        } as {
-          [unit: string]: {
-            [unitSection: string]: {
-              category: string;
-              unit: string;
-              section: string;
-            };
-          };
-        },
-      },
-    ],
+  installation: [
+    {
+      id: "npm",
+      label: "npm",
+      script: "npm install",
+      Icon: Icons.Npm,
+    },
+    {
+      id: "yarn",
+      label: "yarn",
+      script: "yarn add",
+      Icon: Icons.Yarn,
+    },
+    {
+      id: "pnpm",
+      label: "pnpm",
+      script: "pnpm add",
+      Icon: Icons.Pnpm,
+    },
+    {
+      id: "bun",
+      label: "bun",
+      script: "bun add",
+      Icon: Icons.Bun,
+    },
+  ],
+  codePreview: { tabs: ["preview", "code"] },
+  import: {
+    tabs: ["individual", "global"],
+    components: {
+      button: ["Button", "ButtonGroup"],
+      card: ["Card"],
+      dropdown: ["Dropdown", "DropdownOption"],
+      home: ["ComponentName"],
+      "message-box": ["MessageBox"],
+      spinner: ["Spinner"],
+      switch: ["Switch"],
+      radio: ["Radio", "RadioGroup"],
+    } as { [unit: string]: string[] },
   },
 };
 export type ConfigType = typeof Config;

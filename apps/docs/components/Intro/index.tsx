@@ -8,26 +8,26 @@ import { type TranslateFunctionType } from "@/data";
 import "./Intro.scss";
 
 export interface IIntro {
-  pkg: string;
+  unit: string;
   t: TranslateFunctionType;
   config: ConfigType;
 }
 
-const renderText = (id: string, pkg: string, t: TranslateFunctionType) =>
+const renderText = (id: string, unit: string, t: TranslateFunctionType) =>
   ({
     storybook: "Storybook",
-    npm: `@aristobyte-ui/${pkg}`,
-    source: t("intro-links.source"),
+    npm: `@aristobyte-ui/${unit}`,
+    source: t("layout.intro-links.source"),
   })[id];
 
-export const Intro: React.FC<IIntro> = ({ pkg, config, t }) => (
+export const Intro: React.FC<IIntro> = ({ unit, config, t }) => (
   <div className="intro">
-    {config.introLinks(pkg).map(({ id, href, target, Icon }) => (
+    {config.introLinks(unit).map(({ id, href, target, Icon }) => (
       <Anchor className="intro__link" key={id} href={href} target={target}>
         <span>
           <Icon size={24} />
         </span>
-        <span>{renderText(id, pkg, t)}</span>
+        <span>{renderText(id, unit, t)}</span>
       </Anchor>
     ))}
   </div>

@@ -1,19 +1,16 @@
 import * as React from "react";
 
-import { ButtonSections } from "./ButtonSections";
-import { CardSections } from "./CardSections";
-import { HomeSections } from "./HomeSections";
-import { SpinnerSections } from "./SpinnerSections";
-import { MessageBoxSections } from "./MessageBoxSections";
-import { SwitchSections } from "./SwitchSections";
-import { RadioSections } from "./RadioSections";
+import { Intro, Installation, Import } from "@/components";
 
 import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
-import { DropdownSections } from "./DropdownSection";
+import { CodePreview } from "../CodePreview";
 
 // @TODO: make 'config' and 't' optional props
 export type ChildComponentPropsType = {
+  category: string;
+  unit: string;
+  section: string;
   config: ConfigType;
   t: TranslateFunctionType;
 };
@@ -29,92 +26,94 @@ export type MappingType = {
 };
 
 export const Mapping = (category: string, unit: string): MappingReturnType =>
-  ((
-    {
+  (
+    ({
       components: {
         button: [
-          { intro: ButtonSections.Intro },
-          { installation: ButtonSections.Installation },
-          { import: ButtonSections.Import },
-          { usage: ButtonSections.Usage },
-          { disabled: ButtonSections.Disabled },
-          { sizes: ButtonSections.Sizes },
-          { radius: ButtonSections.Radius },
-          { variants: ButtonSections.Variants },
-          { appearance: ButtonSections.Appearance },
-          { loading: ButtonSections.Loading },
-          { "with-icon": ButtonSections.WithIcon },
-          { "button-group": ButtonSections.ButtonGroup },
-          { "button-group-disabled": ButtonSections.ButtonGroupDisabled },
-          { "button-group-alignment": ButtonSections.ButtonGroupAlignment },
-          { "button-group-size": ButtonSections.ButtonGroupSize },
-          { "button-group-radius": ButtonSections.ButtonGroupRadius },
-          { "button-group-variant": ButtonSections.ButtonGroupVariant },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { disabled: CodePreview },
+          { sizes: CodePreview },
+          { radius: CodePreview },
+          { variants: CodePreview },
+          { appearance: CodePreview },
+          { loading: CodePreview },
+          { "with-icon": CodePreview },
+          { "button-group": CodePreview },
+          { "button-group-disabled": CodePreview },
+          { "button-group-alignment": CodePreview },
+          { "button-group-size": CodePreview },
+          { "button-group-radius": CodePreview },
+          { "button-group-variant": CodePreview },
         ],
         card: [
-          { intro: CardSections.Intro },
-          { installation: ButtonSections.Installation },
-          { import: ButtonSections.Import },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
         ],
         home: [
-          { intro: HomeSections.Intro },
-          { installation: ButtonSections.Installation },
-          { import: ButtonSections.Import },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
         ],
         spinner: [
-          { intro: SpinnerSections.Intro },
-          { installation: SpinnerSections.Installation },
-          { import: SpinnerSections.Import },
-          { usage: SpinnerSections.Usage },
-          { variants: SpinnerSections.Variants },
-          { types: SpinnerSections.Types },
-          { sizes: SpinnerSections.Sizes },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { variants: CodePreview },
+          { types: CodePreview },
+          { sizes: CodePreview },
         ],
         "message-box": [
-          { intro: MessageBoxSections.Intro },
-          { installation: MessageBoxSections.Installation },
-          { import: MessageBoxSections.Import },
-          { usage: MessageBoxSections.Usage },
-          { variants: MessageBoxSections.Variants },
-          { types: MessageBoxSections.Types },
-          { radius: MessageBoxSections.Radius },
-          { "without-icon": MessageBoxSections.WithoutIcon },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { variants: CodePreview },
+          { types: CodePreview },
+          { radius: CodePreview },
+          { "without-icon": CodePreview },
         ],
         switch: [
-          { intro: SwitchSections.Intro },
-          { installation: SwitchSections.Installation },
-          { import: SwitchSections.Import },
-          { usage: SwitchSections.Usage },
-          { labeled: SwitchSections.Labeled },
-          { "align-label": SwitchSections.AlignLabel },
-          { disabled: SwitchSections.Disabled },
-          { checked: SwitchSections.Checked },
-          { variants: SwitchSections.Variants },
-          { sizes: SwitchSections.Sizes },
-          { controlled: SwitchSections.Controlled },
-          { "track-icon": SwitchSections.TrackIcon },
-          { "thumb-icon": SwitchSections.ThumbIcon },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { labeled: CodePreview },
+          { "align-label": CodePreview },
+          { disabled: CodePreview },
+          { checked: CodePreview },
+          { variants: CodePreview },
+          { sizes: CodePreview },
+          { controlled: CodePreview },
+          { "track-icon": CodePreview },
+          { "thumb-icon": CodePreview },
         ],
         radio: [
-          { intro: RadioSections.Intro },
-          { installation: RadioSections.Installation },
-          { import: RadioSections.Import },
-          { usage: RadioSections.Usage },
-          { disabled: RadioSections.Disabled },
-          { sizes: RadioSections.Sizes },
-          { variants: RadioSections.Variants },
-          { appearance: RadioSections.Appearance },
-          { "highlight-label": RadioSections.HighlightLabel },
-          { "radio-group-align": RadioSections.RadioGroupAlign },
-          { "align-label": RadioSections.AlignLabel },
-          { controlled: RadioSections.Controlled },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { disabled: CodePreview },
+          { sizes: CodePreview },
+          { variants: CodePreview },
+          { appearance: CodePreview },
+          { "highlight-label": CodePreview },
+          { "radio-group-align": CodePreview },
+          { "align-label": CodePreview },
+          { controlled: CodePreview },
         ],
         dropdown: [
-          { intro: DropdownSections.Intro },
-          { installation: DropdownSections.Installation },
-          { import: DropdownSections.Import },
-          { usage: DropdownSections.Usage },
+          { intro: Intro },
+          { installation: Installation },
+          { import: Import },
+          { usage: CodePreview },
+          { disabled: CodePreview },
+          { appearance: CodePreview },
         ],
       },
-    } as MappingType
-  )[category]![unit]!);
+    }) as MappingType
+  )[category]![unit]!;

@@ -19,7 +19,13 @@ export const SectionMapping = ({ category, unit }: SectionMappingPropsType) => {
       category={category}
       unit={unit}
     >
-      {React.createElement(entry[Object.keys(entry)[0]!]!, { config, t })}
+      {React.createElement(entry[Object.keys(entry)[0]!]!, {
+        category,
+        unit,
+        section: Object.keys(entry)[0]!,
+        config,
+        t,
+      })}
     </LayoutSection>
   ));
 };

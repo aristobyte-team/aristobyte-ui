@@ -3,7 +3,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "plugins": [{ "name": "next" }],
-    "paths": { "@/*": ["./*"] }
+    "paths": {
+      "@/*": ["./*"],
+      "@aristobyte-ui/dropdown": ["../../packages/dropdown"]
+    }
   },
   "include": [
     "**/*.ts",
