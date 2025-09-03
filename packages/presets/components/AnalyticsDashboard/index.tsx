@@ -6,7 +6,7 @@ import styles from "./AnalyticsDashboard.module.scss";
 
 export interface IAnalyticsDashboard {}
 
-export const IAnalyticsDashboard: React.FC<IAnalyticsDashboard> = ({
+export const AnalyticsDashboard: React.FC<IAnalyticsDashboard> = ({
   ...props
 }) => {
   const uniqId = React.useId();

@@ -6,7 +6,7 @@ import styles from "./InspirationWidget.module.scss";
 
 export interface IInspirationWidget {}
 
-export const IInspirationWidget: React.FC<IInspirationWidget> = ({
+export const InspirationWidget: React.FC<IInspirationWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

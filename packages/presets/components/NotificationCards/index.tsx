@@ -6,7 +6,7 @@ import styles from "./NotificationCards.module.scss";
 
 export interface INotificationCards {}
 
-export const INotificationCards: React.FC<INotificationCards> = ({
+export const NotificationCards: React.FC<INotificationCards> = ({
   ...props
 }) => {
   const uniqId = React.useId();

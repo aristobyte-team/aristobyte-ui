@@ -6,7 +6,7 @@ import styles from "./StockMarket.module.scss";
 
 export interface IStockMarket {}
 
-export const IStockMarket: React.FC<IStockMarket> = ({ ...props }) => {
+export const StockMarket: React.FC<IStockMarket> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

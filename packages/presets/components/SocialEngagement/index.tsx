@@ -6,9 +6,7 @@ import styles from "./SocialEngagement.module.scss";
 
 export interface ISocialEngagement {}
 
-export const ISocialEngagement: React.FC<ISocialEngagement> = ({
-  ...props
-}) => {
+export const SocialEngagement: React.FC<ISocialEngagement> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

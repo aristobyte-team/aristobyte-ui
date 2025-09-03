@@ -6,9 +6,7 @@ import styles from "./LanguageLearning.module.scss";
 
 export interface ILanguageLearning {}
 
-export const ILanguageLearning: React.FC<ILanguageLearning> = ({
-  ...props
-}) => {
+export const LanguageLearning: React.FC<ILanguageLearning> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

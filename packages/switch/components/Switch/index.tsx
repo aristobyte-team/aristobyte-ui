@@ -5,6 +5,7 @@ import * as React from "react";
 import styles from "./Switch.module.scss";
 
 export interface ISwitch {
+  onChange?: () => void;
   label?: string;
   alignLabel?: "horizontal" | "vertical";
   switchSize?: "xsm" | "sm" | "md" | "lg" | "xlg";
@@ -20,11 +21,12 @@ export interface ISwitch {
   checked?: boolean;
   disabled?: boolean;
   className?: string;
-  onChange?: () => void;
+  style?: React.CSSProperties;
 }
 
 //@TODO: Fix the the switch styling, which is breaking when continuously clicking on the component
 export const Switch: React.FC<ISwitch> = ({
+  onChange,
   label,
   alignLabel = "vertical",
   checked,
@@ -34,7 +36,7 @@ export const Switch: React.FC<ISwitch> = ({
   trackIcon,
   thumbIcon,
   className = "",
-  onChange,
+  style = {},
 }) => {
   const id = React.useId();
   const [isChecked, setIsChecked] = React.useState<boolean>(!!checked);
@@ -53,6 +55,7 @@ export const Switch: React.FC<ISwitch> = ({
       } ${styles[`switch-align-label--${alignLabel}`]} ${
         disabled ? styles["switch--disabled"] : ""
       } ${className}`}
+      style={style}
     >
       <input
         id={id}

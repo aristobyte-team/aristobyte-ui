@@ -5,7 +5,8 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"],
-      "@aristobyte-ui/dropdown": ["../../packages/dropdown"]
+      "@aristobyte-ui/dropdown": ["../../packages/dropdown"],
+      "@aristobyte-ui/presets": ["../../packages/presets"]
     }
   },
   "include": [

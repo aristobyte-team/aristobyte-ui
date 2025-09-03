@@ -7,10 +7,12 @@
   display: flex;
   font-weight: 500;
   gap: 10px;
+  justify-content: center;
   letter-spacing: 0rem;
   line-height: 1.42;
   overflow: hidden;
   position: relative;
+  text-align: center;
   transition:
     background-color 200ms ease,
     transform 300ms ease;
@@ -21,7 +23,11 @@
   }
 
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.96);
+  }
+
+  &--transparent {
+    background-color: transparent !important;
   }
 
   &-variant {

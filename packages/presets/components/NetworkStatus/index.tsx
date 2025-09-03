@@ -6,7 +6,7 @@ import styles from "./NetworkStatus.module.scss";
 
 export interface INetworkStatus {}
 
-export const INetworkStatus: React.FC<INetworkStatus> = ({ ...props }) => {
+export const NetworkStatus: React.FC<INetworkStatus> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

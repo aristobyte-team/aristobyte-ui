@@ -6,9 +6,7 @@ import styles from "./LayerStackWidget.module.scss";
 
 export interface ILayerStackWidget {}
 
-export const ILayerStackWidget: React.FC<ILayerStackWidget> = ({
-  ...props
-}) => {
+export const LayerStackWidget: React.FC<ILayerStackWidget> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

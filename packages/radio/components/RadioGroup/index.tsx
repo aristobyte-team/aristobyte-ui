@@ -11,7 +11,6 @@ export interface IRadioGroup {
   children: React.ReactElement<IRadio> | React.ReactElement<IRadio>[];
   onChange?: (newValue: string) => void;
   disabled?: boolean;
-  className?: string;
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   variant?:
     | "default"
@@ -29,6 +28,8 @@ export interface IRadioGroup {
   align?: "horizontal" | "vertical";
   alignLabel?: "top" | "right" | "bottom" | "left";
   highlightLabel?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export const RadioGroup: React.FC<IRadioGroup> = ({
@@ -38,12 +39,13 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
   children,
   disabled = false,
   highlightLabel = false,
-  className = "",
   size = "md",
   variant = "default",
   appearance = "outline",
   align = "horizontal",
   alignLabel = "right",
+  className = "",
+  style = {},
 }) => {
   const uniqueId = React.useId();
   const [currentValue, setCurrentValue] = React.useState<string>(value);
@@ -67,6 +69,7 @@ export const RadioGroup: React.FC<IRadioGroup> = ({
       className={`${styles["radio-group"]} ${
         styles[`radio-group--${align}`]
       } ${className}`}
+      style={style}
     >
       {radios.map(({ props }) => (
         <Radio

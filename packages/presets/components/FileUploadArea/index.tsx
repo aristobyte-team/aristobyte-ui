@@ -6,7 +6,7 @@ import styles from "./FileUploadArea.module.scss";
 
 export interface IFileUploadArea {}
 
-export const IFileUploadArea: React.FC<IFileUploadArea> = ({ ...props }) => {
+export const FileUploadArea: React.FC<IFileUploadArea> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

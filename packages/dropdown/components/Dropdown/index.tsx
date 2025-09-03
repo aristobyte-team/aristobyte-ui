@@ -34,6 +34,7 @@ export interface IDropdown {
   placeholder?: string;
   disabled?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 type PositionType = {
@@ -54,6 +55,7 @@ export const Dropdown: React.FC<IDropdown> = ({
   initiallyOpened = false,
   disabled = false,
   button = {},
+  style = {},
 }) => {
   const [isOpened, setIsOpened] = React.useState<boolean>(initiallyOpened);
   const [selected, setSelected] = React.useState<string[]>(
@@ -114,7 +116,9 @@ export const Dropdown: React.FC<IDropdown> = ({
     }
   };
 
-  const handleToggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleToggle = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>
+  ) => {
     if (disabled) return;
 
     const rect = buttonRef.current?.getBoundingClientRect();
@@ -169,6 +173,7 @@ export const Dropdown: React.FC<IDropdown> = ({
           {isOpened && (
             <div
               className={`${styles["dropdown__box"]} ${styles[`dropdown__box-variant--${variant}`]}`}
+              style={style}
             >
               <motion.div
                 className={styles["dropdown__box-overlay"]}

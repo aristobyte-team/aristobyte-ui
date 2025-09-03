@@ -6,7 +6,7 @@ import styles from "./SystemStatus.module.scss";
 
 export interface ISystemStatus {}
 
-export const ISystemStatus: React.FC<ISystemStatus> = ({ ...props }) => {
+export const SystemStatus: React.FC<ISystemStatus> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

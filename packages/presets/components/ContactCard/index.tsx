@@ -6,7 +6,7 @@ import styles from "./ContactCard.module.scss";
 
 export interface IContactCard {}
 
-export const IContactCard: React.FC<IContactCard> = ({ ...props }) => {
+export const ContactCard: React.FC<IContactCard> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

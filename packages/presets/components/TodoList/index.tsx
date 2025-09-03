@@ -6,7 +6,7 @@ import styles from "./TodoList.module.scss";
 
 export interface ITodoList {}
 
-export const ITodoList: React.FC<ITodoList> = ({ ...props }) => {
+export const TodoList: React.FC<ITodoList> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

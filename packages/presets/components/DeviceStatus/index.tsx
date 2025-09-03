@@ -6,7 +6,7 @@ import styles from "./DeviceStatus.module.scss";
 
 export interface IDeviceStatus {}
 
-export const IDeviceStatus: React.FC<IDeviceStatus> = ({ ...props }) => {
+export const DeviceStatus: React.FC<IDeviceStatus> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

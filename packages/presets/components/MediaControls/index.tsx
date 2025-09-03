@@ -6,7 +6,7 @@ import styles from "./MediaControls.module.scss";
 
 export interface IMediaControls {}
 
-export const IMediaControls: React.FC<IMediaControls> = ({ ...props }) => {
+export const MediaControls: React.FC<IMediaControls> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

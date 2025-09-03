@@ -6,7 +6,7 @@ import styles from "./ShoppingList.module.scss";
 
 export interface IShoppingList {}
 
-export const IShoppingList: React.FC<IShoppingList> = ({ ...props }) => {
+export const ShoppingList: React.FC<IShoppingList> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

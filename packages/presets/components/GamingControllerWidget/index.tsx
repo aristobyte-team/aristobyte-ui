@@ -6,7 +6,7 @@ import styles from "./GamingControllerWidget.module.scss";
 
 export interface IGamingControllerWidget {}
 
-export const IGamingControllerWidget: React.FC<IGamingControllerWidget> = ({
+export const GamingControllerWidget: React.FC<IGamingControllerWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

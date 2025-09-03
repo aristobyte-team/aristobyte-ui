@@ -6,7 +6,7 @@ import styles from "./SettingsPanel.module.scss";
 
 export interface ISettingsPanel {}
 
-export const ISettingsPanel: React.FC<ISettingsPanel> = ({ ...props }) => {
+export const SettingsPanel: React.FC<ISettingsPanel> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

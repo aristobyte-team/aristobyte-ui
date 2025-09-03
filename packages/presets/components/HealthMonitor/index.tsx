@@ -6,7 +6,7 @@ import styles from "./HealthMonitor.module.scss";
 
 export interface IHealthMonitor {}
 
-export const IHealthMonitor: React.FC<IHealthMonitor> = ({ ...props }) => {
+export const HealthMonitor: React.FC<IHealthMonitor> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

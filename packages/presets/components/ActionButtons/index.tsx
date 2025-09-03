@@ -6,7 +6,7 @@ import styles from "./ActionButtons.module.scss";
 
 export interface IActionButtons {}
 
-export const IActionButtons: React.FC<IActionButtons> = ({ ...props }) => {
+export const ActionButtons: React.FC<IActionButtons> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

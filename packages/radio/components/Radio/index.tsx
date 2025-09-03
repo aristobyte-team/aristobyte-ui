@@ -27,6 +27,7 @@ export interface IRadio {
     | "no-outline"
     | "glowing";
   alignLabel?: "top" | "right" | "bottom" | "left";
+  style?: React.CSSProperties;
 }
 
 export const Radio: React.FC<IRadio> = ({
@@ -36,12 +37,13 @@ export const Radio: React.FC<IRadio> = ({
   name,
   disabled = false,
   highlightLabel = false,
-  className = "",
   size = "md",
   variant = "default",
   appearance = "default",
   alignLabel = "right",
   onChange,
+  className = "",
+  style = {},
 }) => {
   const handleChange = () => {
     if (!disabled && onChange) {
@@ -58,6 +60,7 @@ export const Radio: React.FC<IRadio> = ({
       } ${styles[`radio-size--${size}`]} ${
         disabled ? styles["radio--disabled"] : ""
       } ${className}`}
+      style={style}
     >
       <input
         type="radio"

@@ -6,7 +6,7 @@ import styles from "./TravelPlanner.module.scss";
 
 export interface ITravelPlanner {}
 
-export const ITravelPlanner: React.FC<ITravelPlanner> = ({ ...props }) => {
+export const TravelPlanner: React.FC<ITravelPlanner> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

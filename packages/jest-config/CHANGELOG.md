@@ -1,5 +1,29 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.35
+
+### Patch Changes
+
+- feat: add social-media-card usage and all the necessary code updates
+
+## 1.0.34
+
+### Patch Changes
+
+- include build to prev version
+
+## 1.0.33
+
+### Patch Changes
+
+- fix: justify content center for button children
+
+## 1.0.32
+
+### Patch Changes
+
+- fix: add text align center in button
+
 ## 1.0.31
 
 ### Patch Changes

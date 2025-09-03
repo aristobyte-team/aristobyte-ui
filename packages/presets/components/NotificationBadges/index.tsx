@@ -6,7 +6,7 @@ import styles from "./NotificationBadges.module.scss";
 
 export interface INotificationBadges {}
 
-export const INotificationBadges: React.FC<INotificationBadges> = ({
+export const NotificationBadges: React.FC<INotificationBadges> = ({
   ...props
 }) => {
   const uniqId = React.useId();

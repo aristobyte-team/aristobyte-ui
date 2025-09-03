@@ -25,6 +25,7 @@ export interface IDropdownOption {
   icon?: string;
   disabled?: boolean;
   choice?: "multiple" | "single";
+  style?: React.CSSProperties;
 }
 
 export const DropdownOption: React.FC<IDropdownOption> = ({
@@ -36,10 +37,12 @@ export const DropdownOption: React.FC<IDropdownOption> = ({
   // icon,
   description,
   disabled,
+  style = {},
 }) => {
   const uniqueId = React.useId();
   return (
     <button
+      style={style}
       key={uniqueId}
       disabled={disabled}
       className={`${styles["dropdown-option"]} ${styles[`dropdown-option-variant--${variant}`]} ${disabled ? styles["dropdown-option--disabled"] : ""}`}

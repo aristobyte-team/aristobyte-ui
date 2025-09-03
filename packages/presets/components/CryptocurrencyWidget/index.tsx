@@ -6,7 +6,7 @@ import styles from "./CryptocurrencyWidget.module.scss";
 
 export interface ICryptocurrencyWidget {}
 
-export const ICryptocurrencyWidget: React.FC<ICryptocurrencyWidget> = ({
+export const CryptocurrencyWidget: React.FC<ICryptocurrencyWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

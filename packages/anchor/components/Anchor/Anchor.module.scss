@@ -1,8 +1,8 @@
 @use "@aristobyte-ui/utils/styles/settings" as *;
 
 .anchor {
+  background-color: $transparent;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
   display: flex;
   font-size: 0.875rem;
@@ -12,60 +12,78 @@
   overflow: hidden;
   position: relative;
   padding: 0.5rem 1rem;
-  transition: background-color 200ms ease;
+  transition: all 200ms ease;
 
-  &--default {
-    background-color: $transparent;
-    backdrop-filter: 8px;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &--white {
     color: $white;
 
     &:hover {
-      background-color: $white-transparent-100;
+      color: $white-hover;
+    }
+  }
+
+  &--black {
+    color: $black;
+
+    &:hover {
+      color: $black-hover;
+    }
+  }
+
+  &--default {
+    color: $color-default;
+
+    &:hover {
+      color: $color-default-hover;
     }
   }
 
   &--primary {
-    background-color: $color-primary;
-    color: $white;
+    color: $color-primary;
 
     &:hover {
-      background-color: $color-primary-hover;
+      color: $color-primary-hover;
     }
   }
 
   &--secondary {
-    background-color: $color-secondary;
-    color: $white;
+    color: $color-secondary;
 
     &:hover {
-      background-color: $color-secondary-hover;
+      color: $color-secondary-hover;
     }
   }
 
   &--success {
-    background-color: $color-success;
-    color: $white;
+    color: $color-success;
 
     &:hover {
-      background-color: $color-success-hover;
+      color: $color-success-hover;
     }
   }
 
   &--error {
-    background-color: $color-error;
-    color: $white;
+    color: $color-error;
 
     &:hover {
-      background-color: $color-error-hover;
+      color: $color-error-hover;
     }
   }
 
   &--warning {
-    background-color: $color-warning;
+    color: $color-warning;
     color: $black;
 
     &:hover {
-      background-color: $color-warning-hover;
+      color: $color-warning-hover;
     }
   }
 

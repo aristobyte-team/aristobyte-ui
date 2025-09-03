@@ -6,7 +6,7 @@ import styles from "./MiniMenu.module.scss";
 
 export interface IMiniMenu {}
 
-export const IMiniMenu: React.FC<IMiniMenu> = ({ ...props }) => {
+export const MiniMenu: React.FC<IMiniMenu> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

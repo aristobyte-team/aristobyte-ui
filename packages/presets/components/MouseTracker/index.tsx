@@ -6,7 +6,7 @@ import styles from "./MouseTracker.module.scss";
 
 export interface IMouseTracker {}
 
-export const IMouseTracker: React.FC<IMouseTracker> = ({ ...props }) => {
+export const MouseTracker: React.FC<IMouseTracker> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

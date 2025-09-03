@@ -6,7 +6,7 @@ import styles from "./PricingCard.module.scss";
 
 export interface IPricingCard {}
 
-export const IPricingCard: React.FC<IPricingCard> = ({ ...props }) => {
+export const PricingCard: React.FC<IPricingCard> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

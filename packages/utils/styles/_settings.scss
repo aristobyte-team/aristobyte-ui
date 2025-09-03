@@ -6,7 +6,9 @@
 
 // Base
 $white: #ffffff;
+$white-hover: #dddddd;
 $black: #000000;
+$black-hover: #222222;
 $transparent: transparent;
 
 // === Black Transparent Scale === //
@@ -125,7 +127,13 @@ $text-color-black: $black;
 $text-color-white-disabled: rgba($white, 0.5);
 $text-color-black-disabled: rgba($black, 0.5);
 
+$title-color-dark: $white;
+$subtitle-color-dark: #99a1af;
+$description-color-dark: #d1d5dc;
+$icon-color-dark: #99a1af;
+
 // === Shadows === //
+//@TODO: @SHADOW
 $shadow-sm: 0 1px 2px 0 rgba($black, 0.05);
 $shadow-md:
   0 4px 6px -1px rgba($black, 0.1),

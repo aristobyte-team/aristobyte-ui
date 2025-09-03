@@ -6,7 +6,7 @@ import styles from "./OfficeBuildingWidget.module.scss";
 
 export interface IOfficeBuildingWidget {}
 
-export const IOfficeBuildingWidget: React.FC<IOfficeBuildingWidget> = ({
+export const OfficeBuildingWidget: React.FC<IOfficeBuildingWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

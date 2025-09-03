@@ -6,7 +6,7 @@ import styles from "./ShoppingCart.module.scss";
 
 export interface IShoppingCart {}
 
-export const IShoppingCart: React.FC<IShoppingCart> = ({ ...props }) => {
+export const ShoppingCart: React.FC<IShoppingCart> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

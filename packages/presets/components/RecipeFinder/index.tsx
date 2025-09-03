@@ -6,7 +6,7 @@ import styles from "./RecipeFinder.module.scss";
 
 export interface IRecipeFinder {}
 
-export const IRecipeFinder: React.FC<IRecipeFinder> = ({ ...props }) => {
+export const RecipeFinder: React.FC<IRecipeFinder> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

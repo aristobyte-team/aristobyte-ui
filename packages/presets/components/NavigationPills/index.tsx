@@ -6,7 +6,7 @@ import styles from "./NavigationPills.module.scss";
 
 export interface INavigationPills {}
 
-export const INavigationPills: React.FC<INavigationPills> = ({ ...props }) => {
+export const NavigationPills: React.FC<INavigationPills> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

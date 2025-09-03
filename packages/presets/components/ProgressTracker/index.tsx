@@ -6,7 +6,7 @@ import styles from "./ProgressTracker.module.scss";
 
 export interface IProgressTracker {}
 
-export const IProgressTracker: React.FC<IProgressTracker> = ({ ...props }) => {
+export const ProgressTracker: React.FC<IProgressTracker> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

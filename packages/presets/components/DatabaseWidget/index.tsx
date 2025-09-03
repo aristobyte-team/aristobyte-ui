@@ -6,7 +6,7 @@ import styles from "./DatabaseWidget.module.scss";
 
 export interface IDatabaseWidget {}
 
-export const IDatabaseWidget: React.FC<IDatabaseWidget> = ({ ...props }) => {
+export const DatabaseWidget: React.FC<IDatabaseWidget> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

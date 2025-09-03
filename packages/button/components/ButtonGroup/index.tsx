@@ -21,6 +21,7 @@ export interface IButtonGroup {
   radius?: "none" | "sm" | "md" | "lg" | "full";
   disabled?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const ButtonGroup: React.FC<IButtonGroup> = ({
@@ -31,6 +32,7 @@ export const ButtonGroup: React.FC<IButtonGroup> = ({
   radius = "md",
   disabled,
   className = "",
+  style = {},
 }) => {
   return (
     <div
@@ -39,6 +41,7 @@ export const ButtonGroup: React.FC<IButtonGroup> = ({
       } ${styles[`button-group-size--${size}`]} ${
         styles[`button-group-radius--${radius}`]
       } ${styles[`button-group-align--${align}`]} ${className}`}
+      style={style}
     >
       {React.Children.toArray(children)
         .filter(

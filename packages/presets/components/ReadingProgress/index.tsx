@@ -6,7 +6,7 @@ import styles from "./ReadingProgress.module.scss";
 
 export interface IReadingProgress {}
 
-export const IReadingProgress: React.FC<IReadingProgress> = ({ ...props }) => {
+export const ReadingProgress: React.FC<IReadingProgress> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

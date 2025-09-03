@@ -6,7 +6,7 @@ import styles from "./MusicProduction.module.scss";
 
 export interface IMusicProduction {}
 
-export const IMusicProduction: React.FC<IMusicProduction> = ({ ...props }) => {
+export const MusicProduction: React.FC<IMusicProduction> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

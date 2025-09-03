@@ -6,7 +6,7 @@ import styles from "./FitnessTracker.module.scss";
 
 export interface IFitnessTracker {}
 
-export const IFitnessTracker: React.FC<IFitnessTracker> = ({ ...props }) => {
+export const FitnessTracker: React.FC<IFitnessTracker> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

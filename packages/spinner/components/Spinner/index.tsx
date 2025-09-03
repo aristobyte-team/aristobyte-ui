@@ -15,6 +15,7 @@ export interface ISpinner {
     | "warning";
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Spinner: React.FC<ISpinner> = ({
@@ -22,12 +23,14 @@ export const Spinner: React.FC<ISpinner> = ({
   variant = "default",
   size = "md",
   className = "",
+  style = {},
 }) => {
   return (
     <div
       className={`spinner ${styles[`spinner-type--${type}`]} ${
         styles[`spinner-variant--${variant}`]
       } ${styles[`spinner-size--${size}`]} ${className}`}
+      style={style}
     />
   );
 };

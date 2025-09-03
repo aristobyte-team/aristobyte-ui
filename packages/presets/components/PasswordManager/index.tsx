@@ -6,7 +6,7 @@ import styles from "./PasswordManager.module.scss";
 
 export interface IPasswordManager {}
 
-export const IPasswordManager: React.FC<IPasswordManager> = ({ ...props }) => {
+export const PasswordManager: React.FC<IPasswordManager> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

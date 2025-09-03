@@ -6,7 +6,7 @@ import styles from "./HabitTracker.module.scss";
 
 export interface IHabitTracker {}
 
-export const IHabitTracker: React.FC<IHabitTracker> = ({ ...props }) => {
+export const HabitTracker: React.FC<IHabitTracker> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

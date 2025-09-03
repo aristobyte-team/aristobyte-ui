@@ -29,6 +29,8 @@ export const mapping = {
       { intro: Intro },
       { installation: Installation },
       { import: Import },
+      { usage: CodePreview },
+      { disabled: CodePreview },
     ],
     "music-player": [
       { intro: Intro },

@@ -483,6 +483,16 @@ export const EN_GB = {
           description:
             "Import the <b>Social Media Card</b> from the AristoByte UI package to rapidly integrate feed-like layouts into your application. Its composable design allows easy extension with comments, likes, and sharing controls.",
         },
+        usage: {
+          title: "Usage",
+          description:
+            "Basic implementation of the <b>SocialMediaCard</b> component. Showcases a profile with <b>title</b>, <b>subtitle</b>, <b>description</b>, and optional <b>metrics</b>, <b>media</b>, and <b>tags</b>.",
+        },
+        disabled: {
+          title: "Disabled",
+          description:
+            "Demonstrates the <b>SocialMediaCard</b> in a <b>disabled</b> state. Interactions such as the action <b>button</b> are inactive, preventing any user actions.",
+        },
       },
       "music-player": {
         intro: {

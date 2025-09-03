@@ -13,6 +13,7 @@ export interface IMessageBox {
   radius?: "none" | "sm" | "md" | "lg" | "full";
   type?: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const renderIcon = (variant: MessageBoxVariant) => {
@@ -31,12 +32,13 @@ const renderIcon = (variant: MessageBoxVariant) => {
 
 export const MessageBox: React.FC<IMessageBox> = ({
   children,
-  className = "",
   variant = "default",
   withIcon = false,
   customIcon = null,
   radius = "md",
   type = "outline",
+  className = "",
+  style = {},
 }) => {
   const Icon = customIcon || renderIcon(variant);
   return (
@@ -46,6 +48,7 @@ export const MessageBox: React.FC<IMessageBox> = ({
       } ${styles[`message-box-radius--${radius}`]} ${
         styles[`message-box--${variant}`]
       } ${className}`}
+      style={style}
     >
       {withIcon && (
         <span

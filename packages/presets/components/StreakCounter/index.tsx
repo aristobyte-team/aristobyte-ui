@@ -6,7 +6,7 @@ import styles from "./StreakCounter.module.scss";
 
 export interface IStreakCounter {}
 
-export const IStreakCounter: React.FC<IStreakCounter> = ({ ...props }) => {
+export const StreakCounter: React.FC<IStreakCounter> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

@@ -6,7 +6,7 @@ import styles from "./TeamCollaborationWidget.module.scss";
 
 export interface ITeamCollaborationWidget {}
 
-export const ITeamCollaborationWidget: React.FC<ITeamCollaborationWidget> = ({
+export const TeamCollaborationWidget: React.FC<ITeamCollaborationWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

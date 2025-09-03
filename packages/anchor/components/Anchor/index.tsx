@@ -1,43 +1,58 @@
 "use client";
 
 import * as React from "react";
-import { renderRipple } from "@aristobyte-ui/utils";
 
 import styles from "./Anchor.module.scss";
 
-export interface IAnchor extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  variant?: "primary" | "secondary" | "default";
+export interface IAnchor {
+  href?: "";
+  target?: "_self" | "_blank" | "_parent" | "_top";
+  text?: string;
+  children?: React.ReactElement | React.ReactNode | string;
+  onClick?: (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => void | Promise<void>;
+  variant?:
+    | "white"
+    | "black"
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning";
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Anchor: React.FC<IAnchor> = ({
   href,
+  target = "_self",
   variant = "default",
-  className = "",
-  children,
+  children = "",
+  text = "",
   onClick,
-  ...props
+  className = "",
+  style = {},
 }) => {
   const ref = React.useRef<HTMLAnchorElement>(null);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    const { clientX, clientY } = e;
-    renderRipple<HTMLAnchorElement>({ ref, clientX, clientY });
-    if (onClick) {
-      onClick(e);
-    }
+  const renderChildren = () => {
+    return text || children;
   };
 
   return (
     <a
-      {...props}
       ref={ref}
       href={href}
+      target={target}
       className={`anchor ${styles["anchor"]} ${
         styles[`anchor--${variant}`]
       } ${className}`}
-      onClick={handleClick}
+      onClick={onClick}
+      style={style}
     >
-      {children}
+      {renderChildren()}
     </a>
   );
 };

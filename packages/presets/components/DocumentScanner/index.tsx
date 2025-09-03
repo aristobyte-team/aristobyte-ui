@@ -6,7 +6,7 @@ import styles from "./DocumentScanner.module.scss";
 
 export interface IDocumentScanner {}
 
-export const IDocumentScanner: React.FC<IDocumentScanner> = ({ ...props }) => {
+export const DocumentScanner: React.FC<IDocumentScanner> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

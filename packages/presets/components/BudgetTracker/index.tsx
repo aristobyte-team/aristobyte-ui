@@ -6,7 +6,7 @@ import styles from "./BudgetTracker.module.scss";
 
 export interface IBudgetTracker {}
 
-export const IBudgetTracker: React.FC<IBudgetTracker> = ({ ...props }) => {
+export const BudgetTracker: React.FC<IBudgetTracker> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

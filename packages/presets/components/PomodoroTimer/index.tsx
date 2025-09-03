@@ -6,7 +6,7 @@ import styles from "./PomodoroTimer.module.scss";
 
 export interface IPomodoroTimer {}
 
-export const IPomodoroTimer: React.FC<IPomodoroTimer> = ({ ...props }) => {
+export const PomodoroTimer: React.FC<IPomodoroTimer> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

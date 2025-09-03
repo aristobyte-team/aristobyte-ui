@@ -6,7 +6,7 @@ import styles from "./StatisticsCards.module.scss";
 
 export interface IStatisticsCards {}
 
-export const IStatisticsCards: React.FC<IStatisticsCards> = ({ ...props }) => {
+export const StatisticsCards: React.FC<IStatisticsCards> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

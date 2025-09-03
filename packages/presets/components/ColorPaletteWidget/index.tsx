@@ -6,7 +6,7 @@ import styles from "./ColorPaletteWidget.module.scss";
 
 export interface IColorPaletteWidget {}
 
-export const IColorPaletteWidget: React.FC<IColorPaletteWidget> = ({
+export const ColorPaletteWidget: React.FC<IColorPaletteWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

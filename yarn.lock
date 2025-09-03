@@ -30,6 +30,20 @@
     shiki "^3.7.0"
     tsup "^8.5.0"
 
+"@aristobyte-ui/presets@workspace:*":
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/@aristobyte-ui/presets/-/presets-1.0.31.tgz#11fbd0353181f7412b709f04a2387da8cd4120d7"
+  integrity sha512-jiEf0mzHrfZCM7XD7piV0uXax2NGO/34NaE7YgaPj61lfX5P/rOr88hVSFYBZVBlCRtovcJZP++mqFL6E6aMog==
+  dependencies:
+    "@aristobyte-ui/utils" "^1.0.31"
+    esbuild-sass-plugin "^3.3.1"
+    framer-motion "^12.23.9"
+    react "^19.1.0"
+    react-dom "^19.1.0"
+    sass "^1.89.0"
+    shiki "^3.7.0"
+    tsup "^8.5.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.7", "@babel/code-frame@^7.27.1":
   version "7.27.1"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.27.1.tgz#200f715e66d52a23b221a9435534a91cc13ad5be"

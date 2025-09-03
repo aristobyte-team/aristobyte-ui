@@ -6,7 +6,17 @@ import { renderRipple } from "@aristobyte-ui/utils";
 
 import styles from "./Button.module.scss";
 
-export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButton {
+  type?: "button" | "link";
+  text?: string;
+  children?: React.ReactElement | React.ReactNode | string;
+  href?: string;
+  target?: "_self" | "_blank" | "_parent" | "_top";
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>
+  ) => void | Promise<void>;
+  disabled?: boolean;
+  transparent?: boolean;
   variant?:
     | "default"
     | "primary"
@@ -28,34 +38,59 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   };
   isLoading?: boolean;
   spinnerType?: "default" | "duo" | "gradient" | "pulse" | "pulse-duo";
+  className?: string;
+  // @TODO: apply this everywhere
+  style?: React.CSSProperties;
 }
 
 export const Button: React.FC<IButton> = ({
   onClick,
-  children,
+  text = "",
+  href = "",
+  target = "_self",
+  children = "",
+  type = "button",
   variant = "default",
   appearance = "solid",
   size = "md",
   radius = "md",
   icon,
   spinnerType = "default",
+  transparent = false,
   isLoading = false,
-  disabled,
+  disabled = false,
   className = "",
-  dangerouslySetInnerHTML,
-  ...restProps
+  style = {},
 }) => {
-  const ref = React.useRef<HTMLButtonElement>(null);
+  const uniqueId = React.useId();
+  const ref = React.useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>
+  ) => {
     const { clientX, clientY } = e;
-    renderRipple<HTMLButtonElement>({ ref, clientX, clientY });
+    renderRipple<HTMLButtonElement | HTMLAnchorElement>({
+      ref,
+      clientX,
+      clientY,
+    });
     if (onClick) {
       onClick(e);
     }
   };
 
-  const Children = () => (
+  const getCommonProps = () => ({
+    onClick: handleClick,
+    disabled: disabled || isLoading,
+    style,
+    className: `${styles["button"]} ${transparent ? styles["button--transparent"] : ""} ${styles[`button-variant--${variant}`]} ${
+      styles[`button-appearance--${appearance}`]
+    } ${styles[`button-size--${size}`]} ${
+      styles[`button-radius--${radius}`]
+    } ${isLoading ? styles["button--loading"] : ""} ${className}`,
+  });
+
+  const renderChildren = () => (
     <>
       {isLoading && (
         <Spinner
@@ -74,24 +109,31 @@ export const Button: React.FC<IButton> = ({
           {React.createElement(icon.component)}
         </span>
       )}
-      {children}
+      {text || children}
     </>
   );
 
+  if (type === "link") {
+    return (
+      <a
+        key={uniqueId}
+        ref={ref as React.RefObject<HTMLAnchorElement>}
+        target={target}
+        href={href}
+        {...getCommonProps()}
+      >
+        {renderChildren()}
+      </a>
+    );
+  }
+
   return (
     <button
-      ref={ref}
-      disabled={disabled || isLoading}
-      className={`${styles["button"]} ${styles[`button-variant--${variant}`]} ${
-        styles[`button-appearance--${appearance}`]
-      } ${styles[`button-size--${size}`]} ${
-        styles[`button-radius--${radius}`]
-      } ${isLoading ? styles["button--loading"] : ""} ${className}`}
-      onClick={handleClick}
-      {...(dangerouslySetInnerHTML
-        ? { dangerouslySetInnerHTML }
-        : { children: <Children /> })}
-      {...restProps}
-    />
+      key={uniqueId}
+      ref={ref as React.RefObject<HTMLButtonElement>}
+      {...getCommonProps()}
+    >
+      {renderChildren()}
+    </button>
   );
 };

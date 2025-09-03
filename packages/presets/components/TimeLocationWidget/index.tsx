@@ -6,7 +6,7 @@ import styles from "./TimeLocationWidget.module.scss";
 
 export interface ITimeLocationWidget {}
 
-export const ITimeLocationWidget: React.FC<ITimeLocationWidget> = ({
+export const TimeLocationWidget: React.FC<ITimeLocationWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

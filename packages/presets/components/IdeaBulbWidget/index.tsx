@@ -6,7 +6,7 @@ import styles from "./IdeaBulbWidget.module.scss";
 
 export interface IIdeaBulbWidget {}
 
-export const IIdeaBulbWidget: React.FC<IIdeaBulbWidget> = ({ ...props }) => {
+export const IdeaBulbWidget: React.FC<IIdeaBulbWidget> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

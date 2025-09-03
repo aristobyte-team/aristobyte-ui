@@ -6,9 +6,7 @@ import styles from "./StatusIndicators.module.scss";
 
 export interface IStatusIndicators {}
 
-export const IStatusIndicators: React.FC<IStatusIndicators> = ({
-  ...props
-}) => {
+export const StatusIndicators: React.FC<IStatusIndicators> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

@@ -6,7 +6,7 @@ import styles from "./QuickActions.module.scss";
 
 export interface IQuickActions {}
 
-export const IQuickActions: React.FC<IQuickActions> = ({ ...props }) => {
+export const QuickActions: React.FC<IQuickActions> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

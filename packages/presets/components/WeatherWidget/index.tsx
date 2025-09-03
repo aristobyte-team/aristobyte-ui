@@ -6,7 +6,7 @@ import styles from "./WeatherWidget.module.scss";
 
 export interface IWeatherWidget {}
 
-export const IWeatherWidget: React.FC<IWeatherWidget> = ({ ...props }) => {
+export const WeatherWidget: React.FC<IWeatherWidget> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

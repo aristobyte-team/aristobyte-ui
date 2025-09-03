@@ -6,7 +6,7 @@ import styles from "./EnergyMeter.module.scss";
 
 export interface IEnergyMeter {}
 
-export const IEnergyMeter: React.FC<IEnergyMeter> = ({ ...props }) => {
+export const EnergyMeter: React.FC<IEnergyMeter> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return (

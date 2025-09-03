@@ -6,7 +6,7 @@ import styles from "./RocketLaunchWidget.module.scss";
 
 export interface IRocketLaunchWidget {}
 
-export const IRocketLaunchWidget: React.FC<IRocketLaunchWidget> = ({
+export const RocketLaunchWidget: React.FC<IRocketLaunchWidget> = ({
   ...props
 }) => {
   const uniqId = React.useId();

@@ -488,7 +488,7 @@ export const Config = {
       "mini-menu": ["MiniMenu"],
       "notification-badges": ["NotificationBadges"],
       "profile-badge": ["ProfileBadge"],
-      "time-&-location-widget": ["Time&LocationWidget"],
+      "time-&-location-widget": ["TimeLocationWidget"],
       "energy-meter": ["EnergyMeter"],
       "cryptocurrency-widget": ["CryptocurrencyWidget"],
       "gaming-controller-widget": ["GamingControllerWidget"],
