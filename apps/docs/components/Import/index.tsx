@@ -6,18 +6,39 @@ import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
 
 export type IImport = {
+  category: string;
   unit: string;
   config: ConfigType;
   t: TranslateFunctionType;
 };
 
-export const Import: React.FC<IImport> = ({ unit, config, t }) => (
+const renderCode = (
+  category: string,
+  unit: string,
+  componentToImportArr: string[],
+  isGlobal: boolean
+) => {
+  switch (category) {
+    case "components":
+    default:
+      return `import { ${componentToImportArr.join(", ")} } from "@aristobyte-ui${isGlobal ? "" : "/" + unit}";`;
+    case "presets":
+      return `import { ${componentToImportArr.join(", ")} } from "@aristobyte-ui${isGlobal ? "" : "/" + category}";`;
+  }
+};
+
+export const Import: React.FC<IImport> = ({ category, unit, config, t }) => (
   <TabSwitchWithSlidingIndicator
-    tabs={config.import.tabs.map((id) => ({
+    tabs={config.importTabs.map((id) => ({
       buttonContent: <span key={id}>{t(`layout.import-tabs.${id}`)}</span>,
       content: (
         <CodeBlock
-          code={`import { ${(config.import.components[unit!] || []).join(", ")} } from "@aristobyte-ui${id === "global" ? "" : "/" + unit}";`}
+          code={renderCode(
+            category,
+            unit,
+            config.import[category]![unit!] || [],
+            id === "global"
+          )}
         />
       ),
     }))}

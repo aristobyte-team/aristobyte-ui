@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Mapping } from "./mapping";
+import { mapping } from "./mapping";
 import { useConfig, useTranslate } from "@/context";
 import { LayoutSection } from "../LayoutSection";
 
@@ -12,7 +12,7 @@ export const SectionMapping = ({ category, unit }: SectionMappingPropsType) => {
   const { config } = useConfig();
   const { t } = useTranslate();
 
-  return Mapping(category, unit).map((entry) => (
+  return mapping[category]![unit]!.map((entry) => (
     <LayoutSection
       key={Object.keys(entry)[0]!}
       id={Object.keys(entry)[0]!}

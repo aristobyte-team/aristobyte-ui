@@ -8,12 +8,18 @@ import { type ConfigType } from "@/config";
 import { type TranslateFunctionType } from "@/data";
 
 export interface IInstallation {
+  category: string;
   unit: string;
   t: TranslateFunctionType;
   config: ConfigType;
 }
 
-export const Installation: React.FC<IInstallation> = ({ unit, config, t }) => (
+export const Installation: React.FC<IInstallation> = ({
+  category,
+  unit,
+  config,
+  t,
+}) => (
   <>
     <TabSwitchWithSlidingIndicator
       tabs={config.installation.map(({ label, Icon, script }) => ({
@@ -35,7 +41,7 @@ export const Installation: React.FC<IInstallation> = ({ unit, config, t }) => (
       }))}
     />
     <MessageBox withIcon variant="warning" className="layout__warning">
-      {t(`layout.components.${unit}.installation.description`)}
+      {t(`layout.${category}.${unit}.installation.description`)}
     </MessageBox>
   </>
 );

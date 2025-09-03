@@ -24,7 +24,7 @@ export const CodePreview = ({
   section,
 }: CodePreviewPropsType) => (
   <TabSwitchWithSlidingIndicator
-    tabs={config.codePreview.tabs.map((id) => ({
+    tabs={config.codePreviewTabs.map((id) => ({
       buttonContent: <span key={id}>{t(`layout.codePreview.${id}`)}</span>,
       content:
         id === "preview" ? (
@@ -32,7 +32,7 @@ export const CodePreview = ({
             {React.createElement(mapping[category]![unit]![section]!)}
           </div>
         ) : (
-          <CodeBlock code={CodeBlocks![unit]![section]!} />
+          <CodeBlock code={CodeBlocks![category]![unit]![section]!} />
         ),
     }))}
   />

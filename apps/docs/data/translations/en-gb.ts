@@ -2,6 +2,7 @@ export const EN_GB = {
   sidebar: {
     sections: {
       components: "Component",
+      presets: "Presets",
       "get-started": "Get started",
     },
     links: {
@@ -14,6 +15,75 @@ export const EN_GB = {
       "message-box": "Message Box",
       radio: "Radio",
       switch: "Switch",
+      "social-media-card": "Social Media Card",
+      "music-player": "Music Player",
+      "statistics-cards": "Statistics Cards",
+      "settings-panel": "Settings Panel",
+      "action-buttons": "Action Buttons",
+      "status-indicators": "Status Indicators",
+      "navigation-pills": "Navigation Pills",
+      "quick-actions": "Quick Actions",
+      "weather-widget": "Weather Widget",
+      "notification-cards": "Notification Cards",
+      "todo-list": "Todo List",
+      "chat-messages": "Chat Messages",
+      "activity-feed": "Activity Feed",
+      "shopping-cart": "Shopping Cart",
+      "file-upload-area": "File Upload Area",
+      "progress-tracker": "Progress Tracker",
+      "media-controls": "Media Controls",
+      "pricing-card": "Pricing Card",
+      "calendar-widget": "Calendar Widget",
+      "device-status": "Device Status",
+      "analytics-dashboard": "Analytics Dashboard",
+      "contact-card": "Contact Card",
+      "file-manager": "File Manager",
+      "quick-stats": "Quick Stats",
+      "mini-menu": "Mini Menu",
+      "notification-badges": "Notification Badges",
+      "profile-badge": "Profile Badge",
+      "time-&-location-widget": "Time & Location Widget",
+      "energy-meter": "Energy Meter",
+      "cryptocurrency-widget": "Cryptocurrency Widget",
+      "gaming-controller-widget": "Gaming Controller Widget",
+      "streak-counter": "Streak Counter",
+      "layer-stack-widget": "Layer Stack Widget",
+      "inspiration-widget": "Inspiration Widget",
+      "nature-widget": "Nature Widget",
+      "reading-progress": "Reading Progress",
+      "idea-bulb-widget": "Idea Bulb Widget",
+      "rocket-launch-widget": "Rocket Launch Widget",
+      "tool-widget": "Tool Widget",
+      "color-palette-widget": "Color Palette Widget",
+      "system-status": "System Status",
+      "pomodoro-timer": "Pomodoro Timer",
+      "database-widget": "Database Widget",
+      "network-status": "Network Status",
+      "code-stats": "Code Stats",
+      "mouse-tracker": "Mouse Tracker",
+      "design-system": "Design System",
+      "ai-assistant": "AI Assistant",
+      "office-building-widget": "Office Building Widget",
+      "team-collaboration-widget": "Team Collaboration Widget",
+      "health-monitor": "Health Monitor",
+      "email-dashboard": "Email Dashboard",
+      "document-scanner": "Document Scanner",
+      "social-engagement": "Social Engagement",
+      "video-call-widget": "Video Call Widget",
+      "task-manager": "Task Manager",
+      "fitness-tracker": "Fitness Tracker",
+      "cloud-storage": "Cloud Storage",
+      "language-learning": "Language Learning",
+      "stock-market": "Stock Market",
+      "recipe-finder": "Recipe Finder",
+      "travel-planner": "Travel Planner",
+      "budget-tracker": "Budget Tracker",
+      "password-manager": "Password Manager",
+      "photo-editor": "Photo Editor",
+      "music-production": "Music Production",
+      "shopping-list": "Shopping List",
+      "habit-tracker": "Habit Tracker",
+      "code-editor": "Code Editor",
     },
   },
   layout: {
@@ -393,6 +463,178 @@ export const EN_GB = {
           title: "Appearance",
           description:
             "Illustrates all available <b>Dropdown</b> <b>appearances</b> — <b>solid</b>, <b>glowing</b>, <b>outline</b>, <b>outline-dashed</b>, <b>no-outline</b> — across variants (<b>default</b>, <b>primary</b>, <b>secondary</b>, <b>success</b>, <b>error</b>, <b>warning</b>). Useful for visual reference and styling consistency. Use <b>variant</b> to convey semantic intent, while <b>appearance</b> controls decorative rendering.",
+        },
+      },
+    },
+    presets: {
+      "social-media-card": {
+        intro: {
+          title: "Social Media Card",
+          description:
+            "The <b>Social Media Card</b> preset provides a modular content block for displaying user profiles, posts, or activity snippets. Designed for engagement-driven UIs, it supports avatars, metadata, and action buttons to replicate modern social feed interactions.",
+        },
+        installation: {
+          title: "Installation of Social Media Card",
+          description:
+            "Install the <b>Social Media Card</b> preset individually using the command above. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Social Media Card",
+          description:
+            "Import the <b>Social Media Card</b> from the AristoByte UI package to rapidly integrate feed-like layouts into your application. Its composable design allows easy extension with comments, likes, and sharing controls.",
+        },
+      },
+      "music-player": {
+        intro: {
+          title: "Music Player",
+          description:
+            "The <b>Music Player</b> preset delivers an embedded audio playback interface with controls for play, pause, skip, and volume. Tailored for media-centric applications, it ensures accessibility and responsive interaction patterns.",
+        },
+        installation: {
+          title: "Installation of Music Player",
+          description:
+            "Install the <b>Music Player</b> preset individually. This step can be skipped if <b>@aristobyte-ui</b> is already available globally.",
+        },
+        import: {
+          title: "Import Music Player",
+          description:
+            "Bring the <b>Music Player</b> component into your project to offer users direct control over audio content. The preset ships with adaptive styling for mobile and desktop breakpoints.",
+        },
+      },
+      "statistics-cards": {
+        intro: {
+          title: "Statistics Cards",
+          description:
+            "The <b>Statistics Cards</b> preset enables at-a-glance metrics display. Ideal for dashboards and analytics, each card showcases key KPIs with clear typography, icons, and contextual coloring.",
+        },
+        installation: {
+          title: "Installation of Statistics Cards",
+          description:
+            "Install the <b>Statistics Cards</b> preset individually if not already included in the global <b>@aristobyte-ui</b> package.",
+        },
+        import: {
+          title: "Import Statistics Cards",
+          description:
+            "Import <b>Statistics Cards</b> into your dashboard to provide users with concise, visually distinct data summaries. Cards can be customized with icons, variants, and sizing props.",
+        },
+      },
+      "settings-panel": {
+        intro: {
+          title: "Settings Panel",
+          description:
+            "The <b>Settings Panel</b> preset organizes configuration options into a clean, intuitive interface. Perfect for account preferences, system settings, or feature toggles.",
+        },
+        installation: {
+          title: "Installation of Settings Panel",
+          description:
+            "Install the <b>Settings Panel</b> preset individually. Skip this step if <b>@aristobyte-ui</b> is installed globally.",
+        },
+        import: {
+          title: "Import Settings Panel",
+          description:
+            "Import the <b>Settings Panel</b> into your application to centralize user configuration. It supports nested controls, switches, and contextual grouping for clarity.",
+        },
+      },
+      "action-buttons": {
+        intro: {
+          title: "Action Buttons",
+          description:
+            "The <b>Action Buttons</b> preset provides a collection of quick-access controls designed for contextual actions. Ideal for toolbars, card footers, and floating action layouts.",
+        },
+        installation: {
+          title: "Installation of Action Buttons",
+          description:
+            "Install the <b>Action Buttons</b> preset individually. You may skip if <b>@aristobyte-ui</b> is already part of your project.",
+        },
+        import: {
+          title: "Import Action Buttons",
+          description:
+            "Import <b>Action Buttons</b> into your UI to streamline repetitive tasks and enable consistent call-to-action placement. Compatible with all button variants and appearances.",
+        },
+      },
+      "status-indicators": {
+        intro: {
+          title: "Status Indicators",
+          description:
+            "The <b>Status Indicators</b> preset provides lightweight visual signals to communicate state, availability, or progress. Commonly used in dashboards, chat presence, or device monitors.",
+        },
+        installation: {
+          title: "Installation of Status Indicators",
+          description:
+            "Install the <b>Status Indicators</b> preset individually if needed. Otherwise, use the globally available version from <b>@aristobyte-ui</b>.",
+        },
+        import: {
+          title: "Import Status Indicators",
+          description:
+            "Import <b>Status Indicators</b> to enrich your UI with semantic feedback. Supports color variants and size scaling for adaptive integration.",
+        },
+      },
+      "navigation-pills": {
+        intro: {
+          title: "Navigation Pills",
+          description:
+            "The <b>Navigation Pills</b> preset offers a compact tab-like navigation system styled as rounded pills. It is ideal for segmenting content categories or toggling views.",
+        },
+        installation: {
+          title: "Installation of Navigation Pills",
+          description:
+            "Install the <b>Navigation Pills</b> preset individually. Skip if <b>@aristobyte-ui</b> is already available globally.",
+        },
+        import: {
+          title: "Import Navigation Pills",
+          description:
+            "Import <b>Navigation Pills</b> to enable users to switch between grouped sections. Variants allow semantic styling and highlight current selection.",
+        },
+      },
+      "quick-actions": {
+        intro: {
+          title: "Quick Actions",
+          description:
+            "The <b>Quick Actions</b> preset consolidates a set of commonly performed tasks into an easily accessible UI cluster. Perfect for contextual shortcuts in productivity tools.",
+        },
+        installation: {
+          title: "Installation of Quick Actions",
+          description:
+            "Install the <b>Quick Actions</b> preset individually, unless already included via the global <b>@aristobyte-ui</b> package.",
+        },
+        import: {
+          title: "Import Quick Actions",
+          description:
+            "Import <b>Quick Actions</b> to provide users with rapid entry points to frequent workflows. Supports icons, tooltips, and grouped layouts.",
+        },
+      },
+      "weather-widget": {
+        intro: {
+          title: "Weather Widget",
+          description:
+            "The <b>Weather Widget</b> preset surfaces real-time weather insights in a compact, card-based format. It integrates temperature, condition icons, and location context.",
+        },
+        installation: {
+          title: "Installation of Weather Widget",
+          description:
+            "Install the <b>Weather Widget</b> preset individually, unless <b>@aristobyte-ui</b> is already installed globally.",
+        },
+        import: {
+          title: "Import Weather Widget",
+          description:
+            "Import <b>Weather Widget</b> into your application to provide environmental context. Supports location-based customization and unit switching.",
+        },
+      },
+      "notification-cards": {
+        intro: {
+          title: "Notification Cards",
+          description:
+            "The <b>Notification Cards</b> preset provides structured alert blocks for delivering contextual updates. Perfect for activity feeds, dashboards, or inbox-like UIs.",
+        },
+        installation: {
+          title: "Installation of Notification Cards",
+          description:
+            "Install the <b>Notification Cards</b> preset individually. Skip this step if <b>@aristobyte-ui</b> is globally available.",
+        },
+        import: {
+          title: "Import Notification Cards",
+          description:
+            "Import <b>Notification Cards</b> to surface time-sensitive messages with consistent styling and hierarchy. Configurable with icons and action buttons.",
         },
       },
     },
