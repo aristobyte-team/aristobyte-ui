@@ -1,5 +1,11 @@
 # @aristobyte-ui/eslint-config
 
+## 1.0.31
+
+### Patch Changes
+
+- feat: inti presets package
+
 ## 1.0.30
 
 ### Patch Changes

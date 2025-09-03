@@ -1,5 +1,21 @@
 # @aristobyte-ui/docs
 
+## 1.0.31
+
+### Patch Changes
+
+- feat: inti presets package
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.31
+  - @aristobyte-ui/button@1.0.31
+  - @aristobyte-ui/dropdown@1.0.31
+  - @aristobyte-ui/message-box@1.0.31
+  - @aristobyte-ui/radio@1.0.31
+  - @aristobyte-ui/spinner@1.0.31
+  - @aristobyte-ui/switch@1.0.31
+  - @aristobyte-ui/utils@1.0.31
+
 ## 1.0.30
 
 ### Patch Changes
