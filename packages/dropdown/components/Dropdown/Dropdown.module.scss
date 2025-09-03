@@ -8,6 +8,30 @@
   }
 
   &__box {
+    &-variant--default &-options {
+      background-color: $color-default;
+    }
+
+    &-variant--primary &-options {
+      background-color: $color-primary;
+    }
+
+    &-variant--secondary &-options {
+      background-color: $color-secondary;
+    }
+
+    &-variant--warning &-options {
+      background-color: $color-warning;
+    }
+
+    &-variant--error &-options {
+      background-color: $color-error;
+    }
+
+    &-variant--success &-options {
+      background-color: $color-success;
+    }
+
     &-overlay {
       backdrop-filter: blur(12px);
       height: 100%;
@@ -20,7 +44,6 @@
 
     &-options {
       align-items: flex-start;
-      background-color: $color-default;
       border-radius: 8px; //TODO: change to dynamic
       box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.04),

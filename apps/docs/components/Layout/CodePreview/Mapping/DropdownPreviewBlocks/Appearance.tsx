@@ -2,30 +2,27 @@ import * as React from "react";
 import { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";
 
 interface IDropdownComponent {
-  variant?:
+  variant:
     | "default"
     | "primary"
     | "secondary"
     | "success"
     | "error"
     | "warning";
-  appearance?:
-    | "solid"
-    | "outline"
-    | "outline-dashed"
-    | "no-outline"
-    | "glowing";
+  appearance: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
+  placeholder: string;
 }
 
 const DropdownComponent: React.FC<IDropdownComponent> = ({
   variant,
   appearance,
+  placeholder,
 }) => (
   <Dropdown
     variant={variant}
     appearance={appearance}
+    placeholder={placeholder}
     value="frontend"
-    placeholder="Open dropdown"
   >
     <DropdownOption
       value="frontend"
@@ -59,46 +56,166 @@ export const Appearance = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="default" />
-        <DropdownComponent appearance="glowing" variant="default" />
-        <DropdownComponent appearance="outline" variant="default" />
-        <DropdownComponent appearance="outline-dashed" variant="default" />
-        <DropdownComponent appearance="no-outline" variant="default" />
+        <DropdownComponent
+          placeholder="Solid Default"
+          appearance="solid"
+          variant="default"
+        />
+        <DropdownComponent
+          placeholder="Glowing Default"
+          appearance="glowing"
+          variant="default"
+        />
+        <DropdownComponent
+          placeholder="Outline Default"
+          appearance="outline"
+          variant="default"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Default"
+          appearance="outline-dashed"
+          variant="default"
+        />
+        <DropdownComponent
+          placeholder="No-outline Default"
+          appearance="no-outline"
+          variant="default"
+        />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="primary" />
-        <DropdownComponent appearance="glowing" variant="primary" />
-        <DropdownComponent appearance="outline" variant="primary" />
-        <DropdownComponent appearance="outline-dashed" variant="primary" />
-        <DropdownComponent appearance="no-outline" variant="primary" />
+        <DropdownComponent
+          placeholder="Solid Primary"
+          appearance="solid"
+          variant="primary"
+        />
+        <DropdownComponent
+          placeholder="Glowing Primary"
+          appearance="glowing"
+          variant="primary"
+        />
+        <DropdownComponent
+          placeholder="Outline Primary"
+          appearance="outline"
+          variant="primary"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Primary"
+          appearance="outline-dashed"
+          variant="primary"
+        />
+        <DropdownComponent
+          placeholder="No-outline Primary"
+          appearance="no-outline"
+          variant="primary"
+        />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="secondary" />
-        <DropdownComponent appearance="glowing" variant="secondary" />
-        <DropdownComponent appearance="outline" variant="secondary" />
-        <DropdownComponent appearance="outline-dashed" variant="secondary" />
-        <DropdownComponent appearance="no-outline" variant="secondary" />
+        <DropdownComponent
+          placeholder="Solid Secondary"
+          appearance="solid"
+          variant="secondary"
+        />
+        <DropdownComponent
+          placeholder="Glowing Secondary"
+          appearance="glowing"
+          variant="secondary"
+        />
+        <DropdownComponent
+          placeholder="Outline Secondary"
+          appearance="outline"
+          variant="secondary"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Secondary"
+          appearance="outline-dashed"
+          variant="secondary"
+        />
+        <DropdownComponent
+          placeholder="No-outline Secondary"
+          appearance="no-outline"
+          variant="secondary"
+        />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="error" />
-        <DropdownComponent appearance="glowing" variant="error" />
-        <DropdownComponent appearance="outline" variant="error" />
-        <DropdownComponent appearance="outline-dashed" variant="error" />
-        <DropdownComponent appearance="no-outline" variant="error" />
+        <DropdownComponent
+          placeholder="Solid Error"
+          appearance="solid"
+          variant="error"
+        />
+        <DropdownComponent
+          placeholder="Glowing Error"
+          appearance="glowing"
+          variant="error"
+        />
+        <DropdownComponent
+          placeholder="Outline Error"
+          appearance="outline"
+          variant="error"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Error"
+          appearance="outline-dashed"
+          variant="error"
+        />
+        <DropdownComponent
+          placeholder="No-outline Error"
+          appearance="no-outline"
+          variant="error"
+        />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="warning" />
-        <DropdownComponent appearance="glowing" variant="warning" />
-        <DropdownComponent appearance="outline" variant="warning" />
-        <DropdownComponent appearance="outline-dashed" variant="warning" />
-        <DropdownComponent appearance="no-outline" variant="warning" />
+        <DropdownComponent
+          placeholder="Solid Warning"
+          appearance="solid"
+          variant="warning"
+        />
+        <DropdownComponent
+          placeholder="Glowing Warning"
+          appearance="glowing"
+          variant="warning"
+        />
+        <DropdownComponent
+          placeholder="Outline Warning"
+          appearance="outline"
+          variant="warning"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Warning"
+          appearance="outline-dashed"
+          variant="warning"
+        />
+        <DropdownComponent
+          placeholder="No-outline Warning"
+          appearance="no-outline"
+          variant="warning"
+        />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <DropdownComponent appearance="solid" variant="success" />
-        <DropdownComponent appearance="glowing" variant="success" />
-        <DropdownComponent appearance="outline" variant="success" />
-        <DropdownComponent appearance="outline-dashed" variant="success" />
-        <DropdownComponent appearance="no-outline" variant="success" />
+        <DropdownComponent
+          placeholder="Solid Success"
+          appearance="solid"
+          variant="success"
+        />
+        <DropdownComponent
+          placeholder="Glowing Success"
+          appearance="glowing"
+          variant="success"
+        />
+        <DropdownComponent
+          placeholder="Outline Success"
+          appearance="outline"
+          variant="success"
+        />
+        <DropdownComponent
+          placeholder="Outline-dashed Success"
+          appearance="outline-dashed"
+          variant="success"
+        />
+        <DropdownComponent
+          placeholder="No-outline Success"
+          appearance="no-outline"
+          variant="success"
+        />
       </div>
     </div>
   );

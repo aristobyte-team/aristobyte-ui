@@ -4,7 +4,7 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { DropdownOption, type IDropdownOption } from "../DropdownOption";
-import { Button } from "@aristobyte-ui/button";
+import { Button, type IButton } from "@aristobyte-ui/button";
 import { Portal } from "@aristobyte-ui/utils";
 
 import styles from "./Dropdown.module.scss";
@@ -14,6 +14,14 @@ export interface IDropdown {
     | React.ReactElement<IDropdownOption>
     | React.ReactElement<IDropdownOption>[];
   value: string;
+  button?: Omit<IButton, "children" | "dangerouslySetInnerHTML">;
+  variant?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning";
   appearance?:
     | "solid"
     | "outline"
@@ -22,6 +30,7 @@ export interface IDropdown {
     | "glowing";
   onChange?: (newValue: string) => void;
   initiallyOpened?: boolean;
+  choice?: "multiple" | "single";
   placeholder?: string;
   disabled?: boolean;
   className?: string;
@@ -38,13 +47,18 @@ export const Dropdown: React.FC<IDropdown> = ({
   value,
   onChange,
   appearance = "outline",
+  variant = "default",
   placeholder = "Select",
+  choice = "single",
   className = "",
   initiallyOpened = false,
   disabled = false,
+  button = {},
 }) => {
   const [isOpened, setIsOpened] = React.useState<boolean>(initiallyOpened);
-  const [selected, setSelected] = React.useState<string>(value);
+  const [selected, setSelected] = React.useState<string[]>(
+    value ? [value] : []
+  );
   const [position, setPosition] = React.useState<PositionType>({
     top: 0,
     left: 0,
@@ -81,11 +95,26 @@ export const Dropdown: React.FC<IDropdown> = ({
 
   const handleChange = (currentRadioValue: string) => {
     onChange?.(currentRadioValue);
-    setSelected(currentRadioValue);
-    setIsOpened(false);
+    if (!choice) {
+      setSelected([currentRadioValue]);
+      setIsOpened(false);
+      return;
+    }
+
+    if (choice === "single") {
+      setSelected([currentRadioValue]);
+    }
+
+    if (choice === "multiple") {
+      setSelected((prev) =>
+        prev.includes(currentRadioValue)
+          ? prev.filter((v) => v !== currentRadioValue)
+          : [...prev, currentRadioValue]
+      );
+    }
   };
 
-  const handleToggle = () => {
+  const handleToggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (disabled) return;
 
     const rect = buttonRef.current?.getBoundingClientRect();
@@ -108,6 +137,9 @@ export const Dropdown: React.FC<IDropdown> = ({
     } as PositionType;
 
     setPosition(finalPosition);
+
+    if (button?.onClick) button.onClick(e);
+
     setIsOpened((prev) => !prev);
   };
 
@@ -121,11 +153,12 @@ export const Dropdown: React.FC<IDropdown> = ({
     <>
       <div className={`${styles["dropdown"]} ${className}`}>
         <Button
-          {...{ ref: buttonRef }}
-          className={styles["dropdown__button"]}
-          appearance={appearance}
           onClick={handleToggle}
-          disabled={disabled}
+          className={`${styles["dropdown__button"]} ${button?.className || ""}`}
+          appearance={button?.appearance || appearance}
+          variant={button?.variant || variant}
+          disabled={button?.disabled || disabled}
+          {...{ ref: buttonRef }}
         >
           {placeholder}
         </Button>
@@ -134,7 +167,9 @@ export const Dropdown: React.FC<IDropdown> = ({
       <Portal>
         <AnimatePresence>
           {isOpened && (
-            <div className={styles["dropdown__box"]}>
+            <div
+              className={`${styles["dropdown__box"]} ${styles[`dropdown__box-variant--${variant}`]}`}
+            >
               <motion.div
                 className={styles["dropdown__box-overlay"]}
                 initial={{ opacity: 0 }}
@@ -159,8 +194,10 @@ export const Dropdown: React.FC<IDropdown> = ({
                 {options.map(({ props }) => (
                   <DropdownOption
                     {...props}
+                    variant={variant}
+                    appearance={appearance}
                     key={`${props.value}-${uniqueId}`}
-                    selectedValue={selected}
+                    selectedValues={selected}
                     onChange={() => handleChange(props.value)}
                   />
                 ))}
