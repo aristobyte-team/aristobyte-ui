@@ -46,6 +46,47 @@ export const Config = {
         ],
       },
       {
+        id: "components",
+        icon: Icons.Components,
+        links: [
+          {
+            id: "button",
+            href: "/components/button",
+            target: "_self",
+          },
+          {
+            id: "card",
+            href: "/components/card",
+            target: "_self",
+          },
+          {
+            id: "dropdown",
+            href: "/components/dropdown",
+            target: "_self",
+          },
+          {
+            id: "message-box",
+            href: "/components/message-box",
+            target: "_self",
+          },
+          {
+            id: "radio",
+            href: "/components/radio",
+            target: "_self",
+          },
+          {
+            id: "spinner",
+            href: "/components/spinner",
+            target: "_self",
+          },
+          {
+            id: "switch",
+            href: "/components/switch",
+            target: "_self",
+          },
+        ],
+      },
+      {
         id: "presets",
         icon: Icons.Palette,
         links: [
@@ -392,47 +433,6 @@ export const Config = {
           {
             id: "code-editor",
             href: "/presets/code-editor",
-            target: "_self",
-          },
-        ],
-      },
-      {
-        id: "components",
-        icon: Icons.Components,
-        links: [
-          {
-            id: "button",
-            href: "/components/button",
-            target: "_self",
-          },
-          {
-            id: "card",
-            href: "/components/card",
-            target: "_self",
-          },
-          {
-            id: "dropdown",
-            href: "/components/dropdown",
-            target: "_self",
-          },
-          {
-            id: "message-box",
-            href: "/components/message-box",
-            target: "_self",
-          },
-          {
-            id: "radio",
-            href: "/components/radio",
-            target: "_self",
-          },
-          {
-            id: "spinner",
-            href: "/components/spinner",
-            target: "_self",
-          },
-          {
-            id: "switch",
-            href: "/components/switch",
             target: "_self",
           },
         ],

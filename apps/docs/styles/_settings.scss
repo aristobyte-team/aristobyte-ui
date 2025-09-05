@@ -203,22 +203,25 @@ $cubic-bezier-primary: cubic-bezier(0.55, -0.19, 0.59, 0.95);
 $cubic-bezier-secondary: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 @mixin scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b84d transparent;
+
   &::-webkit-scrollbar {
-    width: 8px;
-  }
+    width: thin;
 
-  &::-webkit-scrollbar-thumb {
-    background-color: $black;
-    border: 3px solid $black;
-    cursor: pointer;
+    &-thumb {
+      background-color: #94a3b84d;
+      border: 3px solid #94a3b84d;
+      cursor: pointer;
 
-    &:active {
-      background-color: $grey-500;
-      border: 3px solid $grey-500;
+      &:active {
+        background-color: #94a3b878;
+        border: 3px solid #94a3b878;
+      }
     }
-  }
 
-  &::-webkit-scrollbar-track {
-    background-color: $grey-500;
+    &-track {
+      background-color: transparent;
+    }
   }
 }
