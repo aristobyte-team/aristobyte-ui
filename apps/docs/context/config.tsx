@@ -3,9 +3,7 @@
 import * as React from "react";
 import { Config } from "@/config";
 
-const ConfigContext = React.createContext({
-  config: Config,
-});
+const ConfigContext = React.createContext({ config: Config });
 
 export type ConfigProviderPropsType = {
   children: React.ReactNode;

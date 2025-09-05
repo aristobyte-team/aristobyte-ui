@@ -1,10 +1,12 @@
+"use client";
+
 import * as React from "react";
 
 import { Anchor } from "@aristobyte-ui/anchor";
 
-import { type TranslateFunctionType } from "@/data";
 import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
+import { Helpers } from "@/config";
 
 import "./Intro.scss";
 
@@ -13,38 +15,19 @@ export interface IIntro {
   unit: string;
 }
 
-const renderText = (
-  category: string,
-  unit: string,
-  id: string,
-  t: TranslateFunctionType
-) => {
-  if (category === "presets") {
-    return {
-      storybook: "Storybook",
-      npm: `@aristobyte-ui/${category}`,
-      source: t("layout.intro-links.source"),
-    }[id];
-  }
-
-  return {
-    storybook: "Storybook",
-    npm: `@aristobyte-ui/${unit}`,
-    source: t("layout.intro-links.source"),
-  }[id];
-};
-
-const getHref = (category: string, unit: string, href: string) => {
-  if (category === "presets") {
-    return href.replace("{{package}}", category);
-  }
-
-  return href.replace("{{package}}", unit);
-};
-
 export const Intro: React.FC<IIntro> = ({ category, unit }) => {
   const { config } = useConfig();
   const { t } = useTranslate();
+
+  const linkTexts: { [key: string]: string } = {
+    storybook: "Storybook",
+    npm: Helpers.insertPackageToText(
+      `@aristobyte-ui/{{package}}`,
+      category,
+      unit
+    ),
+    source: t("layout.intro-links.source"),
+  };
 
   return (
     <section className="intro">
@@ -79,15 +62,13 @@ export const Intro: React.FC<IIntro> = ({ category, unit }) => {
               <li key={id}>
                 <Anchor
                   className="intro__link"
-                  href={getHref(category, unit, href)}
+                  href={Helpers.insertPackageToText(href, category, unit)}
                   target={target}
                 >
                   <span className={`intro__link-icon intro__link-icon--${id}`}>
                     {icon({ size: 16 })}
                   </span>
-                  <span className="intro__link-text">
-                    {renderText(category, unit, id, t)}
-                  </span>
+                  <span className="intro__link-text">{linkTexts[id]}</span>
                   <span className="intro__link-icon">
                     <Icons.Link size={12} />
                   </span>

@@ -6,6 +6,7 @@ import { HtmlMeta, structuredData, viewport as viewportConfig } from "@/data";
 import { TranslateProvider, ConfigProvider } from "@/context";
 
 import "./globals.scss";
+import { Layout } from "@/components";
 
 const workSans = localFont({
   src: [
@@ -147,7 +148,7 @@ export default function RootLayout({
                 alt="Right Liquid Background"
               />
             </div>
-            {children}
+            <Layout>{children}</Layout>
           </body>
         </TranslateProvider>
       </ConfigProvider>

@@ -1,12 +1,14 @@
+"use client";
+
 import * as React from "react";
 
 import { Card, CodeBlock, Label, Button } from "@/components";
 
 import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
+import { CodeBlocks, Helpers } from "@/config";
 
 import "./Import.scss";
-import { CodeBlocks, Helpers } from "@/config";
 
 export type IImport = {
   category: string;

@@ -8,10 +8,14 @@ import { Icons } from "@aristobyte-ui/utils";
 
 import "./Sidebar.scss";
 
-const Accordion: React.FC<{ isOpen: boolean; children: React.ReactNode }> = ({
-  isOpen,
-  children,
-}) => {
+// @TODO: @UI - move to UI lib
+
+interface IAccordion {
+  isOpen: boolean;
+  children: React.ReactNode;
+}
+
+const Accordion: React.FC<IAccordion> = ({ isOpen, children }) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const [height, setHeight] = React.useState(0);
 
@@ -34,12 +38,16 @@ const Accordion: React.FC<{ isOpen: boolean; children: React.ReactNode }> = ({
 };
 
 export const Sidebar: React.FC = () => {
-  const [openedSection, setOpenedSection] = React.useState<string | null>(null);
   const { t } = useTranslate();
   const { config } = useConfig();
+  const [openedSection, setOpenedSection] = React.useState<string[]>([
+    config.sidebar.sections[0]!.id,
+  ]);
 
   const toggleSection = (id: string) => {
-    setOpenedSection((prev) => (prev === id ? null : id));
+    setOpenedSection((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -55,54 +63,49 @@ export const Sidebar: React.FC = () => {
       </header>
 
       <div className="sidebar__container">
-        {config.sidebar.sections.map(({ id, links, icon }) => {
-          const isOpen = openedSection === id;
-          return (
-            <div key={id} className="sidebar__section">
-              <button
-                className="sidebar__button"
-                onClick={() => toggleSection(id)}
+        {config.sidebar.sections.map(({ id, links, icon }) => (
+          <div key={id} className="sidebar__section">
+            <button
+              className="sidebar__button"
+              onClick={() => toggleSection(id)}
+            >
+              <span
+                className={`sidebar__button-icon sidebar__button-icon--${id}`}
               >
-                <span
-                  className={`sidebar__button-icon sidebar__button-icon--${id}`}
-                >
-                  {icon({ size: 16 })}
-                </span>
-                <span className="sidebar__button-text">
-                  {t(`sidebar.sections.${id}`)}
-                </span>
-                <span
-                  className={`sidebar__button-arrow ${
-                    isOpen ? "sidebar__button-arrow--open" : ""
-                  }`}
-                >
-                  <Icons.ArrowRight size={16} />
-                </span>
-              </button>
+                {icon({ size: 16 })}
+              </span>
+              <span className="sidebar__button-text">
+                {t(`sidebar.sections.${id}`)}
+              </span>
+              <span
+                className={`sidebar__button-arrow ${
+                  openedSection.includes(id)
+                    ? "sidebar__button-arrow--open"
+                    : ""
+                }`}
+              >
+                <Icons.ArrowRight size={16} />
+              </span>
+            </button>
 
-              <Accordion isOpen={isOpen}>
-                <ul className="sidebar__links">
-                  {links.map(({ id: linkId, href, target }, index) => (
-                    <li
-                      key={linkId}
-                      style={{
-                        transitionDelay: `${isOpen ? 200 + index * 20 : 0}ms`,
-                      }}
-                    >
-                      <Link
-                        href={href}
-                        target={target}
-                        className="sidebar__link"
-                      >
-                        {t(`sidebar.links.${linkId}`)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Accordion>
-            </div>
-          );
-        })}
+            <Accordion isOpen={openedSection.includes(id)}>
+              <ul className="sidebar__links">
+                {links.map(({ id: linkId, href, target }, index) => (
+                  <li
+                    key={linkId}
+                    style={{
+                      transitionDelay: `${openedSection.includes(id) ? 200 + index * 20 : 0}ms`,
+                    }}
+                  >
+                    <Link href={href} target={target} className="sidebar__link">
+                      {t(`sidebar.links.${linkId}`)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Accordion>
+          </div>
+        ))}
       </div>
     </aside>
   );

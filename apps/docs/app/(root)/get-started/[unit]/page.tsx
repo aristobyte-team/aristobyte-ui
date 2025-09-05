@@ -1,6 +1,6 @@
 import * as React from "react";
 import { type Metadata } from "next";
-import { Layout } from "@/components";
+import { Article } from "@/components";
 
 type ComponentPageProps = {
   params: Promise<{ unit: string }>;
@@ -19,5 +19,5 @@ export async function generateMetadata({
 
 export default async function Component({ params }: ComponentPageProps) {
   const { unit } = await params;
-  return <Layout category="get-started" unit={unit} />;
+  return <Article category="get-started" unit={unit} />;
 }

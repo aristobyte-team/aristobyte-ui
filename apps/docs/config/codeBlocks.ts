@@ -74,9 +74,9 @@ export const CodeBlocks = {
   components: {
     button: {
       usage:
-        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button variant="primary">Button</Button>;\n}',
+        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button>Button</Button>;\n}',
       disabled:
-        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button variant="primary" disabled>Button</Button>;\n}',
+        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button variant="primary" disabled>Click me</Button>;\n}',
       sizes:
         'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" size="xsm">\n        Button\n      </Button>\n      <Button variant="primary" size="sm">\n        Button\n      </Button>\n      <Button variant="primary" size="md">\n        Button\n      </Button>\n      <Button variant="primary" size="lg">\n        Button\n      </Button>\n      <Button variant="primary" size="xlg">\n        Button\n      </Button>\n    </div>\n  );\n}',
       radius:

@@ -4,3 +4,8 @@ export { Tabs } from "./Tabs";
 export { Label } from "./Label";
 export { Card } from "./Card";
 export { Button } from "./Button";
+export { Sections } from "./Sections";
+export { Intro } from "./Intro";
+export { Installation } from "./Installation";
+export { Import } from "./Import";
+export { Article } from "./Article";

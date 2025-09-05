@@ -224,11 +224,11 @@ export const mapping: MappingType = {
   },
   components: {
     button: {
+      variants: Components.ButtonPreviewBlocks.Variants,
       disabled: Components.ButtonPreviewBlocks.Disabled,
       loading: Components.ButtonPreviewBlocks.Loading,
       sizes: Components.ButtonPreviewBlocks.Sizes,
       radius: Components.ButtonPreviewBlocks.Radius,
-      variants: Components.ButtonPreviewBlocks.Variants,
       appearance: Components.ButtonPreviewBlocks.Appearance,
       "with-icon": Components.ButtonPreviewBlocks.WithIcon,
       "button-group": Components.ButtonPreviewBlocks.ButtonGroup,
@@ -241,19 +241,19 @@ export const mapping: MappingType = {
       "button-group-variant": Components.ButtonPreviewBlocks.ButtonGroupVariant,
     },
     spinner: {
+      variants: Components.SpinnerPreviewBlocks.Variants,
       sizes: Components.SpinnerPreviewBlocks.Sizes,
       types: Components.SpinnerPreviewBlocks.Types,
-      variants: Components.SpinnerPreviewBlocks.Variants,
     },
     "message-box": {
-      types: Components.MessageBoxPreviewBlocks.Types,
       variants: Components.MessageBoxPreviewBlocks.Variants,
+      types: Components.MessageBoxPreviewBlocks.Types,
       radius: Components.MessageBoxPreviewBlocks.Radius,
       "without-icon": Components.MessageBoxPreviewBlocks.WithoutIcon,
     },
     switch: {
-      checked: Components.SwitchPreviewBlocks.Checked,
       variants: Components.SwitchPreviewBlocks.Variants,
+      checked: Components.SwitchPreviewBlocks.Checked,
       labeled: Components.SwitchPreviewBlocks.Labeled,
       "align-label": Components.SwitchPreviewBlocks.AlignLabel,
       disabled: Components.SwitchPreviewBlocks.Disabled,
@@ -263,9 +263,9 @@ export const mapping: MappingType = {
       "thumb-icon": Components.SwitchPreviewBlocks.ThumbIcon,
     },
     radio: {
+      variants: Components.RadioPreviewBlocks.Variants,
       disabled: Components.RadioPreviewBlocks.Disabled,
       sizes: Components.RadioPreviewBlocks.Sizes,
-      variants: Components.RadioPreviewBlocks.Variants,
       appearance: Components.RadioPreviewBlocks.Appearance,
       "highlight-label": Components.RadioPreviewBlocks.HighlightLabel,
       "radio-group-align": Components.RadioPreviewBlocks.RadioGroupAlign,

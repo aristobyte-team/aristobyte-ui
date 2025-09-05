@@ -1,0 +1,10 @@
+@use "../../styles/settings" as *;
+
+.article {
+  @include scrollbar;
+
+  & {
+    overflow-y: auto;
+    width: 100%;
+  }
+}
