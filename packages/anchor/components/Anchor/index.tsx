@@ -5,7 +5,7 @@ import * as React from "react";
 import styles from "./Anchor.module.scss";
 
 export interface IAnchor {
-  href?: "";
+  href?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
   text?: string;
   children?: React.ReactElement | React.ReactNode | string;
@@ -26,7 +26,7 @@ export interface IAnchor {
 }
 
 export const Anchor: React.FC<IAnchor> = ({
-  href,
+  href = "",
   target = "_self",
   variant = "default",
   children = "",

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./StatusIndicators.module.scss";
 
-export interface IStatusIndicators {}
+export interface IStatusIndicators {
+  disabled?: boolean;
+}
 
 export const StatusIndicators: React.FC<IStatusIndicators> = ({ ...props }) => {
   const uniqId = React.useId();

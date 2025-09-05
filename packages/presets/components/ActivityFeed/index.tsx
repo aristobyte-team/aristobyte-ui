@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ActivityFeed.module.scss";
 
-export interface IActivityFeed {}
+export interface IActivityFeed {
+  disabled?: boolean;
+}
 
 export const ActivityFeed: React.FC<IActivityFeed> = ({ ...props }) => {
   const uniqId = React.useId();

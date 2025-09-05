@@ -1,0 +1,63 @@
+@use "../../styles/settings" as *;
+
+.card {
+  align-self: stretch;
+  align-items: flex-start;
+  border-radius: 10px;
+  border: 1px solid #314158; //@TODO: @COLOR
+  background-color: rgba(29, 41, 61, 0.3); //@TODO: @COLOR
+  display: flex;
+  flex-direction: column;
+  padding: 17px 17px 30px;
+  transition: all 150ms ease-out;
+  width: calc(100% - 2 * 17px);
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    align-items: center;
+    color: #e2e8f0; //@TODO: @COLOR
+    display: flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    gap: 12px;
+
+    b {
+      border: solid rgba(69, 85, 108, 0.5); // @TODO: @COLOR
+      background-color: rgba(49, 65, 88, 0.4); // @TODO: @COLOR
+      border-radius: 10px;
+      color: $white;
+      padding: 3px 6px;
+    }
+  }
+
+  &__description {
+    color: #90a1b9; //@TODO: @COLOR
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 14px 0 0;
+
+    b {
+      border: solid rgba(69, 85, 108, 0.5); // @TODO: @COLOR
+      background-color: rgba(49, 65, 88, 0.4); // @TODO: @COLOR
+      border-radius: 10px;
+      color: $white;
+      padding: 3px 6px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 0;
+    width: 100%;
+  }
+}

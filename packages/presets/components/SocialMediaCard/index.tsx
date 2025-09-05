@@ -36,16 +36,9 @@ export interface ISocialMediaCard {
     label?: string;
     value?: string;
   }[];
+  disabled?: boolean;
   className?: string;
 }
-
-const renderIcon = (
-  icon: (props: IconPropsType) => React.JSX.Element,
-  props?: IconPropsType
-) => {
-  const Icon = icon;
-  return <Icon size={props?.size || 22} />;
-};
 
 const renderAvatar = (avatar: ISocialMediaCard["avatar"]) => {
   if (avatar?.image) {
@@ -60,7 +53,7 @@ const renderAvatar = (avatar: ISocialMediaCard["avatar"]) => {
 
   return (
     <div className={styles["social-media-card__avatar-icon"]}>
-      {renderIcon(avatar?.icon || Icons.User, { size: 24 })}
+      {(avatar?.icon || Icons.User)({ size: 24 })}
     </div>
   );
 };
@@ -135,7 +128,7 @@ export const SocialMediaCard: React.FC<ISocialMediaCard> = ({
                 <p className={styles["social-media-card__metric-par"]}>
                   {icon && (
                     <span className={styles["social-media-card__metric-icon"]}>
-                      {renderIcon(icon)}
+                      {icon({ size: 22 })}
                     </span>
                   )}
                   {value && (

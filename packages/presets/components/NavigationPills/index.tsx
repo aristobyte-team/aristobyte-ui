@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./NavigationPills.module.scss";
 
-export interface INavigationPills {}
+export interface INavigationPills {
+  disabled?: boolean;
+}
 
 export const NavigationPills: React.FC<INavigationPills> = ({ ...props }) => {
   const uniqId = React.useId();

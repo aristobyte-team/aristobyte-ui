@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./QuickStats.module.scss";
 
-export interface IQuickStats {}
+export interface IQuickStats {
+  disabled?: boolean;
+}
 
 export const QuickStats: React.FC<IQuickStats> = ({ ...props }) => {
   const uniqId = React.useId();

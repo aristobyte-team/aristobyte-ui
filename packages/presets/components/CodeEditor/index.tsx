@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./CodeEditor.module.scss";
 
-export interface ICodeEditor {}
+export interface ICodeEditor {
+  disabled?: boolean;
+}
 
 export const CodeEditor: React.FC<ICodeEditor> = ({ ...props }) => {
   const uniqId = React.useId();

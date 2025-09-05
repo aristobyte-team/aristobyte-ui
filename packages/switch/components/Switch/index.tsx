@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { type IconPropsType } from "@aristobyte-ui/utils";
 
 import styles from "./Switch.module.scss";
 
@@ -16,8 +17,23 @@ export interface ISwitch {
     | "success"
     | "error"
     | "warning";
-  trackIcon?: { checked?: React.ElementType; unchecked?: React.ElementType };
-  thumbIcon?: React.ElementType;
+  trackIcon?: {
+    checked?: {
+      component: (props: IconPropsType) => React.JSX.Element;
+      size?: number;
+      color?: string;
+    };
+    unchecked?: {
+      component: (props: IconPropsType) => React.JSX.Element;
+      size?: number;
+      color?: string;
+    };
+  };
+  thumbIcon?: {
+    component: (props: IconPropsType) => React.JSX.Element;
+    size?: number;
+    color?: string;
+  };
   checked?: boolean;
   disabled?: boolean;
   className?: string;
@@ -69,13 +85,19 @@ export const Switch: React.FC<ISwitch> = ({
           <span
             className={`${styles["switch__track-icon"]} ${styles["switch__track-icon--checked"]}`}
           >
-            {React.createElement(trackIcon.checked)}
+            {trackIcon.checked.component({
+              size: trackIcon.checked.size,
+              color: trackIcon.checked.color,
+            })}
           </span>
         )}
         <span className={styles["switch__thumb"]}>
           {thumbIcon && (
             <span className={styles["switch__thumb-icon"]}>
-              {React.createElement(thumbIcon)}
+              {thumbIcon.component({
+                size: thumbIcon.size,
+                color: thumbIcon.color,
+              })}
             </span>
           )}
         </span>
@@ -83,7 +105,10 @@ export const Switch: React.FC<ISwitch> = ({
           <span
             className={`${styles["switch__track-icon"]} ${styles["switch__track-icon--unchecked"]}`}
           >
-            {React.createElement(trackIcon.unchecked)}
+            {trackIcon.unchecked.component({
+              size: trackIcon.unchecked.size,
+              color: trackIcon.unchecked.color,
+            })}
           </span>
         )}
       </span>

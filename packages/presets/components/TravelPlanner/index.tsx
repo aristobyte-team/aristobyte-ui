@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./TravelPlanner.module.scss";
 
-export interface ITravelPlanner {}
+export interface ITravelPlanner {
+  disabled?: boolean;
+}
 
 export const TravelPlanner: React.FC<ITravelPlanner> = ({ ...props }) => {
   const uniqId = React.useId();

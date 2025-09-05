@@ -1,27 +1,21 @@
 @use "../../styles/settings" as *;
 
 .layout {
-  @include container;
-  & {
-    display: flex;
-  }
+  align-items: stretch;
+  display: flex;
+  height: 100%;
 
   &__article {
-    width: 100%;
-  }
+    @include scrollbar;
 
-  &__container {
-    @include container;
     & {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      padding-top: 0;
+      overflow-y: auto;
+      width: 100%;
     }
   }
 
   &__hr {
-    background-color: rgba($white-color, 0.2);
+    background-color: rgba($white, 0.2);
     height: 1px;
     width: 100%;
   }

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./IdeaBulbWidget.module.scss";
 
-export interface IIdeaBulbWidget {}
+export interface IIdeaBulbWidget {
+  disabled?: boolean;
+}
 
 export const IdeaBulbWidget: React.FC<IIdeaBulbWidget> = ({ ...props }) => {
   const uniqId = React.useId();

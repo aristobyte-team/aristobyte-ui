@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./TimeLocationWidget.module.scss";
 
-export interface ITimeLocationWidget {}
+export interface ITimeLocationWidget {
+  disabled?: boolean;
+}
 
 export const TimeLocationWidget: React.FC<ITimeLocationWidget> = ({
   ...props

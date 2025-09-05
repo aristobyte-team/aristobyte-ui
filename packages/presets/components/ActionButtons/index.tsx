@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ActionButtons.module.scss";
 
-export interface IActionButtons {}
+export interface IActionButtons {
+  disabled?: boolean;
+}
 
 export const ActionButtons: React.FC<IActionButtons> = ({ ...props }) => {
   const uniqId = React.useId();

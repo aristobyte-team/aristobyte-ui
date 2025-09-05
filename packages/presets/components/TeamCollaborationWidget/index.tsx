@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./TeamCollaborationWidget.module.scss";
 
-export interface ITeamCollaborationWidget {}
+export interface ITeamCollaborationWidget {
+  disabled?: boolean;
+}
 
 export const TeamCollaborationWidget: React.FC<ITeamCollaborationWidget> = ({
   ...props

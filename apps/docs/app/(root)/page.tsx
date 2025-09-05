@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Layout } from "@/components";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <Layout category="components" unit="home" />;
+  redirect("/get-started/overview");
 }

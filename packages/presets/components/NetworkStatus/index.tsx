@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./NetworkStatus.module.scss";
 
-export interface INetworkStatus {}
+export interface INetworkStatus {
+  disabled?: boolean;
+}
 
 export const NetworkStatus: React.FC<INetworkStatus> = ({ ...props }) => {
   const uniqId = React.useId();

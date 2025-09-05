@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./HealthMonitor.module.scss";
 
-export interface IHealthMonitor {}
+export interface IHealthMonitor {
+  disabled?: boolean;
+}
 
 export const HealthMonitor: React.FC<IHealthMonitor> = ({ ...props }) => {
   const uniqId = React.useId();

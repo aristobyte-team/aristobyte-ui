@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./PricingCard.module.scss";
 
-export interface IPricingCard {}
+export interface IPricingCard {
+  disabled?: boolean;
+}
 
 export const PricingCard: React.FC<IPricingCard> = ({ ...props }) => {
   const uniqId = React.useId();

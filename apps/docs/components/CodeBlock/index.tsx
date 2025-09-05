@@ -1,8 +1,9 @@
 "use client";
 import * as React from "react";
-import { getSingletonHighlighter } from "shiki";
+import { getSingletonHighlighter as highlighter } from "shiki";
+
 import { Button } from "@aristobyte-ui/button";
-import { Icons } from "@aristobyte-ui/utils";
+import { type IconPropsType, Icons } from "@aristobyte-ui/utils";
 
 import { SupportedLanguages, SupportedThemes } from "./types";
 
@@ -10,6 +11,11 @@ import styles from "./CodeBlock.module.scss";
 
 interface ICodeBlock {
   code: string;
+  icon?: {
+    component: (props: IconPropsType) => React.JSX.Element;
+    size?: number;
+    color?: string;
+  };
   lang?: SupportedLanguages;
   theme?: SupportedThemes;
   className?: string;
@@ -17,8 +23,9 @@ interface ICodeBlock {
 
 export const CodeBlock: React.FC<ICodeBlock> = ({
   code,
+  icon,
   lang = "tsx",
-  theme = "nord",
+  theme = "github-dark", // Other nice once "houston" | "dracula-soft",
   className = "",
 }) => {
   const [html, setHtml] = React.useState("");
@@ -26,15 +33,10 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
   React.useEffect(() => {
     (async () => {
       setHtml(
-        (
-          await getSingletonHighlighter({
-            themes: [theme],
-            langs: [lang],
-          })
-        ).codeToHtml(code, {
-          lang,
-          theme,
-        })
+        (await highlighter({ themes: [theme], langs: [lang] })).codeToHtml(
+          code,
+          { lang, theme }
+        )
       );
     })();
   }, [code, lang, theme]);
@@ -45,6 +47,9 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
 
   return (
     <div className={`code-block ${styles["code-block"]} ${className}`}>
+      {icon && (
+        <div>{icon.component({ size: icon.size, color: icon.color })}</div>
+      )}
       <div
         className={styles["code-block__container"]}
         dangerouslySetInnerHTML={{ __html: html }}

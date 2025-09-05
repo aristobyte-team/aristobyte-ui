@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./FitnessTracker.module.scss";
 
-export interface IFitnessTracker {}
+export interface IFitnessTracker {
+  disabled?: boolean;
+}
 
 export const FitnessTracker: React.FC<IFitnessTracker> = ({ ...props }) => {
   const uniqId = React.useId();

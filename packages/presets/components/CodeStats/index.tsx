@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./CodeStats.module.scss";
 
-export interface ICodeStats {}
+export interface ICodeStats {
+  disabled?: boolean;
+}
 
 export const CodeStats: React.FC<ICodeStats> = ({ ...props }) => {
   const uniqId = React.useId();

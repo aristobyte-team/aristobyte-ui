@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./NatureWidget.module.scss";
 
-export interface INatureWidget {}
+export interface INatureWidget {
+  disabled?: boolean;
+}
 
 export const NatureWidget: React.FC<INatureWidget> = ({ ...props }) => {
   const uniqId = React.useId();

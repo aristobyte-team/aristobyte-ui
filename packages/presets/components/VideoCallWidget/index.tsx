@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./VideoCallWidget.module.scss";
 
-export interface IVideoCallWidget {}
+export interface IVideoCallWidget {
+  disabled?: boolean;
+}
 
 export const VideoCallWidget: React.FC<IVideoCallWidget> = ({ ...props }) => {
   const uniqId = React.useId();

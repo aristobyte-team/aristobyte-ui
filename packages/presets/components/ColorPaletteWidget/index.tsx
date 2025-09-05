@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ColorPaletteWidget.module.scss";
 
-export interface IColorPaletteWidget {}
+export interface IColorPaletteWidget {
+  disabled?: boolean;
+}
 
 export const ColorPaletteWidget: React.FC<IColorPaletteWidget> = ({
   ...props

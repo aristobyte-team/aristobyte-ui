@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./DocumentScanner.module.scss";
 
-export interface IDocumentScanner {}
+export interface IDocumentScanner {
+  disabled?: boolean;
+}
 
 export const DocumentScanner: React.FC<IDocumentScanner> = ({ ...props }) => {
   const uniqId = React.useId();

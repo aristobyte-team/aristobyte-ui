@@ -1,4 +1,5 @@
 export const CodeBlocks = {
+  "get-started": { overview: { usage: "TODO" } },
   presets: {
     "social-media-card": { usage: "TODO", disabled: "TODO" },
     "music-player": { usage: "TODO", disabled: "TODO" },
@@ -73,11 +74,11 @@ export const CodeBlocks = {
   components: {
     button: {
       usage:
-        'import { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return <Button variant="primary">Button</Button>;\n}',
+        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button variant="primary">Button</Button>;\n}',
       disabled:
-        'import { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return <Button variant="primary" disabled>Button</Button>;\n}',
+        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button variant="primary" disabled>Button</Button>;\n}',
       sizes:
-        'import { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" size="xsm">\n        Button\n      </Button>\n      <Button variant="primary" size="sm">\n        Button\n      </Button>\n      <Button variant="primary" size="md">\n        Button\n      </Button>\n      <Button variant="primary" size="lg">\n        Button\n      </Button>\n      <Button variant="primary" size="xlg">\n        Button\n      </Button>\n    </div>\n  );\n}',
+        'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" size="xsm">\n        Button\n      </Button>\n      <Button variant="primary" size="sm">\n        Button\n      </Button>\n      <Button variant="primary" size="md">\n        Button\n      </Button>\n      <Button variant="primary" size="lg">\n        Button\n      </Button>\n      <Button variant="primary" size="xlg">\n        Button\n      </Button>\n    </div>\n  );\n}',
       radius:
         'import * as React from "react";\nimport { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" radius="none">\n        None\n      </Button>\n      <Button variant="primary" radius="sm">\n        Small\n      </Button>\n      <Button variant="primary" radius="md">\n        Medium\n      </Button>\n      <Button variant="primary" radius="lg">\n        Large\n      </Button>\n      <Button variant="primary" radius="full">\n        Full\n      </Button>\n    </div>\n  );\n}',
       variants:

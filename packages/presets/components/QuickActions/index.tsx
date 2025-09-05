@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./QuickActions.module.scss";
 
-export interface IQuickActions {}
+export interface IQuickActions {
+  disabled?: boolean;
+}
 
 export const QuickActions: React.FC<IQuickActions> = ({ ...props }) => {
   const uniqId = React.useId();

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./OfficeBuildingWidget.module.scss";
 
-export interface IOfficeBuildingWidget {}
+export interface IOfficeBuildingWidget {
+  disabled?: boolean;
+}
 
 export const OfficeBuildingWidget: React.FC<IOfficeBuildingWidget> = ({
   ...props

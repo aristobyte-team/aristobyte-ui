@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./InspirationWidget.module.scss";
 
-export interface IInspirationWidget {}
+export interface IInspirationWidget {
+  disabled?: boolean;
+}
 
 export const InspirationWidget: React.FC<IInspirationWidget> = ({
   ...props

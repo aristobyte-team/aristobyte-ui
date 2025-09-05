@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./MediaControls.module.scss";
 
-export interface IMediaControls {}
+export interface IMediaControls {
+  disabled?: boolean;
+}
 
 export const MediaControls: React.FC<IMediaControls> = ({ ...props }) => {
   const uniqId = React.useId();

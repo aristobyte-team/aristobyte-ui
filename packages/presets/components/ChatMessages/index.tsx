@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ChatMessages.module.scss";
 
-export interface IChatMessages {}
+export interface IChatMessages {
+  disabled?: boolean;
+}
 
 export const ChatMessages: React.FC<IChatMessages> = ({ ...props }) => {
   const uniqId = React.useId();

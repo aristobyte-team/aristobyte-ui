@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./SystemStatus.module.scss";
 
-export interface ISystemStatus {}
+export interface ISystemStatus {
+  disabled?: boolean;
+}
 
 export const SystemStatus: React.FC<ISystemStatus> = ({ ...props }) => {
   const uniqId = React.useId();

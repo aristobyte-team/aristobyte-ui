@@ -2,14 +2,14 @@
 
 import * as React from "react";
 import { Spinner } from "@aristobyte-ui/spinner";
-import { renderRipple } from "@aristobyte-ui/utils";
+import { type IconPropsType, renderRipple } from "@aristobyte-ui/utils";
 
 import styles from "./Button.module.scss";
 
 export interface IButton {
   type?: "button" | "link";
   text?: string;
-  children?: React.ReactElement | React.ReactNode | string;
+  children?: React.ReactElement | React.JSX.Element | React.ReactNode | string;
   href?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
   onClick?: (
@@ -33,7 +33,9 @@ export interface IButton {
   size?: "xsm" | "sm" | "md" | "lg" | "xlg";
   radius?: "none" | "sm" | "md" | "lg" | "full";
   icon?: {
-    component: React.ElementType;
+    component: (props: IconPropsType) => React.JSX.Element;
+    color?: string;
+    size?: number;
     align?: "left" | "right";
   };
   isLoading?: boolean;
@@ -106,7 +108,7 @@ export const Button: React.FC<IButton> = ({
             styles[`icon--${icon.align ?? "left"}`]
           }`}
         >
-          {React.createElement(icon.component)}
+          {icon.component({ color: icon.color, size: icon.size })}
         </span>
       )}
       {text || children}

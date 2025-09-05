@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./RocketLaunchWidget.module.scss";
 
-export interface IRocketLaunchWidget {}
+export interface IRocketLaunchWidget {
+  disabled?: boolean;
+}
 
 export const RocketLaunchWidget: React.FC<IRocketLaunchWidget> = ({
   ...props

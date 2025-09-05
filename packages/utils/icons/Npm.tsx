@@ -8,10 +8,10 @@ export const Npm = ({ size = 24 }: IconPropsType) => (
     fill="#cb3837"
     aria-hidden="true"
   >
-    <polygon fill="#cb3837" points="0,700 700,700 700,0 0,0"></polygon>
+    <polygon fill="#cb3837" points="0,700 700,700 700,0 0,0" />
     <polygon
       fill="#ffffff"
       points="150,550 350,550 350,250 450,250 450,550 550,550 550,150 150,150 "
-    ></polygon>
+    />
   </svg>
 );

@@ -1,0 +1,193 @@
+@use "../../../styles/settings" as *;
+
+.intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: all 150ms linear;
+    width: calc(100% - 10px * 2);
+
+    @media screen and (min-width: 425px) {
+      padding: 15px;
+      width: calc(100% - 15px * 2);
+    }
+
+    @media screen and (min-width: 769px) {
+      padding: 30px;
+      width: calc(100% - 30px * 2);
+    }
+  }
+
+  &__label {
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      rgba(240, 177, 0, 0.1) 0%,
+      rgba(255, 105, 0, 0.1) 100%
+    ); // @TODO: @COLOR
+    backdrop-filter: blur(4px);
+    border-radius: 10000px;
+    border: 1px solid rgba(255, 105, 0, 0.2); // @TODO: @COLOR
+    color: #ff8904; // @TODO: @COLOR
+    display: inline-flex;
+    padding: 7px 13px;
+    gap: 8px;
+
+    p {
+      color: $white;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-family: $font-righteous;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    transition: all 120ms ease-out;
+
+    @media screen and (min-width: 500px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 769px) {
+      font-size: 34px;
+    }
+  }
+
+  &__description {
+    color: #90a1b9; //@TODO: @COLOR
+    text-align: center;
+    font-family: $font-work-sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.14px;
+    max-width: 768px;
+
+    b {
+      border: solid rgba(69, 85, 108, 0.5); // @TODO: @COLOR
+      background-color: rgba(49, 65, 88, 0.4); // @TODO: @COLOR
+      border-radius: 10px;
+      color: $white;
+      padding: 3px 6px;
+    }
+  }
+
+  &__quick-links {
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid rgba(49, 65, 88, 0.8); // @TODO: @COLOR
+    background-color: rgba(29, 41, 61, 0.4); // @TODO: @COLOR
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      // @TODO: @COLOR
+      0 4px 6px -4px rgba(0, 0, 0, 0.1); // @TODO: @COLOR
+    backdrop-filter: blur(4px);
+    display: flex;
+    padding: 17px 25px;
+
+    &-content {
+      align-items: center;
+      border-right: 1px solid #45556c; // @TODO: @COLOR
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 12px 0 0;
+      margin: 0 12px 0 0;
+    }
+
+    &-dot {
+      border-radius: 50%;
+      background-color: #00d492; // @TODO: @COLOR
+      height: 8px;
+      width: 8px;
+    }
+
+    &-text {
+      color: #cad5e2; // @TODO: @COLOR
+    }
+  }
+
+  &__links {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__link {
+    align-items: center;
+    border-radius: 10px;
+    border: solid rgba(69, 85, 108, 0.5); // @TODO: @COLOR
+    background-color: rgba(49, 65, 88, 0.4); // @TODO: @COLOR
+    display: flex;
+    gap: 8px;
+    padding: 9px 13px;
+    transition: all 150ms ease-out;
+
+    &:hover {
+      border: solid rgba(95, 117, 149, 0.5); // @TODO: @COLOR
+      background-color: rgba(71, 94, 126, 0.4); // @TODO: @COLOR
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+
+    &-text {
+      align-items: center;
+      color: #cad5e2; // @TODO: @COLOR
+      display: flex;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      justify-content: center;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    &-icon {
+      align-items: center;
+      color: #62748e; // @TODO: @COLOR
+      display: flex;
+      justify-content: center;
+
+      &--storybook {
+        color: #ff8904; // @TODO: @COLOR
+      }
+
+      &--npm {
+        color: #c27aff; // @TODO: @COLOR
+      }
+
+      &--source {
+        color: #51a2ff; // @TODO: @COLOR
+      }
+
+      &:hover {
+        color: #73859d; // @TODO: @COLOR
+
+        &--npm {
+          color: #d38bff; // @TODO: @COLOR
+        }
+
+        &--source {
+          color: #62b3ff; // @TODO: @COLOR
+        }
+      }
+    }
+  }
+}

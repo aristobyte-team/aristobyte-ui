@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./MusicProduction.module.scss";
 
-export interface IMusicProduction {}
+export interface IMusicProduction {
+  disabled?: boolean;
+}
 
 export const MusicProduction: React.FC<IMusicProduction> = ({ ...props }) => {
   const uniqId = React.useId();

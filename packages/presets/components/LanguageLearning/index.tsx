@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./LanguageLearning.module.scss";
 
-export interface ILanguageLearning {}
+export interface ILanguageLearning {
+  disabled?: boolean;
+}
 
 export const LanguageLearning: React.FC<ILanguageLearning> = ({ ...props }) => {
   const uniqId = React.useId();

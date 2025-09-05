@@ -1,3 +1,5 @@
+// @TODO: @DATA - installation descriptions to be removed from everywhere
+
 export const EN_GB = {
   sidebar: {
     sections: {
@@ -11,7 +13,7 @@ export const EN_GB = {
       dropdown: "Dropdown",
       spinner: "Spinner",
       installation: "Installation",
-      introduction: "Introduction",
+      overview: "Overview",
       "message-box": "Message Box",
       radio: "Radio",
       switch: "Switch",
@@ -87,6 +89,9 @@ export const EN_GB = {
     },
   },
   layout: {
+    labels: {
+      "design-system-component": "Design System Component",
+    },
     "intro-links": {
       source: "Source",
     },
@@ -98,12 +103,35 @@ export const EN_GB = {
       code: "Code",
       preview: "Preview",
     },
+    "get-started": {
+      overview: {
+        intro: {
+          title: "AristoByte UI - A Scalable, Design-Driven Component System",
+          description:
+            "AristoByte UI is a forward-thinking component library engineered for performance, consistency, and maintainability. Built with TypeScript and SCSS, it empowers developers to rapidly build modern UIs with a clean architecture, reusable patterns, and first-class DX across web and mobile platforms.",
+        },
+        installation: {
+          title: "Install AristoByte UI - Get Started in Seconds",
+          description:
+            "Seamlessly integrate AristoByte UI into your project using your preferred package manager. Whether you use Yarn, npm, or pnpm, installation is straightforward and fast. Choose your tooling tab below and run the command to unlock a powerful, modular component system optimized for scale.",
+        },
+        import: {
+          title: "Import",
+          description:
+            "Each component in the AristoByte UI library is designed for seamless integration, offering clean abstractions and consistent styling across your application. To start using any component, simply import it directly from the package entry point. This approach ensures modularity and eliminates unnecessary bundle weight while maintaining a standardized development experience.",
+        },
+        usage: {
+          title: "Import Component",
+          description: "",
+        },
+      },
+    },
     components: {
       button: {
         intro: {
           title: "Button",
           description:
-            "Buttons allow users to perform actions and choose with a single tap.",
+            "The Button component is a fundamental interactive element designed to trigger actions and provide clear visual feedback. It supports multiple variants, sizes, and states to match various UI requirements.",
         },
         installation: {
           title: "Installation of Button",
@@ -116,7 +144,7 @@ export const EN_GB = {
             "The Button component is a core interactive element in the AristoByte UI library, offering a consistent and accessible way to trigger actions. It supports multiple variants and states to align with your brand and interaction patterns. Import it as shown below to streamline call-to-action elements across your application:",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the Button component using default properties. Suitable for general-purpose interactions.",
         },
@@ -208,23 +236,6 @@ export const EN_GB = {
             "The Card component is part of the AristoByte UI library—a modular design system built for consistency and scalability across your applications. Use the import below to access a reusable, fully encapsulated UI element that adheres to your design and development standards.",
         },
       },
-      home: {
-        intro: {
-          title: "AristoByte UI - A Scalable, Design-Driven Component System",
-          description:
-            "AristoByte UI is a forward-thinking component library engineered for performance, consistency, and maintainability. Built with TypeScript and SCSS, it empowers developers to rapidly build modern UIs with a clean architecture, reusable patterns, and first-class DX across web and mobile platforms.",
-        },
-        installation: {
-          title: "Install AristoByte UI - Get Started in Seconds",
-          description:
-            "Seamlessly integrate AristoByte UI into your project using your preferred package manager. Whether you use Yarn, npm, or pnpm, installation is straightforward and fast. Choose your tooling tab below and run the command to unlock a powerful, modular component system optimized for scale.",
-        },
-        import: {
-          title: "Import",
-          description:
-            "Each component in the AristoByte UI library is designed for seamless integration, offering clean abstractions and consistent styling across your application. To start using any component, simply import it directly from the package entry point. This approach ensures modularity and eliminates unnecessary bundle weight while maintaining a standardized development experience.",
-        },
-      },
       spinner: {
         intro: {
           title: "Spinner",
@@ -242,7 +253,7 @@ export const EN_GB = {
             "The Spinner component provides visual feedback for asynchronous actions, improving user awareness of system state. Import it as shown below to seamlessly integrate it into loading workflows:",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the Spinner component using default settings. Ideal for showcasing loading states in minimal interfaces.",
         },
@@ -279,7 +290,7 @@ export const EN_GB = {
             "The Message Box component delivers user-facing alerts with semantic clarity and visual consistency. Import it as shown below to streamline notification delivery in your application:",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the Message Box component using default props. Ideal for inline status alerts and persistent feedback across layouts.",
         },
@@ -321,7 +332,7 @@ export const EN_GB = {
             "You can import the Switch component either as a standalone module or from the global AristoByteUI package. The import method depends on how your project structure is configured.",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the Switch component with optional label and controlled state. Suitable for toggling boolean states in forms, settings panels, and interactive UIs.",
         },
@@ -388,7 +399,7 @@ export const EN_GB = {
             "You can either import <code>Radio</code> and <code>RadioGroup</code> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "This example showcases a typical implementation of the <code>RadioGroup</code> component with multiple <code>Radio</code> children. The <b>value</b> prop defines the selected option, while the <b>disabled</b> prop disables interaction across all radios in the group. Each <code>Radio</code> receives its label via the <b>children</b> prop.",
         },
@@ -450,7 +461,7 @@ export const EN_GB = {
             "The Dropdown component provides a minimal yet accessible selection UI for various use cases. It supports dynamic options, disabled states, and custom styling. Import it as shown below to enrich your data selection flows:",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the Dropdown component in a controlled setup. Ideal for collecting selections or filtering content contextually.",
         },
@@ -484,7 +495,7 @@ export const EN_GB = {
             "Import the <b>Social Media Card</b> from the AristoByte UI package to rapidly integrate feed-like layouts into your application. Its composable design allows easy extension with comments, likes, and sharing controls.",
         },
         usage: {
-          title: "Usage",
+          title: "Basic Usage Example",
           description:
             "Basic implementation of the <b>SocialMediaCard</b> component. Showcases a profile with <b>title</b>, <b>subtitle</b>, <b>description</b>, and optional <b>metrics</b>, <b>media</b>, and <b>tags</b>.",
         },

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./TaskManager.module.scss";
 
-export interface ITaskManager {}
+export interface ITaskManager {
+  disabled?: boolean;
+}
 
 export const TaskManager: React.FC<ITaskManager> = ({ ...props }) => {
   const uniqId = React.useId();

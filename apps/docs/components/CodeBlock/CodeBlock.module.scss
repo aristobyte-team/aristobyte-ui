@@ -1,17 +1,27 @@
 .code-block {
-  border-radius: 8px;
+  background-color: #0f172b;
+  border-radius: 10px;
+  border: 1px solid #314158;
+  display: flex;
   font-family:
     Fira Code,
     Menlo,
     monospace;
-  font-size: 14px;
+  font-size: 16px;
+  gap: 20px;
   line-height: 1.5;
   overflow: hidden;
+  padding: 25px;
   position: relative;
-  width: 100%;
+  width: calc(100% - 2 * 25px);
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
   &__container {
-    background-color: #0d1117;
     overflow: auto;
     min-width: 100%;
     max-width: 240px;
@@ -22,7 +32,6 @@
       display: block;
       margin: 0;
       min-height: calc(52px - 14px * 2);
-      padding: 14px;
       white-space: pre;
       overflow: visible;
     }

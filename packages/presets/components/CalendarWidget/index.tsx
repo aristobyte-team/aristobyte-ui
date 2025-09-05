@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./CalendarWidget.module.scss";
 
-export interface ICalendarWidget {}
+export interface ICalendarWidget {
+  disabled?: boolean;
+}
 
 export const CalendarWidget: React.FC<ICalendarWidget> = ({ ...props }) => {
   const uniqId = React.useId();

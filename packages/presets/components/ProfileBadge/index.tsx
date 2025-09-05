@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ProfileBadge.module.scss";
 
-export interface IProfileBadge {}
+export interface IProfileBadge {
+  disabled?: boolean;
+}
 
 export const ProfileBadge: React.FC<IProfileBadge> = ({ ...props }) => {
   const uniqId = React.useId();

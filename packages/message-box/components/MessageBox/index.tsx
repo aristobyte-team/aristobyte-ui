@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Icons } from "@aristobyte-ui/utils";
+import { type IconPropsType, Icons } from "@aristobyte-ui/utils";
 
 import styles from "./MessageBox.module.scss";
 
@@ -9,7 +9,11 @@ export interface IMessageBox {
   variant?: MessageBoxVariant;
   children?: React.ReactElement | React.ReactNode | string;
   withIcon?: boolean;
-  customIcon?: () => React.JSX.Element;
+  customIcon?: {
+    component: (props: IconPropsType) => React.JSX.Element;
+    size?: number;
+    color?: string;
+  };
   radius?: "none" | "sm" | "md" | "lg" | "full";
   type?: "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing";
   className?: string;
@@ -40,7 +44,6 @@ export const MessageBox: React.FC<IMessageBox> = ({
   className = "",
   style = {},
 }) => {
-  const Icon = customIcon || renderIcon(variant);
   return (
     <div
       className={`message-box ${styles["message-box"]} ${
@@ -56,7 +59,10 @@ export const MessageBox: React.FC<IMessageBox> = ({
             styles[`message-box__icon--${variant}`]
           }`}
         >
-          <Icon />
+          {customIcon?.component({
+            size: customIcon.size,
+            color: customIcon.color,
+          }) || renderIcon(variant)({})}
         </span>
       )}
       <p

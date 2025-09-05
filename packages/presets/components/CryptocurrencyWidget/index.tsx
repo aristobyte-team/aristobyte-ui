@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./CryptocurrencyWidget.module.scss";
 
-export interface ICryptocurrencyWidget {}
+export interface ICryptocurrencyWidget {
+  disabled?: boolean;
+}
 
 export const CryptocurrencyWidget: React.FC<ICryptocurrencyWidget> = ({
   ...props

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./StockMarket.module.scss";
 
-export interface IStockMarket {}
+export interface IStockMarket {
+  disabled?: boolean;
+}
 
 export const StockMarket: React.FC<IStockMarket> = ({ ...props }) => {
   const uniqId = React.useId();

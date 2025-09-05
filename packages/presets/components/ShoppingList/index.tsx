@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./ShoppingList.module.scss";
 
-export interface IShoppingList {}
+export interface IShoppingList {
+  disabled?: boolean;
+}
 
 export const ShoppingList: React.FC<IShoppingList> = ({ ...props }) => {
   const uniqId = React.useId();

@@ -4,7 +4,9 @@ import * as React from "react";
 
 import styles from "./SettingsPanel.module.scss";
 
-export interface ISettingsPanel {}
+export interface ISettingsPanel {
+  disabled?: boolean;
+}
 
 export const SettingsPanel: React.FC<ISettingsPanel> = ({ ...props }) => {
   const uniqId = React.useId();
