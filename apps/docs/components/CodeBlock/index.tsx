@@ -2,7 +2,7 @@
 import * as React from "react";
 import { getSingletonHighlighter as highlighter } from "shiki";
 
-import { Button } from "@aristobyte-ui/button";
+import { Button } from "@/components";
 import { type IconPropsType, Icons } from "@aristobyte-ui/utils";
 
 import { SupportedLanguages, SupportedThemes } from "./types";

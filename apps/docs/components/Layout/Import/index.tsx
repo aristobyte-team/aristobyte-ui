@@ -1,37 +1,22 @@
 import * as React from "react";
 
-import { Card, CodeBlock, Label } from "@/components";
+import { Card, CodeBlock, Label, Button } from "@/components";
 
 import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
-import { Button } from "@aristobyte-ui/button";
 
 import "./Import.scss";
-import { CodeBlocks } from "@/config";
+import { CodeBlocks, Helpers } from "@/config";
 
 export type IImport = {
   category: string;
   unit: string;
 };
 
-const renderCode = (
-  category: string,
-  unit: string,
-  componentToImportArr: string[],
-  isGlobal: boolean
-) => {
-  switch (category) {
-    case "components":
-    default:
-      return `import { ${componentToImportArr.join(", ")} } from "@aristobyte-ui${isGlobal ? "" : "/" + unit}";`;
-    case "presets":
-      return `import { ${componentToImportArr.join(", ")} } from "@aristobyte-ui${isGlobal ? "" : "/" + category}";`;
-  }
-};
-
 export const Import: React.FC<IImport> = ({ category, unit }) => {
   const { config } = useConfig();
   const { t } = useTranslate();
+  // @TODO: @CONFIG - get a loading state for the config so we display the loading and make sure that everything we read from the config is never undefined once the loading is finished
   const [importTab, setImportTab] = React.useState<
     (typeof config.importTabs)[0]
   >(config.importTabs[0]!);
@@ -39,17 +24,16 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
   return (
     <section className="import">
       <div className="import__container">
-        {/* @TODO: @DATA */}
         <Card
           icon={{ component: Icons.PaperCode, size: 26, color: "#51a2ff" }}
           label={{
-            text: "ES6 Modules",
+            text: t("layout.labels.es6Modules"),
             backgroundColor: "#1c398e66",
             borderColor: "#2b7fff4c",
             color: "#8ec5ff",
           }}
-          title="Import"
-          description="Install the <b>Button</b> component individually or as part of the complete <b>@aristobyte-ui</b> library."
+          title={t("layout.commonTitles.import")}
+          description={t("layout.commonDescriptions.import")}
         >
           <Card
             title={t(`layout.${category}.${unit}.import.title`)}
@@ -61,12 +45,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
               <li key={id}>
                 <Button
                   onClick={() => setImportTab(id)}
-                  className={
-                    "import__import-type-button" +
-                    (importTab === id
-                      ? " import__import-type-button--active"
-                      : "")
-                  }
+                  className={importTab === id ? " custom-button--active" : ""}
                 >
                   {t(`layout.import-tabs.${id}`)}
                 </Button>
@@ -74,7 +53,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             ))}
           </ul>
           <h3 className="import__import-type-active">
-            <span>Import Method</span>
+            <span>{t("layout.commonTitles.importMethod")}</span>
             <Label
               text={t(`layout.import-tabs.${importTab}`)}
               color="#d3d3d3"
@@ -82,18 +61,22 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
           </h3>
           <CodeBlock
             icon={{ component: Icons.PaperCode, size: 18, color: "#51a2ff" }}
-            code={renderCode(
+            code={Helpers.getPackageImportCode(
               category,
               unit,
-              config.import[category]![unit!] || [],
+              config.import[category]![unit!]!,
               importTab === "global"
             )}
           />
           ;
           <div className="import__cards">
             <Card
-              title="Individual Package"
-              description="Import directly from the Button package for optimal tree-shaking and smaller bundle sizes."
+              title={t("layout.commonTitles.individualPackage")}
+              description={Helpers.insertPackageToText(
+                t("layout.commonDescriptions.importIndividualPackage"),
+                category,
+                unit
+              )}
               icon={{ component: Icons.Package, size: 20, color: "#c27aff" }}
               {...(importTab === config.importTabs[0] && {
                 style: { borderColor: "#51a2ff4c" },
@@ -101,12 +84,12 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             >
               <p className="import__alt-text">
                 <Icons.Dot size={8} color="#05df72" />
-                Recommended for component-specific usage
+                {t("layout.commonDescriptions.importIndividualPackageAltText")}
               </p>
             </Card>
             <Card
-              title="Global Library"
-              description="Import from the main library package when using multiple components from AristoByte UI."
+              title={t("layout.commonTitles.globalLibrary")}
+              description={t("layout.commonDescriptions.importGlobalLibrary")}
               icon={{
                 component: Icons.GradientSquare,
                 colors: ["#51a2ff", "#c27aff"],
@@ -118,7 +101,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             >
               <p className="import__alt-text">
                 <Icons.Dot size={8} color="#51a2ff" />
-                Recommended for component-specific usage
+                {t("layout.commonDescriptions.importGlobalLibraryAltText")}
               </p>
             </Card>
           </div>
@@ -127,7 +110,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             description={t(`layout.${category}.${unit}.usage.description`)}
             icon={{ component: Icons.Code, size: 20, color: "#00d492" }}
           >
-            <CodeBlock code={CodeBlocks![category]![unit]!.usage!}></CodeBlock>
+            <CodeBlock code={CodeBlocks![category]![unit]!.usage!} />
           </Card>
         </Card>
       </div>

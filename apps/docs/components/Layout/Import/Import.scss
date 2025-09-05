@@ -148,24 +148,6 @@
     margin: 24px 0 0;
   }
 
-  &__import-type-button {
-    border-radius: 10px;
-    background-color: rgba(29, 41, 61, 0.5) !important; //@TODO: @COLOR
-    border: 1px solid #45556c; //@TODO: @COLOR
-
-    &:hover {
-      background-color: rgb(43, 60, 91, 0.4) !important; //@TODO: @COLOR
-    }
-
-    &--active {
-      background-color: #314158 !important; //@TODO: @COLOR
-
-      &:hover {
-        background-color: #425269 !important; //@TODO: @COLOR
-      }
-    }
-  }
-
   &__import-type-active {
     align-items: center;
     display: flex;

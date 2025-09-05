@@ -1,5 +1,3 @@
-// @TODO: @DATA - installation descriptions to be removed from everywhere
-
 export const EN_GB = {
   sidebar: {
     sections: {
@@ -91,6 +89,8 @@ export const EN_GB = {
   layout: {
     labels: {
       "design-system-component": "Design System Component",
+      required: "Required",
+      es6Modules: "ES6 Modules",
     },
     "intro-links": {
       source: "Source",
@@ -102,6 +102,33 @@ export const EN_GB = {
     codePreview: {
       code: "Code",
       preview: "Preview",
+    },
+    commonTitles: {
+      installation: "Installation",
+      import: "Import",
+      individualPackage: "Individual Package",
+      fullLibrary: "Full Library",
+      globalLibrary: "Global Library",
+      packageManager: "Package Manager",
+      importMethod: "Import Method",
+      usage: "Basic Usage Example",
+    },
+    commonDescriptions: {
+      installation:
+        "Install the <b>{{package}}</b> individually or as part of the complete <b>@aristobyte-ui</b> library.",
+      installationIndividualPackage:
+        "Install only the <b>{{package}}</b> if you need specific functionality.",
+      installationFullLibrary:
+        "Skip this if you have the complete <b>@aristobyte-ui</b> already installed.",
+      import:
+        "Choose between individual package imports or global library imports based on your project's needs and bundle size requirements.",
+      importIndividualPackage:
+        "Import directly from the <b>{{package}}</b> package for optimal tree-shaking and smaller bundle sizes.",
+      importIndividualPackageAltText:
+        "Recommended for component-specific usage",
+      importGlobalLibrary:
+        "Import from the main library package when using multiple components from <b>AristoByte UI.</b>",
+      importGlobalLibraryAltText: "Recommended for component-specific usage",
     },
     "get-started": {
       overview: {

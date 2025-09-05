@@ -81,16 +81,20 @@
     }
 
     &-icon {
-      &--components {
-        color: $purple-400;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &--components svg {
+        color: $purple-400 !important;
       }
 
-      &--get-started {
-        color: $green-400;
+      &--get-started svg {
+        color: $green-400 !important;
       }
 
-      &--presets {
-        color: $blue-400;
+      &--presets svg {
+        color: $blue-400 !important;
       }
     }
 
