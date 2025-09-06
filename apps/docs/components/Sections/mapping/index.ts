@@ -225,20 +225,20 @@ export const mapping: MappingType = {
   components: {
     button: {
       variants: Components.ButtonPreviewBlocks.Variants,
-      disabled: Components.ButtonPreviewBlocks.Disabled,
-      loading: Components.ButtonPreviewBlocks.Loading,
-      sizes: Components.ButtonPreviewBlocks.Sizes,
-      radius: Components.ButtonPreviewBlocks.Radius,
       appearance: Components.ButtonPreviewBlocks.Appearance,
+      sizes: Components.ButtonPreviewBlocks.Sizes,
+      disabled: Components.ButtonPreviewBlocks.Disabled,
+      radius: Components.ButtonPreviewBlocks.Radius,
       "with-icon": Components.ButtonPreviewBlocks.WithIcon,
+      loading: Components.ButtonPreviewBlocks.Loading,
       "button-group": Components.ButtonPreviewBlocks.ButtonGroup,
-      "button-group-disabled":
-        Components.ButtonPreviewBlocks.ButtonGroupDisabled,
+      "button-group-variant": Components.ButtonPreviewBlocks.ButtonGroupVariant,
+      "button-group-size": Components.ButtonPreviewBlocks.ButtonGroupSize,
+      "button-group-radius": Components.ButtonPreviewBlocks.ButtonGroupRadius,
       "button-group-alignment":
         Components.ButtonPreviewBlocks.ButtonGroupAlignment,
-      "button-group-radius": Components.ButtonPreviewBlocks.ButtonGroupRadius,
-      "button-group-size": Components.ButtonPreviewBlocks.ButtonGroupSize,
-      "button-group-variant": Components.ButtonPreviewBlocks.ButtonGroupVariant,
+      "button-group-disabled":
+        Components.ButtonPreviewBlocks.ButtonGroupDisabled,
     },
     spinner: {
       variants: Components.SpinnerPreviewBlocks.Variants,

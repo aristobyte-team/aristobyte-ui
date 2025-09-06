@@ -1,17 +1,16 @@
 export function getPackage(category: string, unit: string): string {
-  if (category === "presets") {
-    return category;
+  switch (category) {
+    case "presets":
+      return "presets";
+    case "get-started":
+      return "[YOUR_PACKAGE_NAME]";
+    default:
+      return unit;
   }
-
-  return unit;
 }
 
-export function insertPackageToText(
-  text: string,
-  category: string,
-  unit: string
-): string {
-  return text.replace("{{package}}", getPackage(category, unit));
+export function insertPackageToText(text: string, pkg: string): string {
+  return text.replace("{{package}}", pkg);
 }
 
 export function getPackageImportCode(
@@ -21,4 +20,17 @@ export function getPackageImportCode(
   isGlobalImport?: boolean
 ): string {
   return `import { ${components.join(", ")} } from "@aristobyte-ui${isGlobalImport ? "" : `/${getPackage(category, unit)}`}";`;
+}
+
+export function parseInstallationScript(
+  script: string,
+  category: string,
+  unit: string
+) {
+  const pkg = getPackage(category, unit);
+
+  if (category === "get-started") {
+    return script.replace("{{package}}", "");
+  }
+  return insertPackageToText(script, `/${pkg}`);
 }

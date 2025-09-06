@@ -7,6 +7,7 @@ import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
 
 import "./Sidebar.scss";
+import { usePathname } from "next/navigation";
 
 // @TODO: @UI - move to UI lib
 
@@ -38,10 +39,15 @@ const Accordion: React.FC<IAccordion> = ({ isOpen, children }) => {
 };
 
 export const Sidebar: React.FC = () => {
+  const [_, category, unit] = usePathname().split("/");
   const { t } = useTranslate();
-  const { config } = useConfig();
+  const {
+    config: {
+      sidebar: { sections },
+    },
+  } = useConfig();
   const [openedSection, setOpenedSection] = React.useState<string[]>([
-    config.sidebar.sections[0]!.id,
+    sections[0]!.id,
   ]);
 
   const toggleSection = (id: string) => {
@@ -50,6 +56,19 @@ export const Sidebar: React.FC = () => {
     );
   };
 
+  const closeAllSectionsOnRouteChange = React.useCallback(() => {
+    const newOpenedSection = sections.find(
+      ({ id, links }) => id === category && links.find(({ id }) => id === unit)
+    )?.id;
+    if (!newOpenedSection) return;
+
+    setOpenedSection([newOpenedSection]);
+  }, [sections, category, unit]);
+
+  React.useEffect(() => {
+    closeAllSectionsOnRouteChange();
+  }, [closeAllSectionsOnRouteChange]);
+
   return (
     <aside className="sidebar">
       <header className="sidebar__header">
@@ -57,16 +76,21 @@ export const Sidebar: React.FC = () => {
           <Icons.Logo />
         </div>
         <div className="sidebar__header-content">
-          <h1 className="sidebar__header-title">AristoByte UI</h1>
-          <h2 className="sidebar__header-subtitle">Documentation</h2>
+          <h1 className="sidebar__header-title">{t("sidebar.header.title")}</h1>
+          <h2 className="sidebar__header-subtitle">
+            {t("sidebar.header.subtitle")}
+          </h2>
         </div>
       </header>
 
       <div className="sidebar__container">
-        {config.sidebar.sections.map(({ id, links, icon }) => (
+        {sections.map(({ id, links, icon }) => (
           <div key={id} className="sidebar__section">
             <button
-              className="sidebar__button"
+              className={
+                "sidebar__button" +
+                (category === id ? " sidebar__button--active" : "")
+              }
               onClick={() => toggleSection(id)}
             >
               <span
@@ -97,7 +121,14 @@ export const Sidebar: React.FC = () => {
                       transitionDelay: `${openedSection.includes(id) ? 200 + index * 20 : 0}ms`,
                     }}
                   >
-                    <Link href={href} target={target} className="sidebar__link">
+                    <Link
+                      href={href}
+                      target={target}
+                      className={
+                        "sidebar__link" +
+                        (unit === linkId ? " sidebar__link--active" : "")
+                      }
+                    >
                       {t(`sidebar.links.${linkId}`)}
                     </Link>
                   </li>

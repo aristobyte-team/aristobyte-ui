@@ -76,8 +76,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
               title={t("layout.commonTitles.individualPackage")}
               description={Helpers.insertPackageToText(
                 t("layout.commonDescriptions.importIndividualPackage"),
-                category,
-                unit
+                Helpers.getPackage(category, unit)
               )}
               icon={{ component: Icons.Package, size: 20, color: "#c27aff" }}
               {...(importTab === config.importTabs[0] && {
@@ -108,8 +107,8 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             </Card>
           </div>
           <Card
-            title={t(`layout.${category}.${unit}.usage.title`)}
-            description={t(`layout.${category}.${unit}.usage.description`)}
+            title={t(`layout.commonTitles.usage`)}
+            description={t(`layout.commonDescriptions.usage`)}
             icon={{ component: Icons.Code, size: 20, color: "#00d492" }}
           >
             <CodeBlock code={CodeBlocks![category]![unit]!.usage!} />

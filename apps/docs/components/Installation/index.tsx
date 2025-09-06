@@ -36,8 +36,7 @@ export const Installation: React.FC<IInstallation> = ({ category, unit }) => {
           title={t("layout.commonTitles.installation")}
           description={Helpers.insertPackageToText(
             t("layout.commonDescriptions.installation"),
-            category,
-            unit
+            Helpers.getPackage(category, unit)
           )}
         >
           <Card
@@ -73,7 +72,7 @@ export const Installation: React.FC<IInstallation> = ({ category, unit }) => {
 
           <CodeBlock
             icon={{ component: Icons.BashCursor, size: 18, color: "#5ee9b5" }}
-            code={Helpers.insertPackageToText(
+            code={Helpers.parseInstallationScript(
               packageManager.script,
               category,
               unit
@@ -87,8 +86,7 @@ export const Installation: React.FC<IInstallation> = ({ category, unit }) => {
               title={t("layout.commonTitles.individualPackage")}
               description={Helpers.insertPackageToText(
                 t("layout.commonDescriptions.installationIndividualPackage"),
-                category,
-                unit
+                Helpers.getPackage(category, unit)
               )}
               icon={{ component: Icons.Package, size: 20, color: "#51a2ff" }}
             />

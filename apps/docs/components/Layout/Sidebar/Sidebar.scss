@@ -197,6 +197,10 @@
       border-left: 6px solid rgba(77, 103, 140, 0.5);
       color: $white;
     }
+
+    &--active {
+      color: $white;
+    }
   }
 
   &__section {

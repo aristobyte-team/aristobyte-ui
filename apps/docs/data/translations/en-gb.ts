@@ -1,5 +1,6 @@
 export const EN_GB = {
   sidebar: {
+    header: { title: "AristoByte UI", subtitle: "Documentation" },
     sections: {
       components: "Component",
       presets: "Presets",
@@ -85,6 +86,7 @@ export const EN_GB = {
       "habit-tracker": "Habit Tracker",
       "code-editor": "Code Editor",
     },
+    footer: "{{version}} • Built by AristoByte Team",
   },
   layout: {
     labels: {
@@ -114,6 +116,8 @@ export const EN_GB = {
       usage: "Basic Usage Example",
     },
     commonDescriptions: {
+      usage:
+        "Basic implementation of the component using default properties. Suitable for general-purpose interactions.",
       installation:
         "Install the <b>{{package}}</b> individually or as part of the complete <b>@aristobyte-ui</b> library.",
       installationIndividualPackage:
@@ -147,10 +151,6 @@ export const EN_GB = {
           description:
             "Each component in the AristoByte UI library is designed for seamless integration, offering clean abstractions and consistent styling across your application. To start using any component, simply import it directly from the package entry point. This approach ensures modularity and eliminates unnecessary bundle weight while maintaining a standardized development experience.",
         },
-        usage: {
-          title: "Import Component",
-          description: "",
-        },
       },
     },
     components: {
@@ -169,11 +169,6 @@ export const EN_GB = {
           title: "Import Button",
           description:
             "The Button component is a core interactive element in the AristoByte UI library, offering a consistent and accessible way to trigger actions. It supports multiple variants and states to align with your brand and interaction patterns. Import it as shown below to streamline call-to-action elements across your application:",
-        },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the Button component using default properties. Suitable for general-purpose interactions.",
         },
         disabled: {
           title: "Disabled State",
@@ -279,11 +274,6 @@ export const EN_GB = {
           description:
             "The Spinner component provides visual feedback for asynchronous actions, improving user awareness of system state. Import it as shown below to seamlessly integrate it into loading workflows:",
         },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the Spinner component using default settings. Ideal for showcasing loading states in minimal interfaces.",
-        },
         types: {
           title: "Spinner Types",
           description:
@@ -315,11 +305,6 @@ export const EN_GB = {
           title: "Import Message Box",
           description:
             "The Message Box component delivers user-facing alerts with semantic clarity and visual consistency. Import it as shown below to streamline notification delivery in your application:",
-        },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the Message Box component using default props. Ideal for inline status alerts and persistent feedback across layouts.",
         },
         variants: {
           title: "Message Box Variants",
@@ -357,11 +342,6 @@ export const EN_GB = {
           title: "Import Switch",
           description:
             "You can import the Switch component either as a standalone module or from the global AristoByteUI package. The import method depends on how your project structure is configured.",
-        },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the Switch component with optional label and controlled state. Suitable for toggling boolean states in forms, settings panels, and interactive UIs.",
         },
         labeled: {
           title: "Labeled Switch",
@@ -425,11 +405,6 @@ export const EN_GB = {
           description:
             "You can either import <code>Radio</code> and <code>RadioGroup</code> directly from the package or rely on a global import setup. Both approaches ensure consistent and scoped styling.",
         },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "This example showcases a typical implementation of the <code>RadioGroup</code> component with multiple <code>Radio</code> children. The <b>value</b> prop defines the selected option, while the <b>disabled</b> prop disables interaction across all radios in the group. Each <code>Radio</code> receives its label via the <b>children</b> prop.",
-        },
         disabled: {
           title: "Disabled",
           description:
@@ -487,11 +462,6 @@ export const EN_GB = {
           description:
             "The Dropdown component provides a minimal yet accessible selection UI for various use cases. It supports dynamic options, disabled states, and custom styling. Import it as shown below to enrich your data selection flows:",
         },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the Dropdown component in a controlled setup. Ideal for collecting selections or filtering content contextually.",
-        },
         disabled: {
           title: "Disabled",
           description:
@@ -520,11 +490,6 @@ export const EN_GB = {
           title: "Import Social Media Card",
           description:
             "Import the <b>Social Media Card</b> from the AristoByte UI package to rapidly integrate feed-like layouts into your application. Its composable design allows easy extension with comments, likes, and sharing controls.",
-        },
-        usage: {
-          title: "Basic Usage Example",
-          description:
-            "Basic implementation of the <b>SocialMediaCard</b> component. Showcases a profile with <b>title</b>, <b>subtitle</b>, <b>description</b>, and optional <b>metrics</b>, <b>media</b>, and <b>tags</b>.",
         },
         disabled: {
           title: "Disabled",

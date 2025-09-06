@@ -23,8 +23,7 @@ export const Intro: React.FC<IIntro> = ({ category, unit }) => {
     storybook: "Storybook",
     npm: Helpers.insertPackageToText(
       `@aristobyte-ui/{{package}}`,
-      category,
-      unit
+      Helpers.getPackage(category, unit)
     ),
     source: t("layout.intro-links.source"),
   };
@@ -62,7 +61,10 @@ export const Intro: React.FC<IIntro> = ({ category, unit }) => {
               <li key={id}>
                 <Anchor
                   className="intro__link"
-                  href={Helpers.insertPackageToText(href, category, unit)}
+                  href={Helpers.insertPackageToText(
+                    href,
+                    Helpers.getPackage(category, unit)
+                  )}
                   target={target}
                 >
                   <span className={`intro__link-icon intro__link-icon--${id}`}>
