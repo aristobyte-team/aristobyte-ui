@@ -30,9 +30,7 @@ const Accordion: React.FC<IAccordion> = ({ isOpen, children }) => {
   return (
     <div
       className={`sidebar__accordion ${isOpen ? "sidebar__accordion--open" : ""}`}
-      style={{
-        height: isOpen ? height : 0,
-      }}
+      style={{ height: isOpen ? height : 0 }}
     >
       <div ref={ref}>{children}</div>
     </div>

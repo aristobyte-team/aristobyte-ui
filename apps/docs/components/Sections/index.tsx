@@ -25,9 +25,20 @@ export interface ITabs {
 const Tabs: React.FC<ITabs> = ({ category, unit, section }) => {
   const { t } = useTranslate();
   const { config } = useConfig();
+  const [height, setHeight] = React.useState(0);
   const [activeView, setActiveView] = React.useState<string>(
     config.codePreviewTabs[0]!
   );
+  const codeRef = React.useRef<HTMLDivElement>(null);
+  const previewRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    setHeight(
+      activeView === "preview"
+        ? previewRef.current!.offsetHeight
+        : codeRef.current!.offsetHeight
+    );
+  }, [activeView]);
 
   return (
     <>
@@ -56,14 +67,20 @@ const Tabs: React.FC<ITabs> = ({ category, unit, section }) => {
           color: activeView === "preview" ? "#c27aff" : "#00d492",
         }}
       >
-        {activeView === "preview" && (
-          <div className="sections__code-preview">
+        <div style={{ height }} className="sections__code-preview">
+          <div
+            ref={previewRef}
+            className={`sections__preview ${activeView === "preview" ? " sections__preview--active" : ""}`}
+          >
             {mapping![category]![unit]![section]!()}
           </div>
-        )}
-        {activeView === "code" && (
-          <CodeBlock code={CodeBlocks![category]![unit]![section]!} />
-        )}
+          <div
+            ref={codeRef}
+            className={`sections__code ${activeView === "code" ? " sections__code--active" : ""}`}
+          >
+            <CodeBlock code={CodeBlocks![category]![unit]![section]!} />
+          </div>
+        </div>
       </Card>
     </>
   );
