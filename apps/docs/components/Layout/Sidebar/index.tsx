@@ -1,13 +1,14 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
+import pkg from "../../../package.json";
 
 import "./Sidebar.scss";
-import { usePathname } from "next/navigation";
 
 // @TODO: @UI - move to UI lib
 
@@ -138,6 +139,13 @@ export const Sidebar: React.FC = () => {
           </div>
         ))}
       </div>
+
+      <footer className="sidebar__footer">
+        <h3 className="sidebar__footer-title">{t("sidebar.footer.title")}</h3>
+        <h4 className="sidebar__footer-subtitle">
+          {t("sidebar.footer.subtitle").replace("{{version}}", pkg.version)}
+        </h4>
+      </footer>
     </aside>
   );
 };

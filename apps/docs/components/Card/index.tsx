@@ -22,6 +22,7 @@ export interface ICard {
     colors?: string[];
   };
   children?: React.ReactNode | React.ReactElement | string;
+  className?: string;
   style?: React.CSSProperties;
 }
 
@@ -31,10 +32,11 @@ export const Card: React.FC<ICard> = ({
   label,
   icon,
   children,
+  className = "",
   style = {},
 }) => (
-  <div className="card" style={style}>
-    {title && (
+  <div className={`card ${className}`} style={style}>
+    {(title || icon || label) && (
       <h3 className="card__title">
         {icon && (
           <div className="card__icon">
@@ -45,7 +47,7 @@ export const Card: React.FC<ICard> = ({
             })}
           </div>
         )}
-        <span dangerouslySetInnerHTML={{ __html: title }} />
+        {title && <span dangerouslySetInnerHTML={{ __html: title }} />}
         {label && (
           <Label
             text={label.text}

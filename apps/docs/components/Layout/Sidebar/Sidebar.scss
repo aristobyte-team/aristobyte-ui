@@ -61,6 +61,16 @@
       border: 1px solid rgba(77, 103, 140, 0.5);
     }
 
+    &--active {
+      background-color: rgba(#1d293d, 0.8);
+      border: 1px solid rgba(77, 103, 140, 0.7);
+
+      &:hover {
+        background-color: rgba(#1d293d, 0.95);
+        border: 1px solid rgba(77, 103, 140, 0.9);
+      }
+    }
+
     &-arrow {
       align-items: center;
       color: $white;
@@ -207,5 +217,28 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  &__footer {
+    align-items: center;
+    border-top: 1px solid rgba(49, 65, 88, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 0;
+
+    &-title {
+      color: #9fb2cc;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    &-subtitle {
+      color: #90a1b9;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
   }
 }

@@ -7,6 +7,7 @@ import { Components } from "./Components";
 import { Copy } from "./Copy";
 import { Dot } from "./Dot";
 import { Error } from "./Error";
+import { Eye } from "./Eye";
 import { GalleryVertical } from "./GalleryVertical";
 import { GalleryVerticalEnd } from "./GalleryVerticalEnd";
 import { Github } from "./Github";
@@ -39,6 +40,7 @@ export const Icons = {
   Comment,
   Components,
   Dot,
+  Eye,
   Error,
   GalleryVertical,
   GalleryVerticalEnd,
