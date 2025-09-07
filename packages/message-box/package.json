@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/message-box",
   "description": "A fully-typed, modular, and flexible MessageBox component for AristoByteUI, supporting multiple variants, types, border-radius options, and optional icons.",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -57,7 +57,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/utils": "^1.0.41",
+    "@aristobyte-ui/utils": "^1.0.42",
     "esbuild-sass-plugin": "^3.3.1",
     "framer-motion": "^12.23.9",
     "react": "^19.1.0",
@@ -67,8 +67,8 @@
     "tsup": "^8.5.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.41",
-    "@aristobyte-ui/typescript-config": "^1.0.41",
+    "@aristobyte-ui/eslint-config": "^1.0.42",
+    "@aristobyte-ui/typescript-config": "^1.0.42",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

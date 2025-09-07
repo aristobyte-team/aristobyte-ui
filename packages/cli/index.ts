@@ -8,13 +8,14 @@ import { list } from "./commands/list";
 import { doctor } from "./commands/doctor";
 import { env } from "./commands/env";
 import color from "picocolors";
+import pkg from "./package.json"; // <-- import package.json
 
 const program = new Command();
 
 program
-  .name("aristobyte")
+  .name("aristobyte-ui")
   .description(color.bgMagenta(color.black(" 🚀 Welcome to AristoByteUI CLI ")))
-  .version("1.0.0", "-V, --version", color.green("Output the CLI version"));
+  .version(pkg.version, "-V, --version", color.green("Output the CLI version"));
 
 program.configureHelp({
   formatHelp: (cmd, helper) => {
@@ -52,7 +53,7 @@ ${commandList}
 ${color.bold("Options:")}
 ${optionsList}
 
-${color.dim("Tip: Use 'aristobyte <command> --help' for detailed info on a command.")}
+${color.dim("Tip: Use 'aristobyte-ui <command> --help' for detailed info on a command.")}
 `;
   },
 });

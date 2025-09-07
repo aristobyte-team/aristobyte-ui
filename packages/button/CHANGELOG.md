@@ -1,5 +1,15 @@
 # @aristobyte-ui/button
 
+## 1.0.42
+
+### Patch Changes
+
+- feat: add version from pkg json in cli
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.42
+  - @aristobyte-ui/utils@1.0.42
+
 ## 1.0.41
 
 ### Patch Changes

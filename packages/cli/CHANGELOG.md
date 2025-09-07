@@ -1,5 +1,15 @@
 # aristobyte-cli
 
+## 1.0.42
+
+### Patch Changes
+
+- feat: add version from pkg json in cli
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.42
+  - @aristobyte-ui/typescript-config@1.0.42
+
 ## 1.0.41
 
 ### Patch Changes

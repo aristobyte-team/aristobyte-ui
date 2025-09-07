@@ -17,6 +17,6 @@
     "sourceMap": true,
     "inlineSources": true
   },
-  "include": ["index.ts", "commands/**/*.ts"],
+  "include": ["index.ts", "commands/**/*.ts", "package.json"],
   "exclude": ["node_modules", "dist"]
 }

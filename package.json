@@ -57,6 +57,7 @@
     "add-package": "sh ./scripts/add-package.sh",
     "build": "turbo run build",
     "bump": "changeset && changeset version",
+    "status": "changeset status",
     "release": "changeset publish"
   },
   "devDependencies": {

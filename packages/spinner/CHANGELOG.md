@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 1.0.42
+
+### Patch Changes
+
+- feat: add version from pkg json in cli
+
 ## 1.0.41
 
 ### Patch Changes
