@@ -51,7 +51,7 @@
     "build": "tsup",
     "build:watch": "tsup ./index.ts --watch",
     "dev": "tsup ./index.ts --watch",
-    "start": "ts-node index.ts",
+    "start": "node ./bin/aristobyte-ui.js",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "check-types": "tsc --noEmit"
