@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 1.0.36
+
+### Patch Changes
+
+- feat: add new react package
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.36
+
 ## 1.0.35
 
 ### Patch Changes
