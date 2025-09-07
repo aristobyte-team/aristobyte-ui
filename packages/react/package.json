@@ -1,15 +1,15 @@
 {
-  "name": "@aristobyte-ui/button",
-  "description": "react button and buttongroup components with multiple variants, appearances, sizes, radius options, icons, ripple feedback, and fully typed typescript support",
+  "name": "@aristobyte-ui/react",
+  "description": "AristoByte UI — the complete suite of reusable, production-ready React components with built-in design tokens, accessibility, and theming. Install this package to get the full library in a single dependency.",
   "version": "1.0.35",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/button",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
-    "directory": "packages/jest-config"
+    "directory": "packages/react"
   },
   "bugs": {
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
@@ -21,22 +21,32 @@
   },
   "keywords": [
     "aristobyte",
-    "ui",
+    "aristobyte-ui",
+    "anchor",
     "button",
-    "button-group",
-    "Button",
-    "ButtonGroup",
-    "react",
+    "dropdown",
+    "message-box",
+    "presets",
+    "radio",
+    "spinner",
+    "switch",
+    "utils",
+    "@aristobyte-ui/anchor",
+    "@aristobyte-ui/button",
+    "@aristobyte-ui/dropdown",
+    "@aristobyte-ui/message-box",
+    "@aristobyte-ui/presets",
+    "@aristobyte-ui/radio",
+    "@aristobyte-ui/spinner",
+    "@aristobyte-ui/switch",
+    "@aristobyte-ui/utils",
     "typescript",
-    "component",
-    "ripple",
-    "variants",
-    "appearance",
-    "size",
-    "radius",
-    "icon",
-    "composable",
-    "design-system"
+    "scss",
+    "react",
+    "ui-component",
+    "component-library",
+    "frontend",
+    "ui-kit"
   ],
   "files": [
     "dist"
@@ -60,7 +70,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@aristobyte-ui/anchor": "^1.0.35",
+    "@aristobyte-ui/button": "^1.0.35",
+    "@aristobyte-ui/dropdown": "^1.0.35",
+    "@aristobyte-ui/message-box": "^1.0.35",
+    "@aristobyte-ui/presets": "^1.0.35",
+    "@aristobyte-ui/radio": "^1.0.35",
     "@aristobyte-ui/spinner": "^1.0.35",
+    "@aristobyte-ui/switch": "^1.0.35",
     "@aristobyte-ui/utils": "^1.0.35",
     "esbuild-sass-plugin": "^3.3.1",
     "framer-motion": "^12.23.9",
@@ -72,6 +89,7 @@
   },
   "devDependencies": {
     "@aristobyte-ui/eslint-config": "^1.0.35",
+    "@aristobyte-ui/jest-config": "^1.0.35",
     "@aristobyte-ui/typescript-config": "^1.0.35",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",

@@ -5,6 +5,7 @@ import { Code } from "./Code";
 import { Comment } from "./Comment";
 import { Components } from "./Components";
 import { Copy } from "./Copy";
+import { Disabled } from "./Disabled";
 import { Dot } from "./Dot";
 import { Error } from "./Error";
 import { Eye } from "./Eye";
@@ -23,11 +24,14 @@ import { Palette } from "./Palette";
 import { PaperCode } from "./PaperCode";
 import { Play } from "./Play";
 import { Pnpm } from "./Pnpm";
+import { Resize } from "./Resize";
 import { Share } from "./Share";
 import { Stars } from "./Stars";
+import { Star } from "./Star";
 import { Storybook } from "./Storybook";
 import { Success } from "./Success";
 import { User } from "./User";
+import { UserGroup } from "./UserGroup";
 import { Warning } from "./Warning";
 import { Yarn } from "./Yarn";
 
@@ -39,6 +43,7 @@ export const Icons = {
   Copy,
   Comment,
   Components,
+  Disabled,
   Dot,
   Eye,
   Error,
@@ -57,11 +62,14 @@ export const Icons = {
   Play,
   Pnpm,
   Heart,
+  Resize,
   Share,
+  Star,
   Stars,
   Storybook,
   Success,
   User,
+  UserGroup,
   Warning,
   Yarn,
 };

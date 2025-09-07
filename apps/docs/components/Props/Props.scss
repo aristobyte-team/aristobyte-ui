@@ -1,0 +1,122 @@
+@use "../../styles/settings" as *;
+
+.props {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: all 150ms linear;
+    width: calc(100% - 10px * 2);
+
+    @media screen and (min-width: 425px) {
+      padding: 15px;
+      width: calc(100% - 15px * 2);
+    }
+
+    @media screen and (min-width: 769px) {
+      padding: 30px;
+      width: calc(100% - 30px * 2);
+    }
+  }
+
+  &__components {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-title {
+      color: $white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.14px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid #31415880;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &-row {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    &-name-container {
+      align-items: center;
+      display: flex;
+      gap: 5px;
+    }
+
+    &-name {
+      background-color: #3141587f;
+      border: 2px solid #3141587f;
+      border-radius: 4px;
+      color: #8ec5ff;
+      padding: 3px 6px;
+      width: max-content;
+    }
+
+    &-inline-type {
+      align-items: flex-end;
+      color: #90a1b9; //@TODO: @COLOR
+      text-align: center;
+      font-style: normal;
+      display: flex;
+      flex-direction: column;
+      font-family:
+        SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+      gap: 8px;
+
+      &-text {
+        font-weight: 400;
+      }
+
+      &-default {
+        font-size: 12px;
+        font-weight: 300;
+
+        b {
+          color: #ffb900;
+        }
+      }
+    }
+  }
+}

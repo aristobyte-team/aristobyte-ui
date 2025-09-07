@@ -97,6 +97,7 @@ export const EN_GB = {
       required: "Required",
       es6Modules: "ES6 Modules",
       core: "Core",
+      typescript: "Typescript",
     },
     "intro-links": {
       source: "Source",
@@ -119,6 +120,14 @@ export const EN_GB = {
       importMethod: "Import Method",
       usage: "Basic Usage Example",
       guideline: "{{section}} Guideline",
+      props: {
+        main: "Props Reference",
+        "core-props": "Core Props",
+        "state-props": "State Props",
+        "visual-props": "Visual Props",
+        "advanced-props": "Advanced Props",
+        default: "default: {{value}}",
+      },
     },
     commonDescriptions: {
       usage:
@@ -138,6 +147,8 @@ export const EN_GB = {
       importGlobalLibrary:
         "Import from the main library package when using multiple components from <b>AristoByte UI.</b>",
       importGlobalLibraryAltText: "Recommended for component-specific usage",
+      props:
+        "Complete reference for all props available on {{components}} component(s), including type definitions, default values, and usage examples.",
     },
     "get-started": {
       overview: {

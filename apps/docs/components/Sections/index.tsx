@@ -24,11 +24,13 @@ export interface ITabs {
 
 const Tabs: React.FC<ITabs> = ({ category, unit, section }) => {
   const { t } = useTranslate();
-  const { config } = useConfig();
+  const {
+    config: {
+      tabs: { codePreview: tabs },
+    },
+  } = useConfig();
   const [height, setHeight] = React.useState(0);
-  const [activeView, setActiveView] = React.useState<string>(
-    config.codePreviewTabs[0]!
-  );
+  const [activeView, setActiveView] = React.useState<string>(tabs[0]!);
   const codeRef = React.useRef<HTMLDivElement>(null);
   const previewRef = React.useRef<HTMLDivElement>(null);
 
@@ -43,7 +45,7 @@ const Tabs: React.FC<ITabs> = ({ category, unit, section }) => {
   return (
     <>
       <ul className="sections__buttons">
-        {config.codePreviewTabs.map((id) => (
+        {tabs.map((id) => (
           <li key={category + unit + id}>
             <Button
               icon={{

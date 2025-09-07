@@ -5,7 +5,10 @@ import { getSingletonHighlighter as highlighter } from "shiki";
 import { Button } from "@/components";
 import { type IconPropsType, Icons } from "@aristobyte-ui/utils";
 
-import { SupportedLanguages, SupportedThemes } from "./types";
+import {
+  CodeHighlightSupportedLanguages,
+  CodeHighlightSupportedThemes,
+} from "@/config";
 
 import styles from "./CodeBlock.module.scss";
 
@@ -16,8 +19,8 @@ interface ICodeBlock {
     size?: number;
     color?: string;
   };
-  lang?: SupportedLanguages;
-  theme?: SupportedThemes;
+  lang?: CodeHighlightSupportedLanguages;
+  theme?: CodeHighlightSupportedThemes;
   className?: string;
 }
 

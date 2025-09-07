@@ -4,9 +4,6 @@
   "version": "1.0.35",
   "license": "MIT",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://www.npmjs.com/package/@aristobyte-ui/dropdown",
   "repository": {
@@ -45,6 +42,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",

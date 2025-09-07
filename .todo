@@ -5,3 +5,4 @@
 - Convert the 'type' to 'appearance'
 - Add `type` section at the bottom of each component
 - Implement a general getProperties based on provided size prop (!IMPORTANT)
+- DOCS: colors can be randomized for each section label and icon

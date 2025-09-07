@@ -9,6 +9,12 @@ import { Portal } from "@aristobyte-ui/utils";
 
 import styles from "./Dropdown.module.scss";
 
+type PositionType = {
+  top: 0;
+  left: 0;
+  width: 0;
+};
+
 export interface IDropdown {
   children:
     | React.ReactElement<IDropdownOption>
@@ -36,12 +42,6 @@ export interface IDropdown {
   className?: string;
   style?: React.CSSProperties;
 }
-
-type PositionType = {
-  top: 0;
-  left: 0;
-  width: 0;
-};
 
 export const Dropdown: React.FC<IDropdown> = ({
   children,

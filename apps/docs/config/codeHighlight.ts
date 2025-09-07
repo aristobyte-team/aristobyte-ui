@@ -1,4 +1,4 @@
-export type SupportedLanguages =
+export type CodeHighlightSupportedLanguages =
   | "1c"
   | "1c-query"
   | "abap"
@@ -305,7 +305,7 @@ export type SupportedLanguages =
   | "zsh"
   | "文言";
 
-export type SupportedThemes =
+export type CodeHighlightSupportedThemes =
   | "andromeeda"
   | "aurora-x"
   | "ayu-dark"

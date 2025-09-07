@@ -1,0 +1,33 @@
+.type-block {
+  background-color: #3141587f;
+  border-radius: 10px;
+  border: 1px solid #3141587f;
+  display: flex;
+  font-family:
+    Fira Code,
+    Menlo,
+    monospace;
+  font-size: 12px;
+  gap: 20px;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+  width: calc(100% - 2 * 10px);
+
+  &__container {
+    overflow: auto;
+    min-width: 100%;
+    max-width: 240px;
+    max-height: 400px;
+
+    pre {
+      background-color: transparent !important;
+      display: block;
+      margin: 0;
+      min-height: calc(52px - 14px * 2);
+      white-space: pre;
+      overflow: visible;
+    }
+  }
+}

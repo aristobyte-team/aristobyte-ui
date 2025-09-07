@@ -6,7 +6,7 @@ import { Card, CodeBlock, Label, Button } from "@/components";
 
 import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
-import { CodeBlocks, Helpers } from "@/config";
+import { CodeBlocks, Helpers, components } from "@/config";
 
 import "./Import.scss";
 
@@ -16,12 +16,14 @@ export type IImport = {
 };
 
 export const Import: React.FC<IImport> = ({ category, unit }) => {
-  const { config } = useConfig();
+  const {
+    config: {
+      tabs: { import: tabs },
+    },
+  } = useConfig();
   const { t } = useTranslate();
   // @TODO: @CONFIG - get a loading state for the config so we display the loading and make sure that everything we read from the config is never undefined once the loading is finished
-  const [importTab, setImportTab] = React.useState<
-    (typeof config.importTabs)[0]
-  >(config.importTabs[0]!);
+  const [importTab, setImportTab] = React.useState<(typeof tabs)[0]>(tabs[0]!);
 
   return (
     <section className="import">
@@ -43,7 +45,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             icon={{ component: Icons.Dot, size: 8, color: "#51a2ff" }}
           />
           <ul className="import__import-type-buttons">
-            {config.importTabs.map((id) => (
+            {tabs.map((id) => (
               <li key={id}>
                 <Button
                   onClick={() => setImportTab(id)}
@@ -66,7 +68,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             code={Helpers.getPackageImportCode(
               category,
               unit,
-              config.import[category]![unit!]!,
+              components[category]![unit!]!,
               importTab === "global"
             )}
           />
@@ -79,7 +81,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
                 Helpers.getPackage(category, unit)
               )}
               icon={{ component: Icons.Package, size: 20, color: "#c27aff" }}
-              {...(importTab === config.importTabs[0] && {
+              {...(importTab === tabs[0] && {
                 style: { borderColor: "#51a2ff4c" },
               })}
             >
@@ -96,7 +98,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
                 colors: ["#51a2ff", "#c27aff"],
                 size: 20,
               }}
-              {...(importTab === config.importTabs[1] && {
+              {...(importTab === tabs[1] && {
                 style: { borderColor: "#51a2ff4c" },
               })}
             >
