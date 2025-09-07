@@ -1,5 +1,17 @@
 # @aristobyte-ui/spinner
 
+## 1.0.41
+
+### Patch Changes
+
+- feat: add clack to cli
+
+## 1.0.40
+
+### Patch Changes
+
+- dummy bump
+
 ## 1.0.39
 
 ### Patch Changes

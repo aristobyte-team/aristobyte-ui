@@ -1,16 +1,15 @@
+import { spinner } from "@clack/prompts";
 import { installPackage } from "../utils/installPackage";
-import chalk from "chalk";
 import fs from "fs";
 import path from "path";
+import color from "picocolors";
 
 export async function init() {
+  const s = spinner();
   try {
     const projectName = path.basename(process.cwd());
-    console.log(
-      chalk.blue(`Initializing AristoByteUI project: ${projectName}`)
-    );
+    console.log(color.blue(`Initializing AristoByteUI project: ${projectName}`));
 
-    // Create basic project structure if missing
     if (!fs.existsSync("src")) fs.mkdirSync("src");
     if (!fs.existsSync("package.json")) {
       fs.writeFileSync(
@@ -19,12 +18,13 @@ export async function init() {
       );
     }
 
-    // Install meta package
-    console.log(chalk.blue("Installing all AristoByteUI components..."));
+    s.start("Installing all AristoByteUI components...");
     await installPackage("@aristobyte-ui/react");
+    s.stop();
 
-    console.log(chalk.green("Project initialized successfully!"));
+    console.log(color.green("✅ Project initialized successfully!"));
   } catch (err) {
-    console.error(chalk.red("Failed to initialize project"), err);
+    s.stop();
+    console.error(color.red("❌ Failed to initialize project"), err);
   }
 }

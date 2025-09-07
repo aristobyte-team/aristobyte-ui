@@ -8,7 +8,7 @@ export default defineConfig({
   clean: true,
   dts: false,
   tsconfig: "tsconfig.json",
-  external: ["chalk", "execa", "commander", "axios", "fs", "path", "os", "child_process"],
+  external: [ "execa", "commander", "axios", "fs", "path", "os", "child_process"],
   banner: {
     js: '#!/usr/bin/env node',
   },

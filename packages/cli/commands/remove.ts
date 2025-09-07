@@ -1,16 +1,20 @@
+import { spinner } from "@clack/prompts";
 import { execa } from "execa";
-import chalk from "chalk";
+import color from "picocolors";
 
 export async function remove(component: string) {
+  const s = spinner();
   try {
     const pkgName =
       component === "all"
         ? "@aristobyte-ui/react"
         : `@aristobyte-ui/${component}`;
-    console.log(chalk.blue(`Removing ${pkgName}...`));
+    s.start(`Removing ${pkgName}...`);
     await execa("yarn", ["remove", pkgName], { stdio: "inherit" });
-    console.log(chalk.green(`${pkgName} removed successfully!`));
+    s.stop();
+    console.log(color.green(`✅ ${pkgName} removed successfully!`));
   } catch (err) {
-    console.error(chalk.red("Failed to remove component"), err);
+    s.stop();
+    console.error(color.red(`❌ Failed to remove component ${component}`), err);
   }
 }

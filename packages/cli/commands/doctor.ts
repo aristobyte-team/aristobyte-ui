@@ -1,25 +1,45 @@
-import chalk from "chalk";
 import { execSync } from "child_process";
+import { spinner } from "@clack/prompts";
+import { compareVersions } from "../utils/compareVersions";
+import color from "picocolors";
+
+const MIN_NODE_VERSION = "20.19.0";
 
 export async function doctor() {
+  const s = spinner();
   try {
-    console.log(chalk.blue("Running project health checks..."));
+    s.start("Running project health checks...");
 
-    // Check Node version
-    const nodeVersion = execSync("node -v").toString().trim();
-    console.log(chalk.green(`Node version: ${nodeVersion}`));
+    // Node
+    let nodeVersion = "unknown";
+    try {
+      nodeVersion = execSync("node -v").toString().trim();
+    } catch (err) {
+      console.error(color.red("❌ Failed to detect Node version:"), err);
+    }
 
-    // Check npm/yarn
-    let yarnVersion = "not installed";
+    let nodeStatus = "✅ OK";
+    if (
+      nodeVersion !== "unknown" &&
+      compareVersions(nodeVersion, MIN_NODE_VERSION) < 0
+    ) {
+      nodeStatus = color.red(`❌ Node >= ${MIN_NODE_VERSION} required`);
+    }
+
+    // Yarn
+    let yarnVersion = "unknown";
     try {
       yarnVersion = execSync("yarn -v").toString().trim();
-    } catch {
-      console.log("TODO");
+    } catch (err) {
+      console.error(color.red("❌ Failed to detect Yarn version:"), err);
     }
-    console.log(chalk.green(`Yarn version: ${yarnVersion}`));
 
-    console.log(chalk.green("All basic health checks passed!"));
+    s.stop();
+    console.log(color.green(`Node version: ${nodeVersion} ${nodeStatus}`));
+    console.log(color.green(`Yarn version: ${yarnVersion}`));
+    console.log(color.green("All basic health checks completed!"));
   } catch (err) {
-    console.error(chalk.red("Doctor check failed"), err);
+    s.stop();
+    console.error(color.red("❌ Doctor check failed"), err);
   }
 }

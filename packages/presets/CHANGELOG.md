@@ -1,5 +1,27 @@
 # @aristobyte-ui/presets
 
+## 1.0.41
+
+### Patch Changes
+
+- feat: add clack to cli
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.41
+  - @aristobyte-ui/button@1.0.41
+  - @aristobyte-ui/utils@1.0.41
+
+## 1.0.40
+
+### Patch Changes
+
+- dummy bump
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.40
+  - @aristobyte-ui/button@1.0.40
+  - @aristobyte-ui/utils@1.0.40
+
 ## 1.0.39
 
 ### Patch Changes

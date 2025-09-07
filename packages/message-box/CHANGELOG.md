@@ -1,5 +1,23 @@
 # @aristobyte-ui/message-box
 
+## 1.0.41
+
+### Patch Changes
+
+- feat: add clack to cli
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.41
+
+## 1.0.40
+
+### Patch Changes
+
+- dummy bump
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.40
+
 ## 1.0.39
 
 ### Patch Changes

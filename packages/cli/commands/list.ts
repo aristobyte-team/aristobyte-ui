@@ -1,5 +1,5 @@
 import fs from "fs";
-import chalk from "chalk";
+import color from "picocolors";
 
 export async function list() {
   try {
@@ -9,9 +9,9 @@ export async function list() {
       d.startsWith("@aristobyte-ui/")
     );
 
-    console.log(chalk.blue("Installed AristoByteUI components:"));
-    aristobyteDeps.forEach((dep) => console.log(chalk.green(dep)));
+    console.log(color.blue("Installed AristoByteUI components:"));
+    aristobyteDeps.forEach((dep) => console.log(color.green(dep)));
   } catch (err) {
-    console.error(chalk.red("Failed to list components"), err);
+    console.error(color.red("❌ Failed to list components"), err);
   }
 }

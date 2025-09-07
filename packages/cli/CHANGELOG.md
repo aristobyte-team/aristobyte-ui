@@ -1,5 +1,25 @@
 # aristobyte-cli
 
+## 1.0.41
+
+### Patch Changes
+
+- feat: add clack to cli
+
+- Updated dependencies []:
+  - @aristobyte-ui/typescript-config@1.0.41
+  - @aristobyte-ui/eslint-config@1.0.41
+
+## 1.0.40
+
+### Patch Changes
+
+- dummy bump
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.40
+  - @aristobyte-ui/typescript-config@1.0.40
+
 ## 1.0.40
 
 ### Patch Changes
