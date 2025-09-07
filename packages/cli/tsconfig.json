@@ -2,7 +2,7 @@
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "packages/cli",
+    "baseUrl": "packages/cli",
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,

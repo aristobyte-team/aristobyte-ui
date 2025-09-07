@@ -1,5 +1,11 @@
 # aristobyte-cli
 
+## 1.0.38
+
+### Patch Changes
+
+- fix: resolve build and import issues of cli
+
 ## 1.0.37
 
 ### Patch Changes

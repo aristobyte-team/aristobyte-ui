@@ -1,7 +1,7 @@
 {
   "name": "aristobyte-cli",
   "description": "The official AristoByteUI CLI — initialize projects, install, upgrade, remove, and manage UI components seamlessly.",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -36,24 +36,25 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "bin": {
+    "aristobyte": "dist/index.js"
+  },
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
-  },
-  "bin": {
-    "aristobyte": "dist/index.cjs.js"
   },
   "scripts": {
     "build": "tsup",
+    "build:watch": "tsup ./index.ts --watch",
     "dev": "tsup ./index.ts --watch",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run check-types && npm run build"
   },
   "dependencies": {
     "@aristobyte-ui/eslint-config": "^1.0.37",

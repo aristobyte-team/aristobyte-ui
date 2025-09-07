@@ -6,7 +6,7 @@ export default defineConfig({
   target: "es2020",
   sourcemap: true,
   clean: true,
-  dts: true,
+  dts: false,
   tsconfig: "tsconfig.json",
   external: ["chalk", "execa", "commander", "axios", "fs", "path", "os", "child_process"],
   banner: {
