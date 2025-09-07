@@ -1,5 +1,11 @@
 # @aristobyte-ui/eslint-config
 
+## 1.0.37
+
+### Patch Changes
+
+- feat: init cli package
+
 ## 1.0.36
 
 ### Patch Changes

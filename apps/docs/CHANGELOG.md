@@ -1,5 +1,22 @@
 # @aristobyte-ui/docs
 
+## 1.0.37
+
+### Patch Changes
+
+- feat: init cli package
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.37
+  - @aristobyte-ui/button@1.0.37
+  - @aristobyte-ui/dropdown@1.0.37
+  - @aristobyte-ui/message-box@1.0.37
+  - @aristobyte-ui/presets@1.0.37
+  - @aristobyte-ui/radio@1.0.37
+  - @aristobyte-ui/spinner@1.0.37
+  - @aristobyte-ui/switch@1.0.37
+  - @aristobyte-ui/utils@1.0.37
+
 ## 1.0.36
 
 ### Patch Changes
