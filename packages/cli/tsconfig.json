@@ -1,16 +1,22 @@
 {
-  "extends": "@aristobyte-ui/typescript-config/package",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "outDir": "dist",
     "baseUrl": "packages/cli",
     "strict": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "module": "CommonJS",
-    "target": "ES2020",
-    "declaration": true,
-    "declarationMap": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"],
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "inlineSources": true
   },
-  "include": ["./index.ts"],
+  "include": ["index.ts", "commands/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

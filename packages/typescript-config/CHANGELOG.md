@@ -1,5 +1,17 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.39
+
+### Patch Changes
+
+- fix: resolve issue with the cli build
+
+## 1.0.38
+
+### Patch Changes
+
+- chore: bump to 1.0.38
+
 ## 1.0.37
 
 ### Patch Changes

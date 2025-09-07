@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/jest-config",
   "description": "Centralized, shareable Jest configuration presets for AristoByteUI monorepo projects. Supports Node, React, and Next.js environments with TypeScript, Babel integration, and consistent coverage reporting.",
-  "version": "1.0.37",
+  "version": "1.0.39",
   "private": false,
   "license": "MIT",
   "main": "./jest.base.js",

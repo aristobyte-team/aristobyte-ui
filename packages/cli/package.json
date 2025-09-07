@@ -1,7 +1,7 @@
 {
   "name": "aristobyte-cli",
   "description": "The official AristoByteUI CLI — initialize projects, install, upgrade, remove, and manage UI components seamlessly.",
-  "version": "1.0.38",
+  "version": "1.0.40",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -51,14 +51,15 @@
     "build": "tsup",
     "build:watch": "tsup ./index.ts --watch",
     "dev": "tsup ./index.ts --watch",
+    "start": "ts-node index.ts",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "check-types": "tsc --noEmit",
     "prepublishOnly": "npm run lint && npm run check-types && npm run build"
   },
   "dependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.37",
-    "@aristobyte-ui/typescript-config": "^1.0.37",
+    "@aristobyte-ui/eslint-config": "^1.0.39",
+    "@aristobyte-ui/typescript-config": "^1.0.39",
     "axios": "^1.6.0",
     "chalk": "^5.6.0",
     "commander": "^11.0.0",
