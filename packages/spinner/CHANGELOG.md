@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 1.0.47
+
+### Patch Changes
+
+- fix: remove the banner from cli tsup build
+
 ## 1.0.46
 
 ### Patch Changes

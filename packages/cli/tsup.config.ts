@@ -17,7 +17,4 @@ export default defineConfig({
     "os",
     "child_process",
   ],
-  banner: {
-    js: "#!/usr/bin/env node",
-  },
 });

@@ -1,5 +1,15 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.47
+
+### Patch Changes
+
+- fix: remove the banner from cli tsup build
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.47
+  - @aristobyte-ui/utils@1.0.47
+
 ## 1.0.46
 
 ### Patch Changes
