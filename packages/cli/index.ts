@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import color from "picocolors";
 import { Command } from "commander";
 
 import { add } from "./commands/add";
@@ -12,98 +11,146 @@ import { doctor } from "./commands/doctor";
 import { env } from "./commands/env";
 
 import { getBanner } from "./utils/getBanner";
-import { command, bracket } from "./utils/typography";
+import {
+  logoSmallGradient,
+  logo3,
+  logo4,
+  darkGrey,
+  lightGrey,
+} from "./utils/colors";
+import { usage, description } from "./utils/typography";
 import pkg from "./package.json";
 
-const program = new Command();
+const COMMANDS = [
+  "init",
+  "add",
+  "remove",
+  "upgrade",
+  "list",
+  "doctor",
+  "env",
+  "help",
+];
 
-program
+const aristobyteui = new Command();
+
+aristobyteui
   .name("aristobyte-ui")
-  .description(color.bgMagenta(color.black(" 🚀 Welcome to AristoByteUI CLI ")))
-  .version(pkg.version, "-V, --version", color.green("Output the CLI version"));
+  .usage(usage(["command", "options"]))
+  .description("Initialize a new AristoByteUI project")
+  .version(pkg.version, "-V, --version", "Output the CLI version")
+  .helpOption("-H, --help", "Show help information");
 
-program.configureHelp({
+aristobyteui
+  .command("init")
+  .usage(usage(["options", "myProjectName"]))
+  .description("Initialize a new AristoByteUI project")
+  .action((myProjectName) => {
+    init(myProjectName);
+  });
+aristobyteui
+  .command("add")
+  .usage(usage(["options", "components..."]))
+  .description("Add a UI component")
+  .action(add);
+aristobyteui
+  .command("remove")
+  .usage(usage(["options", "components..."]))
+  .description("Remove a UI component")
+  .action(remove);
+aristobyteui
+  .command("upgrade")
+  .usage(usage(["options", "components..."]))
+  .description("Upgrade a UI component")
+  .action(upgrade);
+aristobyteui
+  .command("list")
+  .usage(usage(["options"]))
+  .description("List installed components")
+  .action(list);
+aristobyteui
+  .command("doctor")
+  .usage(usage(["options"]))
+  .description("Check system and project health")
+  .action(doctor);
+aristobyteui
+  .command("env")
+  .usage(usage(["options"]))
+  .description("Display environment info")
+  .action(env);
+aristobyteui
+  .command("help")
+  .usage(usage(["options"]))
+  .description("Display help for command")
+  .action(env);
+aristobyteui.command("help", { hidden: true });
+
+aristobyteui.configureHelp({
   formatHelp: (cmd, helper) => `
 ${getBanner()}
-${color.bold("Usage:")} ${helper.commandUsage(cmd)}
+${logoSmallGradient("Usage:")} 
+  ${logo3(helper.commandUsage(cmd))}
 
-${color.bold("Description:")}
-  ${cmd.description()}
+${logoSmallGradient("Description:")}
+  ${darkGrey(
+    "Create new AristoByteUI projects or manage existing projects with full control"
+  )}
+  ${darkGrey("over components, dependencies, and UI stack configuration. Supports initialization,")}
+  ${darkGrey(
+    "addition, removal, upgrading of components, and project diagnostics."
+  )}
 
-${color.bold("Commands:")}
+${logoSmallGradient("Commands:")}
 ${helper
   .visibleCommands(cmd)
   .map(
     (c) =>
-      `  ${`${c.name().padEnd(22)} ${c.usage() || "".padEnd(37)}`.padEnd(92)} ${c.description()}`
+      `  ${`${logo3(c.name()).padEnd(31)} ${c.usage() || "".padEnd(30)}`.padEnd(129)} ${description(c.description())}`
   )
   .join("\n")}
 
-${color.bold("Options:")}
+${logoSmallGradient("Options:")}
 ${helper
   .visibleOptions(cmd)
-  .map((o) => `  ${color.yellow(o.flags).padEnd(25)} ${o.description}`)
+  .map((option) => {
+    const flagsArray = option.flags.split(/,\s*/);
+    const styledFlags = `${logo3(flagsArray[0])}${darkGrey(", ")}${logo4(flagsArray[1])}`;
+    return `  ${styledFlags.padEnd(93)} ${description(option.description)}`;
+  })
   .join("\n")}
 
-${color.dim(color.gray("Tip: Use 'aristobyte-ui [ command ] --help' for detailed info on a command."))}
+${logoSmallGradient("Tip:")}
+  ${lightGrey("Use 'aristobyte-ui [ command ] --help' for detailed info on a command.")}
 `,
 });
 
-program
-  .command(command("init") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")} ${bracket("[")} ${color.gray("myProjectName")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Initialize a new AristoByteUI project")
-  .action(init);
-program
-  .command(command("add") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")} ${bracket("[")} ${color.gray("components...")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Add a UI component")
-  .action(add);
-program
-  .command(command("remove") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")} ${bracket("[")} ${color.gray("components...")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Remove a UI component")
-  .action(remove);
-program
-  .command(command("upgrade") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")} ${bracket("[")} ${color.gray("components...")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Upgrade a UI component")
-  .action(upgrade);
-program
-  .command(command("list") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("List installed components")
-  .action(list);
-program
-  .command(command("doctor") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Check system and project health")
-  .action(doctor);
-program
-  .command(command("env") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Display environment info")
-  .action(env);
-program
-  .command(command("help") + color.reset(" "))
-  .usage(
-    `${bracket("[")} ${color.gray("options")} ${bracket("]")}${color.reset(" ")}`
-  )
-  .description("Display help for command")
-  .action(env);
-program.command("help", { hidden: true });
-program.parseAsync(process.argv);
+aristobyteui.exitOverride(async (err) => {
+  if (err.code === "commander.unknownCommand") {
+    console.error(
+      logoSmallGradient(" ◆ Possible commands are: \n"),
+      ...COMMANDS.map((cmd) =>
+        cmd === err.message.split("Did you mean ")[1].split("?")[0]
+          ? `${logoSmallGradient("│  ")}${logo4("● aristobyte-ui")} ${logo4(`${cmd}`)}\n`
+          : `${logoSmallGradient("│  ○ aristobyte-ui")} ${logo3(`${cmd}`)}\n`
+      )
+    );
+  }
+
+  process.exit(1);
+});
+
+(async () => {
+  const args = process.argv.slice(2);
+
+  if (args.length === 0) {
+    aristobyteui.outputHelp();
+    process.exit(0);
+  }
+
+  try {
+    await aristobyteui.parseAsync(args, { from: "user" });
+    process.exit(1);
+  } catch {
+    process.exit(1);
+  }
+})();

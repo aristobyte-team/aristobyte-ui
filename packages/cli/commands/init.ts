@@ -38,15 +38,15 @@ const TEMPLATES = [
 const PACKAGE_MANAGERS = ["npm", "yarn", "pnpm", "bun"];
 const DEFAULT_NAME = "aristobyte-ui-app";
 
-export async function init() {
+export async function init(myProjectName = DEFAULT_NAME) {
   console.log(color.cyan("┌  Create a new project"));
 
   const projectNameResult = await text({
     message: "New project name (Enter to skip with default name)",
-    placeholder: DEFAULT_NAME,
+    placeholder: myProjectName,
   });
 
-  const projectName = (String(projectNameResult) || DEFAULT_NAME).trim();
+  const projectName = (String(projectNameResult) || myProjectName).trim();
 
   const templateIndex = await select({
     message: "Select a template (Enter to select)",

@@ -1,4 +1,4 @@
-import gradient from "gradient-string";
+import { logoGradient } from "./colors";
 
 const banners = [
   `   ░███         ░██          ░██          ░████████             ░██          ░██     ░█░██████
@@ -59,29 +59,5 @@ _/    _\\ _|    _| ____/ \\__| \\___/  ____/  \\__, | \\__| \\___|      \\___/  
 ];
 
 export function getBanner() {
-  const logoGradient = gradient([
-    "#ffee27",
-    "#fec800",
-    "#f18e35",
-    "#e95f32",
-    "#e2312d",
-    "#e95f32",
-    "#f18e35",
-    "#fec800",
-    "#ffee27",
-    "#fec800",
-    "#f18e35",
-    "#e95f32",
-    "#e2312d",
-    "#e95f32",
-    "#f18e35",
-    "#fec800",
-    "#ffee27",
-    "#fec800",
-    "#f18e35",
-    "#e95f32",
-    "#e2312d",
-  ]);
-
-  return logoGradient.multiline(banners[0]);
+  return logoGradient(banners[0]);
 }

@@ -1,10 +1,11 @@
-import color from "picocolors";
+import { logo4, darkGrey, lightGrey } from "./colors";
 
-export function command(text: string) {
-  // Approximate gradient by alternating colors
-  return color.yellow(text);
+export function usage(params: string[]) {
+  return params
+    .map((param) => `${logo4("[")} ${lightGrey(param)} ${logo4("]")}`)
+    .join(" ");
 }
 
-export function bracket(text: string) {
-  return color.redBright(text);
+export function description(text: string) {
+  return darkGrey(`- ${text}`);
 }
