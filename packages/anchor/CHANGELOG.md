@@ -1,5 +1,14 @@
 # @aristobyte-ui/anchor
 
+## 1.0.46
+
+### Patch Changes
+
+- fix: createa @aristobyte-ui/cli package
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.46
+
 ## 1.0.45
 
 ### Patch Changes
