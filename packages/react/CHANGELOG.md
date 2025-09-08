@@ -1,5 +1,39 @@
 # @aristobyte-ui/react
 
+## 1.0.44
+
+### Patch Changes
+
+- fix: resolve issues with the card and label
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.44
+  - @aristobyte-ui/dropdown@1.0.44
+  - @aristobyte-ui/presets@1.0.44
+  - @aristobyte-ui/spinner@1.0.44
+  - @aristobyte-ui/anchor@1.0.44
+  - @aristobyte-ui/button@1.0.44
+  - @aristobyte-ui/switch@1.0.44
+  - @aristobyte-ui/radio@1.0.44
+  - @aristobyte-ui/utils@1.0.44
+
+## 1.0.43
+
+### Patch Changes
+
+- feat: add card and label
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.43
+  - @aristobyte-ui/button@1.0.43
+  - @aristobyte-ui/dropdown@1.0.43
+  - @aristobyte-ui/message-box@1.0.43
+  - @aristobyte-ui/presets@1.0.43
+  - @aristobyte-ui/radio@1.0.43
+  - @aristobyte-ui/spinner@1.0.43
+  - @aristobyte-ui/switch@1.0.43
+  - @aristobyte-ui/utils@1.0.43
+
 ## 1.0.42
 
 ### Patch Changes

@@ -1,0 +1,6 @@
+{
+  "extends": "@aristobyte-ui/typescript-config/package",
+  "compilerOptions": { "baseUrl": "packages/label" },
+  "include": ["@types", "components", "index.ts"],
+  "exclude": ["node_modules", "dist"]
+}

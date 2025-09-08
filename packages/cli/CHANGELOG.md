@@ -1,5 +1,25 @@
 # aristobyte-cli
 
+## 1.0.44
+
+### Patch Changes
+
+- fix: resolve issues with the card and label
+
+- Updated dependencies []:
+  - @aristobyte-ui/typescript-config@1.0.44
+  - @aristobyte-ui/eslint-config@1.0.44
+
+## 1.0.43
+
+### Patch Changes
+
+- feat: add card and label
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.43
+  - @aristobyte-ui/typescript-config@1.0.43
+
 ## 1.0.42
 
 ### Patch Changes

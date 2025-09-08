@@ -1,0 +1,84 @@
+{
+  "name": "@aristobyte-ui/card",
+  "description": "AristoByteUI Card component: a versatile container for displaying content and UI elements.",
+  "version": "1.0.44",
+  "license": "MIT",
+  "private": false,
+  "author": "AristoByte <info@aristobyte.com>",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/card",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
+    "directory": "packages/card"
+  },
+  "bugs": {
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
+  },
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10.8.2",
+    "yarn": ">=1.22.22"
+  },
+  "keywords": [
+    "aristobyte",
+    "aristobyte-ui",
+    "card",
+    "link",
+    "button",
+    "ripple",
+    "typescript",
+    "scss",
+    "react",
+    "ui-component",
+    "component-library",
+    "frontend",
+    "ui-kit"
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aristobyte-ui/label": "^1.0.44",
+    "@aristobyte-ui/utils": "^1.0.44",
+    "esbuild-sass-plugin": "^3.3.1",
+    "framer-motion": "^12.23.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sass": "^1.89.0",
+    "shiki": "^3.7.0",
+    "tsup": "^8.5.0"
+  },
+  "devDependencies": {
+    "@aristobyte-ui/eslint-config": "^1.0.44",
+    "@aristobyte-ui/typescript-config": "^1.0.44",
+    "@turbo/gen": "^2.5.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.27.0",
+    "postcss": "^8.5.3",
+    "sass-embedded": "^1.91.0",
+    "tailwindcss": "^4.1.7",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

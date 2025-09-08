@@ -1,51 +1,45 @@
+import { execa } from "execa";
 import { select, text, spinner } from "@clack/prompts";
 import color from "picocolors";
-import fs from "fs";
-import path from "path";
-import { installPackage } from "../utils/installPackage";
 
 const TEMPLATES = [
   {
+    id: "aristobyte-ui-template-nextjs-15-app-router",
     name: "Next App Router",
     desc: "A Next.js 15 with app-router directory template pre-configured with AristoByteUI.",
-    repo: "aristobyte-ui/next-app-router-template",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-nextjs-15-app-router.git",
   },
   {
+    id: "aristobyte-ui-template-nextjs-15-pages",
     name: "Next Pages",
     desc: "A Next.js 15 with pages directory template pre-configured with AristoByteUI.",
-    repo: "aristobyte-ui/next-pages-template",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-nextjs-15-pages.git",
   },
   {
+    id: "aristobyte-ui-template-vite",
     name: "Vite",
     desc: "A Vite template pre-configured with AristoByteUI.",
-    repo: "aristobyte-ui/vite-template",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-vite.git",
   },
   {
+    id: "aristobyte-ui-template-astro",
     name: "Astro",
     desc: "An Astro template pre-configured with AristoByteUI.",
-    repo: "aristobyte-ui/astro-template",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-astro.git",
   },
   {
+    id: "aristobyte-ui-template-cra",
     name: "CRA",
     desc: "A Create React App template pre-configured with AristoByteUI.",
-    repo: "aristobyte-ui/cra-template",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-cra.git",
   },
 ];
 
 const PACKAGE_MANAGERS = ["npm", "yarn", "pnpm", "bun"];
-
 const DEFAULT_NAME = "aristobyte-ui-app";
 
 export async function init() {
   console.log(color.cyan("┌  Create a new project"));
-
-  await select({
-    message: "Select a template (Enter to select)",
-    options: TEMPLATES.map((t, i) => ({
-      value: i + "",
-      label: `${t.name} (${t.desc})`,
-    })),
-  });
 
   const projectNameResult = await text({
     message: "New project name (Enter to skip with default name)",
@@ -53,11 +47,18 @@ export async function init() {
   });
 
   const projectName = (String(projectNameResult) || DEFAULT_NAME).trim();
-  const projectPath = path.join(process.cwd(), projectName);
 
-  console.log(color.cyan(`${projectName}\n`));
+  const templateIndex = await select({
+    message: "Select a template (Enter to select)",
+    options: TEMPLATES.map((t, i) => ({
+      value: i + "",
+      label: `${t.name} (${t.desc})`,
+    })),
+  });
 
-  await select({
+  const template = TEMPLATES[Number(templateIndex)];
+
+  const packageManagerIndex = await select({
     message: "Select a package manager (Enter to select)",
     options: PACKAGE_MANAGERS.map((pm, i) => ({
       value: i.toString(),
@@ -65,34 +66,44 @@ export async function init() {
     })),
   });
 
+  const packageManager = PACKAGE_MANAGERS[Number(packageManagerIndex)];
+
   console.log(color.cyan("\nTemplate created successfully!\n"));
 
   const s = spinner();
   try {
-    s.start(`Creating project '${projectName}'...`);
+    s.start(
+      `Preparing '${template.name}' with ${packageManager} configuration...`
+    );
 
-    if (!fs.existsSync(projectPath)) fs.mkdirSync(projectPath);
-    const srcPath = path.join(projectPath, "src");
-    if (!fs.existsSync(srcPath)) fs.mkdirSync(srcPath);
+    // Clone directly the branch that matches the package manager
+    await execa(
+      "git",
+      [
+        "clone",
+        "--branch",
+        packageManager,
+        "--single-branch",
+        template.repo,
+        projectName,
+      ],
+      {
+        stdio: "ignore",
+      }
+    );
 
-    // Create package.json if missing
-    const pkgPath = path.join(projectPath, "package.json");
-    if (!fs.existsSync(pkgPath)) {
-      fs.writeFileSync(
-        pkgPath,
-        JSON.stringify({ name: projectName, private: true }, null, 2)
-      );
-    }
-
-    // Install AristoByteUI main package
-    s.message("Installing AristoByteUI packages...");
-    await installPackage("@aristobyte-ui/react");
+    await execa("rm", ["-rf", ".git"], { stdio: "ignore", cwd: projectName });
 
     s.stop();
-    console.log(color.green("✅ Project initialized successfully!"));
+    console.log(color.green("✅ Project initialized successfully!\n"));
+
+    // Next steps hint
+    console.log(color.cyan("Next steps:"));
+    console.log(color.cyan(`  cd ${projectName}`));
+    console.log(color.cyan(`  ${packageManager} install`));
+    console.log(color.cyan(`  ${packageManager} run dev\n`));
   } catch (err) {
     s.stop();
     console.error(color.red("❌ Failed to initialize project"), err);
-    return;
   }
 }

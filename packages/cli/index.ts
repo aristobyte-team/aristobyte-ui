@@ -106,5 +106,4 @@ program
   .description("Display help for command")
   .action(env);
 program.command("help", { hidden: true });
-init();
-// program.parseAsync(process.argv);
+program.parseAsync(process.argv);

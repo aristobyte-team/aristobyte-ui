@@ -1,5 +1,17 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.44
+
+### Patch Changes
+
+- fix: resolve issues with the card and label
+
+## 1.0.43
+
+### Patch Changes
+
+- feat: add card and label
+
 ## 1.0.42
 
 ### Patch Changes

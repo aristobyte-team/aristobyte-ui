@@ -8,18 +8,21 @@ export async function add(component: string) {
     s.start(`Installing ${component}...`);
 
     if (component === "all") {
-      await installPackage("@aristobyte-ui/react");
+      await installPackage("yarn", "@aristobyte-ui/react");
       s.stop();
       console.log(color.green("✅ All components installed!"));
       return;
     }
 
     const pkgName = `@aristobyte-ui/${component}`;
-    await installPackage(pkgName);
+    await installPackage("yarn", pkgName);
     s.stop();
     console.log(color.green(`✅ Component ${component} installed!`));
   } catch (err) {
     s.stop();
-    console.error(color.red(`❌ Failed to install component ${component}`), err);
+    console.error(
+      color.red(`❌ Failed to install component ${component}`),
+      err
+    );
   }
 }
