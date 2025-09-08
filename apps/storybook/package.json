@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/storybook",
-  "version": "1.0.35",
+  "version": "1.0.44",
   "type": "module",
   "private": true,
   "scripts": {

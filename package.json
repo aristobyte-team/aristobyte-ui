@@ -1,5 +1,5 @@
 {
-  "version": "1.0.15",
+  "version": "1.0.44",
   "name": "aristobyte-ui",
   "author": "AristoByte",
   "description": "A comprehensive, modular React component library by AristoByte providing fully-typed, performance-first UI components including buttons, anchors, dropdowns, radio buttons, switches, spinners, and message boxes. Built for scalability, composability, and seamless integration with design tokens and SCSS modules.",
