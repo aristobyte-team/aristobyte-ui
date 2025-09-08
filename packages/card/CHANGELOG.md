@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.45
+
+### Patch Changes
+
+- fix: remove cli package to separate repo
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.45
+  - @aristobyte-ui/utils@1.0.45
+
 ## 1.0.44
 
 ### Patch Changes

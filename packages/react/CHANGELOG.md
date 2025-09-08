@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.45
+
+### Patch Changes
+
+- fix: remove cli package to separate repo
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.45
+  - @aristobyte-ui/button@1.0.45
+  - @aristobyte-ui/dropdown@1.0.45
+  - @aristobyte-ui/message-box@1.0.45
+  - @aristobyte-ui/presets@1.0.45
+  - @aristobyte-ui/radio@1.0.45
+  - @aristobyte-ui/spinner@1.0.45
+  - @aristobyte-ui/switch@1.0.45
+  - @aristobyte-ui/utils@1.0.45
+
 ## 1.0.44
 
 ### Patch Changes

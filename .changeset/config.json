@@ -4,7 +4,7 @@
     "@changesets/changelog-github",
     { "repo": "aristobyte-team/aristobyte-ui" }
   ],
-  "commit": false,
+  "commit": true,
   "fixed": [["@aristobyte-ui/*"]],
   "linked": [],
   "access": "public",

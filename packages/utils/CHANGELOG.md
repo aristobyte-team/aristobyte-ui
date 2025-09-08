@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.45
+
+### Patch Changes
+
+- fix: remove cli package to separate repo
+
 ## 1.0.44
 
 ### Patch Changes
