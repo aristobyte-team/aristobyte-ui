@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.50
+
+### Patch Changes
+
+- feat: add social media icons in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.50
+  - @aristobyte-ui/typescript-config@1.0.50
+
 ## 1.0.49
 
 ### Patch Changes

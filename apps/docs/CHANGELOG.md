@@ -1,5 +1,22 @@
 # @aristobyte-ui/docs
 
+## 1.0.50
+
+### Patch Changes
+
+- feat: add social media icons in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.50
+  - @aristobyte-ui/button@1.0.50
+  - @aristobyte-ui/dropdown@1.0.50
+  - @aristobyte-ui/message-box@1.0.50
+  - @aristobyte-ui/presets@1.0.50
+  - @aristobyte-ui/radio@1.0.50
+  - @aristobyte-ui/spinner@1.0.50
+  - @aristobyte-ui/switch@1.0.50
+  - @aristobyte-ui/utils@1.0.50
+
 ## 1.0.49
 
 ### Patch Changes

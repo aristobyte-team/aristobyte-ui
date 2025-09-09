@@ -1,5 +1,14 @@
 # @aristobyte-ui/anchor
 
+## 1.0.50
+
+### Patch Changes
+
+- feat: add social media icons in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.50
+
 ## 1.0.49
 
 ### Patch Changes

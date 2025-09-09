@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 1.0.50
+
+### Patch Changes
+
+- feat: add social media icons in utils
+
 ## 1.0.49
 
 ### Patch Changes
