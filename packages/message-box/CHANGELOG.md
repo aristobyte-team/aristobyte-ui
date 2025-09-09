@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 1.0.49
+
+### Patch Changes
+
+- fix: export aristobyte-ui logo
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.49
+
 ## 1.0.48
 
 ### Patch Changes

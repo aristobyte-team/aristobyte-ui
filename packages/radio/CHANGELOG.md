@@ -1,5 +1,11 @@
 # @aristobyte-ui/radio
 
+## 1.0.49
+
+### Patch Changes
+
+- fix: export aristobyte-ui logo
+
 ## 1.0.48
 
 ### Patch Changes
