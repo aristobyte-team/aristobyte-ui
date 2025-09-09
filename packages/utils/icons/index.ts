@@ -1,3 +1,4 @@
+import { AristoByteUI } from "./AristoByteUI";
 import { ArrowRight } from "./ArrowRight";
 import { BashCursor } from "./BashCursor";
 import { Bun } from "./Bun";
@@ -36,6 +37,7 @@ import { Warning } from "./Warning";
 import { Yarn } from "./Yarn";
 
 export const Icons = {
+  AristoByteUI,
   ArrowRight,
   BashCursor,
   Bun,
