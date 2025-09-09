@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.48
+
+### Patch Changes
+
+- feat: add aristobyte-ui logo in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.48
+  - @aristobyte-ui/button@1.0.48
+  - @aristobyte-ui/dropdown@1.0.48
+  - @aristobyte-ui/message-box@1.0.48
+  - @aristobyte-ui/presets@1.0.48
+  - @aristobyte-ui/radio@1.0.48
+  - @aristobyte-ui/spinner@1.0.48
+  - @aristobyte-ui/switch@1.0.48
+  - @aristobyte-ui/utils@1.0.48
+
 ## 1.0.47
 
 ### Patch Changes

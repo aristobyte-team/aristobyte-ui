@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.48
+
+### Patch Changes
+
+- feat: add aristobyte-ui logo in utils
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.48
+  - @aristobyte-ui/typescript-config@1.0.48
+
 ## 1.0.47
 
 ### Patch Changes
