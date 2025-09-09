@@ -35,6 +35,8 @@ import { User } from "./User";
 import { UserGroup } from "./UserGroup";
 import { Warning } from "./Warning";
 import { Yarn } from "./Yarn";
+import { LinkedIn } from "./LinkedIn";
+import { Instagram } from "./Instagram";
 
 export const Icons = {
   AristoByteUI,
@@ -54,7 +56,9 @@ export const Icons = {
   GradientSquare,
   Github,
   Info,
+  Instagram,
   Link,
+  LinkedIn,
   Logo,
   Npm,
   OpenedBook,
