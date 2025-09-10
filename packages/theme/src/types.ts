@@ -106,18 +106,14 @@ export type ConfigTheme = {
 
 export type ConfigThemes = Record<string, ConfigTheme>;
 
-/**
- * The HeroUI config.
- * @see https://heroui.com/docs/customization/customize-theme
- */
 export type HeroUIPluginConfig = {
   /**
    * The prefix for the css variables.
-   * @default "heroui"
+   * @default "aristobyteui"
    */
   prefix?: string;
   /**
-   * If true, the common heroui colors (e.g. "blue", "green", "purple") will not be extended on the theme.
+   * If true, the common aristobyte-ui colors (e.g. "blue", "green", "purple") will not be extended on the theme.
    * @default false
    */
   addCommonColors?: boolean;

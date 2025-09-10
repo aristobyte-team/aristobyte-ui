@@ -1,5 +1,5 @@
-import { commonColors } from "./common";
-import { semanticColors } from "./semantic";
+import {commonColors} from "./common";
+import {semanticColors} from "./semantic";
 
 export * from "./types";
 
@@ -8,4 +8,4 @@ const colors = {
   ...semanticColors,
 };
 
-export { colors, commonColors, semanticColors };
+export {colors, commonColors, semanticColors};

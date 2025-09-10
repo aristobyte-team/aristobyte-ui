@@ -1,6 +1,6 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": { "baseUrl": "packages/theme" },
-  "include": ["@types", "src/index.ts"],
+  "include": ["src", "colors.d.ts", "colors.js", "plugin.d.ts", "plugin.js"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,27 +1,105 @@
-export const keyframes = {
-  rotation: {
-    "0%": { transform: "rotate(0deg)" },
-    "100%": { transform: "rotate(360deg)" },
-  },
-  pulse: {
-    "0%": { opacity: 1, transform: "scale(0)" },
-    "100%": { opacity: 0, transform: "scale(1)" },
-  },
-  "pulse-duo": {
-    "0%, 100%": { opacity: 1, transform: "translate(-50%, -50%) scale(0)" },
-    "50%": { opacity: 0, transform: "translate(-50%, -50%) scale(1)" },
-  },
-};
-
 export const animations = {
-  rotation: "rotation 800ms ease infinite",
-  rotationLinear: "rotation 800ms linear infinite",
-  pulse: "pulse 1s ease-in-out infinite",
-  pulseDuoBefore: "pulseDuo 2s ease-in-out infinite",
-  pulseDuoAfter: "pulseDuo 2s 1s ease-in-out infinite",
-};
-
-export const cubicBeziers = {
-  primary: "cubic-bezier(0.55, -0.19, 0.59, 0.95)",
-  secondary: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+  animation: {
+    shimmer: "shimmer 2s infinite",
+    "drip-expand": "drip-expand 420ms linear",
+    "spinner-ease-spin": "spinner-spin 0.8s ease infinite",
+    "spinner-linear-spin": "spinner-spin 0.8s linear infinite",
+    sway: "sway 750ms ease infinite",
+    blink: "blink 1.4s infinite both",
+    "fade-out": "fade-out 1.2s linear 0s infinite normal none running",
+    "appearance-in": "appearance-in 250ms ease-out normal both",
+    "appearance-out": "appearance-out 60ms ease-in normal both",
+    "indeterminate-bar":
+      "indeterminate-bar 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite normal none running",
+  },
+  keyframes: {
+    shimmer: {
+      "100%": {
+        transform: "translateX(200%)",
+      },
+    },
+    "spinner-spin": {
+      "0%": {
+        transform: "rotate(0deg)",
+      },
+      "100%": {
+        transform: "rotate(360deg)",
+      },
+    },
+    "drip-expand": {
+      "0%": {
+        opacity: "0.2",
+        transform: "scale(0)",
+      },
+      "100%": {
+        opacity: "0",
+        transform: "scale(2)",
+      },
+    },
+    "appearance-in": {
+      "0%": {
+        opacity: "0",
+        transform: "translateZ(0)  scale(0.95)",
+      },
+      "60%": {
+        opacity: "0.75",
+        /* Avoid blurriness */
+        backfaceVisibility: "hidden",
+        webkitFontSmoothing: "antialiased",
+        transform: "translateZ(0) scale(1.05)",
+      },
+      "100%": {
+        opacity: "1",
+        transform: "translateZ(0) scale(1)",
+      },
+    },
+    "appearance-out": {
+      "0%": {
+        opacity: "1",
+        transform: "scale(1)",
+      },
+      "100%": {
+        opacity: "0",
+        transform: "scale(0.85)",
+      },
+    },
+    "indeterminate-bar": {
+      "0%": {
+        transform: "translateX(-50%) scaleX(0.2)",
+      },
+      "100%": {
+        transform: "translateX(100%) scaleX(1)",
+      },
+    },
+    sway: {
+      "0%": {
+        transform: "translate(0px, 0px)",
+      },
+      "50%": {
+        transform: "translate(0px, -150%)",
+      },
+      "100%": {
+        transform: "translate(0px, 0px)",
+      },
+    },
+    blink: {
+      "0%": {
+        opacity: "0.2",
+      },
+      "20%": {
+        opacity: "1",
+      },
+      "100%": {
+        opacity: "0.2",
+      },
+    },
+    "fade-out": {
+      "0%": {
+        opacity: "1",
+      },
+      "100%": {
+        opacity: "0.15",
+      },
+    },
+  },
 };

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import clsx from "clsx";
-import "./spinner.css";
+// import "./spinner.css";
 
 export interface ISpinner {
   type?: "default" | "duo" | "gradient" | "pulse" | "pulse-duo";
