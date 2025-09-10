@@ -1,0 +1,254 @@
+/* @use "../styles/settings" as *; */
+@import "tailwindcss";
+
+@theme {
+  --color-default: hsl(220, 14%, 96%);
+  --color-primary: hsl(221, 83%, 53%);
+  --color-secondary: hsl(280, 70%, 50%);
+  --color-success: hsl(142, 71%, 45%);
+  --color-error: hsl(0, 84%, 60%);
+  --color-warning: hsl(38, 92%, 50%);
+
+  colors: {
+    default: var(--color-default);
+    primary: var(--color-primary);
+    secondary: var(--color-secondary);
+    success: var(--color-success);
+    error: var(--color-error);
+    warning: var(--color-warning);
+  }
+
+  keyframes: {
+    rotation: {
+      0%: {
+        transform: rotate(0deg);
+      }
+      100%: {
+        transform: rotate(360deg);
+      }
+    }
+    pulse: {
+      0%: {
+        opacity: 1;
+        transform: scale(0);
+      }
+      100%: {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+    pulse-duo: {
+      0%,100%: {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      50%: {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  animation: {
+    rotation: rotation 800ms ease infinite;
+    rotation-linear: rotation 800ms linear infinite;
+    pulse: pulse 1s ease-in-out infinite;
+    pulse-duo-before: pulse-duo 2s ease-in-out infinite;
+    pulse-duo-after: pulse-duo 2s 1s ease-in-out infinite;
+  }
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--color-azure-11, #0f172b) 0%,
+    var(--color-azure-18, #1d293d) 50%,
+    var(--color-azure-11, #0f172b) 100%
+  );
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-work-sans), sans-serif;
+  overflow: hidden;
+}
+
+body:focus,
+body:active {
+  outline: none;
+}
+
+button,
+hr,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+header,
+section,
+main,
+span,
+ol,
+ul,
+li,
+blockquote {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button:before,
+hr:before,
+p:before,
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
+input:before,
+header:before,
+section:before,
+main:before,
+span:before,
+ol:before,
+ul:before,
+li:before,
+blockquote:before,
+button:after,
+hr:after,
+p:after,
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after,
+input:after,
+header:after,
+section:after,
+main:after,
+span:after,
+ol:after,
+ul:after,
+li:after,
+blockquote:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+a:visited text-d:hover {
+  text-decoration: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  position: fixed;
+  z-index: -2;
+}
+
+.overlay--left {
+  height: 700px;
+  left: -300px;
+  opacity: 0.18;
+  top: -200px;
+  width: 1200px;
+}
+
+.overlay--right {
+  opacity: 0.2;
+  right: -400px;
+  top: 160px;
+  width: 1600px;
+}
+
+.overlay img {
+  height: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  color: rgb(161, 242, 187);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}

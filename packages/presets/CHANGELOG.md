@@ -1,5 +1,38 @@
 # @aristobyte-ui/presets
 
+## 1.0.53
+
+### Patch Changes
+
+- feat: create theme package for tailwindcss
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.53
+  - @aristobyte-ui/button@1.0.53
+  - @aristobyte-ui/utils@1.0.53
+
+## 1.0.52
+
+### Patch Changes
+
+- flx: put tailwindcss to spinner peer deps
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.52
+  - @aristobyte-ui/button@1.0.52
+  - @aristobyte-ui/utils@1.0.52
+
+## 1.0.51
+
+### Patch Changes
+
+- feat: integrate spinner with tailwind css and remove sass
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.51
+  - @aristobyte-ui/utils@1.0.51
+  - @aristobyte-ui/button@1.0.51
+
 ## 1.0.50
 
 ### Patch Changes

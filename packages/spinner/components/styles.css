@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-default: hsl(220, 14%, 96%);
+  --color-primary: hsl(221, 83%, 53%);
+  --color-secondary: hsl(280, 70%, 50%);
+  --color-success: hsl(142, 71%, 45%);
+  --color-error: hsl(0, 84%, 60%);
+  --color-warning: hsl(38, 92%, 50%);
+
+  colors: {
+    default: var(--color-default);
+    primary: var(--color-primary);
+    secondary: var(--color-secondary);
+    success: var(--color-success);
+    error: var(--color-error);
+    warning: var(--color-warning);
+  };
+
+  keyframes: {
+    rotation: {
+      0%: { transform: rotate(0deg); }
+      100%: { transform: rotate(360deg); }
+    };
+    pulse: {
+      0%: { opacity: 1; transform: scale(0); }
+      100%: { opacity: 0; transform: scale(1); }
+    };
+    "pulse-duo": {
+      0%,100%: { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+      50%: { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+    };
+  };
+
+  animation: {
+    rotation: rotation 800ms ease infinite;
+    "rotation-linear": rotation 800ms linear infinite;
+    pulse: pulse 1s ease-in-out infinite;
+    "pulse-duo-before": pulse-duo 2s ease-in-out infinite;
+    "pulse-duo-after": pulse-duo 2s 1s ease-in-out infinite;
+  };
+}

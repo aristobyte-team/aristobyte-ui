@@ -1,5 +1,35 @@
 # @aristobyte-ui/cli
 
+## 1.0.53
+
+### Patch Changes
+
+- feat: create theme package for tailwindcss
+
+- Updated dependencies []:
+  - @aristobyte-ui/typescript-config@1.0.53
+  - @aristobyte-ui/eslint-config@1.0.53
+
+## 1.0.52
+
+### Patch Changes
+
+- flx: put tailwindcss to spinner peer deps
+
+- Updated dependencies []:
+  - @aristobyte-ui/typescript-config@1.0.52
+  - @aristobyte-ui/eslint-config@1.0.52
+
+## 1.0.51
+
+### Patch Changes
+
+- feat: integrate spinner with tailwind css and remove sass
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.51
+  - @aristobyte-ui/typescript-config@1.0.51
+
 ## 1.0.50
 
 ### Patch Changes

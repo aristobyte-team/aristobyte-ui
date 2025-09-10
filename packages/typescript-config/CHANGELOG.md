@@ -1,5 +1,23 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.53
+
+### Patch Changes
+
+- feat: create theme package for tailwindcss
+
+## 1.0.52
+
+### Patch Changes
+
+- flx: put tailwindcss to spinner peer deps
+
+## 1.0.51
+
+### Patch Changes
+
+- feat: integrate spinner with tailwind css and remove sass
+
 ## 1.0.50
 
 ### Patch Changes

@@ -1,0 +1,87 @@
+{
+  "name": "@aristobyte-ui/theme",
+  "description": "Centralized Tailwind CSS plugin and design tokens for AristoByteUI components. Provides colors, keyframes, animations, fonts, and utility classes for consistent styling across the UI library.",
+  "version": "1.0.53",
+  "license": "MIT",
+  "private": false,
+  "author": "AristoByte <info@aristobyte.com>",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
+    "directory": "packages/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
+  },
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10.8.2",
+    "yarn": ">=1.22.22"
+  },
+  "keywords": [
+    "tailwind",
+    "theme",
+    "design-tokens",
+    "ui-components",
+    "aristobyte",
+    "aristobyte-ui",
+    "typescript",
+    "react",
+    "monorepo"
+  ],
+  "files": [
+    "dist",
+    "plugin.js",
+    "plugin.d.ts",
+    "colors.js",
+    "colors.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.ts",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=4.0.0"
+  },
+  "dependencies": {
+    "@aristobyte-ui/eslint-config": "^1.0.53",
+    "@aristobyte-ui/typescript-config": "^1.0.53",
+    "color": "^5.0.0",
+    "tailwind-variants": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "clean-package": "2.2.0",
+    "tailwindcss": "^4.1.13",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  },
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
