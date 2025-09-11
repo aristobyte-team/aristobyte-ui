@@ -1,5 +1,16 @@
 # @aristobyte-ui/presets
 
+## 1.0.59
+
+### Patch Changes
+
+- feat: convert components to use aristobyteui tailwind plugin classnames
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.59
+  - @aristobyte-ui/button@1.0.59
+  - @aristobyte-ui/utils@1.0.59
+
 ## 1.0.58
 
 ### Patch Changes

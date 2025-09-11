@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/eslint-config",
   "description": "AristoByteUI ESLint configuration presets for TypeScript, React, and Next.js packages. Provides base, React, and Next.js rules optimized for monorepo workflows, Prettier integration, and developer productivity.",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "private": false,
   "license": "MIT",
   "type": "module",

@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.59
+
+### Patch Changes
+
+- feat: convert components to use aristobyteui tailwind plugin classnames
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.59
+  - @aristobyte-ui/typescript-config@1.0.59
+
 ## 1.0.58
 
 ### Patch Changes
