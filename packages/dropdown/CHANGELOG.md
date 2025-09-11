@@ -1,5 +1,55 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.58
+
+### Patch Changes
+
+- fix: do not filter buttongroups children
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.58
+  - @aristobyte-ui/utils@1.0.58
+
+## 1.0.57
+
+### Patch Changes
+
+- feat: use the same mapping method in buttongroup as in radiogroup
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.57
+  - @aristobyte-ui/utils@1.0.57
+
+## 1.0.56
+
+### Patch Changes
+
+- fix: resolve the issue with buttongroup filtering
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.56
+  - @aristobyte-ui/utils@1.0.56
+
+## 1.0.55
+
+### Patch Changes
+
+- feat: convert button group to tailwindcss
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.55
+  - @aristobyte-ui/utils@1.0.55
+
+## 1.0.54
+
+### Patch Changes
+
+- feat: convert spinner and button to support tailwindcss classnames
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.54
+  - @aristobyte-ui/utils@1.0.54
+
 ## 1.0.53
 
 ### Patch Changes

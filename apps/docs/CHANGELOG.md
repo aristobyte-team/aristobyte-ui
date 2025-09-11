@@ -1,5 +1,56 @@
 # @aristobyte-ui/docs
 
+## 1.0.56
+
+### Patch Changes
+
+- fix: resolve the issue with buttongroup filtering
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.56
+  - @aristobyte-ui/dropdown@1.0.56
+  - @aristobyte-ui/presets@1.0.56
+  - @aristobyte-ui/spinner@1.0.56
+  - @aristobyte-ui/anchor@1.0.56
+  - @aristobyte-ui/button@1.0.56
+  - @aristobyte-ui/switch@1.0.56
+  - @aristobyte-ui/radio@1.0.56
+  - @aristobyte-ui/utils@1.0.56
+
+## 1.0.55
+
+### Patch Changes
+
+- feat: convert button group to tailwindcss
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.55
+  - @aristobyte-ui/dropdown@1.0.55
+  - @aristobyte-ui/presets@1.0.55
+  - @aristobyte-ui/spinner@1.0.55
+  - @aristobyte-ui/anchor@1.0.55
+  - @aristobyte-ui/button@1.0.55
+  - @aristobyte-ui/switch@1.0.55
+  - @aristobyte-ui/radio@1.0.55
+  - @aristobyte-ui/utils@1.0.55
+
+## 1.0.54
+
+### Patch Changes
+
+- feat: convert spinner and button to support tailwindcss classnames
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.54
+  - @aristobyte-ui/button@1.0.54
+  - @aristobyte-ui/anchor@1.0.54
+  - @aristobyte-ui/dropdown@1.0.54
+  - @aristobyte-ui/message-box@1.0.54
+  - @aristobyte-ui/presets@1.0.54
+  - @aristobyte-ui/radio@1.0.54
+  - @aristobyte-ui/switch@1.0.54
+  - @aristobyte-ui/utils@1.0.54
+
 ## 1.0.53
 
 ### Patch Changes

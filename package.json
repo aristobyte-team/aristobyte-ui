@@ -56,9 +56,7 @@
     "check-types": "turbo run check-types",
     "add-package": "sh ./scripts/add-package.sh",
     "build": "turbo run build",
-    "bump": "changeset && changeset version",
-    "status": "changeset status",
-    "release": "changeset publish"
+    "release": "yarn install && changeset && changeset version && turbo run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
@@ -72,7 +70,6 @@
   },
   "packageManager": "yarn@1.22.22",
   "workspaces": [
-    "apps/docs",
     "packages/*"
   ]
 }

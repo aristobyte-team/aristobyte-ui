@@ -1,5 +1,35 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.58
+
+### Patch Changes
+
+- fix: do not filter buttongroups children
+
+## 1.0.57
+
+### Patch Changes
+
+- feat: use the same mapping method in buttongroup as in radiogroup
+
+## 1.0.56
+
+### Patch Changes
+
+- fix: resolve the issue with buttongroup filtering
+
+## 1.0.55
+
+### Patch Changes
+
+- feat: convert button group to tailwindcss
+
+## 1.0.54
+
+### Patch Changes
+
+- feat: convert spinner and button to support tailwindcss classnames
+
 ## 1.0.53
 
 ### Patch Changes

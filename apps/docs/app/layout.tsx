@@ -2,11 +2,11 @@ import * as React from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 
+import { Layout } from "@/components";
 import { HtmlMeta, structuredData, viewport as viewportConfig } from "@/data";
 import { TranslateProvider, ConfigProvider } from "@/context";
 
-import "./globals.css";
-import { Layout } from "@/components";
+import "./globals.scss";
 
 const workSans = localFont({
   src: [

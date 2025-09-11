@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/spinner",
   "description": "Flexible, highly customizable React Spinner component for AristoByteUI. Supports multiple variants, sizes, and animation types, designed for seamless integration with modern React projects and monorepos.",
-  "version": "1.0.53",
+  "version": "1.0.58",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -68,20 +68,15 @@
   },
   "peerDependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.7"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.53",
-    "@aristobyte-ui/typescript-config": "^1.0.53",
-    "@tailwindcss/postcss": "^4.1.13",
+    "@aristobyte-ui/eslint-config": "^1.0.58",
+    "@aristobyte-ui/typescript-config": "^1.0.58",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
-    "autoprefixer": "^10.4.21",
     "eslint": "^9.27.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.13",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   }
