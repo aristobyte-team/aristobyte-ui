@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.68
+
+### Patch Changes
+
+- feat: create a unified object for tailwind config extend
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.68
+  - @aristobyte-ui/button@1.0.68
+  - @aristobyte-ui/dropdown@1.0.68
+  - @aristobyte-ui/message-box@1.0.68
+  - @aristobyte-ui/presets@1.0.68
+  - @aristobyte-ui/radio@1.0.68
+  - @aristobyte-ui/spinner@1.0.68
+  - @aristobyte-ui/switch@1.0.68
+  - @aristobyte-ui/utils@1.0.68
+
 ## 1.0.67
 
 ### Patch Changes

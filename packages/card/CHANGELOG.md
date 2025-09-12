@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.68
+
+### Patch Changes
+
+- feat: create a unified object for tailwind config extend
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.68
+  - @aristobyte-ui/utils@1.0.68
+
 ## 1.0.67
 
 ### Patch Changes

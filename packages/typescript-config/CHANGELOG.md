@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.68
+
+### Patch Changes
+
+- feat: create a unified object for tailwind config extend
+
 ## 1.0.67
 
 ### Patch Changes
