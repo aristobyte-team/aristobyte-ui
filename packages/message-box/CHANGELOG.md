@@ -1,5 +1,23 @@
 # @aristobyte-ui/message-box
 
+## 1.0.67
+
+### Patch Changes
+
+- fix: convert constants the exports to objects in packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.67
+
+## 1.0.66
+
+### Patch Changes
+
+- feat: change the output of the packages/theme constants
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.66
+
 ## 1.0.65
 
 ### Patch Changes

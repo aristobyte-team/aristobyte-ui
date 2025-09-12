@@ -1,5 +1,39 @@
 # @aristobyte-ui/react
 
+## 1.0.67
+
+### Patch Changes
+
+- fix: convert constants the exports to objects in packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.67
+  - @aristobyte-ui/dropdown@1.0.67
+  - @aristobyte-ui/presets@1.0.67
+  - @aristobyte-ui/spinner@1.0.67
+  - @aristobyte-ui/anchor@1.0.67
+  - @aristobyte-ui/button@1.0.67
+  - @aristobyte-ui/switch@1.0.67
+  - @aristobyte-ui/radio@1.0.67
+  - @aristobyte-ui/utils@1.0.67
+
+## 1.0.66
+
+### Patch Changes
+
+- feat: change the output of the packages/theme constants
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.66
+  - @aristobyte-ui/button@1.0.66
+  - @aristobyte-ui/dropdown@1.0.66
+  - @aristobyte-ui/message-box@1.0.66
+  - @aristobyte-ui/presets@1.0.66
+  - @aristobyte-ui/radio@1.0.66
+  - @aristobyte-ui/spinner@1.0.66
+  - @aristobyte-ui/switch@1.0.66
+  - @aristobyte-ui/utils@1.0.66
+
 ## 1.0.65
 
 ### Patch Changes

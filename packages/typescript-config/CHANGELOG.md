@@ -1,5 +1,17 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.67
+
+### Patch Changes
+
+- fix: convert constants the exports to objects in packages/theme
+
+## 1.0.66
+
+### Patch Changes
+
+- feat: change the output of the packages/theme constants
+
 ## 1.0.65
 
 ### Patch Changes
