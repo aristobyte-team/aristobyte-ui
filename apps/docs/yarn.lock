@@ -56,12 +56,12 @@
     globals "^16.2.0"
     typescript-eslint "^8.32.0"
 
-"@aristobyte-ui/message-box@^1.0.56":
-  version "1.0.57"
-  resolved "https://registry.yarnpkg.com/@aristobyte-ui/message-box/-/message-box-1.0.57.tgz#79e8c56c2b2047207cb97daa5def32bce7a4eb18"
-  integrity sha512-irHqL+aoX+QVJAvt/fV1KO9TWWfPS+JcsSTqB7hyeecu5Tt4vLNzZ3uODlOaeAqoItt3TZ+az3TjTLbR7FpVMw==
+"@aristobyte-ui/message-box@^1.0.62":
+  version "1.0.62"
+  resolved "https://registry.yarnpkg.com/@aristobyte-ui/message-box/-/message-box-1.0.62.tgz#2415f6fb1647161c0babfc8e22d46dd9f3cb4110"
+  integrity sha512-C6IlH4RdhA1ecg7kqAzFt6c0AsXVsMx+tq0DpXh7Kt59hyMRXPJVBQ+g/IesMXdDeQO/s+tfSxO05qvrRenVAg==
   dependencies:
-    "@aristobyte-ui/utils" "^1.0.57"
+    "@aristobyte-ui/utils" "^1.0.62"
     esbuild-sass-plugin "^3.3.1"
     react "^19.1.0"
     react-dom "^19.1.0"
@@ -131,6 +131,17 @@
   version "1.0.57"
   resolved "https://registry.yarnpkg.com/@aristobyte-ui/utils/-/utils-1.0.57.tgz#3eec21fba48e93aa96fb26a6dfa7f791b85cd192"
   integrity sha512-H6SqJnojuCOcfhq+Ga+vCTdWuYS2XS8uDnGNnkTn2FV+i58OIrTJ5gdDhy7wtD9z+bZrbkwOjrj0npeIpK2+hA==
+  dependencies:
+    esbuild-sass-plugin "^3.3.1"
+    react "^19.1.0"
+    react-dom "^19.1.0"
+    sass "^1.89.0"
+    tsup "^8.5.0"
+
+"@aristobyte-ui/utils@^1.0.62":
+  version "1.0.62"
+  resolved "https://registry.yarnpkg.com/@aristobyte-ui/utils/-/utils-1.0.62.tgz#13d4e5cdb962aaf63d4a94568ade9b15537b1903"
+  integrity sha512-JGuH9xeHmwJkEFq/nBhcJHblhRcJrS4EMUANAiWVbhHLc93d/aYNQllDNq88S2L8wUklpF5za8snxJxnqP4xdA==
   dependencies:
     esbuild-sass-plugin "^3.3.1"
     react "^19.1.0"

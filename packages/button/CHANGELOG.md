@@ -1,5 +1,25 @@
 # @aristobyte-ui/button
 
+## 1.0.62
+
+### Patch Changes
+
+- feat: change the messagebox info variant to primary and secondary with info icon
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.62
+  - @aristobyte-ui/utils@1.0.62
+
+## 1.0.61
+
+### Patch Changes
+
+- feat: export in proper format from packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.61
+  - @aristobyte-ui/utils@1.0.61
+
 ## 1.0.60
 
 ### Patch Changes

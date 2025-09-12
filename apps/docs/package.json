@@ -13,7 +13,7 @@
     "@aristobyte-ui/anchor": "^1.0.56",
     "@aristobyte-ui/button": "^1.0.56",
     "@aristobyte-ui/dropdown": "workspace:*",
-    "@aristobyte-ui/message-box": "^1.0.56",
+    "@aristobyte-ui/message-box": "^1.0.62",
     "@aristobyte-ui/presets": "workspace:*",
     "@aristobyte-ui/radio": "^1.0.56",
     "@aristobyte-ui/spinner": "^1.0.56",

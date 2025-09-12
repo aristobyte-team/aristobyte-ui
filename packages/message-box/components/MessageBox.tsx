@@ -4,7 +4,13 @@ import * as React from "react";
 import clsx from "clsx";
 import { type IconPropsType, Icons } from "@aristobyte-ui/utils";
 
-type MessageBoxVariant = "default" | "info" | "warning" | "success" | "error";
+type MessageBoxVariant =
+  | "default"
+  | "primary"
+  | "secondary"
+  | "warning"
+  | "success"
+  | "error";
 type MessageBoxType =
   | "solid"
   | "outline"
@@ -36,7 +42,8 @@ const renderIcon = (variant: MessageBoxVariant) => {
       return Icons.Success;
     case "error":
       return Icons.Error;
-    case "info":
+    case "primary":
+    case "secondary":
     default:
       return Icons.Info;
   }

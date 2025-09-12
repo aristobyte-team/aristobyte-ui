@@ -6,8 +6,9 @@ export const messageBox = plugin(function ({ addComponents, theme }) {
     { default: string; hover?: string; disabled?: string }
   >;
 
-  const variants: Array<"default" | "info" | "warning" | "success" | "error"> =
-    ["default", "info", "success", "warning", "error"];
+  const variants: Array<
+    "default" | "primary" | "secondary" | "warning" | "success" | "error"
+  > = ["default", "primary", "secondary", "success", "warning", "error"];
 
   const types: Array<
     "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing"
