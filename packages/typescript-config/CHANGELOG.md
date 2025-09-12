@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.60
+
+### Patch Changes
+
+- feat: create theme package for aristobyteui plugins
+
 ## 1.0.59
 
 ### Patch Changes

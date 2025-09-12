@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.60
+
+### Patch Changes
+
+- feat: create theme package for aristobyteui plugins
+
+- Updated dependencies []:
+  - @aristobyte-ui/switch@1.0.60
+  - @aristobyte-ui/anchor@1.0.60
+  - @aristobyte-ui/button@1.0.60
+  - @aristobyte-ui/dropdown@1.0.60
+  - @aristobyte-ui/message-box@1.0.60
+  - @aristobyte-ui/presets@1.0.60
+  - @aristobyte-ui/radio@1.0.60
+  - @aristobyte-ui/spinner@1.0.60
+  - @aristobyte-ui/utils@1.0.60
+
 ## 1.0.59
 
 ### Patch Changes

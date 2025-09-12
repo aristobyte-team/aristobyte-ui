@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.60
+
+### Patch Changes
+
+- feat: create theme package for aristobyteui plugins
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.60
+  - @aristobyte-ui/utils@1.0.60
+
 ## 1.0.59
 
 ### Patch Changes

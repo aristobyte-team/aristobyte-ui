@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/utils",
   "description": "A collection of shared utility functions for AristoByte projects, designed to provide reusable helpers, streamline common operations, and ensure consistency across applications and packages.",
-  "version": "1.0.59",
+  "version": "1.0.60",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -65,8 +65,8 @@
     "tsup": "^8.5.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.59",
-    "@aristobyte-ui/typescript-config": "^1.0.59",
+    "@aristobyte-ui/eslint-config": "^1.0.60",
+    "@aristobyte-ui/typescript-config": "^1.0.60",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",
@@ -75,7 +75,6 @@
     "eslint": "^9.27.0",
     "postcss": "^8.5.3",
     "sass-embedded": "^1.91.0",
-    "tailwindcss": "^4.1.7",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   }
