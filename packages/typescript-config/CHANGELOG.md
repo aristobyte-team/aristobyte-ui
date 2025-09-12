@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.63
+
+### Patch Changes
+
+- feat: add constants for styling
+
 ## 1.0.62
 
 ### Patch Changes

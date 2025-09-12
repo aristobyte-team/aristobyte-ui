@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.63
+
+### Patch Changes
+
+- feat: add constants for styling
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.63
+  - @aristobyte-ui/utils@1.0.63
+
 ## 1.0.62
 
 ### Patch Changes
