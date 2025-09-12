@@ -1,10 +1,22 @@
 import plugin from "tailwindcss/plugin";
-import type { ColorsType, CssInJs, RadiusesType, VariantsType } from "./types";
+import { themeToMapping } from "../utilities";
+import type {
+  CssInJs,
+  ColorsType,
+  ParsedRadiusesType,
+  ParsedVariantsType,
+  RadiusesType,
+  VariantsType,
+} from "./types";
 
 export const buttonGroup = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
-  const radiuses = theme("radiuses") as RadiusesType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const radiuses = themeToMapping<RadiusesType, ParsedRadiusesType>(
+    theme("radiuses")
+  );
 
   const groupBase = {
     ".btn-group": {

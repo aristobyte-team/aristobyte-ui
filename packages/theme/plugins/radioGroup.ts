@@ -1,17 +1,28 @@
 import plugin from "tailwindcss/plugin";
+import { themeToMapping } from "../utilities";
 import type {
   AlignmentsType,
   AppearancesType,
   CssInJs,
+  ParsedAlignmentsType,
+  ParsedAppearancesType,
+  ParsedSizesType,
+  ParsedVariantsType,
   SizesType,
   VariantsType,
 } from "./types";
 
 export const radioGroup = plugin(function ({ addComponents, theme }) {
-  const sizes = theme("sizes") as SizesType;
-  const variants = theme("variants") as VariantsType;
-  const appearances = theme("appearances") as AppearancesType;
-  const alignments = theme("alignments") as AlignmentsType;
+  const sizes = themeToMapping<SizesType, ParsedSizesType>(theme("sizes"));
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const appearances = themeToMapping<AppearancesType, ParsedAppearancesType>(
+    theme("appearances")
+  );
+  const alignments = themeToMapping<AlignmentsType, ParsedAlignmentsType>(
+    theme("alignments")
+  );
 
   // Base RadioGroup wrapper
   const base: Record<string, CssInJs> = {

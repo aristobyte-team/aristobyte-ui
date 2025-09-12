@@ -1,10 +1,21 @@
 import plugin from "tailwindcss/plugin";
-import type { AppearancesType, VariantsType, ColorsType } from "./types";
+import { themeToMapping } from "../utilities";
+import type {
+  AppearancesType,
+  ParsedAppearancesType,
+  VariantsType,
+  ParsedVariantsType,
+  ColorsType,
+} from "./types";
 
 export const button = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
-  const appearances = theme("appearances") as AppearancesType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const appearances = themeToMapping<AppearancesType, ParsedAppearancesType>(
+    theme("appearances")
+  );
 
   const btnBase = {
     ".btn": {

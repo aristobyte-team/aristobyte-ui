@@ -1,9 +1,12 @@
 import plugin from "tailwindcss/plugin";
-import type { ColorsType, VariantsType } from "./types";
+import type { ColorsType, ParsedVariantsType, VariantsType } from "./types";
+import { themeToMapping } from "../utilities";
 
 export const spinner = plugin(function ({ addComponents, addBase, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
   const sizes = {
     xsm: "1rem",
     sm: "1.5rem",

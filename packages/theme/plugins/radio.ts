@@ -1,15 +1,22 @@
 import plugin from "tailwindcss/plugin";
+import { themeToMapping } from "../utilities";
 import type {
   AppearancesType,
   ColorsType,
   CssInJs,
+  ParsedAppearancesType,
+  ParsedVariantsType,
   VariantsType,
 } from "./types";
 
 export const radio = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
-  const appearances = theme("appearances") as AppearancesType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const appearances = themeToMapping<AppearancesType, ParsedAppearancesType>(
+    theme("appearances")
+  );
   const sizes: Record<
     string,
     { control: number; dot: number; gap: number; label: string }

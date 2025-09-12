@@ -1,10 +1,21 @@
 import plugin from "tailwindcss/plugin";
-import type { AppearancesType, ColorsType, VariantsType } from "./types";
+import { themeToMapping } from "../utilities";
+import type {
+  AppearancesType,
+  ColorsType,
+  ParsedAppearancesType,
+  ParsedVariantsType,
+  VariantsType,
+} from "./types";
 
 export const messageBox = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
-  const types = theme("appearances") as AppearancesType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const types = themeToMapping<AppearancesType, ParsedAppearancesType>(
+    theme("appearances")
+  );
 
   const radiusMap = {
     ".message-box-radius-none": { borderRadius: "0px" },

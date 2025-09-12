@@ -1,10 +1,20 @@
 import plugin from "tailwindcss/plugin";
-import type { ColorsType, CssInJs, SizesType, VariantsType } from "./types";
+import { themeToMapping } from "../utilities";
+import type {
+  ColorsType,
+  CssInJs,
+  ParsedSizesType,
+  ParsedVariantsType,
+  SizesType,
+  VariantsType,
+} from "./types";
 
 export const label = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
-  const sizes = theme("sizes") as SizesType;
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
+  const sizes = themeToMapping<SizesType, ParsedSizesType>(theme("sizes"));
 
   // Base label styles
   const labelBase = {

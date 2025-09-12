@@ -3,13 +3,20 @@ import type {
   AlignmentsType,
   ColorsType,
   CssInJs,
+  ParsedAlignmentsType,
+  ParsedVariantsType,
   VariantsType,
 } from "./types";
+import { themeToMapping } from "../utilities";
 
 export const switchPlugin = plugin(function ({ addComponents, theme }) {
-  const alignments = theme("alignments") as AlignmentsType;
   const colors = theme("colors") as ColorsType;
-  const variants = theme("variants") as VariantsType;
+  const alignments = themeToMapping<AlignmentsType, ParsedAlignmentsType>(
+    theme("alignments")
+  );
+  const variants = themeToMapping<VariantsType, ParsedVariantsType>(
+    theme("variants")
+  );
   const sizes = {
     xsm: { track: [1, 1.8], thumb: [0.8, 0.16], label: "text-xs" },
     sm: { track: [1.4, 2.6], thumb: [1, 0.2], label: "text-sm" },
