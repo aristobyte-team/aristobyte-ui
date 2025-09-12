@@ -8,11 +8,15 @@ import type {
   ParsedAppearancesType,
   ParsedSizesType,
   ParsedVariantsType,
+  PluginType,
   SizesType,
   VariantsType,
 } from "./types";
 
-export const radioGroup = plugin(function ({ addComponents, theme }) {
+export const radioGroup: PluginType = plugin(function ({
+  addComponents,
+  theme,
+}) {
   const sizes = themeToMapping<SizesType, ParsedSizesType>(theme("sizes"));
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

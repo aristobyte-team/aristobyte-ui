@@ -6,10 +6,11 @@ import type {
   CssInJs,
   ParsedAppearancesType,
   ParsedVariantsType,
+  PluginType,
   VariantsType,
 } from "./types";
 
-export const radio = plugin(function ({ addComponents, theme }) {
+export const radio: PluginType = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

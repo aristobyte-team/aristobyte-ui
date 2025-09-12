@@ -6,9 +6,10 @@ import type {
   VariantsType,
   ParsedVariantsType,
   ColorsType,
+  PluginType,
 } from "./types";
 
-export const button = plugin(function ({ addComponents, theme }) {
+export const button: PluginType = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

@@ -5,10 +5,14 @@ import type {
   ColorsType,
   ParsedAppearancesType,
   ParsedVariantsType,
+  PluginType,
   VariantsType,
 } from "./types";
 
-export const messageBox = plugin(function ({ addComponents, theme }) {
+export const messageBox: PluginType = plugin(function ({
+  addComponents,
+  theme,
+}) {
   const colors = theme("colors") as ColorsType;
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

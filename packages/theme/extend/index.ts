@@ -10,7 +10,7 @@ import {
 import { fontFamily, fontSize, fontWeight, lineHeight } from "./fonts";
 import { boxShadow } from "./shadows";
 
-export const extend = {
+export const extend = () => ({
   // === Colors === //
   colors,
 
@@ -32,7 +32,7 @@ export const extend = {
   radiuses,
   appearances,
   alignments,
-};
+});
 
 export * from "./animations";
 export * from "./colors";

@@ -5,11 +5,15 @@ import type {
   CssInJs,
   ParsedAlignmentsType,
   ParsedVariantsType,
+  PluginType,
   VariantsType,
 } from "./types";
 import { themeToMapping } from "../utilities";
 
-export const switchPlugin = plugin(function ({ addComponents, theme }) {
+export const switchPlugin: PluginType = plugin(function ({
+  addComponents,
+  theme,
+}) {
   const colors = theme("colors") as ColorsType;
   const alignments = themeToMapping<AlignmentsType, ParsedAlignmentsType>(
     theme("alignments")

@@ -1,8 +1,12 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": {
-    "baseUrl": "packages/theme"
+    "baseUrl": "packages/theme",
+    "moduleResolution": "bundler",
+    "declaration": false,
+    "declarationMap": false,
+    "declarationDir": null
   },
-  "include": ["@types", "components", "index.ts"],
+  "include": ["plugins", "extend", "utilities", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }

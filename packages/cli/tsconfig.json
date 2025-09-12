@@ -20,3 +20,4 @@
   "include": ["bin", "index.ts", "commands/**/*.ts", "package.json"],
   "exclude": ["node_modules", "dist"]
 }
+// @TODO: use typescript-config instead and or extend from base

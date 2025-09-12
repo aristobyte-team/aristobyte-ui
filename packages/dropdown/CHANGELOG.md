@@ -1,5 +1,25 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.72
+
+### Patch Changes
+
+- feat: add plugin type in packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.72
+  - @aristobyte-ui/utils@1.0.72
+
+## 1.0.71
+
+### Patch Changes
+
+- feat: resolve type issue in packages/theme and rename the exports
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.71
+  - @aristobyte-ui/utils@1.0.71
+
 ## 1.0.70
 
 ### Patch Changes

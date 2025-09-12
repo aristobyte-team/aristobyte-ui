@@ -1,5 +1,17 @@
 # @aristobyte-ui/switch
 
+## 1.0.72
+
+### Patch Changes
+
+- feat: add plugin type in packages/theme
+
+## 1.0.71
+
+### Patch Changes
+
+- feat: resolve type issue in packages/theme and rename the exports
+
 ## 1.0.70
 
 ### Patch Changes

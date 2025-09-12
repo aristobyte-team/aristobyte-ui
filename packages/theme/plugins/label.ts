@@ -5,11 +5,12 @@ import type {
   CssInJs,
   ParsedSizesType,
   ParsedVariantsType,
+  PluginType,
   SizesType,
   VariantsType,
 } from "./types";
 
-export const label = plugin(function ({ addComponents, theme }) {
+export const label: PluginType = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

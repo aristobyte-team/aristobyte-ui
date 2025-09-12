@@ -1,8 +1,13 @@
 import plugin from "tailwindcss/plugin";
 import { themeToMapping } from "../utilities";
-import type { ColorsType, ParsedVariantsType, VariantsType } from "./types";
+import type {
+  ColorsType,
+  ParsedVariantsType,
+  PluginType,
+  VariantsType,
+} from "./types";
 
-export const anchor = plugin(function ({ addComponents, theme }) {
+export const anchor: PluginType = plugin(function ({ addComponents, theme }) {
   const colors = theme("colors") as ColorsType;
   const variants = themeToMapping<VariantsType, ParsedVariantsType>(
     theme("variants")

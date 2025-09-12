@@ -1,3 +1,4 @@
+import plugin from "tailwindcss/plugin";
 import { colors as rootColors } from "../extend";
 
 export type CssInJs = {
@@ -58,3 +59,4 @@ export type ParsedAppearancesType = [
 ];
 
 export type ColorsType = typeof rootColors;
+export type PluginType = ReturnType<typeof plugin>;

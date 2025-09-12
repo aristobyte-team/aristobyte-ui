@@ -1,6 +1,7 @@
 import plugin from "tailwindcss/plugin";
+import { PluginType } from "./types";
 
-export const card = plugin(function ({ addComponents }) {
+export const card: PluginType = plugin(function ({ addComponents }) {
   const radiusMap = {
     ".card-radius-none": { "@apply rounded-none": {} },
     ".card-radius-sm": { "@apply rounded-sm": {} },
