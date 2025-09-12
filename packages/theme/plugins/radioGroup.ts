@@ -1,24 +1,17 @@
 import plugin from "tailwindcss/plugin";
-import { CssInJs } from "./types";
+import type {
+  AlignmentsType,
+  AppearancesType,
+  CssInJs,
+  SizesType,
+  VariantsType,
+} from "./types";
 
-export const radioGroup = plugin(function ({ addComponents }) {
-  const sizes = ["xsm", "sm", "md", "lg", "xlg"];
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
-  const appearances = [
-    "solid",
-    "outline",
-    "outline-dashed",
-    "no-outline",
-    "glowing",
-  ];
-  const alignments = ["horizontal", "vertical"];
+export const radioGroup = plugin(function ({ addComponents, theme }) {
+  const sizes = theme("sizes") as SizesType;
+  const variants = theme("variants") as VariantsType;
+  const appearances = theme("appearances") as AppearancesType;
+  const alignments = theme("alignments") as AlignmentsType;
 
   // Base RadioGroup wrapper
   const base: Record<string, CssInJs> = {

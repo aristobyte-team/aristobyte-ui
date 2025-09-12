@@ -1,21 +1,10 @@
 import plugin from "tailwindcss/plugin";
-import { CssInJs } from "./types";
+import type { ColorsType, CssInJs, SizesType, VariantsType } from "./types";
 
 export const label = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<
-    string,
-    { default: string; hover?: string; disabled?: string }
-  >;
-
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
-  const sizes = ["xsm", "sm", "md", "lg", "xlg"];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
+  const sizes = theme("sizes") as SizesType;
 
   // Base label styles
   const labelBase = {
@@ -52,7 +41,7 @@ export const label = plugin(function ({ addComponents, theme }) {
   const variantMap: Record<string, CssInJs> = {};
 
   variants.forEach((variant) => {
-    const c = colors[variant] || { default: "#ffffff" };
+    const c = colors.semantic[variant] || { default: "#ffffff" };
     sizes.forEach((size) => {
       const selector = `.label-${variant}-${size}`;
       variantMap[selector] = {

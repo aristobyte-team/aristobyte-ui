@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 1.0.65
+
+### Patch Changes
+
+- feat: add theme contants
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.65
+
 ## 1.0.64
 
 ### Patch Changes

@@ -1,27 +1,15 @@
 import plugin from "tailwindcss/plugin";
-import { CssInJs } from "./types";
+import type {
+  AppearancesType,
+  ColorsType,
+  CssInJs,
+  VariantsType,
+} from "./types";
 
 export const radio = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<
-    string,
-    { DEFAULT: string; hover?: string; disabled?: string }
-  >;
-
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
-  const appearances = [
-    "solid",
-    "outline",
-    "outline-dashed",
-    "no-outline",
-    "glowing",
-  ];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
+  const appearances = theme("appearances") as AppearancesType;
   const sizes: Record<
     string,
     { control: number; dot: number; gap: number; label: string }
@@ -74,17 +62,17 @@ export const radio = plugin(function ({ addComponents, theme }) {
   // Variants + appearances
   const variantMap: Record<string, CssInJs> = {};
   variants.forEach((variant) => {
-    const c = colors[variant] ?? { DEFAULT: "#000" };
+    const c = colors.semantic[variant] ?? { default: "#000" };
     appearances.forEach((appearance) => {
       const selector = `.radio-variant--${variant}.radio-appearance--${appearance}`;
       const baseStyles: Record<string, CssInJs> = {
         ".radio__control": {
           border: "2px solid",
-          borderColor: c.DEFAULT,
+          borderColor: c.default,
           backgroundColor:
-            appearance === "solid" ? c.DEFAULT : `${c.DEFAULT}33`,
+            appearance === "solid" ? c.default : `${c.default}33`,
           "&::after": {
-            backgroundColor: appearance === "solid" ? "#fff" : c.DEFAULT,
+            backgroundColor: appearance === "solid" ? "#fff" : c.default,
           },
         },
         "&:active .radio__control": {
@@ -100,7 +88,7 @@ export const radio = plugin(function ({ addComponents, theme }) {
       }
       if (appearance === "glowing") {
         baseStyles[".radio__control"]! = {
-          boxShadow: `0 0 8px ${c.DEFAULT}80, 0 0 16px ${c.DEFAULT}66, 0 0 24px ${c.DEFAULT}4d`,
+          boxShadow: `0 0 8px ${c.default}80, 0 0 16px ${c.default}66, 0 0 24px ${c.default}4d`,
         };
       }
 

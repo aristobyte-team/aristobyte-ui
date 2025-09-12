@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.65
+
+### Patch Changes
+
+- feat: add theme contants
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.65
+  - @aristobyte-ui/typescript-config@1.0.65
+
 ## 1.0.64
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @aristobyte-ui/presets
 
+## 1.0.65
+
+### Patch Changes
+
+- feat: add theme contants
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.65
+  - @aristobyte-ui/button@1.0.65
+  - @aristobyte-ui/utils@1.0.65
+
 ## 1.0.64
 
 ### Patch Changes

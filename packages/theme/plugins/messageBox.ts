@@ -1,18 +1,10 @@
 import plugin from "tailwindcss/plugin";
+import type { AppearancesType, ColorsType, VariantsType } from "./types";
 
 export const messageBox = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<
-    string,
-    { default: string; hover?: string; disabled?: string }
-  >;
-
-  const variants: Array<
-    "default" | "primary" | "secondary" | "warning" | "success" | "error"
-  > = ["default", "primary", "secondary", "success", "warning", "error"];
-
-  const types: Array<
-    "solid" | "outline" | "outline-dashed" | "no-outline" | "glowing"
-  > = ["solid", "outline", "outline-dashed", "no-outline", "glowing"];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
+  const types = theme("appearances") as AppearancesType;
 
   const radiusMap = {
     ".message-box-radius-none": { borderRadius: "0px" },
@@ -53,7 +45,7 @@ export const messageBox = plugin(function ({ addComponents, theme }) {
   const variantComponents: Record<string, unknown> = {};
 
   variants.forEach((variant) => {
-    const c = colors[variant] ?? colors.gray;
+    const c = colors.semantic[variant] ?? colors.grey["500"];
 
     types.forEach((type) => {
       const selector = `.message-box--${variant}.message-box-type--${type}`;

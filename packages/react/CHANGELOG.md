@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.65
+
+### Patch Changes
+
+- feat: add theme contants
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.65
+  - @aristobyte-ui/button@1.0.65
+  - @aristobyte-ui/dropdown@1.0.65
+  - @aristobyte-ui/message-box@1.0.65
+  - @aristobyte-ui/presets@1.0.65
+  - @aristobyte-ui/radio@1.0.65
+  - @aristobyte-ui/spinner@1.0.65
+  - @aristobyte-ui/switch@1.0.65
+  - @aristobyte-ui/utils@1.0.65
+
 ## 1.0.64
 
 ### Patch Changes

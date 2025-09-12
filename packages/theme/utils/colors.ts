@@ -124,32 +124,32 @@ export const colors = {
   // === Semantic Tokens === //
   semantic: {
     default: {
-      DEFAULT: "#1f2937", // grey-800
+      default: "#1f2937", // grey-800
       hover: "#111827", // grey-900
       disabled: "rgba(31, 41, 55, 0.5)", // grey-800 @ 0.5
     },
     primary: {
-      DEFAULT: "#2563eb", // blue-600
+      default: "#2563eb", // blue-600
       hover: "#1d4ed8", // blue-700
       disabled: "rgba(37, 99, 235, 0.5)",
     },
     secondary: {
-      DEFAULT: "#4f46e5", // indigo-600
+      default: "#4f46e5", // indigo-600
       hover: "#4338ca", // indigo-700
       disabled: "rgba(79, 70, 229, 0.5)",
     },
     error: {
-      DEFAULT: "#dc2626", // red-600
+      default: "#dc2626", // red-600
       hover: "#b91c1c", // red-700
       disabled: "rgba(220, 38, 38, 0.5)",
     },
     success: {
-      DEFAULT: "#16a34a", // green-600
+      default: "#16a34a", // green-600
       hover: "#15803d", // green-700
       disabled: "rgba(22, 163, 74, 0.5)",
     },
     warning: {
-      DEFAULT: "#d97706", // amber-600
+      default: "#d97706", // amber-600
       hover: "#b45309", // amber-700
       disabled: "rgba(217, 119, 6, 0.5)",
     },

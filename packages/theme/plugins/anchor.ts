@@ -1,21 +1,9 @@
 import plugin from "tailwindcss/plugin";
+import type { ColorsType, VariantsType } from "./types";
 
 export const anchor = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<
-    string,
-    { default: string; hover?: string }
-  >;
-
-  const variants = [
-    "white",
-    "black",
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
 
   const base = {
     ".anchor": {
@@ -33,8 +21,8 @@ export const anchor = plugin(function ({ addComponents, theme }) {
   const variantMap: Record<string, unknown> = {};
 
   variants.forEach((v) => {
-    const c = colors[v]?.default ?? "#000000";
-    const hover = colors[v]?.hover ?? c;
+    const c = colors.semantic[v]?.default ?? "#000000";
+    const hover = colors.semantic[v]?.hover ?? c;
     variantMap[`.anchor--${v}`] = {
       color: c,
       "&:hover": {

@@ -1,16 +1,9 @@
 import plugin from "tailwindcss/plugin";
+import type { ColorsType, VariantsType } from "./types";
 
 export const spinner = plugin(function ({ addComponents, addBase, theme }) {
-  const colors = theme("colors") as Record<string, { default: string }>;
-
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
   const sizes = {
     xsm: "1rem",
     sm: "1.5rem",
@@ -86,7 +79,7 @@ export const spinner = plugin(function ({ addComponents, addBase, theme }) {
 
   const variantMap: Record<string, unknown> = {};
   variants.forEach((v) => {
-    const c = colors[v]?.default ?? "#000";
+    const c = colors.semantic[v]?.default ?? "#000";
 
     // Regular
     variantMap[`.spinner-default.spinner-${v}`] = {

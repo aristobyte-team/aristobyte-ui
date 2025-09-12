@@ -1,18 +1,10 @@
 import plugin from "tailwindcss/plugin";
-import { CssInJs } from "./types";
+import type { ColorsType, CssInJs, RadiusesType, VariantsType } from "./types";
 
 export const buttonGroup = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<string, { default: string }>;
-
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
-  const radii = ["none", "sm", "md", "lg", "full"];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
+  const radiuses = theme("radiuses") as RadiusesType;
 
   const groupBase = {
     ".btn-group": {
@@ -27,13 +19,13 @@ export const buttonGroup = plugin(function ({ addComponents, theme }) {
   };
 
   const radiusMap: Record<string, CssInJs> = {};
-  radii.forEach((r) => {
+  radiuses.forEach((r) => {
     radiusMap[`.btn-group-radius-${r}`] = { [`@apply rounded-${r}`]: {} };
   });
 
   const variantMap: Record<string, CssInJs> = {};
   variants.forEach((v) => {
-    const c = colors[v]?.default ?? "#000000";
+    const c = colors.semantic[v]?.default ?? "#000000";
     variantMap[`.btn-group-variant-${v}`] = {
       backgroundColor: c,
     };

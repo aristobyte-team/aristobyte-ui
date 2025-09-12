@@ -1,26 +1,10 @@
 import plugin from "tailwindcss/plugin";
+import type { AppearancesType, VariantsType, ColorsType } from "./types";
 
 export const button = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<
-    string,
-    { default: string; hover?: string; disabled?: string }
-  >;
-
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
-  const appearances = [
-    "solid",
-    "outline",
-    "outline-dashed",
-    "no-outline",
-    "glowing",
-  ];
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
+  const appearances = theme("appearances") as AppearancesType;
 
   const btnBase = {
     ".btn": {
@@ -53,7 +37,7 @@ export const button = plugin(function ({ addComponents, theme }) {
   const variantMap: Record<string, unknown> = {};
 
   variants.forEach((variant) => {
-    const c = colors[variant];
+    const c = colors.semantic[variant];
 
     appearances.forEach((appearance) => {
       const selector = `.btn-${variant}-${appearance}`;

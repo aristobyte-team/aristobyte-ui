@@ -1,16 +1,15 @@
 import plugin from "tailwindcss/plugin";
-import { CssInJs } from "./types";
+import type {
+  AlignmentsType,
+  ColorsType,
+  CssInJs,
+  VariantsType,
+} from "./types";
 
 export const switchPlugin = plugin(function ({ addComponents, theme }) {
-  const colors = theme("colors") as Record<string, { default: string }>;
-  const variants = [
-    "default",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning",
-  ];
+  const alignments = theme("alignments") as AlignmentsType;
+  const colors = theme("colors") as ColorsType;
+  const variants = theme("variants") as VariantsType;
   const sizes = {
     xsm: { track: [1, 1.8], thumb: [0.8, 0.16], label: "text-xs" },
     sm: { track: [1.4, 2.6], thumb: [1, 0.2], label: "text-sm" },
@@ -18,7 +17,6 @@ export const switchPlugin = plugin(function ({ addComponents, theme }) {
     lg: { track: [1.8, 3.4], thumb: [1.4, 0.3], label: "text-lg" },
     xlg: { track: [2, 3.8], thumb: [1.6, 0.3], label: "text-xl" },
   };
-  const alignments = ["horizontal", "vertical"];
 
   const baseSwitch = {
     ".switch": {
@@ -63,7 +61,7 @@ export const switchPlugin = plugin(function ({ addComponents, theme }) {
 
   const variantComponents: Record<string, CssInJs> = {};
   variants.forEach((v) => {
-    const color = colors[v]?.default ?? "#000";
+    const color = colors.semantic[v]?.default ?? "#000";
     variantComponents[`.switch-variant-${v} input:checked + .switch__track`] = {
       backgroundColor: color,
     };

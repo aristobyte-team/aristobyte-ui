@@ -1,5 +1,11 @@
 # @aristobyte-ui/theme
 
+## 1.0.65
+
+### Patch Changes
+
+- feat: add theme contants
+
 ## 1.0.64
 
 ### Patch Changes
