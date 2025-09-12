@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.64
+
+### Patch Changes
+
+- fix: rename exports in packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.64
+  - @aristobyte-ui/button@1.0.64
+  - @aristobyte-ui/dropdown@1.0.64
+  - @aristobyte-ui/message-box@1.0.64
+  - @aristobyte-ui/presets@1.0.64
+  - @aristobyte-ui/radio@1.0.64
+  - @aristobyte-ui/spinner@1.0.64
+  - @aristobyte-ui/switch@1.0.64
+  - @aristobyte-ui/utils@1.0.64
+
 ## 1.0.63
 
 ### Patch Changes
