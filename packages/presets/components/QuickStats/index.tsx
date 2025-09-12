@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./QuickStats.module.scss";
-
 export interface IQuickStats {
   disabled?: boolean;
 }
@@ -11,11 +9,5 @@ export interface IQuickStats {
 export const QuickStats: React.FC<IQuickStats> = ({ ...props }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`quick-stats ${styles["quick-stats"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="quick-stats" />;
 };

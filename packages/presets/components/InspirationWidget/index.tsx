@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./InspirationWidget.module.scss";
-
 export interface IInspirationWidget {
   disabled?: boolean;
 }
@@ -13,11 +11,5 @@ export const InspirationWidget: React.FC<IInspirationWidget> = ({
 }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`inspiration-widget ${styles["inspiration-widget"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="inspiration-widget" />;
 };

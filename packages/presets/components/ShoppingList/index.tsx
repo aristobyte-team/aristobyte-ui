@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./ShoppingList.module.scss";
-
 export interface IShoppingList {
   disabled?: boolean;
 }
@@ -11,11 +9,5 @@ export interface IShoppingList {
 export const ShoppingList: React.FC<IShoppingList> = ({ ...props }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`shopping-list ${styles["shopping-list"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="shopping-list" />;
 };

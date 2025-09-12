@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./TimeLocationWidget.module.scss";
-
 export interface ITimeLocationWidget {
   disabled?: boolean;
 }
@@ -13,11 +11,5 @@ export const TimeLocationWidget: React.FC<ITimeLocationWidget> = ({
 }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`time-location-widget ${styles["time-location-widget"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="time-location-widget" />;
 };

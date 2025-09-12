@@ -6,8 +6,6 @@ import { Anchor, type IAnchor } from "@aristobyte-ui/anchor";
 import { Button, type IButton } from "@aristobyte-ui/button";
 import { Icons, type IconPropsType } from "@aristobyte-ui/utils";
 
-import styles from "./SocialMediaCard.module.scss";
-
 export interface ISocialMediaCard {
   variant?: "default" | "compact" | "highlight";
   radius?: "none" | "sm" | "md" | "lg" | "full";
@@ -44,7 +42,7 @@ const renderAvatar = (avatar: ISocialMediaCard["avatar"]) => {
   if (avatar?.image) {
     return (
       <img
-        className={styles["social-media-card__avatar-img"]}
+        className={"social-media-card__avatar-img"}
         src={avatar.image}
         alt={avatar.imageAltText}
       />
@@ -52,7 +50,7 @@ const renderAvatar = (avatar: ISocialMediaCard["avatar"]) => {
   }
 
   return (
-    <div className={styles["social-media-card__avatar-icon"]}>
+    <div className={"social-media-card__avatar-icon"}>
       {(avatar?.icon || Icons.User)({ size: 24 })}
     </div>
   );
@@ -75,12 +73,12 @@ export const SocialMediaCard: React.FC<ISocialMediaCard> = ({
   return (
     <div
       key={uniqId}
-      className={`social-media-card ${styles[`social-media-card-radius--${radius}`]} ${styles[`social-media-radius-variant--${variant}`]} ${styles["social-media-card"]} ${className}`}
+      className={`social-media-card social-media-card-radius--${radius} social-media-radius-variant--${variant} social-media-card ${className}`}
     >
-      <div className={styles["social-media-card__header"]}>
+      <div className={"social-media-card__header"}>
         {avatar && (
           <Button
-            className={styles["social-media-card__avatar"]}
+            className={"social-media-card__avatar"}
             style={{ background: avatar?.background }}
             href={avatar?.href}
             target={avatar?.target}
@@ -89,11 +87,9 @@ export const SocialMediaCard: React.FC<ISocialMediaCard> = ({
           </Button>
         )}
         {title && subtitle && (
-          <div className={styles["social-media-card__text"]}>
-            <h3 className={styles["social-media-card__title"]}>{title}</h3>
-            <h4 className={styles["social-media-card__subtitle"]}>
-              {subtitle}
-            </h4>
+          <div className={"social-media-card__text"}>
+            <h3 className={"social-media-card__title"}>{title}</h3>
+            <h4 className={"social-media-card__subtitle"}>{subtitle}</h4>
           </div>
         )}
         {button && (
@@ -101,18 +97,18 @@ export const SocialMediaCard: React.FC<ISocialMediaCard> = ({
             {...button}
             variant={button?.variant || "primary"}
             radius={button?.radius || "full"}
-            className={styles["social-media-card__button"]}
+            className={"social-media-card__button"}
           />
         )}
       </div>
-      <div className={styles["social-media-card__content"]}>{content}</div>
+      <div className={"social-media-card__content"}>{content}</div>
       {tags && tags.length > 0 && (
-        <ul className={styles["social-media-card__tags"]}>
+        <ul className={"social-media-card__tags"}>
           {tags.map(({ variant: tagVariant, ...rest }, i) => (
-            <li key={i} className={styles["social-media-card__tag"]}>
+            <li key={i} className={"social-media-card__tag"}>
               <Anchor
                 {...rest}
-                className={styles["social-media-card__tag-anchor"]}
+                className={"social-media-card__tag-anchor"}
                 variant={tagVariant || "white"}
               />
             </li>
@@ -121,26 +117,24 @@ export const SocialMediaCard: React.FC<ISocialMediaCard> = ({
       )}
 
       {metrics && metrics.length > 0 && (
-        <ul className={styles["social-media-card__metrics"]}>
+        <ul className={"social-media-card__metrics"}>
           {metrics.map(({ icon, label, value, ...rest }, i) => (
-            <li key={i} className={styles["social-media-card__metric"]}>
+            <li key={i} className={"social-media-card__metric"}>
               <Button {...rest} transparent>
-                <p className={styles["social-media-card__metric-par"]}>
+                <p className={"social-media-card__metric-par"}>
                   {icon && (
-                    <span className={styles["social-media-card__metric-icon"]}>
+                    <span className={"social-media-card__metric-icon"}>
                       {icon({ size: 22 })}
                     </span>
                   )}
                   {value && (
-                    <span className={styles["social-media-card__metric-value"]}>
+                    <span className={"social-media-card__metric-value"}>
                       {value}
                     </span>
                   )}
                 </p>
                 {label && (
-                  <p className={styles["social-media-card__metrics-label"]}>
-                    {label}
-                  </p>
+                  <p className={"social-media-card__metrics-label"}>{label}</p>
                 )}
               </Button>
             </li>

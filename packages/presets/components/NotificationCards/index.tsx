@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./NotificationCards.module.scss";
-
 export interface INotificationCards {
   disabled?: boolean;
 }
@@ -13,11 +11,5 @@ export const NotificationCards: React.FC<INotificationCards> = ({
 }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`notification-cards ${styles["notification-cards"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="notification-cards" />;
 };

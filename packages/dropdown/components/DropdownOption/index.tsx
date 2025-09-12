@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import styles from "./DropdownOption.module.scss";
 import { Icons } from "@aristobyte-ui/utils";
 
 export interface IDropdownOption {
@@ -45,15 +44,15 @@ export const DropdownOption: React.FC<IDropdownOption> = ({
       style={style}
       key={uniqueId}
       disabled={disabled}
-      className={`${styles["dropdown-option"]} ${styles[`dropdown-option-variant--${variant}`]} ${disabled ? styles["dropdown-option--disabled"] : ""}`}
+      className={`dropdown-option dropdown-option-variant--${variant} ${disabled ? "dropdown-option--disabled" : ""}`}
       onClick={onChange}
     >
-      <div className={styles["dropdown-option__content"]}>
-        <h3 className={styles["dropdown-option__title"]}>{children}</h3>
-        <p className={styles["dropdown-option__description"]}>{description}</p>
+      <div className={"dropdown-option__content"}>
+        <h3 className={"dropdown-option__title"}>{children}</h3>
+        <p className={"dropdown-option__description"}>{description}</p>
       </div>
       <div
-        className={`${styles["dropdown-option__tick"]} ${selectedValues?.includes(value) ? styles["dropdown-option__tick--active"] : ""}`}
+        className={`dropdown-option__tick ${selectedValues?.includes(value) ? "dropdown-option__tick--active" : ""}`}
       >
         <Icons.Success size={18} />
       </div>

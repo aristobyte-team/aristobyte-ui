@@ -1,5 +1,17 @@
 # @aristobyte-ui/eslint-config
 
+## 1.0.70
+
+### Patch Changes
+
+- fix: cleanup the builds
+
+## 1.0.69
+
+### Patch Changes
+
+- fix: cleanup build process
+
 ## 1.0.68
 
 ### Patch Changes

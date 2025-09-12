@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./AIAssistant.module.scss";
-
 export interface IAIAssistant {
   disabled?: boolean;
 }
@@ -11,11 +9,5 @@ export interface IAIAssistant {
 export const AIAssistant: React.FC<IAIAssistant> = ({ ...props }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`ai-assistant ${styles["ai-assistant"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="ai-assistant" />;
 };

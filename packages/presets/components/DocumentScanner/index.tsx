@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import styles from "./DocumentScanner.module.scss";
-
 export interface IDocumentScanner {
   disabled?: boolean;
 }
@@ -11,11 +9,5 @@ export interface IDocumentScanner {
 export const DocumentScanner: React.FC<IDocumentScanner> = ({ ...props }) => {
   const uniqId = React.useId();
 
-  return (
-    <div
-      {...props}
-      key={uniqId}
-      className={`document-scanner ${styles["document-scanner"]}`}
-    />
-  );
+  return <div {...props} key={uniqId} className="document-scanner" />;
 };

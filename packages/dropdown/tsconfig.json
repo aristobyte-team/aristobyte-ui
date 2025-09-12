@@ -1,6 +1,6 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
   "compilerOptions": { "baseUrl": "packages/dropdown" },
-  "include": ["@types", "components", "index.ts"],
+  "include": ["components", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -7,8 +7,6 @@ import { DropdownOption, type IDropdownOption } from "../DropdownOption";
 import { Button, type IButton } from "@aristobyte-ui/button";
 import { Portal } from "@aristobyte-ui/utils";
 
-import styles from "./Dropdown.module.scss";
-
 type PositionType = {
   top: 0;
   left: 0;
@@ -155,10 +153,10 @@ export const Dropdown: React.FC<IDropdown> = ({
 
   return (
     <>
-      <div className={`${styles["dropdown"]} ${className}`}>
+      <div className={`dropdown ${className}`}>
         <Button
           onClick={handleToggle}
-          className={`${styles["dropdown__button"]} ${button?.className || ""}`}
+          className={`${"dropdown__button"} ${button?.className || ""}`}
           appearance={button?.appearance || appearance}
           variant={button?.variant || variant}
           disabled={button?.disabled || disabled}
@@ -172,11 +170,11 @@ export const Dropdown: React.FC<IDropdown> = ({
         <AnimatePresence>
           {isOpened && (
             <div
-              className={`${styles["dropdown__box"]} ${styles[`dropdown__box-variant--${variant}`]}`}
+              className={`dropdown__box dropdown__box-variant--${variant}`}
               style={style}
             >
               <motion.div
-                className={styles["dropdown__box-overlay"]}
+                className={"dropdown__box-overlay"}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -185,7 +183,7 @@ export const Dropdown: React.FC<IDropdown> = ({
               />
               <motion.div
                 ref={boxRef}
-                className={styles["dropdown__box-options"]}
+                className={"dropdown__box-options"}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.95 }}

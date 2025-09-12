@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/typescript-config",
   "description": "Shared TypeScript config presets used across AristoByteUI platform and packages.",
-  "version": "1.0.68",
+  "version": "1.0.70",
   "license": "MIT",
   "private": false,
   "main": "tsconfig.base.json",
@@ -52,8 +52,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "sass-embedded": "^1.91.0"
   }
 }
