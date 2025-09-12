@@ -1,3 +1,7 @@
+// =========================================== //
+//       AristoByte UI - Constant Tokens       //
+// =========================================== //
+
 import { asThemeMap } from "../utilities";
 
 const alignmentsArr = ["horizontal", "vertical"] as const;

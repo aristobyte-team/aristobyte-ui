@@ -1,7 +1,8 @@
-import * as plugins from "./plugins";
+import * as Extend from "./extend";
+import * as Plugins from "./plugins";
 
-export const aristobyteui = () => Object.values(plugins);
+export const aristobyteui = () => Object.values(Plugins);
 
-export * from "./utils";
+export * from "./extend";
 export * from "./plugins";
-export default aristobyteui;
+export default { plugin: aristobyteui, extend: Extend.extend };

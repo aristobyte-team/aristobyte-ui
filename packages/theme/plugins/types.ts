@@ -1,4 +1,4 @@
-import { colors as rootColors } from "../utils";
+import { colors as rootColors } from "../extend";
 
 export type CssInJs = {
   [key: string]: string | string[] | CssInJs | CssInJs[];
