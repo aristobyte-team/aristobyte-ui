@@ -1,5 +1,16 @@
 # @aristobyte-ui/presets
 
+## 1.0.74
+
+### Patch Changes
+
+- feat: convert all plugins' variants in packages/theme to static objects
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.74
+  - @aristobyte-ui/button@1.0.74
+  - @aristobyte-ui/utils@1.0.74
+
 ## 1.0.73
 
 ### Patch Changes

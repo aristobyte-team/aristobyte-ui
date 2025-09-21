@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/radio",
   "description": "Composable and fully-typed Radio and RadioGroup components for AristoByteUI. Supports multiple variants, sizes, appearances, alignments, and optional label highlights, optimized for performance and developer experience.",
-  "version": "1.0.73",
+  "version": "1.0.74",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -62,8 +62,8 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.73",
-    "@aristobyte-ui/typescript-config": "^1.0.73",
+    "@aristobyte-ui/eslint-config": "^1.0.74",
+    "@aristobyte-ui/typescript-config": "^1.0.74",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

@@ -1,5 +1,11 @@
 # @aristobyte-ui/switch
 
+## 1.0.74
+
+### Patch Changes
+
+- feat: convert all plugins' variants in packages/theme to static objects
+
 ## 1.0.73
 
 ### Patch Changes
