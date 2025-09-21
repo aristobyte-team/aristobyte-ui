@@ -34,7 +34,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f2937]": {},
     },
     ".buttonGroup-default-solid:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-default-outline": {
       "@apply bg-[#1f2937] border border-[#1f2937]": {},
@@ -43,7 +43,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f2937] border border-[#1f2937]": {},
     },
     ".buttonGroup-default-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-default-outline-dashed": {
@@ -53,7 +53,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f2937] border border-dashed border-[#1f2937]": {},
     },
     ".buttonGroup-default-outline-dashed:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-dashed border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-dashed border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-default-no-outline": {
@@ -63,7 +63,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f2937]": {},
     },
     ".buttonGroup-default-no-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-default-glowing": {
       "@apply bg-[#1f2937] shadow-[0_0_6px_#1f293780]": {},
@@ -72,7 +72,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#111827] shadow-[0_0_8px_#11182780]": {},
     },
     ".buttonGroup-default-glowing:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-primary-solid": {
       "@apply bg-[#2563eb]": {},
@@ -81,7 +81,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb]": {},
     },
     ".buttonGroup-primary-solid:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-primary-outline": {
       "@apply bg-[#2563eb] border border-[#2563eb]": {},
@@ -90,7 +90,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb] border border-[#2563eb]": {},
     },
     ".buttonGroup-primary-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-primary-outline-dashed": {
@@ -100,7 +100,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb] border border-dashed border-[#2563eb]": {},
     },
     ".buttonGroup-primary-outline-dashed:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-dashed border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-dashed border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-primary-no-outline": {
@@ -110,7 +110,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb]": {},
     },
     ".buttonGroup-primary-no-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-primary-glowing": {
       "@apply bg-[#2563eb] shadow-[0_0_6px_#2563eb80]": {},
@@ -119,7 +119,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed8] shadow-[0_0_8px_#1d4ed880]": {},
     },
     ".buttonGroup-primary-glowing:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-secondary-solid": {
       "@apply bg-[#4f46e5]": {},
@@ -128,7 +128,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e5]": {},
     },
     ".buttonGroup-secondary-solid:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-secondary-outline": {
       "@apply bg-[#4f46e5] border border-[#4f46e5]": {},
@@ -137,7 +137,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e5] border border-[#4f46e5]": {},
     },
     ".buttonGroup-secondary-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-secondary-outline-dashed": {
@@ -147,7 +147,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e5] border border-dashed border-[#4f46e5]": {},
     },
     ".buttonGroup-secondary-outline-dashed:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-dashed border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-dashed border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-secondary-no-outline": {
@@ -157,7 +157,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e5]": {},
     },
     ".buttonGroup-secondary-no-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-secondary-glowing": {
       "@apply bg-[#4f46e5] shadow-[0_0_6px_#4f46e580]": {},
@@ -166,7 +166,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca] shadow-[0_0_8px_#4338ca80]": {},
     },
     ".buttonGroup-secondary-glowing:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-success-solid": {
       "@apply bg-[#16a34a]": {},
@@ -175,7 +175,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a]": {},
     },
     ".buttonGroup-success-solid:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-success-outline": {
       "@apply bg-[#16a34a] border border-[#16a34a]": {},
@@ -184,7 +184,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a] border border-[#16a34a]": {},
     },
     ".buttonGroup-success-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-success-outline-dashed": {
@@ -194,7 +194,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a] border border-dashed border-[#16a34a]": {},
     },
     ".buttonGroup-success-outline-dashed:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-dashed border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-dashed border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-success-no-outline": {
@@ -204,7 +204,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a]": {},
     },
     ".buttonGroup-success-no-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-success-glowing": {
       "@apply bg-[#16a34a] shadow-[0_0_6px_#16a34a80]": {},
@@ -213,7 +213,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d] shadow-[0_0_8px_#15803d80]": {},
     },
     ".buttonGroup-success-glowing:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-warning-solid": {
       "@apply bg-[#d97706]": {},
@@ -222,7 +222,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d97706]": {},
     },
     ".buttonGroup-warning-solid:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-warning-outline": {
       "@apply bg-[#d97706] border border-[#d97706]": {},
@@ -231,7 +231,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d97706] border border-[#d97706]": {},
     },
     ".buttonGroup-warning-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-warning-outline-dashed": {
@@ -241,7 +241,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d97706] border border-dashed border-[#d97706]": {},
     },
     ".buttonGroup-warning-outline-dashed:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-dashed border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-dashed border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-warning-no-outline": {
@@ -251,7 +251,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d97706]": {},
     },
     ".buttonGroup-warning-no-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-warning-glowing": {
       "@apply bg-[#d97706] shadow-[0_0_6px_#d9770680]": {},
@@ -260,7 +260,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b45309] shadow-[0_0_8px_#b4530980]": {},
     },
     ".buttonGroup-warning-glowing:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-error-solid": {
       "@apply bg-[#dc2626]": {},
@@ -269,7 +269,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc2626]": {},
     },
     ".buttonGroup-error-solid:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-error-outline": {
       "@apply bg-[#dc2626] border border-[#dc2626]": {},
@@ -278,7 +278,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc2626] border border-[#dc2626]": {},
     },
     ".buttonGroup-error-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-error-outline-dashed": {
@@ -288,7 +288,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc2626] border border-dashed border-[#dc2626]": {},
     },
     ".buttonGroup-error-outline-dashed:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-dashed border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-dashed border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".buttonGroup-error-no-outline": {
@@ -298,7 +298,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc2626]": {},
     },
     ".buttonGroup-error-no-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".buttonGroup-error-glowing": {
       "@apply bg-[#dc2626] shadow-[0_0_6px_#dc262680]": {},
@@ -307,7 +307,7 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c] shadow-[0_0_8px_#b91c1c80]": {},
     },
     ".buttonGroup-error-glowing:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
   };
 

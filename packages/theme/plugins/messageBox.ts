@@ -57,7 +57,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#111827] text-white": {},
     },
     ".messageBox-default-solid:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-default-outline": {
@@ -67,7 +67,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#11182744] border border-[#111827] text-[#111827]": {},
     },
     ".messageBox-default-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-default-outline-dashed": {
@@ -79,7 +79,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-default-outline-dashed:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-dashed border-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-dashed border-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-default-no-outline": {
@@ -89,7 +89,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#11182744] text-[#111827]": {},
     },
     ".messageBox-default-no-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-default-glowing": {
@@ -99,7 +99,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#11182744] shadow-[0_0_12px_#11182780] text-[#111827]": {},
     },
     ".messageBox-default-glowing:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] shadow-[0_0_8px_rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] shadow-[0_0_8px_rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-primary-solid": {
@@ -109,7 +109,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#1d4ed8] text-white": {},
     },
     ".messageBox-primary-solid:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-primary-outline": {
@@ -119,7 +119,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#1d4ed844] border border-[#1d4ed8] text-[#1d4ed8]": {},
     },
     ".messageBox-primary-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-primary-outline-dashed": {
@@ -131,7 +131,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-primary-outline-dashed:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-dashed border-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-dashed border-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-primary-no-outline": {
@@ -141,7 +141,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#1d4ed844] text-[#1d4ed8]": {},
     },
     ".messageBox-primary-no-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-primary-glowing": {
@@ -151,7 +151,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#1d4ed844] shadow-[0_0_12px_#1d4ed880] text-[#1d4ed8]": {},
     },
     ".messageBox-primary-glowing:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] shadow-[0_0_8px_rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] shadow-[0_0_8px_rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-secondary-solid": {
@@ -161,7 +161,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#4338ca] text-white": {},
     },
     ".messageBox-secondary-solid:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-secondary-outline": {
@@ -171,7 +171,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#4338ca44] border border-[#4338ca] text-[#4338ca]": {},
     },
     ".messageBox-secondary-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-secondary-outline-dashed": {
@@ -183,7 +183,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-secondary-outline-dashed:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-dashed border-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-dashed border-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-secondary-no-outline": {
@@ -193,7 +193,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#4338ca44] text-[#4338ca]": {},
     },
     ".messageBox-secondary-no-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-secondary-glowing": {
@@ -203,7 +203,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#4338ca44] shadow-[0_0_12px_#4338ca80] text-[#4338ca]": {},
     },
     ".messageBox-secondary-glowing:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] shadow-[0_0_8px_rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] shadow-[0_0_8px_rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-success-solid": {
@@ -213,7 +213,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#15803d] text-white": {},
     },
     ".messageBox-success-solid:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-success-outline": {
@@ -223,7 +223,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#15803d44] border border-[#15803d] text-[#15803d]": {},
     },
     ".messageBox-success-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-success-outline-dashed": {
@@ -235,7 +235,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-success-outline-dashed:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-dashed border-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-dashed border-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-success-no-outline": {
@@ -245,7 +245,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#15803d44] text-[#15803d]": {},
     },
     ".messageBox-success-no-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-success-glowing": {
@@ -255,7 +255,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#15803d44] shadow-[0_0_12px_#15803d80] text-[#15803d]": {},
     },
     ".messageBox-success-glowing:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] shadow-[0_0_8px_rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] shadow-[0_0_8px_rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-warning-solid": {
@@ -265,7 +265,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b45309] text-white": {},
     },
     ".messageBox-warning-solid:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-warning-outline": {
@@ -275,7 +275,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b4530944] border border-[#b45309] text-[#b45309]": {},
     },
     ".messageBox-warning-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-warning-outline-dashed": {
@@ -287,7 +287,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-warning-outline-dashed:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-dashed border-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-dashed border-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-warning-no-outline": {
@@ -297,7 +297,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b4530944] text-[#b45309]": {},
     },
     ".messageBox-warning-no-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-warning-glowing": {
@@ -307,7 +307,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b4530944] shadow-[0_0_12px_#b4530980] text-[#b45309]": {},
     },
     ".messageBox-warning-glowing:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] shadow-[0_0_8px_rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] shadow-[0_0_8px_rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-error-solid": {
@@ -317,7 +317,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b91c1c] text-white": {},
     },
     ".messageBox-error-solid:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] text-white opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] text-white opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-error-outline": {
@@ -327,7 +327,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b91c1c44] border border-[#b91c1c] text-[#b91c1c]": {},
     },
     ".messageBox-error-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-error-outline-dashed": {
@@ -339,7 +339,7 @@ export const messageBox: PluginType = plugin(function ({
         {},
     },
     ".messageBox-error-outline-dashed:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-dashed border-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-dashed border-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-error-no-outline": {
@@ -349,7 +349,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b91c1c44] text-[#b91c1c]": {},
     },
     ".messageBox-error-no-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".messageBox-error-glowing": {
@@ -359,7 +359,7 @@ export const messageBox: PluginType = plugin(function ({
       "@apply bg-[#b91c1c44] shadow-[0_0_12px_#b91c1c80] text-[#b91c1c]": {},
     },
     ".messageBox-error-glowing:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] shadow-[0_0_8px_rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] shadow-[0_0_8px_rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
   };

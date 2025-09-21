@@ -19,7 +19,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#111827]": {},
     },
     ".radioGroup-default-solid:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-default-outline": {
       "@apply bg-[#1f293733] border border-[#1f2937]": {},
@@ -28,7 +28,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182744] border border-[#111827]": {},
     },
     ".radioGroup-default-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-default-outline-dashed": {
@@ -38,7 +38,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182744] border-dashed border-[#111827]": {},
     },
     ".radioGroup-default-outline-dashed:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border-dashed border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border-dashed border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-default-no-outline": {
@@ -48,7 +48,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182744] border-transparent": {},
     },
     ".radioGroup-default-no-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-default-glowing": {
@@ -60,7 +60,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-default-glowing:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] shadow-[0_0_8px_rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] shadow-[0_0_8px_rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-primary-solid": {
@@ -70,7 +70,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed8]": {},
     },
     ".radioGroup-primary-solid:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-primary-outline": {
       "@apply bg-[#2563eb33] border border-[#2563eb]": {},
@@ -79,7 +79,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed844] border border-[#1d4ed8]": {},
     },
     ".radioGroup-primary-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-primary-outline-dashed": {
@@ -89,7 +89,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed844] border-dashed border-[#1d4ed8]": {},
     },
     ".radioGroup-primary-outline-dashed:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border-dashed border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border-dashed border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-primary-no-outline": {
@@ -99,7 +99,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed844] border-transparent": {},
     },
     ".radioGroup-primary-no-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-primary-glowing": {
@@ -111,7 +111,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-primary-glowing:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] shadow-[0_0_8px_rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] shadow-[0_0_8px_rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-secondary-solid": {
@@ -121,7 +121,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca]": {},
     },
     ".radioGroup-secondary-solid:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-secondary-outline": {
       "@apply bg-[#4f46e533] border border-[#4f46e5]": {},
@@ -130,7 +130,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca44] border border-[#4338ca]": {},
     },
     ".radioGroup-secondary-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-secondary-outline-dashed": {
@@ -140,7 +140,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca44] border-dashed border-[#4338ca]": {},
     },
     ".radioGroup-secondary-outline-dashed:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border-dashed border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border-dashed border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-secondary-no-outline": {
@@ -150,7 +150,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca44] border-transparent": {},
     },
     ".radioGroup-secondary-no-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-secondary-glowing": {
@@ -162,7 +162,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-secondary-glowing:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] shadow-[0_0_8px_rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] shadow-[0_0_8px_rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-success-solid": {
@@ -172,7 +172,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d]": {},
     },
     ".radioGroup-success-solid:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-success-outline": {
       "@apply bg-[#16a34a33] border border-[#16a34a]": {},
@@ -181,7 +181,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d44] border border-[#15803d]": {},
     },
     ".radioGroup-success-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-success-outline-dashed": {
@@ -191,7 +191,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d44] border-dashed border-[#15803d]": {},
     },
     ".radioGroup-success-outline-dashed:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border-dashed border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border-dashed border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-success-no-outline": {
@@ -201,7 +201,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d44] border-transparent": {},
     },
     ".radioGroup-success-no-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-success-glowing": {
@@ -213,7 +213,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-success-glowing:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] shadow-[0_0_8px_rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] shadow-[0_0_8px_rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-warning-solid": {
@@ -223,7 +223,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b45309]": {},
     },
     ".radioGroup-warning-solid:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-warning-outline": {
       "@apply bg-[#d9770633] border border-[#d97706]": {},
@@ -232,7 +232,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530944] border border-[#b45309]": {},
     },
     ".radioGroup-warning-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-warning-outline-dashed": {
@@ -242,7 +242,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530944] border-dashed border-[#b45309]": {},
     },
     ".radioGroup-warning-outline-dashed:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border-dashed border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border-dashed border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-warning-no-outline": {
@@ -252,7 +252,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530944] border-transparent": {},
     },
     ".radioGroup-warning-no-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-warning-glowing": {
@@ -264,7 +264,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-warning-glowing:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] shadow-[0_0_8px_rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] shadow-[0_0_8px_rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-error-solid": {
@@ -274,7 +274,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c]": {},
     },
     ".radioGroup-error-solid:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".radioGroup-error-outline": {
       "@apply bg-[#dc262633] border border-[#dc2626]": {},
@@ -283,7 +283,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c44] border border-[#b91c1c]": {},
     },
     ".radioGroup-error-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-error-outline-dashed": {
@@ -293,7 +293,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c44] border-dashed border-[#b91c1c]": {},
     },
     ".radioGroup-error-outline-dashed:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border-dashed border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border-dashed border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-error-no-outline": {
@@ -303,7 +303,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c44] border-transparent": {},
     },
     ".radioGroup-error-no-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".radioGroup-error-glowing": {
@@ -315,7 +315,7 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".radioGroup-error-glowing:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] shadow-[0_0_8px_rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] shadow-[0_0_8px_rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
   };

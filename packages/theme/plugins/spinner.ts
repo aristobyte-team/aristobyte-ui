@@ -85,7 +85,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-default-default:disabled": {
-      "@apply border-[3px] border-[rgba(31, 41, 55, 0.5)] border-t-[rgba(31, 41, 55, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(31,41,55,0.5)] border-t-[rgba(31,41,55,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-default-duo": {
@@ -97,7 +97,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-default-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(31, 41, 55, 0.5)] border-b-[rgba(31, 41, 55, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(31,41,55,0.5)] border-b-[rgba(31,41,55,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-default-gradient": {
@@ -109,7 +109,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-default-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(31, 41, 55, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(31,41,55,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-default-pulse": {
@@ -119,7 +119,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#111827] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-default-pulse:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(31,41,55,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-default-pulse-duo": {
@@ -143,7 +143,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-primary-default:disabled": {
-      "@apply border-[3px] border-[rgba(37, 99, 235, 0.5)] border-t-[rgba(37, 99, 235, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(37,99,235,0.5)] border-t-[rgba(37,99,235,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-primary-duo": {
@@ -155,7 +155,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-primary-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(37, 99, 235, 0.5)] border-b-[rgba(37, 99, 235, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(37,99,235,0.5)] border-b-[rgba(37,99,235,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-primary-gradient": {
@@ -167,7 +167,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-primary-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(37, 99, 235, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(37,99,235,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-primary-pulse": {
@@ -177,7 +177,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#1d4ed8] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-primary-pulse:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(37,99,235,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-primary-pulse-duo": {
@@ -201,7 +201,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-secondary-default:disabled": {
-      "@apply border-[3px] border-[rgba(79, 70, 229, 0.5)] border-t-[rgba(79, 70, 229, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(79,70,229,0.5)] border-t-[rgba(79,70,229,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-secondary-duo": {
@@ -213,7 +213,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-secondary-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(79, 70, 229, 0.5)] border-b-[rgba(79, 70, 229, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(79,70,229,0.5)] border-b-[rgba(79,70,229,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-secondary-gradient": {
@@ -225,7 +225,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-secondary-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(79, 70, 229, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(79,70,229,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-secondary-pulse": {
@@ -235,7 +235,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#4338ca] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-secondary-pulse:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(79,70,229,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-secondary-pulse-duo": {
@@ -259,7 +259,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-success-default:disabled": {
-      "@apply border-[3px] border-[rgba(22, 163, 74, 0.5)] border-t-[rgba(22, 163, 74, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(22,163,74,0.5)] border-t-[rgba(22,163,74,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-success-duo": {
@@ -271,7 +271,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-success-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(22, 163, 74, 0.5)] border-b-[rgba(22, 163, 74, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(22,163,74,0.5)] border-b-[rgba(22,163,74,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-success-gradient": {
@@ -283,7 +283,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-success-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(22, 163, 74, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(22,163,74,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-success-pulse": {
@@ -293,7 +293,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#15803d] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-success-pulse:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(22,163,74,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-success-pulse-duo": {
@@ -317,7 +317,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-warning-default:disabled": {
-      "@apply border-[3px] border-[rgba(217, 119, 6, 0.5)] border-t-[rgba(217, 119, 6, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(217,119,6,0.5)] border-t-[rgba(217,119,6,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-warning-duo": {
@@ -329,7 +329,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-warning-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(217, 119, 6, 0.5)] border-b-[rgba(217, 119, 6, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(217,119,6,0.5)] border-b-[rgba(217,119,6,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-warning-gradient": {
@@ -341,7 +341,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-warning-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(217, 119, 6, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(217,119,6,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-warning-pulse": {
@@ -351,7 +351,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#b45309] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-warning-pulse:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(217,119,6,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-warning-pulse-duo": {
@@ -375,7 +375,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-error-default:disabled": {
-      "@apply border-[3px] border-[rgba(220, 38, 38, 0.5)] border-t-[rgba(220, 38, 38, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-[rgba(220,38,38,0.5)] border-t-[rgba(220,38,38,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-error-duo": {
@@ -387,7 +387,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-error-duo:disabled": {
-      "@apply border-[3px] border-transparent border-t-[rgba(220, 38, 38, 0.5)] border-b-[rgba(220, 38, 38, 0.5)] rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-transparent border-t-[rgba(220,38,38,0.5)] border-b-[rgba(220,38,38,0.5)] rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-error-gradient": {
@@ -399,7 +399,7 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-error-gradient:disabled": {
-      "@apply border-[3px] border-t-[rgba(220, 38, 38, 0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
+      "@apply border-[3px] border-t-[rgba(220,38,38,0.5)] border-r-[3px] border-transparent rounded-full opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-error-pulse": {
@@ -409,7 +409,7 @@ export const spinner: PluginType = plugin(function ({
       "@apply bg-[#b91c1c] rounded-full animate-pulse w-full h-full": {},
     },
     ".spinner-error-pulse:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
+      "@apply bg-[rgba(220,38,38,0.5)] rounded-full opacity-50 cursor-not-allowed w-full h-full":
         {},
     },
     ".spinner-error-pulse-duo": {

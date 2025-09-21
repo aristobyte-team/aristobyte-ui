@@ -50,7 +50,6 @@
     "build": "tsup",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "generate:variants": "ts-node -P tsconfig.scripts.json scripts/generateVariants.ts",
     "remove:variants": "rm -rf plugins/*.generated.ts",
     "check-types": "tsc --noEmit"
   },

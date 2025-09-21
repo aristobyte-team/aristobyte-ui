@@ -45,7 +45,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f293744] border border-[#1f2937] text-[#1f2937]": {},
     },
     ".label-default-solid:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-default-outline": {
@@ -55,7 +55,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f293711] border border-[#1f2937] text-[#1f2937]": {},
     },
     ".label-default-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-default-outline-dashed": {
@@ -67,7 +67,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-default-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-default-no-outline": {
@@ -77,7 +77,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1f293744] text-[#1f2937]": {},
     },
     ".label-default-no-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-default-glowing": {
@@ -87,7 +87,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182744] shadow-[0_0_8px_#11182780] text-[#111827]": {},
     },
     ".label-default-glowing:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] shadow-[0_0_6px_rgba(31, 41, 55, 0.5)] text-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] shadow-[0_0_6px_rgba(31,41,55,0.5)] text-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-primary-solid": {
@@ -97,7 +97,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb44] border border-[#2563eb] text-[#2563eb]": {},
     },
     ".label-primary-solid:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-primary-outline": {
@@ -107,7 +107,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb11] border border-[#2563eb] text-[#2563eb]": {},
     },
     ".label-primary-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-primary-outline-dashed": {
@@ -119,7 +119,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-primary-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-primary-no-outline": {
@@ -129,7 +129,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#2563eb44] text-[#2563eb]": {},
     },
     ".label-primary-no-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-primary-glowing": {
@@ -139,7 +139,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed844] shadow-[0_0_8px_#1d4ed880] text-[#1d4ed8]": {},
     },
     ".label-primary-glowing:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] shadow-[0_0_6px_rgba(37, 99, 235, 0.5)] text-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] shadow-[0_0_6px_rgba(37,99,235,0.5)] text-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-secondary-solid": {
@@ -149,7 +149,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e544] border border-[#4f46e5] text-[#4f46e5]": {},
     },
     ".label-secondary-solid:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-secondary-outline": {
@@ -159,7 +159,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e511] border border-[#4f46e5] text-[#4f46e5]": {},
     },
     ".label-secondary-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-secondary-outline-dashed": {
@@ -171,7 +171,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-secondary-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-secondary-no-outline": {
@@ -181,7 +181,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4f46e544] text-[#4f46e5]": {},
     },
     ".label-secondary-no-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-secondary-glowing": {
@@ -191,7 +191,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca44] shadow-[0_0_8px_#4338ca80] text-[#4338ca]": {},
     },
     ".label-secondary-glowing:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] shadow-[0_0_6px_rgba(79, 70, 229, 0.5)] text-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] shadow-[0_0_6px_rgba(79,70,229,0.5)] text-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-success-solid": {
@@ -201,7 +201,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a44] border border-[#16a34a] text-[#16a34a]": {},
     },
     ".label-success-solid:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-success-outline": {
@@ -211,7 +211,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a11] border border-[#16a34a] text-[#16a34a]": {},
     },
     ".label-success-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-success-outline-dashed": {
@@ -223,7 +223,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-success-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-success-no-outline": {
@@ -233,7 +233,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#16a34a44] text-[#16a34a]": {},
     },
     ".label-success-no-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-success-glowing": {
@@ -243,7 +243,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d44] shadow-[0_0_8px_#15803d80] text-[#15803d]": {},
     },
     ".label-success-glowing:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] shadow-[0_0_6px_rgba(22, 163, 74, 0.5)] text-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] shadow-[0_0_6px_rgba(22,163,74,0.5)] text-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-warning-solid": {
@@ -253,7 +253,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d9770644] border border-[#d97706] text-[#d97706]": {},
     },
     ".label-warning-solid:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-warning-outline": {
@@ -263,7 +263,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d9770611] border border-[#d97706] text-[#d97706]": {},
     },
     ".label-warning-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-warning-outline-dashed": {
@@ -275,7 +275,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-warning-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-warning-no-outline": {
@@ -285,7 +285,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#d9770644] text-[#d97706]": {},
     },
     ".label-warning-no-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-warning-glowing": {
@@ -295,7 +295,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530944] shadow-[0_0_8px_#b4530980] text-[#b45309]": {},
     },
     ".label-warning-glowing:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] shadow-[0_0_6px_rgba(217, 119, 6, 0.5)] text-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] shadow-[0_0_6px_rgba(217,119,6,0.5)] text-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-error-solid": {
@@ -305,7 +305,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc262644] border border-[#dc2626] text-[#dc2626]": {},
     },
     ".label-error-solid:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-error-outline": {
@@ -315,7 +315,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc262611] border border-[#dc2626] text-[#dc2626]": {},
     },
     ".label-error-outline:disabled": {
-      "@apply bg-transparent border border-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-error-outline-dashed": {
@@ -327,7 +327,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".label-error-outline-dashed:disabled": {
-      "@apply bg-transparent border border-dashed border-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-transparent border border-dashed border-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-error-no-outline": {
@@ -337,7 +337,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#dc262644] text-[#dc2626]": {},
     },
     ".label-error-no-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".label-error-glowing": {
@@ -347,7 +347,7 @@ export const label: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c44] shadow-[0_0_8px_#b91c1c80] text-[#b91c1c]": {},
     },
     ".label-error-glowing:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] shadow-[0_0_6px_rgba(220, 38, 38, 0.5)] text-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] shadow-[0_0_6px_rgba(220,38,38,0.5)] text-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
   };

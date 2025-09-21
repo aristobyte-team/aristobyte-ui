@@ -34,11 +34,11 @@ export const ButtonGroup: React.FC<IButtonGroup> = ({
   style = {},
 }) => {
   const groupClasses = clsx(
-    "btn-group",
-    `btn-group-${align}`,
-    `btn-group-variant-${variant}`,
-    `btn-group-radius-${radius}`,
-    `btn-group-size-${size}`,
+    "button-group",
+    `button-group-${align}`,
+    `button-group-variant-${variant}`,
+    `button-group-radius-${radius}`,
+    `button-group-size-${size}`,
     className
   );
 

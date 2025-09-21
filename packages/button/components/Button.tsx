@@ -74,12 +74,12 @@ export const Button: React.FC<IButton> = ({
   };
 
   const buttonClasses = clsx(
-    "btn",
-    transparent && "btn-transparent",
-    `btn-${variant}-${appearance}`,
-    `btn-${size}`,
-    `btn-radius-${radius}`,
-    isLoading && "btn-loading",
+    "button",
+    transparent && "button-transparent",
+    `button-${variant}-${appearance}`,
+    `button-${size}`,
+    `button-radius-${radius}`,
+    isLoading && "button-loading",
     className
   );
 
@@ -96,8 +96,8 @@ export const Button: React.FC<IButton> = ({
       {icon && (
         <span
           className={clsx(
-            "btn-icon",
-            icon.align === "right" && "btn-icon-right"
+            "button-icon",
+            icon.align === "right" && "button-icon-right"
           )}
         >
           {icon.component({ color: icon.color, size: icon.size })}

@@ -21,28 +21,28 @@ export const colors = {
 
   // === Black Transparent Scale === //
   "black-transparent": {
-    100: "rgba(0, 0, 0, 0.1)",
-    200: "rgba(0, 0, 0, 0.2)",
-    300: "rgba(0, 0, 0, 0.3)",
-    400: "rgba(0, 0, 0, 0.4)",
-    500: "rgba(0, 0, 0, 0.5)",
-    600: "rgba(0, 0, 0, 0.6)",
-    700: "rgba(0, 0, 0, 0.7)",
-    800: "rgba(0, 0, 0, 0.8)",
-    900: "rgba(0, 0, 0, 0.9)",
+    100: "rgba(0,0,0,0.1)",
+    200: "rgba(0,0,0,0.2)",
+    300: "rgba(0,0,0,0.3)",
+    400: "rgba(0,0,0,0.4)",
+    500: "rgba(0,0,0,0.5)",
+    600: "rgba(0,0,0,0.6)",
+    700: "rgba(0,0,0,0.7)",
+    800: "rgba(0,0,0,0.8)",
+    900: "rgba(0,0,0,0.9)",
   },
 
   // === White Transparent Scale === //
   "white-transparent": {
-    100: "rgba(255, 255, 255, 0.1)",
-    200: "rgba(255, 255, 255, 0.2)",
-    300: "rgba(255, 255, 255, 0.3)",
-    400: "rgba(255, 255, 255, 0.4)",
-    500: "rgba(255, 255, 255, 0.5)",
-    600: "rgba(255, 255, 255, 0.6)",
-    700: "rgba(255, 255, 255, 0.7)",
-    800: "rgba(255, 255, 255, 0.8)",
-    900: "rgba(255, 255, 255, 0.9)",
+    100: "rgba(255,255,255,0.1)",
+    200: "rgba(255,255,255,0.2)",
+    300: "rgba(255,255,255,0.3)",
+    400: "rgba(255,255,255,0.4)",
+    500: "rgba(255,255,255,0.5)",
+    600: "rgba(255,255,255,0.6)",
+    700: "rgba(255,255,255,0.7)",
+    800: "rgba(255,255,255,0.8)",
+    900: "rgba(255,255,255,0.9)",
   },
 
   // === Neutral Scale (Grey) === //
@@ -126,32 +126,32 @@ export const colors = {
     default: {
       default: "#1f2937", // grey-800
       hover: "#111827", // grey-900
-      disabled: "rgba(31, 41, 55, 0.5)", // grey-800 @ 0.5
+      disabled: "rgba(31,41,55,0.5)", // grey-800 @ 0.5
     },
     primary: {
       default: "#2563eb", // blue-600
       hover: "#1d4ed8", // blue-700
-      disabled: "rgba(37, 99, 235, 0.5)",
+      disabled: "rgba(37,99,235,0.5)",
     },
     secondary: {
       default: "#4f46e5", // indigo-600
       hover: "#4338ca", // indigo-700
-      disabled: "rgba(79, 70, 229, 0.5)",
+      disabled: "rgba(79,70,229,0.5)",
     },
     error: {
       default: "#dc2626", // red-600
       hover: "#b91c1c", // red-700
-      disabled: "rgba(220, 38, 38, 0.5)",
+      disabled: "rgba(220,38,38,0.5)",
     },
     success: {
       default: "#16a34a", // green-600
       hover: "#15803d", // green-700
-      disabled: "rgba(22, 163, 74, 0.5)",
+      disabled: "rgba(22,163,74,0.5)",
     },
     warning: {
       default: "#d97706", // amber-600
       hover: "#b45309", // amber-700
-      disabled: "rgba(217, 119, 6, 0.5)",
+      disabled: "rgba(217,119,6,0.5)",
     },
   },
 

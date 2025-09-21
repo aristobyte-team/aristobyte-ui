@@ -70,7 +70,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#111827]": {},
     },
     ".switch-default-solid:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-default-outline": {
       "@apply bg-[#1f293733] border border-[#1f2937]": {},
@@ -79,7 +79,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182733] border border-[#111827]": {},
     },
     ".switch-default-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-default-outline-dashed": {
@@ -89,7 +89,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182733] border border-dashed border-[#111827]": {},
     },
     ".switch-default-outline-dashed:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-dashed border-[rgba(31, 41, 55, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-dashed border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-default-no-outline": {
@@ -99,7 +99,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#11182733] border border-transparent": {},
     },
     ".switch-default-no-outline:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-default-glowing": {
@@ -111,7 +111,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-default-glowing:disabled": {
-      "@apply bg-[rgba(31, 41, 55, 0.5)] border border-[rgba(31, 41, 55, 0.5)] shadow-[0_0_8px_rgba(31, 41, 55, 0.5)80,0_0_16px_rgba(31, 41, 55, 0.5)66,0_0_24px_rgba(31, 41, 55, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] shadow-[0_0_8px_#1f293780,0_0_16px_#1f293766,0_0_24px_#1f29374d] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-primary-solid": {
@@ -121,7 +121,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed8]": {},
     },
     ".switch-primary-solid:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-primary-outline": {
       "@apply bg-[#2563eb33] border border-[#2563eb]": {},
@@ -130,7 +130,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed833] border border-[#1d4ed8]": {},
     },
     ".switch-primary-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-primary-outline-dashed": {
@@ -140,7 +140,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed833] border border-dashed border-[#1d4ed8]": {},
     },
     ".switch-primary-outline-dashed:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-dashed border-[rgba(37, 99, 235, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-dashed border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-primary-no-outline": {
@@ -150,7 +150,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#1d4ed833] border border-transparent": {},
     },
     ".switch-primary-no-outline:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-primary-glowing": {
@@ -162,7 +162,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-primary-glowing:disabled": {
-      "@apply bg-[rgba(37, 99, 235, 0.5)] border border-[rgba(37, 99, 235, 0.5)] shadow-[0_0_8px_rgba(37, 99, 235, 0.5)80,0_0_16px_rgba(37, 99, 235, 0.5)66,0_0_24px_rgba(37, 99, 235, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] shadow-[0_0_8px_#2563eb80,0_0_16px_#2563eb66,0_0_24px_#2563eb4d] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-secondary-solid": {
@@ -172,7 +172,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca]": {},
     },
     ".switch-secondary-solid:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-secondary-outline": {
       "@apply bg-[#4f46e533] border border-[#4f46e5]": {},
@@ -181,7 +181,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca33] border border-[#4338ca]": {},
     },
     ".switch-secondary-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-secondary-outline-dashed": {
@@ -191,7 +191,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca33] border border-dashed border-[#4338ca]": {},
     },
     ".switch-secondary-outline-dashed:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-dashed border-[rgba(79, 70, 229, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-dashed border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-secondary-no-outline": {
@@ -201,7 +201,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#4338ca33] border border-transparent": {},
     },
     ".switch-secondary-no-outline:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-secondary-glowing": {
@@ -213,7 +213,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-secondary-glowing:disabled": {
-      "@apply bg-[rgba(79, 70, 229, 0.5)] border border-[rgba(79, 70, 229, 0.5)] shadow-[0_0_8px_rgba(79, 70, 229, 0.5)80,0_0_16px_rgba(79, 70, 229, 0.5)66,0_0_24px_rgba(79, 70, 229, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] shadow-[0_0_8px_#4f46e580,0_0_16px_#4f46e566,0_0_24px_#4f46e54d] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-success-solid": {
@@ -223,7 +223,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d]": {},
     },
     ".switch-success-solid:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-success-outline": {
       "@apply bg-[#16a34a33] border border-[#16a34a]": {},
@@ -232,7 +232,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d33] border border-[#15803d]": {},
     },
     ".switch-success-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-success-outline-dashed": {
@@ -242,7 +242,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d33] border border-dashed border-[#15803d]": {},
     },
     ".switch-success-outline-dashed:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-dashed border-[rgba(22, 163, 74, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-dashed border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-success-no-outline": {
@@ -252,7 +252,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#15803d33] border border-transparent": {},
     },
     ".switch-success-no-outline:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-success-glowing": {
@@ -264,7 +264,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-success-glowing:disabled": {
-      "@apply bg-[rgba(22, 163, 74, 0.5)] border border-[rgba(22, 163, 74, 0.5)] shadow-[0_0_8px_rgba(22, 163, 74, 0.5)80,0_0_16px_rgba(22, 163, 74, 0.5)66,0_0_24px_rgba(22, 163, 74, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] shadow-[0_0_8px_#16a34a80,0_0_16px_#16a34a66,0_0_24px_#16a34a4d] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-warning-solid": {
@@ -274,7 +274,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b45309]": {},
     },
     ".switch-warning-solid:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-warning-outline": {
       "@apply bg-[#d9770633] border border-[#d97706]": {},
@@ -283,7 +283,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530933] border border-[#b45309]": {},
     },
     ".switch-warning-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-warning-outline-dashed": {
@@ -293,7 +293,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530933] border border-dashed border-[#b45309]": {},
     },
     ".switch-warning-outline-dashed:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-dashed border-[rgba(217, 119, 6, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-dashed border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-warning-no-outline": {
@@ -303,7 +303,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b4530933] border border-transparent": {},
     },
     ".switch-warning-no-outline:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-warning-glowing": {
@@ -315,7 +315,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-warning-glowing:disabled": {
-      "@apply bg-[rgba(217, 119, 6, 0.5)] border border-[rgba(217, 119, 6, 0.5)] shadow-[0_0_8px_rgba(217, 119, 6, 0.5)80,0_0_16px_rgba(217, 119, 6, 0.5)66,0_0_24px_rgba(217, 119, 6, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] shadow-[0_0_8px_#d9770680,0_0_16px_#d9770666,0_0_24px_#d977064d] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-error-solid": {
@@ -325,7 +325,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c]": {},
     },
     ".switch-error-solid:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed": {},
+      "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
     ".switch-error-outline": {
       "@apply bg-[#dc262633] border border-[#dc2626]": {},
@@ -334,7 +334,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c33] border border-[#b91c1c]": {},
     },
     ".switch-error-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-error-outline-dashed": {
@@ -344,7 +344,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c33] border border-dashed border-[#b91c1c]": {},
     },
     ".switch-error-outline-dashed:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-dashed border-[rgba(220, 38, 38, 0.5)] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-dashed border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-error-no-outline": {
@@ -354,7 +354,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
       "@apply bg-[#b91c1c33] border border-transparent": {},
     },
     ".switch-error-no-outline:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-transparent opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-transparent opacity-50 cursor-not-allowed":
         {},
     },
     ".switch-error-glowing": {
@@ -366,7 +366,7 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
         {},
     },
     ".switch-error-glowing:disabled": {
-      "@apply bg-[rgba(220, 38, 38, 0.5)] border border-[rgba(220, 38, 38, 0.5)] shadow-[0_0_8px_rgba(220, 38, 38, 0.5)80,0_0_16px_rgba(220, 38, 38, 0.5)66,0_0_24px_rgba(220, 38, 38, 0.5)4d] opacity-50 cursor-not-allowed":
+      "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] shadow-[0_0_8px_#dc262680,0_0_16px_#dc262666,0_0_24px_#dc26264d] opacity-50 cursor-not-allowed":
         {},
     },
   };
