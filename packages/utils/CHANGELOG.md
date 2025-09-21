@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.76
+
+### Patch Changes
+
+- fix: rename btn to button in theme
+
 ## 1.0.75
 
 ### Patch Changes

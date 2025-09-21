@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.76
+
+### Patch Changes
+
+- fix: rename btn to button in theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.76
+  - @aristobyte-ui/button@1.0.76
+  - @aristobyte-ui/dropdown@1.0.76
+  - @aristobyte-ui/message-box@1.0.76
+  - @aristobyte-ui/presets@1.0.76
+  - @aristobyte-ui/radio@1.0.76
+  - @aristobyte-ui/spinner@1.0.76
+  - @aristobyte-ui/switch@1.0.76
+  - @aristobyte-ui/utils@1.0.76
+
 ## 1.0.75
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.76
+
+### Patch Changes
+
+- fix: rename btn to button in theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.76
+  - @aristobyte-ui/utils@1.0.76
+
 ## 1.0.75
 
 ### Patch Changes
