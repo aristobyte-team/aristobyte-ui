@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.73
+
+### Patch Changes
+
+- feat: place ts-ignore for tailwindcss import but switch to node moduleresolution
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.73
+  - @aristobyte-ui/typescript-config@1.0.73
+
 ## 1.0.72
 
 ### Patch Changes

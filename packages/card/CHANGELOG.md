@@ -1,5 +1,15 @@
 # @aristobyte-ui/anchor
 
+## 1.0.73
+
+### Patch Changes
+
+- feat: place ts-ignore for tailwindcss import but switch to node moduleresolution
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@1.0.73
+  - @aristobyte-ui/utils@1.0.73
+
 ## 1.0.72
 
 ### Patch Changes

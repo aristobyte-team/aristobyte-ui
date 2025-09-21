@@ -1,5 +1,15 @@
 # @aristobyte-ui/button
 
+## 1.0.73
+
+### Patch Changes
+
+- feat: place ts-ignore for tailwindcss import but switch to node moduleresolution
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.73
+  - @aristobyte-ui/utils@1.0.73
+
 ## 1.0.72
 
 ### Patch Changes

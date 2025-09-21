@@ -1,9 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import plugin from "tailwindcss/plugin";
 import { colors as rootColors } from "../extend";
-
-export type CssInJs = {
-  [key: string]: string | string[] | CssInJs | CssInJs[];
-};
 
 export type AlignmentsType = {
   horizontal: string;

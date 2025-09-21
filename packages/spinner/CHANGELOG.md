@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 1.0.73
+
+### Patch Changes
+
+- feat: place ts-ignore for tailwindcss import but switch to node moduleresolution
+
 ## 1.0.72
 
 ### Patch Changes

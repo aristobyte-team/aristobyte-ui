@@ -1,12 +1,13 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
-  "compilerOptions": {
-    "baseUrl": "packages/theme",
-    "moduleResolution": "bundler",
-    "declaration": false,
-    "declarationMap": false,
-    "declarationDir": null
-  },
-  "include": ["plugins", "extend", "utilities", "index.ts"],
+  "compilerOptions": { "baseUrl": "packages/theme" },
+  "include": [
+    "plugins",
+    "extend",
+    "utilities",
+    "index.ts",
+    "variants-and-appearances/getAppearancesMap.ts",
+    "variants"
+  ],
   "exclude": ["node_modules", "dist"]
 }
