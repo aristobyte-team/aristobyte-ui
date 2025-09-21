@@ -1,5 +1,11 @@
 # @aristobyte-ui/switch
 
+## 1.0.75
+
+### Patch Changes
+
+- feat: rename btn classnames to button and fix ui theme inline style bugs
+
 ## 1.0.74
 
 ### Patch Changes

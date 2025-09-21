@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.75
+
+### Patch Changes
+
+- feat: rename btn classnames to button and fix ui theme inline style bugs
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.75
+  - @aristobyte-ui/typescript-config@1.0.75
+
 ## 1.0.74
 
 ### Patch Changes

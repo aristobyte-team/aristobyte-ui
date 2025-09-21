@@ -1,5 +1,15 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.75
+
+### Patch Changes
+
+- feat: rename btn classnames to button and fix ui theme inline style bugs
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.75
+  - @aristobyte-ui/utils@1.0.75
+
 ## 1.0.74
 
 ### Patch Changes
