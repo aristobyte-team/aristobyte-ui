@@ -6,32 +6,32 @@ import type { PluginType } from "./types";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export const button: PluginType = plugin(function ({ addComponents }) {
-  const btnBase = {
-    ".btn": {
+  const buttonBase = {
+    ".button": {
       "@apply relative flex items-center justify-center font-medium gap-2.5 transition duration-200 ease-in-out cursor-pointer select-none overflow-hidden text-center":
         {},
       "@apply active:scale-95 disabled:cursor-not-allowed disabled:opacity-100":
         {},
     },
-    ".btn-transparent": {
+    ".button-transparent": {
       "@apply bg-transparent": {},
     },
   };
 
   const sizeMap = {
-    ".btn-xsm": { "@apply text-xs leading-4 px-2 py-1 min-h-[28px]": {} },
-    ".btn-sm": { "@apply text-sm leading-5 px-3 py-1.5 min-h-[32px]": {} },
-    ".btn-md": { "@apply text-base leading-6 px-4 py-2 min-h-[40px]": {} },
-    ".btn-lg": { "@apply text-lg leading-7 px-5 py-2.5 min-h-[44px]": {} },
-    ".btn-xlg": { "@apply text-xl leading-7 px-6 py-3 min-h-[48px]": {} },
+    ".button-xsm": { "@apply text-xs leading-4 px-2 py-1 min-h-[28px]": {} },
+    ".button-sm": { "@apply text-sm leading-5 px-3 py-1.5 min-h-[32px]": {} },
+    ".button-md": { "@apply text-base leading-6 px-4 py-2 min-h-[40px]": {} },
+    ".button-lg": { "@apply text-lg leading-7 px-5 py-2.5 min-h-[44px]": {} },
+    ".button-xlg": { "@apply text-xl leading-7 px-6 py-3 min-h-[48px]": {} },
   };
 
   const radiusMap = {
-    ".btn-radius-none": { "@apply rounded-none": {} },
-    ".btn-radius-sm": { "@apply rounded-sm": {} },
-    ".btn-radius-md": { "@apply rounded-md": {} },
-    ".btn-radius-lg": { "@apply rounded-lg": {} },
-    ".btn-radius-full": { "@apply rounded-full": {} },
+    ".button-radius-none": { "@apply rounded-none": {} },
+    ".button-radius-sm": { "@apply rounded-sm": {} },
+    ".button-radius-md": { "@apply rounded-md": {} },
+    ".button-radius-lg": { "@apply rounded-lg": {} },
+    ".button-radius-full": { "@apply rounded-full": {} },
   };
 
   const variantsMap = {
@@ -320,17 +320,17 @@ export const button: PluginType = plugin(function ({ addComponents }) {
   };
 
   addComponents({
-    ...btnBase,
+    ...buttonBase,
     ...sizeMap,
     ...radiusMap,
     ...variantsMap,
-    ".btn-icon": {
+    ".button-icon": {
       "@apply flex items-center justify-center": {},
     },
-    ".btn-icon-right": {
+    ".button-icon-right": {
       "@apply order-5": {},
     },
-    ".btn-loading": {
+    ".button-loading": {
       "@apply pointer-events-none opacity-80": {},
     },
   });

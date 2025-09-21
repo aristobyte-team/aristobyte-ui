@@ -7,23 +7,23 @@ import type { PluginType } from "./types";
 // @ts-ignore
 export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
   const groupBase = {
-    ".btn-group": {
+    ".button-group": {
       "@apply flex items-center overflow-hidden max-w-max": {},
     },
-    ".btn-group-horizontal": {
+    ".button-group-horizontal": {
       "@apply flex-row": {},
     },
-    ".btn-group-vertical": {
+    ".button-group-vertical": {
       "@apply flex-col": {},
     },
   };
 
   const radiusMap = {
-    ".btn-group-radius-none": { "@apply rounded-none": {} },
-    ".btn-group-radius-sm": { "@apply rounded-sm": {} },
-    ".btn-group-radius-md": { "@apply rounded-md": {} },
-    ".btn-group-radius-lg": { "@apply rounded-lg": {} },
-    ".btn-group-radius-full": { "@apply rounded-full": {} },
+    ".button-group-radius-none": { "@apply rounded-none": {} },
+    ".button-group-radius-sm": { "@apply rounded-sm": {} },
+    ".button-group-radius-md": { "@apply rounded-md": {} },
+    ".button-group-radius-lg": { "@apply rounded-lg": {} },
+    ".button-group-radius-full": { "@apply rounded-full": {} },
   };
 
   const variantsMap = {
@@ -312,19 +312,19 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
   };
 
   const childRules = {
-    ".btn-group .btn": {
+    ".button-group .button": {
       "@apply rounded-none": {},
     },
-    ".btn-group-horizontal .btn:first-child": {
+    ".button-group-horizontal .button:first-child": {
       "@apply rounded-l-md": {},
     },
-    ".btn-group-horizontal .btn:last-child": {
+    ".button-group-horizontal .button:last-child": {
       "@apply rounded-r-md": {},
     },
-    ".btn-group-vertical .btn:first-child": {
+    ".button-group-vertical .button:first-child": {
       "@apply rounded-t-md": {},
     },
-    ".btn-group-vertical .btn:last-child": {
+    ".button-group-vertical .button:last-child": {
       "@apply rounded-b-md": {},
     },
   };

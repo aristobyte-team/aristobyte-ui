@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- feat: rename btn classnames to button and fix ui theme inline style bugs
+- feat: rename button classnames to button and fix ui theme inline style bugs
 
 ## 1.0.74
 
