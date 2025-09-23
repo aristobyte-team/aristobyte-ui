@@ -1,5 +1,7 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.78
+
 ## 1.0.77
 
 ## 1.0.76

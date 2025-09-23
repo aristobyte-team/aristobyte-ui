@@ -1,5 +1,11 @@
 # @aristobyte-ui/theme
 
+## 1.0.78
+
+### Patch Changes
+
+- fix: use tsc build for packages/theme
+
 ## 1.0.77
 
 ### Patch Changes
