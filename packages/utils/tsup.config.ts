@@ -10,5 +10,4 @@ export default defineConfig({
   tsconfig: "tsconfig.json",
   esbuildPlugins: [],
   external: ["react", "react-dom"],
-  banner: { js: '"use client";' },
 });

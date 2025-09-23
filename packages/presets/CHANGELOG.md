@@ -1,5 +1,14 @@
 # @aristobyte-ui/presets
 
+## 1.0.79
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.79
+  - @aristobyte-ui/anchor@1.0.79
+  - @aristobyte-ui/button@1.0.79
+
 ## 1.0.78
 
 ### Patch Changes

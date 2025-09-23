@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.79
+
+### Patch Changes
+
+- fix: remove use-client from utils build
+
 ## 1.0.78
 
 ## 1.0.77

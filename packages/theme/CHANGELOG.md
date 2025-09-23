@@ -1,5 +1,7 @@
 # @aristobyte-ui/theme
 
+## 1.0.79
+
 ## 1.0.78
 
 ### Patch Changes
