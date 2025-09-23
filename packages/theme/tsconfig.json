@@ -1,13 +1,17 @@
 {
   "extends": "@aristobyte-ui/typescript-config/package",
-  "compilerOptions": { "baseUrl": "packages/theme" },
-  "include": [
-    "plugins",
-    "extend",
-    "utilities",
-    "index.ts",
-    "variants-and-appearances/getAppearancesMap.ts",
-    "variants"
-  ],
+  "compilerOptions": {
+    "baseUrl": "packages/theme",
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "module": "ESNext",
+    "target": "ES2019",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["index.ts", "plugins/**/*.ts", "extend/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

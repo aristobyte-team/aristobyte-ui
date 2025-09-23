@@ -1,13 +1,16 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["index.ts"],
+  entry: ["index.ts", "plugins/**/*.ts", "extend/**/*.ts"],
+  outDir: "dist",
   format: ["cjs", "esm"],
-  target: "es2019",
+  bundle: false,
   sourcemap: true,
+  target: "es2019",
   clean: true,
   dts: true,
-  tsconfig: "tsconfig.json",
+  splitting: false,
   external: ["react", "react-dom", "tailwindcss"],
   banner: { js: '"use client";' },
+  tsconfig: "tsconfig.json",
 });

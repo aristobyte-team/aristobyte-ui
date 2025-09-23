@@ -1,5 +1,7 @@
 # @aristobyte-ui/utils
 
+## 1.0.77
+
 ## 1.0.76
 
 ### Patch Changes

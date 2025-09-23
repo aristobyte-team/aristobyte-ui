@@ -23,6 +23,7 @@ export const button: PluginType = plugin(function ({ addComponents }) {
     ".button-sm": { "@apply text-sm leading-5 px-3 py-1.5 min-h-[32px]": {} },
     ".button-md": { "@apply text-base leading-6 px-4 py-2 min-h-[40px]": {} },
     ".button-lg": { "@apply text-lg leading-7 px-5 py-2.5 min-h-[44px]": {} },
+    // @BUG: something wrong with .button-xlg
     ".button-xlg": { "@apply text-xl leading-7 px-6 py-3 min-h-[48px]": {} },
   };
 

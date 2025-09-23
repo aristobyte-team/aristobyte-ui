@@ -1,5 +1,11 @@
 # @aristobyte-ui/theme
 
+## 1.0.77
+
+### Patch Changes
+
+- fix: change the tsup build of packages/theme
+
 ## 1.0.76
 
 ### Patch Changes

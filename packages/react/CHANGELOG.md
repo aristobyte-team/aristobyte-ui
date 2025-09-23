@@ -1,5 +1,20 @@
 # @aristobyte-ui/react
 
+## 1.0.77
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.77
+  - @aristobyte-ui/button@1.0.77
+  - @aristobyte-ui/dropdown@1.0.77
+  - @aristobyte-ui/message-box@1.0.77
+  - @aristobyte-ui/presets@1.0.77
+  - @aristobyte-ui/radio@1.0.77
+  - @aristobyte-ui/spinner@1.0.77
+  - @aristobyte-ui/switch@1.0.77
+  - @aristobyte-ui/utils@1.0.77
+
 ## 1.0.76
 
 ### Patch Changes
