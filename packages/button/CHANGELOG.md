@@ -1,5 +1,41 @@
 # @aristobyte-ui/button
 
+## 1.0.92
+
+### Patch Changes
+
+- fix: resolve issues with message box
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.92
+  - @aristobyte-ui/utils@1.0.92
+
+## 1.0.91
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.91
+  - @aristobyte-ui/utils@1.0.91
+
+## 1.0.90
+
+### Patch Changes
+
+- fix: create a manual dist folder for theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.90
+  - @aristobyte-ui/utils@1.0.90
+
+## 1.0.89
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.89
+  - @aristobyte-ui/utils@1.0.89
+
 ## 1.0.88
 
 ### Patch Changes

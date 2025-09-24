@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/theme",
   "description": "AristoByte Tailwind CSS theme plugin providing a flexible, extensible design system for rapid UI development and consistent styling across applications.",
-  "version": "1.0.88",
+  "version": "1.0.92",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -37,39 +37,33 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./plugins/*": "./dist/plugins/*",
-    "./extend/*": "./dist/extend/*"
+    ".": "./dist/index.js",
+    "./plugins/button": "./dist/plugins/button.js",
+    "./plugins/card": "./dist/plugins/card.js",
+    "./plugins/label": "./dist/plugins/label.js",
+    "./plugins/radio": "./dist/plugins/radio.js",
+    "./plugins/radioGroup": "./dist/plugins/radioGroup.js",
+    "./plugins/spinner": "./dist/plugins/spinner.js",
+    "./plugins/switch": "./dist/plugins/switch.js",
+    "./plugins/anchor": "./dist/plugins/anchor.js",
+    "./plugins/buttonGroup": "./dist/plugins/buttonGroup.js",
+    "./extend/animations": "./dist/extend/animations.js",
+    "./extend/colors": "./dist/extend/colors.js",
+    "./extend/fonts": "./dist/extend/fonts.js",
+    "./extend/shadows": "./dist/extend/shadows.js"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit -p tsconfig.build.json",
-    "build": "yarn typecheck && tsup",
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
-  },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.13"
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.88",
-    "@aristobyte-ui/typescript-config": "^1.0.88",
-    "@turbo/gen": "^2.5.0",
-    "@types/minimatch": "^6.0.0",
-    "@types/node": "^24.3.3",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
+    "@turbo/gen": "^2.5.0"
+  },
+  "dependencies": {
     "eslint": "^9.27.0",
-    "ts-node": "^10.9.2",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "@aristobyte-ui/eslint-config": "^1.0.92"
   }
 }

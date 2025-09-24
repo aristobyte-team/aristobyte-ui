@@ -1,5 +1,21 @@
 # @aristobyte-ui/radio
 
+## 1.0.92
+
+### Patch Changes
+
+- fix: resolve issues with message box
+
+## 1.0.91
+
+## 1.0.90
+
+### Patch Changes
+
+- fix: create a manual dist folder for theme
+
+## 1.0.89
+
 ## 1.0.88
 
 ## 1.0.87
