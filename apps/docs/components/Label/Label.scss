@@ -1,13 +1,11 @@
-@use "../../styles/settings" as *;
-
 .label {
   border-width: 1px;
   border-style: solid;
   border-color: #314158; //@TODO: @COLOR
   background-color: rgba(29, 41, 61, 0.3); //@TODO: @COLOR
   border-radius: 10px;
-  color: $white;
-  font-family: $font-family-sans;
+  color: --var(--white);
+  font-family: --var(--font-family-sans);
   font-size: 14px;
   font-weight: 500;
   padding: 4px 11px;

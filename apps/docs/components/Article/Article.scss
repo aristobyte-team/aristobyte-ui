@@ -1,10 +1,26 @@
-@use "../../styles/settings" as *;
+@layer components {
+  .article::-webkit-scrollbar {
+    width: thin;
+  }
 
-.article {
-  @include scrollbar;
+  .article::-webkit-scrollbar-thumb {
+    background-color: #94a3b84d;
+    border: 3px solid #94a3b84d;
+    cursor: pointer;
+  }
 
-  & {
-    overflow-y: auto;
-    width: 100%;
+  .article::-webkit-scrollbar-thumb:active {
+    background-color: #94a3b878;
+    border: 3px solid #94a3b878;
+  }
+
+  .article::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* Firefox scrollbar support */
+  .article {
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b84d transparent;
   }
 }

@@ -11,6 +11,5 @@ export default defineConfig({
   dts: true,
   splitting: false,
   external: ["react", "react-dom", "tailwindcss"],
-  banner: { js: '"use client";' },
-  tsconfig: "tsconfig.json",
+  tsconfig: "./tsconfig.json",
 });

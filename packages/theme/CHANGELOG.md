@@ -1,5 +1,35 @@
 # @aristobyte-ui/theme
 
+## 1.0.84
+
+### Patch Changes
+
+- fix: add proper entry paths in theme tsup
+
+## 1.0.83
+
+### Patch Changes
+
+- fix: add new entry points in tsup in theme
+
+## 1.0.82
+
+### Patch Changes
+
+- fix: change the build process in theme
+
+## 1.0.81
+
+### Patch Changes
+
+- change the build process
+
+## 1.0.80
+
+### Patch Changes
+
+- fix: update tsconfig of theme
+
 ## 1.0.79
 
 ## 1.0.78

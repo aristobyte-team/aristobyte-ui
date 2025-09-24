@@ -201,27 +201,3 @@ $font-size-button-sm: 0.75rem; // 12px
 
 $cubic-bezier-primary: cubic-bezier(0.55, -0.19, 0.59, 0.95);
 $cubic-bezier-secondary: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-@mixin scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #94a3b84d transparent;
-
-  &::-webkit-scrollbar {
-    width: thin;
-
-    &-thumb {
-      background-color: #94a3b84d;
-      border: 3px solid #94a3b84d;
-      cursor: pointer;
-
-      &:active {
-        background-color: #94a3b878;
-        border: 3px solid #94a3b878;
-      }
-    }
-
-    &-track {
-      background-color: transparent;
-    }
-  }
-}
