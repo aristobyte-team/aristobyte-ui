@@ -1,5 +1,52 @@
 # @aristobyte-ui/react
 
+## 1.0.88
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.88
+  - @aristobyte-ui/button@1.0.88
+  - @aristobyte-ui/dropdown@1.0.88
+  - @aristobyte-ui/message-box@1.0.88
+  - @aristobyte-ui/presets@1.0.88
+  - @aristobyte-ui/radio@1.0.88
+  - @aristobyte-ui/spinner@1.0.88
+  - @aristobyte-ui/switch@1.0.88
+  - @aristobyte-ui/utils@1.0.88
+
+## 1.0.87
+
+### Patch Changes
+
+- fix: resolve issues with tsup
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.87
+  - @aristobyte-ui/dropdown@1.0.87
+  - @aristobyte-ui/presets@1.0.87
+  - @aristobyte-ui/spinner@1.0.87
+  - @aristobyte-ui/anchor@1.0.87
+  - @aristobyte-ui/button@1.0.87
+  - @aristobyte-ui/switch@1.0.87
+  - @aristobyte-ui/radio@1.0.87
+  - @aristobyte-ui/utils@1.0.87
+
+## 1.0.85
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.85
+  - @aristobyte-ui/button@1.0.85
+  - @aristobyte-ui/dropdown@1.0.85
+  - @aristobyte-ui/message-box@1.0.85
+  - @aristobyte-ui/presets@1.0.85
+  - @aristobyte-ui/radio@1.0.85
+  - @aristobyte-ui/spinner@1.0.85
+  - @aristobyte-ui/switch@1.0.85
+  - @aristobyte-ui/utils@1.0.85
+
 ## 1.0.84
 
 ### Patch Changes

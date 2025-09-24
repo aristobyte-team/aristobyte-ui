@@ -1,5 +1,23 @@
 # @aristobyte-ui/theme
 
+## 1.0.88
+
+### Patch Changes
+
+- fix: export everything separetly from themes
+
+## 1.0.87
+
+### Patch Changes
+
+- fix: resolve issues with tsup
+
+## 1.0.85
+
+### Patch Changes
+
+- fix: resolve theme exports
+
 ## 1.0.84
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @aristobyte-ui/utils
 
+## 1.0.88
+
+## 1.0.87
+
+### Patch Changes
+
+- fix: resolve issues with tsup
+
+## 1.0.85
+
 ## 1.0.84
 
 ## 1.0.83

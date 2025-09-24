@@ -1,5 +1,28 @@
 # @aristobyte-ui/anchor
 
+## 1.0.88
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.88
+
+## 1.0.87
+
+### Patch Changes
+
+- fix: resolve issues with tsup
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.87
+
+## 1.0.85
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.85
+
 ## 1.0.84
 
 ### Patch Changes

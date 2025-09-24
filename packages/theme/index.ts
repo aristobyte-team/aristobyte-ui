@@ -1,6 +1,21 @@
-import extend from "./extend";
-import plugin from "./plugins";
-const aristobyteui = { plugin, extend };
-export * from "./extend";
-export * from "./plugins";
-export { aristobyteui, aristobyteui as default };
+export {
+  transitionTimingFunction,
+  colors,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  boxShadow,
+} from "./extend";
+export {
+  anchor,
+  button,
+  buttonGroup,
+  card,
+  label,
+  messageBox,
+  radio,
+  radioGroup,
+  spinner,
+  switchPlugin,
+} from "./plugins";

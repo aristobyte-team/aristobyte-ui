@@ -6,10 +6,10 @@ export default defineConfig({
   format: ["cjs", "esm"],
   bundle: false,
   sourcemap: true,
-  target: "es2019",
+  target: "es2017",
   clean: true,
   dts: true,
   splitting: false,
   external: ["react", "react-dom", "tailwindcss"],
-  tsconfig: "./tsconfig.json",
+  tsconfig: "./tsconfig.build.json",
 });
