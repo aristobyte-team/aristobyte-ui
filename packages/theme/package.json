@@ -37,33 +37,28 @@
   "publishConfig": {
     "access": "public"
   },
-  "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./plugins/button": "./dist/plugins/button.js",
-    "./plugins/card": "./dist/plugins/card.js",
-    "./plugins/label": "./dist/plugins/label.js",
-    "./plugins/radio": "./dist/plugins/radio.js",
-    "./plugins/radioGroup": "./dist/plugins/radioGroup.js",
-    "./plugins/spinner": "./dist/plugins/spinner.js",
-    "./plugins/switch": "./dist/plugins/switch.js",
-    "./plugins/anchor": "./dist/plugins/anchor.js",
-    "./plugins/buttonGroup": "./dist/plugins/buttonGroup.js",
-    "./extend/animations": "./dist/extend/animations.js",
-    "./extend/colors": "./dist/extend/colors.js",
-    "./extend/fonts": "./dist/extend/fonts.js",
-    "./extend/shadows": "./dist/extend/shadows.js"
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "remove:variants": "rm -rf plugins/*.generated.ts",
+    "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@turbo/gen": "^2.5.0"
   },
   "dependencies": {
+    "@aristobyte-ui/eslint-config": "^1.0.92",
     "eslint": "^9.27.0",
-    "@aristobyte-ui/eslint-config": "^1.0.92"
+    "tsup": "^8.5.0"
   }
 }
