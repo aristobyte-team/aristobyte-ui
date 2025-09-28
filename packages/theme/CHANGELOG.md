@@ -1,5 +1,14 @@
 # @aristobyte-ui/theme
 
+## 1.0.95
+
+### Patch Changes
+
+- fix: add tsup types to theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.95
+
 ## 1.0.93
 
 ### Patch Changes

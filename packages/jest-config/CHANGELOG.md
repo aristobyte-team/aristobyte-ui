@@ -1,5 +1,7 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.95
+
 ## 1.0.93
 
 ### Patch Changes

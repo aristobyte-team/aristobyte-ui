@@ -1,5 +1,13 @@
 # @aristobyte-ui/button
 
+## 1.0.95
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.95
+  - @aristobyte-ui/utils@1.0.95
+
 ## 1.0.93
 
 ### Patch Changes

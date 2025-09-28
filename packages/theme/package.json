@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/theme",
   "description": "AristoByte Tailwind CSS theme plugin providing a flexible, extensible design system for rapid UI development and consistent styling across applications.",
-  "version": "1.0.93",
+  "version": "1.0.95",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -47,7 +47,7 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsup",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "remove:variants": "rm -rf plugins/*.generated.ts",
@@ -57,7 +57,7 @@
     "@turbo/gen": "^2.5.0"
   },
   "dependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.93",
+    "@aristobyte-ui/eslint-config": "^1.0.95",
     "eslint": "^9.27.0",
     "tsup": "^8.5.0"
   }
