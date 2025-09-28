@@ -1,5 +1,23 @@
 # @aristobyte-ui/theme
 
+## 1.0.98
+
+### Patch Changes
+
+- fix: remove temp the spinner
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.98
+
+## 1.0.97
+
+### Patch Changes
+
+- fix: resolve the issue in spinner.ts file in packages/theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.97
+
 ## 1.0.96
 
 ### Patch Changes

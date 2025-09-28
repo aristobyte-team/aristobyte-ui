@@ -1,5 +1,19 @@
 # @aristobyte-ui/message-box
 
+## 1.0.98
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.98
+
+## 1.0.97
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.97
+
 ## 1.0.96
 
 ### Patch Changes

@@ -29,6 +29,6 @@ export default (): PluginType[] => [
   messageBox,
   radio,
   radioGroup,
-  spinner,
+  // spinner,
   switchPlugin,
 ];
