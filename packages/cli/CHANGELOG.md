@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.93
+
+### Patch Changes
+
+- feat: rollback previous theme solution
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.93
+  - @aristobyte-ui/typescript-config@1.0.93
+
 ## 1.0.92
 
 ### Patch Changes

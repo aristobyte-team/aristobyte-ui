@@ -1,5 +1,15 @@
 # @aristobyte-ui/button
 
+## 1.0.93
+
+### Patch Changes
+
+- feat: rollback previous theme solution
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@1.0.93
+  - @aristobyte-ui/utils@1.0.93
+
 ## 1.0.92
 
 ### Patch Changes
