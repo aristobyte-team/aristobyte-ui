@@ -1,5 +1,13 @@
 # @aristobyte-ui/cli
 
+## 1.0.96
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.96
+  - @aristobyte-ui/typescript-config@1.0.96
+
 ## 1.0.95
 
 ### Patch Changes

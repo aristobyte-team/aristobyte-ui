@@ -1,5 +1,14 @@
 # @aristobyte-ui/theme
 
+## 1.0.96
+
+### Patch Changes
+
+- fix: remove typo in theme spinner
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.96
+
 ## 1.0.95
 
 ### Patch Changes

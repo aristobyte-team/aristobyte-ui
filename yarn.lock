@@ -7,20 +7,6 @@
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.4.4.tgz#2856c55443d3d461693f32d2b96fb6ea92e1ffa9"
   integrity sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==
 
-"@aristobyte-ui/eslint-config@^1.0.94":
-  version "1.0.93"
-  dependencies:
-    "@eslint/js" "^9.27.0"
-    "@next/eslint-plugin-next" "^15.3.0"
-    eslint "^9.0.0"
-    eslint-config-prettier "^10.1.1"
-    eslint-plugin-only-warn "^1.1.0"
-    eslint-plugin-react "^7.37.4"
-    eslint-plugin-react-hooks "^5.2.0"
-    eslint-plugin-turbo "^2.5.0"
-    globals "^16.2.0"
-    typescript-eslint "^8.32.0"
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
   version "7.27.1"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.27.1.tgz#200f715e66d52a23b221a9435534a91cc13ad5be"

@@ -123,15 +123,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-default-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-default-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-default-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-primary-default": {
@@ -181,15 +181,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-primary-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-primary-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-primary-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-secondary-default": {
@@ -239,15 +239,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-secondary-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-secondary-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-secondary-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-success-default": {
@@ -297,15 +297,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-success-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-success-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-success-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-warning-default": {
@@ -355,15 +355,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-warning-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-warning-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-warning-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
     ".spinner-error-default": {
@@ -413,15 +413,15 @@ export const spinner: PluginType = plugin(function ({
         {},
     },
     ".spinner-error-pulse-duo": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-error-pulse-duo:hover": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s]":
         {},
     },
     ".spinner-error-pulse-duo:disabled": {
-      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo\n           after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
+      "@apply relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:w-full before:h-full before:rounded-full before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:animate-pulse-duo after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-full after:rounded-full after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:animate-pulse-duo after:animation-delay-[1s] opacity-50 cursor-not-allowed":
         {},
     },
   };
