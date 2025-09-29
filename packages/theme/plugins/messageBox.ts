@@ -1,6 +1,12 @@
-import { colors } from "../extend";
+import {
+  colors,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+} from "../extend";
 
-export function messageBox({ addComponents, theme }: any) {
+export function messageBox({ addComponents }: any) {
   const radiusMap = {
     ".message-box-radius-none": { borderRadius: "0px" },
     ".message-box-radius-sm": { borderRadius: "4px" },
@@ -14,10 +20,10 @@ export function messageBox({ addComponents, theme }: any) {
       display: "flex",
       alignItems: "flex-start",
       padding: "1rem",
-      fontFamily: theme("fontFamily.sans").join(", "),
-      fontSize: theme("fontSize.sm")[0],
-      fontWeight: theme("fontWeight.normal"),
-      lineHeight: theme("lineHeight.normal"),
+      fontFamily: fontFamily.sans.join(", "),
+      fontSize: fontSize["body-sm"],
+      fontWeight: fontWeight.regular,
+      lineHeight: lineHeight.normal,
       color: colors.white,
     },
     ".message-box__content": {

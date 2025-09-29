@@ -19,7 +19,7 @@ export * from "./radio";
 export * from "./radioGroup";
 export * from "./spinner";
 export * from "./switch";
-export default () => [
+export default (): (({ addComponents, addBase }: any) => void)[] => [
   anchor,
   button,
   buttonGroup,
