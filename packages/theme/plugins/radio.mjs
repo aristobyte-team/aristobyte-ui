@@ -1,4 +1,4 @@
-export function radio({ addComponents }: any) {
+export function radio({ addComponents }) {
   const base = {
     ".radio": {
       "@apply relative flex items-center cursor-pointer select-none": {},

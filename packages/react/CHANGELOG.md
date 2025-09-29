@@ -1,5 +1,39 @@
 # @aristobyte-ui/react
 
+## 1.0.102
+
+### Patch Changes
+
+- feat: create a manual build with types for theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/message-box@1.0.102
+  - @aristobyte-ui/dropdown@1.0.102
+  - @aristobyte-ui/presets@1.0.102
+  - @aristobyte-ui/spinner@1.0.102
+  - @aristobyte-ui/anchor@1.0.102
+  - @aristobyte-ui/button@1.0.102
+  - @aristobyte-ui/switch@1.0.102
+  - @aristobyte-ui/radio@1.0.102
+  - @aristobyte-ui/utils@1.0.102
+
+## 1.0.101
+
+### Patch Changes
+
+- fix: resolve error with the message-box and the plugins type
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.101
+  - @aristobyte-ui/button@1.0.101
+  - @aristobyte-ui/dropdown@1.0.101
+  - @aristobyte-ui/message-box@1.0.101
+  - @aristobyte-ui/presets@1.0.101
+  - @aristobyte-ui/radio@1.0.101
+  - @aristobyte-ui/spinner@1.0.101
+  - @aristobyte-ui/switch@1.0.101
+  - @aristobyte-ui/utils@1.0.101
+
 ## 1.0.100
 
 ### Patch Changes

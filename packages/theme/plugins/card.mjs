@@ -1,4 +1,4 @@
-export function card({ addComponents }: any) {
+export function card({ addComponents }) {
   const radiusMap = {
     ".card-radius-none": { "@apply rounded-none": {} },
     ".card-radius-sm": { "@apply rounded-sm": {} },

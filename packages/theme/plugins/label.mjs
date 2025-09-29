@@ -1,4 +1,4 @@
-export function label({ addComponents }: any) {
+export function label({ addComponents }) {
   // Base label styles
   const labelBase = {
     ".label": {

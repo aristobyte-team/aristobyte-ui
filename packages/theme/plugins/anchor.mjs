@@ -1,4 +1,4 @@
-export function anchor({ addComponents }: any) {
+export function anchor({ addComponents }) {
   const base = {
     ".anchor": {
       "@apply inline-flex items-center cursor-pointer font-medium text-sm leading-[1.4285714286] transition-all duration-200 ease-in-out px-4 py-2 relative overflow-hidden":

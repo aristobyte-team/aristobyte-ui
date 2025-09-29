@@ -1,4 +1,4 @@
-export function spinner({ addComponents, addBase }: any) {
+export function spinner({ addComponents, addBase }) {
   addBase({
     "@keyframes rotation": {
       from: { transform: "rotate(0deg)" },

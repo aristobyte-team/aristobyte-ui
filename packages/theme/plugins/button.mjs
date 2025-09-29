@@ -1,4 +1,4 @@
-export function button({ addComponents }: any) {
+export function button({ addComponents }) {
   const buttonBase = {
     ".button": {
       "@apply relative flex items-center justify-center font-medium gap-2.5 transition duration-200 ease-in-out cursor-pointer select-none overflow-hidden text-center":

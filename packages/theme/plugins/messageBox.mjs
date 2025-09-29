@@ -4,9 +4,9 @@ import {
   fontSize,
   fontWeight,
   lineHeight,
-} from "../extend";
+} from "../extend/index.mjs";
 
-export function messageBox({ addComponents }: any) {
+export function messageBox({ addComponents }) {
   const radiusMap = {
     ".message-box-radius-none": { borderRadius: "0px" },
     ".message-box-radius-sm": { borderRadius: "4px" },

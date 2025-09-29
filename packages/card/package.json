@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/card",
   "description": "AristoByteUI Card component: a versatile container for displaying content and UI elements.",
-  "version": "1.0.100",
+  "version": "1.0.102",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -55,14 +55,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@aristobyte-ui/label": "^1.0.100",
-    "@aristobyte-ui/utils": "^1.0.100",
+    "@aristobyte-ui/label": "^1.0.102",
+    "@aristobyte-ui/utils": "^1.0.102",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.100",
-    "@aristobyte-ui/typescript-config": "^1.0.100",
+    "@aristobyte-ui/eslint-config": "^1.0.102",
+    "@aristobyte-ui/typescript-config": "^1.0.102",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

@@ -1,5 +1,23 @@
 # @aristobyte-ui/theme
 
+## 1.0.102
+
+### Patch Changes
+
+- feat: create a manual build with types for theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.102
+
+## 1.0.101
+
+### Patch Changes
+
+- fix: resolve error with the message-box and the plugins type
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.101
+
 ## 1.0.100
 
 ### Patch Changes

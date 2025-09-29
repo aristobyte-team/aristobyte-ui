@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/theme",
   "description": "AristoByte Tailwind CSS theme plugin providing a flexible, extensible design system for rapid UI development and consistent styling across applications.",
-  "version": "1.0.100",
+  "version": "1.0.102",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -32,33 +32,39 @@
     "css-framework"
   ],
   "files": [
-    "dist"
+    "plugins",
+    "extend",
+    "index.mjs"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
+  "type": "module",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "types": "./dist/index.d.ts"
+    },
+    "./plugins": {
+      "import": "./dist/plugins/index.mjs",
+      "types": "./dist/plugins/index.d.ts"
+    },
+    "./extend": {
+      "import": "./dist/extend/index.mjs",
+      "types": "./dist/extend/index.d.ts"
     }
   },
   "scripts": {
-    "build": "tsup",
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "remove:variants": "rm -rf plugins/*.generated.ts",
-    "check-types": "tsc --noEmit"
+    "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@turbo/gen": "^2.5.0"
   },
   "dependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.100",
-    "eslint": "^9.27.0",
-    "tsup": "^8.5.0"
+    "@aristobyte-ui/eslint-config": "^1.0.102",
+    "eslint": "^9.27.0"
   }
 }

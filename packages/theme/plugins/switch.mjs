@@ -1,4 +1,4 @@
-export function switchPlugin({ addComponents }: any) {
+export function switchPlugin({ addComponents }) {
   const baseSwitch = {
     ".switch": {
       "@apply relative inline-flex items-center cursor-pointer select-none": {},

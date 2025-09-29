@@ -1,4 +1,4 @@
-export function radioGroup({ addComponents }: any) {
+export function radioGroup({ addComponents }) {
   const base = {
     ".radio-group": { "@apply flex flex-wrap gap-2": {} },
   };

@@ -1,4 +1,4 @@
-export function buttonGroup({ addComponents }: any) {
+export function buttonGroup({ addComponents }) {
   const groupBase = {
     ".button-group": {
       "@apply flex items-center overflow-hidden max-w-max": {},
