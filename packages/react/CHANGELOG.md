@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.100
+
+### Patch Changes
+
+- feat: export plain plugins from the theme package instead of tailwindcss imported once
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.100
+  - @aristobyte-ui/button@1.0.100
+  - @aristobyte-ui/dropdown@1.0.100
+  - @aristobyte-ui/message-box@1.0.100
+  - @aristobyte-ui/presets@1.0.100
+  - @aristobyte-ui/radio@1.0.100
+  - @aristobyte-ui/spinner@1.0.100
+  - @aristobyte-ui/switch@1.0.100
+  - @aristobyte-ui/utils@1.0.100
+
 ## 1.0.99
 
 ### Patch Changes
