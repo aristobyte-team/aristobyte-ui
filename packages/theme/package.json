@@ -40,20 +40,20 @@
     "access": "public"
   },
   "type": "module",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "module": "index.mjs",
+  "types": "index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./index.mjs",
+      "types": "./index.d.ts"
     },
     "./plugins": {
-      "import": "./dist/plugins/index.mjs",
-      "types": "./dist/plugins/index.d.ts"
+      "import": "./plugins/index.mjs",
+      "types": "./plugins/index.d.ts"
     },
     "./extend": {
-      "import": "./dist/extend/index.mjs",
-      "types": "./dist/extend/index.d.ts"
+      "import": "./extend/index.mjs",
+      "types": "./extend/index.d.ts"
     }
   },
   "scripts": {
