@@ -1,5 +1,23 @@
 # @aristobyte-ui/spinner
 
+## 1.0.105
+
+### Patch Changes
+
+- fix: include index.d.ts in theme files
+
+## 1.0.104
+
+### Patch Changes
+
+- fix: remove types from .mjs files in theme
+
+## 1.0.103
+
+### Patch Changes
+
+- fix: resolve issues with exports in theme
+
 ## 1.0.102
 
 ### Patch Changes

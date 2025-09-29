@@ -22,7 +22,7 @@ export function spinner({ addComponents, addBase }) {
     ".spinner-xlg": { width: "3rem", height: "3rem" },
   };
 
-  const typeMap: Record<string, unknown> = {
+  const typeMap = {
     ".spinner-default": {
       animation: "rotation 0.8s ease infinite",
       borderRadius: "50%",

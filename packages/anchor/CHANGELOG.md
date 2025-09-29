@@ -1,5 +1,32 @@
 # @aristobyte-ui/anchor
 
+## 1.0.105
+
+### Patch Changes
+
+- fix: include index.d.ts in theme files
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.105
+
+## 1.0.104
+
+### Patch Changes
+
+- fix: remove types from .mjs files in theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.104
+
+## 1.0.103
+
+### Patch Changes
+
+- fix: resolve issues with exports in theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.103
+
 ## 1.0.102
 
 ### Patch Changes

@@ -21,15 +21,15 @@ export * from "./spinner.mjs";
 export * from "./switch.mjs";
 
 export declare function plugins(): [
-  anchor,
-  button,
-  buttonGroup,
-  card,
-  label,
-  messageBox,
-  radio,
-  radioGroup,
-  spinner,
-  switchPlugin,
+  typeof anchor,
+  typeof button,
+  typeof buttonGroup,
+  typeof card,
+  typeof label,
+  typeof messageBox,
+  typeof radio,
+  typeof radioGroup,
+  typeof spinner,
+  typeof switchPlugin,
 ];
 export default plugins;
