@@ -1,18 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { ColorsType, PluginType } from "./types";
+import { colors } from "../extend";
 
-export const messageBox: PluginType = plugin(function ({
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  addComponents,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  theme,
-}) {
-  const colors = theme("colors") as ColorsType;
-
+export function messageBox({ addComponents, theme }: any) {
   const radiusMap = {
     ".message-box-radius-none": { borderRadius: "0px" },
     ".message-box-radius-sm": { borderRadius: "4px" },
@@ -369,4 +357,4 @@ export const messageBox: PluginType = plugin(function ({
     ...radiusMap,
     ...variantsMap,
   });
-});
+}

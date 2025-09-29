@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.99
+
+### Patch Changes
+
+- fix: remove spinner from the theme
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.99
+  - @aristobyte-ui/button@1.0.99
+  - @aristobyte-ui/dropdown@1.0.99
+  - @aristobyte-ui/message-box@1.0.99
+  - @aristobyte-ui/presets@1.0.99
+  - @aristobyte-ui/radio@1.0.99
+  - @aristobyte-ui/spinner@1.0.99
+  - @aristobyte-ui/switch@1.0.99
+  - @aristobyte-ui/utils@1.0.99
+
 ## 1.0.98
 
 ### Patch Changes

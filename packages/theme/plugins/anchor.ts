@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const anchor: PluginType = plugin(function ({ addComponents }) {
+export function anchor({ addComponents }: any) {
   const base = {
     ".anchor": {
       "@apply inline-flex items-center cursor-pointer font-medium text-sm leading-[1.4285714286] transition-all duration-200 ease-in-out px-4 py-2 relative overflow-hidden":
@@ -308,4 +301,4 @@ export const anchor: PluginType = plugin(function ({ addComponents }) {
     ...base,
     ...variantsMap,
   });
-});
+}

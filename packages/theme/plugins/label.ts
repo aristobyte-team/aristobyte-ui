@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const label: PluginType = plugin(function ({ addComponents }) {
+export function label({ addComponents }: any) {
   // Base label styles
   const labelBase = {
     ".label": {
@@ -358,4 +351,4 @@ export const label: PluginType = plugin(function ({ addComponents }) {
     ...radiusMap,
     ...variantsMap,
   });
-});
+}

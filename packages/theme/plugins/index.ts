@@ -8,7 +8,6 @@ import { radio } from "./radio";
 import { radioGroup } from "./radioGroup";
 import { spinner } from "./spinner";
 import { switchPlugin } from "./switch";
-import type { PluginType } from "./types";
 
 export * from "./anchor";
 export * from "./button";
@@ -20,7 +19,7 @@ export * from "./radio";
 export * from "./radioGroup";
 export * from "./spinner";
 export * from "./switch";
-export default (): PluginType[] => [
+export default () => [
   anchor,
   button,
   buttonGroup,
@@ -29,6 +28,6 @@ export default (): PluginType[] => [
   messageBox,
   radio,
   radioGroup,
-  // spinner,
+  spinner,
   switchPlugin,
 ];

@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const button: PluginType = plugin(function ({ addComponents }) {
+export function button({ addComponents }: any) {
   const buttonBase = {
     ".button": {
       "@apply relative flex items-center justify-center font-medium gap-2.5 transition duration-200 ease-in-out cursor-pointer select-none overflow-hidden text-center":
@@ -335,4 +328,4 @@ export const button: PluginType = plugin(function ({ addComponents }) {
       "@apply pointer-events-none opacity-80": {},
     },
   });
-});
+}

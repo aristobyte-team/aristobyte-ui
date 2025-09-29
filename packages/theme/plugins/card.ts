@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const card: PluginType = plugin(function ({ addComponents }) {
+export function card({ addComponents }: any) {
   const radiusMap = {
     ".card-radius-none": { "@apply rounded-none": {} },
     ".card-radius-sm": { "@apply rounded-sm": {} },
@@ -47,4 +40,4 @@ export const card: PluginType = plugin(function ({ addComponents }) {
     ...cardBase,
     ...radiusMap,
   });
-});
+}

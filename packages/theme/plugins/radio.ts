@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const radio: PluginType = plugin(function ({ addComponents }) {
+export function radio({ addComponents }: any) {
   const base = {
     ".radio": {
       "@apply relative flex items-center cursor-pointer select-none": {},
@@ -459,4 +452,4 @@ export const radio: PluginType = plugin(function ({ addComponents }) {
     ...sizeMap,
     ...variantsMap,
   });
-});
+}

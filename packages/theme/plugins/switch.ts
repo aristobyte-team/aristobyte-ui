@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
+export function switchPlugin({ addComponents }: any) {
   const baseSwitch = {
     ".switch": {
       "@apply relative inline-flex items-center cursor-pointer select-none": {},
@@ -382,4 +375,4 @@ export const switchPlugin: PluginType = plugin(function ({ addComponents }) {
     ...variantsMap,
     ...alignmentsMap,
   });
-});
+}

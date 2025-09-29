@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
+export function buttonGroup({ addComponents }: any) {
   const groupBase = {
     ".button-group": {
       "@apply flex items-center overflow-hidden max-w-max": {},
@@ -335,4 +328,4 @@ export const buttonGroup: PluginType = plugin(function ({ addComponents }) {
     ...variantsMap,
     ...childRules,
   });
-});
+}

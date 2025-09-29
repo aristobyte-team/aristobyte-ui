@@ -1,5 +1,11 @@
 # @aristobyte-ui/radio
 
+## 1.0.99
+
+### Patch Changes
+
+- fix: remove spinner from the theme
+
 ## 1.0.98
 
 ## 1.0.97

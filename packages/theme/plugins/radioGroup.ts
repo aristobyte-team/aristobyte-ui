@@ -1,12 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import plugin from "tailwindcss/plugin";
-import type { PluginType } from "./types";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const radioGroup: PluginType = plugin(function ({ addComponents }) {
-  // Base RadioGroup wrapper
+export function radioGroup({ addComponents }: any) {
   const base = {
     ".radio-group": { "@apply flex flex-wrap gap-2": {} },
   };
@@ -340,4 +332,4 @@ export const radioGroup: PluginType = plugin(function ({ addComponents }) {
     ...alignmentsMap,
     ...sizesMap,
   });
-});
+}
