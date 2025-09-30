@@ -1,5 +1,11 @@
 # @aristobyte-ui/jest-config
 
+## 1.0.106
+
+### Patch Changes
+
+- feat: add string type to icons size
+
 ## 1.0.105
 
 ### Patch Changes

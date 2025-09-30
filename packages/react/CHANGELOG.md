@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.106
+
+### Patch Changes
+
+- feat: add string type to icons size
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.106
+  - @aristobyte-ui/button@1.0.106
+  - @aristobyte-ui/dropdown@1.0.106
+  - @aristobyte-ui/message-box@1.0.106
+  - @aristobyte-ui/presets@1.0.106
+  - @aristobyte-ui/radio@1.0.106
+  - @aristobyte-ui/spinner@1.0.106
+  - @aristobyte-ui/switch@1.0.106
+  - @aristobyte-ui/utils@1.0.106
+
 ## 1.0.105
 
 ### Patch Changes

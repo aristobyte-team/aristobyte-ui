@@ -1,5 +1,14 @@
 # @aristobyte-ui/theme
 
+## 1.0.106
+
+### Patch Changes
+
+- feat: add string type to icons size
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.106
+
 ## 1.0.105
 
 ### Patch Changes
