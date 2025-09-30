@@ -1,5 +1,12 @@
 # @aristobyte-ui/anchor
 
+## 1.0.107
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.107
+
 ## 1.0.106
 
 ### Patch Changes

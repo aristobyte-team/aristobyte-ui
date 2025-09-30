@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.107
+
+### Patch Changes
+
+- feat: add usemediaquery hook in utils
+
 ## 1.0.106
 
 ### Patch Changes

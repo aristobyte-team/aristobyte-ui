@@ -1,5 +1,7 @@
 # @aristobyte-ui/spinner
 
+## 1.0.107
+
 ## 1.0.106
 
 ### Patch Changes
