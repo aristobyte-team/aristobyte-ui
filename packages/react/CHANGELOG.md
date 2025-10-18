@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 1.0.109
+
+### Patch Changes
+
+- feat: add react and react-dom to peerDeps
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.109
+  - @aristobyte-ui/button@1.0.109
+  - @aristobyte-ui/dropdown@1.0.109
+  - @aristobyte-ui/message-box@1.0.109
+  - @aristobyte-ui/presets@1.0.109
+  - @aristobyte-ui/radio@1.0.109
+  - @aristobyte-ui/spinner@1.0.109
+  - @aristobyte-ui/switch@1.0.109
+  - @aristobyte-ui/utils@1.0.109
+
 ## 1.0.108
 
 ### Patch Changes

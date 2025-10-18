@@ -1,5 +1,15 @@
 # @aristobyte-ui/dropdown
 
+## 1.0.109
+
+### Patch Changes
+
+- feat: add react and react-dom to peerDeps
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@1.0.109
+  - @aristobyte-ui/utils@1.0.109
+
 ## 1.0.108
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 1.0.109
+
+### Patch Changes
+
+- feat: add react and react-dom to peerDeps
+
 ## 1.0.108
 
 ## 1.0.107
