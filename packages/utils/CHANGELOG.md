@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.108
+
+### Patch Changes
+
+- feat: make the react and react-dom peerDeps instead of deps
+
 ## 1.0.107
 
 ### Patch Changes

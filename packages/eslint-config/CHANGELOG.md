@@ -1,5 +1,7 @@
 # @aristobyte-ui/eslint-config
 
+## 1.0.108
+
 ## 1.0.107
 
 ## 1.0.106

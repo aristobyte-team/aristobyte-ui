@@ -1,5 +1,12 @@
 # @aristobyte-ui/theme
 
+## 1.0.108
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.108
+
 ## 1.0.107
 
 ### Patch Changes
