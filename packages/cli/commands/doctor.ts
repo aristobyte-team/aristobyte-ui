@@ -1,6 +1,7 @@
 import { execSync } from "child_process";
 import { spinner } from "@clack/prompts";
 import { compareVersions } from "../utils/compareVersions";
+import { getCurrentPackageManager } from "utils/getCurrentPackageManager";
 import color from "picocolors";
 
 const MIN_NODE_VERSION = "20.19.0";
@@ -27,16 +28,20 @@ export async function doctor() {
     }
 
     // Yarn
-    let yarnVersion = "unknown";
+    let pkgManagerVersion = "unknown";
+    const pkgManager = getCurrentPackageManager();
     try {
-      yarnVersion = execSync("yarn -v").toString().trim();
+      pkgManagerVersion = execSync(`${pkgManager} -v`).toString().trim();
     } catch (err) {
-      console.error(color.red("❌ Failed to detect Yarn version:"), err);
+      console.error(
+        color.red(`❌ Failed to detect ${pkgManager} version:`),
+        err
+      );
     }
 
     s.stop();
     console.log(color.green(`Node version: ${nodeVersion} ${nodeStatus}`));
-    console.log(color.green(`Yarn version: ${yarnVersion}`));
+    console.log(color.green(`${pkgManager} version: ${pkgManagerVersion}`));
     console.log(color.green("All basic health checks completed!"));
   } catch (err) {
     s.stop();

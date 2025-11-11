@@ -2,12 +2,15 @@ import os from "os";
 import { execSync } from "child_process";
 import { spinner } from "@clack/prompts";
 import { checkVersion } from "../utils/checkVersion";
+import { getCurrentPackageManager } from "utils/getCurrentPackageManager";
 import color from "picocolors";
 
-const MIN_VERSIONS = {
+const MIN_VERSIONS: Record<string, string> = {
   node: "20.17.0",
+  pnpm: "10.15.1",
   npm: "10.8.2",
   yarn: "1.22.22",
+  bun: "1.2.21",
 };
 
 function getVersion(command: string, name: string): string {
@@ -24,9 +27,10 @@ export async function env() {
   try {
     s.start("Fetching system environment info...");
 
+    const pkgManage = getCurrentPackageManager();
+
     const nodeVersion = getVersion("node -v", "Node");
-    const npmVersion = getVersion("npm -v", "npm");
-    const yarnVersion = getVersion("yarn -v", "Yarn");
+    const pkgManagerVersion = getVersion(`${pkgManage} -v`, pkgManage);
 
     s.stop();
 
@@ -41,9 +45,8 @@ export async function env() {
     console.log(
       `Node: ${checkVersion("Node", nodeVersion, MIN_VERSIONS.node)}`
     );
-    console.log(`npm: ${checkVersion("npm", npmVersion, MIN_VERSIONS.npm)}`);
     console.log(
-      `Yarn: ${checkVersion("Yarn", yarnVersion, MIN_VERSIONS.yarn)}`
+      `${pkgManagerVersion}: ${checkVersion(pkgManagerVersion, pkgManagerVersion, MIN_VERSIONS[pkgManagerVersion])}`
     );
   } catch (err) {
     s.stop();

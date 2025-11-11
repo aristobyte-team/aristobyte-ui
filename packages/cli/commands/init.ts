@@ -22,16 +22,22 @@ const TEMPLATES = [
     repo: "https://github.com/aristobyte-team/aristobyte-ui-template-vite.git",
   },
   {
+    id: "aristobyte-ui-template-vike",
+    name: "Vike",
+    desc: "A Vike template pre-configured with AristoByteUI.",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-vike.git",
+  },
+  {
     id: "aristobyte-ui-template-astro",
     name: "Astro",
     desc: "An Astro template pre-configured with AristoByteUI.",
     repo: "https://github.com/aristobyte-team/aristobyte-ui-template-astro.git",
   },
   {
-    id: "aristobyte-ui-template-cra",
-    name: "CRA",
-    desc: "A Create React App template pre-configured with AristoByteUI.",
-    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-cra.git",
+    id: "aristobyte-ui-template-rsbuild",
+    name: "RS Build",
+    desc: "An RS Build template pre-configured with AristoByteUI.",
+    repo: "https://github.com/aristobyte-team/aristobyte-ui-template-rsbuild.git",
   },
 ];
 
@@ -76,7 +82,6 @@ export async function init(myProjectName = DEFAULT_NAME) {
       `Preparing '${template.name}' with ${packageManager} configuration...`
     );
 
-    // Clone directly the branch that matches the package manager
     await execa(
       "git",
       [
@@ -97,7 +102,6 @@ export async function init(myProjectName = DEFAULT_NAME) {
     s.stop();
     console.log(color.green("✅ Project initialized successfully!\n"));
 
-    // Next steps hint
     console.log(color.cyan("Next steps:"));
     console.log(color.cyan(`  cd ${projectName}`));
     console.log(color.cyan(`  ${packageManager} install`));
