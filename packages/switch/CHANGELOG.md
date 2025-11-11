@@ -1,5 +1,7 @@
 # @aristobyte-ui/switch
 
+## 1.0.110
+
 ## 1.0.109
 
 ### Patch Changes

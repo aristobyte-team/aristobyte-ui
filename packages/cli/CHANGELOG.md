@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.110
+
+### Patch Changes
+
+- feat: add new templates to cli + add packagedetector
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.110
+  - @aristobyte-ui/typescript-config@1.0.110
+
 ## 1.0.109
 
 ### Patch Changes
