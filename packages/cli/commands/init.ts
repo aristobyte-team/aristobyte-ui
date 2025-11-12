@@ -44,15 +44,24 @@ const TEMPLATES = [
 const PACKAGE_MANAGERS = ["npm", "yarn", "pnpm", "bun"];
 const DEFAULT_NAME = "aristobyte-ui-app";
 
-export async function init(myProjectName = DEFAULT_NAME) {
+export async function init(myProjectName: string) {
   console.log(color.cyan("┌  Create a new project"));
 
-  const projectNameResult = await text({
-    message: "New project name (Enter to skip with default name)",
-    placeholder: myProjectName,
-  });
-
-  const projectName = (String(projectNameResult) || myProjectName).trim();
+  let projectName: string = DEFAULT_NAME;
+  if (!myProjectName) {
+    projectName = (await text({
+      message: "New project name (Enter to skip with default name)",
+      placeholder: DEFAULT_NAME,
+      defaultValue: DEFAULT_NAME,
+    })) as string;
+  } else {
+    projectName = myProjectName;
+    console.log(
+      `${color.gray("│")}
+${color.green("◇")}  ${color.white("Your project name is:")}
+${color.gray("│")}  ${color.green(projectName)}`
+    );
+  }
 
   const templateIndex = await select({
     message: "Select a template (Enter to select)",
@@ -74,7 +83,11 @@ export async function init(myProjectName = DEFAULT_NAME) {
 
   const packageManager = PACKAGE_MANAGERS[Number(packageManagerIndex)];
 
-  console.log(color.cyan("\nTemplate created successfully!\n"));
+  console.log(
+    `${color.gray("│")}
+${color.green("◇")}  ${color.cyan("Template created successfully!")}
+${color.gray("│")}`
+  );
 
   const s = spinner();
   try {
@@ -99,13 +112,23 @@ export async function init(myProjectName = DEFAULT_NAME) {
 
     await execa("rm", ["-rf", ".git"], { stdio: "ignore", cwd: projectName });
 
+    console.log(
+      `
+${color.gray("│")}
+${color.gray("│")}
+${color.green("◇")}  ${color.green("Project initialized successfully!")}
+${color.gray("│")}
+${color.gray("│")}
+${color.green("◇")}  ${color.cyan("To get started:")}
+${color.gray("│")}
+${color.gray("├─")} ${color.white("Change directory to your project:")}
+${color.gray("│")}   ${color.gray(`cd ${projectName}`)}
+${color.gray("├─")} ${color.white("Install dependencies:")}
+${color.gray("│")}   ${color.gray(`${packageManager} install`)}
+${color.gray("├─")} ${color.white("Start the development server:")}
+${color.gray("│")}   ${color.gray(`${packageManager} run dev`)}`
+    );
     s.stop();
-    console.log(color.green("✅ Project initialized successfully!\n"));
-
-    console.log(color.cyan("Next steps:"));
-    console.log(color.cyan(`  cd ${projectName}`));
-    console.log(color.cyan(`  ${packageManager} install`));
-    console.log(color.cyan(`  ${packageManager} run dev\n`));
   } catch (err) {
     s.stop();
     console.error(color.red("❌ Failed to initialize project"), err);

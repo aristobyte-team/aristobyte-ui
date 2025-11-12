@@ -42,12 +42,10 @@ aristobyteui
   .helpOption("-H, --help", "Show help information");
 
 aristobyteui
-  .command("init")
+  .command("init [myProjectName]")
   .usage(usage(["options", "myProjectName"]))
   .description("Initialize a new AristoByteUI project")
-  .action((myProjectName) => {
-    init(myProjectName);
-  });
+  .action((myProjectName) => init(myProjectName));
 aristobyteui
   .command("add")
   .usage(usage(["options", "components..."]))
@@ -149,8 +147,8 @@ aristobyteui.exitOverride(async (err) => {
 
   try {
     await aristobyteui.parseAsync(args, { from: "user" });
-    process.exit(1);
-  } catch {
+  } catch (err) {
+    console.error(darkGrey("Error:"), lightGrey((err as Error).message));
     process.exit(1);
   }
 })();
