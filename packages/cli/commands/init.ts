@@ -1,6 +1,7 @@
 import { execa } from "execa";
 import { select, text, spinner } from "@clack/prompts";
 import color from "picocolors";
+import type { OptionValues } from "commander";
 
 const TEMPLATES = [
   {
@@ -40,14 +41,30 @@ const TEMPLATES = [
     repo: "https://github.com/aristobyte-team/aristobyte-ui-template-rsbuild.git",
   },
 ];
-
 const PACKAGE_MANAGERS = ["npm", "yarn", "pnpm", "bun"];
 const DEFAULT_NAME = "aristobyte-ui-app";
 
-export async function init(myProjectName: string) {
+export async function init(myProjectName: string, options: OptionValues) {
+  if (options.listTemplates) {
+    console.log(`${color.cyan("Available templates:")}
+${TEMPLATES.map(
+  (t) =>
+    `${color.green("◇")} ${t.id.split("aristobyte-ui-template-")[1]} - ${color.gray(t.desc)}`
+).join("\n")}`);
+    process.exit(0);
+  }
+
+  if (options.listPackageManagers) {
+    console.log(
+      `${color.cyan("Available package managers:")}
+${PACKAGE_MANAGERS.map((pm) => `${color.green("◇")} ${pm}`).join("\n")}`
+    );
+    process.exit(0);
+  }
+
   console.log(color.cyan("┌  Create a new project"));
 
-  let projectName: string = DEFAULT_NAME;
+  let projectName = myProjectName || DEFAULT_NAME;
   if (!myProjectName) {
     projectName = (await text({
       message: "New project name (Enter to skip with default name)",
@@ -55,7 +72,6 @@ export async function init(myProjectName: string) {
       defaultValue: DEFAULT_NAME,
     })) as string;
   } else {
-    projectName = myProjectName;
     console.log(
       `${color.gray("│")}
 ${color.green("◇")}  ${color.white("Your project name is:")}
@@ -63,25 +79,49 @@ ${color.gray("│")}  ${color.green(projectName)}`
     );
   }
 
-  const templateIndex = await select({
-    message: "Select a template (Enter to select)",
-    options: TEMPLATES.map((t, i) => ({
-      value: i + "",
-      label: `${t.name} (${t.desc})`,
-    })),
-  });
+  let template = TEMPLATES.find(
+    (t) =>
+      t.id ===
+      `aristobyte-ui-template-${options?.template?.toLowerCase()?.replaceAll(" ", "")}`
+  );
 
-  const template = TEMPLATES[Number(templateIndex)];
+  if (!template) {
+    const templateIndex = await select({
+      message: "Select a template (Enter to select)",
+      options: TEMPLATES.map((t, i) => ({
+        value: i.toString(),
+        label: `${t.name} (${t.desc})`,
+      })),
+    });
+    template = TEMPLATES[Number(templateIndex)];
+  } else {
+    console.log(
+      `${color.gray("│")}
+${color.green("◇")}  ${color.white("Template selected:")}
+${color.gray("│")}  ${color.green(template.name)}`
+    );
+  }
 
-  const packageManagerIndex = await select({
-    message: "Select a package manager (Enter to select)",
-    options: PACKAGE_MANAGERS.map((pm, i) => ({
-      value: i.toString(),
-      label: pm,
-    })),
-  });
+  let packageManager = PACKAGE_MANAGERS.find(
+    (pm) => pm.toLowerCase() === options.packageManager?.toLowerCase()
+  );
 
-  const packageManager = PACKAGE_MANAGERS[Number(packageManagerIndex)];
+  if (!packageManager) {
+    const packageManagerIndex = await select({
+      message: "Select a package manager (Enter to select)",
+      options: PACKAGE_MANAGERS.map((pm, i) => ({
+        value: i.toString(),
+        label: pm,
+      })),
+    });
+    packageManager = PACKAGE_MANAGERS[Number(packageManagerIndex)];
+  } else {
+    console.log(
+      `${color.gray("│")}
+${color.green("◇")}  ${color.white("Package manager selected:")}
+${color.gray("│")}  ${color.green(packageManager)}`
+    );
+  }
 
   console.log(
     `${color.gray("│")}
@@ -105,32 +145,24 @@ ${color.gray("│")}`
         template.repo,
         projectName,
       ],
-      {
-        stdio: "ignore",
-      }
+      { stdio: "ignore" }
     );
 
-    await execa("rm", ["-rf", ".git"], { stdio: "ignore", cwd: projectName });
+    await execa("rm", ["-rf", ".git"], { cwd: projectName, stdio: "ignore" });
+
+    s.stop(`${color.green("✔ Project initialized successfully!")}`);
 
     console.log(
       `
 ${color.gray("│")}
-${color.gray("│")}
-${color.green("◇")}  ${color.green("Project initialized successfully!")}
-${color.gray("│")}
-${color.gray("│")}
 ${color.green("◇")}  ${color.cyan("To get started:")}
 ${color.gray("│")}
-${color.gray("├─")} ${color.white("Change directory to your project:")}
-${color.gray("│")}   ${color.gray(`cd ${projectName}`)}
-${color.gray("├─")} ${color.white("Install dependencies:")}
-${color.gray("│")}   ${color.gray(`${packageManager} install`)}
-${color.gray("├─")} ${color.white("Start the development server:")}
-${color.gray("│")}   ${color.gray(`${packageManager} run dev`)}`
+${color.gray("├─")} ${color.white("cd " + projectName)}
+${color.gray("├─")} ${color.white(`${packageManager} install`)}
+${color.gray("├─")} ${color.white(`${packageManager} run dev`)}`
     );
-    s.stop();
   } catch (err) {
     s.stop();
-    console.error(color.red("❌ Failed to initialize project"), err);
+    console.error(color.red("× Failed to initialize project"), err);
   }
 }

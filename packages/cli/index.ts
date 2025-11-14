@@ -10,7 +10,6 @@ import { list } from "./commands/list";
 import { doctor } from "./commands/doctor";
 import { env } from "./commands/env";
 
-import { getBanner } from "./utils/getBanner";
 import {
   logoSmallGradient,
   logo3,
@@ -18,7 +17,8 @@ import {
   darkGrey,
   lightGrey,
 } from "./utils/colors";
-import { usage, description } from "./utils/typography";
+import { usage } from "./utils/typography";
+import { parseHelp } from "./utils/parseHelp";
 import pkg from "./package.json";
 
 const COMMANDS = [
@@ -37,44 +37,107 @@ const aristobyteui = new Command();
 aristobyteui
   .name("aristobyte-ui")
   .usage(usage(["command", "options"]))
-  .description("Initialize a new AristoByteUI project")
+  .description(
+    "Create new AristoByteUI projects or manage existing projects with full control\n  over components, dependencies, and UI stack configuration. Supports initialization,\n  addition, removal, upgrading of components, and project diagnostics."
+  )
   .version(pkg.version, "-V, --version", "Output the CLI version")
-  .helpOption("-H, --help", "Show help information");
-
+  .helpOption("-H, --help", "Show help information")
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  });
 aristobyteui
   .command("init [myProjectName]")
   .usage(usage(["options", "myProjectName"]))
   .description("Initialize a new AristoByteUI project")
-  .action((myProjectName) => init(myProjectName));
+  .option("-LT, --list-templates", "Display a list of available templates")
+  .option(
+    "-LPM, --list-package-managers",
+    "Display a list of available package managers"
+  )
+  .option("-T, --template <templateName>", "Specify a template to use")
+  .option(
+    "-P, --package-manager <packageManager>",
+    "Select a package manager (npm, yarn, pnpm, bun)"
+  )
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
+  .action(init);
 aristobyteui
-  .command("add")
+  .command("add [component]")
   .usage(usage(["options", "components..."]))
   .description("Add a UI component")
+  .option("-L, --list", "Display a list of available packages, to be added")
+  .option(
+    "-P, --package-manager",
+    "Show the package manager used in current project"
+  )
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
   .action(add);
 aristobyteui
-  .command("remove")
+  .command("remove [component]")
   .usage(usage(["options", "components..."]))
   .description("Remove a UI component")
+  .option("-L, --list", "Display a list of installed packages, to be removed")
+  .option(
+    "-P, --package-manager",
+    "Show the package manager used in current project"
+  )
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
   .action(remove);
 aristobyteui
-  .command("upgrade")
+  .command("upgrade [component]")
   .usage(usage(["options", "components..."]))
   .description("Upgrade a UI component")
+  .option("-A, --all", "Upgrade all AristoByteUI components")
+  .option("-T, --to <version>", "Upgrade to a specific version")
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
   .action(upgrade);
 aristobyteui
   .command("list")
   .usage(usage(["options"]))
   .description("List installed components")
-  .action(list);
+  .option("-A, --all", "Display the list of all packages")
+  .option("-I, --installed", "Display the list of installed packages")
+  .option("-O, --outdated", "Check for available updates")
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
+  .action((options) => list(options, true));
 aristobyteui
   .command("doctor")
   .usage(usage(["options"]))
   .description("Check system and project health")
+  .option("-A, --all", "Run all diagnostics")
+  .option("-C, --configs", "Validate project config files")
+  .option("-D, --deps", "Validate installed AristoByteUI dependencies")
+  .option("-J, --json", "Output diagnostics as JSON")
+  .option("-N, --network", "Verify registry/network connectivity")
+  .option("-P, --pm", "Check package manager state")
+  .option("-S, --system", "Check system environment")
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
   .action(doctor);
 aristobyteui
   .command("env")
   .usage(usage(["options"]))
   .description("Display environment info")
+  .option("-A, --all", "Display all environment diagnostics")
+  .option("-J, --json", "Output environment info as JSON")
+  .option("-M, --pm", "Show package manager details")
+  .option("-N, --network", "Check registry/network connectivity")
+  .option("-P, --packages", "Show installed AristoByteUI packages")
+  .option("-S, --system", "Show system information")
+  .configureHelp({
+    formatHelp: (cmd, helper) => parseHelp(cmd, helper),
+  })
   .action(env);
 aristobyteui
   .command("help")
@@ -82,45 +145,6 @@ aristobyteui
   .description("Display help for command")
   .action(env);
 aristobyteui.command("help", { hidden: true });
-
-aristobyteui.configureHelp({
-  formatHelp: (cmd, helper) => `
-${getBanner()}
-${logoSmallGradient("Usage:")} 
-  ${logo3(helper.commandUsage(cmd))}
-
-${logoSmallGradient("Description:")}
-  ${darkGrey(
-    "Create new AristoByteUI projects or manage existing projects with full control"
-  )}
-  ${darkGrey("over components, dependencies, and UI stack configuration. Supports initialization,")}
-  ${darkGrey(
-    "addition, removal, upgrading of components, and project diagnostics."
-  )}
-
-${logoSmallGradient("Commands:")}
-${helper
-  .visibleCommands(cmd)
-  .map(
-    (c) =>
-      `  ${`${logo3(c.name()).padEnd(31)} ${c.usage() || "".padEnd(30)}`.padEnd(129)} ${description(c.description())}`
-  )
-  .join("\n")}
-
-${logoSmallGradient("Options:")}
-${helper
-  .visibleOptions(cmd)
-  .map((option) => {
-    const flagsArray = option.flags.split(/,\s*/);
-    const styledFlags = `${logo3(flagsArray[0])}${darkGrey(", ")}${logo4(flagsArray[1])}`;
-    return `  ${styledFlags.padEnd(93)} ${description(option.description)}`;
-  })
-  .join("\n")}
-
-${logoSmallGradient("Tip:")}
-  ${lightGrey("Use 'aristobyte-ui [ command ] --help' for detailed info on a command.")}
-`,
-});
 
 aristobyteui.exitOverride(async (err) => {
   if (err.code === "commander.unknownCommand") {
