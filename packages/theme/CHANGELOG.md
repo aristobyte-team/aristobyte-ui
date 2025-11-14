@@ -1,5 +1,14 @@
 # @aristobyte-ui/theme
 
+## 1.0.111
+
+### Patch Changes
+
+- feat: complete cli app
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.111
+
 ## 1.0.110
 
 ### Patch Changes

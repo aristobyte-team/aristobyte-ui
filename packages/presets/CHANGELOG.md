@@ -1,5 +1,16 @@
 # @aristobyte-ui/presets
 
+## 1.0.111
+
+### Patch Changes
+
+- feat: complete cli app
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@1.0.111
+  - @aristobyte-ui/button@1.0.111
+  - @aristobyte-ui/utils@1.0.111
+
 ## 1.0.110
 
 ### Patch Changes

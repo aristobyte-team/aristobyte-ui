@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 1.0.111
+
+### Patch Changes
+
+- feat: complete cli app
+
 ## 1.0.110
 
 ## 1.0.109

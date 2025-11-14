@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 1.0.111
+
+### Patch Changes
+
+- feat: complete cli app
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@1.0.111
+
 ## 1.0.110
 
 ### Patch Changes
