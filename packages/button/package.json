@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/button",
   "description": "react button and buttongroup components with multiple variants, appearances, sizes, radius options, icons, ripple feedback, and fully typed typescript support",
-  "version": "1.0.111",
+  "version": "1.0.112",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -64,12 +64,12 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/spinner": "^1.0.111",
-    "@aristobyte-ui/utils": "^1.0.111"
+    "@aristobyte-ui/spinner": "^1.0.112",
+    "@aristobyte-ui/utils": "^1.0.112"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.111",
-    "@aristobyte-ui/typescript-config": "^1.0.111",
+    "@aristobyte-ui/eslint-config": "^1.0.112",
+    "@aristobyte-ui/typescript-config": "^1.0.112",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

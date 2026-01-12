@@ -1,5 +1,11 @@
 # @aristobyte-ui/switch
 
+## 1.0.112
+
+### Patch Changes
+
+- fix: resolve the malformed switch export path
+
 ## 1.0.111
 
 ### Patch Changes

@@ -61,6 +61,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.6",
+    "dotenv-cli": "^11.0.0",
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
     "lint-staged": "^16.1.0",
