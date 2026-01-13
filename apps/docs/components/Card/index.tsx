@@ -1,8 +1,8 @@
 import * as React from "react";
 import { type IconPropsType } from "@aristobyte-ui/utils";
 
-import "./Card.scss";
 import { Label } from "../Label";
+import "./Card.css";
 
 export interface ICard {
   title?: string;

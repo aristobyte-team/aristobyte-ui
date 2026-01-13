@@ -7,7 +7,7 @@ import { useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
 import { components, propsMapping } from "@/config";
 
-import "./Props.scss";
+import "./Props.css";
 
 export interface IProps {
   category: string;

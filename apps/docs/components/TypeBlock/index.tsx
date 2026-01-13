@@ -7,7 +7,7 @@ import {
   CodeHighlightSupportedThemes,
 } from "@/config";
 
-import styles from "./TypeBlock.module.scss";
+import "./TypeBlock.css";
 
 interface ITypeBlock {
   code: string;
@@ -34,9 +34,9 @@ export const TypeBlock: React.FC<ITypeBlock> = ({
   }, [code, lang, theme]);
 
   return (
-    <div className={`type-block ${styles["type-block"]}`}>
+    <div className="type-block">
       <div
-        className={styles["type-block__container"]}
+        className="type-block__container"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </div>

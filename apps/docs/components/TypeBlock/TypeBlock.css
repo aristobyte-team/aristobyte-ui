@@ -14,20 +14,20 @@
   padding: 5px 10px;
   position: relative;
   width: calc(100% - 2 * 10px);
+}
 
-  &__container {
-    overflow: auto;
-    min-width: 100%;
-    max-width: 240px;
-    max-height: 400px;
+.type-block__container {
+  overflow: auto;
+  min-width: 100%;
+  max-width: 240px;
+  max-height: 400px;
+}
 
-    pre {
-      background-color: transparent !important;
-      display: block;
-      margin: 0;
-      min-height: calc(52px - 14px * 2);
-      white-space: pre;
-      overflow: visible;
-    }
-  }
+.type-block__container pre {
+  background-color: transparent !important;
+  display: block;
+  margin: 0;
+  min-height: calc(52px - 14px * 2);
+  white-space: pre;
+  overflow: visible;
 }

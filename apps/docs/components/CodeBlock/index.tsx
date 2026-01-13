@@ -10,7 +10,7 @@ import {
   CodeHighlightSupportedThemes,
 } from "@/config";
 
-import styles from "./CodeBlock.module.scss";
+import "./CodeBlock.css";
 
 interface ICodeBlock {
   code: string;
@@ -49,17 +49,17 @@ export const CodeBlock: React.FC<ICodeBlock> = ({
   };
 
   return (
-    <div className={`code-block ${styles["code-block"]} ${className}`}>
+    <div className={`code-block ${className}`}>
       {icon && (
         <div>{icon.component({ size: icon.size, color: icon.color })}</div>
       )}
       <div
-        className={styles["code-block__container"]}
+        className="code-block__container"
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <Button
         onClick={copyToClipboard}
-        className={styles["code-block__button"]}
+        className="code-block__button"
         icon={{ component: Icons.Copy }}
       />
     </div>

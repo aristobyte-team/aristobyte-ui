@@ -8,7 +8,7 @@ import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
 import pkg from "../../../package.json";
 
-import "./Sidebar.scss";
+import "./Sidebar.css";
 
 // @TODO: @UI - move to UI lib
 

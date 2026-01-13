@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Sidebar } from "./Sidebar";
 
-import "./Layout.scss";
+import "./Layout.css";
 
 export interface ILayout {
   children: React.ReactNode | React.ReactElement | string;

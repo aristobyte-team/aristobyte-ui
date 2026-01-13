@@ -8,7 +8,7 @@ import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
 import { Helpers } from "@/config";
 
-import "./Installation.scss";
+import "./Installation.css";
 
 export interface IInstallation {
   category: string;

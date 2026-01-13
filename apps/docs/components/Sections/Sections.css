@@ -1,0 +1,120 @@
+.sections__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  transition: all 150ms linear;
+  width: calc(100% - 10px * 2);
+}
+
+@media screen and (min-width: 425px) {
+  .sections__container {
+    padding: 15px;
+    width: calc(100% - 15px * 2);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .sections__container {
+    padding: 30px;
+    width: calc(100% - 30px * 2);
+  }
+}
+
+.sections__buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 auto 10px 0;
+}
+
+.sections__code-preview {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height 600ms var(--cubic-bezier-primary);
+}
+
+.sections__code {
+  width: 100%;
+}
+
+.sections__preview {
+  background-color: #0f172b;
+  border-radius: 10px;
+  border: 1px solid #314158;
+  padding: 25px;
+  width: calc(100% - 2 * 25px);
+}
+
+.sections__code,
+.sections__preview {
+  display: flex;
+  min-height: max-content;
+  opacity: 0;
+  position: absolute;
+  transform: translate(0, 20px);
+  transition: all 600ms var(--cubic-bezier-primary);
+}
+
+.sections__code--active,
+.sections__preview--active {
+  opacity: 1;
+  position: relative;
+  transform: translate(0);
+}
+
+.sections__guidelines {
+  margin: 17px 0 0;
+}
+
+.sections__guidelines-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sections__guidelines-subtitle {
+  color: #9fb2cc;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  margin: 0 0 10px;
+}
+
+.sections__guidelines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 50%;
+}
+
+.sections__guidelines-item {
+  color: #90a1b9;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.sections__guidelines-item p {
+  color: #90a1b9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.sections__guidelines-item b {
+  border: solid rgba(69, 85, 108, 0.5); /*  @TODO: @COLOR */
+  background-color: rgba(49, 65, 88, 0.4); /*  @TODO: @COLOR */
+  border-radius: 10px;
+  color: var(--white);
+  padding: 3px 6px;
+}
+
+.sections__types {
+  margin: 17px 0 0;
+}

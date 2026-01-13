@@ -1,0 +1,124 @@
+.props {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.props__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  transition: all 150ms linear;
+  width: calc(100% - 10px * 2);
+}
+
+@media screen and (min-width: 425px) {
+  .props__container {
+    padding: 15px;
+    width: calc(100% - 15px * 2);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .props__container {
+    padding: 30px;
+    width: calc(100% - 30px * 2);
+  }
+}
+
+.props__components {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.props__components-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.props__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.props__sections-title {
+  color: var(--white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+}
+
+.props__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.props__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid #31415880;
+}
+
+.props__item:last-of-type {
+  border-bottom: none;
+}
+
+.props__item-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.props__item-name-container {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+
+.props__item-name {
+  background-color: #3141587f;
+  border: 2px solid #3141587f;
+  border-radius: 4px;
+  color: #8ec5ff;
+  padding: 3px 6px;
+  width: max-content;
+}
+
+.props__item-inline-type {
+  align-items: flex-end;
+  color: #90a1b9; /* @TODO: @COLOR */
+  text-align: center;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  font-family:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  gap: 8px;
+}
+
+.props__item-inline-type-text {
+  font-weight: 400;
+}
+
+.props__item-inline-type-default {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.props__item-inline-type-default b {
+  color: #ffb900;
+}

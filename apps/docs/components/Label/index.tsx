@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "./Label.scss";
+import "./Label.css";
 
 export interface ILabel {
   text: string;

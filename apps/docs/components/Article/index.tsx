@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Intro, Installation, Import, Sections, Props } from "@/components";
+import "./Article.css";
 
 export interface IArticle {
   category: string;
@@ -7,7 +8,7 @@ export interface IArticle {
 }
 
 export const Article: React.FC<IArticle> = ({ category, unit }) => (
-  <article className="article w-full overflow-y-auto">
+  <article className="article">
     <Intro unit={unit} category={category} />
     <Installation unit={unit} category={category} />
     <Import unit={unit} category={category} />
