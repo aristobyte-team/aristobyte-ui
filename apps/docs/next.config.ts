@@ -20,12 +20,23 @@ const nextConfig: NextConfig = {
         ...(config.resolve?.alias || {}),
         canvas: false,
         "pdfjs-dist": path.join(__dirname, "node_modules/pdfjs-dist"),
-        "@aristobyte-ui/utils": path.join(__dirname, "../../packages/utils"),
       },
     };
 
     return config;
   },
+  transpilePackages: [
+    "@aristobyte-ui/anchor",
+    "@aristobyte-ui/button",
+    "@aristobyte-ui/dropdown",
+    "@aristobyte-ui/message-box",
+    "@aristobyte-ui/presets",
+    "@aristobyte-ui/radio",
+    "@aristobyte-ui/spinner",
+    "@aristobyte-ui/switch",
+    "@aristobyte-ui/theme",
+    "@aristobyte-ui/utils",
+  ],
 };
 
 export default nextConfig;

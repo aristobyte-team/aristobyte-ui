@@ -1,5 +1,15 @@
 # @aristobyte-ui/cli
 
+## 1.0.113
+
+### Patch Changes
+
+- feat: make the packages both remotely and dev accessible
+
+- Updated dependencies []:
+  - @aristobyte-ui/eslint-config@1.0.113
+  - @aristobyte-ui/typescript-config@1.0.113
+
 ## 1.0.112
 
 ### Patch Changes

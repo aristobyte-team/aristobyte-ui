@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/presets",
   "description": "A collection of prebuilt UI presets for AristoByteUI — including cards, widgets, dashboards, and interactive layouts — fully typed and styled with SCSS modules for seamless integration.",
-  "version": "1.0.112",
+  "version": "1.0.113",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -120,13 +120,13 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "^1.0.112",
-    "@aristobyte-ui/button": "^1.0.112",
-    "@aristobyte-ui/utils": "^1.0.112"
+    "@aristobyte-ui/anchor": "^1.0.113",
+    "@aristobyte-ui/button": "^1.0.113",
+    "@aristobyte-ui/utils": "^1.0.113"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.112",
-    "@aristobyte-ui/typescript-config": "^1.0.112",
+    "@aristobyte-ui/eslint-config": "^1.0.113",
+    "@aristobyte-ui/typescript-config": "^1.0.113",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",

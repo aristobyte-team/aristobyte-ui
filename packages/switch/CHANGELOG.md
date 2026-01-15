@@ -1,5 +1,11 @@
 # @aristobyte-ui/switch
 
+## 1.0.113
+
+### Patch Changes
+
+- feat: make the packages both remotely and dev accessible
+
 ## 1.0.112
 
 ### Patch Changes
