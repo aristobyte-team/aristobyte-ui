@@ -48,14 +48,16 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=!@aristobyte-ui/cli",
+    "dev:docs": "yarn workspace @aristobyte-ui/docs dev",
+    "dev:cli": "yarn workspace @aristobyte-ui/cli dev",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint -- --fix",
     "check": "yarn lint && yarn check-types && yarn format",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "add-package": "sh ./scripts/add-package.sh",
-    "build": "turbo run build",
+    "build": "turbo run build --filter=!@aristobyte-ui/docs",
     "release": "yarn install && changeset && changeset version && turbo run build && changeset publish"
   },
   "devDependencies": {
@@ -65,13 +67,17 @@
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
     "lint-staged": "^16.1.0",
+    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "turbo": "^2.5.3",
     "typescript": "5.8.2"
   },
   "packageManager": "yarn@1.22.22",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/docs"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "tailwindcss": "^4.1.18"
+  }
 }

@@ -3,8 +3,8 @@ import aristobyteui from "@aristobyte-ui/theme";
 
 const config: Config = {
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
+    "./app/**/*",
+    "./components/**/*",
     "node_modules/@aristobyte-ui/**/*",
   ],
   theme: { extend: { ...aristobyteui.extend() } },

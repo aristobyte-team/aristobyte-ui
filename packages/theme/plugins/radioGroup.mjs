@@ -4,309 +4,309 @@ export function radioGroup({ addComponents }) {
   };
 
   const variantsMap = {
-    ".radioGroup-default-solid": {
+    ".radio-group-default-solid": {
       "@apply bg-[#1f2937]": {},
     },
-    ".radioGroup-default-solid:hover": {
+    ".radio-group-default-solid:hover": {
       "@apply bg-[#111827]": {},
     },
-    ".radioGroup-default-solid:disabled": {
+    ".radio-group-default-solid:disabled": {
       "@apply bg-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-default-outline": {
+    ".radio-group-default-outline": {
       "@apply bg-[#1f293733] border border-[#1f2937]": {},
     },
-    ".radioGroup-default-outline:hover": {
+    ".radio-group-default-outline:hover": {
       "@apply bg-[#11182744] border border-[#111827]": {},
     },
-    ".radioGroup-default-outline:disabled": {
+    ".radio-group-default-outline:disabled": {
       "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-default-outline-dashed": {
+    ".radio-group-default-outline-dashed": {
       "@apply bg-[#1f293733] border-dashed border-[#1f2937]": {},
     },
-    ".radioGroup-default-outline-dashed:hover": {
+    ".radio-group-default-outline-dashed:hover": {
       "@apply bg-[#11182744] border-dashed border-[#111827]": {},
     },
-    ".radioGroup-default-outline-dashed:disabled": {
+    ".radio-group-default-outline-dashed:disabled": {
       "@apply bg-[rgba(31,41,55,0.5)] border-dashed border-[rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-default-no-outline": {
+    ".radio-group-default-no-outline": {
       "@apply bg-[#1f293733] border-transparent": {},
     },
-    ".radioGroup-default-no-outline:hover": {
+    ".radio-group-default-no-outline:hover": {
       "@apply bg-[#11182744] border-transparent": {},
     },
-    ".radioGroup-default-no-outline:disabled": {
+    ".radio-group-default-no-outline:disabled": {
       "@apply bg-[rgba(31,41,55,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-default-glowing": {
+    ".radio-group-default-glowing": {
       "@apply bg-[#1f293733] border border-[#1f2937] shadow-[0_0_8px_#1f293780]":
         {},
     },
-    ".radioGroup-default-glowing:hover": {
+    ".radio-group-default-glowing:hover": {
       "@apply bg-[#11182744] border border-[#111827] shadow-[0_0_12px_#11182780]":
         {},
     },
-    ".radioGroup-default-glowing:disabled": {
+    ".radio-group-default-glowing:disabled": {
       "@apply bg-[rgba(31,41,55,0.5)] border border-[rgba(31,41,55,0.5)] shadow-[0_0_8px_rgba(31,41,55,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-primary-solid": {
+    ".radio-group-primary-solid": {
       "@apply bg-[#2563eb]": {},
     },
-    ".radioGroup-primary-solid:hover": {
+    ".radio-group-primary-solid:hover": {
       "@apply bg-[#1d4ed8]": {},
     },
-    ".radioGroup-primary-solid:disabled": {
+    ".radio-group-primary-solid:disabled": {
       "@apply bg-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-primary-outline": {
+    ".radio-group-primary-outline": {
       "@apply bg-[#2563eb33] border border-[#2563eb]": {},
     },
-    ".radioGroup-primary-outline:hover": {
+    ".radio-group-primary-outline:hover": {
       "@apply bg-[#1d4ed844] border border-[#1d4ed8]": {},
     },
-    ".radioGroup-primary-outline:disabled": {
+    ".radio-group-primary-outline:disabled": {
       "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-primary-outline-dashed": {
+    ".radio-group-primary-outline-dashed": {
       "@apply bg-[#2563eb33] border-dashed border-[#2563eb]": {},
     },
-    ".radioGroup-primary-outline-dashed:hover": {
+    ".radio-group-primary-outline-dashed:hover": {
       "@apply bg-[#1d4ed844] border-dashed border-[#1d4ed8]": {},
     },
-    ".radioGroup-primary-outline-dashed:disabled": {
+    ".radio-group-primary-outline-dashed:disabled": {
       "@apply bg-[rgba(37,99,235,0.5)] border-dashed border-[rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-primary-no-outline": {
+    ".radio-group-primary-no-outline": {
       "@apply bg-[#2563eb33] border-transparent": {},
     },
-    ".radioGroup-primary-no-outline:hover": {
+    ".radio-group-primary-no-outline:hover": {
       "@apply bg-[#1d4ed844] border-transparent": {},
     },
-    ".radioGroup-primary-no-outline:disabled": {
+    ".radio-group-primary-no-outline:disabled": {
       "@apply bg-[rgba(37,99,235,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-primary-glowing": {
+    ".radio-group-primary-glowing": {
       "@apply bg-[#2563eb33] border border-[#2563eb] shadow-[0_0_8px_#2563eb80]":
         {},
     },
-    ".radioGroup-primary-glowing:hover": {
+    ".radio-group-primary-glowing:hover": {
       "@apply bg-[#1d4ed844] border border-[#1d4ed8] shadow-[0_0_12px_#1d4ed880]":
         {},
     },
-    ".radioGroup-primary-glowing:disabled": {
+    ".radio-group-primary-glowing:disabled": {
       "@apply bg-[rgba(37,99,235,0.5)] border border-[rgba(37,99,235,0.5)] shadow-[0_0_8px_rgba(37,99,235,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-secondary-solid": {
+    ".radio-group-secondary-solid": {
       "@apply bg-[#4f46e5]": {},
     },
-    ".radioGroup-secondary-solid:hover": {
+    ".radio-group-secondary-solid:hover": {
       "@apply bg-[#4338ca]": {},
     },
-    ".radioGroup-secondary-solid:disabled": {
+    ".radio-group-secondary-solid:disabled": {
       "@apply bg-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-secondary-outline": {
+    ".radio-group-secondary-outline": {
       "@apply bg-[#4f46e533] border border-[#4f46e5]": {},
     },
-    ".radioGroup-secondary-outline:hover": {
+    ".radio-group-secondary-outline:hover": {
       "@apply bg-[#4338ca44] border border-[#4338ca]": {},
     },
-    ".radioGroup-secondary-outline:disabled": {
+    ".radio-group-secondary-outline:disabled": {
       "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-secondary-outline-dashed": {
+    ".radio-group-secondary-outline-dashed": {
       "@apply bg-[#4f46e533] border-dashed border-[#4f46e5]": {},
     },
-    ".radioGroup-secondary-outline-dashed:hover": {
+    ".radio-group-secondary-outline-dashed:hover": {
       "@apply bg-[#4338ca44] border-dashed border-[#4338ca]": {},
     },
-    ".radioGroup-secondary-outline-dashed:disabled": {
+    ".radio-group-secondary-outline-dashed:disabled": {
       "@apply bg-[rgba(79,70,229,0.5)] border-dashed border-[rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-secondary-no-outline": {
+    ".radio-group-secondary-no-outline": {
       "@apply bg-[#4f46e533] border-transparent": {},
     },
-    ".radioGroup-secondary-no-outline:hover": {
+    ".radio-group-secondary-no-outline:hover": {
       "@apply bg-[#4338ca44] border-transparent": {},
     },
-    ".radioGroup-secondary-no-outline:disabled": {
+    ".radio-group-secondary-no-outline:disabled": {
       "@apply bg-[rgba(79,70,229,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-secondary-glowing": {
+    ".radio-group-secondary-glowing": {
       "@apply bg-[#4f46e533] border border-[#4f46e5] shadow-[0_0_8px_#4f46e580]":
         {},
     },
-    ".radioGroup-secondary-glowing:hover": {
+    ".radio-group-secondary-glowing:hover": {
       "@apply bg-[#4338ca44] border border-[#4338ca] shadow-[0_0_12px_#4338ca80]":
         {},
     },
-    ".radioGroup-secondary-glowing:disabled": {
+    ".radio-group-secondary-glowing:disabled": {
       "@apply bg-[rgba(79,70,229,0.5)] border border-[rgba(79,70,229,0.5)] shadow-[0_0_8px_rgba(79,70,229,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-success-solid": {
+    ".radio-group-success-solid": {
       "@apply bg-[#16a34a]": {},
     },
-    ".radioGroup-success-solid:hover": {
+    ".radio-group-success-solid:hover": {
       "@apply bg-[#15803d]": {},
     },
-    ".radioGroup-success-solid:disabled": {
+    ".radio-group-success-solid:disabled": {
       "@apply bg-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-success-outline": {
+    ".radio-group-success-outline": {
       "@apply bg-[#16a34a33] border border-[#16a34a]": {},
     },
-    ".radioGroup-success-outline:hover": {
+    ".radio-group-success-outline:hover": {
       "@apply bg-[#15803d44] border border-[#15803d]": {},
     },
-    ".radioGroup-success-outline:disabled": {
+    ".radio-group-success-outline:disabled": {
       "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-success-outline-dashed": {
+    ".radio-group-success-outline-dashed": {
       "@apply bg-[#16a34a33] border-dashed border-[#16a34a]": {},
     },
-    ".radioGroup-success-outline-dashed:hover": {
+    ".radio-group-success-outline-dashed:hover": {
       "@apply bg-[#15803d44] border-dashed border-[#15803d]": {},
     },
-    ".radioGroup-success-outline-dashed:disabled": {
+    ".radio-group-success-outline-dashed:disabled": {
       "@apply bg-[rgba(22,163,74,0.5)] border-dashed border-[rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-success-no-outline": {
+    ".radio-group-success-no-outline": {
       "@apply bg-[#16a34a33] border-transparent": {},
     },
-    ".radioGroup-success-no-outline:hover": {
+    ".radio-group-success-no-outline:hover": {
       "@apply bg-[#15803d44] border-transparent": {},
     },
-    ".radioGroup-success-no-outline:disabled": {
+    ".radio-group-success-no-outline:disabled": {
       "@apply bg-[rgba(22,163,74,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-success-glowing": {
+    ".radio-group-success-glowing": {
       "@apply bg-[#16a34a33] border border-[#16a34a] shadow-[0_0_8px_#16a34a80]":
         {},
     },
-    ".radioGroup-success-glowing:hover": {
+    ".radio-group-success-glowing:hover": {
       "@apply bg-[#15803d44] border border-[#15803d] shadow-[0_0_12px_#15803d80]":
         {},
     },
-    ".radioGroup-success-glowing:disabled": {
+    ".radio-group-success-glowing:disabled": {
       "@apply bg-[rgba(22,163,74,0.5)] border border-[rgba(22,163,74,0.5)] shadow-[0_0_8px_rgba(22,163,74,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-warning-solid": {
+    ".radio-group-warning-solid": {
       "@apply bg-[#d97706]": {},
     },
-    ".radioGroup-warning-solid:hover": {
+    ".radio-group-warning-solid:hover": {
       "@apply bg-[#b45309]": {},
     },
-    ".radioGroup-warning-solid:disabled": {
+    ".radio-group-warning-solid:disabled": {
       "@apply bg-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-warning-outline": {
+    ".radio-group-warning-outline": {
       "@apply bg-[#d9770633] border border-[#d97706]": {},
     },
-    ".radioGroup-warning-outline:hover": {
+    ".radio-group-warning-outline:hover": {
       "@apply bg-[#b4530944] border border-[#b45309]": {},
     },
-    ".radioGroup-warning-outline:disabled": {
+    ".radio-group-warning-outline:disabled": {
       "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-warning-outline-dashed": {
+    ".radio-group-warning-outline-dashed": {
       "@apply bg-[#d9770633] border-dashed border-[#d97706]": {},
     },
-    ".radioGroup-warning-outline-dashed:hover": {
+    ".radio-group-warning-outline-dashed:hover": {
       "@apply bg-[#b4530944] border-dashed border-[#b45309]": {},
     },
-    ".radioGroup-warning-outline-dashed:disabled": {
+    ".radio-group-warning-outline-dashed:disabled": {
       "@apply bg-[rgba(217,119,6,0.5)] border-dashed border-[rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-warning-no-outline": {
+    ".radio-group-warning-no-outline": {
       "@apply bg-[#d9770633] border-transparent": {},
     },
-    ".radioGroup-warning-no-outline:hover": {
+    ".radio-group-warning-no-outline:hover": {
       "@apply bg-[#b4530944] border-transparent": {},
     },
-    ".radioGroup-warning-no-outline:disabled": {
+    ".radio-group-warning-no-outline:disabled": {
       "@apply bg-[rgba(217,119,6,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-warning-glowing": {
+    ".radio-group-warning-glowing": {
       "@apply bg-[#d9770633] border border-[#d97706] shadow-[0_0_8px_#d9770680]":
         {},
     },
-    ".radioGroup-warning-glowing:hover": {
+    ".radio-group-warning-glowing:hover": {
       "@apply bg-[#b4530944] border border-[#b45309] shadow-[0_0_12px_#b4530980]":
         {},
     },
-    ".radioGroup-warning-glowing:disabled": {
+    ".radio-group-warning-glowing:disabled": {
       "@apply bg-[rgba(217,119,6,0.5)] border border-[rgba(217,119,6,0.5)] shadow-[0_0_8px_rgba(217,119,6,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-error-solid": {
+    ".radio-group-error-solid": {
       "@apply bg-[#dc2626]": {},
     },
-    ".radioGroup-error-solid:hover": {
+    ".radio-group-error-solid:hover": {
       "@apply bg-[#b91c1c]": {},
     },
-    ".radioGroup-error-solid:disabled": {
+    ".radio-group-error-solid:disabled": {
       "@apply bg-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed": {},
     },
-    ".radioGroup-error-outline": {
+    ".radio-group-error-outline": {
       "@apply bg-[#dc262633] border border-[#dc2626]": {},
     },
-    ".radioGroup-error-outline:hover": {
+    ".radio-group-error-outline:hover": {
       "@apply bg-[#b91c1c44] border border-[#b91c1c]": {},
     },
-    ".radioGroup-error-outline:disabled": {
+    ".radio-group-error-outline:disabled": {
       "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-error-outline-dashed": {
+    ".radio-group-error-outline-dashed": {
       "@apply bg-[#dc262633] border-dashed border-[#dc2626]": {},
     },
-    ".radioGroup-error-outline-dashed:hover": {
+    ".radio-group-error-outline-dashed:hover": {
       "@apply bg-[#b91c1c44] border-dashed border-[#b91c1c]": {},
     },
-    ".radioGroup-error-outline-dashed:disabled": {
+    ".radio-group-error-outline-dashed:disabled": {
       "@apply bg-[rgba(220,38,38,0.5)] border-dashed border-[rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-error-no-outline": {
+    ".radio-group-error-no-outline": {
       "@apply bg-[#dc262633] border-transparent": {},
     },
-    ".radioGroup-error-no-outline:hover": {
+    ".radio-group-error-no-outline:hover": {
       "@apply bg-[#b91c1c44] border-transparent": {},
     },
-    ".radioGroup-error-no-outline:disabled": {
+    ".radio-group-error-no-outline:disabled": {
       "@apply bg-[rgba(220,38,38,0.5)] border-transparent opacity-50 cursor-not-allowed":
         {},
     },
-    ".radioGroup-error-glowing": {
+    ".radio-group-error-glowing": {
       "@apply bg-[#dc262633] border border-[#dc2626] shadow-[0_0_8px_#dc262680]":
         {},
     },
-    ".radioGroup-error-glowing:hover": {
+    ".radio-group-error-glowing:hover": {
       "@apply bg-[#b91c1c44] border border-[#b91c1c] shadow-[0_0_12px_#b91c1c80]":
         {},
     },
-    ".radioGroup-error-glowing:disabled": {
+    ".radio-group-error-glowing:disabled": {
       "@apply bg-[rgba(220,38,38,0.5)] border border-[rgba(220,38,38,0.5)] shadow-[0_0_8px_rgba(220,38,38,0.5)] opacity-50 cursor-not-allowed":
         {},
     },

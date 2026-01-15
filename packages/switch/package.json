@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/switch",
   "description": "A fully typed, customizable Switch/toggle component for React with multiple sizes, variants, label alignments, and optional icons. Built to integrate seamlessly with AristoByteUI design tokens and SCSS modules.",
-  "version": "1.0.112",
+  "version": "1.0.113",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -42,9 +42,14 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": {
+    "development": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    },
+    "default": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
@@ -58,8 +63,8 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.112",
-    "@aristobyte-ui/typescript-config": "^1.0.112",
+    "@aristobyte-ui/eslint-config": "^1.0.113",
+    "@aristobyte-ui/typescript-config": "^1.0.113",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "19.1.0",
