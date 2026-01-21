@@ -75,7 +75,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+          jq '.registry="https://registry.npmjs.org/"' .changeset/config.json > .changeset/config.tmp.json
+          mv .changeset/config.tmp.json .changeset/config.json
           yarn changeset publish --yes --access public
 
       # 1️⃣1️⃣ Publish to GitHub Packages
@@ -83,6 +84,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          echo "@aristobyte-ui:registry=https://npm.pkg.github.com/" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
+          jq '.registry="https://npm.pkg.github.com/"' .changeset/config.json > .changeset/config.tmp.json
+          mv .changeset/config.tmp.json .changeset/config.json
           yarn changeset publish --yes --access public
