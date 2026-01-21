@@ -1,5 +1,11 @@
 # @aristobyte-ui/eslint-config
 
+## 2.1.2
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
 ## 2.1.1
 
 ### Patch Changes
