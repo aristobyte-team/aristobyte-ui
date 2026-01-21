@@ -41,7 +41,7 @@ aristobyteui
   .option('-T, --template <templateName>', 'Specify a template to use')
   .option('-P, --package-manager <packageManager>', 'Select a package manager (npm, yarn, pnpm, bun)')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(init);
 aristobyteui
@@ -51,7 +51,7 @@ aristobyteui
   .option('-L, --list', 'Display a list of available packages, to be added')
   .option('-P, --package-manager', 'Show the package manager used in current project')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(add);
 aristobyteui
@@ -61,7 +61,7 @@ aristobyteui
   .option('-L, --list', 'Display a list of installed packages, to be removed')
   .option('-P, --package-manager', 'Show the package manager used in current project')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(remove);
 aristobyteui
@@ -71,7 +71,7 @@ aristobyteui
   .option('-A, --all', 'Upgrade all AristoByteUI components')
   .option('-T, --to <version>', 'Upgrade to a specific version')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(upgrade);
 aristobyteui
@@ -82,7 +82,7 @@ aristobyteui
   .option('-I, --installed', 'Display the list of installed packages')
   .option('-O, --outdated', 'Check for available updates')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action((options: Record<string, any>) => list(options, true));
 aristobyteui
@@ -97,7 +97,7 @@ aristobyteui
   .option('-P, --pm', 'Check package manager state')
   .option('-S, --system', 'Check system environment')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(doctor);
 aristobyteui
@@ -111,7 +111,7 @@ aristobyteui
   .option('-P, --packages', 'Show installed AristoByteUI packages')
   .option('-S, --system', 'Show system information')
   .configureHelp({
-     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
+    formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
   })
   .action(env);
 aristobyteui
@@ -122,7 +122,7 @@ aristobyteui
 // @ts-ignore
 aristobyteui.command('help', { hidden: true });
 
-aristobyteui.exitOverride(async (err: { code:string, message:string }) => {
+aristobyteui.exitOverride(async (err: { code: string; message: string }) => {
   if (err.code === 'commander.unknownCommand') {
     console.error(
       logoSmallGradient(' ◆ Possible commands are: \n'),
@@ -133,7 +133,6 @@ aristobyteui.exitOverride(async (err: { code:string, message:string }) => {
       )
     );
   }
-
   process.exit(1);
 });
 
