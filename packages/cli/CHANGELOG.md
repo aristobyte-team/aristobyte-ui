@@ -1,5 +1,11 @@
 # @aristobyte-ui/cli
 
+## 2.1.9
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
 ## 2.1.8
 
 ### Patch Changes
