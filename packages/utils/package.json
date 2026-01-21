@@ -32,7 +32,8 @@
     "aristobyte"
   ],
   "files": [
-    "dist",
+    "es",
+    "lib",
     "aristobyte-ui.settings.scss"
   ],
   "publishConfig": {

@@ -31,7 +31,8 @@
     "package-management"
   ],
   "files": [
-    "dist",
+    "es",
+    "lib",
     "bin"
   ],
   "publishConfig": {

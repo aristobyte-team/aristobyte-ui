@@ -80,7 +80,8 @@ cat > "$PKG_DIR/package.json" <<EOF
     "typescript"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

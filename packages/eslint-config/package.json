@@ -44,7 +44,8 @@
     "./next": "./dist/eslint.next.js"
   },
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

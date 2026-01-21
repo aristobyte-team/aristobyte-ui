@@ -73,13 +73,13 @@ jobs:
       # 1️⃣0️⃣ Publish to NPM
       - name: Publish to NPM
         env:
+          SCOPE: NPM
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          yarn changeset publish --yes --access public
+        run: bash ./scripts/publish.sh
 
       # 1️⃣1️⃣ Publish to GitHub Packages
       - name: Publish to GitHub Packages
         env:
+          SCOPE: GITHUB_PACKAGES
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm publish ./packages/react --access public --registry https://npm.pkg.github.com/ --//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
+        run: bash publish.sh
