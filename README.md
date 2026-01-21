@@ -88,6 +88,9 @@ AristoByteUI consists of a curated set of components and utilities:
 # Yarn
 yarn add @aristobyte-ui
 
+# bun
+bun add @aristobyte-ui
+
 # NPM
 npm install @aristobyte-ui
 
@@ -100,6 +103,9 @@ pnpm add @aristobyte-ui
 ```bash
 # Yarn
 yarn add @aristobyte-ui/$PACKAGE
+
+# bun
+bun add @aristobyte-ui
 
 # NPM
 npm install @aristobyte-ui/$PACKAGE
