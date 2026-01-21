@@ -75,8 +75,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          jq '.registry="https://registry.npmjs.org/"' .changeset/config.json > .changeset/config.tmp.json
-          mv .changeset/config.tmp.json .changeset/config.json
           yarn changeset publish --yes --access public
 
       # 1️⃣1️⃣ Publish to GitHub Packages
@@ -84,6 +82,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq '.registry="https://npm.pkg.github.com/"' .changeset/config.json > .changeset/config.tmp.json
-          mv .changeset/config.tmp.json .changeset/config.json
-          yarn changeset publish --yes --access public
+          npm publish ./packages/react --access public --registry https://npm.pkg.github.com/ --//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
