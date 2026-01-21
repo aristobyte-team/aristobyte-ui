@@ -1,4 +1,4 @@
-name: Version Bump & Tag
+name: Release Stable
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  bump-and-tag:
+  release-stable:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'chore: publish v')"
     permissions:
@@ -14,10 +14,14 @@ jobs:
       packages: write
 
     steps:
+      # 1️⃣ Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # ensure tags are available
 
-      - name: Setup Node.js (from .nvmrc)
+      # 2️⃣ Node + Corepack
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
@@ -26,18 +30,23 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      # 4️⃣ Detect bump type (optional custom script)
       - name: Detect Bump type
         run: yarn check-version
 
-      - name: Run Changeset Status
+      # 5️⃣ Run Changeset status
+      - name: Changeset status
         run: yarn changeset status
 
+      # 6️⃣ Bump packages
       - name: Bump packages
         run: yarn changeset version --yes
 
+      # 7️⃣ Commit bump and tag
       - name: Commit and Tag
         run: |
           VERSION=$(node -p "require('./packages/react/package.json').version")
@@ -48,3 +57,13 @@ jobs:
           git push origin HEAD
           git tag v$VERSION
           git push origin v$VERSION
+
+      # 8️⃣ Build monorepo packages
+      - name: Build packages
+        run: yarn build
+
+      # 9️⃣ Publish to npm
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn changeset publish --yes
