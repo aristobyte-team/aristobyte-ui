@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/label",
   "description": "AristoByteUI Label component: a reusable, styled label for forms and UI elements.",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -46,6 +46,6 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/utils": "2.1.4"
+    "@aristobyte-ui/utils": "2.1.5"
   }
 }
