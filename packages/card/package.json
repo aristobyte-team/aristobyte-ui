@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/card",
   "description": "AristoByteUI Card component: a versatile container for displaying content and UI elements.",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -46,7 +46,7 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/label": "2.1.5",
-    "@aristobyte-ui/utils": "2.1.5"
+    "@aristobyte-ui/label": "2.1.6",
+    "@aristobyte-ui/utils": "2.1.6"
   }
 }
