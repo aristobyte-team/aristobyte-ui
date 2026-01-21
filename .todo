@@ -1,9 +1,0 @@
-- investigate what is `packages/ui/turbo/`
-- fix the button ripple - when clicking on multiple buttons couple of times and then back to the first button the ripple position is not the same as mouse
-- ✅ Optional Runtime Guard (for Dev Safety)
-- consider using `clsx` to fix the className issues
-- Convert the 'type' to 'appearance'
-- Add `type` section at the bottom of each component
-- Implement a general getProperties based on provided size prop (!IMPORTANT)
-- DOCS: colors can be randomized for each section label and icon
-- package/react - README.md update the docs (currently there is the docs of anchor) !IMPORTANT

@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/cli",
   "description": "The official AristoByteUI CLI — initialize projects, install, upgrade, remove, and manage UI components seamlessly.",
-  "version": "1.0.113",
+  "version": "2.0.0",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
-    "directory": "./"
+    "directory": "packages/cli"
   },
   "bugs": {
     "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
@@ -31,53 +31,27 @@
     "package-management"
   ],
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/lib/main/index.js",
+  "module": "dist/es/main/index.js",
   "bin": {
     "aristobyte-ui": "dist/index.js"
   },
-  "exports": {
-    "development": {
-      "import": "./index.ts",
-      "types": "./index.ts"
-    },
-    "default": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup ./index.ts --watch",
-    "dev": "tsup && node ./bin/aristobyte-ui.js",
-    "start": "node ./bin/aristobyte-ui.js",
-    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
-    "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "check-types": "tsc --noEmit"
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.113",
-    "@aristobyte-ui/typescript-config": "^1.0.113",
     "@clack/prompts": "^0.11.0",
     "axios": "^1.6.0",
-    "chalk": "^5.6.1",
-    "commander": "^11.0.0",
-    "execa": "^8.0.0",
+    "chalk": "^4.1.2",
+    "commander": "^10",
+    "execa": "^7",
     "gradient-string": "^3.0.0"
-  },
-  "devDependencies": {
-    "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.6",
-    "@types/node": "^24.3.1",
-    "eslint": "^9.35.0",
-    "ts-node": "^10.9.2",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
   }
 }

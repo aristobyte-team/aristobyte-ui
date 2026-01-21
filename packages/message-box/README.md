@@ -29,7 +29,7 @@ pnpm add -D @aristobyte-ui/message-box
 ## 🛠 Usage
 
 ```tsx
-import { MessageBox } from "@aristobyte-ui/message-box";
+import { MessageBox } from '@aristobyte-ui/message-box';
 
 export default function App() {
   return (

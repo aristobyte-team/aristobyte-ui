@@ -1,0 +1,27 @@
+// used by IDE only to support "Go to definition" and error highlighting
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "any",
+    "baseUrl": "./",
+    "paths": {
+      "@aristobyte-ui/anchor": ["packages/anchor/src/main"],
+      "@aristobyte-ui/button": ["packages/button/src/main"],
+      "@aristobyte-ui/card": ["packages/card/src/main"],
+      "@aristobyte-ui/cli": ["packages/cli/src/main"],
+      "@aristobyte-ui/dropdown": ["packages/dropdown/src/main"],
+      "@aristobyte-ui/eslint-config": ["packages/eslint-config/src/main"],
+      "@aristobyte-ui/jest-config": ["packages/jest-config/src/main"],
+      "@aristobyte-ui/label": ["packages/label/src/main"],
+      "@aristobyte-ui/message-box": ["packages/message-box/src/main"],
+      "@aristobyte-ui/presets": ["packages/presets/src/main"],
+      "@aristobyte-ui/radio": ["packages/radio/src/main"],
+      "@aristobyte-ui/react": ["packages/react/src/main"],
+      "@aristobyte-ui/spinner": ["packages/spinner/src/main"],
+      "@aristobyte-ui/switch": ["packages/switch/src/main"],
+      "@aristobyte-ui/typescript-config": ["packages/typescript-config/src/main"],
+      "@aristobyte-ui/utils": ["packages/utils/src/main"]
+    }
+  },
+  "include": ["packages/*/src/**/*", "@types"]
+}

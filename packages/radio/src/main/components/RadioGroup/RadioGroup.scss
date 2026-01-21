@@ -1,0 +1,15 @@
+@use '@aristobyte-ui/utils/aristobyte-ui.settings' as *;
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  min-width: max-content;
+
+  &--horizontal {
+    flex-direction: row;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+}

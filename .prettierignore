@@ -1,0 +1,7 @@
+coverage/
+dist/
+src-prebuild/
+
+CHANGELOG.md
+
+!.*

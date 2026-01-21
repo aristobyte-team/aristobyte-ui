@@ -36,21 +36,21 @@ Extend one of the provided configs in your `eslint.config.js` (Flat Config):
 **Base (TypeScript + general rules):**
 
 ```js
-import { config } from "@aristobyte-ui/eslint-config/base";
+import { config } from '@aristobyte-ui/eslint-config/base';
 export default config;
 ```
 
 **React (includes React + Hooks best practices):**
 
 ```js
-import { config } from "@aristobyte-ui/eslint-config/react";
+import { config } from '@aristobyte-ui/eslint-config/react';
 export default config;
 ```
 
 **Next.js (includes React + Next.js rules):**
 
 ```js
-import { nextJsConfig } from "@aristobyte-ui/eslint-config/next";
+import { nextJsConfig } from '@aristobyte-ui/eslint-config/next';
 export default nextJsConfig;
 ```
 
@@ -70,7 +70,7 @@ export default nextJsConfig;
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@aristobyte-ui/eslint-config": "*",
+    "@aristobyte-ui/eslint-config": "2.0.0",
     "eslint": "^9.0.0"
   }
 }
@@ -79,7 +79,7 @@ export default nextJsConfig;
 And `eslint.config.js:`
 
 ```js
-import { config } from "@aristobyte-ui/eslint-config/react";
+import { config } from '@aristobyte-ui/eslint-config/react';
 export default config;
 ```
 

@@ -1,11 +1,11 @@
 {
   "name": "@aristobyte-ui/react",
   "description": "AristoByte UI — the complete suite of reusable, production-ready React components with built-in design tokens, accessibility, and theming. Install this package to get the full library in a single dependency.",
-  "version": "1.0.113",
+  "version": "2.0.0",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://www.npmjs.com/package/@aristobyte-ui",
+  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/react",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
@@ -53,51 +53,21 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "exports": {
-    "development": {
-      "import": "./index.ts",
-      "types": "./index.ts"
-    },
-    "default": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
-  },
+  "main": "dist/lib/main/index.js",
+  "module": "dist/es/main/index.js",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "^1.0.113",
-    "@aristobyte-ui/button": "^1.0.113",
-    "@aristobyte-ui/dropdown": "^1.0.113",
-    "@aristobyte-ui/message-box": "^1.0.113",
-    "@aristobyte-ui/presets": "^1.0.113",
-    "@aristobyte-ui/radio": "^1.0.113",
-    "@aristobyte-ui/spinner": "^1.0.113",
-    "@aristobyte-ui/switch": "^1.0.113",
-    "@aristobyte-ui/utils": "^1.0.113"
-  },
-  "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.113",
-    "@aristobyte-ui/jest-config": "^1.0.113",
-    "@aristobyte-ui/typescript-config": "^1.0.113",
-    "@turbo/gen": "^2.5.0",
-    "@types/node": "^24.3.0",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "^9.27.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "@aristobyte-ui/anchor": "2.0.0",
+    "@aristobyte-ui/button": "2.0.0",
+    "@aristobyte-ui/dropdown": "2.0.0",
+    "@aristobyte-ui/message-box": "2.0.0",
+    "@aristobyte-ui/presets": "2.0.0",
+    "@aristobyte-ui/radio": "2.0.0",
+    "@aristobyte-ui/spinner": "2.0.0",
+    "@aristobyte-ui/switch": "2.0.0",
+    "@aristobyte-ui/utils": "2.0.0"
   }
 }

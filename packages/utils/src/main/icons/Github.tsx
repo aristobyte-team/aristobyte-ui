@@ -1,0 +1,21 @@
+import * as React from 'react';
+import { IconPropsType } from './type';
+
+export const Github = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
+  <svg width={size} height={size} viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M10 14.6667V12C10.0928 11.1649 9.85329 10.3268 9.33334 9.66668C11.3333 9.66668 13.3333 8.33334 13.3333 6.00001C13.3867 5.16668 13.1533 4.34668 12.6667 3.66668C12.8533 2.90001 12.8533 2.10001 12.6667 1.33334C12.6667 1.33334 12 1.33334 10.6667 2.33334C8.90667 2.00001 7.09334 2.00001 5.33334 2.33334C4 1.33334 3.33334 1.33334 3.33334 1.33334C3.13334 2.10001 3.13334 2.90001 3.33334 3.66668C2.84792 4.34393 2.61232 5.16853 2.66667 6.00001C2.66667 8.33334 4.66667 9.66668 6.66667 9.66668C6.40667 9.99334 6.21334 10.3667 6.1 10.7667C5.98667 11.1667 5.95334 11.5867 6 12V14.6667"
+      stroke={color}
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.99998 12C2.99331 13.3333 2.66665 10.6667 1.33331 10.6667"
+      stroke={color}
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

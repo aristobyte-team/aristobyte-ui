@@ -1,0 +1,9 @@
+{
+  "extends": ["gitlab>williamhillplc/customer-engagement/central-products/central-services/renovate-config:node18"],
+  "packageRules": [
+    {
+      "matchPackageNames": [], // Add package names here to disable Renovate for them
+      "enabled": false
+    }
+  ]
+}

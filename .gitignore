@@ -1,42 +1,16 @@
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+.idea/
+.vscode/
+.history/
+coverage/
+dist/
+dist-test/
+node_modules/
+src-prebuild/
 
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.npmrc
+*.code-workspace
+*.iml
+*.log*
+*.sublime-*
 
-# Testing
-coverage
-ui-test-install/
-
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
-.next/
-out/
-build
-dist
-**/*.tgz
-
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Misc
 .DS_Store
-*.pem
-
-# Generated files
-*.generated.ts
+.eslintcache

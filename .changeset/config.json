@@ -1,9 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "aristobyte-team/aristobyte-ui" }
-  ],
+  "changelog": ["@changesets/changelog-github", { "repo": "aristobyte-team/aristobyte-ui" }],
   "commit": false,
   "fixed": [["@aristobyte-ui/*"]],
   "linked": [],

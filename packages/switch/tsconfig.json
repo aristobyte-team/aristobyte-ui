@@ -1,6 +1,0 @@
-{
-  "extends": "@aristobyte-ui/typescript-config/package",
-  "compilerOptions": { "baseUrl": "packages/switch" },
-  "include": ["components", "index.ts"],
-  "exclude": ["node_modules", "dist"]
-}

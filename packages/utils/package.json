@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/utils",
   "description": "A collection of shared utility functions for AristoByte projects, designed to provide reusable helpers, streamline common operations, and ensure consistency across applications and packages.",
-  "version": "1.0.113",
+  "version": "2.0.0",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -33,48 +33,15 @@
   ],
   "files": [
     "dist",
-    "styles"
+    "aristobyte-ui.settings.scss"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "exports": {
-    "development": {
-      "import": "./index.ts",
-      "types": "./index.ts"
-    },
-    "default": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./styles/settings": {
-      "import": "./dist/styles/_settings.scss",
-      "require": "./dist/styles/_settings.scss"
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
-  },
+  "main": "dist/lib/main/index.js",
+  "module": "dist/es/main/index.js",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
-  },
-  "devDependencies": {
-    "@aristobyte-ui/eslint-config": "^1.0.113",
-    "@aristobyte-ui/typescript-config": "^1.0.113",
-    "@turbo/gen": "^2.5.0",
-    "@types/node": "^24.3.0",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "^9.27.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
   }
 }

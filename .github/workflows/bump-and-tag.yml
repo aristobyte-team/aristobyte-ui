@@ -1,0 +1,50 @@
+name: Version Bump & Tag
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  bump-and-tag:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore: publish v')"
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (from .nvmrc)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org/
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Detect Bump type
+        run: yarn check-version
+
+      - name: Run Changeset Status
+        run: yarn changeset status
+
+      - name: Bump packages
+        run: yarn changeset version --yes
+
+      - name: Commit and Tag
+        run: |
+          VERSION=$(node -p "require('./packages/react/package.json').version")
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps/*/package.json apps/*/CHANGELOG.md packages/*/package.json packages/*/CHANGELOG.md yarn.lock
+          git commit -m "chore: publish v$VERSION [skip ci]"
+          git tag v$VERSION
+          git push origin HEAD
+          git push origin v$VERSION

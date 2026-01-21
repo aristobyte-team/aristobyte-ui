@@ -1,0 +1,320 @@
+@use '@aristobyte-ui/utils/styles/settings' as *;
+
+.message-box {
+  align-items: flex-start;
+  color: $white;
+
+  display: flex;
+  padding: 0.75rem 1rem;
+  padding: 1rem;
+
+  &-radius {
+    &--none {
+      border-radius: 0rem; // 0px
+    }
+
+    &--sm {
+      border-radius: 0.25rem; // 4px
+    }
+
+    &--md {
+      border-radius: 0.5rem; // 8px
+    }
+
+    &--lg {
+      border-radius: 0.625rem; // 10px
+    }
+
+    &--full {
+      border-radius: 1.5rem; // 24px
+    }
+  }
+
+  &__content {
+    color: $white;
+    font-family: $font-family-sans;
+    font-size: $font-size-body-sm;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-normal;
+  }
+
+  &--default.message-box-type {
+    &--solid {
+      background-color: rgba($grey-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px solid $grey-600;
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px dashed $grey-600;
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($grey-600, 0.2);
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($grey-600, 0.2);
+      border: 1px solid $grey-600;
+      box-shadow:
+        0 0 8px rgba($grey-600, 0.5),
+        0 0 16px rgba($grey-600, 0.4),
+        0 0 24px rgba($grey-600, 0.3);
+
+      .message-box__icon {
+        color: $grey-600;
+      }
+    }
+  }
+
+  &--info.message-box-type {
+    &--solid {
+      background-color: rgba($blue-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px solid $blue-600;
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px dashed $blue-600;
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($blue-600, 0.2);
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($blue-600, 0.2);
+      border: 1px solid $blue-600;
+      box-shadow:
+        0 0 8px rgba($blue-600, 0.5),
+        0 0 16px rgba($blue-600, 0.4),
+        0 0 24px rgba($blue-600, 0.3);
+
+      .message-box__icon {
+        color: $blue-600;
+      }
+    }
+  }
+
+  &--success.message-box-type {
+    &--solid {
+      background-color: rgba($green-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($green-600, 0.2);
+      border: 1px solid $green-600;
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($green-600, 0.2);
+      border: 1px dashed $green-600;
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($green-600, 0.2);
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($green-600, 0.2);
+      border: 1px solid $green-600;
+      box-shadow:
+        0 0 8px rgba($green-600, 0.5),
+        0 0 16px rgba($green-600, 0.4),
+        0 0 24px rgba($green-600, 0.3);
+
+      .message-box__icon {
+        color: $green-600;
+      }
+    }
+  }
+
+  &--warning.message-box-type {
+    &--solid {
+      background-color: rgba($amber-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px solid $amber-600;
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px dashed $amber-600;
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($amber-600, 0.2);
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($amber-600, 0.2);
+      border: 1px solid $amber-600;
+      box-shadow:
+        0 0 8px rgba($amber-600, 0.5),
+        0 0 16px rgba($amber-600, 0.4),
+        0 0 24px rgba($amber-600, 0.3);
+
+      .message-box__icon {
+        color: $amber-600;
+      }
+    }
+  }
+
+  &--error.message-box-type {
+    &--solid {
+      background-color: rgba($red-600, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($red-600, 0.2);
+      border: 1px solid $red-600;
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($red-600, 0.2);
+      border: 1px dashed $red-600;
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($red-600, 0.2);
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($red-600, 0.2);
+      border: 1px solid $red-600;
+      box-shadow:
+        0 0 8px rgba($red-600, 0.5),
+        0 0 16px rgba($red-600, 0.4),
+        0 0 24px rgba($red-600, 0.3);
+
+      .message-box__icon {
+        color: $red-600;
+      }
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px 0 0;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+
+    &--default {
+      color: $grey-600;
+    }
+
+    &--info {
+      color: $blue-600;
+    }
+
+    &--success {
+      color: $green-600;
+    }
+
+    &--warning {
+      color: $amber-600;
+    }
+
+    &--error {
+      color: $red-600;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+}

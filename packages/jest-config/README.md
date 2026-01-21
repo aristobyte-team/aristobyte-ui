@@ -31,21 +31,21 @@ pnpm add -D @aristobyte-ui/jest-config
 **Base config (Node environment):**
 
 ```ts
-import { config } from "@aristobyte-ui/jest-config/base";
+import { config } from '@aristobyte-ui/jest-config/base';
 export default config;
 ```
 
 **React config (includes Testing Library):**
 
 ```ts
-import { config } from "@aristobyte-ui/jest-config/react";
+import { config } from '@aristobyte-ui/jest-config/react';
 export default config;
 ```
 
 **Next.js config (includes React + moduleNameMapper for CSS/Assets):**
 
 ```ts
-import { config } from "@aristobyte-ui/jest-config/next";
+import { config } from '@aristobyte-ui/jest-config/next';
 export default config;
 ```
 
@@ -65,7 +65,7 @@ export default config;
     "test": "jest --config jest.config.js"
   },
   "devDependencies": {
-    "@aristobyte-ui/jest-config": "*",
+    "@aristobyte-ui/jest-config": "2.0.0",
     "jest": "^29.0.0",
     "@testing-library/jest-dom": "^6.0.0"
   }
@@ -75,7 +75,7 @@ export default config;
 And `jest.config.js`:
 
 ```ts
-import { config } from "@aristobyte-ui/jest-config/react";
+import { config } from '@aristobyte-ui/jest-config/react';
 export default config;
 ```
 

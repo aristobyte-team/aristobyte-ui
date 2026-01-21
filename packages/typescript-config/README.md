@@ -104,7 +104,7 @@ In your `tsconfig.json,` extend one of the provided presets.
     "build": "tsup"
   },
   "devDependencies": {
-    "@aristobyte-ui/typescript-config": "*",
+    "@aristobyte-ui/typescript-config": "2.0.0",
     "typescript": "^5.8.3"
   }
 }
