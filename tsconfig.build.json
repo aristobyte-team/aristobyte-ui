@@ -11,24 +11,24 @@
 
     "baseUrl": "./",
     "paths": {
-      "@aristobyte-ui/anchor": ["packages/anchor/src-prebuild/main"],
-      "@aristobyte-ui/button": ["packages/button/src-prebuild/main"],
-      "@aristobyte-ui/card": ["packages/card/src-prebuild/main"],
-      "@aristobyte-ui/cli": ["packages/cli/src-prebuild/main"],
-      "@aristobyte-ui/dropdown": ["packages/dropdown/src-prebuild/main"],
-      "@aristobyte-ui/eslint-config": ["packages/eslint-config/src-prebuild/main"],
-      "@aristobyte-ui/jest-config": ["packages/jest-config/src-prebuild/main"],
-      "@aristobyte-ui/label": ["packages/label/src-prebuild/main"],
-      "@aristobyte-ui/message-box": ["packages/message-box/src-prebuild/main"],
-      "@aristobyte-ui/presets": ["packages/presets/src-prebuild/main"],
-      "@aristobyte-ui/radio": ["packages/radio/src-prebuild/main"],
-      "@aristobyte-ui/react": ["packages/react/src-prebuild/main"],
-      "@aristobyte-ui/spinner": ["packages/spinner/src-prebuild/main"],
-      "@aristobyte-ui/switch": ["packages/switch/src-prebuild/main"],
-      "@aristobyte-ui/typescript-config": ["packages/typescript-config/src-prebuild/main"],
-      "@aristobyte-ui/utils": ["packages/utils/src-prebuild/main"],
+      "@aristobyte-ui/anchor": ["packages/anchor/src/main"],
+      "@aristobyte-ui/button": ["packages/button/src/main"],
+      "@aristobyte-ui/card": ["packages/card/src/main"],
+      "@aristobyte-ui/cli": ["packages/cli/src/main"],
+      "@aristobyte-ui/dropdown": ["packages/dropdown/src/main"],
+      "@aristobyte-ui/eslint-config": ["packages/eslint-config/src/main"],
+      "@aristobyte-ui/jest-config": ["packages/jest-config/src/main"],
+      "@aristobyte-ui/label": ["packages/label/src/main"],
+      "@aristobyte-ui/message-box": ["packages/message-box/src/main"],
+      "@aristobyte-ui/presets": ["packages/presets/src/main"],
+      "@aristobyte-ui/radio": ["packages/radio/src/main"],
+      "@aristobyte-ui/react": ["packages/react/src/main"],
+      "@aristobyte-ui/spinner": ["packages/spinner/src/main"],
+      "@aristobyte-ui/switch": ["packages/switch/src/main"],
+      "@aristobyte-ui/typescript-config": ["packages/typescript-config/src/main"],
+      "@aristobyte-ui/utils": ["packages/utils/src/main"],
       "*": ["@types/*", "node_modules/*", "node_modules/@types/*"]
     }
   },
-  "include": ["packages/*/src-prebuild/**/*", "@types"]
+  "include": ["packages/*/src/**/*", "@types"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/presets",
   "description": "A collection of prebuilt UI presets for AristoByteUI — including cards, widgets, dashboards, and interactive layouts — fully typed and styled with SCSS modules for seamless integration.",
-  "version": "2.1.8",
+  "version": "2.2.1",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -104,7 +104,8 @@
     "code-editor"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

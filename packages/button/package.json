@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/button",
-  "version": "2.1.8",
+  "version": "2.2.1",
   "description": "react button and buttongroup components with multiple variants, appearances, sizes, radius options, icons, ripple feedback, and fully typed typescript support",
   "license": "MIT",
   "private": false,
@@ -39,7 +39,8 @@
     "design-system"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/react",
   "description": "AristoByte UI — the complete suite of reusable, production-ready React components with built-in design tokens, accessibility, and theming. Install this package to get the full library in a single dependency.",
-  "version": "2.1.8",
+  "version": "2.2.1",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -48,7 +48,8 @@
     "ui-kit"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

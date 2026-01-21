@@ -1,6 +1,7 @@
 coverage/
 dist/
-src-prebuild/
+es/
+lib/
 
 CHANGELOG.md
 

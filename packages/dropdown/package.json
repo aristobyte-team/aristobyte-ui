@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/dropdown",
   "description": "react dropdown component with trigger button, dropdownoptions, placement variants, fully typed typescript support, and composable integration with aristobyte ui button",
-  "version": "2.1.8",
+  "version": "2.2.1",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -37,7 +37,8 @@
     "design-system"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

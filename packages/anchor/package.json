@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/anchor",
   "description": "A fully-typed, lightweight Anchor component for AristoByteUI with ripple effect support, multiple variants, and seamless integration with SCSS modules and design tokens.",
-  "version": "2.1.8",
+  "version": "2.2.1",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -34,7 +34,8 @@
     "ui-kit"
   ],
   "files": [
-    "dist"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

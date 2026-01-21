@@ -2,58 +2,140 @@
 
 set -e
 
+CYAN="\033[36m"
+RESET="\033[0m"
+
 SCRIPTS_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 REPO_DIR="${SCRIPTS_DIR}/.."
-ASSETS_EXTENSIONS="scss,svg,png,json"
+PACKAGES_DIR="${REPO_DIR}/packages"
+ROOT_DIST="${REPO_DIR}/dist"
 
-PREBUILD_DIR="src-prebuild"
-OUT_DIR="dist"
-OUT_ES_DIR="${OUT_DIR}/es"
-OUT_CJS_DIR="${OUT_DIR}/lib"
+log() {
+  echo -e "${CYAN}🦋 $1${RESET}"
+}
 
-function forEachPackage() {
-  PACKAGES_DIR="${REPO_DIR}/packages"
+forEachPackage() {
+  local callback=$1
+
   for dir in "${PACKAGES_DIR}"/*; do
-    cd "${dir}"
-    echo "Processing package in ${dir}"
-    if [ $(jq .private <package.json) == "true" ]; then
+    [ -d "$dir" ] || continue
+
+    local pkg_json="$dir/package.json"
+    local name=$(jq -r '.name' "$pkg_json")
+    local private=$(jq -r '.private // false' "$pkg_json")
+    local dirname=$(basename "$dir")
+
+    if [[ "$private" == "true" ]]; then
+      log "...Skipping private package: $dirname"
       continue
     fi
-    dirname=$(basename ${dir})
-    echo "${dirname}"
 
-    echo $($1)
+    log "🦋 Package: $dirname ($name)"
+    (cd "$dir" && "$callback" "$dir" "$dirname" "$pkg_json")
   done
 }
 
-echo "Preparing files to compile..."
-function prepare() {
-  rm -rf "${PREBUILD_DIR}"
-  mkdir "${PREBUILD_DIR}"
-  yarn copyfiles --up=1 "src/**/*.{ts,tsx}" "${PREBUILD_DIR}"
+# ----------------------------------------------------
+# 1) Compile TS → dist inside each package
+# ----------------------------------------------------
+compile() {
+  log "Compiling TypeScript (CJS)..."
+  yarn run tsc -p tsconfig.build.cjs.json
+  log "✨ Copiled CJS!"
+  log "Compiling TypeScript (ESM)..."
+  yarn run tsc -p tsconfig.build.es.json
+  log "✨ Compiled ESM!"
 }
-forEachPackage prepare
 
-echo "Compiling files..."
-cd "${REPO_DIR}"
-rm -rf "${OUT_DIR}"
-yarn tsc -p tsconfig.build.cjs.json
-yarn tsc -p tsconfig.build.es.json
+# ----------------------------------------------------
+# 2) Pack files based on package.json "files"
+# ----------------------------------------------------
+packPackage() {
+  local dir=$1
+  local dirname=$2
+  local pkg_json=$3
 
-echo "Moving files to target dirs..."
-function moveFiles() {
-  rm -rf "${OUT_DIR}"
-  mkdir "${OUT_DIR}"
+  log "🦋 Packing $dirname"
 
-  mv "../../${OUT_DIR}/lib/${dirname}/src-prebuild/" "${OUT_CJS_DIR}"
-  yarn copyfiles --up=1 "src/**/*.{${ASSETS_EXTENSIONS}}" "${OUT_CJS_DIR}"
-  mv "../../${OUT_DIR}/es/${dirname}/src-prebuild/" "${OUT_ES_DIR}"
-  yarn copyfiles --up=1 "src/**/*.{${ASSETS_EXTENSIONS}}" "${OUT_ES_DIR}"
+  cd "$dir"
 
-  rm -rf "${PREBUILD_DIR}"
+  local pkg_dist="$dir/dist"
+  local target_dist="$ROOT_DIST/$dirname"
+
+  rm -rf "$pkg_dist"
+  mkdir -p "$pkg_dist"
+
+  local files
+  files=$(jq -r '.files[]?' package.json || true)
+
+  if [[ -z "$files" ]]; then
+    log "× No files field found in $dirname → skipping"
+    return
+  fi
+
+  while read -r file; do
+    [[ -z "$file" ]] && continue
+
+    if [[ -e "$file" ]]; then
+      mkdir -p "$(dirname "$pkg_dist/$file")"
+      mv "$file" "$pkg_dist/$file"
+      log "✓ Moved: $file → dist/$file"
+    else
+      log "× Missing: $file (ignored)"
+    fi
+  done <<< "$files"
+
+  cp package.json "$pkg_dist/package.json"
+  [[ -f CHANGELOG.md ]] && cp CHANGELOG.md "$pkg_dist/CHANGELOG.md"
+
+  rm -rf "$target_dist"
+  mkdir -p "$ROOT_DIST"
+  mv "$pkg_dist" "$target_dist"
+
+  log "🦋 Final artifact: dist/$dirname"
 }
-forEachPackage moveFiles
 
-echo "Clean up..."
-cd "${REPO_DIR}"
-rm -rf "${OUT_DIR}"
+# ----------------------------------------------------
+# 3) Normalize the root dist folder structure with es/ and lib/
+# ----------------------------------------------------
+normaliseEsAndLibInDist() {
+  local dir=$1
+  local dirname=$2
+  local pkg_json=$3
+
+  log "...Normalizing dist for $dirname"
+
+  local pkg_root="$ROOT_DIST/$dirname"
+
+  mkdir -p "$pkg_root"
+
+  for format in es lib; do
+    local src="$ROOT_DIST/$format/$dirname"
+    local dest="$pkg_root/$format"
+
+    if [[ -d "$src" ]]; then
+      rm -rf "$dest"
+      mkdir -p "$pkg_root"
+      mv "$src" "$dest"
+      log "✓ dist/$format/$dirname → dist/$dirname/$format"
+    else
+      log "× dist/$format/$dirname (ignored)"
+    fi
+  done
+
+  log "✨ Normalised!"
+}
+
+# ----------------------------------------------------
+# 4) Run pipeline
+# ----------------------------------------------------
+
+log "Starting build pipeline..."
+
+compile
+forEachPackage packPackage
+forEachPackage normaliseEsAndLibInDist
+
+rm -rf ./dist/es ./dist/lib
+
+log "✨ Done!"
