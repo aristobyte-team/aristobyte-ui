@@ -62,7 +62,9 @@ jobs:
       - name: Create Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create v$VERSION --title "v$VERSION" --notes "$(sed "s/\$VERSION/$VERSION/g" .github/RELEASE_NOTE.md)" --repo "${GITHUB_REPOSITORY}" --target master
+        run: |
+          VERSION=$(node -p "require('./packages/react/package.json').version")
+          gh release create v$VERSION --title "v$VERSION" --notes "$(sed "s/\$VERSION/$VERSION/g" .github/RELEASE_NOTE.md)" --repo "${GITHUB_REPOSITORY}" --target master
 
       # 9️⃣ Build monorepo packages
       - name: Build packages
