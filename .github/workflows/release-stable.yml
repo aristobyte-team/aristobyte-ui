@@ -70,8 +70,19 @@ jobs:
       - name: Build packages
         run: yarn build
 
-      # 1️⃣0️⃣ Publish to npm
-      - name: Publish to npm
+      # 1️⃣0️⃣ Publish to NPM
+      - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn changeset publish --yes
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+          yarn changeset publish --yes --access public
+
+      # 1️⃣1️⃣ Publish to GitHub Packages
+      - name: Publish to GitHub Packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          echo "@aristobyte-ui:registry=https://npm.pkg.github.com/" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
+          yarn changeset publish --yes --access public
