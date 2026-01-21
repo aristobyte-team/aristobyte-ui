@@ -82,7 +82,7 @@ jobs:
       # 1️⃣1️⃣ Publish to GitHub Packages
       - name: Publish to GitHub Packages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           jq '.registry="https://npm.pkg.github.com/"' .changeset/config.json > .changeset/config.tmp.json
           mv .changeset/config.tmp.json .changeset/config.json
