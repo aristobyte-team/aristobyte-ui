@@ -58,11 +58,15 @@ jobs:
           git tag v$VERSION
           git push origin v$VERSION
 
-      # 8️⃣ Build monorepo packages
+      # 8️⃣ Create release from the pushed tag
+      - name: Create Release
+        run: gh release create v$VERSION --title "v$VERSION" --notes "$(sed "s/\$VERSION/$VERSION/g" .github/RELEASE_NOTE.md)" --repo "${GITHUB_REPOSITORY}" --target master
+
+      # 9️⃣ Build monorepo packages
       - name: Build packages
         run: yarn build
 
-      # 9️⃣ Publish to npm
+      # 1️⃣0️⃣ Publish to npm
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
