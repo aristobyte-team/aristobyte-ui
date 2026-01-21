@@ -3,7 +3,7 @@ name: Build & Publish
 on:
   push:
     tags:
-      - 'v*'
+      - v*
 
 jobs:
   build-and-publish:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js (from .nvmrc)
         uses: actions/setup-node@v4
@@ -34,4 +36,4 @@ jobs:
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn changeset publish
+        run: yarn changeset publish --yes
