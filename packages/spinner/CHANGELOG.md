@@ -1,5 +1,11 @@
 # @aristobyte-ui/spinner
 
+## 2.3.1
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
 ## 2.3.0
 
 ### Minor Changes
