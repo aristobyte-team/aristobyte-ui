@@ -44,8 +44,9 @@
     "./next": "./dist/jest.next.js"
   },
   "files": [
-    "es",
-    "lib"
+    "jest.base.js",
+    "jest.react.js",
+    "jest.next.js"
   ],
   "publishConfig": {
     "access": "public"
