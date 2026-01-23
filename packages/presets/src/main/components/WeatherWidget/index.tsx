@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './WeatherWidget.scss';
 
 export interface IWeatherWidget {
   disabled?: boolean;

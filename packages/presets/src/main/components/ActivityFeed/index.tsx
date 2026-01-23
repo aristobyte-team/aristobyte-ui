@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './ActivityFeed.scss';
 
 export interface IActivityFeed {
   disabled?: boolean;

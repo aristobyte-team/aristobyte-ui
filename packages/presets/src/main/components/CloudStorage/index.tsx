@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './CloudStorage.scss';
 
 export interface ICloudStorage {
   disabled?: boolean;

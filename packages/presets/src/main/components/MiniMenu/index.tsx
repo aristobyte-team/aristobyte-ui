@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './MiniMenu.scss';
 
 export interface IMiniMenu {
   disabled?: boolean;

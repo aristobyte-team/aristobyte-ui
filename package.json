@@ -51,7 +51,7 @@
     "check-version": "bash scripts/check-version.sh",
     "clean": "rm -rf packages/*/dist dist-test/",
     "create-package": "bash scripts/create-package.sh",
-    "dev": "turbo run dev --filter=!@aristobyte-ui/cli",
+    "dev": "yarn run dev --filter=!@aristobyte-ui/cli",
     "dev:docs": "yarn workspace @aristobyte-ui/docs dev",
     "dev:cli": "yarn workspace @aristobyte-ui/cli dev",
     "format": "prettier --write '**/*.{json,md,yaml,yml,html,scss}' && yarn lint:es --fix",

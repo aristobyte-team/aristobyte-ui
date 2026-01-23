@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './TimeLocationWidget.scss';
 
 export interface ITimeLocationWidget {
   disabled?: boolean;
 }
 
-export const TimeLocationWidget: React.FC<ITimeLocationWidget> = ({
-  ...props
-}) => {
+export const TimeLocationWidget: React.FC<ITimeLocationWidget> = ({ ...props }) => {
   const uniqId = React.useId();
 
   return <div {...props} key={uniqId} className="time-location-widget" />;

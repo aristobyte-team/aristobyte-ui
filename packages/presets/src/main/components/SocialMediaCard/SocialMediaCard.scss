@@ -1,3 +1,5 @@
+@use '@aristobyte-ui/utils/aristobyte-ui.settings' as *;
+
 .social-media-card {
   background-color: #101828; // @TODO: @COLOR
   box-shadow: $shadow-md;

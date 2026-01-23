@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
+import './LanguageLearning.scss';
 
 export interface ILanguageLearning {
   disabled?: boolean;
