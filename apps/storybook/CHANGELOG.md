@@ -1,5 +1,18 @@
 # @aristobyte-ui/storybook
 
+## 2.3.6
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@2.3.6
+  - @aristobyte-ui/button@2.3.6
+  - @aristobyte-ui/dropdown@2.3.6
+  - @aristobyte-ui/message-box@2.3.6
+  - @aristobyte-ui/radio@2.3.6
+  - @aristobyte-ui/spinner@2.3.6
+  - @aristobyte-ui/switch@2.3.6
+
 ## 2.3.5
 
 ### Patch Changes

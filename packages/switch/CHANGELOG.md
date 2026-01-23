@@ -1,5 +1,11 @@
 # @aristobyte-ui/switch
 
+## 2.3.6
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
 ## 2.3.5
 
 ### Patch Changes
