@@ -78,7 +78,7 @@ packPackage() {
 
     if [[ -e "$file" ]]; then
       mkdir -p "$(dirname "$pkg_dist/$file")"
-      mv "$file" "$pkg_dist/$file"
+      cp "$file" "$pkg_dist/$file"
       log "✓ Moved: $file → dist/$file"
     else
       log "× Missing: $file (ignored)"

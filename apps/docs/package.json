@@ -18,6 +18,7 @@
     "@aristobyte-ui/radio": "2.3.1",
     "@aristobyte-ui/spinner": "2.3.1",
     "@aristobyte-ui/switch": "2.3.1",
+    "@aristobyte-ui/typescript-config": "2.3.0",
     "@aristobyte-ui/utils": "2.3.1",
     "@tailwindcss/postcss": "^4.1.13",
     "clsx": "^2.1.1",
