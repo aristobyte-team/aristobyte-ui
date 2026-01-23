@@ -1,5 +1,11 @@
 # @aristobyte-ui/radio
 
+## 2.3.4
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
 ## 2.3.3
 
 ### Patch Changes

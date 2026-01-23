@@ -1,5 +1,22 @@
 # @aristobyte-ui/react
 
+## 2.3.4
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@2.3.4
+  - @aristobyte-ui/button@2.3.4
+  - @aristobyte-ui/dropdown@2.3.4
+  - @aristobyte-ui/message-box@2.3.4
+  - @aristobyte-ui/presets@2.3.4
+  - @aristobyte-ui/radio@2.3.4
+  - @aristobyte-ui/spinner@2.3.4
+  - @aristobyte-ui/switch@2.3.4
+  - @aristobyte-ui/utils@2.3.4
+
 ## 2.3.3
 
 ### Patch Changes

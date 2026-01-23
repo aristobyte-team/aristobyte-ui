@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/react",
   "description": "AristoByte UI — the complete suite of reusable, production-ready React components with built-in design tokens, accessibility, and theming. Install this package to get the full library in a single dependency.",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -61,14 +61,14 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/anchor": "2.3.3",
-    "@aristobyte-ui/button": "2.3.3",
-    "@aristobyte-ui/dropdown": "2.3.3",
-    "@aristobyte-ui/message-box": "2.3.3",
-    "@aristobyte-ui/presets": "2.3.3",
-    "@aristobyte-ui/radio": "2.3.3",
-    "@aristobyte-ui/spinner": "2.3.3",
-    "@aristobyte-ui/switch": "2.3.3",
-    "@aristobyte-ui/utils": "2.3.3"
+    "@aristobyte-ui/anchor": "2.3.4",
+    "@aristobyte-ui/button": "2.3.4",
+    "@aristobyte-ui/dropdown": "2.3.4",
+    "@aristobyte-ui/message-box": "2.3.4",
+    "@aristobyte-ui/presets": "2.3.4",
+    "@aristobyte-ui/radio": "2.3.4",
+    "@aristobyte-ui/spinner": "2.3.4",
+    "@aristobyte-ui/switch": "2.3.4",
+    "@aristobyte-ui/utils": "2.3.4"
   }
 }
