@@ -36,6 +36,9 @@
     "lib",
     "aristobyte-ui.settings.scss"
   ],
+  "exports": {
+    "./styles": "./aristobyte-ui.settings.scss"
+  },
   "publishConfig": {
     "access": "public"
   },
