@@ -1,5 +1,14 @@
 # @aristobyte-ui/anchor
 
+## 2.3.3
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.3.3
+
 ## 2.3.2
 
 ### Patch Changes

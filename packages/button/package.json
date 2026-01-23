@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/button",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "react button and buttongroup components with multiple variants, appearances, sizes, radius options, icons, ripple feedback, and fully typed typescript support",
   "license": "MIT",
   "private": false,
@@ -52,7 +52,7 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@aristobyte-ui/spinner": "2.3.2",
-    "@aristobyte-ui/utils": "2.3.2"
+    "@aristobyte-ui/spinner": "2.3.3",
+    "@aristobyte-ui/utils": "2.3.3"
   }
 }
