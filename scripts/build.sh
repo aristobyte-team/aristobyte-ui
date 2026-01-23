@@ -110,7 +110,7 @@ normaliseEsAndLibInDist() {
   mkdir -p "$pkg_root"
 
   for format in es lib; do
-    local src="$ROOT_DIST/$format/$dirname"
+    local src="$ROOT_DIST/$format/$dirname/src/main"
     local dest="$pkg_root/$format"
 
     if [[ -d "$src" ]]; then

@@ -20,11 +20,6 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@aristobyte-ui/typescript-config@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@aristobyte-ui/typescript-config/-/typescript-config-2.3.0.tgz#a3f2b1a7cf66ec143ee5056fb169a821bf0283fd"
-  integrity sha512-ZMAGoXB4NEHF1MtZ9W4VyMuLs/yA4dR5YmtEr0XQfImWqwOyVA9zrQdNqtrGzgFho8s4s+79ZuX1ru1ITOjr8g==
-
 "@asamuzakjp/css-color@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-3.2.0.tgz#cc42f5b85c593f79f1fa4f25d2b9b321e61d1794"
