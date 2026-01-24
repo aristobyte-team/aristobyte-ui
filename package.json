@@ -60,7 +60,7 @@
     "lint:es": "eslint --cache --ext .js,.ts,.tsx .",
     "lint:style": "stylelint '**/*.scss'",
     "prepare": "husky install",
-    "release": "yarn install && changeset && changeset version && yarn build && changeset publish",
+    "release": "bash ./scripts/publish.sh",
     "test": "yarn jest -c ./config/jest/jest.config.js",
     "test:ci": "bash scripts/test.sh",
     "test:coverage": "yarn test --coverage --runInBand --coverageProvider=v8",

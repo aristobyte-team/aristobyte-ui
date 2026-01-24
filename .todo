@@ -1,2 +1,4 @@
 - fix the deps in apps/docs so it's aligned with the global yarn, decide or ask GPT if it should be added to global package.json with -W or into @aristobyte-ui/docs using workspace add
 - fix add index.d.ts file in each package to have a typescript recognision.
+- fix eslint, stylelint + husky
+- fix deps that still have the tailwindcss instead of .scss (switch & label)

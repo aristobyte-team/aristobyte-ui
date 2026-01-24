@@ -75,11 +75,11 @@ jobs:
         env:
           SCOPE: NPM
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: bash ./scripts/publish.sh
+        run: yarn release
 
       # 1️⃣1️⃣ Publish to GitHub Packages
       - name: Publish to GitHub Packages
         env:
           SCOPE: GITHUB_PACKAGES
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash ./scripts/publish.sh
+        run: yarn release
