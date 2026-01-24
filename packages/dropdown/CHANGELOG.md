@@ -1,5 +1,17 @@
 # @aristobyte-ui/dropdown
 
+## 2.5.0
+
+### Minor Changes
+
+- Automated release from scripts/version.sh
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@2.5.0
+  - @aristobyte-ui/utils@2.5.0
+
 ## 2.4.0
 
 ### Minor Changes
