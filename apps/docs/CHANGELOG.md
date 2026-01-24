@@ -1,5 +1,21 @@
 # @aristobyte-ui/docs
 
+## 2.4.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@2.4.0
+  - @aristobyte-ui/button@2.4.0
+  - @aristobyte-ui/dropdown@2.4.0
+  - @aristobyte-ui/message-box@2.4.0
+  - @aristobyte-ui/presets@2.4.0
+  - @aristobyte-ui/radio@2.4.0
+  - @aristobyte-ui/spinner@2.4.0
+  - @aristobyte-ui/switch@2.4.0
+  - @aristobyte-ui/typescript-config@2.4.0
+  - @aristobyte-ui/utils@2.4.0
+
 ## 2.3.6
 
 ### Patch Changes

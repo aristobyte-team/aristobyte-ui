@@ -1,5 +1,16 @@
 # @aristobyte-ui/label
 
+## 2.4.0
+
+### Minor Changes
+
+- Automated release from scripts/version.sh
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.4.0
+
 ## 2.3.6
 
 ### Patch Changes
