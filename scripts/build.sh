@@ -9,6 +9,7 @@ SCRIPTS_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 REPO_DIR="${SCRIPTS_DIR}/.."
 PACKAGES_DIR="${REPO_DIR}/packages"
 ROOT_DIST="${REPO_DIR}/dist"
+ASSETS_EXTENSIONS="scss,svg,png,json"
 
 log() {
   echo -e "${CYAN}🦋 $1${RESET}"
@@ -96,6 +97,25 @@ packPackage() {
 }
 
 # ----------------------------------------------------
+# 2) Copy assets (scss,svg,png,json) to proper locations
+# ----------------------------------------------------
+copyAssets() {
+  local dir=$1
+  local dirname=$2
+  local pkg_json=$3
+
+  log "Copying assets for $dir"
+
+  local es_target="../../dist/$dirname/es"
+  local lib_target="../../dist/$dirname/lib"
+
+  yarn copyfiles --up=0 "src/main/**/*.{${ASSETS_EXTENSIONS}}" "$es_target"
+  yarn copyfiles --up=0 "src/main/**/*.{${ASSETS_EXTENSIONS}}" "$lib_target"
+
+  log "✓ Assets copied into es + lib for $dirname"
+}
+
+# ----------------------------------------------------
 # 3) Normalize the root dist folder structure with es/ and lib/
 # ----------------------------------------------------
 normaliseEsAndLibInDist() {
@@ -132,9 +152,12 @@ normaliseEsAndLibInDist() {
 
 log "Starting build pipeline..."
 
+rm -rf dist
+
 compile
 forEachPackage packPackage
 forEachPackage normaliseEsAndLibInDist
+forEachPackage copyAssets
 
 rm -rf ./dist/es ./dist/lib
 

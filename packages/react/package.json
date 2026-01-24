@@ -58,7 +58,8 @@
   "module": "es/src/main/index.js",
   "peerDependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sass": "^1.97.3"
   },
   "dependencies": {
     "@aristobyte-ui/anchor": "2.4.0",
