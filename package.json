@@ -87,7 +87,6 @@
     "@types/react-transition-group": "^4.4.12",
     "@types/recompose": "^0.30.15",
     "autoprefixer": "^10.4.23",
-    "clsx": "^2.1.1",
     "copy-webpack-plugin": "^13.0.1",
     "copyfiles": "^2.4.1",
     "css-loader": "^7.1.2",

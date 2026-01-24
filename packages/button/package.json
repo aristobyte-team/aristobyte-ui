@@ -47,13 +47,14 @@
   },
   "main": "lib/src/main/index.js",
   "module": "es/src/main/index.js",
+  "types": "es/src/main/index.d.ts",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sass": "^1.97.3"
   },
   "dependencies": {
-    "@aristobyte-ui/spinner": "2.5.0",
-    "@aristobyte-ui/utils": "2.5.0"
+    "@aristobyte-ui/spinner": "^2.5.0",
+    "@aristobyte-ui/utils": "^2.5.0"
   }
 }

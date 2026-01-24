@@ -1,19 +1,13 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import clsx from "clsx";
+import * as React from 'react';
 
 export interface ILabel {
   text: string;
-  variant?:
-    | "default"
-    | "primary"
-    | "secondary"
-    | "success"
-    | "error"
-    | "warning";
-  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
-  radius?: "none" | "sm" | "md" | "lg" | "full";
+  variant?: 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning';
+  appearance?: 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing';
+  size?: 'xsm' | 'sm' | 'md' | 'lg' | 'xlg';
+  radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   className?: string;
   color?: string;
   backgroundColor?: string;
@@ -22,25 +16,20 @@ export interface ILabel {
 
 export const Label: React.FC<ILabel> = ({
   text,
-  variant = "default",
-  size = "md",
-  radius = "md",
-  className = "",
+  variant = 'default',
+  appearance = 'solid',
+  size = 'md',
+  radius = 'md',
+  className,
   color,
   backgroundColor,
   borderColor,
 }) => {
-  const labelClass = clsx(
-    "label",
-    `label-${variant}-solid`, // default to solid appearance; could make this configurable
-    `label-${size}`,
-    `label-radius-${radius}`,
-    className
-  );
-
   return (
     <label
-      className={labelClass}
+      className={['label', `label-${variant}-${appearance}`, `label-${size}`, `label-radius-${radius}`, className]
+        .filter(Boolean)
+        .join(' ')}
       style={{
         color,
         backgroundColor,

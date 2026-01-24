@@ -2,13 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "sourceMap": false,
-
-    // declarations are disabled for now to have exact behavior as before TS integration
-    // later this can be enabled
-    "declaration": false,
-    "declarationMap": false,
+    "declaration": true,
+    "declarationMap": true,
     "noImplicitAny": false,
-
     "baseUrl": "./",
     "paths": {
       "@aristobyte-ui/anchor": ["packages/anchor/src/main"],
