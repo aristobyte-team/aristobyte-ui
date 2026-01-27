@@ -1,5 +1,15 @@
 # @aristobyte-ui/button
 
+## 2.6.1
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/spinner@2.6.1
+  - @aristobyte-ui/utils@2.6.1
+
 ## 2.6.0
 
 ### Minor Changes

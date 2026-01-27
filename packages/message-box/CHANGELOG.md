@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 2.6.1
+
+### Patch Changes
+
+- Automated release from scripts/version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.6.1
+
 ## 2.6.0
 
 ### Minor Changes
