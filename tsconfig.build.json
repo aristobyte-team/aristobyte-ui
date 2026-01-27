@@ -1,20 +1,20 @@
 {
   "files": [],
   "references": [
-    { "path": "packages/utils/tsconfig.json" },
-    { "path": "packages/anchor/tsconfig.json" },
-    // { "path": "packages/button/tsconfig.json" },
-    // { "path": "packages/card/tsconfig.json" },
-    // { "path": "packages/cli/tsconfig.json" },
-    // { "path": "packages/dropdown/tsconfig.json" },
-    // { "path": "packages/eslint-config/tsconfig.json" },
+    { "path": "packages/eslint-config/tsconfig.json" },
     { "path": "packages/jest-config/tsconfig.json" },
+    { "path": "packages/utils/tsconfig.json" },
+    { "path": "packages/spinner/tsconfig.json" },
     { "path": "packages/label/tsconfig.json" },
-    // { "path": "packages/message-box/tsconfig.json" },
-    // { "path": "packages/presets/tsconfig.json" },
+    { "path": "packages/message-box/tsconfig.json" },
+    { "path": "packages/anchor/tsconfig.json" },
     { "path": "packages/radio/tsconfig.json" },
-    // { "path": "packages/react/tsconfig.json" },
-    { "path": "packages/spinner/tsconfig.json" }
-    // { "path": "packages/switch/tsconfig.json" },
+    { "path": "packages/switch/tsconfig.json" },
+    { "path": "packages/button/tsconfig.json" },
+    { "path": "packages/card/tsconfig.json" },
+    { "path": "packages/dropdown/tsconfig.json" },
+    { "path": "packages/presets/tsconfig.json" },
+    { "path": "packages/react/tsconfig.json" },
+    { "path": "packages/cli/tsconfig.json" }
   ]
 }
