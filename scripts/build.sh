@@ -17,7 +17,6 @@ log() {
 
 forEachPackage() {
   local callback=$1
-
   for dir in "${PACKAGES_DIR}"/*; do
     [ -d "$dir" ] || continue
 
@@ -39,32 +38,44 @@ forEachPackage() {
 # ----------------------------------------------------
 # 1) Compile TS → dist inside each package
 # ----------------------------------------------------
-compile() {
-  log "Compiling TypeScript (CJS)..."
-  yarn run tsc -p tsconfig.build.cjs.json
-  log "✨ Copiled CJS!"
-  log "Compiling TypeScript (ESM)..."
-  yarn run tsc -p tsconfig.build.es.json
-  log "✨ Compiled ESM!"
+compileAll() {
+  log "⚙️ Compiling monorepo..."
+
+  rm -rf packages/*/es
+  rm -rf packages/*/lib
+  yarn tsc -b tsconfig.build.json
+
+  log "✨ Compilation done!"
 }
 
 # ----------------------------------------------------
-# 2) Pack files based on package.json "files"
+# 2) Copy assets (scss,svg,png,json) to proper locations
+# ----------------------------------------------------
+copyAssets() {
+  local dir=$1
+  local dirname=$2
+  local pkg_json=$3
+
+  log "Copying assets for $dir"
+
+  yarn copyfiles --up=2 "src/main/**/*.{${ASSETS_EXTENSIONS}}" es
+  yarn copyfiles --up=2 "src/main/**/*.{${ASSETS_EXTENSIONS}}" lib
+
+  log "✓ Assets copied into es + lib for $dirname"
+}
+
+# ----------------------------------------------------
+# 3) Pack files based on package.json "files"
 # ----------------------------------------------------
 packPackage() {
   local dir=$1
   local dirname=$2
   local pkg_json=$3
 
-  log "🦋 Packing $dirname"
+  log "Packing $dirname"
 
-  cd "$dir"
-
-  local pkg_dist="$dir/dist"
-  local target_dist="$ROOT_DIST/$dirname"
-
-  rm -rf "$pkg_dist"
-  mkdir -p "$pkg_dist"
+  rm -rf "./dist"
+  mkdir -p "./dist"
 
   local files
   files=$(jq -r '.files[]?' package.json || true)
@@ -78,87 +89,30 @@ packPackage() {
     [[ -z "$file" ]] && continue
 
     if [[ -e "$file" ]]; then
-      mkdir -p "$(dirname "$pkg_dist/$file")"
-      cp "$file" "$pkg_dist/$file"
+      cp -r "./$file" "./dist/$file"
       log "✓ Moved: $file → dist/$file"
     else
       log "× Missing: $file (ignored)"
     fi
   done <<< "$files"
 
-  cp package.json "$pkg_dist/package.json"
-  [[ -f CHANGELOG.md ]] && cp CHANGELOG.md "$pkg_dist/CHANGELOG.md"
+  
+  [[ -f package.json ]] && cp package.json ./dist/package.json
+  [[ -f CHANGELOG.md ]] && cp CHANGELOG.md ./dist/CHANGELOG.md
 
-  rm -rf "$target_dist"
-  mkdir -p "$ROOT_DIST"
-  mv "$pkg_dist" "$target_dist"
-
-  log "🦋 Final artifact: dist/$dirname"
+  rm -rf ./es ./lib
+  log "🦋 Final artifact: $dirname/dist"
 }
 
 # ----------------------------------------------------
-# 2) Copy assets (scss,svg,png,json) to proper locations
+# 4) Execute
 # ----------------------------------------------------
-copyAssets() {
-  local dir=$1
-  local dirname=$2
-  local pkg_json=$3
-
-  log "Copying assets for $dir"
-
-  local es_target="../../dist/$dirname/es"
-  local lib_target="../../dist/$dirname/lib"
-
-  yarn copyfiles --up=0 "src/main/**/*.{${ASSETS_EXTENSIONS}}" "$es_target"
-  yarn copyfiles --up=0 "src/main/**/*.{${ASSETS_EXTENSIONS}}" "$lib_target"
-
-  log "✓ Assets copied into es + lib for $dirname"
-}
-
-# ----------------------------------------------------
-# 3) Normalize the root dist folder structure with es/ and lib/
-# ----------------------------------------------------
-normaliseEsAndLibInDist() {
-  local dir=$1
-  local dirname=$2
-  local pkg_json=$3
-
-  log "...Normalizing dist for $dirname"
-
-  local pkg_root="$ROOT_DIST/$dirname"
-
-  mkdir -p "$pkg_root"
-
-  for format in es lib; do
-    local src="$ROOT_DIST/$format/$dirname"
-    local dest="$pkg_root/$format"
-
-    if [[ -d "$src" ]]; then
-      rm -rf "$dest"
-      mkdir -p "$pkg_root"
-      mv "$src" "$dest"
-      log "✓ dist/$format/$dirname → dist/$dirname/$format"
-    else
-      log "× dist/$format/$dirname (ignored)"
-    fi
-  done
-
-  log "✨ Normalised!"
-}
-
-# ----------------------------------------------------
-# 4) Run pipeline
-# ----------------------------------------------------
-
 log "Starting build pipeline..."
 
 rm -rf dist
 
-compile
-forEachPackage packPackage
-forEachPackage normaliseEsAndLibInDist
+compileAll
 forEachPackage copyAssets
-
-rm -rf ./dist/es ./dist/lib
+forEachPackage packPackage
 
 log "✨ Done!"

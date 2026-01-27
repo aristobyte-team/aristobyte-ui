@@ -2,6 +2,7 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "module": "es2020",
-    "outDir": "dist/es"
+    "outDir": "./es",
+    "tsBuildInfoFile": "./es/.tsbuildinfo"
   }
 }

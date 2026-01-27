@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src/main",
+    "outDir": "./",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": false,
+    "composite": true
+  },
+  "references": [{ "path": "../button" }, { "path": "../utils" }],
+  "include": ["src/main/**/*"]
+}

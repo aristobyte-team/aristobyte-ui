@@ -1,28 +1,23 @@
-// This is base configuration for build, jest and webpack
 {
   "compilerOptions": {
     "moduleResolution": "node",
     "jsx": "react",
     "target": "es5",
-
     "isolatedModules": true,
     "resolveJsonModule": true,
-
     "allowJs": true,
     "declaration": false,
     "removeComments": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
     "strict": true,
     "skipLibCheck": true,
-
-    // to support existing iterators Array(...).keys() for target=es5
     "downlevelIteration": true,
-
-    // allowing this because there is a lot of such cases already
-    // normally - don't use it!
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./"
+    // "paths": {
+    //   "@aristobyte-ui/*": ["packages/*/src/main"]
+    // }
   },
   "exclude": [
     "node_modules",

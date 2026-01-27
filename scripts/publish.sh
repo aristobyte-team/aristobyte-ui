@@ -3,7 +3,7 @@ set -e
 
 SCRIPTS_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 REPO_DIR="${SCRIPTS_DIR}/.."
-DIST_DIR="${REPO_DIR}/dist"
+PACKAGES_DIR="${REPO_DIR}/packages"
 
 CYAN="\033[36m"
 RESET="\033[0m"
@@ -23,20 +23,18 @@ if [[ -z "${NODE_AUTH_TOKEN:-}" && "$SCOPE" == "GITHUB_PACKAGES" ]]; then
   exit 1
 fi
 
-log "Publishing packages from dist/ to GitHub Packages..."
-
-for pkg_dir in "$DIST_DIR"/*; do
+for pkg_dir in "$PACKAGES_DIR"/*; do
   [ -d "$pkg_dir" ] || continue
 
-  pkg_json="$pkg_dir/package.json"
+  cd "$pkg_dir/dist"
 
-  if [[ ! -f "$pkg_json" ]]; then
+  if [[ ! -f "./package.json" ]]; then
     log "Skipping (no package.json): $(basename "$pkg_dir")"
     continue
   fi
 
-  name=$(jq -r '.name' "$pkg_json")
-  private=$(jq -r '.private // false' "$pkg_json")
+  name=$(jq -r '.name' "./package.json")
+  private=$(jq -r '.private // false' "./package.json")
   dirname=$(basename "$pkg_dir")
 
   if [[ "$private" == "true" ]]; then
@@ -44,28 +42,26 @@ for pkg_dir in "$DIST_DIR"/*; do
     continue
   fi
 
-  log "Publishing $name from dist/$dirname"
-
   # ----------------------------------------------------
   # GitHub Packages publish from dist/
   # ----------------------------------------------------
   if [[ "$SCOPE" == "GITHUB_PACKAGES" ]]; then
+    log "Publishing \"$pkg_dir\" to GitHub Packages registry..."
     npm publish "$pkg_dir" \
       --access public \
       --registry https://npm.pkg.github.com/ \
       --//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
+    log "✨ GitHub Packages publish completed!"
   fi
 
   # ----------------------------------------------------
   # NPM publish via Changesets (root workflow)
   # ----------------------------------------------------
   if [[ "$SCOPE" == "NPM" ]]; then
+    log "Publishing \"$pkg_dir\" to NPM registry..."
     npm publish "$pkg_dir" \
       --access public \
       --registry https://registry.npmjs.org/
+    log "✨ NPM publish completed!"
   fi
 done
-
-log "✨ GitHub Packages publish completed!"
-exit 0
-

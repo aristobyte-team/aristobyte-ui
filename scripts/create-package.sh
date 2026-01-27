@@ -86,8 +86,8 @@ cat > "$PKG_DIR/package.json" <<EOF
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/src/main/index.js",  "module": "es/src/main/index.js",
-  "types": "es/src/main/index.d.ts",
+  "main": "lib/index.js",  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

@@ -1,31 +1,20 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "sourceMap": false,
-    "declaration": true,
-    "declarationMap": true,
-    "noImplicitAny": false,
-    "baseUrl": "./",
-    "paths": {
-      "@aristobyte-ui/anchor": ["packages/anchor/src/main"],
-      "@aristobyte-ui/button": ["packages/button/src/main"],
-      "@aristobyte-ui/card": ["packages/card/src/main"],
-      "@aristobyte-ui/cli": ["packages/cli/src/main"],
-      "@aristobyte-ui/dropdown": ["packages/dropdown/src/main"],
-      "@aristobyte-ui/label": ["packages/label/src/main"],
-      "@aristobyte-ui/message-box": ["packages/message-box/src/main"],
-      "@aristobyte-ui/presets": ["packages/presets/src/main"],
-      "@aristobyte-ui/radio": ["packages/radio/src/main"],
-      "@aristobyte-ui/spinner": ["packages/spinner/src/main"],
-      "@aristobyte-ui/switch": ["packages/switch/src/main"],
-      "@aristobyte-ui/utils": ["packages/utils/src/main"],
-
-      "@aristobyte-ui/react": ["packages/react/src/main"],
-      "@aristobyte-ui/eslint-config": ["packages/eslint-config/src/main"],
-      "@aristobyte-ui/jest-config": ["packages/jest-config/src/main"],
-
-      "*": ["@types/*", "node_modules/*", "node_modules/@types/*"]
-    }
-  },
-  "include": ["packages/*/src/**/*", "@types"]
+  "files": [],
+  "references": [
+    { "path": "packages/utils/tsconfig.json" },
+    { "path": "packages/anchor/tsconfig.json" },
+    // { "path": "packages/button/tsconfig.json" },
+    // { "path": "packages/card/tsconfig.json" },
+    // { "path": "packages/cli/tsconfig.json" },
+    // { "path": "packages/dropdown/tsconfig.json" },
+    // { "path": "packages/eslint-config/tsconfig.json" },
+    { "path": "packages/jest-config/tsconfig.json" },
+    { "path": "packages/label/tsconfig.json" },
+    // { "path": "packages/message-box/tsconfig.json" },
+    // { "path": "packages/presets/tsconfig.json" },
+    { "path": "packages/radio/tsconfig.json" },
+    // { "path": "packages/react/tsconfig.json" },
+    { "path": "packages/spinner/tsconfig.json" }
+    // { "path": "packages/switch/tsconfig.json" },
+  ]
 }

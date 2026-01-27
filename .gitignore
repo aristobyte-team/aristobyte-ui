@@ -7,6 +7,11 @@ dist-test/
 node_modules/
 es/
 lib/
+.tsbuildinfo
+tsconfig.build.cjs.tsbuildinfo
+tsconfig.build.es.tsbuildinfo
+
+.env
 
 *.code-workspace
 *.iml

@@ -1,9 +1,9 @@
-// used by IDE only to support "Go to definition" and error highlighting
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "any",
     "baseUrl": "./",
+    "rootDir": "./",
     "paths": {
       "@aristobyte-ui/anchor": ["packages/anchor/src/main"],
       "@aristobyte-ui/button": ["packages/button/src/main"],

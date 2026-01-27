@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src/main",
+    "outDir": "./",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": false,
+    "composite": true
+  },
+  "references": [
+    { "path": "../anchor" },
+    { "path": "../button" },
+    { "path": "../dropdown" },
+    { "path": "../message-box" },
+    { "path": "../presets" },
+    { "path": "../radio" },
+    { "path": "../spinner" },
+    { "path": "../switch" },
+    { "path": "../utils" }
+  ],
+  "include": ["src/main/**/*"]
+}
