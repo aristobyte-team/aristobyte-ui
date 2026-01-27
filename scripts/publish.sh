@@ -47,7 +47,7 @@ for pkg_dir in "$PACKAGES_DIR"/*; do
   # ----------------------------------------------------
   if [[ "$SCOPE" == "GITHUB_PACKAGES" ]]; then
     log "Publishing \"$pkg_dir\" to GitHub Packages registry..."
-    npm publish "$pkg_dir" \
+    npm publish \
       --access public \
       --registry https://npm.pkg.github.com/ \
       --//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
@@ -59,7 +59,7 @@ for pkg_dir in "$PACKAGES_DIR"/*; do
   # ----------------------------------------------------
   if [[ "$SCOPE" == "NPM" ]]; then
     log "Publishing \"$pkg_dir\" to NPM registry..."
-    npm publish "$pkg_dir" \
+    npm publish \
       --access public \
       --registry https://registry.npmjs.org/
     log "✨ NPM publish completed!"
