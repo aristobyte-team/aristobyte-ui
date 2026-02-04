@@ -20,12 +20,20 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@aristobyte-ui/anchor@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@aristobyte-ui/anchor/-/anchor-2.5.1.tgz#ee1c0f57c275e079e646a4bc4b187107af4fe6ef"
-  integrity sha512-jyXLRJYQw4PhEvBp+bKhr1nHiLPD3Vn5RRzxvWU9WNwClHq6lu+vI1gAXG/7qhhq6aJZ5Z1uZ63SdeMJcq320Q==
+"@aristobyte-ui/button@2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@aristobyte-ui/button/-/button-2.6.2.tgz#676dffe21991d075dba0a118e3e67d045951044a"
+  integrity sha512-w4upl5PYMRfWTT5yraMomyltm4YV+0uaDn3osvfIsng6VstXVPP65Y193ilxXCO7u1oVvIIi2Fhzvu5TnUHfmQ==
   dependencies:
-    "@aristobyte-ui/utils" "^2.5.1"
+    "@aristobyte-ui/spinner" "^2.6.2"
+    "@aristobyte-ui/utils" "^2.6.2"
+
+"@aristobyte-ui/spinner@2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@aristobyte-ui/spinner/-/spinner-2.6.2.tgz#628f4ac594571327cf0e990e58e75e2fbad80000"
+  integrity sha512-la1PcysW3lpkp+5ofpSrLifrMWXfyBWY9csii1qvCy13rA50IyoJr4GHFYC9qW7/tjaoJahUDZLp8yqrbX6a7w==
+  dependencies:
+    "@aristobyte-ui/utils" "^2.6.2"
 
 "@asamuzakjp/css-color@^3.2.0":
   version "3.2.0"

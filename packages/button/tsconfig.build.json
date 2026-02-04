@@ -1,10 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./src/main",
     "outDir": "./",
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "sourceMap": false,
     "composite": true
   },
