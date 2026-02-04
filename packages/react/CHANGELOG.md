@@ -1,5 +1,24 @@
 # @aristobyte-ui/react
 
+## 2.8.0
+
+### Minor Changes
+
+- Automated release from scripts/version.sh
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@2.8.0
+  - @aristobyte-ui/button@2.8.0
+  - @aristobyte-ui/dropdown@2.8.0
+  - @aristobyte-ui/message-box@2.8.0
+  - @aristobyte-ui/presets@2.8.0
+  - @aristobyte-ui/radio@2.8.0
+  - @aristobyte-ui/spinner@2.8.0
+  - @aristobyte-ui/switch@2.8.0
+  - @aristobyte-ui/utils@2.8.0
+
 ## 2.7.0
 
 ### Minor Changes
