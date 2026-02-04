@@ -1,13 +1,98 @@
 @use '@aristobyte-ui/utils/styles' as *;
 
 .switch {
+  /* stylelint-disable no-descending-specificity */
   align-items: center;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   max-width: max-content;
-  user-select: none;
   position: relative;
+  user-select: none;
+
+  &__track {
+    background-color: $grey-700;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+    &-icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transition:
+        transform 120ms ease-out,
+        left 200ms ease-out,
+        right 200ms ease-out,
+        opacity 100ms ease-out;
+      z-index: 0;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__thumb {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: all 200ms ease-out;
+    z-index: 1;
+
+    &-icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__label {
+    color: $white;
+  }
+
+  input {
+    display: none;
+
+    + .switch__track .switch__track-icon {
+      &--checked {
+        opacity: 0;
+        transform: translate(0, -50%) scale(0.55);
+      }
+
+      &--unchecked {
+        opacity: 1;
+        transform: translate(0, -50%) scale(1);
+      }
+    }
+
+    &:checked {
+      + .switch__track .switch__track-icon {
+        &--checked {
+          opacity: 1;
+          transform: translate(0, -50%) scale(1);
+        }
+
+        &--unchecked {
+          opacity: 0;
+          transform: translate(0, -50%) scale(0.55);
+        }
+      }
+    }
+  }
 
   &-align-label {
     &--horizontal {
@@ -51,7 +136,7 @@
 
         &__label {
           color: $white;
-          font-size: 0.625rem; // 10px
+          font-size: 0.75rem; // 12px
         }
       }
 
@@ -121,7 +206,7 @@
 
         &__label {
           color: $white;
-          font-size: 0.75rem; // 12px
+          font-size: 0.875rem; // 14px
         }
       }
 
@@ -191,7 +276,7 @@
 
         &__label {
           color: $white;
-          font-size: 0.875rem; // 14px
+          font-size: 1rem; // 16px
         }
       }
 
@@ -260,7 +345,7 @@
 
         &__label {
           color: $white;
-          font-size: 1rem; // 16px
+          font-size: 1.125rem; // 18px
         }
       }
 
@@ -330,7 +415,7 @@
 
         &__label {
           color: $white;
-          font-size: 1.125rem; // 18px
+          font-size: 1.25rem; // 20px
         }
       }
 
@@ -375,112 +460,17 @@
     }
   }
 
-  &-variant--default input:checked + &__track {
-    background-color: $grey-500;
-  }
-
-  &-variant--primary input:checked + &__track {
-    background-color: $color-primary;
-  }
-
-  &-variant--secondary input:checked + &__track {
-    background-color: $color-secondary;
-  }
-
-  &-variant--success input:checked + &__track {
-    background-color: $color-success;
-  }
-
-  &-variant--error input:checked + &__track {
-    background-color: $color-error;
-  }
-
-  &-variant--warning input:checked + &__track {
-    background-color: $color-warning;
-  }
-
-  input {
-    display: none;
-
-    + .switch__track .switch__track-icon {
-      &--checked {
-        opacity: 0;
-        transform: translate(0, -50%) scale(0.55);
-      }
-
-      &--unchecked {
-        opacity: 1;
-        transform: translate(0, -50%) scale(1);
-      }
-    }
-
-    &:checked {
-      + .switch__track .switch__track-icon {
-        &--checked {
-          opacity: 1;
-          transform: translate(0, -50%) scale(1);
-        }
-
-        &--unchecked {
-          opacity: 0;
-          transform: translate(0, -50%) scale(0.55);
-        }
-      }
+  @mixin switch-variant($name, $color) {
+    &-variant--#{$name} input:checked + &__track {
+      background-color: $color;
     }
   }
 
-  &__track {
-    position: relative;
-    background-color: $grey-700;
-    border-radius: 999px;
-    overflow: hidden;
-    position: relative;
-    transition: background-color 0.3s ease;
-
-    &-icon {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      top: 50%;
-      transition:
-        transform 120ms ease-out,
-        left 200ms ease-out,
-        right 200ms ease-out,
-        opacity 100ms ease-out;
-      z-index: 0;
-
-      svg {
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  &__thumb {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    transition: all 200ms ease-out;
-    z-index: 1;
-
-    &-icon {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-
-      svg {
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  &__label {
-    color: $white;
-  }
+  @include switch-variant('default', $color-default);
+  @include switch-variant('primary', $color-primary);
+  @include switch-variant('secondary', $color-secondary);
+  @include switch-variant('success', $color-success);
+  @include switch-variant('error', $color-error);
+  @include switch-variant('warning', $color-warning);
+  /* stylelint-enable no-descending-specificity */
 }

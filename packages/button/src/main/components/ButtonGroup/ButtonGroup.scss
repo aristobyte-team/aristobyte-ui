@@ -16,31 +16,18 @@
     }
   }
 
-  &-variant {
-    &--default {
-      background-color: $color-default;
-    }
-
-    &--primary {
-      background-color: $color-primary;
-    }
-
-    &--secondary {
-      background-color: $color-secondary;
-    }
-
-    &--success {
-      background-color: $color-success;
-    }
-
-    &--error {
-      background-color: $color-error;
-    }
-
-    &--warning {
-      background-color: $color-warning;
+  @mixin button-group-variant($name, $color) {
+    &-variant--#{$name} {
+      background-color: $color;
     }
   }
+
+  @include button-group-variant('default', $color-default);
+  @include button-group-variant('primary', $color-primary);
+  @include button-group-variant('secondary', $color-secondary);
+  @include button-group-variant('success', $color-success);
+  @include button-group-variant('error', $color-error);
+  @include button-group-variant('warning', $color-warning);
 
   &-radius {
     &--none {

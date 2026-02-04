@@ -8,29 +8,18 @@
   }
 
   &__box {
-    &-variant--default &-options {
-      background-color: $color-default;
+    @mixin dropdown-variant($name, $color) {
+      &-variant--#{$name} &-options {
+        background-color: $color;
+      }
     }
 
-    &-variant--primary &-options {
-      background-color: $color-primary;
-    }
-
-    &-variant--secondary &-options {
-      background-color: $color-secondary;
-    }
-
-    &-variant--warning &-options {
-      background-color: $color-warning;
-    }
-
-    &-variant--error &-options {
-      background-color: $color-error;
-    }
-
-    &-variant--success &-options {
-      background-color: $color-success;
-    }
+    @include dropdown-variant('default', $color-default);
+    @include dropdown-variant('primary', $color-primary);
+    @include dropdown-variant('secondary', $color-secondary);
+    @include dropdown-variant('warning', $color-warning);
+    @include dropdown-variant('error', $color-error);
+    @include dropdown-variant('success', $color-success);
 
     &-overlay {
       backdrop-filter: blur(12px);
@@ -44,10 +33,10 @@
 
     &-options {
       align-items: flex-start;
-      border-radius: 8px; //TODO: change to dynamic
+      border-radius: 8px; // TODO: change to dynamic
       box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.04),
-        0 12px 24px rgba(0, 0, 0, 0.1);
+        0 4px 6px rgb(0 0 0 / 4%),
+        0 12px 24px rgb(0 0 0 / 10%);
       display: flex;
       flex-direction: column;
       opacity: 1;

@@ -32,6 +32,39 @@
   }
 }
 
+@mixin spinner-variant-default($name, $color) {
+  .spinner-type--default.spinner-variant--#{$name} {
+    border: 3px solid rgba($color, 0.25);
+    border-top-color: rgba($color, 1);
+  }
+}
+
+@mixin spinner-variant-duo($name, $color) {
+  .spinner-type--duo.spinner-variant--#{$name} {
+    border-bottom-color: rgba($color, 1);
+    border-top-color: rgba($color, 1);
+  }
+}
+
+@mixin spinner-variant-gradient($name, $color) {
+  .spinner-type--gradient.spinner-variant--#{$name} {
+    border-top: 3px solid rgba($color, 1);
+  }
+}
+
+@mixin spinner-variant-pulse($name, $color) {
+  .spinner-type--pulse.spinner-variant--#{$name} {
+    background-color: $color;
+  }
+}
+
+@mixin spinner-variant-pulse-duo($name, $color) {
+  .spinner-type--pulse-duo.spinner-variant--#{$name}::after,
+  .spinner-type--pulse-duo.spinner-variant--#{$name}::before {
+    background-color: $color;
+  }
+}
+
 .spinner {
   &-size {
     &--xsm {
@@ -64,151 +97,28 @@
     &--default {
       animation: rotation 800ms ease infinite;
       border-radius: 50%;
-
-      &.spinner-variant {
-        &--default {
-          border: 3px solid rgba($color-default, 0.25);
-          border-top-color: rgba($color-default, 1);
-        }
-        &--primary {
-          border: 3px solid rgba($color-primary, 0.25);
-          border-top-color: rgba($color-primary, 1);
-        }
-        &--secondary {
-          border: 3px solid rgba($color-secondary, 0.25);
-          border-top-color: rgba($color-secondary, 1);
-        }
-        &--success {
-          border: 3px solid rgba($color-success, 0.25);
-          border-top-color: rgba($color-success, 1);
-        }
-        &--error {
-          border: 3px solid rgba($color-error, 0.25);
-          border-top-color: rgba($color-error, 1);
-        }
-        &--warning {
-          border: 3px solid rgba($color-warning, 0.25);
-          border-top-color: rgba($color-warning, 1);
-        }
-      }
     }
 
     &--duo {
       animation: rotation 800ms ease infinite;
       border: 3px solid transparent;
       border-radius: 50%;
-
-      &.spinner-variant {
-        &--default {
-          border-bottom-color: rgba($color-default, 1);
-          border-top-color: rgba($color-default, 1);
-        }
-        &--primary {
-          border-bottom-color: rgba($color-primary, 1);
-          border-top-color: rgba($color-primary, 1);
-        }
-        &--secondary {
-          border-bottom-color: rgba($color-secondary, 1);
-          border-top-color: rgba($color-secondary, 1);
-        }
-        &--success {
-          border-bottom-color: rgba($color-success, 1);
-          border-top-color: rgba($color-success, 1);
-        }
-        &--error {
-          border-bottom-color: rgba($color-error, 1);
-          border-top-color: rgba($color-error, 1);
-        }
-        &--warning {
-          border-bottom-color: rgba($color-warning, 1);
-          border-top-color: rgba($color-warning, 1);
-        }
-      }
     }
 
     &--gradient {
       animation: rotation 800ms linear infinite;
       border-right: 3px solid transparent;
       border-radius: 50%;
-
-      &.spinner-variant {
-        &--default {
-          border-top: 3px solid rgba($color-default, 1);
-        }
-        &--primary {
-          border-top: 3px solid rgba($color-primary, 1);
-        }
-        &--secondary {
-          border-top: 3px solid rgba($color-secondary, 1);
-        }
-        &--success {
-          border-top: 3px solid rgba($color-success, 1);
-        }
-        &--error {
-          border-top: 3px solid rgba($color-error, 1);
-        }
-        &--warning {
-          border-top: 3px solid rgba($color-warning, 1);
-        }
-      }
     }
 
     &--pulse {
       animation: pulse 1s ease-in-out infinite;
       border-radius: 50%;
       position: relative;
-
-      &.spinner-variant {
-        &--default {
-          background-color: $color-default;
-        }
-        &--primary {
-          background-color: $color-primary;
-        }
-        &--secondary {
-          background-color: $color-secondary;
-        }
-        &--success {
-          background-color: $color-success;
-        }
-        &--error {
-          background-color: $color-error;
-        }
-        &--warning {
-          background-color: $color-warning;
-        }
-      }
     }
 
     &--pulse-duo {
       position: relative;
-
-      &.spinner-variant {
-        &--default::after,
-        &--default::before {
-          background-color: $color-default;
-        }
-        &--primary::after,
-        &--primary::before {
-          background-color: $color-primary;
-        }
-        &--secondary::after,
-        &--secondary::before {
-          background-color: $color-secondary;
-        }
-        &--success::after,
-        &--success::before {
-          background-color: $color-success;
-        }
-        &--error::after,
-        &--error::before {
-          background-color: $color-error;
-        }
-        &--warning::after,
-        &--warning::before {
-          background-color: $color-warning;
-        }
-      }
 
       &::before,
       &::after {
@@ -230,3 +140,34 @@
     }
   }
 }
+
+@include spinner-variant-default('default', $color-default);
+@include spinner-variant-default('primary', $color-primary);
+@include spinner-variant-default('secondary', $color-secondary);
+@include spinner-variant-default('success', $color-success);
+@include spinner-variant-default('error', $color-error);
+@include spinner-variant-default('warning', $color-warning);
+@include spinner-variant-duo('default', $color-default);
+@include spinner-variant-duo('primary', $color-primary);
+@include spinner-variant-duo('secondary', $color-secondary);
+@include spinner-variant-duo('success', $color-success);
+@include spinner-variant-duo('error', $color-error);
+@include spinner-variant-duo('warning', $color-warning);
+@include spinner-variant-gradient('default', $color-default);
+@include spinner-variant-gradient('primary', $color-primary);
+@include spinner-variant-gradient('secondary', $color-secondary);
+@include spinner-variant-gradient('success', $color-success);
+@include spinner-variant-gradient('error', $color-error);
+@include spinner-variant-gradient('warning', $color-warning);
+@include spinner-variant-pulse('default', $color-default);
+@include spinner-variant-pulse('primary', $color-primary);
+@include spinner-variant-pulse('secondary', $color-secondary);
+@include spinner-variant-pulse('success', $color-success);
+@include spinner-variant-pulse('error', $color-error);
+@include spinner-variant-pulse('warning', $color-warning);
+@include spinner-variant-pulse-duo('default', $color-default);
+@include spinner-variant-pulse-duo('primary', $color-primary);
+@include spinner-variant-pulse-duo('secondary', $color-secondary);
+@include spinner-variant-pulse-duo('success', $color-success);
+@include spinner-variant-pulse-duo('error', $color-error);
+@include spinner-variant-pulse-duo('warning', $color-warning);
