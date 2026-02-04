@@ -1,0 +1,75 @@
+/* [project]/apps/sandbox/app/unisonpro_4d3badda.module.css [app-client] (css) */
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_Bold-s.p.cbf7f5d2.otf") format("opentype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldItalic-s.p.db49b615.otf") format("opentype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldRoundItalic-s.p.c62178c2.otf") format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldRound-s.p.8639b40c.otf") format("opentype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightItalic-s.p.64ba79f6.otf") format("opentype");
+  font-display: swap;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightRound-s.p.2bedaf5f.otf") format("opentype");
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightRoundItalic-s.p.267c9db6.otf") format("opentype");
+  font-display: swap;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro Fallback;
+  src: local(Arial);
+  ascent-override: 44.64%;
+  descent-override: 11.29%;
+  line-gap-override: 0.0%;
+  size-adjust: 204.53%;
+}
+
+.unisonpro_4d3badda-module__ZQAIMG__className {
+  font-family: unisonPro, unisonPro Fallback;
+}
+
+.unisonpro_4d3badda-module__ZQAIMG__variable {
+  --font-unison-pro: "unisonPro", "unisonPro Fallback";
+}
+
+/*# sourceMappingURL=apps_sandbox_app_unisonpro_4d3badda_module_css_bad6b30c._.single.css.map*/
