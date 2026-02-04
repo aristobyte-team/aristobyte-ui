@@ -1,0 +1,308 @@
+/* [project]/apps/sandbox/app/worksans_5341385c.module.css [app-client] (css) */
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Black-s.p.4521d299.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_ExtraBold-s.p.db69f5b5.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Bold-s.p.d12818f3.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_SemiBold-s.p.b8ddad1e.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Medium-s.p.6aea6024.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Regular-s.p.0b33afce.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Thin-s.p.a36b9aff.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_Light-s.p.b1a1d8d0.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../media/WorkSans_ExtraLight-s.p.7a5503fe.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: workSans Fallback;
+  src: local(Arial);
+  ascent-override: 82.98%;
+  descent-override: 21.68%;
+  line-gap-override: 0.0%;
+  size-adjust: 112.07%;
+}
+
+.worksans_5341385c-module__24B-MW__className {
+  font-family: workSans, workSans Fallback;
+}
+
+.worksans_5341385c-module__24B-MW__variable {
+  --font-work-sans: "workSans", "workSans Fallback";
+}
+
+/* [project]/apps/sandbox/app/unisonpro_4d3badda.module.css [app-client] (css) */
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_Bold-s.p.cbf7f5d2.otf") format("opentype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldItalic-s.p.db49b615.otf") format("opentype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldRoundItalic-s.p.c62178c2.otf") format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_BoldRound-s.p.8639b40c.otf") format("opentype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightItalic-s.p.64ba79f6.otf") format("opentype");
+  font-display: swap;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightRound-s.p.2bedaf5f.otf") format("opentype");
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: unisonPro;
+  src: url("../media/UnisonPro_LightRoundItalic-s.p.267c9db6.otf") format("opentype");
+  font-display: swap;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: unisonPro Fallback;
+  src: local(Arial);
+  ascent-override: 44.64%;
+  descent-override: 11.29%;
+  line-gap-override: 0.0%;
+  size-adjust: 204.53%;
+}
+
+.unisonpro_4d3badda-module__ZQAIMG__className {
+  font-family: unisonPro, unisonPro Fallback;
+}
+
+.unisonpro_4d3badda-module__ZQAIMG__variable {
+  --font-unison-pro: "unisonPro", "unisonPro Fallback";
+}
+
+/* [project]/apps/sandbox/app/righteous_3c106e39.module.css [app-client] (css) */
+@font-face {
+  font-family: righteous;
+  src: url("../media/Righteous_Regular-s.p.552bc4af.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: righteous Fallback;
+  src: local(Arial);
+  ascent-override: 92.83%;
+  descent-override: 24.21%;
+  line-gap-override: 0.0%;
+  size-adjust: 106.09%;
+}
+
+.righteous_3c106e39-module__hbkTjG__className {
+  font-family: righteous, righteous Fallback;
+}
+
+.righteous_3c106e39-module__hbkTjG__variable {
+  --font-righteous: "righteous", "righteous Fallback";
+}
+
+/* [project]/apps/sandbox/app/globals.scss.css [app-client] (css) */
+:root {
+  --lightningcss-light: initial;
+  --lightningcss-dark: ;
+  color-scheme: light;
+  font-family: Space Grotesk, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #f0f4f8;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(56, 189, 248, .18), rgba(0, 0, 0, 0) 60%), radial-gradient(900px 500px at 90% 0, rgba(148, 163, 184, .14), rgba(0, 0, 0, 0) 55%), #0b0c10;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.header {
+  gap: 8px;
+  width: 100vw;
+  display: flex;
+}
+
+.header__container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  display: flex;
+}
+
+.header__logo {
+  color: #f6f7f9;
+  border-radius: 999px;
+  align-items: center;
+  font-family: Righteous;
+  font-size: 32px;
+  display: flex;
+}
+
+.header__title {
+  letter-spacing: -.02em;
+  margin: 0;
+  font-size: 26px;
+}
+
+.header__subtitle {
+  color: rgba(240, 244, 248, .65);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.header__content {
+  text-align: right;
+  flex-direction: column;
+  display: flex;
+}
+
+.main {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
+.main__container {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+}
+
+.main__sandbox {
+  flex: 1;
+  gap: 28px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.main__sandbox-panel {
+  background: rgba(17, 20, 27, .78);
+  border: 1px solid rgba(148, 163, 184, .25);
+  border-radius: 18px;
+  place-items: center;
+  gap: 16px;
+  height: 100%;
+  min-height: 0;
+  padding: 24px;
+  display: grid;
+}
+
+.footer__container {
+  color: rgba(240, 244, 248, .55);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  font-size: 12px;
+  display: flex;
+}
+
+.footer__container p {
+  text-align: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=apps_sandbox_app_f9886e06._.css.map*/

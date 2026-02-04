@@ -52,9 +52,10 @@
     "clean": "rm -rf packages/*/dist dist-test/",
     "compile": "tsc -b tsconfig.build.json",
     "create-package": "bash scripts/create-package.sh",
-    "dev": "yarn run dev --filter=!@aristobyte-ui/cli",
-    "dev:docs": "yarn workspace @aristobyte-ui/docs dev",
-    "dev:cli": "yarn workspace @aristobyte-ui/cli dev",
+    "dev": "bash scripts/dev.sh",
+    "dev:docs": "bash scripts/dev.sh docs",
+    "dev:cli": "bash scripts/dev.sh cli",
+    "dev:sandbox": "bash scripts/dev.sh sandbox",
     "format": "prettier --write '**/*.{json,md,yaml,yml,html,scss}' && yarn lint:es --fix",
     "generate-build-tsconfig": "node scripts/generate-build-tsconfig.js",
     "install:quiet": "yarn install 2>&1 | node scripts/filter-logs.js",
@@ -130,7 +131,7 @@
       "eslint --fix"
     ],
     "apps/**/*.{js,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix --ignore-pattern '**/.next/**'"
     ],
     "*.{json,md,yaml,yml,html}": [
       "prettier --write"

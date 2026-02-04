@@ -1,0 +1,1167 @@
+/* [project]/packages/spinner/src/main/components/Spinner/Spinner.scss.css [app-client] (css) */
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-duo {
+  0%, 100% {
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(1);
+  }
+}
+
+.spinner-size--xsm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.spinner-size--sm {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.spinner-size--md {
+  width: 2rem;
+  height: 2rem;
+}
+
+.spinner-size--lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.spinner-size--xlg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.spinner-type--default {
+  border-radius: 50%;
+  animation: .8s infinite rotation;
+}
+
+.spinner-type--duo {
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  animation: .8s infinite rotation;
+}
+
+.spinner-type--gradient {
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  animation: .8s linear infinite rotation;
+}
+
+.spinner-type--pulse {
+  border-radius: 50%;
+  animation: 1s ease-in-out infinite pulse;
+  position: relative;
+}
+
+.spinner-type--pulse-duo {
+  position: relative;
+}
+
+.spinner-type--pulse-duo:before, .spinner-type--pulse-duo:after {
+  content: "";
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)scale(0);
+}
+
+.spinner-type--pulse-duo:before {
+  animation: 2s ease-in-out infinite pulse-duo;
+}
+
+.spinner-type--pulse-duo:after {
+  animation: 2s ease-in-out 1s infinite pulse-duo;
+}
+
+.spinner-type--default.spinner-variant--default {
+  border: 3px solid rgba(31, 41, 55, .25);
+  border-top-color: #1f2937;
+}
+
+.spinner-type--default.spinner-variant--primary {
+  border: 3px solid rgba(37, 99, 235, .25);
+  border-top-color: #2563eb;
+}
+
+.spinner-type--default.spinner-variant--secondary {
+  border: 3px solid rgba(79, 70, 229, .25);
+  border-top-color: #4f46e5;
+}
+
+.spinner-type--default.spinner-variant--success {
+  border: 3px solid rgba(22, 163, 74, .25);
+  border-top-color: #16a34a;
+}
+
+.spinner-type--default.spinner-variant--error {
+  border: 3px solid rgba(220, 38, 38, .25);
+  border-top-color: #dc2626;
+}
+
+.spinner-type--default.spinner-variant--warning {
+  border: 3px solid rgba(217, 119, 6, .25);
+  border-top-color: #d97706;
+}
+
+.spinner-type--duo.spinner-variant--default {
+  border-top-color: #1f2937;
+  border-bottom-color: #1f2937;
+}
+
+.spinner-type--duo.spinner-variant--primary {
+  border-top-color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.spinner-type--duo.spinner-variant--secondary {
+  border-top-color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
+
+.spinner-type--duo.spinner-variant--success {
+  border-top-color: #16a34a;
+  border-bottom-color: #16a34a;
+}
+
+.spinner-type--duo.spinner-variant--error {
+  border-top-color: #dc2626;
+  border-bottom-color: #dc2626;
+}
+
+.spinner-type--duo.spinner-variant--warning {
+  border-top-color: #d97706;
+  border-bottom-color: #d97706;
+}
+
+.spinner-type--gradient.spinner-variant--default {
+  border-top: 3px solid #1f2937;
+}
+
+.spinner-type--gradient.spinner-variant--primary {
+  border-top: 3px solid #2563eb;
+}
+
+.spinner-type--gradient.spinner-variant--secondary {
+  border-top: 3px solid #4f46e5;
+}
+
+.spinner-type--gradient.spinner-variant--success {
+  border-top: 3px solid #16a34a;
+}
+
+.spinner-type--gradient.spinner-variant--error {
+  border-top: 3px solid #dc2626;
+}
+
+.spinner-type--gradient.spinner-variant--warning {
+  border-top: 3px solid #d97706;
+}
+
+.spinner-type--pulse.spinner-variant--default {
+  background-color: #1f2937;
+}
+
+.spinner-type--pulse.spinner-variant--primary {
+  background-color: #2563eb;
+}
+
+.spinner-type--pulse.spinner-variant--secondary {
+  background-color: #4f46e5;
+}
+
+.spinner-type--pulse.spinner-variant--success {
+  background-color: #16a34a;
+}
+
+.spinner-type--pulse.spinner-variant--error {
+  background-color: #dc2626;
+}
+
+.spinner-type--pulse.spinner-variant--warning {
+  background-color: #d97706;
+}
+
+.spinner-type--pulse-duo.spinner-variant--default:after, .spinner-type--pulse-duo.spinner-variant--default:before {
+  background-color: #1f2937;
+}
+
+.spinner-type--pulse-duo.spinner-variant--primary:after, .spinner-type--pulse-duo.spinner-variant--primary:before {
+  background-color: #2563eb;
+}
+
+.spinner-type--pulse-duo.spinner-variant--secondary:after, .spinner-type--pulse-duo.spinner-variant--secondary:before {
+  background-color: #4f46e5;
+}
+
+.spinner-type--pulse-duo.spinner-variant--success:after, .spinner-type--pulse-duo.spinner-variant--success:before {
+  background-color: #16a34a;
+}
+
+.spinner-type--pulse-duo.spinner-variant--error:after, .spinner-type--pulse-duo.spinner-variant--error:before {
+  background-color: #dc2626;
+}
+
+.spinner-type--pulse-duo.spinner-variant--warning:after, .spinner-type--pulse-duo.spinner-variant--warning:before {
+  background-color: #d97706;
+}
+
+/* [project]/packages/button/src/main/components/Button/Button.scss.css [app-client] (css) */
+.button {
+  cursor: pointer;
+  letter-spacing: 0;
+  text-align: center;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.42;
+  transition: background-color .2s, transform .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.button:active {
+  transform: scale(.96);
+}
+
+.button--transparent {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.button .button-variant--default.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #1f2937;
+}
+
+.button .button-variant--default.button-appearance--solid:hover {
+  background-color: #111827;
+}
+
+.button .button-variant--default.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(31, 41, 55, .5);
+}
+
+.button .button-variant--default.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--default.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--default.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(31, 41, 55, .2);
+  border: 1px solid #1f2937;
+}
+
+.button .button-variant--default.button-appearance--outline:hover {
+  background-color: #1f2937;
+}
+
+.button .button-variant--default.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(31, 41, 55, .2);
+}
+
+.button .button-variant--default.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--default.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--default.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(31, 41, 55, .2);
+  border: 1px dashed #1f2937;
+}
+
+.button .button-variant--default.button-appearance--outline-dashed:hover {
+  background-color: #1f2937;
+}
+
+.button .button-variant--default.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(31, 41, 55, .2);
+}
+
+.button .button-variant--default.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--default.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--default.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(31, 41, 55, .2);
+}
+
+.button .button-variant--default.button-appearance--no-outline:hover {
+  background-color: #1f2937;
+}
+
+.button .button-variant--default.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(31, 41, 55, .2);
+}
+
+.button .button-variant--default.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--default.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--default.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(31, 41, 55, .2);
+  border: 1px solid #1f2937;
+  box-shadow: 0 0 8px rgba(31, 41, 55, .5), 0 0 16px rgba(31, 41, 55, .4), 0 0 24px rgba(31, 41, 55, .3);
+}
+
+.button .button-variant--default.button-appearance--glowing:hover {
+  background-color: #1f2937;
+}
+
+.button .button-variant--default.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(31, 41, 55, .2);
+}
+
+.button .button-variant--default.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--default.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button .button-variant--primary.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--solid:hover {
+  background-color: #1d4ed8;
+}
+
+.button .button-variant--primary.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(37, 99, 235, .5);
+}
+
+.button .button-variant--primary.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--primary.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--primary.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(37, 99, 235, .2);
+  border: 1px solid #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--outline:hover {
+  background-color: #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(37, 99, 235, .2);
+}
+
+.button .button-variant--primary.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--primary.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--primary.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(37, 99, 235, .2);
+  border: 1px dashed #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--outline-dashed:hover {
+  background-color: #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(37, 99, 235, .2);
+}
+
+.button .button-variant--primary.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--primary.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--primary.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(37, 99, 235, .2);
+}
+
+.button .button-variant--primary.button-appearance--no-outline:hover {
+  background-color: #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(37, 99, 235, .2);
+}
+
+.button .button-variant--primary.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--primary.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--primary.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(37, 99, 235, .2);
+  border: 1px solid #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, .5), 0 0 16px rgba(37, 99, 235, .4), 0 0 24px rgba(37, 99, 235, .3);
+}
+
+.button .button-variant--primary.button-appearance--glowing:hover {
+  background-color: #2563eb;
+}
+
+.button .button-variant--primary.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(37, 99, 235, .2);
+}
+
+.button .button-variant--primary.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--primary.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button .button-variant--secondary.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--solid:hover {
+  background-color: #4338ca;
+}
+
+.button .button-variant--secondary.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(79, 70, 229, .5);
+}
+
+.button .button-variant--secondary.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--secondary.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--secondary.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(79, 70, 229, .2);
+  border: 1px solid #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--outline:hover {
+  background-color: #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(79, 70, 229, .2);
+}
+
+.button .button-variant--secondary.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--secondary.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--secondary.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(79, 70, 229, .2);
+  border: 1px dashed #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--outline-dashed:hover {
+  background-color: #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(79, 70, 229, .2);
+}
+
+.button .button-variant--secondary.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--secondary.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--secondary.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(79, 70, 229, .2);
+}
+
+.button .button-variant--secondary.button-appearance--no-outline:hover {
+  background-color: #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(79, 70, 229, .2);
+}
+
+.button .button-variant--secondary.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--secondary.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--secondary.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(79, 70, 229, .2);
+  border: 1px solid #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, .5), 0 0 16px rgba(79, 70, 229, .4), 0 0 24px rgba(79, 70, 229, .3);
+}
+
+.button .button-variant--secondary.button-appearance--glowing:hover {
+  background-color: #4f46e5;
+}
+
+.button .button-variant--secondary.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(79, 70, 229, .2);
+}
+
+.button .button-variant--secondary.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--secondary.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button .button-variant--success.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #16a34a;
+}
+
+.button .button-variant--success.button-appearance--solid:hover {
+  background-color: #15803d;
+}
+
+.button .button-variant--success.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(22, 163, 74, .5);
+}
+
+.button .button-variant--success.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--success.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--success.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(22, 163, 74, .2);
+  border: 1px solid #16a34a;
+}
+
+.button .button-variant--success.button-appearance--outline:hover {
+  background-color: #16a34a;
+}
+
+.button .button-variant--success.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(22, 163, 74, .2);
+}
+
+.button .button-variant--success.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--success.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--success.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(22, 163, 74, .2);
+  border: 1px dashed #16a34a;
+}
+
+.button .button-variant--success.button-appearance--outline-dashed:hover {
+  background-color: #16a34a;
+}
+
+.button .button-variant--success.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(22, 163, 74, .2);
+}
+
+.button .button-variant--success.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--success.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--success.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(22, 163, 74, .2);
+}
+
+.button .button-variant--success.button-appearance--no-outline:hover {
+  background-color: #16a34a;
+}
+
+.button .button-variant--success.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(22, 163, 74, .2);
+}
+
+.button .button-variant--success.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--success.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--success.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(22, 163, 74, .2);
+  border: 1px solid #16a34a;
+  box-shadow: 0 0 8px rgba(22, 163, 74, .5), 0 0 16px rgba(22, 163, 74, .4), 0 0 24px rgba(22, 163, 74, .3);
+}
+
+.button .button-variant--success.button-appearance--glowing:hover {
+  background-color: #16a34a;
+}
+
+.button .button-variant--success.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(22, 163, 74, .2);
+}
+
+.button .button-variant--success.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--success.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button .button-variant--error.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #dc2626;
+}
+
+.button .button-variant--error.button-appearance--solid:hover {
+  background-color: #b91c1c;
+}
+
+.button .button-variant--error.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(220, 38, 38, .5);
+}
+
+.button .button-variant--error.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--error.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--error.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(220, 38, 38, .2);
+  border: 1px solid #dc2626;
+}
+
+.button .button-variant--error.button-appearance--outline:hover {
+  background-color: #dc2626;
+}
+
+.button .button-variant--error.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(220, 38, 38, .2);
+}
+
+.button .button-variant--error.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--error.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--error.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(220, 38, 38, .2);
+  border: 1px dashed #dc2626;
+}
+
+.button .button-variant--error.button-appearance--outline-dashed:hover {
+  background-color: #dc2626;
+}
+
+.button .button-variant--error.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(220, 38, 38, .2);
+}
+
+.button .button-variant--error.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--error.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--error.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(220, 38, 38, .2);
+}
+
+.button .button-variant--error.button-appearance--no-outline:hover {
+  background-color: #dc2626;
+}
+
+.button .button-variant--error.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(220, 38, 38, .2);
+}
+
+.button .button-variant--error.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--error.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--error.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(220, 38, 38, .2);
+  border: 1px solid #dc2626;
+  box-shadow: 0 0 8px rgba(220, 38, 38, .5), 0 0 16px rgba(220, 38, 38, .4), 0 0 24px rgba(220, 38, 38, .3);
+}
+
+.button .button-variant--error.button-appearance--glowing:hover {
+  background-color: #dc2626;
+}
+
+.button .button-variant--error.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(220, 38, 38, .2);
+}
+
+.button .button-variant--error.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--error.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button .button-variant--warning.button-appearance--solid {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: #d97706;
+}
+
+.button .button-variant--warning.button-appearance--solid:hover {
+  background-color: #b45309;
+}
+
+.button .button-variant--warning.button-appearance--solid:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(217, 119, 6, .5);
+}
+
+.button .button-variant--warning.button-appearance--solid:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--warning.button-appearance--solid .icon {
+  color: #fff;
+}
+
+.button .button-variant--warning.button-appearance--outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(217, 119, 6, .2);
+  border: 1px solid #d97706;
+}
+
+.button .button-variant--warning.button-appearance--outline:hover {
+  background-color: #d97706;
+}
+
+.button .button-variant--warning.button-appearance--outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(217, 119, 6, .2);
+}
+
+.button .button-variant--warning.button-appearance--outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--warning.button-appearance--outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--warning.button-appearance--outline-dashed {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(217, 119, 6, .2);
+  border: 1px dashed #d97706;
+}
+
+.button .button-variant--warning.button-appearance--outline-dashed:hover {
+  background-color: #d97706;
+}
+
+.button .button-variant--warning.button-appearance--outline-dashed:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(217, 119, 6, .2);
+}
+
+.button .button-variant--warning.button-appearance--outline-dashed:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--warning.button-appearance--outline-dashed .icon {
+  color: #fff;
+}
+
+.button .button-variant--warning.button-appearance--no-outline {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(217, 119, 6, .2);
+}
+
+.button .button-variant--warning.button-appearance--no-outline:hover {
+  background-color: #d97706;
+}
+
+.button .button-variant--warning.button-appearance--no-outline:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(217, 119, 6, .2);
+}
+
+.button .button-variant--warning.button-appearance--no-outline:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--warning.button-appearance--no-outline .icon {
+  color: #fff;
+}
+
+.button .button-variant--warning.button-appearance--glowing {
+  -webkit-backdrop-filter: 8px;
+  backdrop-filter: 8px;
+  color: #fff;
+  background-color: rgba(217, 119, 6, .2);
+  border: 1px solid #d97706;
+  box-shadow: 0 0 8px rgba(217, 119, 6, .5), 0 0 16px rgba(217, 119, 6, .4), 0 0 24px rgba(217, 119, 6, .3);
+}
+
+.button .button-variant--warning.button-appearance--glowing:hover {
+  background-color: #d97706;
+}
+
+.button .button-variant--warning.button-appearance--glowing:disabled {
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(217, 119, 6, .2);
+}
+
+.button .button-variant--warning.button-appearance--glowing:disabled .icon {
+  color: rgba(255, 255, 255, .5);
+}
+
+.button .button-variant--warning.button-appearance--glowing .icon {
+  color: #fff;
+}
+
+.button-size--xsm {
+  min-height: 28px;
+  padding: .25rem .5rem;
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+.button-size--xsm .spinner, .button-size--xsm .icon {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
+.button-size--sm {
+  min-height: 32px;
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.button-size--sm .spinner, .button-size--sm .icon {
+  max-width: 1.125rem;
+  max-height: 1.125rem;
+}
+
+.button-size--md {
+  min-height: 40px;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.button-size--md .spinner, .button-size--md .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.button-size--lg {
+  min-height: 44px;
+  padding: .625rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.button-size--lg .spinner, .button-size--lg .icon {
+  max-width: 1.375rem;
+  max-height: 1.375rem;
+}
+
+.button-size--xlg {
+  min-height: 48px;
+  padding: .75rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.button-size--xlg .spinner, .button-size--xlg .icon {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.button-radius--none {
+  border-radius: 0;
+}
+
+.button-radius--sm {
+  border-radius: .125rem;
+}
+
+.button-radius--md {
+  border-radius: .375rem;
+}
+
+.button-radius--lg {
+  border-radius: .5rem;
+}
+
+.button-radius--full {
+  border-radius: 1.5rem;
+}
+
+.button .icon {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button .icon--right {
+  order: 5;
+}
+
+.button .icon svg {
+  width: 100%;
+}
+
+/* [project]/packages/button/src/main/components/ButtonGroup/ButtonGroup.scss.css [app-client] (css) */
+.button-group {
+  align-items: center;
+  max-width: max-content;
+  display: flex;
+  overflow: hidden;
+}
+
+.button-group-align--horizontal {
+  flex-direction: row;
+}
+
+.button-group-align--vertical {
+  flex-direction: column;
+}
+
+.button-group-variant--default {
+  background-color: #1f2937;
+}
+
+.button-group-variant--primary {
+  background-color: #2563eb;
+}
+
+.button-group-variant--secondary {
+  background-color: #4f46e5;
+}
+
+.button-group-variant--success {
+  background-color: #16a34a;
+}
+
+.button-group-variant--error {
+  background-color: #dc2626;
+}
+
+.button-group-variant--warning {
+  background-color: #d97706;
+}
+
+.button-group-radius--none {
+  border-radius: 0;
+}
+
+.button-group-radius--sm {
+  border-radius: .125rem;
+}
+
+.button-group-radius--md {
+  border-radius: .375rem;
+}
+
+.button-group-radius--lg {
+  border-radius: .5rem;
+}
+
+.button-group-radius--full {
+  border-radius: 1.5rem;
+}
+
+/*# sourceMappingURL=packages_7c73de09._.css.map*/

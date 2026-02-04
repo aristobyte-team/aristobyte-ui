@@ -1,5 +1,4 @@
 - update eslint-confg, typescript-config, jest-config and create prettier-config
 - fix the cli types and build it in a proper way with new tsconfigs
-- create sandbox in apps just for the component implementation and point directly to the local packages instead of remote
 - fully fix the apps/docs and decide create proper tsconfig to look for the packages from remote
 - fix the react package which should export all the packages

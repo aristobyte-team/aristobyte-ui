@@ -1,0 +1,26 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/apps/sandbox/app/page": [
+      "static/media/WorkSans_Black-s.p.4521d299.ttf",
+      "static/media/WorkSans_ExtraBold-s.p.db69f5b5.ttf",
+      "static/media/WorkSans_Bold-s.p.d12818f3.ttf",
+      "static/media/WorkSans_SemiBold-s.p.b8ddad1e.ttf",
+      "static/media/WorkSans_Medium-s.p.6aea6024.ttf",
+      "static/media/WorkSans_Regular-s.p.0b33afce.ttf",
+      "static/media/WorkSans_Thin-s.p.a36b9aff.ttf",
+      "static/media/WorkSans_Light-s.p.b1a1d8d0.ttf",
+      "static/media/WorkSans_ExtraLight-s.p.7a5503fe.ttf",
+      "static/media/UnisonPro_Bold-s.p.cbf7f5d2.otf",
+      "static/media/UnisonPro_BoldItalic-s.p.db49b615.otf",
+      "static/media/UnisonPro_BoldRoundItalic-s.p.c62178c2.otf",
+      "static/media/UnisonPro_BoldRound-s.p.8639b40c.otf",
+      "static/media/UnisonPro_LightItalic-s.p.64ba79f6.otf",
+      "static/media/UnisonPro_LightRound-s.p.2bedaf5f.otf",
+      "static/media/UnisonPro_LightRoundItalic-s.p.267c9db6.otf",
+      "static/media/Righteous_Regular-s.p.552bc4af.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}
