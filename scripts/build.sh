@@ -51,9 +51,12 @@ forEachPackage() {
 compileAll() {
   log_step "Compiling monorepo"
 
+  log_info "Generating tsconfig.build.json"
+  yarn generate-build-tsconfig
+
   rm -rf packages/*/es
   rm -rf packages/*/lib
-  yarn tsc -b tsconfig.build.json
+  yarn compile
 
   log_ok "Compilation done"
 }

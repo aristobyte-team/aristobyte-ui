@@ -50,11 +50,13 @@
     "build": "bash scripts/build.sh",
     "check-version": "bash scripts/check-version.sh",
     "clean": "rm -rf packages/*/dist dist-test/",
+    "compile": "tsc -b tsconfig.build.json",
     "create-package": "bash scripts/create-package.sh",
     "dev": "yarn run dev --filter=!@aristobyte-ui/cli",
     "dev:docs": "yarn workspace @aristobyte-ui/docs dev",
     "dev:cli": "yarn workspace @aristobyte-ui/cli dev",
     "format": "prettier --write '**/*.{json,md,yaml,yml,html,scss}' && yarn lint:es --fix",
+    "generate-build-tsconfig": "node scripts/generate-build-tsconfig.js",
     "install:quiet": "yarn install 2>&1 | node scripts/filter-logs.js",
     "jest": "jest --colors",
     "lint": "run-p lint:*",
@@ -124,14 +126,17 @@
     "turbo": "^2.8.3"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "packages/**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "apps/**/*.{js,ts,tsx}": [
       "eslint --fix"
     ],
     "*.{json,md,yaml,yml,html}": [
       "prettier --write"
     ],
     "*.scss": [
-      "stylelint --fix",
+      "stylelint --fix --allow-empty-input",
       "prettier --write"
     ]
   },

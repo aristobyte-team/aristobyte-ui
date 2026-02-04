@@ -4,3 +4,4 @@ dist-test/
 node_modules/
 es/
 lib/
+config/templates/

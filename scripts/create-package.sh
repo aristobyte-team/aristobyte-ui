@@ -9,6 +9,7 @@ FG_GRAY="\033[90m"
 RESET="\033[0m"
 
 log_info() { printf "%b[INFO]%b %s\n" "$FG_CYAN" "$RESET" "$*"; }
+log_step() { printf "%b[STEP]%b %s\n" "$FG_CYAN" "$RESET" "$*"; }
 log_ok() { printf "%b[OK]%b %b✓%b %s\n" "$FG_GREEN" "$RESET" "$FG_GREEN" "$RESET" "$*"; }
 log_warn() { printf "%b[WARN]%b %b!%b %s\n" "$FG_YELLOW" "$RESET" "$FG_YELLOW" "$RESET" "$*"; }
 log_err() { printf "%b[FAIL]%b %b×%b %s\n" "$FG_RED" "$RESET" "$FG_RED" "$RESET" "$*"; }
@@ -42,13 +43,20 @@ COMPONENT_NAME="$(
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PKG_DIR="$ROOT_DIR/packages/$PACKAGE_NAME"
+UTILS_PKG_JSON="$ROOT_DIR/packages/utils/package.json"
+BASE_VERSION="1.0.0"
+TEMPLATE_DIR="$ROOT_DIR/config/templates/package"
+
+if [[ -f "$UTILS_PKG_JSON" ]]; then
+  BASE_VERSION="$(jq -r '.version' "$UTILS_PKG_JSON")"
+fi
 
 if [[ -d "$PKG_DIR" ]]; then
   log_err "Package already exists: packages/$PACKAGE_NAME"
   exit 1
 fi
 
-log_info "Provisioning package"
+log_step "Provisioning package"
 log_muted "  package   : $PACKAGE_NAME"
 log_muted "  component : $COMPONENT_NAME"
 
@@ -56,206 +64,41 @@ log_muted "  component : $COMPONENT_NAME"
 # Directory structure
 # ----------------------------------------
 
-mkdir -p \
-  "$PKG_DIR/src/main/components/$COMPONENT_NAME"
+log_step "Creating directory structure"
+log_muted "  -> packages/$PACKAGE_NAME"
+mkdir -p "$PKG_DIR"
+log_ok "Base folder created"
 
 # ----------------------------------------
-# package.json
+# Template files
 # ----------------------------------------
 
-cat > "$PKG_DIR/package.json" <<EOF_PKG
-{
-  "name": "@aristobyte-ui/$PACKAGE_NAME",
-  "description": "@TODO_docs: Short description for $PACKAGE_NAME package",
-  "version": "1.0.113",
-  "license": "MIT",
-  "private": false,
-  "author": "AristoByte <info@aristobyte.com>",
-  "homepage": "https://www.npmjs.com/package/@aristobyte-ui/$PACKAGE_NAME",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aristobyte-team/aristobyte-ui.git",
-    "directory": "packages/$PACKAGE_NAME"
-  },
-  "bugs": {
-    "url": "https://github.com/aristobyte-team/aristobyte-ui.git/issues"
-  },
-  "engines": {
-    "node": ">=20.17.0",
-    "npm": ">=10.8.2",
-    "yarn": ">=1.22.22"
-  },
-  "keywords": [
-    "aristobyte",
-    "ui",
-    "component",
-    "react",
-    "typescript"
-  ],
-  "files": [
-    "es",
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "es/index.d.ts",
-  "peerDependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  }
-}
-EOF_PKG
+log_step "Copying template files"
+log_muted "  -> $TEMPLATE_DIR"
+cp -R "$TEMPLATE_DIR"/. "$PKG_DIR"
+log_ok "Template files staged"
 
 # ----------------------------------------
-# README.md
-# ----------------------------------------
+# Replace template placeholders and component folder name.
+log_step "Applying template variables"
+log_muted "  -> package.json"
+log_muted "  -> README.md"
+log_muted "  -> CHANGELOG.md"
+log_muted "  -> tsconfig.build.json"
+log_muted "  -> tsconfig.build.es.json"
+log_muted "  -> tsconfig.build.cjs.json"
+log_muted "  -> tsconfig.json"
+log_muted "  -> src/main/index.ts"
+log_muted "  -> src/main/components/index.ts"
+log_muted "  -> src/main/components/$COMPONENT_NAME/index.tsx"
+log_muted "  -> src/main/components/$COMPONENT_NAME/$COMPONENT_NAME.scss"
+find "$PKG_DIR" -type f -print0 | xargs -0 perl -pi -e \
+  "s/__PACKAGE_NAME__/$PACKAGE_NAME/g; s/__COMPONENT_NAME__/$COMPONENT_NAME/g; s/__BASE_VERSION__/$BASE_VERSION/g"
 
-cat > "$PKG_DIR/README.md" <<EOF_README
-# @aristobyte-ui/$PACKAGE_NAME
+mv "$PKG_DIR/src/main/components/__COMPONENT_NAME__" "$PKG_DIR/src/main/components/$COMPONENT_NAME"
+mv "$PKG_DIR/src/main/components/$COMPONENT_NAME/__COMPONENT_NAME__.scss" "$PKG_DIR/src/main/components/$COMPONENT_NAME/$COMPONENT_NAME.scss"
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Build-Turbo-green?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
-  <img src="https://img.shields.io/badge/Lint-Strict-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
-  <img src="https://img.shields.io/badge/License-MIT-black?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
-  <img src="https://img.shields.io/badge/AristoByte-UI-purple?style=for-the-badge&logo=react&logoColor=white" alt="AristoByte UI" />
-  <img src="https://img.shields.io/badge/Node-20.17.0+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js >=20.17.0" />
-  <img src="https://img.shields.io/badge/Yarn-1.22+-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn >=1.22" />
-  <img src="https://img.shields.io/badge/NPM-10.8+-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="NPM >=10.8" />
-</p>
-
-<!-- @TODO_docs - package description -->
-
-## Installation
-
-```bash
-# Install via yarn
-yarn add -D @aristobyte-ui/$PACKAGE_NAME
-
-# Or via npm
-npm install -D @aristobyte-ui/$PACKAGE_NAME
-
-# Or via bun
-bun add -D @aristobyte-ui/$PACKAGE_NAME
-
-# Or via pnpm
-pnpm add -D @aristobyte-ui/$PACKAGE_NAME
-```
-
-## Usage
-
-```tsx
-// @TODO_docs
-// import { $COMPONENT_NAME } from '@aristobyte-ui/$PACKAGE_NAME';
-
-// export default function App() {
-//   return (
-//     <div>
-//       <$COMPONENT_NAME variant="success" type="solid" radius="md" withIcon>
-//         This is a success message!
-//       </$COMPONENT_NAME>
-//     </div>
-//   );
-// }
-```
-
-## Presets Available
-
-// @TODO_docs
-
-<!-- - **Variants**: `default`, `info`, `warning`, `success`, `error`
-- **Types**: `solid`, `outline`, `outline-dashed`, `no-outline`, `glowing`
-- **Radius options**: `none`, `sm`, `md`, `lg`, `full`
-- **Icons**: optional via `withIcon` or custom via `customIcon` prop -->
-
-## Example in a Package
-
-```tsx
-// @TODO_docs
-```
-
-## Why This Matters
-
-<!-- - **Performance-first:** Lightweight CSS ensures fast rendering and smooth transitions.
-- **Fully typed:** TypeScript-first API ensures predictable usage and IDE autocomplete.
-- **AristoByteUI ready:** Seamlessly integrates with design tokens and SCSS modules.
-- **Flexible:** Supports multiple variants, types, border-radius options, and optional icons. -->
- <!-- @TODO_docs -->
-
-## Philosophy
-
-<!-- - **Modular architecture:** $COMPONENT_NAME component is fully composable.
-- **Declarative styling:** SCSS modules keep styles maintainable and scoped.
-- **Strict typing & runtime flexibility:** Props fully typed while allowing runtime overrides.
-- **Developer experience optimized:** Easy to use with predictable behavior and minimal boilerplate. -->
-<!-- @TODO_docs -->
-
-## License
-
-[MIT](./LICENSE) © AristoByte
-
-## Shields Showcase
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Consistency-100%25-green?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/Maintained-Active-brightgreen?style=for-the-badge&logo=github" />
-  <img src="https://img.shields.io/badge/Strictness-High-critical?style=for-the-badge&logo=eslint" />
-  <img src="https://img.shields.io/badge/Declarations-Enabled-blue?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/Monorepo-Turbo-green?style=for-the-badge&logo=monorepo" />
-  <img src="https://img.shields.io/badge/Interop-ESM%2FCJS-orange?style=for-the-badge&logo=javascript" />
-</p>
-EOF_README
-
-log_info "Linking workspace dependency: @aristobyte-ui/utils"
-
-yarn workspace "@aristobyte-ui/$PACKAGE_NAME" add "@aristobyte-ui/utils"
-
-# ----------------------------------------
-# src/main/index.ts
-# ----------------------------------------
-
-cat > "$PKG_DIR/src/main/index.ts" <<EOF_SRC_INDEX
-export * from './components';
-EOF_SRC_INDEX
-
-# ----------------------------------------
-# src/main/components/index.ts
-# ----------------------------------------
-
-cat > "$PKG_DIR/src/main/components/index.ts" <<EOF_COMPONENTS_INDEX
-export * from './$COMPONENT_NAME';
-EOF_COMPONENTS_INDEX
-
-# ----------------------------------------
-# Component index.tsx
-# ----------------------------------------
-
-cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/index.tsx" <<EOF_COMPONENT
-import * as React from 'react';
-
-import './$COMPONENT_NAME.scss';
-
-export interface I$COMPONENT_NAME {}
-
-export const $COMPONENT_NAME: React.FC<I$COMPONENT_NAME> = ({}) => {
-  return <div className="$PACKAGE_NAME"></div>;
-};
-EOF_COMPONENT
-
-# ----------------------------------------
-# Component SCSS
-# ----------------------------------------
-
-cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/$COMPONENT_NAME.scss" <<EOF_SCSS
-@use '@aristobyte-ui/utils/styles/settings' as *;
-
-.$PACKAGE_NAME {
-  // @TODO_styles
-}
-EOF_SCSS
+log_ok "Package files ready"
 
 # ----------------------------------------
 # Done

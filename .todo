@@ -1,5 +1,3 @@
-- create a script which identifies the order of the tsconfig.build.json
-- create up to date create-package scripts (identify which packages are non-usual such as cli or eslint-config)
 - update eslint-confg, typescript-config, jest-config and create prettier-config
 - fix the cli types and build it in a proper way with new tsconfigs
 - create sandbox in apps just for the component implementation and point directly to the local packages instead of remote

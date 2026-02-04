@@ -24,6 +24,8 @@ module.exports = [
       '**/.turbo/**',
       '**/*.d.ts',
       '**/*.d.ts.map',
+      'config/templates/**',
+      'scripts/**',
       /* @TODO_lint: TEMP FIX */
       'packages/cli/**',
       'packages/eslint-config/**',
