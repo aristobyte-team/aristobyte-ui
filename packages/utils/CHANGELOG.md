@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 2.9.0
+
+### Minor Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.8.1
 
 ### Patch Changes
