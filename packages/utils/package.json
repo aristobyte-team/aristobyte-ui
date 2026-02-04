@@ -37,6 +37,12 @@
     "aristobyte-ui.settings.scss"
   ],
   "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
     "./styles": "./aristobyte-ui.settings.scss"
   },
   "publishConfig": {

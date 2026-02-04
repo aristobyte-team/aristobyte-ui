@@ -99,6 +99,13 @@ packPackage() {
   
   [[ -f package.json ]] && cp package.json ./dist/package.json
   [[ -f CHANGELOG.md ]] && cp CHANGELOG.md ./dist/CHANGELOG.md
+  [[ -f README.md ]] && cp README.md ./dist/README.md
+
+  if [[ -f LICENSE ]]; then
+    cp LICENSE ./dist/LICENSE
+  elif [[ -f LICENSE.md ]]; then
+    cp LICENSE.md ./dist/LICENSE.md
+  fi
 
   rm -rf ./es ./lib
   log "🦋 Final artifact: $dirname/dist"

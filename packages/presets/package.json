@@ -122,5 +122,13 @@
     "@aristobyte-ui/anchor": "^2.8.0",
     "@aristobyte-ui/button": "^2.8.0",
     "@aristobyte-ui/utils": "^2.8.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
   }
 }
