@@ -19,22 +19,14 @@ module.exports = {
   transformIgnorePatterns: ['/node_modules/', '<rootDir>/(dist|node_modules)/(?!lodash-es)'],
   transform: {
     '^.+\\.[tj]sx?$': [
-      'jest-chain-transform',
+      'ts-jest',
       {
-        transformers: [
-          path.join(__dirname, 'flowRemoveTypesTransformer.js'),
-          [
-            'ts-jest',
-            {
-              tsconfig: path.join(ROOT_DIR, 'tsconfig.jest.json'),
-            },
-          ],
-        ],
+        tsconfig: path.join(ROOT_DIR, 'tsconfig.jest.json'),
       },
     ],
   },
   modulePathIgnorePatterns: [],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  snapshotSerializers: [],
 
   collectCoverageFrom: [
     'packages/**/*.{ts,tsx,js}',
