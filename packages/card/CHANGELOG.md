@@ -1,5 +1,17 @@
 # @aristobyte-ui/card
 
+## 2.11.0
+
+### Minor Changes
+
+- Automated release from scripts/check-version.sh
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@2.11.0
+  - @aristobyte-ui/utils@2.11.0
+
 ## 2.10.0
 
 ### Minor Changes
