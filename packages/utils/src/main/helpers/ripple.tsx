@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 type RippleParamsRef = HTMLButtonElement | HTMLAnchorElement;
 
 export type RippleParams<HTMLElementType extends RippleParamsRef> = {
@@ -14,13 +16,13 @@ export const renderRipple = <HTMLElementType extends RippleParamsRef>({
   const button = ref.current;
   if (!button) return;
 
-  const circle = document.createElement("span");
+  const circle = document.createElement('span');
   const diameter = Math.max(button.clientWidth, button.clientHeight);
   const radius = diameter / 2;
 
-  circle.id = "ripple";
+  circle.id = 'ripple';
 
-  const style = document.createElement("style");
+  const style = document.createElement('style');
   style.innerHTML = `
       #ripple {
         animation: ripple 300ms linear;
@@ -47,7 +49,7 @@ export const renderRipple = <HTMLElementType extends RippleParamsRef>({
   button.appendChild(style);
   button.appendChild(circle);
 
-  circle.addEventListener("animationend", () => {
+  circle.addEventListener('animationend', () => {
     circle.remove();
     style.remove();
   });

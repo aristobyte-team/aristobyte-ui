@@ -9,20 +9,13 @@ $logo-color-2: #fec800;
 $logo-color-3: #f18e35;
 $logo-color-4: #e95f32;
 $logo-color-5: #e2312d;
-$logo-gradient: linear-gradient(
-  90deg,
-  $logo-color-1,
-  $logo-color-2,
-  $logo-color-3,
-  $logo-color-4,
-  $logo-color-5
-);
+$logo-gradient: linear-gradient(90deg, $logo-color-1, $logo-color-2, $logo-color-3, $logo-color-4, $logo-color-5);
 
 // Base
-$white: #ffffff;
-$white-hover: #dddddd;
-$black: #000000;
-$black-hover: #222222;
+$white: #fff;
+$white-hover: #ddd;
+$black: #000;
+$black-hover: #222;
 $transparent: transparent;
 
 // === Black Transparent Scale === //
@@ -157,9 +150,9 @@ $shadow-lg:
   0 4px 6px -2px rgba($black, 0.05);
 
 // === Font families === //
-$font-family-sans: "Inter", sans-serif;
-$font-family-serif: "Georgia", serif;
-$font-family-mono: "Fira Code", monospace;
+$font-family-sans: 'Inter', sans-serif;
+$font-family-serif: 'Georgia', serif;
+$font-family-mono: 'Fira Code', monospace;
 
 // === Font weights === //
 $font-weight-regular: 400;

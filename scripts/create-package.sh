@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+FG_CYAN="\033[36m"
+FG_GREEN="\033[32m"
+FG_YELLOW="\033[33m"
+FG_RED="\033[31m"
+FG_GRAY="\033[90m"
+RESET="\033[0m"
+
+log_info() { printf "%b[INFO]%b %s\n" "$FG_CYAN" "$RESET" "$*"; }
+log_ok() { printf "%b[OK]%b %b✓%b %s\n" "$FG_GREEN" "$RESET" "$FG_GREEN" "$RESET" "$*"; }
+log_warn() { printf "%b[WARN]%b %b!%b %s\n" "$FG_YELLOW" "$RESET" "$FG_YELLOW" "$RESET" "$*"; }
+log_err() { printf "%b[FAIL]%b %b×%b %s\n" "$FG_RED" "$RESET" "$FG_RED" "$RESET" "$*"; }
+log_muted() { printf "%b%s%b\n" "$FG_GRAY" "$*" "$RESET"; }
+
 # ----------------------------------------
 # Input validation
 # ----------------------------------------
@@ -8,12 +21,12 @@ set -euo pipefail
 PACKAGE_NAME="${1:-}"
 
 if [[ -z "$PACKAGE_NAME" ]]; then
-  echo "❌ PACKAGE_NAME is required (e.g. message-box)"
+  log_err "PACKAGE_NAME is required (e.g. message-box)"
   exit 1
 fi
 
 if [[ ! "$PACKAGE_NAME" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
-  echo "❌ Invalid package name. Use kebab-case only."
+  log_err "Invalid package name. Use kebab-case only."
   exit 1
 fi
 
@@ -31,13 +44,13 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PKG_DIR="$ROOT_DIR/packages/$PACKAGE_NAME"
 
 if [[ -d "$PKG_DIR" ]]; then
-  echo "❌ Package already exists: packages/$PACKAGE_NAME"
+  log_err "Package already exists: packages/$PACKAGE_NAME"
   exit 1
 fi
 
-echo "🚀 Provisioning package:"
-echo "   • package  : $PACKAGE_NAME"
-echo "   • component: $COMPONENT_NAME"
+log_info "Provisioning package"
+log_muted "  package   : $PACKAGE_NAME"
+log_muted "  component : $COMPONENT_NAME"
 
 # ----------------------------------------
 # Directory structure
@@ -50,7 +63,7 @@ mkdir -p \
 # package.json
 # ----------------------------------------
 
-cat > "$PKG_DIR/package.json" <<EOF
+cat > "$PKG_DIR/package.json" <<EOF_PKG
 {
   "name": "@aristobyte-ui/$PACKAGE_NAME",
   "description": "@TODO_docs: Short description for $PACKAGE_NAME package",
@@ -86,20 +99,21 @@ cat > "$PKG_DIR/package.json" <<EOF
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",  "module": "es/index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "es/index.d.ts",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
 }
-EOF
+EOF_PKG
 
 # ----------------------------------------
 # README.md
 # ----------------------------------------
 
-cat > "$PKG_DIR/README.md" <<EOF
+cat > "$PKG_DIR/README.md" <<EOF_README
 # @aristobyte-ui/$PACKAGE_NAME
 
 <p align="center">
@@ -115,9 +129,9 @@ cat > "$PKG_DIR/README.md" <<EOF
 
 <!-- @TODO_docs - package description -->
 
-## 📦 Installation
+## Installation
 
-\`\`\`bash
+```bash
 # Install via yarn
 yarn add -D @aristobyte-ui/$PACKAGE_NAME
 
@@ -129,11 +143,11 @@ bun add -D @aristobyte-ui/$PACKAGE_NAME
 
 # Or via pnpm
 pnpm add -D @aristobyte-ui/$PACKAGE_NAME
-\`\`\`
+```
 
-## 🛠 Usage
+## Usage
 
-\`\`\`tsx
+```tsx
 // @TODO_docs
 // import { $COMPONENT_NAME } from '@aristobyte-ui/$PACKAGE_NAME';
 
@@ -146,24 +160,24 @@ pnpm add -D @aristobyte-ui/$PACKAGE_NAME
 //     </div>
 //   );
 // }
-\`\`\`
+```
 
-## 📂 Presets Available
+## Presets Available
 
 // @TODO_docs
 
-<!-- - **Variants**: \`default\`, \`info\`, \`warning\`, \`success\`, \`error\`
-- **Types**: \`solid\`, \`outline\`, \`outline-dashed\`, \`no-outline\`, \`glowing\`
-- **Radius options**: \`none\`, \`sm\`, \`md\`, \`lg\`, \`full\`
-- **Icons**: optional via \`withIcon\` or custom via \`customIcon\` prop -->
+<!-- - **Variants**: `default`, `info`, `warning`, `success`, `error`
+- **Types**: `solid`, `outline`, `outline-dashed`, `no-outline`, `glowing`
+- **Radius options**: `none`, `sm`, `md`, `lg`, `full`
+- **Icons**: optional via `withIcon` or custom via `customIcon` prop -->
 
-## 🔧 Example in a Package
+## Example in a Package
 
-\`\`\`tsx
+```tsx
 // @TODO_docs
-\`\`\`
+```
 
-## 📊 Why This Matters
+## Why This Matters
 
 <!-- - **Performance-first:** Lightweight CSS ensures fast rendering and smooth transitions.
 - **Fully typed:** TypeScript-first API ensures predictable usage and IDE autocomplete.
@@ -171,7 +185,7 @@ pnpm add -D @aristobyte-ui/$PACKAGE_NAME
 - **Flexible:** Supports multiple variants, types, border-radius options, and optional icons. -->
  <!-- @TODO_docs -->
 
-## 🏆 Philosophy
+## Philosophy
 
 <!-- - **Modular architecture:** $COMPONENT_NAME component is fully composable.
 - **Declarative styling:** SCSS modules keep styles maintainable and scoped.
@@ -179,11 +193,11 @@ pnpm add -D @aristobyte-ui/$PACKAGE_NAME
 - **Developer experience optimized:** Easy to use with predictable behavior and minimal boilerplate. -->
 <!-- @TODO_docs -->
 
-## 📜 License
+## License
 
 [MIT](./LICENSE) © AristoByte
 
-## 🛡 Shields Showcase
+## Shields Showcase
 
 <p align="center">
   <img src="https://img.shields.io/badge/Consistency-100%25-green?style=for-the-badge&logo=typescript" />
@@ -193,9 +207,9 @@ pnpm add -D @aristobyte-ui/$PACKAGE_NAME
   <img src="https://img.shields.io/badge/Monorepo-Turbo-green?style=for-the-badge&logo=monorepo" />
   <img src="https://img.shields.io/badge/Interop-ESM%2FCJS-orange?style=for-the-badge&logo=javascript" />
 </p>
-EOF
+EOF_README
 
-echo "📦 Linking workspace dependency: @aristobyte-ui/utils"
+log_info "Linking workspace dependency: @aristobyte-ui/utils"
 
 yarn workspace "@aristobyte-ui/$PACKAGE_NAME" add "@aristobyte-ui/utils"
 
@@ -203,23 +217,23 @@ yarn workspace "@aristobyte-ui/$PACKAGE_NAME" add "@aristobyte-ui/utils"
 # src/main/index.ts
 # ----------------------------------------
 
-cat > "$PKG_DIR/src/main/index.ts" <<EOF
+cat > "$PKG_DIR/src/main/index.ts" <<EOF_SRC_INDEX
 export * from './components';
-EOF
+EOF_SRC_INDEX
 
 # ----------------------------------------
 # src/main/components/index.ts
 # ----------------------------------------
 
-cat > "$PKG_DIR/src/main/components/index.ts" <<EOF
+cat > "$PKG_DIR/src/main/components/index.ts" <<EOF_COMPONENTS_INDEX
 export * from './$COMPONENT_NAME';
-EOF
+EOF_COMPONENTS_INDEX
 
 # ----------------------------------------
 # Component index.tsx
 # ----------------------------------------
 
-cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/index.tsx" <<EOF
+cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/index.tsx" <<EOF_COMPONENT
 import * as React from 'react';
 
 import './$COMPONENT_NAME.scss';
@@ -229,23 +243,22 @@ export interface I$COMPONENT_NAME {}
 export const $COMPONENT_NAME: React.FC<I$COMPONENT_NAME> = ({}) => {
   return <div className="$PACKAGE_NAME"></div>;
 };
-EOF
+EOF_COMPONENT
 
 # ----------------------------------------
 # Component SCSS
 # ----------------------------------------
 
-cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/$COMPONENT_NAME.scss" <<EOF
+cat > "$PKG_DIR/src/main/components/$COMPONENT_NAME/$COMPONENT_NAME.scss" <<EOF_SCSS
 @use '@aristobyte-ui/utils/styles/settings' as *;
 
 .$PACKAGE_NAME {
   // @TODO_styles
 }
-EOF
+EOF_SCSS
 
 # ----------------------------------------
 # Done
 # ----------------------------------------
 
-echo "✅ Package successfully created:"
-echo "   packages/$PACKAGE_NAME"
+log_ok "Package created: packages/$PACKAGE_NAME"

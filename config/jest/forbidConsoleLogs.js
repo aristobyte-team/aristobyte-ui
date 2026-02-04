@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const FORBIDDEN_LOGS = [
   'Warning: Failed context type: The context `t` is marked as required in',
   'Unable to access t function. Ensure that',

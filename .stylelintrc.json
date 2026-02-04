@@ -3,7 +3,19 @@
   "rules": {
     "color-named": null,
     "max-nesting-depth": null,
+    "length-zero-no-unit": null,
+    "rule-empty-line-before": null,
+    "selector-no-qualifying-type": [true, { "ignore": ["class"] }],
+    "scss/dollar-variable-colon-space-after": null,
     "selector-class-pattern": ["^[a-z0-9_\\-]+$", { "resolveNestedSelectors": true }],
     "selector-no-vendor-prefix": [true, { "ignoreSelectors": [":-ms-fullscreen"] }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["packages/presets/**/*.scss"],
+      "rules": {
+        "block-no-empty": null
+      }
+    }
+  ]
 }

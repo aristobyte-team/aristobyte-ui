@@ -1,3 +1,1 @@
-- fix add index.d.ts file in each package to have a typescript recognision.
-- fix eslint, stylelint + husky init
 - fix deps that still have the tailwindcss instead of .scss (switch & label)

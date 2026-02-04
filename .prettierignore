@@ -1,7 +1,9 @@
 coverage/
-dist/
-es/
-lib/
+**/dist/
+**/es/
+**/lib/
+**/.next/
+**/.turbo/
 
 CHANGELOG.md
 
