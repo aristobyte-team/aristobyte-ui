@@ -121,7 +121,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "globals": "^16.2.0",
     "lint-staged": "^16.1.0",
-    "stylelint-config-standard-scss": "^15.0.0",
+    "stylelint-config-standard-scss": "^16.0.0",
     "tslib": "^2.8.1",
     "turbo": "^2.8.3"
   },
