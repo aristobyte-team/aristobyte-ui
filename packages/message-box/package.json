@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/message-box",
   "description": "A fully-typed, modular, and flexible MessageBox component for AristoByteUI, supporting multiple variants, types, border-radius options, and optional icons.",
-  "version": "2.14.2",
+  "version": "2.14.3",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -50,7 +50,7 @@
     "sass": "^1.97.3"
   },
   "dependencies": {
-    "@aristobyte-ui/utils": "^2.14.2"
+    "@aristobyte-ui/utils": "^2.14.3"
   },
   "exports": {
     ".": {
