@@ -92,7 +92,7 @@ yarn format
 
 ## Branching & Workflow
 
-- **Main Branch:** `main` (stable production-ready code)
+- **Main Branch:** `master` (stable production-ready code)
 - **Development Branches:** `feature/<feature-name>` or `bugfix/<issue-name>`
 - **Pull Requests:** Target `main` or a feature branch as specified
 

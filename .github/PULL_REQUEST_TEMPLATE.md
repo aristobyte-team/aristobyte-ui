@@ -1,26 +1,25 @@
-# Pull Request Template
+## Summary
 
-## Description
-
-Please include a summary of the change and which issue is fixed. Also include relevant motivation and context.
+Explain what changed and why. Link relevant issues.
 
 Fixes # (issue)
 
-## Type of Change
+## Type
 
 - [ ] Bug fix
-- [ ] New feature
+- [ ] Feature
 - [ ] Breaking change
-- [ ] Documentation update
+- [ ] Docs
 - [ ] Refactor
+- [ ] Chore
 
 ## Checklist
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] I ran `yarn lint` and it passed
+- [ ] I ran relevant tests (`yarn test` or scoped)
+- [ ] I updated docs or examples where needed
+- [ ] I added screenshots/GIFs for visual changes
 
-## Screenshots / GIFs (if applicable)
+## Notes for reviewers
+
+Anything that would help reviewers focus on the right parts.

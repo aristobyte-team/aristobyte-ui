@@ -1,0 +1,13 @@
+docs:
+  - 'README.md'
+  - 'packages/**/README.md'
+  - 'apps/docs/**'
+  - '.github/**'
+components:
+  - 'packages/*/src/**'
+styles:
+  - '**/*.scss'
+scripts:
+  - 'scripts/**'
+ci:
+  - '.github/workflows/**'
