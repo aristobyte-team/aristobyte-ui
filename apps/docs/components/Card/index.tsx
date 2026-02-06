@@ -2,7 +2,7 @@ import * as React from "react";
 import { type IconPropsType } from "@aristobyte-ui/utils";
 
 import { Label } from "../Label";
-import "./Card.css";
+import "./Card.scss";
 
 export interface ICard {
   title?: string;

@@ -52,7 +52,6 @@
     "clean": "rm -rf packages/*/dist dist-test/",
     "compile": "tsc -b tsconfig.build.json",
     "create-package": "bash scripts/create-package.sh",
-    "dev": "bash scripts/dev.sh",
     "dev:docs": "bash scripts/dev.sh docs",
     "dev:cli": "bash scripts/dev.sh cli",
     "dev:sandbox": "bash scripts/dev.sh sandbox",

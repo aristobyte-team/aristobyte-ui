@@ -7,7 +7,7 @@ import {
   CodeHighlightSupportedThemes,
 } from "@/config";
 
-import "./TypeBlock.css";
+import "./TypeBlock.scss";
 
 interface ITypeBlock {
   code: string;

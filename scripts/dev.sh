@@ -19,21 +19,16 @@ log_muted() { printf "%b%s%b\n" "$FG_GRAY" "$*" "$RESET"; }
 TARGET="${1:-all}"
 
 case "$TARGET" in
-  all)
-    log_step "Starting dev (all except cli)"
-    log_muted "  yarn run dev --filter=!@aristobyte-ui/cli"
-    yarn run dev --filter=!@aristobyte-ui/cli
-    ;;
   docs)
     log_step "Starting dev (docs)"
     log_muted "  yarn workspace @aristobyte-ui/docs dev"
     yarn workspace @aristobyte-ui/docs dev
     ;;
-  cli)
-    log_step "Starting dev (cli)"
-    log_muted "  yarn workspace @aristobyte-ui/cli dev"
-    yarn workspace @aristobyte-ui/cli dev
-    ;;
+  # cli)
+  #   log_step "Starting dev (cli)"
+  #   log_muted "  yarn workspace @aristobyte-ui/cli dev"
+  #   yarn workspace @aristobyte-ui/cli dev
+  #   ;;
   sandbox)
     log_step "Starting dev (sandbox)"
     log_muted "  yarn workspace @aristobyte-ui/sandbox dev"

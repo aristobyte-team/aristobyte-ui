@@ -10,7 +10,7 @@ import {
   CodeHighlightSupportedThemes,
 } from "@/config";
 
-import "./CodeBlock.css";
+import "./CodeBlock.scss";
 
 interface ICodeBlock {
   code: string;

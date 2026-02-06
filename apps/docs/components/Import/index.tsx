@@ -8,7 +8,7 @@ import { useConfig, useTranslate } from "@/context";
 import { Icons } from "@aristobyte-ui/utils";
 import { CodeBlocks, Helpers, components } from "@/config";
 
-import "./Import.css";
+import "./Import.scss";
 
 export type IImport = {
   category: string;

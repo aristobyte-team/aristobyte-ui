@@ -9,7 +9,7 @@
   gap: 10px;
   justify-content: center;
   letter-spacing: 0rem;
-  line-height: 1.42;
+  line-height: 1.42px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -30,127 +30,59 @@
     background-color: transparent !important;
   }
 
-  @mixin button-variant($name, $color, $color-hover, $color-disabled) {
-    .button-variant--#{$name}.button-appearance--solid {
-      background-color: $color;
-      backdrop-filter: 8px;
-      color: $text-color-white;
+  @mixin button-style($bg, $hover-bg, $disabled-bg, $border: null, $glow: false) {
+    background-color: $bg;
+    backdrop-filter: 8px;
+    color: $text-color-white;
 
-      &:hover {
-        background-color: $color-hover;
-      }
-
-      &:disabled {
-        background-color: $color-disabled;
-        color: $text-color-white-disabled;
-
-        .icon {
-          color: $text-color-white-disabled;
-        }
-      }
-
-      .icon {
-        color: $text-color-white;
-      }
+    @if $border != null {
+      border: $border;
     }
 
-    .button-variant--#{$name}.button-appearance--outline {
-      background-color: rgba($color, 0.2);
-      backdrop-filter: 8px;
-      border: 1px solid $color;
-      color: $text-color-white;
-
-      &:hover {
-        background-color: $color;
-      }
-
-      &:disabled {
-        background-color: rgba($color-disabled, 0.2);
-        color: $text-color-white-disabled;
-
-        .icon {
-          color: $text-color-white-disabled;
-        }
-      }
-
-      .icon {
-        color: $text-color-white;
-      }
-    }
-
-    .button-variant--#{$name}.button-appearance--outline-dashed {
-      background-color: rgba($color, 0.2);
-      backdrop-filter: 8px;
-      border: 1px dashed $color;
-      color: $text-color-white;
-
-      &:hover {
-        background-color: $color;
-      }
-
-      &:disabled {
-        background-color: rgba($color-disabled, 0.2);
-        color: $text-color-white-disabled;
-
-        .icon {
-          color: $text-color-white-disabled;
-        }
-      }
-
-      .icon {
-        color: $text-color-white;
-      }
-    }
-
-    .button-variant--#{$name}.button-appearance--no-outline {
-      background-color: rgba($color, 0.2);
-      backdrop-filter: 8px;
-      color: $text-color-white;
-
-      &:hover {
-        background-color: $color;
-      }
-
-      &:disabled {
-        background-color: rgba($color-disabled, 0.2);
-        color: $text-color-white-disabled;
-
-        .icon {
-          color: $text-color-white-disabled;
-        }
-      }
-
-      .icon {
-        color: $text-color-white;
-      }
-    }
-
-    .button-variant--#{$name}.button-appearance--glowing {
-      background-color: rgba($color, 0.2);
-      backdrop-filter: 8px;
-      border: 1px solid $color;
-      color: $text-color-white;
+    @if $glow {
       box-shadow:
-        0 0 8px rgba($color, 0.5),
-        0 0 16px rgba($color, 0.4),
-        0 0 24px rgba($color, 0.3);
+        0 0 8px rgba($hover-bg, 0.5),
+        0 0 16px rgba($hover-bg, 0.4),
+        0 0 24px rgba($hover-bg, 0.3);
+    }
 
-      &:hover {
-        background-color: $color;
-      }
+    &:hover {
+      background-color: $hover-bg;
+    }
 
-      &:disabled {
-        background-color: rgba($color-disabled, 0.2);
-        color: $text-color-white-disabled;
-
-        .icon {
-          color: $text-color-white-disabled;
-        }
-      }
+    &:disabled {
+      background-color: $disabled-bg;
+      color: $text-color-white-disabled;
 
       .icon {
-        color: $text-color-white;
+        color: $text-color-white-disabled;
       }
+    }
+
+    .icon {
+      color: $text-color-white;
+    }
+  }
+
+  @mixin button-variant($name, $color, $color-hover, $color-disabled) {
+    &.button-variant--#{$name}.button-appearance--solid {
+      @include button-style($color, $color-hover, $color-disabled);
+    }
+
+    &.button-variant--#{$name}.button-appearance--outline {
+      @include button-style(rgba($color, 0.2), $color, rgba($color-disabled, 0.2), 1px solid $color);
+    }
+
+    &.button-variant--#{$name}.button-appearance--outline-dashed {
+      @include button-style(rgba($color, 0.2), $color, rgba($color-disabled, 0.2), 1px dashed $color);
+    }
+
+    &.button-variant--#{$name}.button-appearance--no-outline {
+      @include button-style(rgba($color, 0.2), $color, rgba($color-disabled, 0.2));
+    }
+
+    &.button-variant--#{$name}.button-appearance--glowing {
+      @include button-style(rgba($color, 0.2), $color, rgba($color-disabled, 0.2), 1px solid $color, true);
     }
   }
 

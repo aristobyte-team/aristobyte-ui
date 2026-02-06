@@ -9,7 +9,7 @@ import { CodeBlocks } from "@/config";
 
 import { mapping } from "./mapping";
 
-import "./Sections.css";
+import "./Sections.scss";
 
 export interface ISections {
   category: string;

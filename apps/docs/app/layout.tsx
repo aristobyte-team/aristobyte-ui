@@ -6,7 +6,7 @@ import { Layout } from "@/components";
 import { HtmlMeta, structuredData, viewport as viewportConfig } from "@/data";
 import { TranslateProvider, ConfigProvider } from "@/context";
 
-import "./globals.css";
+import "./globals.scss";
 
 const workSans = localFont({
   src: [

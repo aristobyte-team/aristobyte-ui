@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Intro, Installation, Import, Sections, Props } from "@/components";
-import "./Article.css";
+import "./Article.scss";
 
 export interface IArticle {
   category: string;

@@ -70,7 +70,18 @@ export const Button: React.FC<IButton> = ({
     onClick: handleClick,
     disabled: disabled || isLoading,
     style,
-    className: `button ${transparent ? 'button--transparent' : ''} ${`button-variant--${variant}`} ${`button-appearance--${appearance}`} ${`button-size--${size}`} ${`button-radius--${radius}`} ${isLoading ? 'button--loading' : ''} ${className}`,
+    className: [
+      'button',
+      transparent && 'button--transparent',
+      `button-variant--${variant}`,
+      `button-appearance--${appearance}`,
+      `button-size--${size}`,
+      `button-radius--${radius}`,
+      isLoading && 'button--loading',
+      className,
+    ]
+      .filter(Boolean)
+      .join(' '),
   });
 
   const renderChildren = () => (
