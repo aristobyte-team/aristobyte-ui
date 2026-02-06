@@ -41,7 +41,7 @@
   }
 
   &__avatar {
-    align-content: center;
+    align-items: center;
     background: linear-gradient(135deg, #ad46ff 0%, #f6339a 100%);
     border-radius: 50%;
     display: flex;
@@ -52,7 +52,7 @@
     width: 42px;
 
     &-icon {
-      align-content: center;
+      align-items: center;
       color: $white;
       display: flex;
       justify-content: center;

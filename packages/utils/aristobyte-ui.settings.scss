@@ -105,48 +105,55 @@ $amber-600: #d97706; // Main
 $amber-700: #b45309; // Hover
 
 // === Semantic Tokens === //
+// === DEFAULT === //
 $color-default: $grey-600;
 $color-default-text: $grey-200;
 $color-default-hover: $grey-700;
 $color-default-disabled: rgba($color-default, 0.5);
+
+// === PRIMARY === //
 
 $color-primary: $blue-600;
 $color-primary-text: $blue-200;
 $color-primary-hover: $blue-700;
 $color-primary-disabled: rgba($color-primary, 0.5);
 
+// === SECONDARY === //
 $color-secondary: $indigo-600;
 $color-secondary-text: $indigo-200;
 $color-secondary-hover: $indigo-700;
 $color-secondary-disabled: rgba($color-secondary, 0.5);
 
+// === ERROR === //
 $color-error: $red-600;
 $color-error-text: $red-200;
 $color-error-hover: $red-700;
 $color-error-disabled: rgba($color-error, 0.5);
 
+// === SUCCESS === //
 $color-success: $green-600;
 $color-success-text: $green-200;
 $color-success-hover: $green-700;
 $color-success-disabled: rgba($color-success, 0.5);
 
+// === WARNING === //
 $color-warning: $amber-600;
 $color-warning-text: $amber-200;
 $color-warning-hover: $amber-700;
 $color-warning-disabled: rgba($color-warning, 0.5);
 
+// === TEXT === //
 $text-color-white: $white;
 $text-color-black: $black;
 $text-color-white-disabled: rgba($white, 0.5);
 $text-color-black-disabled: rgba($black, 0.5);
-
 $title-color-dark: $white;
 $subtitle-color-dark: #99a1af;
 $description-color-dark: #d1d5dc;
 $icon-color-dark: #99a1af;
 
 // === Shadows === //
-//@TODO: @SHADOW
+// @TODO: @SHADOW
 $shadow-sm: 0 1px 2px 0 rgba($black, 0.05);
 $shadow-md:
   0 4px 6px -1px rgba($black, 0.1),

@@ -47,7 +47,7 @@
 
   &__title {
     color: $white;
-    font-family: righteous;
+    font-family: $righteous;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -66,9 +66,9 @@
   }
 
   &__description {
-    color: #90a1b9; //@TODO: @COLOR
+    color: #90a1b9; // @TODO: @COLOR
     text-align: center;
-    font-family: workSans;
+    font-family: $work-sans;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -94,6 +94,7 @@
       0 10px 15px -3px rgba(0, 0, 0, 0.1),
       // @TODO: @COLOR
       0 4px 6px -4px rgba(0, 0, 0, 0.1); // @TODO: @COLOR
+
     backdrop-filter: blur(4px);
     display: flex;
     padding: 17px 25px;

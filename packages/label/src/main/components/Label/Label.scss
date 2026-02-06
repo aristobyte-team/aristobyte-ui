@@ -131,6 +131,7 @@
 
     &.label-variant--#{$name}.label-appearance--outline-dashed {
       border-style: dashed;
+
       @include label-style(
         transparent,
         $color,

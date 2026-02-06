@@ -4,8 +4,8 @@
   align-self: stretch;
   align-items: flex-start;
   border-radius: 10px;
-  border: 1px solid #314158; //@TODO: @COLOR
-  background-color: rgba(29, 41, 61, 0.3); //@TODO: @COLOR
+  border: 1px solid #314158; // @TODO: @COLOR
+  background-color: rgba(29, 41, 61, 0.3); // @TODO: @COLOR
   display: flex;
   flex-direction: column;
   padding: 17px 17px 30px;
@@ -20,7 +20,7 @@
 
   &__title {
     align-items: center;
-    color: #e2e8f0; //@TODO: @COLOR
+    color: #e2e8f0; // @TODO: @COLOR
     display: flex;
     font-size: 20px;
     font-style: normal;
@@ -38,7 +38,7 @@
   }
 
   &__description {
-    color: #90a1b9; //@TODO: @COLOR
+    color: #90a1b9; // @TODO: @COLOR
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
