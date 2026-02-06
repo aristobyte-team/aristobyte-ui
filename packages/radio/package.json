@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/radio",
   "description": "Composable and fully-typed Radio and RadioGroup components for AristoByteUI. Supports multiple variants, sizes, appearances, alignments, and optional label highlights, optimized for performance and developer experience.",
-  "version": "2.14.3",
+  "version": "2.14.4",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -52,7 +52,7 @@
     "sass": "^1.97.3"
   },
   "dependencies": {
-    "@aristobyte-ui/utils": "^2.14.3"
+    "@aristobyte-ui/utils": "^2.14.4"
   },
   "exports": {
     ".": {

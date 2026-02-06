@@ -1,5 +1,15 @@
 # @aristobyte-ui/card
 
+## 2.14.4
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/label@2.14.4
+  - @aristobyte-ui/utils@2.14.4
+
 ## 2.14.3
 
 ### Patch Changes

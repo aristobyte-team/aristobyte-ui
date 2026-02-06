@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 2.14.4
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.14.3
 
 ### Patch Changes
