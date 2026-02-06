@@ -1,5 +1,14 @@
 # @aristobyte-ui/sandbox
 
+## 2.13.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/button@2.13.2
+  - @aristobyte-ui/spinner@2.13.2
+  - @aristobyte-ui/utils@2.13.2
+
 ## 2.13.1
 
 ### Patch Changes
