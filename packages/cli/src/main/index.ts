@@ -17,7 +17,7 @@ import { usage } from './utils/typography.js';
 import { parseHelp } from './utils/parseHelp.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const pkgPath = resolve(__dirname, '../package.json');
+const pkgPath = resolve(__dirname, './package.json');
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version?: string };
 
 const COMMANDS = ['init', 'add', 'remove', 'upgrade', 'list', 'doctor', 'env', 'help'];
