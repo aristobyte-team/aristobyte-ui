@@ -82,7 +82,7 @@
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.6",
     "@types/jest": "^30.0.0",
-    "@types/react": "^19.2.8",
+    "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.23",
     "copy-webpack-plugin": "^13.0.1",
