@@ -38,6 +38,6 @@
     "eslint": "^9.27.0",
     "postcss": "^8.5.6",
     "raw-loader": "^4.0.2",
-    "typescript": "5.8.2"
+    "typescript": "5.9.3"
   }
 }
