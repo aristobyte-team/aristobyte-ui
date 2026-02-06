@@ -9,6 +9,8 @@ FG_RED="\033[31m"
 FG_GRAY="\033[90m"
 RESET="\033[0m"
 
+SCRIPTS_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
 log_info() { printf "%b[INFO]%b %s\n" "$FG_CYAN" "$RESET" "$*"; }
 log_step() { printf "%b[STEP]%b %s\n" "$FG_CYAN" "$RESET" "$*"; }
 log_ok() { printf "%b[OK]%b %b✓%b %s\n" "$FG_GREEN" "$RESET" "$FG_GREEN" "$RESET" "$*"; }
@@ -17,6 +19,7 @@ log_err() { printf "%b[FAIL]%b %b×%b %s\n" "$FG_RED" "$RESET" "$FG_RED" "$RESET
 log_muted() { printf "%b%s%b\n" "$FG_GRAY" "$*" "$RESET"; }
 
 TARGET="${1:-all}"
+shift || true
 
 case "$TARGET" in
   docs)
@@ -26,8 +29,8 @@ case "$TARGET" in
     ;;
   cli)
     log_step "Starting dev (cli)"
-    log_muted "  yarn workspace @aristobyte-ui/cli dev"
-    yarn workspace @aristobyte-ui/cli dev
+    log_muted "  bash scripts/dev-cli.sh $*"
+    bash "$SCRIPTS_DIR/dev-cli.sh" "$@"
     ;;
   sandbox)
     log_step "Starting dev (sandbox)"

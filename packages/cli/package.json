@@ -54,5 +54,8 @@
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "tsc -p tsconfig.build.json --watch"
   }
 }
