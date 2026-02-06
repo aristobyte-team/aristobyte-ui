@@ -1,5 +1,5 @@
 import { AristoByte } from './AristoByte';
-import { AristoByteCLI } from './AristoByteCLI';
+import { AristoByteUICLI } from './AristoByteUICLI';
 import { AristoByteUI } from './AristoByteUI';
 import { ArrowRight } from './ArrowRight';
 import { BashCursor } from './BashCursor';
@@ -42,7 +42,7 @@ import { Instagram } from './Instagram';
 export const Icons = {
   AristoByte,
   AristoByteUI,
-  AristoByteCLI,
+  AristoByteUICLI,
   ArrowRight,
   BashCursor,
   Bun,
