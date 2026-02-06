@@ -22,7 +22,6 @@ export interface IDropdown {
   variant?: 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning';
   appearance?: 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing';
   onChange?: (newValue: string) => void;
-  initiallyOpened?: boolean;
   choice?: 'multiple' | 'single';
   placeholder?: string;
   disabled?: boolean;
@@ -39,37 +38,39 @@ export const Dropdown: React.FC<IDropdown> = ({
   placeholder = 'Select',
   choice = 'single',
   className = '',
-  initiallyOpened = false,
   disabled = false,
   button = {},
   style = {},
 }) => {
-  const [isOpened, setIsOpened] = React.useState<boolean>(initiallyOpened);
+  const [isOpened, setIsOpened] = React.useState<boolean>(false);
   const [selected, setSelected] = React.useState<string[]>(value ? [value] : []);
   const [position, setPosition] = React.useState<PositionType>({
     top: 0,
     left: 0,
     width: 0,
   });
-  const [dropdownHeight, setDropdownHeight] = React.useState(0);
-  const [buttonHeight, setButtonHeight] = React.useState(0);
-  const buttonRef = React.useRef<HTMLButtonElement>(null);
+  const buttonContainerRef = React.useRef<HTMLDivElement>(null);
   const boxRef = React.useRef<HTMLDivElement>(null);
   const uniqueId = React.useId();
 
-  React.useLayoutEffect(() => {
-    if (!isOpened) {
-      return;
-    }
+  const computePosition = React.useCallback(() => {
+    if (!buttonContainerRef.current || !boxRef.current) return;
 
-    if (boxRef.current) {
-      setDropdownHeight(boxRef.current.getBoundingClientRect().height);
-    }
+    const rect = buttonContainerRef.current.getBoundingClientRect();
+    const dropdownRect = boxRef.current.getBoundingClientRect();
 
-    if (buttonRef.current) {
-      setButtonHeight(buttonRef.current.getBoundingClientRect().height);
-    }
-  }, [isOpened]);
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const spaceAbove = rect.top;
+    const shouldOpenUpwards = spaceBelow < dropdownRect.height && spaceAbove > dropdownRect.height;
+
+    setPosition({
+      top: shouldOpenUpwards
+        ? rect.top + window.scrollY - dropdownRect.height - rect.height / 2
+        : rect.top + window.scrollY + rect.height + 6,
+      left: rect.left + window.scrollX,
+      width: rect.width,
+    } as PositionType);
+  }, []);
 
   const options = React.Children.toArray(children).filter(
     (child): child is React.ReactElement<IDropdownOption> =>
@@ -102,28 +103,28 @@ export const Dropdown: React.FC<IDropdown> = ({
   const handleToggle = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
     if (disabled) return;
 
-    const rect = buttonRef.current?.getBoundingClientRect();
-    if (!rect) return;
-
-    const spaceBelow = window.innerHeight - rect.bottom;
-    const spaceAbove = rect.top;
-
-    const shouldOpenUpwards = dropdownHeight > 0 && spaceBelow < dropdownHeight && spaceAbove > dropdownHeight;
-
-    const finalPosition = {
-      top: shouldOpenUpwards
-        ? rect.top + window.scrollY - dropdownHeight - buttonHeight / 2
-        : rect.top + window.scrollY + buttonHeight + 6,
-      left: rect.left + window.scrollX,
-      width: rect.width,
-    } as PositionType;
-
-    setPosition(finalPosition);
-
     if (button?.onClick) button.onClick(e);
 
     setIsOpened((prev) => !prev);
   };
+
+  React.useLayoutEffect(() => {
+    if (!isOpened) return;
+
+    const raf = requestAnimationFrame(() => {
+      computePosition();
+    });
+
+    const handleResize = () => computePosition();
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleResize, true);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleResize, true);
+    };
+  }, [isOpened, computePosition, options.length]);
 
   if (!isValidValue()) {
     throw new Error('The "value" prop did not match with any of the DropdownOption "value" prop');
@@ -131,14 +132,13 @@ export const Dropdown: React.FC<IDropdown> = ({
 
   return (
     <>
-      <div className={`dropdown ${className}`}>
+      <div className={`dropdown ${className}`} ref={buttonContainerRef}>
         <Button
           onClick={handleToggle}
           className={`dropdown__button ${button?.className || ''}`}
           appearance={button?.appearance || appearance}
           variant={button?.variant || variant}
           disabled={button?.disabled || disabled}
-          {...{ ref: buttonRef }}
         >
           {placeholder}
         </Button>
@@ -147,7 +147,10 @@ export const Dropdown: React.FC<IDropdown> = ({
       <Portal>
         <AnimatePresence>
           {isOpened && (
-            <div className={`dropdown__box ${`dropdown__box-variant--${variant}`}`} style={style}>
+            <div
+              className={`dropdown__box dropdown__box-variant--${variant} dropdown__box-appearance--${appearance}`}
+              style={style}
+            >
               <motion.div
                 className="dropdown__box-overlay"
                 initial={{ opacity: 0 }}

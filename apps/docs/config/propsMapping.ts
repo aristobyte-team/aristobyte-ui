@@ -20,45 +20,43 @@ export const propsMapping = {
   components: {
     label: [
       {
-        id: "label",
+        id: 'label',
         sections: [
           {
-            id: "core-props",
-            props: [{ id: "text", inlineType: "string", isRequired: "true" }],
+            id: 'core-props',
+            props: [{ id: 'text', inlineType: 'string', isRequired: 'true' }],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
                 default: "'solid'",
               },
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "radius",
+                id: 'radius',
                 inlineType: "'none' | 'sm' | 'md' | 'lg' | 'full'",
                 default: "'md'",
               },
-              { id: "color", inlineType: "string" },
-              { id: "backgroundColor", inlineType: "string" },
-              { id: "borderColor", inlineType: "string" },
+              { id: 'color', inlineType: 'string' },
+              { id: 'backgroundColor', inlineType: 'string' },
+              { id: 'borderColor', inlineType: 'string' },
             ],
           },
           {
-            id: "advanced-props",
-            props: [{ id: "className", inlineType: "string", default: "''" }],
+            id: 'advanced-props',
+            props: [{ id: 'className', inlineType: 'string', default: "''" }],
           },
         ],
       },
@@ -325,11 +323,6 @@ export const propsMapping = {
             id: 'state-props',
             props: [
               { id: 'disabled', inlineType: 'boolean', default: 'false' },
-              {
-                id: 'initiallyOpened',
-                inlineType: 'boolean',
-                default: 'false',
-              },
               {
                 id: 'choice',
                 inlineType: "'multiple' | 'single'",

@@ -5,4 +5,4 @@
 - fix the import of other packages in local development without breaking the current build logic
 - fix add "dev:cli": "bash scripts/dev.sh cli",
 - fix anchor stylings - improve the component and update docs
-- fix dropdown in docs
+- feat: dropdown new functionalities such as select option which would be displayed inside button
