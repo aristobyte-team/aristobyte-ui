@@ -26,7 +26,7 @@ export interface IButton {
     align?: 'left' | 'right';
   };
   isLoading?: boolean;
-  spinnerType?: 'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo';
+  spinnerAppearance?: 'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo';
   className?: string;
   // @TODO: apply this everywhere
   style?: React.CSSProperties;
@@ -44,7 +44,7 @@ export const Button: React.FC<IButton> = ({
   size = 'md',
   radius = 'md',
   icon,
-  spinnerType = 'default',
+  spinnerAppearance = 'default',
   transparent = false,
   isLoading = false,
   disabled = false,
@@ -86,7 +86,7 @@ export const Button: React.FC<IButton> = ({
 
   const renderChildren = () => (
     <>
-      {isLoading && <Spinner size={size} variant={variant} type={spinnerType} className="spinner" />}
+      {isLoading && <Spinner size={size} variant={variant} appearance={spinnerAppearance} className="spinner" />}
       {icon && (
         <span className={`icon ${`icon--${icon.align ?? 'left'}`}`}>
           {icon.component({ color: icon.color, size: icon.size })}

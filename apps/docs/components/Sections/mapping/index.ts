@@ -223,6 +223,26 @@ export const mapping: MappingType = {
     },
   },
   components: {
+    anchor: {
+      variants: Components.AnchorPreviewBlocks.Variants,
+      targets: Components.AnchorPreviewBlocks.Targets,
+    },
+    card: {
+      basic: Components.CardPreviewBlocks.Basic,
+      "with-icon": Components.CardPreviewBlocks.WithIcon,
+      "with-label": Components.CardPreviewBlocks.WithLabel,
+      "with-content": Components.CardPreviewBlocks.WithContent,
+      "full-header": Components.CardPreviewBlocks.FullHeader,
+      "with-actions": Components.CardPreviewBlocks.WithActions,
+      "with-components": Components.CardPreviewBlocks.WithComponents,
+    },
+    label: {
+      variants: Components.LabelPreviewBlocks.Variants,
+      appearance: Components.LabelPreviewBlocks.Appearance,
+      sizes: Components.LabelPreviewBlocks.Sizes,
+      radius: Components.LabelPreviewBlocks.Radius,
+      colors: Components.LabelPreviewBlocks.CustomColors,
+    },
     button: {
       variants: Components.ButtonPreviewBlocks.Variants,
       appearance: Components.ButtonPreviewBlocks.Appearance,
@@ -273,8 +293,10 @@ export const mapping: MappingType = {
       controlled: Components.RadioPreviewBlocks.Controlled,
     },
     dropdown: {
+      usage: Components.DropdownPreviewBlocks.Usage,
       disabled: Components.DropdownPreviewBlocks.Disabled,
       appearance: Components.DropdownPreviewBlocks.Appearance,
+      multiple: Components.DropdownPreviewBlocks.Multiple,
     },
   },
 };

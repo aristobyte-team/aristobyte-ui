@@ -3,7 +3,7 @@ import { type IconPropsType, Icons } from '@aristobyte-ui/utils';
 
 import './MessageBox.scss';
 
-type MessageBoxVariant = 'default' | 'info' | 'warning' | 'success' | 'error';
+type MessageBoxVariant = 'default' | 'primary' | 'secondary' | 'warning' | 'success' | 'error';
 
 export interface IMessageBox {
   variant?: MessageBoxVariant;
@@ -15,7 +15,7 @@ export interface IMessageBox {
     color?: string;
   };
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
-  type?: 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing';
+  appearance?: 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing';
   className?: string;
   style?: React.CSSProperties;
 }
@@ -28,7 +28,9 @@ const renderIcon = (variant: MessageBoxVariant) => {
       return Icons.Success;
     case 'error':
       return Icons.Error;
-    case 'info':
+    case 'default':
+    case 'primary':
+    case 'secondary':
     default:
       return Icons.Info;
   }
@@ -40,24 +42,32 @@ export const MessageBox: React.FC<IMessageBox> = ({
   withIcon = false,
   customIcon = null,
   radius = 'md',
-  type = 'outline',
+  appearance = 'outline',
   className = '',
   style = {},
 }) => {
   return (
     <div
-      className={`message-box ${`message-box-type--${type}`} ${`message-box-radius--${radius}`} ${`message-box--${variant}`} ${className}`}
+      className={[
+        'message-box',
+        `message-box-appearance--${appearance}`,
+        `message-box-radius--${radius}`,
+        `message-box--${variant}`,
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       style={style}
     >
       {withIcon && (
-        <span className={`message-box__icon ${`message-box__icon--${variant}`}`}>
+        <span className={['message-box__icon', `message-box__icon--${variant}`].filter(Boolean).join(' ')}>
           {customIcon?.component({
             size: customIcon.size,
             color: customIcon.color,
           }) || renderIcon(variant)({})}
         </span>
       )}
-      <p className="message-box__content" dangerouslySetInnerHTML={{ __html: children || '' }} />
+      <p className={'message-box__content'} dangerouslySetInnerHTML={{ __html: children || '' }} />
     </div>
   );
 };

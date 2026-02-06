@@ -1,6 +1,8 @@
-import * as React from "react";
-import { type IconPropsType } from "@aristobyte-ui/utils";
-import { Label } from "@aristobyte-ui/label";
+import * as React from 'react';
+import { type IconPropsType } from '@aristobyte-ui/utils';
+import { Label } from '@aristobyte-ui/label';
+
+import './Card.scss';
 
 export interface ICard {
   title?: string;
@@ -12,9 +14,7 @@ export interface ICard {
     color?: string;
   };
   icon?: {
-    component: (
-      props: IconPropsType
-    ) => React.JSX.Element | React.ReactNode | React.ReactElement;
+    component: (props: IconPropsType) => React.JSX.Element | React.ReactNode | React.ReactElement;
     size?: number;
     color?: string;
     colors?: string[];
@@ -24,15 +24,7 @@ export interface ICard {
   style?: React.CSSProperties;
 }
 
-export const Card: React.FC<ICard> = ({
-  title,
-  description,
-  label,
-  icon,
-  children,
-  className = "",
-  style = {},
-}) => (
+export const Card: React.FC<ICard> = ({ title, description, label, icon, children, className = '', style = {} }) => (
   <div className={`card ${className}`} style={style}>
     {(title || icon || label) && (
       <h3 className="card__title">
@@ -56,12 +48,7 @@ export const Card: React.FC<ICard> = ({
         )}
       </h3>
     )}
-    {description && (
-      <p
-        className="card__description"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
-    )}
+    {description && <p className="card__description" dangerouslySetInnerHTML={{ __html: description }} />}
     {children && <div className="card__content">{children}</div>}
   </div>
 );

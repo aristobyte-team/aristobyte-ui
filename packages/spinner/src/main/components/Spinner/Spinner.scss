@@ -33,34 +33,34 @@
 }
 
 @mixin spinner-variant-default($name, $color) {
-  .spinner-type--default.spinner-variant--#{$name} {
+  .spinner-appearance--default.spinner-variant--#{$name} {
     border: 3px solid rgba($color, 0.25);
     border-top-color: rgba($color, 1);
   }
 }
 
 @mixin spinner-variant-duo($name, $color) {
-  .spinner-type--duo.spinner-variant--#{$name} {
+  .spinner-appearance--duo.spinner-variant--#{$name} {
     border-bottom-color: rgba($color, 1);
     border-top-color: rgba($color, 1);
   }
 }
 
 @mixin spinner-variant-gradient($name, $color) {
-  .spinner-type--gradient.spinner-variant--#{$name} {
+  .spinner-appearance--gradient.spinner-variant--#{$name} {
     border-top: 3px solid rgba($color, 1);
   }
 }
 
 @mixin spinner-variant-pulse($name, $color) {
-  .spinner-type--pulse.spinner-variant--#{$name} {
+  .spinner-appearance--pulse.spinner-variant--#{$name} {
     background-color: $color;
   }
 }
 
 @mixin spinner-variant-pulse-duo($name, $color) {
-  .spinner-type--pulse-duo.spinner-variant--#{$name}::after,
-  .spinner-type--pulse-duo.spinner-variant--#{$name}::before {
+  .spinner-appearance--pulse-duo.spinner-variant--#{$name}::after,
+  .spinner-appearance--pulse-duo.spinner-variant--#{$name}::before {
     background-color: $color;
   }
 }
@@ -93,7 +93,7 @@
     }
   }
 
-  &-type {
+  &-appearance {
     &--default {
       animation: rotation 800ms ease infinite;
       border-radius: 50%;

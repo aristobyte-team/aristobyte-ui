@@ -1,0 +1,11 @@
+@use '@aristobyte-ui/utils/styles' as *;
+
+.custom-anchor {
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+}

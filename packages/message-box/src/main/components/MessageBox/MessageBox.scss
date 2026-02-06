@@ -37,60 +37,299 @@
     line-height: $line-height-normal;
   }
 
-  @mixin message-box-variant($name, $color) {
-    &--#{$name}.message-box-type--solid {
-      background-color: rgba($color, 1);
+  &--default.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-default, 1);
 
       .message-box__icon {
         color: $white;
       }
     }
 
-    &--#{$name}.message-box-type--outline {
-      background-color: rgba($color, 0.2);
-      border: 1px solid $color;
+    &--outline {
+      background-color: rgba($color-default, 0.2);
+      border: 1px solid $color-default;
 
       .message-box__icon {
-        color: $color;
+        color: $color-default;
       }
     }
 
-    &--#{$name}.message-box-type--outline-dashed {
-      background-color: rgba($color, 0.2);
-      border: 1px dashed $color;
+    &--outline-dashed {
+      background-color: rgba($color-default, 0.2);
+      border: 1px dashed $color-default;
 
       .message-box__icon {
-        color: $color;
+        color: $color-default;
       }
     }
 
-    &--#{$name}.message-box-type--no-outline {
-      background-color: rgba($color, 0.2);
+    &--no-outline {
+      background-color: rgba($color-default, 0.2);
 
       .message-box__icon {
-        color: $color;
+        color: $color-default;
       }
     }
 
-    &--#{$name}.message-box-type--glowing {
-      background-color: rgba($color, 0.2);
-      border: 1px solid $color;
+    &--glowing {
+      background-color: rgba($color-default, 0.2);
+      border: 1px solid $color-default;
       box-shadow:
-        0 0 8px rgba($color, 0.5),
-        0 0 16px rgba($color, 0.4),
-        0 0 24px rgba($color, 0.3);
+        0 0 8px rgba($color-default, 0.5),
+        0 0 16px rgba($color-default, 0.4),
+        0 0 24px rgba($color-default, 0.3);
 
       .message-box__icon {
-        color: $color;
+        color: $color-default;
       }
     }
   }
 
-  @include message-box-variant('default', $grey-600);
-  @include message-box-variant('info', $blue-600);
-  @include message-box-variant('success', $green-600);
-  @include message-box-variant('warning', $amber-600);
-  @include message-box-variant('error', $red-600);
+  &--primary.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-primary, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($color-primary, 0.2);
+      border: 1px solid $color-primary;
+
+      .message-box__icon {
+        color: $color-primary;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($color-primary, 0.2);
+      border: 1px dashed $color-primary;
+
+      .message-box__icon {
+        color: $color-primary;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($color-primary, 0.2);
+
+      .message-box__icon {
+        color: $color-primary;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($color-primary, 0.2);
+      border: 1px solid $color-primary;
+      box-shadow:
+        0 0 8px rgba($color-primary, 0.5),
+        0 0 16px rgba($color-primary, 0.4),
+        0 0 24px rgba($color-primary, 0.3);
+
+      .message-box__icon {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--secondary.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-secondary, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($color-secondary, 0.2);
+      border: 1px solid $color-secondary;
+
+      .message-box__icon {
+        color: $color-secondary;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($color-secondary, 0.2);
+      border: 1px dashed $color-secondary;
+
+      .message-box__icon {
+        color: $color-secondary;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($color-secondary, 0.2);
+
+      .message-box__icon {
+        color: $color-secondary;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($color-secondary, 0.2);
+      border: 1px solid $color-secondary;
+      box-shadow:
+        0 0 8px rgba($color-secondary, 0.5),
+        0 0 16px rgba($color-secondary, 0.4),
+        0 0 24px rgba($color-secondary, 0.3);
+
+      .message-box__icon {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &--success.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-success, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($color-success, 0.2);
+      border: 1px solid $color-success;
+
+      .message-box__icon {
+        color: $color-success;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($color-success, 0.2);
+      border: 1px dashed $color-success;
+
+      .message-box__icon {
+        color: $color-success;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($color-success, 0.2);
+
+      .message-box__icon {
+        color: $color-success;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($color-success, 0.2);
+      border: 1px solid $color-success;
+      box-shadow:
+        0 0 8px rgba($color-success, 0.5),
+        0 0 16px rgba($color-success, 0.4),
+        0 0 24px rgba($color-success, 0.3);
+
+      .message-box__icon {
+        color: $color-success;
+      }
+    }
+  }
+
+  &--warning.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-warning, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($color-warning, 0.2);
+      border: 1px solid $color-warning;
+
+      .message-box__icon {
+        color: $color-warning;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($color-warning, 0.2);
+      border: 1px dashed $color-warning;
+
+      .message-box__icon {
+        color: $color-warning;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($color-warning, 0.2);
+
+      .message-box__icon {
+        color: $color-warning;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($color-warning, 0.2);
+      border: 1px solid $color-warning;
+      box-shadow:
+        0 0 8px rgba($color-warning, 0.5),
+        0 0 16px rgba($color-warning, 0.4),
+        0 0 24px rgba($color-warning, 0.3);
+
+      .message-box__icon {
+        color: $color-warning;
+      }
+    }
+  }
+
+  &--error.message-box-appearance {
+    &--solid {
+      background-color: rgba($color-error, 1);
+
+      .message-box__icon {
+        color: $white;
+      }
+    }
+
+    &--outline {
+      background-color: rgba($color-error, 0.2);
+      border: 1px solid $color-error;
+
+      .message-box__icon {
+        color: $color-error;
+      }
+    }
+
+    &--outline-dashed {
+      background-color: rgba($color-error, 0.2);
+      border: 1px dashed $color-error;
+
+      .message-box__icon {
+        color: $color-error;
+      }
+    }
+
+    &--no-outline {
+      background-color: rgba($color-error, 0.2);
+
+      .message-box__icon {
+        color: $color-error;
+      }
+    }
+
+    &--glowing {
+      background-color: rgba($color-error, 0.2);
+      border: 1px solid $color-error;
+      box-shadow:
+        0 0 8px rgba($color-error, 0.5),
+        0 0 16px rgba($color-error, 0.4),
+        0 0 24px rgba($color-error, 0.3);
+
+      .message-box__icon {
+        color: $color-error;
+      }
+    }
+  }
 
   &__icon {
     align-items: center;
@@ -103,23 +342,27 @@
     min-width: 16px;
 
     &--default {
-      color: $grey-600;
+      color: $color-default;
     }
 
-    &--info {
-      color: $blue-600;
+    &--primary {
+      color: $color-primary;
+    }
+
+    &--secondary {
+      color: $color-secondary;
     }
 
     &--success {
-      color: $green-600;
+      color: $color-success;
     }
 
     &--warning {
-      color: $amber-600;
+      color: $color-warning;
     }
 
     &--error {
-      color: $red-600;
+      color: $color-error;
     }
 
     svg {

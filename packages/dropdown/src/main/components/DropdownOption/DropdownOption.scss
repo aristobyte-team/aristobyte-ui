@@ -2,7 +2,7 @@
 
 .dropdown-option {
   align-items: center;
-  border-radius: 8px; // TODO: change to dynamic
+  border-radius: 8px; //TODO: change to dynamic
   color: $white;
   display: flex;
   font-size: 14px;
@@ -13,18 +13,31 @@
   transition: all 120ms ease-out;
   width: 100%;
 
-  @mixin dropdown-option-variant($name, $hover-color) {
-    &-variant--#{$name}:hover {
-      background-color: $hover-color;
+  &-variant {
+    &--default:hover {
+      background-color: $color-default-hover;
+    }
+
+    &--primary:hover {
+      background-color: $color-primary-hover;
+    }
+
+    &--secondary:hover {
+      background-color: $color-secondary-hover;
+    }
+
+    &--warning:hover {
+      background-color: $color-warning-hover;
+    }
+
+    &--error:hover {
+      background-color: $color-error-hover;
+    }
+
+    &--success:hover {
+      background-color: $color-success-hover;
     }
   }
-
-  @include dropdown-option-variant('default', $color-default-hover);
-  @include dropdown-option-variant('primary', $color-primary-hover);
-  @include dropdown-option-variant('secondary', $color-secondary-hover);
-  @include dropdown-option-variant('warning', $color-warning-hover);
-  @include dropdown-option-variant('error', $color-error-hover);
-  @include dropdown-option-variant('success', $color-success-hover);
 
   &--disabled,
   &--disabled:hover {

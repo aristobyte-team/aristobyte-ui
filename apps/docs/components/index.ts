@@ -4,6 +4,7 @@ export { TypeBlock } from "./TypeBlock";
 export { Label } from "./Label";
 export { Card } from "./Card";
 export { Button } from "./Button";
+export { Anchor } from "./Anchor";
 export { Sections } from "./Sections";
 export { Intro } from "./Intro";
 export { Installation } from "./Installation";

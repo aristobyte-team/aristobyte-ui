@@ -1,4 +1,7 @@
 export { ButtonPreviewBlocks } from "./ButtonPreviewBlocks";
+export { AnchorPreviewBlocks } from "./AnchorPreviewBlocks";
+export { CardPreviewBlocks } from "./CardPreviewBlocks";
+export { LabelPreviewBlocks } from "./LabelPreviewBlocks";
 export { SpinnerPreviewBlocks } from "./SpinnerPreviewBlocks";
 export { MessageBoxPreviewBlocks } from "./MessageBoxPreviewBlocks";
 export { SwitchPreviewBlocks } from "./SwitchPreviewBlocks";

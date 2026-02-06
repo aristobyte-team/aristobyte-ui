@@ -1,3 +1,5 @@
+@use '@aristobyte-ui/utils/styles' as *;
+
 .code-block {
   background-color: #0f172b;
   border-radius: 10px;
@@ -9,49 +11,49 @@
     monospace;
   font-size: 16px;
   gap: 20px;
-  line-height: 1.5px;
+  line-height: 1.5;
   overflow: hidden;
   padding: 25px;
   position: relative;
   width: calc(100% - 2 * 25px);
-}
 
-.code-block__icon {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-.code-block__container {
-  overflow: auto;
-  min-width: 100%;
-  max-width: 240px;
-  max-height: 400px;
-}
+  &__container {
+    overflow: auto;
+    min-width: 100%;
+    max-width: 240px;
+    max-height: 400px;
 
-.code-block__container pre {
-  background-color: transparent !important;
-  display: block;
-  margin: 0;
-  min-height: calc(52px - 14px * 2);
-  white-space: pre;
-  overflow: visible;
-}
+    pre {
+      background-color: transparent !important;
+      display: block;
+      margin: 0;
+      min-height: calc(52px - 14px * 2);
+      white-space: pre;
+      overflow: visible;
+    }
+  }
 
-.code-block__button {
-  color: #eceded;
-  max-height: 32px;
-  max-width: 32px;
-  min-height: 32px;
-  min-width: 32px;
-  padding: 8px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 1;
-}
+  &__button {
+    color: #eceded;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    padding: 8px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
 
-.code-block__button svg {
-  height: 100%;
-  width: 100%;
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }

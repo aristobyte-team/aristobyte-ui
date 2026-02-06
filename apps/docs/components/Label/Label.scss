@@ -1,11 +1,13 @@
+@use '@aristobyte-ui/utils/styles' as *;
+
 .label {
   border-width: 1px;
   border-style: solid;
-  border-color: #314158; /* @TODO: @COLOR */
-  background-color: rgba(29, 41, 61, 0.3); /* @TODO: @COLOR */
+  border-color: #314158; //@TODO: @COLOR
+  background-color: rgba(29, 41, 61, 0.3); //@TODO: @COLOR
   border-radius: 10px;
-  color: var(--white);
-  font-family: var(--font-family-sans);
+  color: $white;
+  font-family: $font-family-sans;
   font-size: 14px;
   font-weight: 500;
   padding: 4px 11px;

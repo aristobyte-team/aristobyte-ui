@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import * as React from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
-import { useConfig, useTranslate } from "@/context";
-import { Icons } from "@aristobyte-ui/utils";
-import pkg from "../../../package.json";
+import { useConfig, useTranslate } from '@/context';
+import { Icons } from '@aristobyte-ui/utils';
+import pkg from '../../../package.json';
 
-import "./Sidebar.scss";
+import './Sidebar.scss';
 
 // @TODO: @UI - move to UI lib
 
@@ -29,7 +29,7 @@ const Accordion: React.FC<IAccordion> = ({ isOpen, children }) => {
 
   return (
     <div
-      className={`sidebar__accordion ${isOpen ? "sidebar__accordion--open" : ""}`}
+      className={`sidebar__accordion ${isOpen ? 'sidebar__accordion--open' : ''}`}
       style={{ height: isOpen ? height : 0 }}
     >
       <div ref={ref}>{children}</div>
@@ -38,21 +38,17 @@ const Accordion: React.FC<IAccordion> = ({ isOpen, children }) => {
 };
 
 export const Sidebar: React.FC = () => {
-  const [_, category, unit] = usePathname().split("/");
+  const [_, category, unit] = usePathname().split('/');
   const { t } = useTranslate();
   const {
     config: {
       sidebar: { sections },
     },
   } = useConfig();
-  const [openedSection, setOpenedSection] = React.useState<string[]>([
-    sections[0]!.id,
-  ]);
+  const [openedSection, setOpenedSection] = React.useState<string[]>([sections[0]!.id]);
 
   const toggleSection = (id: string) => {
-    setOpenedSection((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
+    setOpenedSection((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   };
 
   const closeAllSectionsOnRouteChange = React.useCallback(() => {
@@ -72,13 +68,11 @@ export const Sidebar: React.FC = () => {
     <aside className="sidebar">
       <header className="sidebar__header">
         <div className="sidebar__header-logo">
-          <Icons.Logo />
+          <Icons.AristoByteUI size={40} />
         </div>
         <div className="sidebar__header-content">
-          <h1 className="sidebar__header-title">{t("sidebar.header.title")}</h1>
-          <h2 className="sidebar__header-subtitle">
-            {t("sidebar.header.subtitle")}
-          </h2>
+          <h1 className="sidebar__header-title">{t('sidebar.header.title')}</h1>
+          <h2 className="sidebar__header-subtitle">{t('sidebar.header.subtitle')}</h2>
         </div>
       </header>
 
@@ -86,26 +80,13 @@ export const Sidebar: React.FC = () => {
         {sections.map(({ id, links, icon }) => (
           <div key={id} className="sidebar__section">
             <button
-              className={
-                "sidebar__button" +
-                (category === id ? " sidebar__button--active" : "")
-              }
+              className={'sidebar__button' + (category === id ? ' sidebar__button--active' : '')}
               onClick={() => toggleSection(id)}
             >
+              <span className={`sidebar__button-icon sidebar__button-icon--${id}`}>{icon({ size: 16 })}</span>
+              <span className="sidebar__button-text">{t(`sidebar.sections.${id}`)}</span>
               <span
-                className={`sidebar__button-icon sidebar__button-icon--${id}`}
-              >
-                {icon({ size: 16 })}
-              </span>
-              <span className="sidebar__button-text">
-                {t(`sidebar.sections.${id}`)}
-              </span>
-              <span
-                className={`sidebar__button-arrow ${
-                  openedSection.includes(id)
-                    ? "sidebar__button-arrow--open"
-                    : ""
-                }`}
+                className={`sidebar__button-arrow ${openedSection.includes(id) ? 'sidebar__button-arrow--open' : ''}`}
               >
                 <Icons.ArrowRight size={16} />
               </span>
@@ -123,10 +104,7 @@ export const Sidebar: React.FC = () => {
                     <Link
                       href={href}
                       target={target}
-                      className={
-                        "sidebar__link" +
-                        (unit === linkId ? " sidebar__link--active" : "")
-                      }
+                      className={'sidebar__link' + (unit === linkId ? ' sidebar__link--active' : '')}
                     >
                       {t(`sidebar.links.${linkId}`)}
                     </Link>
@@ -139,10 +117,8 @@ export const Sidebar: React.FC = () => {
       </div>
 
       <footer className="sidebar__footer">
-        <h3 className="sidebar__footer-title">{t("sidebar.footer.title")}</h3>
-        <h4 className="sidebar__footer-subtitle">
-          {t("sidebar.footer.subtitle").replace("{{version}}", pkg.version)}
-        </h4>
+        <h3 className="sidebar__footer-title">{t('sidebar.footer.title')}</h3>
+        <h4 className="sidebar__footer-subtitle">{t('sidebar.footer.subtitle').replace('{{version}}', pkg.version)}</h4>
       </footer>
     </aside>
   );

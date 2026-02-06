@@ -54,7 +54,7 @@ import { IconSample } from "@aristobyte-ui/icons";
 ## 🔧 Example in a Package
 
 ```tsx
-<Button variant="success" appearance="glowing" size="lg" radius="full" isLoading spinnerType="duo">
+<Button variant="success" appearance="glowing" size="lg" radius="full" isLoading spinnerAppearance="duo">
   Submit
 </Button>
 

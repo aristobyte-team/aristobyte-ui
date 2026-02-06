@@ -18,32 +18,13 @@ export type PropsMappingType = {
 
 export const propsMapping = {
   components: {
-    anchor: [
+    label: [
       {
-        id: "anchor",
+        id: "label",
         sections: [
           {
             id: "core-props",
-            props: [
-              { id: "href", inlineType: "string", default: "''" },
-              {
-                id: "target",
-                inlineType: "'_self' | '_blank' | '_parent' | '_top'",
-                default: "'_self'",
-              },
-              { id: "text", inlineType: "string", default: "''" },
-              {
-                id: "children",
-                inlineType: "React.ReactElement | React.ReactNode | string",
-                default: "''",
-              },
-              {
-                id: "onClick",
-                inlineType:
-                  "(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void | Promise<void>",
-                default: "undefined",
-              },
-            ],
+            props: [{ id: "text", inlineType: "string", isRequired: "true" }],
           },
           {
             id: "visual-props",
@@ -51,16 +32,129 @@ export const propsMapping = {
               {
                 id: "variant",
                 inlineType:
-                  "'white' | 'black' | 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                default: "'default'",
+              },
+              {
+                id: "appearance",
+                inlineType:
+                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                default: "'solid'",
+              },
+              {
+                id: "size",
+                inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
+                default: "'md'",
+              },
+              {
+                id: "radius",
+                inlineType: "'none' | 'sm' | 'md' | 'lg' | 'full'",
+                default: "'md'",
+              },
+              { id: "color", inlineType: "string" },
+              { id: "backgroundColor", inlineType: "string" },
+              { id: "borderColor", inlineType: "string" },
+            ],
+          },
+          {
+            id: "advanced-props",
+            props: [{ id: "className", inlineType: "string", default: "''" }],
+          },
+        ],
+      },
+    ],
+    card: [
+      {
+        id: 'card',
+        sections: [
+          {
+            id: 'core-props',
+            props: [
+              { id: 'title', inlineType: 'string', default: "''" },
+              { id: 'description', inlineType: 'string', default: "''" },
+              {
+                id: 'children',
+                inlineType: 'React.ReactNode | React.ReactElement | string',
+                default: "''",
+              },
+            ],
+          },
+          {
+            id: 'visual-props',
+            props: [
+              {
+                id: 'label',
+                blockType: `{ 
+  text: string; 
+  backgroundColor?: string;
+  borderColor?: string; 
+  color?: string
+}`,
+                default: 'undefined',
+              },
+              {
+                id: 'icon',
+                blockType: `{ 
+  component: (props: IconPropsType) => React.JSX.Element | React.ReactNode | React.ReactElement; 
+  size?: number; 
+  color?: string; 
+  colors?: string[]
+}`,
+                default: 'undefined',
+              },
+            ],
+          },
+          {
+            id: 'advanced-props',
+            props: [
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
+            ],
+          },
+        ],
+      },
+    ],
+    anchor: [
+      {
+        id: 'anchor',
+        sections: [
+          {
+            id: 'core-props',
+            props: [
+              { id: 'href', inlineType: 'string', default: "''" },
+              {
+                id: 'target',
+                inlineType: "'_self' | '_blank' | '_parent' | '_top'",
+                default: "'_self'",
+              },
+              { id: 'text', inlineType: 'string', default: "''" },
+              {
+                id: 'children',
+                inlineType: 'React.ReactElement | React.ReactNode | string',
+                default: "''",
+              },
+              {
+                id: 'onClick',
+                inlineType: '(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void | Promise<void>',
+                default: 'undefined',
+              },
+            ],
+          },
+          {
+            id: 'visual-props',
+            props: [
+              {
+                id: 'variant',
+                inlineType: "'white' | 'black' | 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -68,83 +162,79 @@ export const propsMapping = {
     ],
     button: [
       {
-        id: "button",
+        id: 'button',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "type",
+                id: 'type',
                 inlineType: "'button' | 'link'",
                 default: "'button'",
               },
-              { id: "text", inlineType: "string", default: "''" },
+              { id: 'text', inlineType: 'string', default: "''" },
               {
-                id: "children",
-                inlineType:
-                  "React.ReactElement | React.JSX.Element | React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactElement | React.JSX.Element | React.ReactNode | string',
                 default: "''",
               },
-              { id: "href", inlineType: "string", default: "''" },
+              { id: 'href', inlineType: 'string', default: "''" },
               {
-                id: "target",
+                id: 'target',
                 inlineType: "'_self' | '_blank' | '_parent' | '_top'",
                 default: "'_self'",
               },
               {
-                id: "onClick",
+                id: 'onClick',
                 inlineType:
-                  "(e?: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void | Promise<void>",
-                default: "undefined",
+                  '(e?: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void | Promise<void>',
+                default: 'undefined',
               },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'solid' | 'outline' | 'outline'-dashed | no-'outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'solid' | 'outline' | 'outline'-dashed | no-'outline' | 'glowing'",
                 default: "'solid'",
               },
-              { id: "transparent", inlineType: "boolean", default: "false" },
+              { id: 'transparent', inlineType: 'boolean', default: 'false' },
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "radius",
+                id: 'radius',
                 inlineType: "'none' | 'sm' | 'md' | 'lg' | 'full'",
                 default: "'md'",
               },
               {
-                id: "spinnerType",
-                inlineType:
-                  "'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo'",
+                id: 'spinnerAppearance',
+                inlineType: "'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo'",
                 default: "'default'",
               },
             ],
           },
           {
-            id: "state-props",
+            id: 'state-props',
             props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
-              { id: "isLoading", inlineType: "boolean", default: "false" },
+              { id: 'disabled', inlineType: 'boolean', default: 'false' },
+              { id: 'isLoading', inlineType: 'boolean', default: 'false' },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
               {
-                id: "icon",
+                id: 'icon',
                 blockType: `{
   component: (props: IconPropsType) => React.JSX.Element,
   color: string,
@@ -152,64 +242,60 @@ export const propsMapping = {
   align: 'left' | 'right',
 }`,
               },
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
       },
 
       {
-        id: "button-group",
+        id: 'button-group',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType:
-                  "React.ReactElement<IButton> | React.ReactElement<IButton>[]",
+                id: 'children',
+                inlineType: 'React.ReactElement<IButton> | React.ReactElement<IButton>[]',
                 isRequired: true,
               },
             ],
           },
           {
-            id: "state-props",
-            props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
-            ],
+            id: 'state-props',
+            props: [{ id: 'disabled', inlineType: 'boolean', default: 'false' }],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default'| 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default'| 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "radius",
+                id: 'radius',
                 inlineType: "'none' | 'sm' | 'md' | 'lg' | 'full'",
                 default: "'md'",
               },
               {
-                id: "align",
+                id: 'align',
                 inlineType: "'vertical' | 'horizontal'",
                 default: "'horizontal'",
               },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -217,168 +303,160 @@ export const propsMapping = {
     ],
     dropdown: [
       {
-        id: "dropdown",
+        id: 'dropdown',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType:
-                  "React.ReactElement<IDropdownOption> | React.ReactElement<IDropdownOption>[]",
-                isRequired: "true",
+                id: 'children',
+                inlineType: 'React.ReactElement<IDropdownOption> | React.ReactElement<IDropdownOption>[]',
+                isRequired: 'true',
               },
-              { id: "value", inlineType: "string", isRequired: "true" },
+              { id: 'value', inlineType: 'string', isRequired: 'true' },
               {
-                id: "button",
-                inlineType:
-                  "Omit<IButton, 'children' | 'dangerouslySetInnerHTML'>",
-                default: "{}",
+                id: 'button',
+                inlineType: "Omit<IButton, 'children' | 'dangerouslySetInnerHTML'>",
+                default: '{}',
               },
             ],
           },
           {
-            id: "state-props",
+            id: 'state-props',
             props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
+              { id: 'disabled', inlineType: 'boolean', default: 'false' },
               {
-                id: "initiallyOpened",
-                inlineType: "boolean",
-                default: "false",
+                id: 'initiallyOpened',
+                inlineType: 'boolean',
+                default: 'false',
               },
               {
-                id: "choice",
+                id: 'choice',
                 inlineType: "'multiple' | 'single'",
                 default: "'single'",
               },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
                 default: "'outline'",
               },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "placeholder", inlineType: "string", default: "'Select'" },
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'placeholder', inlineType: 'string', default: "'Select'" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
       },
       {
-        id: "dropdown-option",
+        id: 'dropdown-option',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
-              { id: "children", inlineType: "string", isRequired: "true" },
-              { id: "value", inlineType: "string", isRequired: "true" },
+              { id: 'children', inlineType: 'string', isRequired: 'true' },
+              { id: 'value', inlineType: 'string', isRequired: 'true' },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
               },
             ],
           },
           {
-            id: "state-props",
+            id: 'state-props',
             props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
+              { id: 'disabled', inlineType: 'boolean', default: 'false' },
               {
-                id: "choice",
+                id: 'choice',
                 inlineType: "'multiple' | 'single'",
                 default: "'single'",
               },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "description", inlineType: "string" },
-              { id: "icon", inlineType: "string" },
-              { id: "selectedValues", inlineType: "string[]" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'description', inlineType: 'string' },
+              { id: 'icon', inlineType: 'string' },
+              { id: 'selectedValues', inlineType: 'string[]' },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
       },
     ],
-    "message-box": [
+    'message-box': [
       {
-        id: "message-box",
+        id: 'message-box',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactElement | React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactElement | React.ReactNode | string',
                 default: "''",
               },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'info' | 'warning' | 'success' | 'error'",
+                id: 'variant',
+                inlineType: "'default' | 'info' | 'warning' | 'success' | 'error'",
                 default: "'default'",
               },
               {
-                id: "radius",
+                id: 'radius',
                 inlineType: "'none' | 'sm' | 'md' | 'lg' | 'full'",
                 default: "'md'",
               },
               {
-                id: "type",
-                inlineType:
-                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'type',
+                inlineType: "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
                 default: "'outline'",
               },
-              { id: "withIcon", inlineType: "boolean", default: "false" },
+              { id: 'withIcon', inlineType: 'boolean', default: 'false' },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
               {
-                id: "customIcon",
+                id: 'customIcon',
                 blockType: `{
   component: (props: IconPropsType) => React.JSX.Element,
   size?: number,
   color?: string,
 }`,
-                default: "null",
+                default: 'null',
               },
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -386,140 +464,131 @@ export const propsMapping = {
     ],
     radio: [
       {
-        id: "radio",
+        id: 'radio',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode",
-                isRequired: "true",
+                id: 'children',
+                inlineType: 'React.ReactNode',
+                isRequired: 'true',
               },
-              { id: "value", inlineType: "string", isRequired: "true" },
-              { id: "checked", inlineType: "boolean" },
+              { id: 'value', inlineType: 'string', isRequired: 'true' },
+              { id: 'checked', inlineType: 'boolean' },
               {
-                id: "onChange",
-                inlineType: "(value: string) => void",
+                id: 'onChange',
+                inlineType: '(value: string) => void',
               },
-              { id: "name", inlineType: "string" },
+              { id: 'name', inlineType: 'string' },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'default' | 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'default' | 'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
                 default: "'default'",
               },
               {
-                id: "alignLabel",
+                id: 'alignLabel',
                 inlineType: "'top' | 'right' | 'bottom' | 'left'",
                 default: "'right'",
               },
               {
-                id: "highlightLabel",
-                inlineType: "boolean",
-                default: "false",
+                id: 'highlightLabel',
+                inlineType: 'boolean',
+                default: 'false',
               },
             ],
           },
           {
-            id: "state-props",
-            props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
-            ],
+            id: 'state-props',
+            props: [{ id: 'disabled', inlineType: 'boolean', default: 'false' }],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
       },
       {
-        id: "radio-group",
+        id: 'radio-group',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
-              { id: "name", inlineType: "string", isRequired: "true" },
-              { id: "value", inlineType: "string", isRequired: "true" },
+              { id: 'name', inlineType: 'string', isRequired: 'true' },
+              { id: 'value', inlineType: 'string', isRequired: 'true' },
               {
-                id: "children",
-                inlineType:
-                  "React.ReactElement<IRadio> | React.ReactElement<IRadio>[]",
-                isRequired: "true",
+                id: 'children',
+                inlineType: 'React.ReactElement<IRadio> | React.ReactElement<IRadio>[]',
+                isRequired: 'true',
               },
               {
-                id: "onChange",
-                inlineType: "(newValue: string) => void",
+                id: 'onChange',
+                inlineType: '(newValue: string) => void',
               },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "appearance",
-                inlineType:
-                  "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
+                id: 'appearance',
+                inlineType: "'solid' | 'outline' | 'outline-dashed' | 'no-outline' | 'glowing'",
                 default: "'outline'",
               },
               {
-                id: "align",
+                id: 'align',
                 inlineType: "'horizontal' | 'vertical'",
                 default: "'horizontal'",
               },
               {
-                id: "alignLabel",
+                id: 'alignLabel',
                 inlineType: "'top' | 'right' | 'bottom' | 'left'",
                 default: "'right'",
               },
               {
-                id: "highlightLabel",
-                inlineType: "boolean",
-                default: "false",
+                id: 'highlightLabel',
+                inlineType: 'boolean',
+                default: 'false',
               },
             ],
           },
           {
-            id: "state-props",
-            props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
-            ],
+            id: 'state-props',
+            props: [{ id: 'disabled', inlineType: 'boolean', default: 'false' }],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -527,35 +596,33 @@ export const propsMapping = {
     ],
     spinner: [
       {
-        id: "spinner",
+        id: 'spinner',
         sections: [
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "type",
-                inlineType:
-                  "'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo'",
+                id: 'type',
+                inlineType: "'default' | 'duo' | 'gradient' | 'pulse' | 'pulse-duo'",
                 default: "'default'",
               },
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
               {
-                id: "size",
+                id: 'size',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
             ],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -563,63 +630,60 @@ export const propsMapping = {
     ],
     switch: [
       {
-        id: "switch",
+        id: 'switch',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
-              { id: "onChange", inlineType: "() => void" },
-              { id: "label", inlineType: "string" },
-              { id: "checked", inlineType: "boolean" },
+              { id: 'onChange', inlineType: '() => void' },
+              { id: 'label', inlineType: 'string' },
+              { id: 'checked', inlineType: 'boolean' },
             ],
           },
           {
-            id: "visual-props",
+            id: 'visual-props',
             props: [
               {
-                id: "alignLabel",
+                id: 'alignLabel',
                 inlineType: "'horizontal' | 'vertical'",
                 default: "'vertical'",
               },
               {
-                id: "switchSize",
+                id: 'switchSize',
                 inlineType: "'xsm' | 'sm' | 'md' | 'lg' | 'xlg'",
                 default: "'md'",
               },
               {
-                id: "variant",
-                inlineType:
-                  "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
+                id: 'variant',
+                inlineType: "'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning'",
                 default: "'default'",
               },
             ],
           },
           {
-            id: "state-props",
-            props: [
-              { id: "disabled", inlineType: "boolean", default: "false" },
-            ],
+            id: 'state-props',
+            props: [{ id: 'disabled', inlineType: 'boolean', default: 'false' }],
           },
           {
-            id: "advanced-props",
+            id: 'advanced-props',
             props: [
               {
-                id: "trackIcon",
+                id: 'trackIcon',
                 blockType: `{
   checked?: { component: (props: IconPropsType) => React.JSX.Element, size?: number, color?: string },
   unchecked?: { component: (props: IconPropsType) => React.JSX.Element, size?: number, color?: string },
 }`,
               },
               {
-                id: "thumbIcon",
+                id: 'thumbIcon',
                 blockType: `{
   component: (props: IconPropsType) => React.JSX.Element,
   size?: number,
   color?: string,
 }`,
               },
-              { id: "className", inlineType: "string", default: "''" },
-              { id: "style", inlineType: "React.CSSProperties", default: "{}" },
+              { id: 'className', inlineType: 'string', default: "''" },
+              { id: 'style', inlineType: 'React.CSSProperties', default: '{}' },
             ],
           },
         ],
@@ -627,16 +691,16 @@ export const propsMapping = {
     ],
   },
   presets: {
-    "social-media-card": [
+    'social-media-card': [
       {
-        id: "social-media-card",
+        id: 'social-media-card',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -644,16 +708,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "music-player": [
+    'music-player': [
       {
-        id: "music-player",
+        id: 'music-player',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -661,16 +725,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "statistics-cards": [
+    'statistics-cards': [
       {
-        id: "statistics-cards",
+        id: 'statistics-cards',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -678,16 +742,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "settings-panel": [
+    'settings-panel': [
       {
-        id: "settings-panel",
+        id: 'settings-panel',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -695,16 +759,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "action-buttons": [
+    'action-buttons': [
       {
-        id: "action-buttons",
+        id: 'action-buttons',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -712,16 +776,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "status-indicators": [
+    'status-indicators': [
       {
-        id: "status-indicators",
+        id: 'status-indicators',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -729,16 +793,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "navigation-pills": [
+    'navigation-pills': [
       {
-        id: "navigation-pills",
+        id: 'navigation-pills',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -746,16 +810,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "quick-actions": [
+    'quick-actions': [
       {
-        id: "quick-actions",
+        id: 'quick-actions',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -763,16 +827,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "weather-widget": [
+    'weather-widget': [
       {
-        id: "weather-widget",
+        id: 'weather-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -780,16 +844,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "notification-cards": [
+    'notification-cards': [
       {
-        id: "notification-cards",
+        id: 'notification-cards',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -797,16 +861,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "todo-list": [
+    'todo-list': [
       {
-        id: "todo-list",
+        id: 'todo-list',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -814,16 +878,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "chat-messages": [
+    'chat-messages': [
       {
-        id: "chat-messages",
+        id: 'chat-messages',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -831,16 +895,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "activity-feed": [
+    'activity-feed': [
       {
-        id: "activity-feed",
+        id: 'activity-feed',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -848,16 +912,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "shopping-cart": [
+    'shopping-cart': [
       {
-        id: "shopping-cart",
+        id: 'shopping-cart',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -865,16 +929,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "file-upload-area": [
+    'file-upload-area': [
       {
-        id: "file-upload-area",
+        id: 'file-upload-area',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -882,16 +946,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "progress-tracker": [
+    'progress-tracker': [
       {
-        id: "progress-tracker",
+        id: 'progress-tracker',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -899,16 +963,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "media-controls": [
+    'media-controls': [
       {
-        id: "media-controls",
+        id: 'media-controls',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -916,16 +980,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "pricing-card": [
+    'pricing-card': [
       {
-        id: "pricing-card",
+        id: 'pricing-card',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -933,16 +997,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "calendar-widget": [
+    'calendar-widget': [
       {
-        id: "calendar-widget",
+        id: 'calendar-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -950,16 +1014,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "device-status": [
+    'device-status': [
       {
-        id: "device-status",
+        id: 'device-status',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -967,16 +1031,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "analytics-dashboard": [
+    'analytics-dashboard': [
       {
-        id: "analytics-dashboard",
+        id: 'analytics-dashboard',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -984,16 +1048,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "contact-card": [
+    'contact-card': [
       {
-        id: "contact-card",
+        id: 'contact-card',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1001,16 +1065,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "file-manager": [
+    'file-manager': [
       {
-        id: "file-manager",
+        id: 'file-manager',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1018,16 +1082,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "quick-stats": [
+    'quick-stats': [
       {
-        id: "quick-stats",
+        id: 'quick-stats',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1035,16 +1099,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "mini-menu": [
+    'mini-menu': [
       {
-        id: "mini-menu",
+        id: 'mini-menu',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1052,16 +1116,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "notification-badges": [
+    'notification-badges': [
       {
-        id: "notification-badges",
+        id: 'notification-badges',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1069,16 +1133,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "profile-badge": [
+    'profile-badge': [
       {
-        id: "profile-badge",
+        id: 'profile-badge',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1086,16 +1150,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "time-&-location-widget": [
+    'time-&-location-widget': [
       {
-        id: "time-&-location-widget",
+        id: 'time-&-location-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1103,16 +1167,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "energy-meter": [
+    'energy-meter': [
       {
-        id: "energy-meter",
+        id: 'energy-meter',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1120,16 +1184,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "cryptocurrency-widget": [
+    'cryptocurrency-widget': [
       {
-        id: "cryptocurrency-widget",
+        id: 'cryptocurrency-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1137,16 +1201,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "gaming-controller-widget": [
+    'gaming-controller-widget': [
       {
-        id: "gaming-controller-widget",
+        id: 'gaming-controller-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1154,16 +1218,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "streak-counter": [
+    'streak-counter': [
       {
-        id: "streak-counter",
+        id: 'streak-counter',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1171,16 +1235,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "layer-stack-widget": [
+    'layer-stack-widget': [
       {
-        id: "layer-stack-widget",
+        id: 'layer-stack-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1188,16 +1252,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "inspiration-widget": [
+    'inspiration-widget': [
       {
-        id: "inspiration-widget",
+        id: 'inspiration-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1205,16 +1269,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "nature-widget": [
+    'nature-widget': [
       {
-        id: "nature-widget",
+        id: 'nature-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1222,16 +1286,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "reading-progress": [
+    'reading-progress': [
       {
-        id: "reading-progress",
+        id: 'reading-progress',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1239,16 +1303,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "idea-bulb-widget": [
+    'idea-bulb-widget': [
       {
-        id: "idea-bulb-widget",
+        id: 'idea-bulb-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1256,16 +1320,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "rocket-launch-widget": [
+    'rocket-launch-widget': [
       {
-        id: "rocket-launch-widget",
+        id: 'rocket-launch-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1273,16 +1337,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "tool-widget": [
+    'tool-widget': [
       {
-        id: "tool-widget",
+        id: 'tool-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1290,16 +1354,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "color-palette-widget": [
+    'color-palette-widget': [
       {
-        id: "color-palette-widget",
+        id: 'color-palette-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1307,16 +1371,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "system-status": [
+    'system-status': [
       {
-        id: "system-status",
+        id: 'system-status',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1324,16 +1388,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "pomodoro-timer": [
+    'pomodoro-timer': [
       {
-        id: "pomodoro-timer",
+        id: 'pomodoro-timer',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1341,16 +1405,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "database-widget": [
+    'database-widget': [
       {
-        id: "database-widget",
+        id: 'database-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1358,16 +1422,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "network-status": [
+    'network-status': [
       {
-        id: "network-status",
+        id: 'network-status',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1375,16 +1439,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "code-stats": [
+    'code-stats': [
       {
-        id: "code-stats",
+        id: 'code-stats',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1392,16 +1456,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "mouse-tracker": [
+    'mouse-tracker': [
       {
-        id: "mouse-tracker",
+        id: 'mouse-tracker',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1409,16 +1473,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "design-system": [
+    'design-system': [
       {
-        id: "design-system",
+        id: 'design-system',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1426,16 +1490,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "ai-assistant": [
+    'ai-assistant': [
       {
-        id: "ai-assistant",
+        id: 'ai-assistant',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1443,16 +1507,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "office-building-widget": [
+    'office-building-widget': [
       {
-        id: "office-building-widget",
+        id: 'office-building-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1460,16 +1524,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "team-collaboration-widget": [
+    'team-collaboration-widget': [
       {
-        id: "team-collaboration-widget",
+        id: 'team-collaboration-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1477,16 +1541,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "health-monitor": [
+    'health-monitor': [
       {
-        id: "health-monitor",
+        id: 'health-monitor',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1494,16 +1558,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "email-dashboard": [
+    'email-dashboard': [
       {
-        id: "email-dashboard",
+        id: 'email-dashboard',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1511,16 +1575,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "document-scanner": [
+    'document-scanner': [
       {
-        id: "document-scanner",
+        id: 'document-scanner',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1528,16 +1592,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "social-engagement": [
+    'social-engagement': [
       {
-        id: "social-engagement",
+        id: 'social-engagement',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1545,16 +1609,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "video-call-widget": [
+    'video-call-widget': [
       {
-        id: "video-call-widget",
+        id: 'video-call-widget',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1562,16 +1626,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "task-manager": [
+    'task-manager': [
       {
-        id: "task-manager",
+        id: 'task-manager',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1579,16 +1643,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "fitness-tracker": [
+    'fitness-tracker': [
       {
-        id: "fitness-tracker",
+        id: 'fitness-tracker',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1596,16 +1660,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "cloud-storage": [
+    'cloud-storage': [
       {
-        id: "cloud-storage",
+        id: 'cloud-storage',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1613,16 +1677,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "language-learning": [
+    'language-learning': [
       {
-        id: "language-learning",
+        id: 'language-learning',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1630,16 +1694,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "stock-market": [
+    'stock-market': [
       {
-        id: "stock-market",
+        id: 'stock-market',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1647,16 +1711,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "recipe-finder": [
+    'recipe-finder': [
       {
-        id: "recipe-finder",
+        id: 'recipe-finder',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1664,16 +1728,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "travel-planner": [
+    'travel-planner': [
       {
-        id: "travel-planner",
+        id: 'travel-planner',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1681,16 +1745,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "budget-tracker": [
+    'budget-tracker': [
       {
-        id: "budget-tracker",
+        id: 'budget-tracker',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1698,16 +1762,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "password-manager": [
+    'password-manager': [
       {
-        id: "password-manager",
+        id: 'password-manager',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1715,16 +1779,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "photo-editor": [
+    'photo-editor': [
       {
-        id: "photo-editor",
+        id: 'photo-editor',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1732,16 +1796,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "music-production": [
+    'music-production': [
       {
-        id: "music-production",
+        id: 'music-production',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1749,16 +1813,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "shopping-list": [
+    'shopping-list': [
       {
-        id: "shopping-list",
+        id: 'shopping-list',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1766,16 +1830,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "habit-tracker": [
+    'habit-tracker': [
       {
-        id: "habit-tracker",
+        id: 'habit-tracker',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],
@@ -1783,16 +1847,16 @@ export const propsMapping = {
         ],
       },
     ],
-    "code-editor": [
+    'code-editor': [
       {
-        id: "code-editor",
+        id: 'code-editor',
         sections: [
           {
-            id: "core-props",
+            id: 'core-props',
             props: [
               {
-                id: "children",
-                inlineType: "React.ReactNode | string",
+                id: 'children',
+                inlineType: 'React.ReactNode | string',
                 default: "''",
               },
             ],

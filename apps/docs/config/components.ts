@@ -74,7 +74,9 @@ export const components = {
     "code-editor": ["CodeEditor"],
   },
   components: {
+    anchor: ["Anchor"],
     button: ["Button", "ButtonGroup"],
+    label: ["Label"],
     card: ["Card"],
     dropdown: ["Dropdown", "DropdownOption"],
     "message-box": ["MessageBox"],

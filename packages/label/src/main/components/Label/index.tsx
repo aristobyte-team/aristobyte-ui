@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 
+import './Label.scss';
+
 export interface ILabel {
   text: string;
   variant?: 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning';
@@ -27,7 +29,14 @@ export const Label: React.FC<ILabel> = ({
 }) => {
   return (
     <label
-      className={['label', `label-${variant}-${appearance}`, `label-${size}`, `label-radius-${radius}`, className]
+      className={[
+        'label',
+        `label-appearance--${appearance}`,
+        `label-variant--${variant}`,
+        `label-size--${size}`,
+        `label-radius--${radius}`,
+        className,
+      ]
         .filter(Boolean)
         .join(' ')}
       style={{

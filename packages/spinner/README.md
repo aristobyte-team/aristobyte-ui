@@ -29,13 +29,13 @@ pnpm add -D @aristobyte-ui/spinner
 ## 🛠 Usage
 
 ```tsx
-import { Spinner } from "@aristobyte-ui/spinner";
+import { Spinner } from '@aristobyte-ui/spinner';
 
 export const Demo = () => (
   <div>
-    <Spinner type="default" variant="primary" size="md" />
-    <Spinner type="duo" variant="success" size="lg" />
-    <Spinner type="pulse-duo" variant="error" size="sm" />
+    <Spinner appearance="default" variant="primary" size="md" />
+    <Spinner appearance="duo" variant="success" size="lg" />
+    <Spinner appearance="pulse-duo" variant="error" size="sm" />
   </div>
 );
 ```
@@ -56,11 +56,11 @@ export const Demo = () => (
 ## 🔧 Example in a Package
 
 ```tsx
-import { Spinner } from "@aristobyte-ui/spinner";
+import { Spinner } from '@aristobyte-ui/spinner';
 
 export const LoadingState = () => (
   <div className="flex justify-center items-center">
-    <Spinner type="gradient" variant="primary" size="lg" />
+    <Spinner appearance="gradient" variant="primary" size="lg" />
   </div>
 );
 ```

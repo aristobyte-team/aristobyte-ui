@@ -1,77 +1,117 @@
 export const CodeBlocks = {
-  "get-started": { overview: { usage: "TODO" } },
+  'get-started': { overview: { usage: 'TODO' } },
   presets: {
-    "social-media-card": { usage: "TODO", disabled: "TODO" },
-    "music-player": { usage: "TODO", disabled: "TODO" },
-    "statistics-cards": { usage: "TODO", disabled: "TODO" },
-    "settings-panel": { usage: "TODO", disabled: "TODO" },
-    "action-buttons": { usage: "TODO", disabled: "TODO" },
-    "status-indicators": { usage: "TODO", disabled: "TODO" },
-    "navigation-pills": { usage: "TODO", disabled: "TODO" },
-    "quick-actions": { usage: "TODO", disabled: "TODO" },
-    "weather-widget": { usage: "TODO", disabled: "TODO" },
-    "notification-cards": { usage: "TODO", disabled: "TODO" },
-    "todo-list": { usage: "TODO", disabled: "TODO" },
-    "chat-messages": { usage: "TODO", disabled: "TODO" },
-    "activity-feed": { usage: "TODO", disabled: "TODO" },
-    "shopping-cart": { usage: "TODO", disabled: "TODO" },
-    "file-upload-area": { usage: "TODO", disabled: "TODO" },
-    "progress-tracker": { usage: "TODO", disabled: "TODO" },
-    "media-controls": { usage: "TODO", disabled: "TODO" },
-    "pricing-card": { usage: "TODO", disabled: "TODO" },
-    "calendar-widget": { usage: "TODO", disabled: "TODO" },
-    "device-status": { usage: "TODO", disabled: "TODO" },
-    "analytics-dashboard": { usage: "TODO", disabled: "TODO" },
-    "contact-card": { usage: "TODO", disabled: "TODO" },
-    "file-manager": { usage: "TODO", disabled: "TODO" },
-    "quick-stats": { usage: "TODO", disabled: "TODO" },
-    "mini-menu": { usage: "TODO", disabled: "TODO" },
-    "notification-badges": { usage: "TODO", disabled: "TODO" },
-    "profile-badge": { usage: "TODO", disabled: "TODO" },
-    "time-&-location-widget": { usage: "TODO", disabled: "TODO" },
-    "energy-meter": { usage: "TODO", disabled: "TODO" },
-    "cryptocurrency-widget": { usage: "TODO", disabled: "TODO" },
-    "gaming-controller-widget": { usage: "TODO", disabled: "TODO" },
-    "streak-counter": { usage: "TODO", disabled: "TODO" },
-    "layer-stack-widget": { usage: "TODO", disabled: "TODO" },
-    "inspiration-widget": { usage: "TODO", disabled: "TODO" },
-    "nature-widget": { usage: "TODO", disabled: "TODO" },
-    "reading-progress": { usage: "TODO", disabled: "TODO" },
-    "idea-bulb-widget": { usage: "TODO", disabled: "TODO" },
-    "rocket-launch-widget": { usage: "TODO", disabled: "TODO" },
-    "tool-widget": { usage: "TODO", disabled: "TODO" },
-    "color-palette-widget": { usage: "TODO", disabled: "TODO" },
-    "system-status": { usage: "TODO", disabled: "TODO" },
-    "pomodoro-timer": { usage: "TODO", disabled: "TODO" },
-    "database-widget": { usage: "TODO", disabled: "TODO" },
-    "network-status": { usage: "TODO", disabled: "TODO" },
-    "code-stats": { usage: "TODO", disabled: "TODO" },
-    "mouse-tracker": { usage: "TODO", disabled: "TODO" },
-    "design-system": { usage: "TODO", disabled: "TODO" },
-    "ai-assistant": { usage: "TODO", disabled: "TODO" },
-    "office-building-widget": { usage: "TODO", disabled: "TODO" },
-    "team-collaboration-widget": { usage: "TODO", disabled: "TODO" },
-    "health-monitor": { usage: "TODO", disabled: "TODO" },
-    "email-dashboard": { usage: "TODO", disabled: "TODO" },
-    "document-scanner": { usage: "TODO", disabled: "TODO" },
-    "social-engagement": { usage: "TODO", disabled: "TODO" },
-    "video-call-widget": { usage: "TODO", disabled: "TODO" },
-    "task-manager": { usage: "TODO", disabled: "TODO" },
-    "fitness-tracker": { usage: "TODO", disabled: "TODO" },
-    "cloud-storage": { usage: "TODO", disabled: "TODO" },
-    "language-learning": { usage: "TODO", disabled: "TODO" },
-    "stock-market": { usage: "TODO", disabled: "TODO" },
-    "recipe-finder": { usage: "TODO", disabled: "TODO" },
-    "travel-planner": { usage: "TODO", disabled: "TODO" },
-    "budget-tracker": { usage: "TODO", disabled: "TODO" },
-    "password-manager": { usage: "TODO", disabled: "TODO" },
-    "photo-editor": { usage: "TODO", disabled: "TODO" },
-    "music-production": { usage: "TODO", disabled: "TODO" },
-    "shopping-list": { usage: "TODO", disabled: "TODO" },
-    "habit-tracker": { usage: "TODO", disabled: "TODO" },
-    "code-editor": { usage: "TODO", disabled: "TODO" },
+    'social-media-card': { usage: 'TODO', disabled: 'TODO' },
+    'music-player': { usage: 'TODO', disabled: 'TODO' },
+    'statistics-cards': { usage: 'TODO', disabled: 'TODO' },
+    'settings-panel': { usage: 'TODO', disabled: 'TODO' },
+    'action-buttons': { usage: 'TODO', disabled: 'TODO' },
+    'status-indicators': { usage: 'TODO', disabled: 'TODO' },
+    'navigation-pills': { usage: 'TODO', disabled: 'TODO' },
+    'quick-actions': { usage: 'TODO', disabled: 'TODO' },
+    'weather-widget': { usage: 'TODO', disabled: 'TODO' },
+    'notification-cards': { usage: 'TODO', disabled: 'TODO' },
+    'todo-list': { usage: 'TODO', disabled: 'TODO' },
+    'chat-messages': { usage: 'TODO', disabled: 'TODO' },
+    'activity-feed': { usage: 'TODO', disabled: 'TODO' },
+    'shopping-cart': { usage: 'TODO', disabled: 'TODO' },
+    'file-upload-area': { usage: 'TODO', disabled: 'TODO' },
+    'progress-tracker': { usage: 'TODO', disabled: 'TODO' },
+    'media-controls': { usage: 'TODO', disabled: 'TODO' },
+    'pricing-card': { usage: 'TODO', disabled: 'TODO' },
+    'calendar-widget': { usage: 'TODO', disabled: 'TODO' },
+    'device-status': { usage: 'TODO', disabled: 'TODO' },
+    'analytics-dashboard': { usage: 'TODO', disabled: 'TODO' },
+    'contact-card': { usage: 'TODO', disabled: 'TODO' },
+    'file-manager': { usage: 'TODO', disabled: 'TODO' },
+    'quick-stats': { usage: 'TODO', disabled: 'TODO' },
+    'mini-menu': { usage: 'TODO', disabled: 'TODO' },
+    'notification-badges': { usage: 'TODO', disabled: 'TODO' },
+    'profile-badge': { usage: 'TODO', disabled: 'TODO' },
+    'time-&-location-widget': { usage: 'TODO', disabled: 'TODO' },
+    'energy-meter': { usage: 'TODO', disabled: 'TODO' },
+    'cryptocurrency-widget': { usage: 'TODO', disabled: 'TODO' },
+    'gaming-controller-widget': { usage: 'TODO', disabled: 'TODO' },
+    'streak-counter': { usage: 'TODO', disabled: 'TODO' },
+    'layer-stack-widget': { usage: 'TODO', disabled: 'TODO' },
+    'inspiration-widget': { usage: 'TODO', disabled: 'TODO' },
+    'nature-widget': { usage: 'TODO', disabled: 'TODO' },
+    'reading-progress': { usage: 'TODO', disabled: 'TODO' },
+    'idea-bulb-widget': { usage: 'TODO', disabled: 'TODO' },
+    'rocket-launch-widget': { usage: 'TODO', disabled: 'TODO' },
+    'tool-widget': { usage: 'TODO', disabled: 'TODO' },
+    'color-palette-widget': { usage: 'TODO', disabled: 'TODO' },
+    'system-status': { usage: 'TODO', disabled: 'TODO' },
+    'pomodoro-timer': { usage: 'TODO', disabled: 'TODO' },
+    'database-widget': { usage: 'TODO', disabled: 'TODO' },
+    'network-status': { usage: 'TODO', disabled: 'TODO' },
+    'code-stats': { usage: 'TODO', disabled: 'TODO' },
+    'mouse-tracker': { usage: 'TODO', disabled: 'TODO' },
+    'design-system': { usage: 'TODO', disabled: 'TODO' },
+    'ai-assistant': { usage: 'TODO', disabled: 'TODO' },
+    'office-building-widget': { usage: 'TODO', disabled: 'TODO' },
+    'team-collaboration-widget': { usage: 'TODO', disabled: 'TODO' },
+    'health-monitor': { usage: 'TODO', disabled: 'TODO' },
+    'email-dashboard': { usage: 'TODO', disabled: 'TODO' },
+    'document-scanner': { usage: 'TODO', disabled: 'TODO' },
+    'social-engagement': { usage: 'TODO', disabled: 'TODO' },
+    'video-call-widget': { usage: 'TODO', disabled: 'TODO' },
+    'task-manager': { usage: 'TODO', disabled: 'TODO' },
+    'fitness-tracker': { usage: 'TODO', disabled: 'TODO' },
+    'cloud-storage': { usage: 'TODO', disabled: 'TODO' },
+    'language-learning': { usage: 'TODO', disabled: 'TODO' },
+    'stock-market': { usage: 'TODO', disabled: 'TODO' },
+    'recipe-finder': { usage: 'TODO', disabled: 'TODO' },
+    'travel-planner': { usage: 'TODO', disabled: 'TODO' },
+    'budget-tracker': { usage: 'TODO', disabled: 'TODO' },
+    'password-manager': { usage: 'TODO', disabled: 'TODO' },
+    'photo-editor': { usage: 'TODO', disabled: 'TODO' },
+    'music-production': { usage: 'TODO', disabled: 'TODO' },
+    'shopping-list': { usage: 'TODO', disabled: 'TODO' },
+    'habit-tracker': { usage: 'TODO', disabled: 'TODO' },
+    'code-editor': { usage: 'TODO', disabled: 'TODO' },
   },
   components: {
+    anchor: {
+      usage:
+        'import { Anchor } from "@aristobyte-ui/anchor";\n\nexport default function App() {\n  return <Anchor href="https://example.com">Anchor</Anchor>;\n}',
+      variants:
+        'import { Anchor } from "@aristobyte-ui/anchor";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Anchor variant="default">Default</Anchor>\n      <Anchor variant="primary">Primary</Anchor>\n      <Anchor variant="secondary">Secondary</Anchor>\n      <Anchor variant="success">Success</Anchor>\n      <Anchor variant="error">Error</Anchor>\n      <Anchor variant="warning">Warning</Anchor>\n    </div>\n  );\n}',
+      targets:
+        'import { Anchor } from "@aristobyte-ui/anchor";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Anchor href="https://example.com" target="_self">Same Tab</Anchor>\n      <Anchor href="https://example.com" target="_blank">New Tab</Anchor>\n    </div>\n  );\n}',
+    },
+    label: {
+      usage:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return <Label text="Label" />;\n}',
+      variants:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n      <Label text="Default" variant="default" />\n      <Label text="Primary" variant="primary" />\n      <Label text="Secondary" variant="secondary" />\n      <Label text="Success" variant="success" />\n      <Label text="Error" variant="error" />\n      <Label text="Warning" variant="warning" />\n    </div>\n  );\n}',
+      appearance:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n      <Label text="Solid" appearance="solid" variant="primary" />\n      <Label text="Glowing" appearance="glowing" variant="primary" />\n      <Label text="Outline" appearance="outline" variant="primary" />\n      <Label text="Outline Dashed" appearance="outline-dashed" variant="primary" />\n      <Label text="No Outline" appearance="no-outline" variant="primary" />\n    </div>\n  );\n}',
+      sizes:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n      <Label text="Extra small" size="xsm" variant="secondary" />\n      <Label text="Small" size="sm" variant="secondary" />\n      <Label text="Medium" size="md" variant="secondary" />\n      <Label text="Large" size="lg" variant="secondary" />\n      <Label text="Extra large" size="xlg" variant="secondary" />\n    </div>\n  );\n}',
+      radius:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n      <Label text="None" radius="none" variant="default" />\n      <Label text="Small" radius="sm" variant="default" />\n      <Label text="Medium" radius="md" variant="default" />\n      <Label text="Large" radius="lg" variant="default" />\n      <Label text="Full" radius="full" variant="default" />\n    </div>\n  );\n}',
+      colors:
+        'import { Label } from "@aristobyte-ui/label";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n      <Label text="Info" color="#8ec5ff" backgroundColor="#1c398e66" borderColor="#2b7fff4c" />\n      <Label text="Success" color="#5ee9b5" backgroundColor="#004f3b66" borderColor="#00bc7d85" />\n      <Label text="Warning" color="#ffd36e" backgroundColor="#8b5e0033" borderColor="#ffb54766" />\n    </div>\n  );\n}',
+    },
+    card: {
+      usage:
+        'import { Card } from "@aristobyte-ui/card";\n\nexport default function App() {\n  return (\n    <Card title="Card Title" description="A simple card with title and description." />\n  );\n}',
+      basic:
+        'import { Card } from "@aristobyte-ui/card";\n\nexport default function App() {\n  return (\n    <Card title="Card Title" description="A simple card with title and description." />\n  );\n}',
+      'with-icon':
+        'import { Card } from "@aristobyte-ui/card";\nimport { Icons } from "@aristobyte-ui/utils";\n\nexport default function App() {\n  return (\n    <Card\n      title="With Icon"\n      description="Card header uses a decorative icon for emphasis."\n      icon={{ component: Icons.GradientSquare, size: 22, color: "#51a2ff" }}\n    />\n  );\n}',
+      'with-label':
+        'import { Card } from "@aristobyte-ui/card";\n\nexport default function App() {\n  return (\n    <Card\n      title="With Label"\n      description="Add a label badge to the card header."\n      label={{\n        text: "New",\n        backgroundColor: "#1c398e66",\n        borderColor: "#2b7fff4c",\n        color: "#8ec5ff"\n      }}\n    />\n  );\n}',
+      'with-content':
+        'import { Card } from "@aristobyte-ui/card";\nimport { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return (\n    <Card title="Card With Content" description="Cards can render arbitrary content blocks.">\n      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n        <Button variant="primary">Primary Action</Button>\n        <Button variant="secondary">Secondary</Button>\n      </div>\n    </Card>\n  );\n}',
+      'full-header':
+        'import { Card } from "@aristobyte-ui/card";\nimport { Icons } from "@aristobyte-ui/utils";\n\nexport default function App() {\n  return (\n    <Card\n      title="Full Header"\n      description="Title, icon, and label rendered together for emphasis."\n      icon={{ component: Icons.GradientSquare, size: 22, color: "#c27aff" }}\n      label={{\n        text: "Featured",\n        backgroundColor: "#59168b66",\n        borderColor: "#ad46ff4c",\n        color: "#dab2ff"\n      }}\n    />\n  );\n}',
+      'with-actions':
+        'import { Card } from "@aristobyte-ui/card";\nimport { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return (\n    <Card title="Card With Actions" description="Combine content and actions inside the card body.">\n      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n        <Button variant="primary">Primary Action</Button>\n        <Button appearance="outline" variant="secondary">Secondary</Button>\n      </div>\n    </Card>\n  );\n}',
+      'with-components':
+        'import { Card } from "@aristobyte-ui/card";\nimport { MessageBox } from "@aristobyte-ui/message-box";\nimport { Spinner } from "@aristobyte-ui/spinner";\n\nexport default function App() {\n  return (\n    <Card title="Card With Components" description="Embed other UI components as card content.">\n      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>\n        <MessageBox variant="success" withIcon>\n          Everything is synced.\n        </MessageBox>\n        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>\n          <Spinner variant="primary" size="sm" />\n          <span>Processing background tasks</span>\n        </div>\n      </div>\n    </Card>\n  );\n}',
+    },
     button: {
       usage:
         'import { Button } from "@aristobyte-ui/button";\n\nexport default function App() {\n  return <Button>Button</Button>;\n}',
@@ -86,20 +126,20 @@ export const CodeBlocks = {
       appearance:
         'import * as React from "react";\nimport { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="default">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="default">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="default">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="default">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="default">\n          No-Outline\n        </Button>\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="primary">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="primary">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="primary">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="primary">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="primary">\n          No-Outline\n        </Button>\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="secondary">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="secondary">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="secondary">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="secondary">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="secondary">\n          No-Outline\n        </Button>\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="error">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="error">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="error">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="error">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="error">\n          No-Outline\n        </Button>\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="warning">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="warning">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="warning">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="warning">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="warning">\n          No-Outline\n        </Button>\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <Button appearance="solid" variant="success">\n          Solid\n        </Button>\n        <Button appearance="glowing" variant="success">\n          Glowing\n        </Button>\n        <Button appearance="outline" variant="success">\n          Outline\n        </Button>\n        <Button appearance="outline-dashed" variant="success">\n          Outline Dashed\n        </Button>\n        <Button appearance="no-outline" variant="success">\n          No-Outline\n        </Button>\n      </div>\n    </div>\n  );\n}',
       loading:
-        'import * as React from "react";\nimport { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" isLoading spinnerType="default">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerType="duo">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerType="gradient">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerType="pulse">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerType="pulse-duo">\n        Loading\n      </Button>\n    </div>\n  );\n}',
-      "with-icon":
+        'import * as React from "react";\nimport { Button } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" isLoading spinnerAppearance="default">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerAppearance="duo">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerAppearance="gradient">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerAppearance="pulse">\n        Loading\n      </Button>\n      <Button variant="primary" isLoading spinnerAppearance="pulse-duo">\n        Loading\n      </Button>\n    </div>\n  );\n}',
+      'with-icon':
         'import * as React from "react";\nimport { Button } from "@aristobyte-ui";\n\nconst GiftIcon = () => (\n  <svg\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    strokeWidth="2"\n    strokeLinecap="round"\n    strokeLinejoin="round"\n  >\n    <rect x="3" y="8" width="18" height="4" rx="1" />\n    <path d="M12 8v13" />\n    <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />\n    <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" />\n  </svg>\n);\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Button variant="primary" icon={{ component: GiftIcon, align: "left" }}>\n        Button\n      </Button>\n      <Button variant="secondary" icon={{ component: GiftIcon, align: "left" }}>\n        Button\n      </Button>\n      <Button\n        isLoading\n        variant="primary"\n        icon={{ component: GiftIcon, align: "left" }}\n      >\n        Button\n      </Button>\n      <Button\n        isLoading\n        variant="secondary"\n        icon={{ component: GiftIcon, align: "right" }}\n      >\n        Button\n      </Button>\n    </div>\n  );\n}',
-      "button-group":
+      'button-group':
         'import * as React from "react";\nimport { Button, ButtonGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <ButtonGroup radius="full">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
-      "button-group-disabled":
+      'button-group-disabled':
         'import * as React from "react";\nimport { Button, ButtonGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <ButtonGroup radius="full" disabled>\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
-      "button-group-alignment":
+      'button-group-alignment':
         'import * as React from "react";\nimport { Button, ButtonGroup} from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <ButtonGroup radius="full" align="horizontal">\n        <Button>Horizontal Button 1</Button>\n        <Button>Horizontal Button 2</Button>\n        <Button>Horizontal Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" align="vertical">\n        <Button>Vertical Button 1</Button>\n        <Button>Vertical Button 2</Button>\n        <Button>Vertical Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
-      "button-group-radius":
+      'button-group-radius':
         'import * as React from "react";\nimport { Button, ButtonGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <ButtonGroup radius="none">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="sm">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="md">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="lg">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
-      "button-group-size":
+      'button-group-size':
         'import * as React from "react";\nimport { Button, ButtonGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <ButtonGroup radius="full" size="xsm">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" size="sm">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" size="md">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" size="lg">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" size="xlg">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
-      "button-group-variant":
+      'button-group-variant':
         'import * as React from "react";\nimport { Button, ButtonGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <ButtonGroup radius="full" variant="default">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" variant="primary">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" variant="secondary">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" variant="error">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" variant="warning">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n\n      <ButtonGroup radius="full" variant="success">\n        <Button>Button 1</Button>\n        <Button>Button 2</Button>\n        <Button>Button 3</Button>\n      </ButtonGroup>\n    </div>\n  );\n}',
     },
     spinner: {
@@ -108,11 +148,11 @@ export const CodeBlocks = {
       sizes:
         'import * as React from "react";\nimport { Spinner } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Spinner variant="primary" size="xsm" />\n      <Spinner variant="primary" size="sm" />\n      <Spinner variant="primary" size="md" />\n      <Spinner variant="primary" size="lg" />\n      <Spinner variant="primary" size="xlg" />\n    </div>\n  );\n}',
       types:
-        'import * as React from "react";\nimport { Spinner } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Spinner variant="primary" type="default" />\n      <Spinner variant="primary" type="duo" />\n      <Spinner variant="primary" type="gradient" />\n      <Spinner variant="primary" type="pulse" />\n      <Spinner variant="primary" type="pulse-duo" />\n    </div>\n  );\n}',
+        'import * as React from "react";\nimport { Spinner } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Spinner variant="primary" appearance="default" />\n      <Spinner variant="primary" appearance="duo" />\n      <Spinner variant="primary" appearance="gradient" />\n      <Spinner variant="primary" appearance="pulse" />\n      <Spinner variant="primary" appearance="pulse-duo" />\n    </div>\n  );\n}',
       variants:
         'import * as React from "react";\nimport { Spinner } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Spinner />\n      <Spinner variant="primary" />\n      <Spinner variant="secondary" />\n      <Spinner variant="error" />\n      <Spinner variant="warning" />\n      <Spinner variant="success" />\n    </div>\n  );\n}',
     },
-    "message-box": {
+    'message-box': {
       usage:
         'import * as React from "react";\nimport { MessageBox } from "@aristobyte-ui";\n\nexport default function App() {\n  return <MessageBox withIcon>Default message box</MessageBox>;\n}',
       types:
@@ -121,7 +161,7 @@ export const CodeBlocks = {
         'import * as React from "react";\nimport { MessageBox } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <MessageBox withIcon>Default message box</MessageBox>\n      <MessageBox variant="primary" withIcon>Info message box (Primary)</MessageBox>\n      <MessageBox variant="secondary" withIcon>Info message box (Secondary)</MessageBox>\n      <MessageBox variant="warning" withIcon>Warning message box</MessageBox>\n      <MessageBox variant="success" withIcon>Success message box</MessageBox>\n      <MessageBox variant="error" withIcon>Error message box</MessageBox>\n    </div>\n  );\n}',
       radius:
         'import * as React from "react";\nimport { MessageBox } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <MessageBox withIcon radius="none">No radius</MessageBox>\n      <MessageBox withIcon radius="sm">Small radius</MessageBox>\n      <MessageBox withIcon radius="md">Medium radius</MessageBox>\n      <MessageBox withIcon radius="lg">Large radius</MessageBox>\n      <MessageBox withIcon radius="full">Full radius</MessageBox>\n    </div>\n  );\n}',
-      "without-icon":
+      'without-icon':
         'import * as React from "react";\nimport { MessageBox } from "@aristobyte-ui";\n\nexport default function App() {\n  return <MessageBox>Message box without icon</MessageBox>;\n}',
     },
     switch: {
@@ -139,11 +179,11 @@ export const CodeBlocks = {
         'import * as React from "react";\nimport { Switch } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <Switch\n        variant="primary"\n        label="I am disabled and unchecked"\n        alignLabel="horizontal"\n        disabled\n      />\n      <Switch\n        variant="primary"\n        label="I am disabled but checked"\n        checked\n        alignLabel="horizontal"\n        disabled\n      />\n    </div>\n  );\n}',
       controlled:
         'import * as React from "react";\nimport { Switch } from "@aristobyte-ui";\n\nexport default function App() {\n  const [isChecked, setIsChecked] = React.useState<boolean>(true);\n\n  return (\n    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n      <Switch\n        variant="primary"\n        label={isChecked ? "I am checked :)" : "I am not checked :("}\n        alignLabel="horizontal"\n        checked={isChecked}\n        onChange={() => setIsChecked((prevState) => !prevState)}\n      />\n    </div>\n  );\n}',
-      "align-label":
+      'align-label':
         'import * as React from "react";\nimport { Switch } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <Switch variant="secondary" label="Vertical" alignLabel="vertical" />\n      <Switch variant="secondary" label="Horizontal" alignLabel="horizontal" />\n    </div>\n  );\n}',
-      "track-icon":
+      'track-icon':
         'import * as React from "react";\n\nimport { Switch } from "@aristobyte-ui/switch";\n\nconst BulbOnIcon = () => (\n  <svg\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    strokeWidth="2"\n    strokeLinecap="round"\n    strokeLinejoin="round"\n  >\n    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />\n    <path d="M9 18h6" />\n    <path d="M10 22h4" />\n  </svg>\n);\n\nconst BulbOffIcon = () => (\n  <svg\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    strokeWidth="2"\n    strokeLinecap="round"\n    strokeLinejoin="round"\n  >\n    <path d="M16.8 11.2c.8-.9 1.2-2 1.2-3.2a6 6 0 0 0-9.3-5" />\n    <path d="m2 2 20 20" />\n    <path d="M6.3 6.3a4.67 4.67 0 0 0 1.2 5.2c.7.7 1.3 1.5 1.5 2.5" />\n    <path d="M9 18h6" />\n    <path d="M10 22h4" />\n  </svg>\n);\n\nexport default function App() {\n  return (\n    <Switch\n      switchSize="xlg"\n      variant="warning"\n      trackIcon={{ checked: BulbOnIcon, unchecked: BulbOffIcon }}\n    />\n  );\n}',
-      "thumb-icon":
+      'thumb-icon':
         'import * as React from "react";\n\nimport { Switch } from "@aristobyte-ui";\n\nconst SunIcon = () => (\n  <svg\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    strokeWidth="2"\n    strokeLinecap="round"\n    strokeLinejoin="round"\n  >\n    <circle cx="12" cy="12" r="4" />\n    <path d="M12 2v2" />\n    <path d="M12 20v2" />\n    <path d="m4.93 4.93 1.41 1.41" />\n    <path d="m17.66 17.66 1.41 1.41" />\n    <path d="M2 12h2" />\n    <path d="M20 12h2" />\n    <path d="m6.34 17.66-1.41 1.41" />\n    <path d="m19.07 4.93-1.41 1.41" />\n  </svg>\n);\n\nconst MoonIcon = () => (\n  <svg\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    strokeWidth="2"\n    strokeLinecap="round"\n    strokeLinejoin="round"\n  >\n    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />\n  </svg>\n);\n\nexport default function App() {\n  const [isChecked, setIsChecked] = React.useState<boolean>(true);\n\n  return (\n    <Switch\n      switchSize="xlg"\n      variant="warning"\n      thumbIcon={isChecked ? SunIcon : MoonIcon}\n      checked={isChecked}\n      onChange={() => setIsChecked((prevState) => !prevState)}\n    />\n  );\n}',
     },
     radio: {
@@ -157,11 +197,11 @@ export const CodeBlocks = {
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <RadioGroup name="variants" value="default">\n      <Radio value="default" variant="default">Default</Radio>\n      <Radio value="primary" variant="primary">Primary</Radio>\n      <Radio value="secondary" variant="secondary">Secondary</Radio>\n      <Radio value="error" variant="error">Error</Radio>\n      <Radio value="warning" variant="warning">Warning</Radio>\n      <Radio value="success" variant="success">Success</Radio>\n    </RadioGroup>\n  );\n}',
       appearance:
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <RadioGroup name="variants" value="solid">\n      <Radio value="solid" appearance="solid" variant="success">Solid</Radio>\n      <Radio value="glowing" appearance="glowing" variant="success">Glowing</Radio>\n      <Radio value="outline" appearance="outline" variant="success">Outline</Radio>\n      <Radio value="outline-dashed" appearance="outline-dashed" variant="success">Dashed outline</Radio>\n      <Radio value="no-outline" appearance="no-outline" variant="success">No-outline</Radio>\n    </RadioGroup>\n  );\n}',
-      "highlight-label":
+      'highlight-label':
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <RadioGroup\n      name="highlight-label"\n      value="highlighted"\n      variant="success"\n      appearance="glowing"\n    >\n      <Radio value="highlighted" highlightLabel>Highlighted</Radio>\n      <Radio value="regular">Regular</Radio>\n    </RadioGroup>\n  );\n}',
-      "radio-group-align":
+      'radio-group-align':
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <RadioGroup\n        name="horizontal"\n        value="horizontal-1"\n        variant="error"\n        appearance="glowing"\n        highlightLabel\n        align="horizontal"\n      >\n        <Radio value="horizontal-1">Horizontal 1</Radio>\n        <Radio value="horizontal-2">Horizontal 2</Radio>\n        <Radio value="horizontal-3">Horizontal 3</Radio>\n      </RadioGroup>\n\n      <RadioGroup\n        name="vertical"\n        value="vertical-1"\n        variant="primary"\n        appearance="glowing"\n        highlightLabel\n        align="vertical"\n      >\n        <Radio value="vertical-1">Vertical 1</Radio>\n        <Radio value="vertical-2">Vertical 2</Radio>\n        <Radio value="vertical-3">Vertical 3</Radio>\n      </RadioGroup>\n    </div>\n  );\n}',
-      "align-label":
+      'align-label':
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <RadioGroup\n        name="top-label"\n        value="top-label-1"\n        variant="primary"\n        appearance="solid"\n        alignLabel="top"\n        highlightLabel\n      >\n        <Radio value="top-label-1">Top label 1</Radio>\n        <Radio value="top-label-2">Top label 2</Radio>\n        <Radio value="top-label-3">Top label 3</Radio>\n      </RadioGroup>\n\n      <RadioGroup\n        name="right-label"\n        value="right-label-1"\n        variant="warning"\n        appearance="solid"\n        alignLabel="right"\n        highlightLabel\n      >\n        <Radio value="right-label-1">Right label 1</Radio>\n        <Radio value="right-label-2">Right label 2</Radio>\n        <Radio value="right-label-3">Right label 3</Radio>\n      </RadioGroup>\n\n      <RadioGroup\n        name="bottom-label"\n        value="bottom-label-1"\n        variant="success"\n        appearance="solid"\n        alignLabel="bottom"\n        highlightLabel\n      >\n        <Radio value="bottom-label-1">Bottom label 1</Radio>\n        <Radio value="bottom-label-2">Bottom label 2</Radio>\n        <Radio value="bottom-label-3">Bottom label 3</Radio>\n      </RadioGroup>\n\n      <RadioGroup\n        name="left-label"\n        value="left-label-1"\n        variant="error"\n        appearance="solid"\n        alignLabel="left"\n        highlightLabel\n      >\n        <Radio value="left-label-1">Left label 1</Radio>\n        <Radio value="left-label-2">Left label 2</Radio>\n        <Radio value="left-label-3">Left label 3</Radio>\n      </RadioGroup>\n    </div>\n  );\n}',
       controlled:
         'import * as React from "react";\nimport { Radio, RadioGroup } from "@aristobyte-ui";\n\ntype VariantType =\n  | "default"\n  | "primary"\n  | "secondary"\n  | "success"\n  | "error"\n  | "warning";\n\nexport default function App() {\n  const [variant, setVariant] = React.useState<VariantType>("default");\n  \n  return (\n    <RadioGroup\n      name="controlled-variants"\n      value={variant}\n      variant={variant}\n      onChange={(newValue) => setVariant(newValue as VariantType)}\n    >\n      <Radio value="default">Default</Radio>\n      <Radio value="primary">Primary</Radio>\n      <Radio value="secondary">Secondary</Radio>\n      <Radio value="error">Error</Radio>\n      <Radio value="warning">Warning</Radio>\n      <Radio value="success">Success</Radio>\n    </RadioGroup>\n  );\n}',
@@ -171,6 +211,8 @@ export const CodeBlocks = {
         'import * as React from "react";\nimport { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";\n\nexport default function App() {\n  return (\n    <Dropdown value="frontend" placeholder="Open dropdown">\n      <DropdownOption\n        value="frontend"\n        description="Specializes in UI/UX, JavaScript, and frontend frameworks"\n      >\n        Frontend Developer\n      </DropdownOption>\n      <DropdownOption\n        value="backend"\n        description="Focuses on APIs, databases, and server-side logic"\n      >\n        Backend Developer\n      </DropdownOption>\n      <DropdownOption\n        value="fullstack"\n        description="Versatile in both client and server-side development"\n      >\n        Full Stack Developer\n      </DropdownOption>\n      <DropdownOption\n        disabled\n        value="devops"\n        description="Handles CI/CD pipelines, cloud infrastructure, and automation"\n      >\n        DevOps Engineer\n      </DropdownOption>\n    </Dropdown>\n  );\n};',
       disabled:
         'import * as React from "react";\nimport { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";\n\nexport default function App() {\n  return (\n    <Dropdown value="frontend" placeholder="Open dropdown" disabled>\n      <DropdownOption\n        value="frontend"\n        description="Specializes in UI/UX, JavaScript, and frontend frameworks"\n      >\n        Frontend Developer\n      </DropdownOption>\n    </Dropdown>\n  );\n};',
+      multiple:
+        'import * as React from "react";\nimport { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";\n\nexport default function App() {\n  return (\n    <Dropdown choice="multiple" value="frontend" placeholder="Select roles" initiallyOpened>\n      <DropdownOption value="frontend">Frontend Developer</DropdownOption>\n      <DropdownOption value="backend">Backend Developer</DropdownOption>\n      <DropdownOption value="fullstack">Full Stack Developer</DropdownOption>\n    </Dropdown>\n  );\n};',
       appearance:
         'import * as React from "react";\nimport { Dropdown, DropdownOption } from "@aristobyte-ui/dropdown";\n\ninterface IDropdownComponent {\n  variant?:\n    | "default"\n    | "primary"\n    | "secondary"\n    | "success"\n    | "error"\n    | "warning";\n  appearance?:\n    | "solid"\n    | "outline"\n    | "outline-dashed"\n    | "no-outline"\n    | "glowing";\n}\n\nconst DropdownComponent: React.FC<IDropdownComponent> = ({\n  variant,\n  appearance,\n}) => (\n  <Dropdown\n    variant={variant}\n    appearance={appearance}\n    value="frontend"\n    placeholder="Open dropdown"\n  >\n    <DropdownOption\n      value="frontend"\n      description="Specializes in UI/UX, JavaScript, and frontend frameworks"\n    >\n      Frontend Developer\n    </DropdownOption>\n    <DropdownOption\n      value="backend"\n      description="Focuses on APIs, databases, and server-side logic"\n    >\n      Backend Developer\n    </DropdownOption>\n    <DropdownOption\n      value="fullstack"\n      description="Versatile in both client and server-side development"\n    >\n      Full Stack Developer\n    </DropdownOption>\n    <DropdownOption\n      disabled\n      value="devops"\n      description="Handles CI/CD pipelines, cloud infrastructure, and automation"\n    >\n      DevOps Engineer\n    </DropdownOption>\n  </Dropdown>\n);\n\nexport default function App() {\n  return (\n    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="default" />\n        <DropdownComponent appearance="glowing" variant="default" />\n        <DropdownComponent appearance="outline" variant="default" />\n        <DropdownComponent appearance="outline-dashed" variant="default" />\n        <DropdownComponent appearance="no-outline" variant="default" />\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="primary" />\n        <DropdownComponent appearance="glowing" variant="primary" />\n        <DropdownComponent appearance="outline" variant="primary" />\n        <DropdownComponent appearance="outline-dashed" variant="primary" />\n        <DropdownComponent appearance="no-outline" variant="primary" />\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="secondary" />\n        <DropdownComponent appearance="glowing" variant="secondary" />\n        <DropdownComponent appearance="outline" variant="secondary" />\n        <DropdownComponent appearance="outline-dashed" variant="secondary" />\n        <DropdownComponent appearance="no-outline" variant="secondary" />\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="error" />\n        <DropdownComponent appearance="glowing" variant="error" />\n        <DropdownComponent appearance="outline" variant="error" />\n        <DropdownComponent appearance="outline-dashed" variant="error" />\n        <DropdownComponent appearance="no-outline" variant="error" />\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="warning" />\n        <DropdownComponent appearance="glowing" variant="warning" />\n        <DropdownComponent appearance="outline" variant="warning" />\n        <DropdownComponent appearance="outline-dashed" variant="warning" />\n        <DropdownComponent appearance="no-outline" variant="warning" />\n      </div>\n      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>\n        <DropdownComponent appearance="solid" variant="success" />\n        <DropdownComponent appearance="glowing" variant="success" />\n        <DropdownComponent appearance="outline" variant="success" />\n        <DropdownComponent appearance="outline-dashed" variant="success" />\n        <DropdownComponent appearance="no-outline" variant="success" />\n      </div>\n    </div>\n  );\n};',
     },

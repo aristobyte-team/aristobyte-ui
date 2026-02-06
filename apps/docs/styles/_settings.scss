@@ -1,0 +1,20 @@
+@mixin scrollbar {
+  ::-webkit-scrollbar {
+    width: thin;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #94a3b84d;
+    border: 3px solid #94a3b84d;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #94a3b878;
+    border: 3px solid #94a3b878;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
