@@ -1,5 +1,11 @@
 # @aristobyte-ui/utils
 
+## 2.11.2
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.11.1
 
 ### Patch Changes
