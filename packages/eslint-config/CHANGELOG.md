@@ -1,5 +1,11 @@
 # @aristobyte-ui/eslint-config
 
+## 2.13.1
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.13.0
 
 ### Minor Changes

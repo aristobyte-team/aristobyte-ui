@@ -1,5 +1,14 @@
 # @aristobyte-ui/message-box
 
+## 2.13.1
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.13.1
+
 ## 2.13.0
 
 ### Minor Changes
