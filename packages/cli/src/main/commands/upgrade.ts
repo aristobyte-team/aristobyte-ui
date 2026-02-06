@@ -1,6 +1,5 @@
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 import { spinner } from '@clack/prompts';
-// @ts-ignore
 import { execa } from 'execa';
 import color from 'picocolors';
 

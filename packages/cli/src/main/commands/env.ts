@@ -2,8 +2,8 @@ import os from 'os';
 import fs from 'fs';
 import { execSync } from 'child_process';
 import { spinner } from '@clack/prompts';
-import { checkVersion } from '../utils/checkVersion';
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
+import { checkVersion } from '../utils/checkVersion.js';
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 import color from 'picocolors';
 
 const MIN_VERSIONS: Record<string, string> = {

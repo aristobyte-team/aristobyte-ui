@@ -4,9 +4,8 @@ import os from 'os';
 import { execSync } from 'child_process';
 import { spinner } from '@clack/prompts';
 import color from 'picocolors';
-import { checkVersion } from '../utils/checkVersion';
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
-
+import { checkVersion } from '../utils/checkVersion.js';
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 const MIN_VERSIONS: Record<string, string> = {
   node: '20.19.0',
   pnpm: '10.15.1',

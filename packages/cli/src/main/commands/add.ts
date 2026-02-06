@@ -1,9 +1,8 @@
 import { spinner, text } from '@clack/prompts';
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 import color from 'picocolors';
-import { installPackage } from '../utils/installPackage';
-import { list } from './list';
-
+import { installPackage } from '../utils/installPackage.js';
+import { list } from './list.js';
 const DEFAULT_PACKAGE = 'all';
 
 export async function add(component: string, options: Record<string, any>) {

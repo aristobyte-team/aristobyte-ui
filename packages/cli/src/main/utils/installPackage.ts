@@ -1,4 +1,3 @@
-// @ts-ignore
 import { execa } from 'execa';
 
 export async function installPackage(

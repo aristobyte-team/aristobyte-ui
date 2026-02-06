@@ -1,20 +1,24 @@
 #!/usr/bin/env node
 
-// @ts-ignore
 import { Command, Help } from 'commander';
+import { readFileSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-import { add } from './commands/add';
-import { init } from './commands/init';
-import { remove } from './commands/remove';
-import { upgrade } from './commands/upgrade';
-import { list } from './commands/list';
-import { doctor } from './commands/doctor';
-import { env } from './commands/env';
-
-import { logoSmallGradient, logo3, logo4, darkGrey, lightGrey } from './utils/colors';
-import { usage } from './utils/typography';
-import { parseHelp } from './utils/parseHelp';
-import pkg from '../../package.json';
+import { add } from './commands/add.js';
+import { init } from './commands/init.js';
+import { remove } from './commands/remove.js';
+import { upgrade } from './commands/upgrade.js';
+import { list } from './commands/list.js';
+import { doctor } from './commands/doctor.js';
+import { env } from './commands/env.js';
+import { logoSmallGradient, logo3, logo4, darkGrey, lightGrey } from './utils/colors.js';
+import { usage } from './utils/typography.js';
+import { parseHelp } from './utils/parseHelp.js';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const pkgPath = resolve(__dirname, '../package.json');
+const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8')) as { version?: string };
 
 const COMMANDS = ['init', 'add', 'remove', 'upgrade', 'list', 'doctor', 'env', 'help'];
 
@@ -26,8 +30,7 @@ aristobyteui
   .description(
     'Create new AristoByteUI projects or manage existing projects with full control\n  over components, dependencies, and UI stack configuration. Supports initialization,\n  addition, removal, upgrading of components, and project diagnostics.'
   )
-  // @ts-ignore
-  .version(pkg.version, '-V, --version', 'Output the CLI version')
+  .version(pkg.version ?? '0.0.0', '-V, --version', 'Output the CLI version')
   .helpOption('-H, --help', 'Show help information')
   .configureHelp({
     formatHelp: (cmd: Command, helper: Help) => parseHelp(cmd, helper),
@@ -119,7 +122,6 @@ aristobyteui
   .usage(usage(['options']))
   .description('Display help for command')
   .action(env);
-// @ts-ignore
 aristobyteui.command('help', { hidden: true });
 
 aristobyteui.exitOverride(async (err: { code: string; message: string }) => {

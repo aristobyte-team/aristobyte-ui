@@ -1,5 +1,4 @@
-import { logo4, darkGrey, lightGrey } from "./colors";
-
+import { logo4, darkGrey, lightGrey } from "./colors.js";
 export function usage(params: string[]) {
   return params
     .map((param) => `${logo4("[")} ${lightGrey(param)} ${logo4("]")}`)

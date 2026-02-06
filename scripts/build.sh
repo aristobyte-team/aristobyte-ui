@@ -81,8 +81,16 @@ copyAssets() {
 # ----------------------------------------------------
 packPackage() {
   local dirname=$2
+  local pkg_name
+  pkg_name=$(jq -r '.name' package.json)
 
   log_info "Packing $dirname"
+
+  if [[ "$pkg_name" == "@aristobyte-ui/cli" ]]; then
+    bash "${SCRIPTS_DIR}/pack-cli.sh" "$dirname"
+    log_ok "Final artifact: $dirname/dist"
+    return
+  fi
 
   rm -rf "./dist"
   mkdir -p "./dist"
@@ -110,10 +118,10 @@ packPackage() {
   [[ -f CHANGELOG.md ]] && cp CHANGELOG.md ./dist/CHANGELOG.md
   [[ -f README.md ]] && cp README.md ./dist/README.md
 
-  if [[ -f LICENSE ]]; then
-    cp LICENSE ./dist/LICENSE
-  elif [[ -f LICENSE.md ]]; then
-    cp LICENSE.md ./dist/LICENSE.md
+  if [[ -f "$REPO_DIR/LICENSE" ]]; then
+    cp "$REPO_DIR/LICENSE" ./dist/LICENSE
+  elif [[ -f "$REPO_DIR/LICENSE.md" ]]; then
+    cp "$REPO_DIR/LICENSE.md" ./dist/LICENSE.md
   fi
 
   rm -rf ./es ./lib

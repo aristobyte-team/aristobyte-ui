@@ -1,4 +1,4 @@
-import { compareVersions } from "./compareVersions";
+import { compareVersions } from "./compareVersions.js";
 import color from "picocolors";
 
 export function checkVersion(

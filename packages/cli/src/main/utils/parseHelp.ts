@@ -1,11 +1,9 @@
-// @ts-ignore
 import type { Command, Help } from "commander";
-import { logoSmallGradient, logo3, logo4, darkGrey, lightGrey } from "./colors";
-import { description } from "./typography";
-import { getBanner } from "./getBanner";
-import { getTip } from "./getTip";
-import { getDescription } from "./getDescription";
-
+import { logoSmallGradient, logo3, logo4, darkGrey, lightGrey } from "./colors.js";
+import { description } from "./typography.js";
+import { getBanner } from "./getBanner.js";
+import { getTip } from "./getTip.js";
+import { getDescription } from "./getDescription.js";
 export function parseHelp(cmd: Command, helper: Help) {
   return `
 ${getBanner(cmd.name())}

@@ -1,8 +1,6 @@
 - update eslint-confg, typescript-config, jest-config and create prettier-config
 - fix the cli types and build it in a proper way with new tsconfigs
 - fully fix the apps/docs and decide create proper tsconfig to look for the packages from remote
-- fix the react package which should export all the packages
 - fix the import of other packages in local development without breaking the current build logic
-- fix add "dev:cli": "bash scripts/dev.sh cli",
 - fix anchor stylings - improve the component and update docs
 - feat: dropdown new functionalities such as select option which would be displayed inside button

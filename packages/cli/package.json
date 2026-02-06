@@ -31,38 +31,28 @@
     "package-management"
   ],
   "files": [
-    "es",
-    "lib",
-    "bin"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "es/index.d.ts",
+  "type": "module",
+  "main": "dist/index.js",
   "bin": {
     "aristobyte-ui": "dist/index.js"
   },
-  "peerDependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "sass": "^1.97.3"
-  },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
-    "axios": "^1.6.0",
     "chalk": "^4.1.2",
     "commander": "^10",
     "execa": "^7",
     "gradient-string": "^3.0.0"
   },
+  "devDependencies": {
+    "@types/node": "^20.17.0"
+  },
   "exports": {
-    ".": {
-      "types": "./es/index.d.ts",
-      "import": "./es/index.js",
-      "require": "./lib/index.js"
-    },
+    ".": "./dist/index.js",
     "./package.json": "./package.json"
   }
 }

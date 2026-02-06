@@ -1,12 +1,17 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "outDir": "./dist",
     "rootDir": "./src/main",
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
     "declaration": true,
     "declarationMap": false,
     "sourceMap": false,
-    "composite": true
+    "composite": true,
+    "types": ["node"]
   },
   "include": ["src/main/**/*"]
 }

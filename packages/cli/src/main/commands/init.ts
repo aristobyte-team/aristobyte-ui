@@ -1,4 +1,3 @@
-// @ts-ignore
 import { execa } from 'execa';
 import { select, text, spinner } from "@clack/prompts";
 import color from "picocolors";

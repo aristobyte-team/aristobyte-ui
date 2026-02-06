@@ -24,11 +24,11 @@ case "$TARGET" in
     log_muted "  yarn workspace @aristobyte-ui/docs dev"
     yarn workspace @aristobyte-ui/docs dev
     ;;
-  # cli)
-  #   log_step "Starting dev (cli)"
-  #   log_muted "  yarn workspace @aristobyte-ui/cli dev"
-  #   yarn workspace @aristobyte-ui/cli dev
-  #   ;;
+  cli)
+    log_step "Starting dev (cli)"
+    log_muted "  yarn workspace @aristobyte-ui/cli dev"
+    yarn workspace @aristobyte-ui/cli dev
+    ;;
   sandbox)
     log_step "Starting dev (sandbox)"
     log_muted "  yarn workspace @aristobyte-ui/sandbox dev"

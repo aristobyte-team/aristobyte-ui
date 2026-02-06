@@ -1,7 +1,6 @@
 import fs from 'fs';
 import color from 'picocolors';
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
-
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 export async function remoteList() {}
 
 export async function list(options: Record<string, any>, endBlock?: boolean) {

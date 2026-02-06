@@ -1,10 +1,8 @@
-import { getCurrentPackageManager } from '../utils/getCurrentPackageManager';
+import { getCurrentPackageManager } from '../utils/getCurrentPackageManager.js';
 import { spinner, text } from '@clack/prompts';
-// @ts-ignore
 import { execa } from 'execa';
 import color from 'picocolors';
-import { list } from './list';
-
+import { list } from './list.js';
 export async function remove(component: string, options: Record<string, any>) {
   if (options.list) {
     await list({ installed: true }, true);
