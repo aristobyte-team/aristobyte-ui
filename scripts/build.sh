@@ -45,9 +45,6 @@ forEachPackage() {
   done
 }
 
-# ----------------------------------------------------
-# 1) Compile TS → dist inside each package
-# ----------------------------------------------------
 compileAll() {
   log_step "Compiling monorepo"
 
@@ -61,9 +58,7 @@ compileAll() {
   log_ok "Compilation done"
 }
 
-# ----------------------------------------------------
-# 2) Copy assets (scss,svg,png,json) to proper locations
-# ----------------------------------------------------
+
 copyAssets() {
   local dir=$1
   local dirname=$2
@@ -76,9 +71,7 @@ copyAssets() {
   log_ok "Assets copied into es + lib for $dirname"
 }
 
-# ----------------------------------------------------
-# 3) Pack files based on package.json "files"
-# ----------------------------------------------------
+
 packPackage() {
   local dirname=$2
   local pkg_name
@@ -128,9 +121,7 @@ packPackage() {
   log_ok "Final artifact: $dirname/dist"
 }
 
-# ----------------------------------------------------
-# 4) Execute
-# ----------------------------------------------------
+
 log_step "Starting build pipeline"
 
 rm -rf "$ROOT_DIST"
