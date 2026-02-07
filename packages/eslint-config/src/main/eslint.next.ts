@@ -22,8 +22,8 @@ export const nextJsConfig: FlatConfig.Config[] = [
       },
     },
   },
-  pluginNext.configs.recommended as FlatConfig.Config,
-  pluginNext.configs['core-web-vitals'] as FlatConfig.Config,
+  pluginNext.configs.recommended as unknown as FlatConfig.Config,
+  pluginNext.configs['core-web-vitals'] as unknown as FlatConfig.Config,
   {
     plugins: {
       'react-hooks': pluginReactHooks,
