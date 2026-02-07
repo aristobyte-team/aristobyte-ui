@@ -3,6 +3,8 @@ import { AristoByteUICLI } from './AristoByteUICLI';
 import { AristoByteUI } from './AristoByteUI';
 import { ArrowRight } from './ArrowRight';
 import { BashCursor } from './BashCursor';
+import { Branching } from './Branching';
+import { Bulb } from './Bulb';
 import { Bun } from './Bun';
 import { Code } from './Code';
 import { Comment } from './Comment';
@@ -12,13 +14,17 @@ import { Disabled } from './Disabled';
 import { Dot } from './Dot';
 import { Error } from './Error';
 import { Eye } from './Eye';
+import { Fire } from './Fire';
 import { GalleryVertical } from './GalleryVertical';
 import { GalleryVerticalEnd } from './GalleryVerticalEnd';
 import { Github } from './Github';
 import { GradientSquare } from './GradientSquare';
 import { Heart } from './Heart';
 import { Info } from './Info';
+import { Instagram } from './Instagram';
+import { Layers } from './Layers';
 import { Link } from './Link';
+import { LinkedIn } from './LinkedIn';
 import { Npm } from './Npm';
 import { OpenedBook } from './OpenedBook';
 import { Package } from './Package';
@@ -36,8 +42,6 @@ import { User } from './User';
 import { UserGroup } from './UserGroup';
 import { Warning } from './Warning';
 import { Yarn } from './Yarn';
-import { LinkedIn } from './LinkedIn';
-import { Instagram } from './Instagram';
 
 export const Icons = {
   AristoByte,
@@ -45,6 +49,8 @@ export const Icons = {
   AristoByteUICLI,
   ArrowRight,
   BashCursor,
+  Branching,
+  Bulb,
   Bun,
   Code,
   Copy,
@@ -54,12 +60,14 @@ export const Icons = {
   Dot,
   Eye,
   Error,
+  Fire,
   GalleryVertical,
   GalleryVerticalEnd,
   GradientSquare,
   Github,
   Info,
   Instagram,
+  Layers,
   Link,
   LinkedIn,
   Npm,

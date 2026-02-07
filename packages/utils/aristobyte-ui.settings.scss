@@ -63,6 +63,8 @@ $blue-600: #2563eb; // Main
 $blue-700: #1d4ed8; // Hover
 $blue-800: #1e40af;
 $blue-900: #1e3a8a;
+$blue-1000: #0f172b;
+$blue-1100: #0b1120;
 
 // === Secondary Scale (Indigo) === //
 $indigo-50: #eef2ff;
@@ -106,9 +108,9 @@ $amber-700: #b45309; // Hover
 
 // === Semantic Tokens === //
 // === DEFAULT === //
-$color-default: $grey-600;
+$color-default: $blue-1000;
 $color-default-text: $grey-200;
-$color-default-hover: $grey-700;
+$color-default-hover: $blue-1100;
 $color-default-disabled: rgba($color-default, 0.5);
 
 // === PRIMARY === //

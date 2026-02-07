@@ -27,6 +27,7 @@
   &__links {
     display: flex;
     flex-direction: column;
+    gap: 2px;
     padding: 10px 0 calc(10px + 8px) 10px;
 
     li {
@@ -187,7 +188,7 @@
     color: $grey-500;
     display: flex;
     font-size: 16px;
-    padding: 8px;
+    padding: 16px 8px;
     transition: all 350ms $cubic-bezier-secondary;
 
     &:hover {
