@@ -1,6 +1,8 @@
 # `@aristobyte-ui/jest-config`
 
 <p align="center">
+  <img src="https://img.shields.io/npm/v/%40aristobyte-ui%2Fjest-config?style=for-the-badge" alt="NPM version" />
+  <img src="https://img.shields.io/npm/dm/%40aristobyte-ui%2Fjest-config?style=for-the-badge" alt="NPM downloads" />
   <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Jest-29-red?style=for-the-badge&logo=jest&logoColor=white" alt="Jest" />
   <img src="https://img.shields.io/badge/Testing-Library-blueviolet?style=for-the-badge&logo=testinglibrary&logoColor=white" alt="Testing Library" />

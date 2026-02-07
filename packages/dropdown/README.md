@@ -1,6 +1,8 @@
 # @aristobyte-ui/dropdown
 
 <p align="center">
+  <img src="https://img.shields.io/npm/v/%40aristobyte-ui%2Fdropdown?style=for-the-badge" alt="NPM version" />
+  <img src="https://img.shields.io/npm/dm/%40aristobyte-ui%2Fdropdown?style=for-the-badge" alt="NPM downloads" />
   <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Build-Turbo-green?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
   <img src="https://img.shields.io/badge/Lint-Strict-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
@@ -30,17 +32,17 @@ pnpm add -D @aristobyte-ui/dropdown
 ## 🛠 Usage
 
 ```tsx
-import { Dropdown } from "@aristobyte-ui/dropdown";
-import { Button } from "@aristobyte-ui/button";
+import { Dropdown } from '@aristobyte-ui/dropdown';
+import { Button } from '@aristobyte-ui/button';
 
 export default function Example() {
   return (
     <Dropdown
       trigger={<Button variant="primary">Options</Button>}
       items={[
-        { label: "Profile", onClick: () => console.log("Profile clicked") },
-        { label: "Settings", onClick: () => console.log("Settings clicked") },
-        { label: "Logout", onClick: () => console.log("Logout clicked") },
+        { label: 'Profile', onClick: () => console.log('Profile clicked') },
+        { label: 'Settings', onClick: () => console.log('Settings clicked') },
+        { label: 'Logout', onClick: () => console.log('Logout clicked') },
       ]}
       placement="bottom-start"
       disabled={false}
@@ -59,9 +61,9 @@ export default function Example() {
 ## 🔧 Example in a Package
 
 ```tsx
-import { Dropdown } from "@aristobyte-ui/dropdown";
-import { Button } from "@aristobyte-ui/button";
-import { FiSettings, FiUser } from "react-icons/fi";
+import { Dropdown } from '@aristobyte-ui/dropdown';
+import { Button } from '@aristobyte-ui/button';
+import { FiSettings, FiUser } from 'react-icons/fi';
 
 export function UserMenu() {
   return (
@@ -73,16 +75,16 @@ export function UserMenu() {
       }
       items={[
         {
-          label: "Profile",
+          label: 'Profile',
           icon: FiUser,
-          onClick: () => console.log("Profile"),
+          onClick: () => console.log('Profile'),
         },
         {
-          label: "Settings",
+          label: 'Settings',
           icon: FiSettings,
-          onClick: () => console.log("Settings"),
+          onClick: () => console.log('Settings'),
         },
-        { label: "Logout", onClick: () => console.log("Logout") },
+        { label: 'Logout', onClick: () => console.log('Logout') },
       ]}
       placement="bottom-end"
     />

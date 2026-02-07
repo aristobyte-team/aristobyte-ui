@@ -1,6 +1,8 @@
 # `@aristobyte-ui/typescript-config`
 
 <p align="center">
+  <img src="https://img.shields.io/npm/v/%40aristobyte-ui%2Ftypescript-config?style=for-the-badge" alt="NPM version" />
+  <img src="https://img.shields.io/npm/dm/%40aristobyte-ui%2Ftypescript-config?style=for-the-badge" alt="NPM downloads" />
   <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Build-Turbo-green?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
   <img src="https://img.shields.io/badge/Lint-Strict-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
@@ -105,12 +107,34 @@ In your `tsconfig.json,` extend one of the provided presets.
 }
 ```
 
+**Node.js tools / CLI projects:**
+
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/node",
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
+**Library preset (bundler-first projects):**
+
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/library",
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
 ## 📂 Presets Available
 
 - `base` → Strict, modern TypeScript defaults for libraries.
 - `react` → Extends `base` with React + JSX optimizations.
 - `next` → Opinionated config optimized for Next.js projects.
 - `package` → Publishing-friendly output with declarations and ESNext module resolution.
+- `node` → Node.js-first config with NodeNext resolution and types.
+- `library` → Bundler-first preset with modern lib targets.
 - `node` → Node.js-first config with NodeNext module resolution.
 - `library` → Bundler-first config with modern libs and declarations.
 

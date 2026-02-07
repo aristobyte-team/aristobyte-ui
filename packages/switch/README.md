@@ -1,6 +1,8 @@
 # `@aristobyte-ui/switch`
 
 <p align="center">
+  <img src="https://img.shields.io/npm/v/%40aristobyte-ui%2Fswitch?style=for-the-badge" alt="NPM version" />
+  <img src="https://img.shields.io/npm/dm/%40aristobyte-ui%2Fswitch?style=for-the-badge" alt="NPM downloads" />
   <img src="https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Build-Turbo-green?style=for-the-badge&logo=turbo&logoColor=white" alt="TurboRepo" />
   <img src="https://img.shields.io/badge/Lint-Strict-red?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
@@ -29,7 +31,7 @@ pnpm add -D @aristobyte-ui/switch
 ## 🛠 Usage
 
 ```tsx
-import { Switch } from "@aristobyte-ui/switch";
+import { Switch } from '@aristobyte-ui/switch';
 
 export const Demo = () => (
   <Switch
@@ -38,7 +40,7 @@ export const Demo = () => (
     switchSize="md"
     variant="primary"
     checked={true}
-    onChange={() => console.log("Toggled!")}
+    onChange={() => console.log('Toggled!')}
   />
 );
 ```
