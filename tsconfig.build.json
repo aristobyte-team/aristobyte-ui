@@ -11,6 +11,12 @@
       "path": "packages/jest-config/tsconfig.json"
     },
     {
+      "path": "packages/prettier-config/tsconfig.json"
+    },
+    {
+      "path": "packages/typescript-config/tsconfig.json"
+    },
+    {
       "path": "packages/utils/tsconfig.json"
     },
     {

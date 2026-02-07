@@ -5,7 +5,6 @@ import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
-// @ts-ignore
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint';
 import { config as baseConfig } from './eslint.base.js';
 

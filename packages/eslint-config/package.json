@@ -4,8 +4,9 @@
   "version": "2.15.3",
   "private": false,
   "license": "MIT",
-  "type": "module",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://www.npmjs.com/package/@aristobyte-ui/eslint-config",
   "repository": {
@@ -39,14 +40,31 @@
     "best-practices"
   ],
   "exports": {
-    "./base": "./dist/eslint.base.js",
-    "./react": "./dist/eslint.react.js",
-    "./next": "./dist/eslint.next.js"
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./base": {
+      "types": "./es/eslint.base.d.ts",
+      "import": "./es/eslint.base.js",
+      "require": "./lib/eslint.base.js"
+    },
+    "./react": {
+      "types": "./es/eslint.react.d.ts",
+      "import": "./es/eslint.react.js",
+      "require": "./lib/eslint.react.js"
+    },
+    "./next": {
+      "types": "./es/eslint.next.d.ts",
+      "import": "./es/eslint.next.js",
+      "require": "./lib/eslint.next.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "eslint.base.js",
-    "eslint.react.js",
-    "eslint.next.js"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

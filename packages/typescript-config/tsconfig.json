@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "include": ["*.json"]
+}

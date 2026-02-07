@@ -85,12 +85,34 @@ In your `tsconfig.json,` extend one of the provided presets.
 }
 ```
 
+**Node.js tools / CLI projects:**
+
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/node",
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
+**Library preset (bundler-first projects):**
+
+```json
+{
+  "extends": "@aristobyte-ui/typescript-config/library",
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
 ## 📂 Presets Available
 
 - `base` → Strict, modern TypeScript defaults for libraries.
 - `react` → Extends `base` with React + JSX optimizations.
 - `next` → Opinionated config optimized for Next.js projects.
 - `package` → Publishing-friendly output with declarations and ESNext module resolution.
+- `node` → Node.js-first config with NodeNext module resolution.
+- `library` → Bundler-first config with modern libs and declarations.
 
 ## 🔧 Example in a Package
 
