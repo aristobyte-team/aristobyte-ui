@@ -1,8 +1,9 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "module": "es2020",
+    "module": "Node16",
     "outDir": "./es",
-    "tsBuildInfoFile": "./es/.tsbuildinfo"
+    "tsBuildInfoFile": "./es/.tsbuildinfo",
+    "moduleResolution": "node16"
   }
 }

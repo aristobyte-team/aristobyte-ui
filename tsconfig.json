@@ -19,6 +19,7 @@
       "@aristobyte-ui/react": ["packages/react/src/main"],
       "@aristobyte-ui/spinner": ["packages/spinner/src/main"],
       "@aristobyte-ui/switch": ["packages/switch/src/main"],
+      "@aristobyte-ui/prettier-config": ["packages/prettier-config/src/main"],
       "@aristobyte-ui/typescript-config": ["packages/typescript-config/src/main"],
       "@aristobyte-ui/utils": ["packages/utils/src/main"]
     }

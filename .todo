@@ -1,5 +1,5 @@
-- update eslint-confg, typescript-config, jest-config and create prettier-config
 - fully fix the apps/docs and decide create proper tsconfig to look for the packages from remote
 - fix the import of other packages in local development without breaking the current build logic
 - fix anchor stylings - improve the component and update docs
+- fix value block styling - this happens when we choose certin variant and it's not the default. there should be logic where when we specify let's say the solid for appearance then we get the background the color we have specified, however other options should have the default bg color + the styling magic around the card box (for example for the glowin one)
 - feat: dropdown new functionalities such as select option which would be displayed inside button

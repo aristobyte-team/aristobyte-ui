@@ -5,7 +5,6 @@ import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
-// @ts-ignore
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint';
 import { config as baseConfig } from './eslint.base.js';
 
@@ -23,15 +22,8 @@ export const nextJsConfig: FlatConfig.Config[] = [
       },
     },
   },
-  {
-    plugins: {
-      '@next/next': pluginNext,
-    },
-    rules: {
-      ...pluginNext.configs.recommended.rules,
-      ...pluginNext.configs['core-web-vitals'].rules,
-    },
-  },
+  pluginNext.configs.recommended as FlatConfig.Config,
+  pluginNext.configs['core-web-vitals'] as FlatConfig.Config,
   {
     plugins: {
       'react-hooks': pluginReactHooks,

@@ -4,7 +4,9 @@
   "version": "2.15.3",
   "private": false,
   "license": "MIT",
-  "main": "./jest.base.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "author": "AristoByte <info@aristobyte.com>",
   "homepage": "https://www.npmjs.com/package/@aristobyte-ui/jest-config",
   "repository": {
@@ -39,14 +41,31 @@
     "workspace"
   ],
   "exports": {
-    "./base": "./dist/jest.base.js",
-    "./react": "./dist/jest.react.js",
-    "./next": "./dist/jest.next.js"
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./base": {
+      "types": "./es/jest.base.d.ts",
+      "import": "./es/jest.base.js",
+      "require": "./lib/jest.base.js"
+    },
+    "./react": {
+      "types": "./es/jest.react.d.ts",
+      "import": "./es/jest.react.js",
+      "require": "./lib/jest.react.js"
+    },
+    "./next": {
+      "types": "./es/jest.next.d.ts",
+      "import": "./es/jest.next.js",
+      "require": "./lib/jest.next.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "jest.base.js",
-    "jest.react.js",
-    "jest.next.js"
+    "es",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

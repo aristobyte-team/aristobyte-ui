@@ -42,13 +42,17 @@
     "./base": "./tsconfig.base.json",
     "./react": "./tsconfig.react.json",
     "./next": "./tsconfig.next.json",
-    "./package": "./tsconfig.package.json"
+    "./package": "./tsconfig.package.json",
+    "./node": "./tsconfig.node.json",
+    "./library": "./tsconfig.library.json"
   },
   "files": [
     "tsconfig.base.json",
     "tsconfig.react.json",
     "tsconfig.next.json",
-    "tsconfig.package.json"
+    "tsconfig.package.json",
+    "tsconfig.node.json",
+    "tsconfig.library.json"
   ],
   "publishConfig": {
     "access": "public"
