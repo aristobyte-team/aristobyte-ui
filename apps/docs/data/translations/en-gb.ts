@@ -19,6 +19,7 @@ export const EN_GB = {
       radio: 'Radio',
       switch: 'Switch',
       'social-media-card': 'Social Media Card',
+      'value-block': 'Value Block',
       'music-player': 'Music Player',
       'statistics-cards': 'Statistics Cards',
       'settings-panel': 'Settings Panel',
@@ -127,6 +128,7 @@ export const EN_GB = {
         'core-props': 'Core Props',
         'state-props': 'State Props',
         'visual-props': 'Visual Props',
+        'style-props': 'Style Props',
         'advanced-props': 'Advanced Props',
         default: 'default: {{value}}',
       },
@@ -730,8 +732,7 @@ export const EN_GB = {
       label: {
         intro: {
           title: 'Label',
-          description:
-            'Labels are compact badges for metadata, status, and quick visual annotations.',
+          description: 'Labels are compact badges for metadata, status, and quick visual annotations.',
         },
         installation: {
           title: 'Installation of Label',
@@ -745,8 +746,7 @@ export const EN_GB = {
         },
         variants: {
           title: 'Label Variants',
-          description:
-            'Semantic variants map label color to intent and status.',
+          description: 'Semantic variants map label color to intent and status.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -767,8 +767,7 @@ export const EN_GB = {
         },
         appearance: {
           title: 'Label Appearance',
-          description:
-            'Choose between solid, outline, dashed, no-outline, and glowing appearances.',
+          description: 'Choose between solid, outline, dashed, no-outline, and glowing appearances.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -789,8 +788,7 @@ export const EN_GB = {
         },
         sizes: {
           title: 'Label Sizes',
-          description:
-            'Use size variants to match density and hierarchy.',
+          description: 'Use size variants to match density and hierarchy.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -811,8 +809,7 @@ export const EN_GB = {
         },
         radius: {
           title: 'Label Radius',
-          description:
-            'Adjust corner radius to align with your product shape language.',
+          description: 'Adjust corner radius to align with your product shape language.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -833,8 +830,7 @@ export const EN_GB = {
         },
         colors: {
           title: 'Custom Colors',
-          description:
-            'Override label colors for bespoke semantic or brand-specific tags.',
+          description: 'Override label colors for bespoke semantic or brand-specific tags.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -1476,8 +1472,7 @@ export const EN_GB = {
         },
         usage: {
           title: 'Basic Usage',
-          description:
-            'A standard dropdown with descriptive options for quick selection.',
+          description: 'A standard dropdown with descriptive options for quick selection.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -1544,8 +1539,7 @@ export const EN_GB = {
         },
         multiple: {
           title: 'Multiple Selection',
-          description:
-            'Enable multi-select dropdowns when users need to choose multiple options.',
+          description: 'Enable multi-select dropdowns when users need to choose multiple options.',
           guidelines: {
             title: 'Guidelines',
             subtitle1: 'Usage',
@@ -1610,382 +1604,104 @@ export const EN_GB = {
           },
         },
       },
-      'music-player': {
+      'value-block': {
         intro: {
-          title: 'Music Player',
+          title: 'Value Block',
           description:
-            'The <b>Music Player</b> preset delivers an embedded audio playback interface with controls for play, pause, skip, and volume. Tailored for media-centric applications, it ensures accessibility and responsive interaction patterns.',
+            'The <b>Value Block</b> preset highlights key metrics with a compact label, value, and supporting context. Use it for dashboards, stats panels, and small KPI grids.',
         },
         installation: {
-          title: 'Installation of Music Player',
+          title: 'Installation of Value Block',
           description:
-            'Install the <b>Music Player</b> preset individually. This step can be skipped if <b>@aristobyte-ui</b> is already available globally.',
+            'Install the <b>Value Block</b> preset individually using the command above. You may skip this step if <b>@aristobyte-ui</b> is already installed globally.',
         },
         import: {
-          title: 'Import Music Player',
+          title: 'Import Value Block',
           description:
-            'Bring the <b>Music Player</b> component into your project to offer users direct control over audio content. The preset ships with adaptive styling for mobile and desktop breakpoints.',
+            'Import the <b>Value Block</b> from the AristoByte UI package to quickly present structured numbers with consistent sizing and styling.',
         },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Shows the <b>Music Player</b> when playback controls are disabled — e.g., due to lack of license, offline state, or missing media — preventing playback interactions.',
+        usage: {
+          title: 'Usage',
+          description: 'A minimal value block with a value, title, and subtitle. Ideal for quick KPI callouts.',
           guidelines: {
             title: 'Guidelines',
-            subtitle1: 'Playback Constraints',
+            subtitle1: 'Content',
             list1: {
-              element1: 'Disable controls when DRM/licensing checks fail or content is region-restricted.',
-              element2: 'Disable playback during network offline states or when required assets are unavailable.',
-              element3:
-                'Lock skip/repeat controls when a playlist is being re-ordered or persisted to avoid state race conditions.',
-              element4: "Disable advanced features (equalizer, effects) when device capabilities don't support them.",
+              element1: 'Keep the <b>value</b> short (3–5 chars) for visual balance.',
+              element2: 'Use a concise <b>title</b> to describe the metric.',
+              element3: 'Add a <b>subtitle</b> only when extra context is required.',
+              element4: 'Pair with an icon when scanning multiple blocks in a grid.',
             },
-            subtitle2: 'Accessibility & Resilience',
+            subtitle2: 'Layout',
             list2: {
-              element1: 'Provide clear fallback messaging (e.g., Offline — Playback unavailable) when disabled.',
-              element2:
-                'Ensure keyboard focus does not get trapped on disabled controls but remains discoverable for status announcements.',
-              element3:
-                'Expose programmatic flags for remote orchestration (e.g., telemetry that indicates why playback is disabled).',
-              element4:
-                'Design visual hierarchy so disabled player still surfaces critical metadata (track title, progress) for user context.',
+              element1: 'Use equal widths to maintain a clean KPI row.',
+              element2: 'Group related metrics by variant color.',
+              element3: 'Keep spacing consistent when mixed with cards or charts.',
+              element4: 'Avoid long labels that wrap onto two lines.',
             },
           },
         },
-      },
-      'statistics-cards': {
-        intro: {
-          title: 'Statistics Cards',
+        variants: {
+          title: 'Variants',
           description:
-            'The <b>Statistics Cards</b> preset enables at-a-glance metrics display. Ideal for dashboards and analytics, each card showcases key KPIs with clear typography, icons, and contextual coloring.',
-        },
-        installation: {
-          title: 'Installation of Statistics Cards',
-          description:
-            'Install the <b>Statistics Cards</b> preset individually if not already included in the global <b>@aristobyte-ui</b> package.',
-        },
-        import: {
-          title: 'Import Statistics Cards',
-          description:
-            'Import <b>Statistics Cards</b> into your dashboard to provide users with concise, visually distinct data summaries. Cards can be customized with icons, variants, and sizing props.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Displays a <b>Statistics Card</b> in a <b>disabled</b> state when metrics are incomplete, loading, or when access to the dataset is restricted.',
+            'Variants control the base color theme of the block. Choose one that matches the metric context.',
           guidelines: {
             title: 'Guidelines',
-            subtitle1: 'Data Integrity',
+            subtitle1: 'Semantic Mapping',
             list1: {
-              element1: 'Disable interactive drill-ins when underlying data is stale or being re-aggregated.',
-              element2: 'Disable export/share buttons until server-side permissions are validated.',
-              element3: 'Show skeletons or placeholders when partial data prevents meaningful interaction.',
-              element4:
-                'Avoid enabling KPI-linked actions until dependent query jobs complete to prevent misleading insights.',
+              element1: 'Use <b>success</b> for growth, completion, or positive trends.',
+              element2: 'Use <b>warning</b> for risk thresholds or near‑limit metrics.',
+              element3: 'Use <b>error</b> for outages, failures, or negative trends.',
+              element4: 'Use <b>default</b> for neutral or informational metrics.',
             },
-            subtitle2: 'Presentation & Implementation',
+            subtitle2: 'Consistency',
             list2: {
-              element1: 'Communicate the data state (stale/loading/unauthorized) with clear messaging near the metric.',
-              element2: 'Use subdued styling while keeping headline values legible for monitoring scenarios.',
-              element3:
-                'Provide hooks/events that allow consumers to subscribe to data readiness changes to re-enable interactions.',
-              element4: 'Log disabled-state reasons for analytics to understand frequency of unavailable metrics.',
+              element1: 'Keep variant usage consistent across dashboards.',
+              element2: 'Avoid mixing many variants in a single small group.',
+              element3: 'Match variant colors with chart legends when possible.',
+              element4: 'Use <b>secondary</b> for supportive or less‑critical metrics.',
             },
           },
         },
-      },
-      'settings-panel': {
-        intro: {
-          title: 'Settings Panel',
-          description:
-            'The <b>Settings Panel</b> preset organizes configuration options into a clean, intuitive interface. Perfect for account preferences, system settings, or feature toggles.',
-        },
-        installation: {
-          title: 'Installation of Settings Panel',
-          description:
-            'Install the <b>Settings Panel</b> preset individually. Skip this step if <b>@aristobyte-ui</b> is installed globally.',
-        },
-        import: {
-          title: 'Import Settings Panel',
-          description:
-            'Import the <b>Settings Panel</b> into your application to centralize user configuration. It supports nested controls, switches, and contextual grouping for clarity.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Illustrates the <b>Settings Panel</b> in a disabled or read-only mode when configuration changes are not permitted due to role restrictions, maintenance, or pending policy approvals.',
+        appearance: {
+          title: 'Appearance',
+          description: 'Appearance controls the surface style: solid, glowing, outline, outline-dashed, or no-outline.',
           guidelines: {
             title: 'Guidelines',
-            subtitle1: 'Governance Scenarios',
+            subtitle1: 'Surface',
             list1: {
-              element1:
-                'Disable whole sections when user lacks role-based permissions or when admin overrides are in effect.',
-              element2: 'Temporarily lock settings during system maintenance windows to avoid partial writes.',
-              element3: 'Mark settings read-only when policies or compliance checks require audit before changes.',
-              element4:
-                'Disable dependent controls if higher-level toggles are turned off to avoid invalid configurations.',
+              element1: 'Use <b>solid</b> for primary emphasis.',
+              element2: 'Use <b>outline</b> or <b>no-outline</b> for secondary emphasis.',
+              element3: 'Use <b>glowing</b> sparingly to highlight one metric.',
+              element4: 'Use <b>outline-dashed</b> for provisional or experimental data.',
             },
-            subtitle2: 'User Communication',
+            subtitle2: 'Contrast',
             list2: {
-              element1:
-                'Provide inline explanations and links to docs or support when settings are disabled for governance reasons.',
-              element2: 'Allow a clear call-to-action (request access) when appropriate, instead of silent disabling.',
-              element3: 'Emit accessibility-friendly notifications describing why the panel is read-only.',
-              element4:
-                'Maintain consistent API behavior: UI disabled state should mirror server-side permission checks.',
+              element1: 'Ensure text remains readable on the chosen appearance.',
+              element2: 'Avoid stacking multiple glowing blocks together.',
+              element3: 'Pair outline styles with neutral backgrounds.',
+              element4: 'Use no-outline for low‑priority metrics.',
             },
           },
         },
-      },
-      'action-buttons': {
-        intro: {
-          title: 'Action Buttons',
-          description:
-            'The <b>Action Buttons</b> preset provides a collection of quick-access controls designed for contextual actions. Ideal for toolbars, card footers, and floating action layouts.',
-        },
-        installation: {
-          title: 'Installation of Action Buttons',
-          description:
-            'Install the <b>Action Buttons</b> preset individually. You may skip if <b>@aristobyte-ui</b> is already part of your project.',
-        },
-        import: {
-          title: 'Import Action Buttons',
-          description:
-            'Import <b>Action Buttons</b> into your UI to streamline repetitive tasks and enable consistent call-to-action placement. Compatible with all button variants and appearances.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Shows the <b>Action Buttons</b> preset where quick actions are disabled due to context (e.g., selection absent, operation pending, or insufficient permissions).',
+        radius: {
+          title: 'Radius',
+          description: 'Radius controls the rounding of the block to match surrounding UI surfaces.',
           guidelines: {
             title: 'Guidelines',
-            subtitle1: 'Contextual Disabling',
+            subtitle1: 'Visual Rhythm',
             list1: {
-              element1:
-                'Disable actions that require a selection when nothing is selected to prevent no-op operations.',
-              element2: 'Disable shortcuts during modal or global blocking states to prevent unexpected behavior.',
-              element3:
-                'Disable actions while related async tasks (e.g., batch apply) are in-flight to maintain consistency.',
-              element4: 'Use disabled variant for deprecated actions that will be removed in future releases.',
+              element1: 'Match radius to nearby cards or panels.',
+              element2: 'Use <b>full</b> for pill‑like KPI chips.',
+              element3: 'Use <b>none</b> for dense, grid‑style dashboards.',
+              element4: 'Use <b>md</b> as the balanced default.',
             },
-            subtitle2: 'Developer & UX Tips',
+            subtitle2: 'Consistency',
             list2: {
-              element1:
-                "Surface helper text or inline affordances to explain disabled state (e.g., 'Select at least one item').",
-              element2: 'Keep keyboard access predictable; do not remove focusability unless completely inert.',
-              element3: 'Provide a single API to toggle action availability to simplify state management.',
-              element4: 'Log user attempts on disabled actions for UX diagnostics to identify confusion hotspots.',
-            },
-          },
-        },
-      },
-      'status-indicators': {
-        intro: {
-          title: 'Status Indicators',
-          description:
-            'The <b>Status Indicators</b> preset provides lightweight visual signals to communicate state, availability, or progress. Commonly used in dashboards, chat presence, or device monitors.',
-        },
-        installation: {
-          title: 'Installation of Status Indicators',
-          description:
-            'Install the <b>Status Indicators</b> preset individually if needed. Otherwise, use the globally available version from <b>@aristobyte-ui</b>.',
-        },
-        import: {
-          title: 'Import Status Indicators',
-          description:
-            'Import <b>Status Indicators</b> to enrich your UI with semantic feedback. Supports color variants and size scaling for adaptive integration.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Depicts <b>Status Indicators</b> in a disabled or neutralized state when telemetry is absent, stale, or when the monitored resource is offline.',
-          guidelines: {
-            title: 'Guidelines',
-            subtitle1: 'Telemetry & Signal Validity',
-            list1: {
-              element1: 'Render disabled indicator when device/resource reports no telemetry or returns 404/timeout.',
-              element2: 'Use disabled state for indicators when user has no permission to view live status.',
-              element3: 'Neutralize indicators during maintenance windows to avoid alert fatigue.',
-              element4:
-                'Avoid showing critical color states when signal is unverified; prefer a disabled/unknown state.',
-            },
-            subtitle2: 'Implementation Notes',
-            list2: {
-              element1:
-                "Keep the visual meaning explicit (e.g., an 'unknown' label) rather than silently dimming the indicator.",
-              element2:
-                'Expose hooks for consumers to supply alternative data or refresh triggers when indicators are disabled.',
-              element3:
-                "Ensure screen readers announce status as 'unavailable' or 'offline' to aid monitoring workflows.",
-              element4:
-                'Aggregate disabled-state metrics centrally so SRE/UX teams can identify systemic observability gaps.',
-            },
-          },
-        },
-      },
-      'navigation-pills': {
-        intro: {
-          title: 'Navigation Pills',
-          description:
-            'The <b>Navigation Pills</b> preset offers a compact tab-like navigation system styled as rounded pills. It is ideal for segmenting content categories or toggling views.',
-        },
-        installation: {
-          title: 'Installation of Navigation Pills',
-          description:
-            'Install the <b>Navigation Pills</b> preset individually. Skip if <b>@aristobyte-ui</b> is already available globally.',
-        },
-        import: {
-          title: 'Import Navigation Pills',
-          description:
-            'Import <b>Navigation Pills</b> to enable users to switch between grouped sections. Variants allow semantic styling and highlight current selection.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Shows <b>Navigation Pills</b> in a disabled state when navigation targets are not available, the user lacks permissions, or the view is temporarily locked.',
-          guidelines: {
-            title: 'Guidelines',
-            subtitle1: 'Navigation Constraints',
-            list1: {
-              element1: 'Disable pills for routes that are not yet released or are behind feature flags.',
-              element2: 'Disable navigation when prerequisites (e.g., onboarding steps) are incomplete.',
-              element3: 'Use disabled pills to surface roadmap items without allowing navigation yet.',
-              element4: 'Avoid disabling the currently active pill; instead disable only non-applicable targets.',
-            },
-            subtitle2: 'Accessibility & Messaging',
-            list2: {
-              element1:
-                "Provide accessible names and a tooltip explaining why a pill is disabled (e.g., 'Requires Pro plan').",
-              element2:
-                'Maintain focusability semantics: disabled pills should not receive interactive focus but remain discoverable.',
-              element3: 'Consider progressive disclosure: enable a read-only preview when full navigation is disabled.',
-              element4: 'Instrument disabled pill clicks to measure user intent and prioritize unblock workflows.',
-            },
-          },
-        },
-      },
-      'quick-actions': {
-        intro: {
-          title: 'Quick Actions',
-          description:
-            'The <b>Quick Actions</b> preset consolidates a set of commonly performed tasks into an easily accessible UI cluster. Perfect for contextual shortcuts in productivity tools.',
-        },
-        installation: {
-          title: 'Installation of Quick Actions',
-          description:
-            'Install the <b>Quick Actions</b> preset individually, unless already included via the global <b>@aristobyte-ui</b> package.',
-        },
-        import: {
-          title: 'Import Quick Actions',
-          description:
-            'Import <b>Quick Actions</b> to provide users with rapid entry points to frequent workflows. Supports icons, tooltips, and grouped layouts.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Represents <b>Quick Actions</b> when shortcuts are disabled due to context, permission constraints, or when an action is already in progress.',
-          guidelines: {
-            title: 'Guidelines',
-            subtitle1: 'Operational Context',
-            list1: {
-              element1: 'Disable quick actions if prerequisites (selection, permissions) are not satisfied.',
-              element2: 'Throttle or disable quick actions when server-side rate limits are exceeded.',
-              element3: 'Disable actions that would conflict with in-progress background jobs to prevent duplicates.',
-              element4: 'Use disabled variants when quick actions are deprecated pending migration.',
-            },
-            subtitle2: 'Developer Guidance',
-            list2: {
-              element1:
-                "Show contextual helper copy explaining how to enable the quick action (e.g., 'Select a file to enable').",
-              element2:
-                'Keep the visual affordance consistent so users understand which actions are temporarily unavailable.',
-              element3: 'Provide an API hook to surface enablement suggestions or links to relevant settings.',
-              element4:
-                'Log attempted uses of disabled quick actions to guide UX improvements and feature prioritization.',
-            },
-          },
-        },
-      },
-      'weather-widget': {
-        intro: {
-          title: 'Weather Widget',
-          description:
-            'The <b>Weather Widget</b> preset surfaces real-time weather insights in a compact, card-based format. It integrates temperature, condition icons, and location context.',
-        },
-        installation: {
-          title: 'Installation of Weather Widget',
-          description:
-            'Install the <b>Weather Widget</b> preset individually, unless <b>@aristobyte-ui</b> is already installed globally.',
-        },
-        import: {
-          title: 'Import Weather Widget',
-          description:
-            'Import <b>Weather Widget</b> into your application to provide environmental context. Supports location-based customization and unit switching.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Displays the <b>Weather Widget</b> in a disabled state when forecast data is unavailable, location permissions are denied, or rate limits are reached.',
-          guidelines: {
-            title: 'Guidelines',
-            subtitle1: 'Data Availability',
-            list1: {
-              element1:
-                'Disable widget when third-party weather APIs return errors or when CORS/credential issues occur.',
-              element2: 'Disable when geolocation permission is denied and no fallback location is provided.',
-              element3: 'Use disabled state if forecast refresh fails repeatedly to prevent stale displays.',
-              element4:
-                'Avoid showing critical weather alerts when widget is disabled; surface system-level alerts instead.',
-            },
-            subtitle2: 'User Experience',
-            list2: {
-              element1: "Provide a clear call-to-action to re-enable (e.g., 'Enable location' or 'Retry').",
-              element2: "Show concise placeholder data (e.g., 'Data unavailable') rather than blank space.",
-              element3: 'Allow manual location input as an alternative to geolocation for re-enablement.',
-              element4: 'Record disablement reasons for analytics to monitor API reliability and user opt-out rates.',
-            },
-          },
-        },
-      },
-      'notification-cards': {
-        intro: {
-          title: 'Notification Cards',
-          description:
-            'The <b>Notification Cards</b> preset provides structured alert blocks for delivering contextual updates. Perfect for activity feeds, dashboards, or inbox-like UIs.',
-        },
-        installation: {
-          title: 'Installation of Notification Cards',
-          description:
-            'Install the <b>Notification Cards</b> preset individually. Skip this step if <b>@aristobyte-ui</b> is globally available.',
-        },
-        import: {
-          title: 'Import Notification Cards',
-          description:
-            'Import <b>Notification Cards</b> to surface time-sensitive messages with consistent styling and hierarchy. Configurable with icons and action buttons.',
-        },
-        disabled: {
-          title: 'Disabled',
-          description:
-            'Renders <b>Notification Cards</b> in a disabled or muted state when actions (acknowledge, snooze, open) are not available due to policy, rate-limits, or remote state.',
-          guidelines: {
-            title: 'Guidelines',
-            subtitle1: 'State Management',
-            list1: {
-              element1:
-                'Disable notification actions when messages are archived or when the server indicates read-only mode.',
-              element2: 'Mute interactive controls during bulk operations to avoid partial updates.',
-              element3: 'Disable actions for notifications that are pending moderation or legal review.',
-              element4: 'Temporarily disable action buttons when notification payloads are malformed to avoid errors.',
-            },
-            subtitle2: 'UX & Instrumentation',
-            list2: {
-              element1:
-                "Show a succinct reason for disabled actions (e.g., 'Action unavailable — moderation in progress').",
-              element2:
-                'Maintain the ability to view notification details even when actions are disabled to preserve context.',
-              element3: 'Expose telemetry for disabled action attempts to identify friction points and policy impacts.',
-              element4:
-                'Gracefully degrade available controls and provide alternative workflows when primary actions are disabled.',
+              element1: 'Avoid mixing too many radius values in a single group.',
+              element2: 'Keep radius consistent across responsive breakpoints.',
+              element3: 'Match radius to button group radius where adjacent.',
+              element4: 'Use larger radius for more “friendly” UI tone.',
             },
           },
         },

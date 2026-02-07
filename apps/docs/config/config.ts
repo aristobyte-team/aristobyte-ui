@@ -105,6 +105,11 @@ export const Config = {
             href: '/presets/social-media-card',
             target: '_self',
           },
+          {
+            id: 'value-block',
+            href: '/presets/value-block',
+            target: '_self',
+          },
         ],
       },
     ],

@@ -4,6 +4,7 @@ export const components = {
   },
   presets: {
     "social-media-card": ["SocialMediaCard"],
+    "value-block": ["ValueBlock"],
     "music-player": ["MusicPlayer"],
     "statistics-cards": ["StatisticsCards"],
     "settings-panel": ["SettingsPanel"],

@@ -17,6 +17,12 @@ export const mapping: MappingType = {
     'social-media-card': {
       disabled: Presets.SocialMediaCardPreviewBlocks.Disabled,
     },
+    'value-block': {
+      usage: Presets.ValueBlockPreviewBlocks.Usage,
+      variants: Presets.ValueBlockPreviewBlocks.Variants,
+      appearance: Presets.ValueBlockPreviewBlocks.Appearance,
+      radius: Presets.ValueBlockPreviewBlocks.Radius,
+    },
   },
   components: {
     anchor: {

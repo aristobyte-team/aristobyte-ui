@@ -701,6 +701,48 @@ export const propsMapping = {
         ],
       },
     ],
+    'value-block': [
+      {
+        id: 'value-block',
+        sections: [
+          {
+            id: 'core-props',
+            props: [
+              { id: 'value', inlineType: 'number | string', default: "''" },
+              { id: 'title', inlineType: 'string', default: "''" },
+              { id: 'subtitle', inlineType: 'string', default: "''" },
+            ],
+          },
+          {
+            id: 'style-props',
+            props: [
+              {
+                id: 'variant',
+                inlineType:
+                  "'default' | 'primary' | 'secondary' | 'warning' | 'success' | 'error'",
+                default: "'default'",
+              },
+              {
+                id: 'appearance',
+                inlineType: "'solid' | 'glowing' | 'outline' | 'outline-dashed' | 'no-outline'",
+                default: "'solid'",
+              },
+              {
+                id: 'radius',
+                inlineType: "'none' | 'md' | 'sm' | 'lg' | 'full'",
+                default: "'md'",
+              },
+              {
+                id: 'icon',
+                inlineType: '(props: IconPropsType) => React.JSX.Element',
+              },
+              { id: 'color', inlineType: 'string', default: "''" },
+              { id: 'className', inlineType: 'string', default: "''" },
+            ],
+          },
+        ],
+      },
+    ],
     'music-player': [
       {
         id: 'music-player',

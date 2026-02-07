@@ -2,6 +2,7 @@ export const CodeBlocks = {
   'get-started': { overview: { usage: 'TODO' } },
   presets: {
     'social-media-card': { usage: 'TODO', disabled: 'TODO' },
+    'value-block': { usage: 'TODO', variants: 'TODO', appearance: 'TODO', radius: 'TODO' },
     'music-player': { usage: 'TODO', disabled: 'TODO' },
     'statistics-cards': { usage: 'TODO', disabled: 'TODO' },
     'settings-panel': { usage: 'TODO', disabled: 'TODO' },
