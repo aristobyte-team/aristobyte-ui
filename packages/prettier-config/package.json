@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/prettier-config",
   "description": "Shared Prettier configuration for AristoByteUI projects.",
-  "version": "2.16.0",
+  "version": "2.16.1",
   "private": false,
   "license": "MIT",
   "author": "AristoByte <info@aristobyte.com>",
