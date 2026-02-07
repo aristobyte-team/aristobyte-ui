@@ -1,7 +1,7 @@
 {
   "name": "@aristobyte-ui/spinner",
   "description": "Flexible, highly customizable React Spinner component for AristoByteUI. Supports multiple variants, sizes, and animation types, designed for seamless integration with modern React projects and monorepos.",
-  "version": "2.14.5",
+  "version": "2.14.6",
   "license": "MIT",
   "private": false,
   "author": "AristoByte <info@aristobyte.com>",
@@ -52,7 +52,7 @@
     "sass": "^1.97.3"
   },
   "dependencies": {
-    "@aristobyte-ui/utils": "^2.14.5"
+    "@aristobyte-ui/utils": "^2.14.6"
   },
   "exports": {
     ".": {

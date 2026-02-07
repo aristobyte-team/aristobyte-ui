@@ -1,5 +1,16 @@
 # @aristobyte-ui/presets
 
+## 2.14.6
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/anchor@2.14.6
+  - @aristobyte-ui/button@2.14.6
+  - @aristobyte-ui/utils@2.14.6
+
 ## 2.14.5
 
 ### Patch Changes

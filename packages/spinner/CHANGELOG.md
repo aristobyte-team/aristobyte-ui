@@ -1,5 +1,14 @@
 # @aristobyte-ui/spinner
 
+## 2.14.6
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.14.6
+
 ## 2.14.5
 
 ### Patch Changes

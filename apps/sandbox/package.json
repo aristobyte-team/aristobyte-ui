@@ -1,6 +1,6 @@
 {
   "name": "@aristobyte-ui/sandbox",
-  "version": "2.14.5",
+  "version": "2.14.6",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack --port 3001",
@@ -9,9 +9,9 @@
     "lint": "next lint --max-warnings 0"
   },
   "dependencies": {
-    "@aristobyte-ui/button": "2.14.5",
-    "@aristobyte-ui/spinner": "2.14.5",
-    "@aristobyte-ui/utils": "2.14.5",
+    "@aristobyte-ui/button": "2.14.6",
+    "@aristobyte-ui/spinner": "2.14.6",
+    "@aristobyte-ui/utils": "2.14.6",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
