@@ -8,7 +8,11 @@ on:
 jobs:
   release-stable:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'chore: publish v')"
+    if: >-
+      ${{
+        !contains(github.event.head_commit.message, 'chore: publish v') &&
+        !contains(github.event.head_commit.message, '[skip ci]')
+      }}
     permissions:
       contents: write
       packages: write

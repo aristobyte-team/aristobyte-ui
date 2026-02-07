@@ -4,6 +4,8 @@ Explain what changed and why. Link relevant issues.
 
 Fixes # (issue)
 
+If this PR should skip CI, append `[skip ci]` to the PR title.
+
 ## Type
 
 - [ ] Bug fix

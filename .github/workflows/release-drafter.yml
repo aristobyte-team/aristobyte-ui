@@ -14,6 +14,11 @@ permissions:
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
+    if: >-
+      ${{
+        (github.event_name != 'pull_request' || !contains(github.event.pull_request.title, '[skip ci]')) &&
+        (github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]'))
+      }}
     steps:
       - uses: release-drafter/release-drafter@v6
         with:
