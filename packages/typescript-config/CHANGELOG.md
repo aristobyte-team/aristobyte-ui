@@ -1,5 +1,11 @@
 # @aristobyte-ui/typescript-config
 
+## 2.15.0
+
+### Minor Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.14.7
 
 ### Patch Changes

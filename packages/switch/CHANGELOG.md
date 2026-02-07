@@ -1,5 +1,16 @@
 # @aristobyte-ui/switch
 
+## 2.15.0
+
+### Minor Changes
+
+- Automated release from scripts/check-version.sh
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @aristobyte-ui/utils@2.15.0
+
 ## 2.14.7
 
 ### Patch Changes
