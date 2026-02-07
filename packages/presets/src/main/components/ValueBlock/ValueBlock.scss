@@ -1,34 +1,59 @@
 @use '@aristobyte-ui/utils/styles' as *;
 
 @mixin value-block-surface($color, $hover) {
-  &.value-block-appearance--solid {
-    background-color: $color;
-    border-color: $hover;
-    box-shadow: $shadow-md;
-  }
+  &.value-block-appearance {
+    &--solid {
+      background-color: $color;
+      border-color: $hover;
+      box-shadow: $shadow-md;
 
-  &.value-block-appearance--glowing {
-    background-color: $color;
-    border-color: $hover;
-    box-shadow:
-      0 0 10px rgba($color, 0.35),
-      0 0 24px rgba($color, 0.25);
-  }
+      .value-block__icon,
+      .value-block__value {
+        color: $color-default;
+      }
 
-  &.value-block-appearance--outline {
-    background-color: transparent;
-    border-color: $color;
-  }
+      .value-block__subtitle {
+        color: $white-transparent-700;
+      }
+    }
 
-  &.value-block-appearance--outline-dashed {
-    background-color: transparent;
-    border-color: $color;
-    border-style: dashed;
-  }
+    &--glowing {
+      background-color: $color-default;
+      border-color: $hover;
+      box-shadow:
+        0 0 10px rgba($color, 0.35),
+        0 0 24px rgba($color, 0.25);
+    }
 
-  &.value-block-appearance--no-outline {
-    background-color: rgba($color, 0.12);
-    border-color: transparent;
+    &--outline {
+      background-color: transparent;
+      border-color: $color;
+    }
+
+    &--outline-dashed {
+      background-color: transparent;
+      border-color: $color;
+      border-style: dashed;
+    }
+
+    &--no-outline {
+      background-color: rgba($color, 0.12);
+      border-color: transparent;
+    }
+
+    &--glowing,
+    &--outline,
+    &--outline-dashed,
+    &--no-outline {
+      .value-block__icon,
+      .value-block__value {
+        color: $color;
+      }
+
+      .value-block__subtitle {
+        color: $grey-500;
+      }
+    }
   }
 }
 
@@ -38,13 +63,13 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 140px;
+  min-width: 110px;
   padding: 16px 18px;
   text-align: center;
 
   &-variant {
     &--default {
-      @include value-block-surface($color-default, $color-default-hover);
+      @include value-block-surface($white, $color-default-hover);
     }
 
     &--primary {
@@ -65,39 +90,6 @@
 
     &--warning {
       @include value-block-surface($color-warning, $color-warning-hover);
-    }
-  }
-
-  &-appearance {
-    &--solid,
-    &--glowing {
-      .value-block__value {
-        color: $white;
-      }
-
-      .value-block__title {
-        color: $white-transparent-800;
-      }
-
-      .value-block__subtitle {
-        color: $white-transparent-700;
-      }
-    }
-
-    &--outline,
-    &--outline-dashed,
-    &--no-outline {
-      .value-block__value {
-        color: $grey-900;
-      }
-
-      .value-block__title {
-        color: $grey-700;
-      }
-
-      .value-block__subtitle {
-        color: $grey-600;
-      }
     }
   }
 
@@ -139,19 +131,20 @@
   }
 
   &__value {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 28px;
   }
 
   &__title {
-    font-size: 13px;
+    color: $white;
+    font-size: 14px;
     font-weight: 500;
     line-height: 17.5px;
   }
 
   &__subtitle {
-    font-size: 10.5px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 14px;
   }

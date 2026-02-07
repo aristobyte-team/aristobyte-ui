@@ -44,9 +44,9 @@ export const ValueBlock: React.FC<IValueBlock> = ({
         .filter(Boolean)
         .join(' ')}
     >
-      {icon && <span className="value-block__icon">{icon({ color, size: 28 })}</span>}
+      {icon && <span className="value-block__icon">{icon({ ...(color ? { color } : {}), size: 40 })}</span>}
       {title && <h4 className="value-block__title">{title}</h4>}
-      <span className="value-block__value" style={{ color }}>
+      <span className="value-block__value" style={{ ...(color ? { color } : {}) }}>
         {value}
       </span>
       {subtitle && <p className="value-block__subtitle">{subtitle}</p>}
