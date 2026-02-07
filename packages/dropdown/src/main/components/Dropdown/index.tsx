@@ -54,7 +54,9 @@ export const Dropdown: React.FC<IDropdown> = ({
   const uniqueId = React.useId();
 
   const computePosition = React.useCallback(() => {
-    if (!buttonContainerRef.current || !boxRef.current) return;
+    if (!buttonContainerRef.current || !boxRef.current) {
+      return;
+    }
 
     const rect = buttonContainerRef.current.getBoundingClientRect();
     const dropdownRect = boxRef.current.getBoundingClientRect();
@@ -101,7 +103,9 @@ export const Dropdown: React.FC<IDropdown> = ({
   };
 
   const handleToggle = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
-    if (disabled) return;
+    if (disabled) {
+      return;
+    }
 
     if (button?.onClick) button.onClick(e);
 
@@ -109,7 +113,9 @@ export const Dropdown: React.FC<IDropdown> = ({
   };
 
   React.useLayoutEffect(() => {
-    if (!isOpened) return;
+    if (!isOpened) {
+      return;
+    }
 
     const raf = requestAnimationFrame(() => {
       computePosition();

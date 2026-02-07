@@ -55,7 +55,9 @@ export const Sidebar: React.FC = () => {
     const newOpenedSection = sections.find(
       ({ id, links }) => id === category && links.find(({ id }) => id === unit)
     )?.id;
-    if (!newOpenedSection) return;
+    if (!newOpenedSection) {
+      return;
+    }
 
     setOpenedSection([newOpenedSection]);
   }, [sections, category, unit]);

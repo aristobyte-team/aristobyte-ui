@@ -14,7 +14,9 @@ export const renderRipple = <HTMLElementType extends RippleParamsRef>({
   clientY,
 }: RippleParams<HTMLElementType>) => {
   const button = ref.current;
-  if (!button) return;
+  if (!button) {
+    return;
+  }
 
   const circle = document.createElement('span');
   const diameter = Math.max(button.clientWidth, button.clientHeight);

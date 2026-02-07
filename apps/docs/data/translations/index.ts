@@ -1,7 +1,7 @@
-import { EN_GB } from "./en-gb";
+import { EN_GB } from './en-gb';
 
 export enum Locales {
-  EN_GB = "en-gb",
+  EN_GB = 'en-gb',
 }
 
 export type TranslateFunctionType = (path: string) => string;
@@ -18,8 +18,10 @@ export const translate = (locale: Locales): TranslateFunctionType => {
   }
 
   return (path: string): string => {
-    const value = path.split(".").reduce((acc, key) => acc?.[key], context);
-    if (typeof value === "string") return value;
+    const value = path.split('.').reduce((acc, key) => acc?.[key], context);
+    if (typeof value === 'string') {
+      return value;
+    }
     throw new Error(`Missing or invalid translation for path: "${path}"`);
   };
 };

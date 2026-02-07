@@ -15,6 +15,10 @@ export type IImport = {
   unit: string;
 };
 
+const usageCache = new Map<string, string>();
+
+const isInlineCode = (value: string) => value.includes('\n') || value.includes('import ');
+
 export const Import: React.FC<IImport> = ({ category, unit }) => {
   const {
     config: {
@@ -24,6 +28,50 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
   const { t } = useTranslate();
   // @TODO: @CONFIG - get a loading state for the config so we display the loading and make sure that everything we read from the config is never undefined once the loading is finished
   const [importTab, setImportTab] = React.useState<(typeof tabs)[0]>(tabs[0]!);
+  const [usageCode, setUsageCode] = React.useState('');
+
+  React.useEffect(() => {
+    const cacheKey = `${category}:${unit}:usage`;
+    const cached = usageCache.get(cacheKey);
+    if (cached !== undefined) {
+      setUsageCode(cached);
+      return;
+    }
+
+    const fallback = (CodeBlocks as Record<typeof category, Record<typeof unit, Record<string, string>>>)?.[category]?.[
+      unit
+    ]?.usage;
+
+    if (typeof fallback === 'string' && fallback.length > 0 && isInlineCode(fallback)) {
+      usageCache.set(cacheKey, fallback);
+      setUsageCode(fallback);
+      return;
+    }
+
+    const params = new URLSearchParams({
+      category,
+      unit,
+      section: 'usage',
+    });
+
+    if (typeof fallback === 'string' && fallback.endsWith('.tsx')) {
+      params.set('path', fallback);
+    }
+
+    (async () => {
+      try {
+        const res = await fetch(`/api/code?${params.toString()}`);
+        const data = await res.json();
+        const nextCode = data?.code || '';
+        usageCache.set(cacheKey, nextCode);
+        setUsageCode(nextCode);
+      } catch (e) {
+        console.log(e);
+        usageCache.set(cacheKey, '');
+        setUsageCode('');
+      }
+    })();
+  }, [category, unit]);
 
   return (
     <section className="import">
@@ -102,7 +150,7 @@ export const Import: React.FC<IImport> = ({ category, unit }) => {
             description={t(`layout.commonDescriptions.usage`)}
             icon={{ component: Icons.Code, size: 20, color: '#00d492' }}
           >
-            <CodeBlock code={CodeBlocks![category]![unit]!.usage!} />
+            <CodeBlock code={usageCode} />
           </Card>
         </Card>
       </div>
