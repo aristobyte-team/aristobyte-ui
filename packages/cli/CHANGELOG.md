@@ -1,5 +1,11 @@
 # @aristobyte-ui/cli
 
+## 2.15.2
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.15.1
 
 ### Patch Changes
