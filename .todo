@@ -3,3 +3,5 @@
 - fix anchor stylings - improve the component and update docs
 - fix value block styling - this happens when we choose certin variant and it's not the default. there should be logic where when we specify let's say the solid for appearance then we get the background the color we have specified, however other options should have the default bg color + the styling magic around the card box (for example for the glowin one)
 - feat: dropdown new functionalities such as select option which would be displayed inside button
+- create: get-started/aristobyte-ui-cli route and handle the cli part with instructions etc...
+- in packages/card component add more props for label={..., size: undefined, radius: undefined}

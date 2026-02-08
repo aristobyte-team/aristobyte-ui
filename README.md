@@ -38,6 +38,17 @@
 
 ---
 
+## 🔗 Links
+
+- Documentation: https://ui.aristobyte.com
+- GitHub Org: https://github.com/aristobyte-ui
+- Main Repo: https://github.com/aristobyte-ui/aristobyte-ui
+- Releases: https://github.com/aristobyte-ui/aristobyte-ui/releases
+- NPM Org: https://www.npmjs.com/org/aristobyte-ui
+- GitHub Packages: https://github.com/orgs/aristobyte-ui/packages?repo_name=aristobyte-ui
+
+---
+
 ## 📦 Packages Overview
 
 | Package                            | Category   | Exports (high-level)         | NPM                                                                   |

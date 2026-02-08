@@ -1,3 +1,4 @@
+import { AristoBadges } from './AristoBadges';
 import { AristoByte } from './AristoByte';
 import { AristoByteUICLI } from './AristoByteUICLI';
 import { AristoByteUI } from './AristoByteUI';
@@ -44,6 +45,7 @@ import { Warning } from './Warning';
 import { Yarn } from './Yarn';
 
 export const Icons = {
+  AristoBadges,
   AristoByte,
   AristoByteUI,
   AristoByteUICLI,
