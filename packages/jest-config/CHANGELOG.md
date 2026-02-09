@@ -1,5 +1,11 @@
 # @aristobyte-ui/jest-config
 
+## 2.16.5
+
+### Patch Changes
+
+- Automated release from scripts/check-version.sh
+
 ## 2.16.4
 
 ### Patch Changes
