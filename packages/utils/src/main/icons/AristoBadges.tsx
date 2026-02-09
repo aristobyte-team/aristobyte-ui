@@ -19,10 +19,10 @@ export const AristoBadges = ({ size: size = 24 }: IconPropsType) => (
         y2="14.72"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f0513c" />
-        <stop offset=".28" stop-color="#f47732" />
-        <stop offset=".7" stop-color="#f7912c" />
-        <stop offset="1" stop-color="#fcb31b" />
+        <stop offset="0" stopColor="#f0513c" />
+        <stop offset="0.28" stopColor="#f47732" />
+        <stop offset="0.7" stopColor="#f7912c" />
+        <stop offset="1" stopColor="#fcb31b" />
       </linearGradient>
       <filter
         id="uuid-d5b6607b-c345-49e4-a776-c86679dba1e1"
@@ -34,7 +34,7 @@ export const AristoBadges = ({ size: size = 24 }: IconPropsType) => (
       >
         <feOffset dx="3.96" dy="3.96" />
         <feGaussianBlur result="uuid-33330b19-1183-4c89-8ab0-6a6ac59b67c8" stdDeviation="4.95" />
-        <feFlood flood-color="#231f20" flood-opacity=".32" />
+        <feFlood floodColor="#231f20" floodOpacity="0.32" />
         <feComposite in2="uuid-33330b19-1183-4c89-8ab0-6a6ac59b67c8" operator="in" />
         <feComposite in="SourceGraphic" />
       </filter>
@@ -46,12 +46,12 @@ export const AristoBadges = ({ size: size = 24 }: IconPropsType) => (
         y2="209.26"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fdef28" />
-        <stop offset="0" stop-color="#fde819" />
-        <stop offset="0" stop-color="#f0503d" />
-        <stop offset=".3" stop-color="#f37433" />
-        <stop offset=".7" stop-color="#f68830" />
-        <stop offset="1" stop-color="#fbaa20" />
+        <stop offset="0" stopColor="#fdef28" />
+        <stop offset="0" stopColor="#fde819" />
+        <stop offset="0" stopColor="#f0503d" />
+        <stop offset="0.3" stopColor="#f37433" />
+        <stop offset="0.7" stopColor="#f68830" />
+        <stop offset="1" stopColor="#fbaa20" />
       </linearGradient>
     </defs>
     <g id="uuid-b0814c43-a549-4954-ba93-5c35d7ce4383">
