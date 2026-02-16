@@ -2,6 +2,7 @@ import { AristoBadges } from './AristoBadges';
 import { AristoByte } from './AristoByte';
 import { AristoByteUICLI } from './AristoByteUICLI';
 import { AristoByteUI } from './AristoByteUI';
+import { ArrowLeft } from './ArrowLeft';
 import { ArrowRight } from './ArrowRight';
 import { BashCursor } from './BashCursor';
 import { Branching } from './Branching';
@@ -12,6 +13,7 @@ import { Comment } from './Comment';
 import { Components } from './Components';
 import { Copy } from './Copy';
 import { Disabled } from './Disabled';
+import { Dna } from './Dna';
 import { Dot } from './Dot';
 import { Error } from './Error';
 import { Eye } from './Eye';
@@ -32,6 +34,8 @@ import { Package } from './Package';
 import { Palette } from './Palette';
 import { PaperCode } from './PaperCode';
 import { Play } from './Play';
+import { Puzzle } from './Puzzle';
+import { Plug } from './Plug';
 import { Pnpm } from './Pnpm';
 import { Resize } from './Resize';
 import { Share } from './Share';
@@ -43,12 +47,14 @@ import { User } from './User';
 import { UserGroup } from './UserGroup';
 import { Warning } from './Warning';
 import { Yarn } from './Yarn';
+import { Zap } from './Zap';
 
 export const Icons = {
   AristoBadges,
   AristoByte,
   AristoByteUI,
   AristoByteUICLI,
+  ArrowLeft,
   ArrowRight,
   BashCursor,
   Branching,
@@ -59,6 +65,7 @@ export const Icons = {
   Comment,
   Components,
   Disabled,
+  Dna,
   Dot,
   Eye,
   Error,
@@ -78,7 +85,9 @@ export const Icons = {
   Palette,
   PaperCode,
   Play,
+  Plug,
   Pnpm,
+  Puzzle,
   Heart,
   Resize,
   Share,
@@ -90,5 +99,6 @@ export const Icons = {
   UserGroup,
   Warning,
   Yarn,
+  Zap,
 };
 export { type IconPropsType } from './type';
