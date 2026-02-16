@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const Palette = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 16 16" fill="none">
+export const Palette = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Palette`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 16 16" fill="none">
     <path
       d="M7.99998 14.6667C6.23187 14.6667 4.53618 13.9643 3.28593 12.7141C2.03569 11.4638 1.33331 9.76815 1.33331 8.00004C1.33331 6.23193 2.03569 4.53624 3.28593 3.286C4.53618 2.03575 6.23187 1.33337 7.99998 1.33337C9.76809 1.33337 11.4638 1.96551 12.714 3.09073C13.9643 4.21595 14.6666 5.74208 14.6666 7.33337C14.6666 8.21743 14.3155 9.06528 13.6903 9.6904C13.0652 10.3155 12.2174 10.6667 11.3333 10.6667H9.83331C9.61665 10.6667 9.40427 10.727 9.21996 10.8409C9.03565 10.9549 8.88671 11.1178 8.78981 11.3116C8.69292 11.5054 8.6519 11.7224 8.67136 11.9381C8.69082 12.1539 8.76998 12.36 8.89998 12.5334L9.09998 12.8C9.22998 12.9734 9.30914 13.1795 9.3286 13.3953C9.34806 13.6111 9.30704 13.828 9.21014 14.0218C9.11325 14.2156 8.9643 14.3786 8.78 14.4925C8.59569 14.6064 8.38331 14.6667 8.16665 14.6667H7.99998Z"
       stroke={color}
@@ -43,4 +48,5 @@ export const Palette = ({ size = 24, color = 'currentColor' }: IconPropsType) =>
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

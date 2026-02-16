@@ -1,21 +1,21 @@
-name: Dependency Review
+# name: Dependency Review
 
-on:
-  pull_request:
+# on:
+#   pull_request:
 
-permissions:
-  contents: read
+# permissions:
+#   contents: read
 
-jobs:
-  dependency-review:
-    runs-on: ubuntu-latest
-    if: >-
-      ${{
-        (github.event_name != 'pull_request' || !contains(github.event.pull_request.title, '[skip ci]')) &&
-        (github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]'))
-      }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Dependency Review
-        uses: actions/dependency-review-action@v4
+# jobs:
+#   dependency-review:
+#     runs-on: ubuntu-latest
+#     if: >-
+#       ${{
+#         (github.event_name != 'pull_request' || !contains(github.event.pull_request.title, '[skip ci]')) &&
+#         (github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]'))
+#       }}
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Dependency Review
+#         uses: actions/dependency-review-action@v4

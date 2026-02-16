@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const GalleryVerticalEnd = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
+export const GalleryVerticalEnd = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-GalleryVerticalEnd`;
+
+  return (
   <svg
+    id={svgId}
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -16,4 +21,5 @@ export const GalleryVerticalEnd = ({ size = 24, color = 'currentColor' }: IconPr
     <path d="M5 6h14" />
     <rect width="18" height="12" x="3" y="10" rx="2" />
   </svg>
-);
+  );
+};

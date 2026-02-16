@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const Info = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
+export const Info = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Info`;
+
+  return (
   <svg
+    id={svgId}
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -16,4 +21,5 @@ export const Info = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
     <path d="M12 16v-4" />
     <path d="M12 8h.01" />
   </svg>
-);
+  );
+};

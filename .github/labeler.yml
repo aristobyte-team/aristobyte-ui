@@ -1,23 +1,23 @@
-docs:
-  - changed-files:
-      - any-glob-to-any-file:
-          - 'README.md'
-          - 'packages/**/README.md'
-          - 'apps/docs/**'
-          - '.github/**'
-components:
-  - changed-files:
-      - any-glob-to-any-file:
-          - 'packages/*/src/**'
-styles:
-  - changed-files:
-      - any-glob-to-any-file:
-          - '**/*.scss'
-scripts:
-  - changed-files:
-      - any-glob-to-any-file:
-          - 'scripts/**'
-ci:
-  - changed-files:
-      - any-glob-to-any-file:
-          - '.github/workflows/**'
+# docs:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - 'README.md'
+#           - 'packages/**/README.md'
+#           - 'apps/docs/**'
+#           - '.github/**'
+# components:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - 'packages/*/src/**'
+# styles:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - '**/*.scss'
+# scripts:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - 'scripts/**'
+# ci:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - '.github/workflows/**'

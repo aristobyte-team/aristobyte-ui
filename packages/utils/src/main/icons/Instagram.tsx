@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const Instagram = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
+export const Instagram = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Instagram`;
+
+  return (
   <svg
+    id={svgId}
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -16,4 +21,5 @@ export const Instagram = ({ size = 24, color = 'currentColor' }: IconPropsType) 
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
-);
+  );
+};

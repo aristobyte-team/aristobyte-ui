@@ -1,8 +1,13 @@
 import * as React from 'react';
 import type { IconPropsType } from './type';
 
-export const Layers = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Layers = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Layers`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M14.9684 2.54342C14.6644 2.40476 14.3342 2.33301 14 2.33301C13.6659 2.33301 13.3357 2.40476 13.0317 2.54342L3.03337 7.09342C2.82635 7.18471 2.65033 7.33422 2.52676 7.52376C2.40319 7.71329 2.3374 7.93467 2.3374 8.16092C2.3374 8.38718 2.40319 8.60856 2.52676 8.79809C2.65033 8.98763 2.82635 9.13714 3.03337 9.22842L13.0434 13.7901C13.3474 13.9287 13.6776 14.0005 14.0117 14.0005C14.3458 14.0005 14.676 13.9287 14.98 13.7901L24.99 9.24009C25.1971 9.14881 25.3731 8.99929 25.4966 8.80976C25.6202 8.62022 25.686 8.39885 25.686 8.17259C25.686 7.94633 25.6202 7.72496 25.4966 7.53542C25.3731 7.34589 25.1971 7.19638 24.99 7.10509L14.9684 2.54342Z"
       stroke={color}
@@ -25,4 +30,5 @@ export const Layers = ({ size = 24, color = 'currentColor' }: IconPropsType) => 
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

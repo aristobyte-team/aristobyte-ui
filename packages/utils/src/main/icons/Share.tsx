@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const Share = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 12 13" fill="none">
+export const Share = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Share`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 12 13" fill="none">
     <path
       d="M9.57764 4.25024C10.5441 4.25024 11.3276 3.46674 11.3276 2.50024C11.3276 1.53375 10.5441 0.750244 9.57764 0.750244C8.61114 0.750244 7.82764 1.53375 7.82764 2.50024C7.82764 3.46674 8.61114 4.25024 9.57764 4.25024Z"
       stroke={color}
@@ -39,4 +44,5 @@ export const Share = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

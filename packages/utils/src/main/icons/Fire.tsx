@@ -1,8 +1,13 @@
 import * as React from 'react';
 import type { IconPropsType } from './type';
 
-export const Fire = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Fire = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Fire`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M5.24984 14.5832C6.02339 14.5832 6.76525 14.2759 7.31223 13.7289C7.85921 13.1819 8.1665 12.4401 8.1665 11.6665C8.1665 10.0565 7.58317 9.33317 6.99984 8.1665C5.74917 5.66634 6.7385 3.43684 9.33317 1.1665C9.9165 4.08317 11.6665 6.88317 13.9998 8.74984C16.3332 10.6165 17.4998 12.8332 17.4998 15.1665C17.4998 16.239 17.2886 17.3009 16.8782 18.2918C16.4678 19.2826 15.8662 20.1829 15.1079 20.9412C14.3495 21.6996 13.4492 22.3011 12.4584 22.7115C11.4676 23.1219 10.4056 23.3332 9.33317 23.3332C8.26071 23.3332 7.19875 23.1219 6.20792 22.7115C5.2171 22.3011 4.31681 21.6996 3.55847 20.9412C2.80012 20.1829 2.19857 19.2826 1.78815 18.2918C1.37774 17.3009 1.1665 16.239 1.1665 15.1665C1.1665 13.8213 1.67167 12.4902 2.33317 11.6665C2.33317 12.4401 2.64046 13.1819 3.18744 13.7289C3.73442 14.2759 4.47629 14.5832 5.24984 14.5832Z"
       stroke={color}
@@ -11,4 +16,5 @@ export const Fire = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

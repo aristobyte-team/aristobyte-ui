@@ -1,8 +1,13 @@
 import * as React from 'react';
 import type { IconPropsType } from './type';
 
-export const Branching = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Branching = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Branching`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M24.4998 18.6667H19.8332C19.1888 18.6667 18.6665 19.1891 18.6665 19.8334V24.5001C18.6665 25.1444 19.1888 25.6667 19.8332 25.6667H24.4998C25.1442 25.6667 25.6665 25.1444 25.6665 24.5001V19.8334C25.6665 19.1891 25.1442 18.6667 24.4998 18.6667Z"
       stroke={color}
@@ -33,4 +38,5 @@ export const Branching = ({ size = 24, color = 'currentColor' }: IconPropsType) 
     />
     <path d="M14 13.9999V9.33325" stroke={color} strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
-);
+  );
+};

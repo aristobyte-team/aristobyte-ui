@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const Disabled = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 20 20" fill="none">
+export const Disabled = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-Disabled`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 20 20" fill="none">
     <path
       d="M4.10748 4.10742L15.8916 15.8924"
       stroke={color}
@@ -18,4 +23,5 @@ export const Disabled = ({ size = 24, color = 'currentColor' }: IconPropsType) =
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

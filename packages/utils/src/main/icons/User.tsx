@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const User = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
-  <svg width={size} height={size} viewBox="0 0 15 19" fill="none">
+export const User = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-User`;
+
+  return (
+  <svg
+    id={svgId} width={size} height={size} viewBox="0 0 15 19" fill="none">
     <path
       d="M13.2026 17.4586V15.7086C13.2026 14.7804 12.8339 13.8901 12.1775 13.2337C11.5211 12.5774 10.6309 12.2086 9.70264 12.2086H4.45264C3.52438 12.2086 2.63414 12.5774 1.97776 13.2337C1.32139 13.8901 0.952637 14.7804 0.952637 15.7086V17.4586"
       stroke={color}
@@ -18,4 +23,5 @@ export const User = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+  );
+};

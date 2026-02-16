@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { IconPropsType } from './type';
 
-export const LinkedIn = ({ size = 24, color = 'currentColor' }: IconPropsType) => (
+export const LinkedIn = ({ size = 24, color = 'currentColor' }: IconPropsType) => {
+  const uid = React.useId();
+  const svgId = `${uid}-icon-LinkedIn`;
+
+  return (
   <svg
+    id={svgId}
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -16,4 +21,5 @@ export const LinkedIn = ({ size = 24, color = 'currentColor' }: IconPropsType) =
     <rect width="4" height="12" x="2" y="9" />
     <circle cx="4" cy="4" r="2" />
   </svg>
-);
+  );
+};
