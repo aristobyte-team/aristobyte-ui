@@ -65,5 +65,4 @@ for pkg_dir in "$PACKAGES_DIR"/*; do
       --registry https://registry.npmjs.org/
     log_ok "NPM publish completed"
   fi
-
 done
