@@ -1,5 +1,6 @@
 import { AristoBadges } from './AristoBadges';
 import { AristoByte } from './AristoByte';
+import { AristoRepo } from './AristoRepo';
 import { AristoByteUICLI } from './AristoByteUICLI';
 import { AristoByteUI } from './AristoByteUI';
 import { ArrowLeft } from './ArrowLeft';
@@ -52,6 +53,7 @@ import { Zap } from './Zap';
 export const Icons = {
   AristoBadges,
   AristoByte,
+  AristoRepo,
   AristoByteUI,
   AristoByteUICLI,
   ArrowLeft,
