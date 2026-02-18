@@ -1,6 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
+import { IconPropsType } from './type';
 
-export const Plug = (props: React.SVGProps<SVGSVGElement>) => {
+export const Plug = ({ size = 24 }: IconPropsType) => {
   const uid = React.useId();
   const svgId = `${uid}-icon-plug`;
   const primaryGradientId = `${uid}-plug-primary-gradient`;
@@ -13,7 +14,8 @@ export const Plug = (props: React.SVGProps<SVGSVGElement>) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
       viewBox="0 0 24 24"
-      {...props}
+      width={size}
+      height={size}
     >
       <defs>
         <linearGradient

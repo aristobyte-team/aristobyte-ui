@@ -5,3 +5,4 @@
 - feat: dropdown new functionalities such as select option which would be displayed inside button
 - create: get-started/aristobyte-ui-cli route and handle the cli part with instructions etc...
 - in packages/card component add more props for label={..., size: undefined, radius: undefined}
+- Create a CAROUSEL
